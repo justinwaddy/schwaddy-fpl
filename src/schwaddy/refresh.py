@@ -82,6 +82,15 @@ def main():
         g = f["event"] - 1
         gw_first[g] = min(gw_first.get(g, d0), d0)
     first_future_gw = max(0, nxt - n_hist * 38)
+    try:
+        from . import api as _api
+        game = _api.get("https://draft.premierleague.com/api/game")
+        nx = game["next_event"] - 1
+        if game.get("current_event_finished") is False and game.get("current_event"):
+            pass                       # next_event already points past live GW
+        first_future_gw = max(first_future_gw, nx)
+    except Exception:
+        pass                           # archive-derived fallback stands
     gw_dates = [gw_first.get(g, _date(2027, 6, 1))
                 for g in range(first_future_gw, 38)]
     import csv as _csv
@@ -94,6 +103,7 @@ def main():
         if c2:
             prev_club[c2] = r2["team"]
     tname = {t["id"]: t["name"] for t in d["teams"]}
+    ETYPE = {1: "GKP", 2: "DEF", 3: "MID", 4: "FWD"}
     players = []
     for i, code in enumerate(meta["codes"]):
         if code not in meta["current"]:
@@ -116,7 +126,8 @@ def main():
                                  (pv * np.array(path) * Mrow)]).round(2)
         players.append(dict(
             code=code, n_career=int(D[i].sum()),
-            name=e["web_name"], pos=meta["pos_of"].get(code, "?"),
+            name=e["web_name"],
+            pos=meta["pos_of"].get(code) or ETYPE.get(e["element_type"], "MID"),
             team=e["team"], status=e["status"], news=(e.get("news") or "")[:90],
             avail=round(avail, 2), gw=per_gw.tolist(),
             rest=float(per_gw.sum())))
