@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schwaddy Draft Room · 21 Aug 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F1A31; --panel:#16233F; --panel2:#1C2B4D; --line:#26365C;
+  --ink:#E9EEF8; --dim:#8FA0C4; --blue:#4A7FE0; --amber:#E8A13C; --red:#D95757;
+  --gkp:#3FB8AF; --def:#5B8DEF; --mid:#6FBF73; --fwd:#E0854A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 "IBM Plex Sans",sans-serif;-webkit-text-size-adjust:100%}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 88%,transparent);padding:10px 12px 6px}
+h1{font:600 26px "Barlow Condensed";letter-spacing:.04em;text-transform:uppercase}
+h1 em{color:var(--blue);font-style:normal}
+.sub{color:var(--dim);font-size:12px;margin-bottom:8px}
+.controls{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+input[type=search]{flex:1;min-width:130px;background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;color:var(--ink);padding:8px 10px;font:14px "IBM Plex Sans"}
+input[type=search]:focus{outline:2px solid var(--blue)}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--dim);
+  padding:8px 11px;font:600 13px "IBM Plex Sans";cursor:pointer}
+.chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+.chip:focus-visible{outline:2px solid var(--blue)}
+.best{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 12px}
+.best>div{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.best b{display:block;font:600 11px "IBM Plex Mono";color:var(--dim)}
+.best span{font:600 15px "Barlow Condensed";letter-spacing:.02em;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;display:block}
+.pickbar{display:flex;justify-content:space-between;padding:2px 14px 6px;color:var(--dim);
+  font:500 12px "IBM Plex Mono"}
+table{width:100%;border-collapse:collapse}
+td,th{padding:7px 6px;text-align:left;border-bottom:1px solid var(--line)}
+th{font:600 11px "IBM Plex Mono";color:var(--dim);position:sticky;top:0;background:var(--bg)}
+td.num{font:500 13px "IBM Plex Mono";text-align:right;white-space:nowrap}
+tr{cursor:pointer}
+tr:active{background:var(--panel2)}
+.pos{font:600 11px "IBM Plex Mono";padding:2px 5px;border-radius:4px;color:#0F1A31}
+.GKP{background:var(--gkp)}.DEF{background:var(--def)}.MID{background:var(--mid)}.FWD{background:var(--fwd)}
+.nm{font-weight:600}
+.tm{color:var(--dim);font-size:12px}
+.flag{color:var(--amber);font-size:11px;display:block;max-width:46vw;overflow:hidden;
+  white-space:nowrap;text-overflow:ellipsis}
+tr.gone td{opacity:.32}
+tr.gone .nm{text-decoration:line-through}
+tr.mine{background:rgba(74,127,224,.14)}
+tr.mine .nm::after{content:" ✓ MINE";color:var(--blue);font:600 10px "IBM Plex Mono"}
+.hint{padding:10px 14px 30px;color:var(--dim);font-size:12px}
+@media(min-width:700px){.best{grid-template-columns:repeat(4,1fr)}.flag{max-width:280px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Schwaddy <em>Draft Room</em></h1>
+  <div class="sub">6-team league · TROP projections (2-season validated) · pulled 21 Aug 08:15 UK · tap = taken, tap again = mine, third tap = clear</div>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search player or club" aria-label="Search">
+    <button class="chip on" data-pos="ALL">All</button>
+    <button class="chip" data-pos="GKP">GK</button>
+    <button class="chip" data-pos="DEF">DEF</button>
+    <button class="chip" data-pos="MID">MID</button>
+    <button class="chip" data-pos="FWD">FWD</button>
+    <button class="chip" id="hidegone">Hide taken</button>
+    <button class="chip" id="deep">Deep roll</button>
+  </div>
+  <div class="controls" id="slotrow" style="margin-top:6px">
+    <span style="color:var(--dim);font:600 12px 'IBM Plex Mono';align-self:center">MY SLOT</span>
+    <button class="chip slot" data-slot="1">1</button><button class="chip slot" data-slot="2">2</button>
+    <button class="chip slot" data-slot="3">3</button><button class="chip slot" data-slot="4">4</button>
+    <button class="chip slot" data-slot="5">5</button><button class="chip slot" data-slot="6">6</button>
+  </div>
+</header>
+<div class="best" id="best"></div>
+<div id="deepout" style="display:none;padding:4px 14px;color:var(--ink);font:500 13px 'IBM Plex Mono'"></div>
+<div class="pickbar"><span id="pickno">Pick 1 · Round 1</span><span id="minecount">My squad: 0/15 (GK 0/2 · DEF 0/5 · MID 0/5 · FWD 0/3)</span></div>
+<table>
+  <thead><tr><th>#</th><th>Player</th><th>Pos</th><th style="text-align:right">VORP</th><th style="text-align:right">Proj</th></tr></thead>
+  <tbody id="tb"></tbody>
+</table>
+<div class="hint">VORP = projected 26/27 draft-league points above the best free agent at the position in a 6-team league. Projections: 25/26 per-appearance rates under draft scoring, xG-blended, shrunk to position, blended with FPL's draft rank for injury-truncated seasons. Amber text = current injury or availability news. State is saved on this device.</div>
+<script>
+const DATA = [{"n":"Haaland","f":"Erling Haaland","p":"FWD","t":"MCI","pr":235.5,"v":117.4,"s":"a","w":"","dr":1},{"n":"B.Fernandes","f":"Bruno Borges Fernandes","p":"MID","t":"MUN","pr":214.6,"v":84.6,"s":"a","w":"","dr":2},{"n":"Palmer","f":"Cole Palmer","p":"MID","t":"CHE","pr":208.7,"v":78.7,"s":"a","w":"","dr":4},{"n":"Raya","f":"David Raya Martín","p":"GKP","t":"ARS","pr":168.5,"v":76.3,"s":"a","w":"","dr":59},{"n":"Isak","f":"Alexander Isak","p":"FWD","t":"LIV","pr":191.9,"v":73.8,"s":"a","w":"","dr":5},{"n":"Watkins","f":"Ollie Watkins","p":"FWD","t":"AVL","pr":191.1,"v":73.0,"s":"a","w":"","dr":10},{"n":"Mbeumo","f":"Bryan Mbeumo","p":"MID","t":"MUN","pr":198.3,"v":68.3,"s":"a","w":"","dr":11},{"n":"Gvardiol","f":"Joško Gvardiol","p":"DEF","t":"MCI","pr":170.3,"v":60.8,"s":"a","w":"","dr":152},{"n":"Gabriel","f":"Gabriel dos Santos Magalhães","p":"DEF","t":"ARS","pr":168.7,"v":59.2,"s":"a","w":"","dr":7},{"n":"Pickford","f":"Jordan Pickford","p":"GKP","t":"EVE","pr":149.9,"v":57.7,"s":"a","w":"","dr":116},{"n":"Muñoz","f":"Daniel Muñoz Mejía","p":"DEF","t":"CRY","pr":166.3,"v":56.7,"s":"a","w":"","dr":115},{"n":"Sels","f":"Matz Sels","p":"GKP","t":"NFO","pr":145.4,"v":53.2,"s":"a","w":"","dr":244},{"n":"Semenyo","f":"Antoine Semenyo","p":"MID","t":"MCI","pr":182.9,"v":52.9,"s":"a","w":"","dr":6},{"n":"Virgil","f":"Virgil van Dijk","p":"DEF","t":"LIV","pr":162.1,"v":52.6,"s":"a","w":"","dr":32},{"n":"Gibbs-White","f":"Morgan Gibbs-White","p":"MID","t":"NFO","pr":176.7,"v":46.8,"s":"a","w":"","dr":8},{"n":"Leno","f":"Bernd Leno","p":"GKP","t":"FUL","pr":139.0,"v":46.8,"s":"a","w":"","dr":400},{"n":"Martinez","f":"Emiliano Martínez Romero","p":"GKP","t":"AVL","pr":136.1,"v":43.9,"s":"a","w":"","dr":235},{"n":"Arrizabalaga","f":"Kepa Arrizabalaga Revuelta","p":"GKP","t":"ARS","pr":135.4,"v":43.2,"s":"a","w":"","dr":332},{"n":"Gyökeres","f":"Viktor Gyökeres","p":"FWD","t":"ARS","pr":160.9,"v":42.8,"s":"a","w":"","dr":17},{"n":"Saka","f":"Bukayo Saka","p":"MID","t":"ARS","pr":172.3,"v":42.3,"s":"a","w":"","dr":3},{"n":"Rogers","f":"Morgan Rogers","p":"MID","t":"CHE","pr":171.3,"v":41.4,"s":"a","w":"","dr":15},{"n":"Lacroix","f":"Maxence Lacroix","p":"DEF","t":"CHE","pr":149.6,"v":40.1,"s":"a","w":"","dr":61},{"n":"Ekitiké","f":"Hugo Ekitiké","p":"FWD","t":"LIV","pr":158.0,"v":39.9,"s":"i","w":"Achilles injury - Unknown return date","dr":19},{"n":"Wood","f":"Chris Wood","p":"FWD","t":"NFO","pr":157.9,"v":39.8,"s":"a","w":"","dr":101},{"n":"Verbruggen","f":"Bart Verbruggen","p":"GKP","t":"BHA","pr":131.9,"v":39.6,"s":"a","w":"","dr":398},{"n":"Cunha","f":"Matheus Santos Carneiro da Cunha","p":"MID","t":"MUN","pr":168.7,"v":38.8,"s":"a","w":"","dr":12},{"n":"Kroupi.Jr","f":"Junior Kroupi","p":"FWD","t":"BOU","pr":156.3,"v":38.2,"s":"i","w":"Foot injury - Unknown return date","dr":21},{"n":"Henderson","f":"Dean Henderson","p":"GKP","t":"CRY","pr":130.1,"v":37.9,"s":"d","w":"Ankle injury - 75% chance of playing","dr":228},{"n":"Sánchez","f":"Robert Lynch Sánchez","p":"GKP","t":"CHE","pr":130.0,"v":37.7,"s":"a","w":"","dr":240},{"n":"Guéhi","f":"Marc Guéhi","p":"DEF","t":"MCI","pr":143.5,"v":34.0,"s":"a","w":"","dr":56},{"n":"Milenković","f":"Nikola Milenković","p":"DEF","t":"NFO","pr":142.8,"v":33.3,"s":"a","w":"","dr":123},{"n":"Cherki","f":"Rayan Cherki","p":"MID","t":"MCI","pr":162.1,"v":32.1,"s":"a","w":"","dr":16},{"n":"Sarr","f":"Ismaïla Sarr","p":"MID","t":"CRY","pr":160.9,"v":31.0,"s":"a","w":"","dr":39},{"n":"Šeško","f":"Benjamin Sesko","p":"FWD","t":"MUN","pr":148.2,"v":30.1,"s":"d","w":"Shin injury - 75% chance of playing","dr":28},{"n":"Thiago","f":"Igor Thiago Nascimento Rodrigues","p":"FWD","t":"BRE","pr":147.9,"v":29.8,"s":"a","w":"","dr":9},{"n":"A.Becker","f":"Alisson Becker","p":"GKP","t":"LIV","pr":121.5,"v":29.3,"s":"a","w":"","dr":140},{"n":"João Pedro","f":"João Pedro Junqueira de Jesus","p":"FWD","t":"CHE","pr":146.8,"v":28.7,"s":"a","w":"","dr":14},{"n":"Rice","f":"Declan Rice","p":"MID","t":"ARS","pr":158.4,"v":28.4,"s":"a","w":"","dr":13},{"n":"Wirtz","f":"Florian Wirtz","p":"MID","t":"LIV","pr":158.4,"v":28.4,"s":"a","w":"","dr":18},{"n":"Bruno G.","f":"Bruno Guimarães Rodriguez Moura","p":"MID","t":"ARS","pr":158.0,"v":28.1,"s":"d","w":"Thigh injury - 75% chance of playing","dr":25},{"n":"N.Jackson","f":"Nicolas Jackson","p":"FWD","t":"CHE","pr":144.9,"v":26.8,"s":"a","w":"","dr":52},{"n":"Szoboszlai","f":"Dominik Szoboszlai","p":"MID","t":"LIV","pr":156.3,"v":26.3,"s":"a","w":"","dr":23},{"n":"Collins","f":"Nathan Collins","p":"DEF","t":"BRE","pr":134.1,"v":24.6,"s":"a","w":"","dr":120},{"n":"Mateta","f":"Jean-Philippe Mateta","p":"FWD","t":"CRY","pr":142.5,"v":24.4,"s":"a","w":"","dr":40},{"n":"Aina","f":"Ola Aina","p":"DEF","t":"NFO","pr":133.2,"v":23.6,"s":"a","w":"","dr":423},{"n":"Foden","f":"Phil Foden","p":"MID","t":"MCI","pr":153.0,"v":23.0,"s":"a","w":"","dr":27},{"n":"Aït-Nouri","f":"Rayan Aït-Nouri","p":"DEF","t":"MCI","pr":131.7,"v":22.2,"s":"a","w":"","dr":165},{"n":"Pope","f":"Nick Pope","p":"GKP","t":"NEW","pr":114.3,"v":22.1,"s":"a","w":"","dr":249},{"n":"Enzo","f":"Enzo Fernández","p":"MID","t":"CHE","pr":151.9,"v":22.0,"s":"a","w":"","dr":24},{"n":"Tarkowski","f":"James Tarkowski","p":"DEF","t":"EVE","pr":131.1,"v":21.5,"s":"a","w":"","dr":58},{"n":"Maddison","f":"James Maddison","p":"MID","t":"TOT","pr":151.1,"v":21.1,"s":"a","w":"","dr":51},{"n":"Eze","f":"Eberechi Eze","p":"MID","t":"ARS","pr":150.8,"v":20.8,"s":"a","w":"","dr":41},{"n":"Pedro Porro","f":"Pedro Porro Sauceda","p":"DEF","t":"TOT","pr":130.2,"v":20.7,"s":"a","w":"","dr":124},{"n":"Mitchell","f":"Tyrick Mitchell","p":"DEF","t":"CRY","pr":129.9,"v":20.4,"s":"a","w":"","dr":397},{"n":"Wissa","f":"Yoane Wissa","p":"FWD","t":"NEW","pr":138.2,"v":20.1,"s":"a","w":"","dr":103},{"n":"O'Reilly","f":"Nico O'Reilly","p":"DEF","t":"MCI","pr":129.6,"v":20.0,"s":"a","w":"","dr":34},{"n":"Schär","f":"Fabian Schär","p":"DEF","t":"NEW","pr":129.2,"v":19.6,"s":"a","w":"","dr":285},{"n":"Iwobi","f":"Alex Iwobi","p":"MID","t":"FUL","pr":148.2,"v":18.3,"s":"a","w":"","dr":136},{"n":"Schade","f":"Kevin Schade","p":"MID","t":"BRE","pr":147.0,"v":17.0,"s":"a","w":"","dr":73},{"n":"Burn","f":"Dan Burn","p":"DEF","t":"NEW","pr":126.0,"v":16.4,"s":"a","w":"","dr":251},{"n":"Anderson","f":"Elliot Anderson","p":"MID","t":"MCI","pr":146.1,"v":16.1,"s":"a","w":"","dr":31},{"n":"Murillo","f":"Murillo Costa dos Santos","p":"DEF","t":"NFO","pr":125.4,"v":15.9,"s":"a","w":"","dr":146},{"n":"Van Hecke","f":"Jan Paul van Hecke","p":"DEF","t":"TOT","pr":124.3,"v":14.7,"s":"a","w":"","dr":225},{"n":"Ødegaard","f":"Martin Ødegaard","p":"MID","t":"ARS","pr":144.4,"v":14.4,"s":"a","w":"","dr":44},{"n":"Colwill","f":"Levi Samuels Colwill","p":"DEF","t":"CHE","pr":123.3,"v":13.8,"s":"a","w":"","dr":322},{"n":"Evanilson","f":"Francisco Evanilson de Lima Barbosa","p":"FWD","t":"BOU","pr":130.5,"v":12.4,"s":"a","w":"","dr":76},{"n":"Mykolenko","f":"Vitalii Mykolenko","p":"DEF","t":"EVE","pr":120.7,"v":11.2,"s":"a","w":"","dr":412},{"n":"Dalot","f":"Diogo Dalot Teixeira","p":"DEF","t":"MUN","pr":119.9,"v":10.3,"s":"a","w":"","dr":241},{"n":"Kerkez","f":"Milos Kerkez","p":"DEF","t":"LIV","pr":119.8,"v":10.2,"s":"a","w":"","dr":145},{"n":"Ndiaye","f":"Iliman Ndiaye","p":"MID","t":"EVE","pr":139.7,"v":9.7,"s":"a","w":"","dr":71},{"n":"Rúben","f":"Rúben dos Santos Gato Alves Dias","p":"DEF","t":"MCI","pr":119.2,"v":9.6,"s":"a","w":"","dr":128},{"n":"Havertz","f":"Kai Havertz","p":"FWD","t":"ARS","pr":127.7,"v":9.6,"s":"a","w":"","dr":22},{"n":"Lewis-Potter","f":"Keane Lewis-Potter","p":"DEF","t":"BRE","pr":119.1,"v":9.6,"s":"a","w":"","dr":125},{"n":"Robinson","f":"Antonee Robinson","p":"DEF","t":"FUL","pr":118.7,"v":9.2,"s":"a","w":"","dr":424},{"n":"Gakpo","f":"Cody Gakpo","p":"MID","t":"LIV","pr":138.6,"v":8.6,"s":"a","w":"","dr":26},{"n":"Solanke","f":"Dominic Solanke-Mitchell","p":"FWD","t":"TOT","pr":126.5,"v":8.4,"s":"a","w":"","dr":102},{"n":"N.Williams","f":"Neco Williams","p":"DEF","t":"NFO","pr":117.4,"v":7.8,"s":"a","w":"","dr":231},{"n":"Donnarumma","f":"Gianluigi Donnarumma","p":"GKP","t":"MCI","pr":99.6,"v":7.4,"s":"a","w":"","dr":117},{"n":"Robertson","f":"Andrew Robertson","p":"DEF","t":"TOT","pr":115.5,"v":6.0,"s":"a","w":"","dr":428},{"n":"Fernandes","f":"Mateus Fernandes","p":"MID","t":"TOT","pr":135.9,"v":5.9,"s":"a","w":"","dr":70},{"n":"Kluivert","f":"Justin Kluivert","p":"MID","t":"BOU","pr":135.1,"v":5.2,"s":"a","w":"","dr":100},{"n":"Bassey","f":"Calvin Bassey","p":"DEF","t":"FUL","pr":113.0,"v":3.4,"s":"a","w":"","dr":407},{"n":"Rayan","f":"Rayan Vitor Simplício Rocha","p":"MID","t":"BOU","pr":133.2,"v":3.2,"s":"a","w":"","dr":47},{"n":"Neto","f":"Pedro Lomba Neto","p":"MID","t":"CHE","pr":132.6,"v":2.7,"s":"a","w":"","dr":38},{"n":"Estêvão","f":"Estêvão Almeida de Oliveira Gonçalves","p":"MID","t":"CHE","pr":132.6,"v":2.7,"s":"a","w":"","dr":48},{"n":"Konsa","f":"Ezri Konsa Ngoyo","p":"DEF","t":"AVL","pr":112.0,"v":2.5,"s":"a","w":"","dr":408},{"n":"Senesi","f":"Marcos Senesi Barón","p":"DEF","t":"TOT","pr":111.6,"v":2.0,"s":"a","w":"","dr":57},{"n":"Igor Jesus","f":"Igor Jesus Maciel da Cruz","p":"FWD","t":"NFO","pr":120.0,"v":1.9,"s":"a","w":"","dr":77},{"n":"Woltemade","f":"Nick Woltemade","p":"FWD","t":"NEW","pr":119.9,"v":1.8,"s":"a","w":"","dr":79},{"n":"Munoz","f":"Victor Munoz","p":"MID","t":"LIV","pr":130.2,"v":0.2,"s":"a","w":"","dr":53},{"n":"Benitez","f":"Walter Benítez","p":"GKP","t":"CRY","pr":92.2,"v":0.0,"s":"a","w":"","dr":461},{"n":"Mazraoui","f":"Noussair Mazraoui","p":"DEF","t":"MUN","pr":109.5,"v":0.0,"s":"a","w":"","dr":430},{"n":"Tzolis","f":"Christos Tzolis","p":"MID","t":"ARS","pr":130.0,"v":0.0,"s":"a","w":"","dr":55},{"n":"Brobbey","f":"Brian Brobbey","p":"FWD","t":"SUN","pr":118.1,"v":0.0,"s":"a","w":"","dr":84},{"n":"Strand Larsen","f":"Jørgen Strand Larsen","p":"FWD","t":"CRY","pr":118.0,"v":-0.1,"s":"a","w":"","dr":92},{"n":"O.Dango","f":"Dango Ouattara","p":"MID","t":"BRE","pr":129.2,"v":-0.7,"s":"a","w":"","dr":37},{"n":"Kudus","f":"Mohammed Kudus","p":"MID","t":"TOT","pr":128.6,"v":-1.4,"s":"d","w":"Thigh injury - 75% chance of playing","dr":43},{"n":"Branthwaite","f":"Jarrad Branthwaite","p":"DEF","t":"EVE","pr":108.2,"v":-1.4,"s":"a","w":"","dr":183},{"n":"Damsgaard","f":"Mikkel Damsgaard","p":"MID","t":"BRE","pr":128.1,"v":-1.9,"s":"a","w":"","dr":127},{"n":"Justin","f":"James Justin","p":"DEF","t":"LEE","pr":107.5,"v":-2.0,"s":"a","w":"","dr":414},{"n":"Matheus N.","f":"Matheus Nunes","p":"DEF","t":"MCI","pr":107.5,"v":-2.0,"s":"d","w":"Knock - 75% chance of playing","dr":62},{"n":"Rashford","f":"Marcus Rashford","p":"MID","t":"MUN","pr":126.4,"v":-3.5,"s":"a","w":"","dr":30},{"n":"E.Le Fée","f":"Enzo Le Fée","p":"MID","t":"SUN","pr":126.0,"v":-4.0,"s":"a","w":"","dr":63},{"n":"Welbeck","f":"Danny Welbeck","p":"FWD","t":"CHE","pr":113.9,"v":-4.2,"s":"d","w":"Unspecified injury - 75% chance of playing","dr":72},{"n":"Saliba","f":"William Saliba","p":"DEF","t":"ARS","pr":104.8,"v":-4.7,"s":"i","w":"Back injury - Unknown return date","dr":66},{"n":"Tavernier","f":"Marcus Tavernier","p":"MID","t":"BOU","pr":125.1,"v":-4.8,"s":"a","w":"","dr":67},{"n":"Barnes","f":"Harvey Barnes","p":"MID","t":"NEW","pr":124.6,"v":-5.3,"s":"a","w":"","dr":80},{"n":"Mac Allister","f":"Alexis Mac Allister","p":"MID","t":"LIV","pr":124.4,"v":-5.6,"s":"a","w":"","dr":133},{"n":"Stach","f":"Anton Stach","p":"MID","t":"LEE","pr":124.3,"v":-5.7,"s":"a","w":"","dr":68},{"n":"J.Timber","f":"Jurriën Timber","p":"DEF","t":"ARS","pr":103.1,"v":-6.4,"s":"i","w":"Groin injury - Unknown return date","dr":36},{"n":"Calvert-Lewin","f":"Dominic Calvert-Lewin","p":"FWD","t":"LEE","pr":111.5,"v":-6.7,"s":"a","w":"","dr":65},{"n":"Gravenberch","f":"Ryan Gravenberch","p":"MID","t":"LIV","pr":123.2,"v":-6.8,"s":"a","w":"","dr":64},{"n":"Truffert","f":"Adrien Truffert","p":"DEF","t":"BOU","pr":102.7,"v":-6.8,"s":"a","w":"","dr":112},{"n":"Martinelli","f":"Gabriel Martinelli Silva","p":"MID","t":"ARS","pr":122.7,"v":-7.3,"s":"a","w":"","dr":49},{"n":"Wilson","f":"Harry Wilson","p":"MID","t":"LEE","pr":122.4,"v":-7.6,"s":"a","w":"","dr":33},{"n":"Mukiele","f":"Nordi Mukiele","p":"DEF","t":"SUN","pr":101.9,"v":-7.6,"s":"a","w":"","dr":113},{"n":"Dorgu","f":"Patrick Dorgu","p":"DEF","t":"MUN","pr":101.4,"v":-8.1,"s":"a","w":"","dr":82},{"n":"J.Murphy","f":"Jacob Murphy","p":"MID","t":"NEW","pr":120.5,"v":-9.5,"s":"a","w":"","dr":88},{"n":"Hudson-Odoi","f":"Callum Hudson-Odoi","p":"MID","t":"NFO","pr":120.0,"v":-9.9,"s":"a","w":"","dr":87},{"n":"Okafor","f":"Noah Okafor","p":"MID","t":"LEE","pr":120.0,"v":-10.0,"s":"a","w":"","dr":78},{"n":"Madueke","f":"Noni Madueke","p":"MID","t":"ARS","pr":118.9,"v":-11.0,"s":"a","w":"","dr":45},{"n":"Dewsbury-Hall","f":"Kiernan Dewsbury-Hall","p":"MID","t":"EVE","pr":118.9,"v":-11.1,"s":"a","w":"","dr":35},{"n":"James","f":"Reece James","p":"DEF","t":"CHE","pr":97.9,"v":-11.6,"s":"a","w":"","dr":126},{"n":"Garnacho","f":"Alejandro Garnacho Ferreyra","p":"MID","t":"AVL","pr":118.1,"v":-11.9,"s":"a","w":"","dr":97},{"n":"Johnson","f":"Brennan Johnson","p":"MID","t":"EVE","pr":117.8,"v":-12.1,"s":"a","w":"","dr":95},{"n":"Cash","f":"Matty Cash","p":"DEF","t":"AVL","pr":97.3,"v":-12.2,"s":"a","w":"","dr":402},{"n":"Delap","f":"Liam Delap","p":"FWD","t":"CHE","pr":105.8,"v":-12.3,"s":"a","w":"","dr":173},{"n":"Calafiori","f":"Riccardo Calafiori","p":"DEF","t":"ARS","pr":97.2,"v":-12.3,"s":"a","w":"","dr":132},{"n":"Doku","f":"Jérémy Doku","p":"MID","t":"MCI","pr":117.5,"v":-12.4,"s":"d","w":"Calf injury - 75% chance of playing","dr":20},{"n":"Caicedo","f":"Moisés Caicedo Corozo","p":"MID","t":"CHE","pr":117.3,"v":-12.6,"s":"a","w":"","dr":131},{"n":"Xavi","f":"Xavi Simons","p":"MID","t":"TOT","pr":117.3,"v":-12.6,"s":"i","w":"Knee injury - Unknown return date","dr":89},{"n":"Maguire","f":"Harry Maguire","p":"DEF","t":"MUN","pr":96.2,"v":-13.3,"s":"a","w":"","dr":254},{"n":"Marmoush","f":"Omar Marmoush","p":"MID","t":"MCI","pr":116.1,"v":-13.9,"s":"a","w":"","dr":29},{"n":"Elanga","f":"Anthony Elanga","p":"MID","t":"NEW","pr":116.0,"v":-13.9,"s":"a","w":"","dr":98},{"n":"Richarlison","f":"Richarlison de Andrade","p":"FWD","t":"TOT","pr":103.9,"v":-14.2,"s":"a","w":"","dr":74},{"n":"Amad","f":"Amad Diallo","p":"MID","t":"MUN","pr":115.4,"v":-14.5,"s":"a","w":"","dr":86},{"n":"Hinshelwood","f":"Jack Hinshelwood","p":"MID","t":"BHA","pr":115.4,"v":-14.5,"s":"a","w":"","dr":85},{"n":"Gusto","f":"Malo Gusto","p":"DEF","t":"CHE","pr":94.5,"v":-15.0,"s":"a","w":"","dr":248},{"n":"Tielemans","f":"Youri Tielemans","p":"MID","t":"MUN","pr":114.8,"v":-15.1,"s":"a","w":"","dr":93},{"n":"White","f":"Benjamin White","p":"DEF","t":"ARS","pr":93.6,"v":-15.9,"s":"a","w":"","dr":172},{"n":"Hall","f":"Lewis Hall","p":"DEF","t":"NEW","pr":93.6,"v":-15.9,"s":"a","w":"","dr":258},{"n":"Ayari","f":"Yasin Ayari","p":"MID","t":"BHA","pr":114.0,"v":-15.9,"s":"a","w":"","dr":138},{"n":"McGinn","f":"John McGinn","p":"MID","t":"AVL","pr":113.7,"v":-16.2,"s":"a","w":"","dr":135},{"n":"Ngumoha","f":"Rio Ngumoha","p":"MID","t":"LIV","pr":113.0,"v":-17.0,"s":"a","w":"","dr":99},{"n":"Merino","f":"Mikel Merino Zazón","p":"MID","t":"ARS","pr":112.3,"v":-17.7,"s":"a","w":"","dr":94},{"n":"Ellborg","f":"Melker Ellborg","p":"GKP","t":"SUN","pr":74.3,"v":-17.9,"s":"a","w":"","dr":452},{"n":"Pau","f":"Pau Torres","p":"DEF","t":"AVL","pr":91.5,"v":-18.1,"s":"a","w":"","dr":425},{"n":"Dunk","f":"Lewis Dunk","p":"DEF","t":"BHA","pr":91.2,"v":-18.4,"s":"a","w":"","dr":409},{"n":"Richards","f":"Chris Richards","p":"DEF","t":"CRY","pr":90.5,"v":-19.1,"s":"a","w":"","dr":230},{"n":"Muniz","f":"Rodrigo Muniz Carvalho","p":"FWD","t":"FUL","pr":98.7,"v":-19.4,"s":"a","w":"","dr":181},{"n":"Tete","f":"Kenny Tete","p":"DEF","t":"FUL","pr":89.5,"v":-20.0,"s":"a","w":"","dr":417},{"n":"Hincapie","f":"Piero Hincapié","p":"DEF","t":"ARS","pr":89.4,"v":-20.1,"s":"a","w":"","dr":141},{"n":"Gittens","f":"Jamie Bynoe-Gittens","p":"MID","t":"CHE","pr":109.3,"v":-20.6,"s":"a","w":"","dr":104},{"n":"Pinnock","f":"Ethan Pinnock","p":"DEF","t":"BRE","pr":88.3,"v":-21.3,"s":"a","w":"","dr":454},{"n":"Hill","f":"James Hill","p":"DEF","t":"BOU","pr":87.5,"v":-22.0,"s":"a","w":"","dr":130},{"n":"Beto","f":"Norberto Bercique Gomes Betuncal","p":"FWD","t":"EVE","pr":95.1,"v":-23.0,"s":"a","w":"","dr":134},{"n":"Kelleher","f":"Caoimhín Kelleher","p":"GKP","t":"BRE","pr":69.1,"v":-23.1,"s":"a","w":"","dr":226},{"n":"Grealish","f":"Jack Grealish","p":"MID","t":"MCI","pr":106.4,"v":-23.5,"s":"a","w":"","dr":42},{"n":"Smith","f":"Adam Smith","p":"DEF","t":"BOU","pr":85.5,"v":-24.1,"s":"a","w":"","dr":427},{"n":"Manzambi","f":"Johan Manzambi","p":"MID","t":"AVL","pr":105.8,"v":-24.1,"s":"i","w":"Knee injury - Unknown return date","dr":106},{"n":"Dubravka","f":"Martin Dubravka","p":"GKP","t":"TOT","pr":67.7,"v":-24.5,"s":"a","w":"","dr":530},{"n":"Rodríguez","f":"Álvaro Rodríguez","p":"MID","t":"BOU","pr":104.8,"v":-25.1,"s":"d","w":"Unspecified injury - 75% chance of playing","dr":107},{"n":"G.Jesus","f":"Gabriel Fernando de Jesus","p":"FWD","t":"ARS","pr":92.7,"v":-25.4,"s":"a","w":"","dr":105},{"n":"Tosin","f":"Tosin Adarabioyo","p":"DEF","t":"CHE","pr":83.5,"v":-26.1,"s":"a","w":"","dr":441},{"n":"Frimpong","f":"Jeremie Frimpong","p":"DEF","t":"LIV","pr":83.4,"v":-26.1,"s":"a","w":"","dr":163},{"n":"Ajer","f":"Kristoffer Ajer","p":"DEF","t":"BRE","pr":83.2,"v":-26.3,"s":"a","w":"","dr":419},{"n":"Anthony","f":"Jaidon Anthony","p":"MID","t":"BRE","pr":103.7,"v":-26.3,"s":"a","w":"","dr":108},{"n":"Lewis","f":"Rico Lewis","p":"DEF","t":"MCI","pr":82.8,"v":-26.7,"s":"a","w":"","dr":450},{"n":"Touré","f":"Bazoumana Touré","p":"MID","t":"NEW","pr":103.1,"v":-26.8,"s":"a","w":"","dr":109},{"n":"Gonzalo","f":"Gonzalo García","p":"MID","t":"FUL","pr":102.9,"v":-27.0,"s":"a","w":"","dr":110},{"n":"Smith Rowe","f":"Emile Smith Rowe","p":"MID","t":"FUL","pr":102.8,"v":-27.2,"s":"a","w":"","dr":151},{"n":"Tonali","f":"Sandro Tonali","p":"MID","t":"TOT","pr":102.7,"v":-27.2,"s":"a","w":"","dr":150},{"n":"David","f":"Promise David","p":"MID","t":"BHA","pr":102.8,"v":-27.2,"s":"a","w":"","dr":111},{"n":"Travers","f":"Mark Travers","p":"GKP","t":"EVE","pr":64.8,"v":-27.4,"s":"a","w":"","dr":352},{"n":"Osula","f":"William Osula","p":"FWD","t":"NEW","pr":90.7,"v":-27.4,"s":"a","w":"","dr":91},{"n":"Hutchinson","f":"Omari Hutchinson","p":"MID","t":"NFO","pr":101.7,"v":-28.2,"s":"a","w":"","dr":148},{"n":"Barry","f":"Thierno Barry","p":"FWD","t":"EVE","pr":89.5,"v":-28.6,"s":"a","w":"","dr":139},{"n":"Castagne","f":"Timothy Castagne","p":"DEF","t":"FUL","pr":80.9,"v":-28.7,"s":"a","w":"","dr":426},{"n":"Nørgaard","f":"Christian Nørgaard","p":"MID","t":"EVE","pr":100.1,"v":-29.8,"s":"d","w":"Unspecified injury - 25% chance of playing","dr":323},{"n":"Ampadu","f":"Ethan Ampadu","p":"MID","t":"LEE","pr":99.6,"v":-30.4,"s":"a","w":"","dr":118},{"n":"Janelt","f":"Vitaly Janelt","p":"MID","t":"BRE","pr":99.6,"v":-30.4,"s":"a","w":"","dr":262},{"n":"Roefs","f":"Robin Roefs","p":"GKP","t":"SUN","pr":61.7,"v":-30.6,"s":"a","w":"","dr":227},{"n":"Zubimendi","f":"Martín Zubimendi Ibáñez","p":"MID","t":"ARS","pr":98.9,"v":-31.1,"s":"a","w":"","dr":119},{"n":"P.M.Sarr","f":"Pape Matar Sarr","p":"MID","t":"TOT","pr":98.9,"v":-31.1,"s":"a","w":"","dr":264},{"n":"Aaronson","f":"Brenden Aaronson","p":"MID","t":"LEE","pr":98.7,"v":-31.3,"s":"a","w":"","dr":121},{"n":"Khusanov","f":"Abdukodir Khusanov","p":"DEF","t":"MCI","pr":78.1,"v":-31.5,"s":"a","w":"","dr":160},{"n":"O'Brien","f":"Jake O'Brien","p":"DEF","t":"EVE","pr":78.0,"v":-31.6,"s":"a","w":"","dr":236},{"n":"Tsimikas","f":"Kostas Tsimikas","p":"DEF","t":"LIV","pr":77.7,"v":-31.8,"s":"a","w":"","dr":370},{"n":"Mosquera","f":"Cristhian Mosquera","p":"DEF","t":"ARS","pr":77.7,"v":-31.8,"s":"a","w":"","dr":179},{"n":"Xhaka","f":"Granit Xhaka","p":"MID","t":"SUN","pr":98.1,"v":-31.8,"s":"a","w":"","dr":122},{"n":"Savinho","f":"Sávio Moreira de Oliveira","p":"MID","t":"MCI","pr":97.9,"v":-32.0,"s":"a","w":"","dr":50},{"n":"Kovačić","f":"Mateo Kovačić","p":"MID","t":"MCI","pr":97.7,"v":-32.3,"s":"a","w":"","dr":197},{"n":"Georginio","f":"Georginio Rutter","p":"MID","t":"BHA","pr":97.5,"v":-32.4,"s":"a","w":"","dr":142},{"n":"Isidor","f":"Wilson Isidor","p":"FWD","t":"SUN","pr":85.1,"v":-33.0,"s":"a","w":"","dr":155},{"n":"Nmecha","f":"Lukas Nmecha","p":"FWD","t":"LEE","pr":85.0,"v":-33.1,"s":"a","w":"","dr":156},{"n":"Scott","f":"Alex Scott","p":"MID","t":"BOU","pr":96.9,"v":-33.1,"s":"a","w":"","dr":69},{"n":"Mings","f":"Tyrone Mings","p":"DEF","t":"AVL","pr":75.9,"v":-33.7,"s":"a","w":"","dr":432},{"n":"O'Shea","f":"Dara O'Shea","p":"DEF","t":"IPS","pr":75.7,"v":-33.8,"s":"a","w":"","dr":577},{"n":"Awoniyi","f":"Taiwo Awoniyi","p":"FWD","t":"COV","pr":84.2,"v":-33.9,"s":"a","w":"","dr":176},{"n":"Buendía","f":"Emiliano Buendía Stati","p":"MID","t":"AVL","pr":95.8,"v":-34.2,"s":"a","w":"","dr":81},{"n":"Cook","f":"Lewis Cook","p":"MID","t":"BOU","pr":94.9,"v":-35.0,"s":"a","w":"","dr":294},{"n":"Wieffer","f":"Mats Wieffer","p":"MID","t":"BHA","pr":94.1,"v":-35.9,"s":"a","w":"","dr":250},{"n":"Lammens","f":"Senne Lammens","p":"GKP","t":"MUN","pr":56.1,"v":-36.1,"s":"a","w":"","dr":242},{"n":"Tel","f":"Mathys Tel","p":"MID","t":"TOT","pr":93.7,"v":-36.2,"s":"a","w":"","dr":90},{"n":"Livramento","f":"Tino Livramento","p":"DEF","t":"NEW","pr":73.0,"v":-36.5,"s":"i","w":"Calf injury - Unknown return date","dr":277},{"n":"Kinsky","f":"Antonín Kinský","p":"GKP","t":"TOT","pr":55.7,"v":-36.6,"s":"a","w":"","dr":448},{"n":"Van den Berg","f":"Sepp van den Berg","p":"DEF","t":"BRE","pr":72.4,"v":-37.2,"s":"i","w":"Unspecified injury - Unknown return date","dr":239},{"n":"Martinez","f":"Lisandro Martínez","p":"DEF","t":"MUN","pr":72.0,"v":-37.5,"s":"a","w":"","dr":284},{"n":"Forster","f":"Fraser Forster","p":"GKP","t":"BOU","pr":54.7,"v":-37.5,"s":"a","w":"","dr":545},{"n":"Keane","f":"Michael Keane","p":"DEF","t":"EVE","pr":71.9,"v":-37.6,"s":"a","w":"","dr":229},{"n":"McNeil","f":"Dwight McNeil","p":"MID","t":"CRY","pr":91.1,"v":-38.9,"s":"a","w":"","dr":167},{"n":"Andersen","f":"Joachim Andersen","p":"DEF","t":"FUL","pr":70.2,"v":-39.4,"s":"s","w":"Suspended until 30 Aug","dr":234},{"n":"Mitoma","f":"Mitoma Kaoru","p":"MID","t":"BHA","pr":90.3,"v":-39.6,"s":"i","w":"Hamstring injury - Unknown return date","dr":96},{"n":"Diop","f":"Issa Diop","p":"DEF","t":"IPS","pr":69.8,"v":-39.7,"s":"a","w":"","dr":531},{"n":"Kulusevski","f":"Dejan Kulusevski","p":"MID","t":"TOT","pr":89.9,"v":-40.1,"s":"i","w":"Knee injury - Unknown return date","dr":54},{"n":"Davies","f":"Ben Davies","p":"DEF","t":"TOT","pr":69.3,"v":-40.3,"s":"a","w":"","dr":533},{"n":"Morato","f":"Felipe Rodrigues da Silva","p":"DEF","t":"NFO","pr":68.8,"v":-40.8,"s":"a","w":"","dr":283},{"n":"Sessegnon","f":"Ryan Sessegnon","p":"MID","t":"FUL","pr":89.1,"v":-40.9,"s":"a","w":"","dr":413},{"n":"Bentancur","f":"Rodrigo Bentancur","p":"MID","t":"TOT","pr":89.1,"v":-40.9,"s":"a","w":"","dr":143},{"n":"Maatsen","f":"Ian Maatsen","p":"DEF","t":"AVL","pr":68.3,"v":-41.2,"s":"a","w":"","dr":429},{"n":"Kayode","f":"Michael Kayode","p":"DEF","t":"BRE","pr":68.0,"v":-41.6,"s":"a","w":"","dr":403},{"n":"Davis","f":"Leif Davis","p":"DEF","t":"IPS","pr":67.8,"v":-41.8,"s":"a","w":"","dr":578},{"n":"Steele","f":"Jason Steele","p":"GKP","t":"BHA","pr":50.4,"v":-41.8,"s":"a","w":"","dr":547},{"n":"Wharton","f":"Adam Wharton","p":"MID","t":"CRY","pr":87.7,"v":-42.2,"s":"a","w":"","dr":129},{"n":"Kostoulas","f":"Charalampos Kostoulas","p":"FWD","t":"BHA","pr":75.7,"v":-42.4,"s":"a","w":"","dr":182},{"n":"Nketiah","f":"Eddie Nketiah","p":"FWD","t":"CRY","pr":75.1,"v":-43.0,"s":"a","w":"","dr":188},{"n":"Palmer","f":"Alex Palmer","p":"GKP","t":"IPS","pr":49.0,"v":-43.2,"s":"a","w":"","dr":574},{"n":"Abraham","f":"Tammy Abraham","p":"FWD","t":"AVL","pr":74.9,"v":-43.2,"s":"d","w":"Knock - 75% chance of playing","dr":187},{"n":"Udogie","f":"Destiny Udogie","p":"DEF","t":"TOT","pr":66.4,"v":-43.2,"s":"a","w":"","dr":444},{"n":"Talbi","f":"Chemsdine Talbi","p":"MID","t":"SUN","pr":86.6,"v":-43.3,"s":"a","w":"","dr":147},{"n":"Disasi","f":"Axel Disasi","p":"DEF","t":"CHE","pr":66.2,"v":-43.4,"s":"a","w":"","dr":488},{"n":"C.Jones","f":"Curtis Jones","p":"MID","t":"LIV","pr":86.3,"v":-43.7,"s":"d","w":"Hip injury - 75% chance of playing","dr":149},{"n":"Walton","f":"Christian Walton","p":"GKP","t":"IPS","pr":48.1,"v":-44.1,"s":"a","w":"","dr":505},{"n":"Lerma","f":"Jefferson Lerma Solís","p":"MID","t":"CRY","pr":85.5,"v":-44.5,"s":"a","w":"","dr":265},{"n":"Berge","f":"Sander Berge","p":"MID","t":"FUL","pr":85.3,"v":-44.6,"s":"a","w":"","dr":252},{"n":"J.Ramsey","f":"Jacob Ramsey","p":"MID","t":"NEW","pr":85.4,"v":-44.6,"s":"a","w":"","dr":273},{"n":"De Ligt","f":"Matthijs de Ligt","p":"DEF","t":"MUN","pr":64.9,"v":-44.7,"s":"i","w":"Back injury - Unknown return date","dr":290},{"n":"Petrović","f":"Đorđe Petrović","p":"GKP","t":"BOU","pr":47.5,"v":-44.7,"s":"a","w":"","dr":399},{"n":"Barco","f":"Valentín Barco","p":"DEF","t":"CHE","pr":64.8,"v":-44.7,"s":"a","w":"","dr":218},{"n":"Groß","f":"Pascal Groß","p":"MID","t":"BHA","pr":85.3,"v":-44.7,"s":"a","w":"","dr":153},{"n":"Zirkzee","f":"Joshua Zirkzee","p":"FWD","t":"MUN","pr":73.3,"v":-44.8,"s":"a","w":"","dr":178},{"n":"Yeremy","f":"Yéremy Pino Santos","p":"MID","t":"CRY","pr":85.1,"v":-44.8,"s":"a","w":"","dr":154},{"n":"Jensen","f":"Mathias Jensen","p":"MID","t":"BRE","pr":84.9,"v":-45.0,"s":"a","w":"","dr":137},{"n":"Mainoo","f":"Kobbie Mainoo","p":"MID","t":"MUN","pr":85.0,"v":-45.0,"s":"a","w":"","dr":157},{"n":"Tzimas","f":"Stefanos Tzimas","p":"FWD","t":"BHA","pr":72.7,"v":-45.4,"s":"d","w":"Knee injury - 75% chance of playing","dr":194},{"n":"Bailey","f":"Leon Bailey","p":"MID","t":"AVL","pr":84.1,"v":-45.8,"s":"a","w":"","dr":189},{"n":"Van de Ven","f":"Micky van de Ven","p":"DEF","t":"TOT","pr":63.7,"v":-45.8,"s":"a","w":"","dr":237},{"n":"Diarra","f":"Habib Diarra","p":"MID","t":"SUN","pr":83.6,"v":-46.3,"s":"a","w":"","dr":161},{"n":"Wilson","f":"Callum Wilson","p":"FWD","t":"BRE","pr":71.8,"v":-46.3,"s":"a","w":"","dr":202},{"n":"Kalimuendo","f":"Arnaud Kalimuendo","p":"FWD","t":"NFO","pr":71.7,"v":-46.4,"s":"a","w":"","dr":198}];
+let filter="ALL", hideGone=false, q="", slot=0;
+let state={};
+try{state=JSON.parse(localStorage.getItem("schwaddy-draft")||"{}")}catch(e){state={}}
+function save(){try{localStorage.setItem("schwaddy-draft",JSON.stringify(state))}catch(e){}}
+const tb=document.getElementById("tb");
+function render(){
+  const ql=q.toLowerCase();
+  tb.innerHTML=DATA.map((p,i)=>{
+    if(filter!=="ALL"&&p.p!==filter)return"";
+    if(ql&&!(p.n.toLowerCase().includes(ql)||p.f.toLowerCase().includes(ql)||p.t.toLowerCase().includes(ql)))return"";
+    const st=state[p.n+p.t]||0;
+    if(hideGone&&st===1)return"";
+    return `<tr data-k="${p.n+p.t}" class="${st===1?"gone":st===2?"mine":""}">
+      <td class="num">${i+1}</td>
+      <td><span class="nm">${p.n}</span> <span class="tm">${p.t}</span>${p.w?`<span class="flag">${p.w}</span>`:""}</td>
+      <td><span class="pos ${p.p}">${p.p}</span></td>
+      <td class="num">${p.v.toFixed(1)}</td>
+      <td class="num">${p.pr.toFixed(0)}</td></tr>`;
+  }).join("");
+  renderBest(); renderBar();
+}
+
+/*DEEP-CORE-START*/
+const CAP={GKP:2,DEF:5,MID:5,FWD:3};
+const POSN=["GKP","DEF","MID","FWD"];
+function squadValue(idxs){
+  const by={GKP:[],DEF:[],MID:[],FWD:[]};
+  for(const i of idxs)by[DATA[i].p].push(i);
+  for(const k of POSN)by[k].sort((a,b)=>DATA[b].pr-DATA[a].pr);
+  let best=-1e18,bestXI=null;
+  for(let d=3;d<=5;d++)for(let m=2;m<=5;m++){const f=10-d-m;
+    if(f<1||f>3)continue;
+    if(by.GKP.length<1||by.DEF.length<d||by.MID.length<m||by.FWD.length<f)continue;
+    const xi=[by.GKP[0]].concat(by.DEF.slice(0,d),by.MID.slice(0,m),by.FWD.slice(0,f));
+    let s=0;for(const i of xi)s+=DATA[i].pr;
+    if(s>best){best=s;bestXI=xi;}}
+  if(bestXI===null)return -1e18;
+  let bench=0;const inXI=new Set(bestXI);
+  for(const i of idxs)if(!inXI.has(i))bench+=DATA[i].pr;
+  return best+0.15*bench;
+}
+function rolloutOnce(takenIn,myIdxIn,myCounts,rivCounts,pickNo,mySlot,firstPick,rng){
+  const taken=takenIn.slice();
+  const my=myIdxIn.slice();
+  const mc=Object.assign({},myCounts);
+  const rc=rivCounts.map(o=>Object.assign({},o));
+  if(firstPick!==null){taken[firstPick]=1;my.push(firstPick);mc[DATA[firstPick].p]++;pickNo++;}
+  const byDr=rolloutOnce._dr||(rolloutOnce._dr=DATA.map((p,i)=>i).sort((a,b)=>DATA[a].dr-DATA[b].dr));
+  const byV=rolloutOnce._v||(rolloutOnce._v=DATA.map((p,i)=>i).sort((a,b)=>DATA[b].v-DATA[a].v));
+  while(pickNo<=90){
+    const r=Math.floor((pickNo-1)/6),k=(pickNo-1)%6;
+    const seat=(r%2===0)?k+1:6-k;
+    const isMe=seat===mySlot;
+    const counts=isMe?mc:rc[seat>mySlot?seat-2:seat-1];
+    const total=POSN.reduce((s,p)=>s+counts[p],0);
+    const need=15-total;
+    const forced={};let forcedAny=false;
+    for(const p of POSN){const left=CAP[p]-counts[p];
+      if(left>0&&left===need){forced[p]=1;forcedAny=true;}}
+    let pick=-1;
+    if(isMe){
+      for(const i of byV){if(taken[i])continue;const p=DATA[i].p;
+        if(counts[p]>=CAP[p])continue;
+        if(forcedAny&&!forced[p])continue;pick=i;break;}
+    }else{
+      const cand=[];
+      for(const i of byDr){if(taken[i])continue;const p=DATA[i].p;
+        if(counts[p]>=CAP[p])continue;
+        if(forcedAny&&!forced[p])continue;
+        cand.push(i);if(cand.length===5)break;}
+      if(cand.length){
+        const w=[0.45,0.25,0.15,0.10,0.05];let u=rng(),acc=0;pick=cand[cand.length-1];
+        for(let j=0;j<cand.length;j++){acc+=w[j];if(u<acc){pick=cand[j];break;}}
+      }
+    }
+    if(pick>=0){taken[pick]=1;counts[DATA[pick].p]++;if(isMe)my.push(pick);}
+    pickNo++;
+  }
+  return squadValue(my);
+}
+function mulberry(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;
+  let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;
+  return((t^t>>>14)>>>0)/4294967296;}}
+function deepSuggest(sims){
+  if(!slot)return null;
+  sims=sims||150;
+  const taken=DATA.map(p=>state[p.n+p.t]===1?1:0);
+  const myIdx=[];DATA.forEach((p,i)=>{if(state[p.n+p.t]===2){taken[i]=1;myIdx.push(i);}});
+  const mc={GKP:0,DEF:0,MID:0,FWD:0};myIdx.forEach(i=>mc[DATA[i].p]++);
+  const others=Object.values(state).filter(v=>v===1).length;
+  const rc=[];for(let j=0;j<5;j++)rc.push({GKP:0,DEF:0,MID:0,FWD:0});
+  // rival counts unknown from strikes alone: approximate by distributing
+  // struck players evenly is wrong positionally; instead give rivals the
+  // aggregate struck counts split by simulation each run (cheap fix:
+  // assign struck players round-robin by strike order unavailable, so
+  // approximate all rivals unconstrained until late: relax quotas by
+  // distributing struck position counts evenly, rounded down)
+  const struckCounts={GKP:0,DEF:0,MID:0,FWD:0};
+  DATA.forEach((p,i)=>{if(state[p.n+p.t]===1)struckCounts[p.p]++;});
+  for(const p of POSN){const per=Math.floor(struckCounts[p]/5);
+    for(let j=0;j<5;j++)rc[j][p]=Math.min(per,CAP[p]);}
+  const pickNo=myIdx.length+others+1;
+  const cands=[];const seen=new Set();
+  for(const p of POSN){if(mc[p]>=CAP[p])continue;
+    for(const q of DATA.map((x,i)=>i).sort((a,b)=>DATA[b].v-DATA[a].v)){
+      if(!taken[q]&&DATA[q].p===p){if(!seen.has(q)){cands.push(q);seen.add(q);}break;}}}
+  const res=[];
+  for(const c of cands){
+    const rng=mulberry(1234+c);let s=0;
+    for(let r2=0;r2<sims;r2++)s+=rolloutOnce(taken,myIdx,mc,rc,pickNo,slot,c,rng);
+    res.push([c,s/sims]);
+  }
+  res.sort((a,b)=>b[1]-a[1]);
+  return res;
+}
+/*DEEP-CORE-END*/
+
+function myPickNumbers(){
+  const out=[];
+  for(let r=0;r<15;r++){out.push(r*6+(r%2===0?slot:7-slot));}
+  return out;
+}
+function picksUntilNext(){
+  if(!slot)return null;
+  const taken=Object.values(state).filter(v=>v>0).length;
+  const cur=taken+1;
+  const mine=myPickNumbers();
+  const nexts=mine.filter(p=>p>cur);
+  if(mine.includes(cur))return nexts.length?nexts[0]-cur-1:0;
+  return nexts.length?nexts[0]-cur:0;
+}
+function renderBest(){
+  const avail=DATA.filter(p=>!(state[p.n+p.t]));
+  const best={};
+  for(const p of avail){if(!best[p.p])best[p.p]=p;}
+  const m=picksUntilNext();
+  let later={};
+  if(m!==null&&m>0){
+    const gone=new Set(avail.slice().sort((a,b)=>a.dr-b.dr).slice(0,m).map(p=>p.n+p.t));
+    for(const p of avail){if(!gone.has(p.n+p.t)&&!later[p.p])later[p.p]=p;}
+  } else { later=best; }
+  // needs left by my quota
+  const mine=DATA.filter(p=>state[p.n+p.t]===2);
+  const c={GKP:0,DEF:0,MID:0,FWD:0}; mine.forEach(p=>c[p.p]++);
+  const cap={GKP:2,DEF:5,MID:5,FWD:3};
+  let sug=null,sugScore=-1e9;
+  for(const k of ["GKP","DEF","MID","FWD"]){
+    if(!best[k]||c[k]>=cap[k])continue;
+    const drop=best[k].v-(later[k]?later[k].v:0);
+    const score=best[k].v+0.9*drop;   // now-value + urgency
+    if(score>sugScore){sugScore=score;sug=k;}
+  }
+  document.getElementById("best").innerHTML=["GKP","DEF","MID","FWD"].map(k=>{
+    const p=best[k],q=later[k];
+    if(!p)return `<div><b>${k}</b><span>–</span></div>`;
+    const drop=p.v-(q?q.v:0);
+    const urgent=drop>=8&&c[k]<cap[k];
+    const star=(k===sug&&slot)?" ★":"";
+    const sub=(slot&&picksUntilNext()>0)?`<b style="color:${urgent?"var(--amber)":"var(--dim)"}">${q?("→ "+q.n+" "+q.v.toFixed(0)):"→ gone"} (${drop>=0?"-":"+"}${Math.abs(drop).toFixed(0)})</b>`:"";
+    return `<div style="${k===sug&&slot?"border-color:var(--blue)":""}"><b>${k}${star}</b><span>${p.n+" "+p.v.toFixed(0)}</span>${sub}</div>`;
+  }).join("");
+}
+function renderBar(){
+  const taken=Object.values(state).filter(v=>v>0).length;
+  const pick=taken+1, round=Math.ceil(pick/6);
+  const m=picksUntilNext();
+  document.getElementById("pickno").textContent=`Pick ${pick} · Round ${round}`+
+    (slot?(m===0?" · YOU'RE UP":` · you in ${m}`):"");
+  if(slot&&m===0){clearTimeout(renderBar._t);renderBar._t=setTimeout(runDeep,60);}
+  const mine=DATA.filter(p=>state[p.n+p.t]===2);
+  const c={GKP:0,DEF:0,MID:0,FWD:0}; mine.forEach(p=>c[p.p]++);
+  document.getElementById("minecount").textContent=
+    `My squad: ${mine.length}/15 (GK ${c.GKP}/2 · DEF ${c.DEF}/5 · MID ${c.MID}/5 · FWD ${c.FWD}/3)`;
+}
+tb.addEventListener("click",e=>{
+  const tr=e.target.closest("tr"); if(!tr)return;
+  const k=tr.dataset.k; state[k]=((state[k]||0)+1)%3; save(); render();
+});
+document.querySelectorAll(".chip[data-pos]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".chip[data-pos]").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); filter=b.dataset.pos; render();
+}));
+document.getElementById("hidegone").addEventListener("click",e=>{
+  hideGone=!hideGone; e.target.classList.toggle("on",hideGone); render();
+});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render()});
+function runDeep(){
+  const out=document.getElementById("deepout");
+  if(!slot){out.style.display="block";out.textContent="Set MY SLOT first";return;}
+  const t0=Date.now();
+  const res=deepSuggest(150);
+  if(!res||!res.length){return;}
+  const [b,rest]=[res[0],res.slice(1)];
+  const line="DEEP ("+(Date.now()-t0)+"ms, 150 rollouts): take "+DATA[b[0]].n+" ["+DATA[b[0]].p+"]"+
+    rest.map(r=>"  vs "+DATA[r[0]].p+" "+DATA[r[0]].n+" ("+(r[1]-b[1]).toFixed(0)+")").join("");
+  out.style.display="block";out.textContent=line;
+}
+document.getElementById("deep").addEventListener("click",runDeep);
+document.querySelectorAll(".chip.slot").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".chip.slot").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); slot=parseInt(b.dataset.slot); try{localStorage.setItem("schwaddy-slot",slot)}catch(e){}; render();
+}));
+try{const s=parseInt(localStorage.getItem("schwaddy-slot")||"0"); if(s){slot=s;
+  document.querySelectorAll(".chip.slot").forEach(x=>{if(parseInt(x.dataset.slot)===s)x.classList.add("on")});}}catch(e){}
+render();
+</script>
+</body>
+</html>
