@@ -37,6 +37,16 @@ color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans";margin:6px 0}
 .note{color:var(--dim);font-size:12px;padding:8px 2px}
 svg.spark{vertical-align:middle}
 .mine-row{background:rgba(74,127,224,.10)}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--dim);
+padding:5px 12px;font:600 12px "IBM Plex Sans";cursor:pointer;margin:2px 6px 8px 0}
+.chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+.ev{display:flex;gap:9px;padding:8px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.ev:last-child{border-bottom:none}
+.badge{font:600 10px "IBM Plex Mono";padding:2px 6px;border-radius:4px;color:#0F1A31;white-space:nowrap}
+.b-injury{background:var(--red)}.b-recovery{background:var(--green)}.b-haul{background:var(--amber)}
+.b-score{background:var(--blue)}.b-overtake{background:var(--amber)}.b-move{background:var(--dim)}
+.ev .when{color:var(--dim);font:11px "IBM Plex Mono";white-space:nowrap}
+.holdcard{border-color:var(--green)}
 </style></head>
 <body>
 <header>
@@ -46,11 +56,13 @@ svg.spark{vertical-align:middle}
 <nav>
 <button class="tab on" data-v="squad">My squad</button>
 <button class="tab" data-v="waivers">Waivers</button>
+<button class="tab" data-v="news">News</button>
 <button class="tab" data-v="league">League</button>
 <button class="tab" data-v="players">All players</button>
 </nav>
 <section id="squad" class="on"></section>
 <section id="waivers"></section>
+<section id="news"></section>
 <section id="league"></section>
 <section id="players"></section>
 <script>
@@ -107,25 +119,86 @@ function renderSquad(ps){
 function row(p,extra,pre){
   return `<tr><td>${pre?pre+". ":""}<span class="nm">${p.name}</span> <span class="tm">${p.team??""}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td>${extra}</tr>`;
 }
+const MARGIN=8;   // rest-of-season points a free agent must clear to justify a swap
+function waiverPlan(mine,free){
+  const sq=[...mine],pool=[...free],plan=[];
+  while(plan.length<8){
+    let best=null;
+    for(const pos of ["GKP","DEF","MID","FWD"]){
+      const drops=sq.filter(p=>p.pos===pos).sort((a,b)=>a.rest-b.rest);
+      if(!drops.length)continue;
+      const d=drops[0];
+      const f=pool.filter(p=>p.pos===pos).sort((a,b)=>b.rest-a.rest)[0];
+      if(f&&f.rest-d.rest>MARGIN&&(!best||f.rest-d.rest>best.gain))
+        best={add:f,drop:d,gain:f.rest-d.rest,pos};
+    }
+    if(!best)break;
+    plan.push(best);
+    sq.splice(sq.indexOf(best.drop),1);sq.push(best.add);
+    pool.splice(pool.indexOf(best.add),1);pool.push(best.drop);
+  }
+  return plan;
+}
 function renderWaivers(ps){
   const mine=ps.filter(p=>p.mine),free=ps.filter(p=>!p.owner);
-  let h=`<div class="note">Free agents vs your weakest at each position, ranked by rest-of-season gain. n = career sample behind the projection.</div>`;
-  const claims=[];
+  const plan=waiverPlan(mine,free);
+  let h="";
+  if(plan.length===0){
+    h+=`<div class="card holdcard"><b class="h">Hold: 0 claims this week</b>
+    <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} rest-of-season switching margin.</div></div>`;
+  }else{
+    h+=`<div class="card"><b class="h">Make ${plan.length} claim${plan.length>1?"s":""} this week</b>
+    <div class="note">Each swap clears the +${MARGIN} switching margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
+    <tr><th>#</th><th>add</th><th></th><th>drop</th><th style="text-align:right">gain</th></tr>`;
+    plan.forEach((c,i)=>{
+      h+=`<tr><td class="num">${i+1}</td>
+      <td><span class="nm">${c.add.name}</span> <span class="tm">${c.add.team??""} n=${c.add.n_career}</span>${c.add.news?`<span class="flag">${c.add.news}</span>`:""}</td>
+      <td><span class="pos ${c.pos}">${c.pos}</span></td>
+      <td>${c.drop.name} <span class="tm">${Math.round(c.drop.rest)}</span></td>
+      <td class="num"><span class="gain">+${c.gain.toFixed(0)}</span></td></tr>`;});
+    h+=`</table><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
+  }
+  h+=`<div class="card"><b class="h">Full board</b>
+  <div class="note">Best free agents vs your weakest at each position, before any swaps.</div><table>
+  <tr><th>free agent</th><th></th><th style="text-align:right">rest</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
   for(const pos of ["GKP","DEF","MID","FWD"]){
     const m=mine.filter(p=>p.pos===pos).sort((a,b)=>a.rest-b.rest);
     if(!m.length)continue;
-    for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>b.rest-a.rest).slice(0,4)){
+    for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>b.rest-a.rest).slice(0,3)){
       const g=fa.rest-m[0].rest;
-      if(g>8)claims.push({fa,drop:m[0],g});
+      h+=`<tr><td><span class="nm">${fa.name}</span> <span class="tm">${fa.team??""} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
+      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${Math.round(fa.rest)}</td>
+      <td>${m[0].name} <span class="tm">${Math.round(m[0].rest)}</span></td>
+      <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(0)}</span></td></tr>`;
     }
   }
-  claims.sort((a,b)=>b.g-a.g);
-  h+=`<div class="card"><table><tr><th>add</th><th></th><th>drop</th><th style="text-align:right">gain</th></tr>`;
-  for(const c of claims.slice(0,10))
-    h+=`<tr><td><span class="nm">${c.fa.name}</span> <span class="tm">${c.fa.team??""} n=${c.fa.n_career}</span>${c.fa.news?`<span class="flag">${c.fa.news}</span>`:""}</td><td><span class="pos ${c.fa.pos}">${c.fa.pos}</span></td><td>${c.drop.name}</td><td class="num"><span class="gain">+${c.g.toFixed(0)}</span></td></tr>`;
   h+=`</table></div>`;
   document.getElementById("waivers").innerHTML=h;
 }
+const NEWS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/news.json";
+let NEWSDATA=null,NEWSMINE=false;
+function renderNews(){
+  const sec=document.getElementById("news");
+  let h=`<button class="chip ${NEWSMINE?"":"on"}" id="nAll">All league news</button>
+  <button class="chip ${NEWSMINE?"on":""}" id="nMine">My team</button>`;
+  if(!NEWSDATA||!NEWSDATA.events){
+    h+=`<div class="note">No news feed yet. It is generated by the daily refresh and committed as data/news.json, so it appears after the next cron run.</div>`;
+  }else{
+    const evs=NEWSDATA.events.filter(e=>!NEWSMINE||e.mine);
+    if(!evs.length)h+=`<div class="note">Nothing here yet. Events accumulate as the daily refresh spots changes.</div>`;
+    h+=`<div class="card">`;
+    for(const e of evs.slice(0,60)){
+      h+=`<div class="ev ${e.mine?"mine-row":""}"><span class="badge b-${e.type}">${e.type.toUpperCase()}</span>
+      <span style="flex:1">${e.text}</span><span class="when">${(e.ts||"").slice(5,16).replace("T"," ")}</span></div>`;
+    }
+    h+=`</div>`;
+  }
+  sec.innerHTML=h;
+  sec.querySelector("#nAll").addEventListener("click",()=>{NEWSMINE=false;renderNews();});
+  sec.querySelector("#nMine").addEventListener("click",()=>{NEWSMINE=true;renderNews();});
+}
+fetch(NEWS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{NEWSDATA=j;renderNews();}).catch(()=>{renderNews();});
 function renderLeague(ps){
   const byOwner={};
   ps.forEach(p=>{if(p.owner)byOwner[p.owner]=byOwner[p.owner]||[],byOwner[p.owner].push(p);});

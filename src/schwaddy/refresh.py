@@ -153,6 +153,13 @@ def main():
     json.dump(out, open(pj, "w"))
     print(f"wrote {pj}: {len(players)} players, "
           f"lambdas=({m.lambda_time}, {m.lambda_nn})")
+    try:
+        from . import news
+        n_new = news.update(args.data_dir, args.league_id, d,
+                            owned, id_of_code)
+        print(f"news feed updated: {n_new} new events")
+    except Exception as ex:
+        print(f"news update skipped: {ex}")
 
 
 if __name__ == "__main__":
