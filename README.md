@@ -13,14 +13,15 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
 - src/schwaddy/news.py        league news feed written to data/news.json
-- .github/workflows/update.yml cron: 09:35 UK full refresh, 23:20 UK matchday news
+- .github/workflows/update.yml cron: 09:35 UK full refresh, 19:45 + 23:20 UK matchday news
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 
 ## News feed
 The morning cron does the full refit and picks up overnight flag changes,
 processed waivers and trades, and the official end-of-gameweek recap. The
-night cron runs `refresh --news-only`, which skips the refit and posts the
-matchday recap once the day's matches have wrapped up: the live table, who
+two evening crons run `refresh --news-only`, which skips the refit and posts
+the matchday recap once the day's matches have wrapped up - 19:45 UK covers
+the 12:30, 15:00 and 17:30 kick-offs, 23:20 UK covers the 20:00 slot: the live table, who
 moved in it, a projected finish from the morning run's forecasts, and whose
 players are still to come. Both append to data/news.json, which the News tab
 reads directly. Everything is diffed against the previous run's state, so an

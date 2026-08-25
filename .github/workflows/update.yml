@@ -1,16 +1,17 @@
 name: refresh
 on:
   schedule:
-    - cron: "35 8 * * *"    # 09:35 UK during BST, after scores finalise at 09:00
-    - cron: "20 22 * * *"   # 23:20 UK during BST, after the last match wraps up
+    # times are UTC; UK is +1 during BST. GitHub queues scheduled jobs on
+    # shared runners, so each of these can drift 10-40 minutes later.
+    - cron: "35 8 * * *"    # 09:35 UK  full refresh, after scores finalise
+    - cron: "45 18 * * *"   # 19:45 UK  news, after the 17:30 kick-off finishes
+    - cron: "20 22 * * *"   # 23:20 UK  news, after the 20:00 kick-off finishes
   workflow_dispatch:
     inputs:
       news_only:
         description: "Skip the model refit and only update the news feed"
         type: boolean
         default: false
-env:
-  NIGHT: "20 22 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,14 +25,18 @@ jobs:
       # morning cron and plain manual runs: full pull, refit, predictions,
       # and the news feed off the back of it
       - name: full refresh
-        if: github.event.schedule != env.NIGHT && !inputs.news_only
+        if: >-
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
         run: python -m schwaddy.refresh --league-id 9450
         working-directory: src
 
-      # night cron: the day's matches have wrapped up, so post the matchday
-      # recap against the morning run's forecasts without refitting
+      # evening and night crons: the day's matches have wrapped up, so post
+      # the matchday recap against the morning run's forecasts without refitting
       - name: matchday news
-        if: github.event.schedule == env.NIGHT || inputs.news_only
+        if: >-
+          (github.event_name == 'schedule' && github.event.schedule != '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && inputs.news_only)
         run: python -m schwaddy.refresh --league-id 9450 --news-only
         working-directory: src
 
