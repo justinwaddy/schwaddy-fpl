@@ -12,8 +12,19 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/mc.py          TROP-forecast estimator (port of justinwaddy/TROP v0.2.8, tau dropped, season+GW-of-season time effects, AR(1) factor extension into the forecast block)
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
-- .github/workflows/update.yml cron: daily 09:35 UK refresh
+- src/schwaddy/news.py        league news feed written to data/news.json
+- .github/workflows/update.yml cron: 09:35 UK full refresh, 23:20 UK matchday news
 - site/                       dashboard HTML; draft_room.html is the live draft tool
+
+## News feed
+The morning cron does the full refit and picks up overnight flag changes,
+processed waivers and trades, and the official end-of-gameweek recap. The
+night cron runs `refresh --news-only`, which skips the refit and posts the
+matchday recap once the day's matches have wrapped up: the live table, who
+moved in it, a projected finish from the morning run's forecasts, and whose
+players are still to come. Both append to data/news.json, which the News tab
+reads directly. Everything is diffed against the previous run's state, so an
+event fires once and re-running is a no-op.
 
 ## Lambda selection (backtest-informed)
 CV is under the decision loss (realized XI points on placebo blocks), not

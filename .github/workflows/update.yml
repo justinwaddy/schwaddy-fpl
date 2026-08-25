@@ -1,8 +1,16 @@
 name: refresh
 on:
   schedule:
-    - cron: "35 8 * * *"   # 09:35 UK during BST, after scores finalise at 09:00
+    - cron: "35 8 * * *"    # 09:35 UK during BST, after scores finalise at 09:00
+    - cron: "20 22 * * *"   # 23:20 UK during BST, after the last match wraps up
   workflow_dispatch:
+    inputs:
+      news_only:
+        description: "Skip the model refit and only update the news feed"
+        type: boolean
+        default: false
+env:
+  NIGHT: "20 22 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,10 +20,25 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
-      - run: python -m schwaddy.refresh --league-id 9450
+
+      # morning cron and plain manual runs: full pull, refit, predictions,
+      # and the news feed off the back of it
+      - name: full refresh
+        if: github.event.schedule != env.NIGHT && !inputs.news_only
+        run: python -m schwaddy.refresh --league-id 9450
         working-directory: src
-      - run: |
+
+      # night cron: the day's matches have wrapped up, so post the matchday
+      # recap against the morning run's forecasts without refitting
+      - name: matchday news
+        if: github.event.schedule == env.NIGHT || inputs.news_only
+        run: python -m schwaddy.refresh --league-id 9450 --news-only
+        working-directory: src
+
+      - name: commit
+        run: |
           git config user.name schwaddy-bot
           git config user.email bot@justinwaddy.co.uk
+          git pull --rebase --autostash origin main
           git add data/ && git commit -m "auto refresh" || echo "no changes"
           git push

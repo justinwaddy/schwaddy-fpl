@@ -1,8 +1,12 @@
 """Pipeline entrypoint: pull data, build panel, fit, write predictions.json.
 
-Run as: python -m schwaddy.refresh [--cv] [--league-id N]
+Run as: python -m schwaddy.refresh [--cv] [--news-only] [--league-id N]
 CV is expensive, so the cron run reuses the last selected lambdas from
 data/predictions.json unless --cv is passed (recommended weekly).
+
+--news-only skips the panel build and refit entirely and just refreshes
+data/news.json. The night cron uses it to post the matchday recap once
+the day's matches have wrapped up, reusing the morning run's forecasts.
 """
 import argparse, csv, io, json, os, sys
 import numpy as np
@@ -39,10 +43,29 @@ def pull(data_dir):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", action="store_true")
+    ap.add_argument("--news-only", action="store_true",
+                    help="refresh data/news.json without refitting the model")
     ap.add_argument("--league-id", type=int, default=9450)
     ap.add_argument("--data-dir", default="../data")
     args = ap.parse_args()
     os.makedirs(args.data_dir, exist_ok=True)
+
+    if args.news_only:
+        # matchday run: current flags and ownership are all the feed needs,
+        # and it reads the morning run's predictions.json for projections.
+        from . import news
+        d = api.draft_bootstrap()
+        json.dump(d, open(f"{args.data_dir}/draft_bootstrap.json", "w"))
+        owned = {}
+        if args.league_id:
+            es = api.element_status(args.league_id)
+            owned = {s["element"]: s["owner"] for s in es["element_status"]
+                     if s.get("owner")}
+        id_of_code = {str(e["code"]): e["id"] for e in d["elements"]}
+        n_new = news.update(args.data_dir, args.league_id, d, owned, id_of_code)
+        print(f"news feed updated: {n_new} new events")
+        return
+
     pull(args.data_dir)
 
     Y, D, X, season_of, gw_of, meta = build(args.data_dir)
