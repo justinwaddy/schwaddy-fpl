@@ -13,6 +13,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
 - src/schwaddy/liveform.py    current-season minutes from the draft API
+- src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, five news checks through the day
 - site/                       dashboard HTML; draft_room.html is the live draft tool
@@ -40,6 +41,15 @@ him more responsive to a single match than an established player is; and a
 player the live data shows has not featured scores 0, not the debutant
 prior. If the live endpoints fail, the whole path falls back to
 archive-only rather than marking the entire league dropped.
+
+## Overrides
+status and news are the only live signal that a player has gone, and the
+API can lag a completed transfer by days - during which a departed player
+keeps his full projection and sits top of the XI. overrides.py forces
+status for those players until the API catches up. Every applied override
+is printed by refresh, and each entry carries the date it was added; delete
+it once the API carries the news itself, since a stale override silently
+outranks real data.
 
 ## News feed
 The morning cron does the full refit and picks up overnight flag changes,

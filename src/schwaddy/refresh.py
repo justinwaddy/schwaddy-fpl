@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, liveform
+from . import api, liveform, overrides
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -55,6 +55,8 @@ def main():
         # and it reads the morning run's predictions.json for projections.
         from . import news
         d = api.draft_bootstrap()      # read in memory; pull() commits it daily
+        for w in overrides.apply(d):
+            print(f"override: {w}")
         owned = {}
         if args.league_id:
             es = api.element_status(args.league_id)
@@ -88,6 +90,8 @@ def main():
     m.fit(Y, D, season_of, gw_of, X=X)
 
     d = json.load(open(f"{args.data_dir}/draft_bootstrap.json"))
+    for w in overrides.apply(d):       # transfers the API has not posted yet
+        print(f"override: {w}")
     info = {str(e["code"]): e for e in d["elements"]}
     n_hist = meta["n_hist"]
     obs_cols = np.where(D.any(axis=0))[0]
