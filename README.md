@@ -12,9 +12,34 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/mc.py          TROP-forecast estimator (port of justinwaddy/TROP v0.2.8, tau dropped, season+GW-of-season time effects, AR(1) factor extension into the forecast block)
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
+- src/schwaddy/liveform.py    current-season minutes from the draft API
 - src/schwaddy/news.py        league news feed written to data/news.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, five news checks through the day
 - site/                       dashboard HTML; draft_room.html is the live draft tool
+
+## Availability
+P(plays) used to come from D over the last 8 archive matches, which fails
+twice. The public gameweek archive does not publish the live season until
+weeks in, so panel.build() runs with no live rows and availability is read
+off last season - a player who has been an unused sub all season still
+scores as a nailed starter. And D is a bare appearance indicator, so a
+15-minute cameo counted the same as a full start.
+
+liveform.py reads per-gameweek minutes from the draft API's live endpoints
+instead, from match one, and splices them onto the archive. The estimate is
+minutes played over minutes available across a trailing 8-match window,
+live gameweeks first, so the archive drops out entirely once the season is
+8 matches old. Blanks and doubles come off the fixture list, so a player is
+only charged for minutes his team actually played.
+
+Only availability reads this - the panel's Y and D, and so the fitted
+projection, are untouched. Two behaviours are deliberate: a player with no
+appearances last season (promoted clubs) is judged on live data alone
+rather than charged for an archive he could not have played in, which makes
+him more responsive to a single match than an established player is; and a
+player the live data shows has not featured scores 0, not the debutant
+prior. If the live endpoints fail, the whole path falls back to
+archive-only rather than marking the entire league dropped.
 
 ## News feed
 The morning cron does the full refit and picks up overnight flag changes,

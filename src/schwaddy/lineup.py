@@ -19,10 +19,23 @@ FORMATIONS = [(d, m, 10 - d - m) for d in range(3, 6) for m in range(2, 6)
               if 1 <= 10 - d - m <= 3]
 
 
-def p_plays(D_row_window, status, chance):
+def p_plays(D_row_window, status, chance, share=None):
+    """P(plays the next gameweek), before any injury flag is applied.
+
+    share: minutes played over minutes available across the trailing
+    window (see liveform.trailing_share). Preferred when available.
+    D_row_window is a bare appearance indicator, so it scores a 15-minute
+    cameo the same as a full start and overrates anyone who has lost their
+    place; it stays as the fallback for players with no minutes history.
+    """
     n = max(1, len(D_row_window))
     played = float(D_row_window.sum())
-    p = 0.35 + 0.65 * min(1.0, played / n) if played > 0 else 0.40
+    if share is not None:
+        p = 0.35 + 0.65 * min(1.0, share)
+    elif played > 0:
+        p = 0.35 + 0.65 * min(1.0, played / n)
+    else:
+        p = 0.40
     if status in ("i", "s"):
         p *= (chance / 100.0) if chance not in (None, 0) else 0.65
     elif status == "d":

@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api
+from . import api, liveform
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -126,12 +126,22 @@ def main():
             prev_club[c2] = r2["team"]
     tname = {t["id"]: t["name"] for t in d["teams"]}
     ETYPE = {1: "GKP", 2: "DEF", 3: "MID", 4: "FWD"}
+    id_of_code = {str(e["code"]): e["id"] for e in d["elements"]}
+    # the archive lags the live season by weeks, so take this season's
+    # minutes from the draft API rather than waiting for it
+    live_gws, live_mins, live_matches = liveform.load(args.data_dir)
+    print(f"live minutes: {len(live_gws)} gameweeks, "
+          f"{len(live_mins)} players")
     players = []
     for i, code in enumerate(meta["codes"]):
         if code not in meta["current"]:
             continue
         e = info[code]
-        base = p_plays(D[i, lo:nxt], "a", None)   # healthy-state level
+        share = liveform.trailing_share(meta["MINS"][i], meta["M"][i], D[i],
+                                        n_hist, e["team"], live_gws,
+                                        live_mins.get(id_of_code.get(code), {}),
+                                        live_matches)
+        base = p_plays(D[i, lo:nxt], "a", None, share)   # healthy-state level
         new_club = prev_club.get(code) is None \
             or prev_club.get(code) != tname[e["team"]]
         # only discount while the trailing window still lacks new-club minutes
@@ -159,9 +169,6 @@ def main():
         owned = {s["element"]: s["owner"] for s in es["element_status"]
                  if s.get("owner")}
     from .league import MY_ENTRY
-    id_of_code = {}
-    for e in d["elements"]:
-        id_of_code[str(e["code"])] = e["id"]
     for p in players:
         pid = id_of_code.get(p["code"])
         p["owner"] = owned.get(pid)

@@ -98,7 +98,8 @@ def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
     conceded = _team_conceded(data_dir)
     odds = load_historical(data_dir, SEASONS) if use_odds else {}
     n_matched = [0, 0]
-    cells = {}          # (code, col) -> (points, home, opp_conceded, odds3)
+    cells = {}          # (code, col) -> (points, home, opp_conceded, odds3,
+                        #                 n_matches, minutes)
     apps = {}
     pos_of = {}
     import os
@@ -132,11 +133,13 @@ def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
             o3 = cell_covariates(mt, bool(home))
             key = (code, col)
             nm = 1
+            mins = int(r["minutes"] or 0)
             if key in cells:                     # double gameweek: accumulate
                 pts += cells[key][0]
                 home, oc, o3 = cells[key][1], cells[key][2], cells[key][3]
                 nm = cells[key][4] + 1
-            cells[key] = (pts, home, oc, o3, nm)
+                mins += cells[key][5]
+            cells[key] = (pts, home, oc, o3, nm, mins)
             apps[code] = apps.get(code, 0) + 1
             pos_of[code] = pos
 
@@ -157,11 +160,13 @@ def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
         X[:, :, 3] = BASELINE["p_opp_win"]
         X[:, :, 4] = BASELINE["p_over"]
     M = np.zeros((N, T))
-    for (code, col), (pts, home, oc, o3, nm) in cells.items():
+    MINS = np.zeros((N, T))
+    for (code, col), (pts, home, oc, o3, nm, mins) in cells.items():
         i = row_of.get(code)
         if i is None:
             continue
         Y[i, col], D[i, col], M[i, col] = pts / nm, 1.0, float(nm)
+        MINS[i, col] = float(mins)
         X[i, col, 0], X[i, col, 1] = home, oc
         if use_odds:
             X[i, col, 2], X[i, col, 3], X[i, col, 4] = o3
@@ -206,5 +211,5 @@ def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
 
     meta = dict(codes=keep, row_of=row_of, pos_of=pos_of,
                 current=set(current), n_hist=n_hist,
-                odds_match_rate=meta_match, M=M)
+                odds_match_rate=meta_match, M=M, MINS=MINS)
     return Y, D, X, season_of, gw_of, meta
