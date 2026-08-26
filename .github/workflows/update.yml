@@ -4,6 +4,9 @@ on:
     # times are UTC; UK is +1 during BST. GitHub queues scheduled jobs on
     # shared runners, so each of these can drift 10-40 minutes later.
     - cron: "35 8 * * *"    # 09:35 UK  full refresh, after scores finalise
+    - cron: "45 11 * * *"   # 12:45 UK  news, late team sheets and morning flags
+    - cron: "45 13 * * *"   # 14:45 UK  news, after the 12:30 kick-off finishes
+    - cron: "15 16 * * *"   # 17:15 UK  news, after the 15:00 kick-off finishes
     - cron: "45 18 * * *"   # 19:45 UK  news, after the 17:30 kick-off finishes
     - cron: "20 22 * * *"   # 23:20 UK  news, after the 20:00 kick-off finishes
   workflow_dispatch:

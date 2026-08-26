@@ -54,8 +54,7 @@ def main():
         # matchday run: current flags and ownership are all the feed needs,
         # and it reads the morning run's predictions.json for projections.
         from . import news
-        d = api.draft_bootstrap()
-        json.dump(d, open(f"{args.data_dir}/draft_bootstrap.json", "w"))
+        d = api.draft_bootstrap()      # read in memory; pull() commits it daily
         owned = {}
         if args.league_id:
             es = api.element_status(args.league_id)
