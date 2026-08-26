@@ -163,7 +163,9 @@ def main():
         players.append(dict(
             code=code, n_career=int(D[i].sum()),
             name=e["web_name"],
-            pos=meta["pos_of"].get(code) or ETYPE.get(e["element_type"], "MID"),
+            # the draft API's classification governs squad and XI legality,
+            # so it wins over the archive's, which can be a season stale
+            pos=ETYPE.get(e["element_type"]) or meta["pos_of"].get(code, "MID"),
             team=e["team"], status=e["status"], news=(e.get("news") or "")[:90],
             avail=round(avail, 2), gw=per_gw.tolist(),
             rest=float(per_gw.sum())))
