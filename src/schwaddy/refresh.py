@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, liveform, overrides
+from . import api, depth, liveform, overrides
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -136,15 +136,28 @@ def main():
     live_gws, live_mins, live_matches = liveform.load(args.data_dir)
     print(f"live minutes: {len(live_gws)} gameweeks, "
           f"{len(live_mins)} players")
+    # every minutes share first: club depth needs the whole group before it
+    # can hand a flagged player's minutes to the team-mates who are fit
+    shares = {}
+    for i, code in enumerate(meta["codes"]):
+        if code not in meta["current"]:
+            continue
+        e = info[code]
+        shares[e["id"]] = liveform.trailing_share(
+            meta["MINS"][i], meta["M"][i], D[i], n_hist, e["team"], live_gws,
+            live_mins.get(id_of_code.get(code), {}), live_matches)
+    boost = depth.multipliers(d["elements"], shares)
+    print(f"depth: {len(boost)} players absorbing minutes from flagged "
+          f"team-mates")
+
     players = []
     for i, code in enumerate(meta["codes"]):
         if code not in meta["current"]:
             continue
         e = info[code]
-        share = liveform.trailing_share(meta["MINS"][i], meta["M"][i], D[i],
-                                        n_hist, e["team"], live_gws,
-                                        live_mins.get(id_of_code.get(code), {}),
-                                        live_matches)
+        share = shares.get(e["id"])
+        if share is not None:
+            share = min(1.0, share * boost.get(e["id"], 1.0))
         base = p_plays(D[i, lo:nxt], "a", None, share)   # healthy-state level
         new_club = prev_club.get(code) is None \
             or prev_club.get(code) != tname[e["team"]]

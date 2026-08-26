@@ -13,6 +13,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
 - src/schwaddy/liveform.py    current-season minutes from the draft API
+- src/schwaddy/depth.py       club depth: minutes freed by flagged team-mates
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, five news checks through the day
@@ -41,6 +42,22 @@ him more responsive to a single match than an established player is; and a
 player the live data shows has not featured scores 0, not the debutant
 prior. If the live endpoints fail, the whole path falls back to
 archive-only rather than marking the entire league dropped.
+
+## Club depth
+Minutes share says whether a player has been playing, never what happens
+when the man ahead of him stops - a backup and a first choice just back
+from injury look identical at a third of the minutes. depth.py groups
+players by club and position and hands the minutes of anyone flagged out
+to the team-mates who are fit, in proportion to what they already play,
+capped at double. With a full-strength group every multiplier is 1.0, so
+the ordinary case is undisturbed.
+
+Measured rolling-origin over 25/26, with three straight unused gameweeks
+standing in for the status flags the archive does not carry: XI decisions
++0.08 +/- 0.75 a gameweek, i.e. nothing, since the XI is nailed starters
+who never get a boost. The gain is calibration on the 8427 player-
+gameweeks it does touch, where the model under-predicted appearance by
+4.8 points (0.709 against an actual 0.757); depth halves that to 2.4.
 
 ## Overrides
 status and news are the only live signal that a player has gone, and the
