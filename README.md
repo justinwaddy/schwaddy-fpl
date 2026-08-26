@@ -28,6 +28,14 @@ off last season - a player who has been an unused sub all season still
 scores as a nailed starter. And D is a bare appearance indicator, so a
 15-minute cameo counted the same as a full start.
 
+The floor on P(plays) for a player with no minutes behind him was 0.35.
+Measured rolling-origin, that band actually appears about 9% of the time.
+Sweeping it over 23/24, 24/25 and 25/26 cuts the Brier score by 36% at
+0.15 in every one of the three. Realized XI points do not move (+0.95,
+-1.45, +0.24 across those seasons - noise), because an XI is nailed
+starters for whom the floor never binds. It is a fix to the number's
+honesty, which is what the waiver comparison and the dashboard read.
+
 liveform.py reads per-gameweek minutes from the draft API's live endpoints
 instead, from match one, and splices them onto the archive. The estimate is
 minutes played over minutes available across a trailing 8-match window,

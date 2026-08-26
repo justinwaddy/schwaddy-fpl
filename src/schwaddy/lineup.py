@@ -18,6 +18,17 @@ import numpy as np
 FORMATIONS = [(d, m, 10 - d - m) for d in range(3, 6) for m in range(2, 6)
               if 1 <= 10 - d - m <= 3]
 
+# Floor on P(plays) for a player with no minutes behind him. It was 0.35,
+# which badly overstated players who were not being picked: measured
+# rolling-origin, that band appeared about 9% of the time. Sweeping the
+# floor over 23/24, 24/25 and 25/26 cuts the Brier score by 36% at 0.15 in
+# every one of the three. Realized XI points are unmoved (+0.95, -1.45,
+# +0.24 across those seasons - noise), because an XI is nailed starters
+# for whom the floor never binds. This is a fix to the number's honesty,
+# which is what waivers and the dashboard read, not to team selection.
+PLAY_FLOOR = 0.15
+UNKNOWN_PLAYER = 0.40      # no history either way: neither seen nor dropped
+
 
 def p_plays(D_row_window, status, chance, share=None):
     """P(plays the next gameweek), before any injury flag is applied.
@@ -31,11 +42,11 @@ def p_plays(D_row_window, status, chance, share=None):
     n = max(1, len(D_row_window))
     played = float(D_row_window.sum())
     if share is not None:
-        p = 0.35 + 0.65 * min(1.0, share)
+        p = PLAY_FLOOR + (1.0 - PLAY_FLOOR) * min(1.0, share)
     elif played > 0:
-        p = 0.35 + 0.65 * min(1.0, played / n)
+        p = PLAY_FLOOR + (1.0 - PLAY_FLOOR) * min(1.0, played / n)
     else:
-        p = 0.40
+        p = UNKNOWN_PLAYER
     if status in ("i", "s"):
         p *= (chance / 100.0) if chance not in (None, 0) else 0.65
     elif status == "d":
