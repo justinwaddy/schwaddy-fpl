@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, depth, liveform, overrides
+from . import api, depth, liveform, livegws, overrides
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -24,6 +24,7 @@ RAW = "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/d
 def pull(data_dir):
     json.dump(api.draft_bootstrap(), open(f"{data_dir}/draft_bootstrap.json", "w"))
     json.dump(api.fixtures(), open(f"{data_dir}/fixtures_2627.json", "w"))
+    live_archive = False
     for s in SEASONS + [LIVE]:
         for f in ("gws/merged_gw.csv", "players_raw.csv", "teams.csv"):
             out = f"{data_dir}/{f.split('/')[-1].replace('.csv', '')}_{s}.csv" \
@@ -38,6 +39,17 @@ def pull(data_dir):
                     continue                   # archive not started yet
                 r.raise_for_status()
             open(out, "w").write(r.text)
+            if s == LIVE and "merged" in f:
+                live_archive = True       # the real archive has caught up
+    if not live_archive:
+        # the archive lags the live season by weeks; rebuild it from the API
+        # so the fit is not stuck on last season while squads have changed
+        try:
+            fx = json.load(open(f"{data_dir}/fixtures_2627.json"))
+            n = livegws.write(data_dir, fx)
+            print(f"live gameweeks reconstructed from the API: {n} rows")
+        except Exception as ex:
+            print(f"live gameweek reconstruction skipped: {ex}")
 
 
 def main():

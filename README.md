@@ -13,6 +13,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/panel.py       five-season player-gameweek panel under draft scoring
 - src/schwaddy/lineup.py      weekly XI + waiver optimiser (sessions 2-3)
 - src/schwaddy/liveform.py    current-season minutes from the draft API
+- src/schwaddy/livegws.py     rebuilds the current season's gameweek file
 - src/schwaddy/depth.py       club depth: minutes freed by flagged team-mates
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
@@ -42,6 +43,23 @@ him more responsive to a single match than an established player is; and a
 player the live data shows has not featured scores 0, not the debutant
 prior. If the live endpoints fail, the whole path falls back to
 archive-only rather than marking the entire league dropped.
+
+## The live season
+The public archive does not publish a season's per-gameweek rows until
+weeks into it, so build() spent the opening weeks fitting on last season
+and earlier - blind exactly when squads have just changed. Measured
+rolling-origin over 25/26, with the target season masked to reproduce
+that blindness, it costs 2.95 realized XI points a gameweek across the
+season and 6.40 over its first ten.
+
+Everything the archive file holds is served live by the API, so
+livegws.py writes the same file from it and build() reads it unchanged.
+Settled gameweeks are frozen once written: the club a player belongs to
+comes from the season's raw file, which holds only his current one, so
+rebuilding an old gameweek after a January move would file those matches
+under the wrong club. The newest finished gameweek is always refetched,
+since bonus and corrections land late. Once the real archive appears,
+pull() takes it and the reconstruction stands down.
 
 ## Club depth
 Minutes share says whether a player has been playing, never what happens
