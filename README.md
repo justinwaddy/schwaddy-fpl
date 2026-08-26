@@ -52,6 +52,28 @@ player the live data shows has not featured scores 0, not the debutant
 prior. If the live endpoints fail, the whole path falls back to
 archive-only rather than marking the entire league dropped.
 
+## Opponent strength
+The opponent term is a club's goals-conceded rate, season-to-date, shrunk
+toward a prior. That prior used to be a flat league average of 1.4 with
+weight 2, which threw away what was already known about a club and left
+the covariate at the mercy of one match. Measured against what a club
+actually concedes over the rest of the season, it was worse than using no
+information at all early on (RMSE 0.469 after one gameweek, against 0.373
+for a constant 1.4).
+
+Anchoring each club to its own previous-season rate, promoted sides to the
+80th percentile of last season's, at weight 16 - a single match's goals
+conceded is far too noisy to move off a good prior - cuts that to 0.329
+after one gameweek and 0.363 across all horizons, 16% better than the flat
+prior, and it replicates at every season transition and every horizon
+tested. Realized XI points do not move (-0.42, -0.47, +1.32 over three
+seasons); per-match RMSE and rank correlation improve slightly.
+
+This matters most now the live season is spliced in: with the flat prior,
+one gameweek doubled the spread of the opponent term across all remaining
+fixtures and left it correlated 0.27 with the settled rates it replaced.
+At weight 16 the correlation is 0.94.
+
 ## The live season
 The public archive does not publish a season's per-gameweek rows until
 weeks into it, so build() spent the opening weeks fitting on last season

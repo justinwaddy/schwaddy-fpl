@@ -19,13 +19,23 @@ SEASONS = ["2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
 LIVE = "2026-27"
 
 
-def _team_conceded(data_dir):
+def _team_conceded(data_dir, prior_mode="team", prior_w=16.0):
     """(season_idx, team_name) -> per-GW rolling mean goals conceded
-    entering each GW (season-to-date, first GW uses league-average prior),
-    plus final season mean per team."""
+    entering each GW (season-to-date, shrunk toward a prior), plus final
+    season mean per team.
+
+    prior_mode "team" anchors each club to its own previous-season rate,
+    falling back to a promoted-club prior for newcomers. "flat" is the old
+    behaviour, a single league average for everyone, which discards what
+    is already known about a club and leaves the covariate at the mercy of
+    one match: measured on the live season, a single gameweek doubled the
+    spread of the opponent term and left it correlated 0.27 with the
+    settled rates it replaced.
+    """
     import os
     conceded = {}
     live_list = [LIVE] if os.path.exists(f"{data_dir}/gws_{LIVE}.csv") else []
+    prev_final = {}
     for si, s in enumerate(SEASONS + live_list):
         per_match = {}
         for r in csv.DictReader(open(f"{data_dir}/gws_{s}.csv")):
@@ -39,15 +49,23 @@ def _team_conceded(data_dir):
                 else int(float(hs))
             per_match.setdefault((r["team"], gw), gc)
         teams = sorted({k[0] for k in per_match})
-        prior = 1.4
+        # newcomers get the 80th percentile of last season's rates: a
+        # promoted side concedes like a poor one, not like the average
+        promoted = (float(np.quantile(list(prev_final.values()), 0.8))
+                    if prev_final else 1.4)
         for tm in teams:
+            if prior_mode == "team":
+                prior = prev_final.get(tm, promoted)
+            else:
+                prior = 1.4
             run, n = 0.0, 0
             for gw in range(38):
-                conceded[(si, tm, gw)] = (run + 2 * prior) / (n + 2)
+                conceded[(si, tm, gw)] = (run + prior_w * prior) / (n + prior_w)
                 if (tm, gw) in per_match:
                     run += per_match[(tm, gw)]
                     n += 1
             conceded[(si, tm, "final")] = run / max(n, 1)
+        prev_final = {tm: conceded[(si, tm, "final")] for tm in teams}
     return conceded
 
 
@@ -85,7 +103,8 @@ def draft_points(r, pos, S, alpha=0.0):
     return float(p)
 
 
-def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
+def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0,
+          conceded_prior="team", conceded_w=16.0):
     d = json.load(open(f"{data_dir}/draft_bootstrap.json"))
     S = d["settings"]["scoring"]
     POS = {t["id"]: t["singular_name_short"] for t in d["element_types"]}
@@ -95,7 +114,8 @@ def build(data_dir=".", min_career_apps=6, use_odds=False, alpha=0.0):
     season_of = np.repeat(np.arange(n_hist + 1), 38)
     gw_of = np.tile(np.arange(38), n_hist + 1)
 
-    conceded = _team_conceded(data_dir)
+    conceded = _team_conceded(data_dir, prior_mode=conceded_prior,
+                              prior_w=conceded_w)
     odds = load_historical(data_dir, SEASONS) if use_odds else {}
     n_matched = [0, 0]
     cells = {}          # (code, col) -> (points, home, opp_conceded, odds3,
