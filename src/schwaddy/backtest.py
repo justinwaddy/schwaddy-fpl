@@ -1,5 +1,10 @@
 """Rolling-origin backtest of TROP-forecast on the 2025/26 season.
 
+Defaults track refresh.py: ridge_unit=15.0 and production's p_plays. A
+harness whose defaults differ from what ships validates a model nobody
+runs - measured over 25/26, ridge_unit=0.0 costs 3.0 realized XI points a
+gameweek against the 15.0 that production actually uses.
+
 Protocol, no leakage:
 1. Lambdas are selected by placebo CV using ONLY data through 2024/25
    (all of 25/26 masked), then held fixed for the whole backtest.
@@ -26,18 +31,23 @@ from scipy.stats import spearmanr
 
 from .panel import build
 from .mc import TropForecast
-from .lineup import pick_xi
+from .lineup import pick_xi, p_plays
 
 SEASON = 4                # default target: 25/26 (index 4)
 BASE = SEASON * 38
 
 
 def trailing_pplay(D, i, col, window=8, base=BASE):
+    """Availability for the decision test, via production's p_plays.
+
+    This used its own 0.2 + 0.8 * rate, which meant the harness scored an
+    XI that refresh.py would never have picked. Anything measured here has
+    to be measured on what ships.
+    """
     lo = max(0, col - window)
     if col == base:                       # season opener: use last season
         lo, col = base - 38, base
-    played = D[i, lo:col].sum()
-    return 0.2 + 0.8 * played / max(1, col - lo)
+    return p_plays(D[i, lo:col], "a", None)
 
 
 def benchmarks(Y, D, pos_idx, col, base=BASE):
@@ -106,7 +116,7 @@ def make_sched_M(data_dir, seasons, codes):
 
 
 def run(data_dir=".", origins=range(1, 39), max_iter=300, verbose=True,
-        cv_kind="utility", season_idx=SEASON, ridge_unit=0.0):
+        cv_kind="utility", season_idx=SEASON, ridge_unit=15.0):
     Y, D, X, season_of, gw_of, meta = build(data_dir)
     base = season_idx * 38
     M = meta["M"]
