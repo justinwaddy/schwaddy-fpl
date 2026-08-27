@@ -2,19 +2,30 @@ name: refresh
 on:
   schedule:
     # times are UTC; UK is +1 during BST. GitHub queues scheduled jobs on
-    # shared runners, so each of these can drift 10-40 minutes later.
+    # shared runners and has been running these hours late, so treat them
+    # as "some time after", not as clock times.
     - cron: "35 8 * * *"    # 09:35 UK  full refresh, after scores finalise
-    - cron: "45 11 * * *"   # 12:45 UK  news, late team sheets and morning flags
     - cron: "45 13 * * *"   # 14:45 UK  news, after the 12:30 kick-off finishes
-    - cron: "15 16 * * *"   # 17:15 UK  news, after the 15:00 kick-off finishes
-    - cron: "45 18 * * *"   # 19:45 UK  news, after the 17:30 kick-off finishes
+    - cron: "0 17 * * *"    # 18:00 UK  news, after the 15:00 kick-off finishes
     - cron: "20 22 * * *"   # 23:20 UK  news, after the 20:00 kick-off finishes
+  # a code change should be validated against real data straight away
+  # rather than waiting on the next cron. The commit step only ever writes
+  # under data/, so the bot's own pushes cannot retrigger this.
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "requirements.txt"
+      - ".github/workflows/**"
   workflow_dispatch:
     inputs:
       news_only:
         description: "Skip the model refit and only update the news feed"
         type: boolean
         default: false
+concurrency:
+  group: refresh          # queue overlapping runs; they all push to main
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,17 +38,18 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
 
-      # morning cron and plain manual runs: full pull, refit, predictions,
-      # and the news feed off the back of it
+      # morning cron, code pushes, and plain manual runs: full pull, refit,
+      # predictions, and the news feed off the back of it
       - name: full refresh
         if: >-
+          github.event_name == 'push' ||
           (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
           (github.event_name == 'workflow_dispatch' && !inputs.news_only)
         run: python -m schwaddy.refresh --league-id 9450
         working-directory: src
 
-      # evening and night crons: the day's matches have wrapped up, so post
-      # the matchday recap against the morning run's forecasts without refitting
+      # the other crons: the day's matches have wrapped up, so post the
+      # matchday recap against the morning run's forecasts without refitting
       - name: matchday news
         if: >-
           (github.event_name == 'schedule' && github.event.schedule != '35 8 * * *') ||

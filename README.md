@@ -17,7 +17,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/depth.py       club depth: minutes freed by flagged team-mates
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
-- .github/workflows/update.yml cron: 09:35 UK full refresh, five news checks through the day
+- .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 
 ## Availability
@@ -119,10 +119,14 @@ outranks real data.
 ## News feed
 The morning cron does the full refit and picks up overnight flag changes,
 processed waivers and trades, and the official end-of-gameweek recap. The
-other five crons run `refresh --news-only`, which skips the refit and posts
-the matchday recap as the day's matches wrap up. 12:45 UK catches late team
-sheets and morning flag changes; 14:45, 17:15, 19:45 and 23:20 UK each follow
-a kick-off slot home (12:30, 15:00, 17:30 and 20:00 respectively): the live table, who
+other three crons run `refresh --news-only`, which skips the refit and posts
+the matchday recap as the day's matches wrap up: 14:45, 18:00 and 23:20 UK,
+each following a kick-off slot home (12:30, 15:00 and 20:00 respectively).
+A push touching src/ also triggers a full refresh, so a code change is
+validated against real data instead of waiting on the next cron - the
+commit step only writes under data/, so the bot cannot retrigger itself.
+Scheduled runs have been landing hours late, so read the cron times as
+"some time after", not as clock times: the live table, who
 moved in it, a projected finish from the morning run's forecasts, and whose
 players are still to come. Both append to data/news.json, which the News tab
 reads directly. Everything is diffed against the previous run's state, so an
