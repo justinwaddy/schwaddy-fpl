@@ -20,6 +20,18 @@ from . import api
 WINDOW = 8               # trailing matches behind the availability estimate
 FULL = 90.0              # minutes in a match
 
+# Weight on a previous-season match inside the window. The window used to
+# treat last May as evidence equal to last Saturday, which drowns the
+# opening weeks of a season in a squad that no longer exists. Measured on
+# the opening 8 gameweeks across four season transitions, dropping it to
+# 0.1 cuts the Brier score by 14% overall and 31% at gameweek 2, improving
+# all four transitions at every weight tried. The curve is flat from 0.15
+# down to 0, so this sits at an interior value rather than the raw optimum
+# of 0.05. From gameweek 9 the window is all current-season and this has
+# no effect at all; with no current-season data it cancels, since it
+# scales the numerator and denominator alike.
+PREV_SEASON_WEIGHT = 0.10
+
 
 def played_gws(fixtures, window=WINDOW):
     """0-based gameweek indices with a finished fixture, most recent last."""
@@ -89,8 +101,9 @@ def trailing_share(mins_row, m_row, d_row, n_hist, team, played, live_mins,
     """Minutes played over minutes available across the trailing window.
 
     Live gameweeks fill the window first, most recent first; whatever is
-    left is filled backwards through the archive. Once the season is
-    `window` matches old the archive drops out entirely.
+    left is filled backwards through last season at PREV_SEASON_WEIGHT.
+    Once the season is `window` matches old the archive drops out
+    entirely.
 
     None only when the window carries no evidence either way - no archive
     minutes and no live gameweek - where p_plays falls back to its own
@@ -114,8 +127,9 @@ def trailing_share(mins_row, m_row, d_row, n_hist, team, played, live_mins,
     prev = base - 38
     if d_row[prev:base].sum() > 0:
         need = window - len(cells)
+        w = PREV_SEASON_WEIGHT
         for col in range(base - 1, max(prev - 1, base - 1 - need), -1):
-            cells.append((mins_row[col], FULL * max(1.0, m_row[col])))
+            cells.append((w * mins_row[col], w * FULL * max(1.0, m_row[col])))
     avail = sum(a for _, a in cells)
     got = sum(m for m, _ in cells)
     if avail <= 0 or (got <= 0 and not live_seen):

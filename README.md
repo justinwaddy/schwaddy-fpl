@@ -28,6 +28,16 @@ off last season - a player who has been an unused sub all season still
 scores as a nailed starter. And D is a bare appearance indicator, so a
 15-minute cameo counted the same as a full start.
 
+The trailing window used to treat a match from last May as evidence equal
+to one from last Saturday, which drowns the opening weeks of a season in a
+squad that no longer exists. A previous-season match now carries 0.1 of
+the weight of a current-season one. Measured on the opening 8 gameweeks
+across four season transitions, that cuts the Brier score by 14% overall
+and 31% at gameweek 2, and improves all four transitions at every weight
+tried between 0.5 and 0. From gameweek 9 the window is entirely
+current-season and the weight has no effect at all; before a ball is
+kicked it cancels, scaling numerator and denominator alike.
+
 The floor on P(plays) for a player with no minutes behind him was 0.35.
 Measured rolling-origin, that band actually appears about 9% of the time.
 Sweeping it over 23/24, 24/25 and 25/26 cuts the Brier score by 36% at
