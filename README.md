@@ -17,6 +17,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/depth.py       club depth: minutes freed by flagged team-mates
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
+- src/schwaddy/weekly.py      live weekly league state, data/league.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 
@@ -125,6 +126,26 @@ status for those players until the API catches up. Every applied override
 is printed by refresh, and each entry carries the date it was added; delete
 it once the API carries the news itself, since a stale override silently
 outranks real data.
+
+## The weekly league
+weekly.py writes data/league.json every run: each manager's live score,
+how many of his starters are still to come, what the week projects to once
+they play, and his full squad for the dashboard's click-through.
+
+Substitutions are provisional. The game only applies them when the
+gameweek ends, but a starter whose match has finished with no minutes is
+already lost, so his replacement is worked out under the same formation
+rules the game enforces - keepers only for keepers, bench order respected,
+minimums and maximums held. That makes the live table read like the final
+one instead of punishing a manager for a blank he covered on the bench. A
+substitution is accepted when it does not increase the formation's breach
+of the rules rather than when it leaves it strictly legal, so a lineup
+that arrives malformed still gets a best effort instead of silently
+getting none.
+
+The news feed quotes the same table, so the tab and the feed cannot
+disagree. Events carry a scope - "mine", "league" or "free" - which drives
+the three-way filter on the news tab.
 
 ## News feed
 The morning cron does the full refit and picks up overnight flag changes,

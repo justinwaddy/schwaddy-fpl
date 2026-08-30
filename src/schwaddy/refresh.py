@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, depth, liveform, livegws, overrides
+from . import api, depth, liveform, livegws, overrides, weekly
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -52,6 +52,24 @@ def pull(data_dir):
             print(f"live gameweek reconstruction skipped: {ex}")
 
 
+def _weekly(data_dir, league_id, bootstrap, owned, id_of_code):
+    """Live weekly state for the dashboard, and for the news feed to quote.
+
+    Never fatal: the feed falls back to computing its own live table from
+    the standings, which is the behaviour that predates this file.
+    """
+    try:
+        st = weekly.write(data_dir, league_id, bootstrap, owned, id_of_code)
+    except Exception as ex:
+        print(f"weekly league state skipped: {ex}")
+        return None
+    if st:
+        print(f"weekly league state: GW{st['gw']}, "
+              f"{len(st['managers'])} managers, "
+              f"{sum(m['to_play'] for m in st['managers'])} players to play")
+    return st
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", action="store_true")
@@ -75,7 +93,9 @@ def main():
             owned = {s["element"]: s["owner"] for s in es["element_status"]
                      if s.get("owner")}
         id_of_code = {str(e["code"]): e["id"] for e in d["elements"]}
-        n_new = news.update(args.data_dir, args.league_id, d, owned, id_of_code)
+        wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
+        n_new = news.update(args.data_dir, args.league_id, d, owned,
+                            id_of_code, weekly=wk)
         print(f"news feed updated: {n_new} new events")
         return
 
@@ -215,8 +235,9 @@ def main():
           f"lambdas=({m.lambda_time}, {m.lambda_nn})")
     try:
         from . import news
-        n_new = news.update(args.data_dir, args.league_id, d,
-                            owned, id_of_code)
+        wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
+        n_new = news.update(args.data_dir, args.league_id, d, owned,
+                            id_of_code, weekly=wk)
         print(f"news feed updated: {n_new} new events")
     except Exception as ex:
         print(f"news update skipped: {ex}")

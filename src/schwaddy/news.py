@@ -22,17 +22,40 @@ directly; "mine" marks events that involve your squad or your entry.
 """
 import json
 import os
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 from . import api
 from .league import MY_ENTRY
 
-MAX_EVENTS = 150
+MAX_EVENTS = 220
 HIGH_SCORE = 12          # league-wide standout player score in a GW
-DAY_HIGH = 9             # standout score in a single day's matches
+DAY_HIGH = 9             # standout free agent score in a single day
+OWNED_HAUL = 10          # an owned player's score worth calling out
+FLOP_MINS = 60           # played this long...
+FLOP_PTS = 2             # ...and returned no more than this
 MY_TOP_N = 3             # your best scorers listed after each GW
 BENCH_REGRET = 10        # bench points worth pointing at
 MAX_OVERTAKES = 3        # table churn to report per run
+FREE_TAG = "free agent"  # single source for the unowned marker in text
+WRAP_DAYS = {0, 4, 5, 6}  # Mon, Fri, Sat, Sun - the nights we wrap up
+
+# said of a player who was on the pitch an hour and brought nothing back
+FLOPS = [
+    "{p} managed {n} pts in {m} minutes ({tag}) - a full shift, no wages",
+    "{p}: {m} minutes, {n} pts ({tag}). Present, in the loosest sense",
+    "{p} gave {tag} {n} pts off {m} minutes. Anonymous",
+    "{p} played {m} minutes for {n} pts ({tag}) - he'll have seen it on telly",
+    "{p}: {n} pts in {m} minutes ({tag}). Kept his shirt clean",
+    "{p} clocked {m} minutes and {n} pts ({tag}). A quiet afternoon's work",
+    "{p} returned {n} pts from {m} minutes ({tag}) - answers on a postcard",
+]
+# said of whoever is propping up the gameweek
+PINTS = [
+    "Pint watch: {who} props up GW{gw} on {n}. Mine's a Guinness",
+    "Pint watch: {who} is bottom of GW{gw} with {n}. The bar is that way",
+    "Pint watch: {who} brings up the rear on {n} in GW{gw}. Get them in",
+    "Pint watch: {who} last in GW{gw}, {n} pts. A round is owed",
+]
 
 STATUS_WORD = {"i": "injured", "d": "a doubt", "s": "suspended",
                "u": "unavailable", "n": "not available"}
@@ -126,8 +149,13 @@ def _expected(data_dir, id_of_code, gw):
     return out
 
 
-def update(data_dir, league_id, bootstrap, owned, id_of_code):
-    """owned: element id -> entry id. id_of_code: str(code) -> element id."""
+def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
+    """owned: element id -> entry id. id_of_code: str(code) -> element id.
+
+    weekly: the state from weekly.build, when it is available. Its live
+    table already carries provisional substitutions, so the feed quotes
+    the same numbers the league tab shows.
+    """
     path = f"{data_dir}/news.json"
     state, events = _load(path)
     first_run = "flags" not in state
@@ -198,6 +226,7 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code):
 
     cur_gw = game.get("current_event")
     finished = game.get("current_event_finished")
+    stats, pts = {}, {}          # live stats, filled in by the blocks below
 
     # ---- matchday recap: live table once the day's matches wrap up ----
     fx_ok = True
@@ -212,25 +241,34 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code):
     if cur_gw and fresh_fx and not finished:
         stats = _live(cur_gw)
         pts = {k: v.get("total_points", 0) for k, v in stats.items()}
-        picks = _picks(list(entry_name), cur_gw)
-        exp = _expected(data_dir, id_of_code, cur_gw)
-        left_teams = {t for f in fixtures if not f.get("finished")
-                      for t in (f["team_h"], f["team_a"])}
-        live_tot = {}
-        for s in det.get("standings", []):
-            ent = lentry_to_entry.get(s["league_entry"])
-            if ent is not None:
-                live_tot[ent] = s.get("event_total", 0)
-
-        rows = []
-        for ent in entry_name:
-            xi = [pid for pid, pos in picks.get(ent, []) if pos <= 11]
-            togo = [pid for pid in xi if team_of(pid) in left_teams]
-            got = live_tot.get(ent)
-            if got is None:
-                got = sum(pts.get(pid, 0) for pid in xi)
-            rows.append(dict(ent=ent, pts=got, togo=togo,
-                             proj=got + sum(exp.get(p, 0.0) for p in togo)))
+        if weekly and weekly.get("managers"):
+            # weekly.py has already applied provisional substitutions, which
+            # the standings' event_total has not; use its table so the feed
+            # and the league tab never disagree
+            rows = [dict(ent=m["entry"], pts=m["live"], proj=m["proj"],
+                         togo=[p["id"] for p in m["squad"] if p["to_play"]
+                               and (p["slot"] <= 11 or p["subbed_in"])
+                               and not p["subbed_out"]])
+                    for m in weekly["managers"]]
+        else:
+            picks = _picks(list(entry_name), cur_gw)
+            exp = _expected(data_dir, id_of_code, cur_gw)
+            left_teams = {t for f in fixtures if not f.get("finished")
+                          for t in (f["team_h"], f["team_a"])}
+            live_tot = {}
+            for s in det.get("standings", []):
+                ent = lentry_to_entry.get(s["league_entry"])
+                if ent is not None:
+                    live_tot[ent] = s.get("event_total", 0)
+            rows = []
+            for ent in entry_name:
+                xi = [pid for pid, pos in picks.get(ent, []) if pos <= 11]
+                togo = [pid for pid in xi if team_of(pid) in left_teams]
+                got = live_tot.get(ent)
+                if got is None:
+                    got = sum(pts.get(pid, 0) for pid in xi)
+                rows.append(dict(ent=ent, pts=got, togo=togo,
+                                 proj=got + sum(exp.get(p, 0.0) for p in togo)))
         rows.sort(key=lambda r: -r["pts"])
         all_played = not any(r["togo"] for r in rows)
 
@@ -279,11 +317,23 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code):
         today_teams = {t for f in fresh_fx for t in (f["team_h"], f["team_a"])}
         today = [(pid, p) for pid, p in pts.items()
                  if team_of(pid) in today_teams]
-        for pid, p in sorted((x for x in today if x[1] >= DAY_HIGH
-                              and owned.get(x[0])), key=lambda x: -x[1])[:5]:
+        for pid, p in sorted((x for x in today if x[1] >= OWNED_HAUL
+                              and owned.get(x[0])), key=lambda x: -x[1])[:6]:
             tag, mine = owner_tag(pid)
             new.append(dict(ts=ts, gw=cur_gw, type="haul", mine=mine,
-                            text=f"{pname(pid)} scored {p} pts today ({tag})"))
+                            text=f"{pname(pid)} hauled {p} pts today ({tag})"))
+        # an hour on the pitch and nothing to show for it
+        import random as _rnd
+        flops = [(pid, p) for pid, p in today if owned.get(pid)
+                 and p <= FLOP_PTS
+                 and int((stats.get(pid) or {}).get("minutes") or 0) >= FLOP_MINS]
+        for pid, p in sorted(flops, key=lambda x: x[1])[:4]:
+            tag, mine = owner_tag(pid)
+            mins = int((stats.get(pid) or {}).get("minutes") or 0)
+            line = FLOPS[(pid + cur_gw) % len(FLOPS)]     # stable per player
+            new.append(dict(ts=ts, gw=cur_gw, type="flop", mine=mine,
+                            text=line.format(p=pname(pid), n=p, m=mins,
+                                             tag=tag)))
         for pid, _ in today:
             if not owned.get(pid):
                 continue
@@ -306,6 +356,56 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code):
             new.append(dict(ts=ts, gw=cur_gw, type="freeagent", mine=False,
                             text=f"Free agent watch: {pname(pid)} scored "
                                  f"{p} pts today and is unowned"))
+    # ---- Friday to Monday night wrap-up ----
+    # keyed off the last finished fixture's own date rather than the clock,
+    # so a run that lands hours late still files under the right night and
+    # never wraps the same evening twice
+    try:
+        done_fx = [f for f in fixtures if f.get("finished")
+                   and f.get("kickoff_time")]
+        last_day = max(f["kickoff_time"][:10] for f in done_fx) if done_fx else None
+    except Exception:
+        last_day = None
+    wrapped = state.get("wrapped", [])
+    if last_day and last_day not in wrapped:
+        day = date.fromisoformat(last_day)
+        if day.weekday() in WRAP_DAYS and weekly and weekly.get("managers"):
+            mgrs = sorted(weekly["managers"], key=lambda m: -m["live"])
+            night = day.strftime("%A")
+            board = " · ".join(f"{m['name']} {m['live']}"
+                               + (f" ({m['to_play']} left)" if m["to_play"] else "")
+                               for m in mgrs)
+            left = sum(m["to_play"] for m in mgrs)
+            tail = (f"{left} players still to come" if left
+                    else "everyone has played")
+            new.append(dict(ts=ts, gw=cur_gw, type="wrap", mine=True,
+                            text=f"{night} night, GW{cur_gw}: {board} - {tail}"))
+            # who moved since the previous wrap
+            cur = {str(m["entry"]): i + 1 for i, m in enumerate(mgrs)}
+            for mine, txt in _swaps(state.get("wrap_rank", {}), cur,
+                                    entry_name, where=" since last night"):
+                new.append(dict(ts=ts, gw=cur_gw, type="wrap", mine=mine,
+                                text=txt))
+            state["wrap_rank"] = cur
+            # best and worst of the night among players anyone owns
+            day_ids = {p["id"] for m in mgrs for p in m["squad"]}
+            scored = [(pid, pts[pid]) for pid in day_ids if pid in pts]
+            if scored:
+                best = max(scored, key=lambda x: x[1])
+                if best[1] >= OWNED_HAUL:
+                    tag, mine = owner_tag(best[0])
+                    new.append(dict(ts=ts, gw=cur_gw, type="wrap", mine=mine,
+                                    text=f"Man of the night: {pname(best[0])} "
+                                         f"on {best[1]} ({tag})"))
+            if not left:                       # the week is done, so is someone
+                last = mgrs[-1]
+                line = PINTS[day.toordinal() % len(PINTS)]
+                new.append(dict(ts=ts, gw=cur_gw, type="pint",
+                                mine=last["mine"],
+                                text=line.format(who=last["name"], gw=cur_gw,
+                                                 n=last["live"])))
+            state["wrapped"] = (wrapped + [last_day])[-30:]
+
     if fx_ok:                    # a failed lookup must not re-open old matches
         state["fx_done"] = done_now
 
@@ -435,6 +535,13 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code):
         state["txn_ready"] = True
     state["txn_seen"] = sorted(seen, key=str)
 
+    # scope drives the news tab's filter: "mine" is your squad or entry,
+    # "free" is chatter about players nobody owns, "league" is the rest
+    for e in new:
+        e["scope"] = ("mine" if e.get("mine") else
+                      "free" if (e.get("type") == "freeagent"
+                                 or f"({FREE_TAG})" in e.get("text", ""))
+                      else "league")
     events = (new + events)[:MAX_EVENTS]
     json.dump({"state": state, "events": events}, open(path, "w"))
     return len(new)
