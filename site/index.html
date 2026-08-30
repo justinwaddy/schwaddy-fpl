@@ -27,6 +27,12 @@ td.num{font:500 13px "IBM Plex Mono";text-align:right;white-space:nowrap}
 .pos{font:600 11px "IBM Plex Mono";padding:2px 5px;border-radius:4px;color:#0F1A31}
 .GKP{background:var(--gkp)}.DEF{background:var(--def)}.MID{background:var(--mid)}.FWD{background:var(--fwd)}
 .nm{font-weight:600}.tm{color:var(--dim);font-size:12px}
+.run{font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.4px;white-space:nowrap}
+.fx{font-size:11px;padding:1px 4px;border-radius:4px;font-weight:600}
+.fx-good,.run.fx-good{color:var(--green)}
+.fx-bad,.run.fx-bad{color:var(--red)}
+.fx-mid,.run.fx-mid{color:var(--dim)}
+.fx{background:var(--panel2)}
 .flag{color:var(--amber);font-size:11px;display:block}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
 .card b.h{font:600 15px "Barlow Condensed";letter-spacing:.03em;text-transform:uppercase;color:var(--dim)}
@@ -132,6 +138,11 @@ function renderSquad(ps){
     h+=row(p,`<td class="num">${p.ep.toFixed(1)}</td>`);
   h+=`</table></div><div class="card"><b class="h">Bench order</b><table>`;
   bench.forEach((p,i)=>h+=row(p,`<td class="num">${p.ep.toFixed(1)}</td>`,i+1));
+  h+=`</table></div><div class="card"><b class="h">Next ${HZ()} gameweeks</b>
+  <div class="note">Fixture-adjusted. <b>fix</b> is what this run is worth against an average one, in points, from the model's own opponent terms - green is a kind draw, red a hard one.</div><table>
+  <tr><th>player</th><th></th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th></tr>`;
+  for(const p of [...mine].sort((a,b)=>N5(b)-N5(a)))
+    h+=`<tr><td><span class="nm">${p.name}</span> <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td></tr>`;
   h+=`</table></div><div class="card"><b class="h">Rest of season</b><table>
   <tr><th>player</th><th></th><th style="text-align:right">rest</th><th>shape</th></tr>`;
   for(const p of [...mine].sort((a,b)=>b.rest-a.rest))
@@ -139,21 +150,42 @@ function renderSquad(ps){
   h+=`</table></div>`;
   document.getElementById("squad").innerHTML=h;
 }
+// Five-gameweek totals. Older predictions.json files (and the embedded
+// fallback) have no next5, so fall back to a flat slice of the season.
+const N5=p=>p.next5!=null?p.next5:(p.rest||0)*5/38;
+const HZ=()=>DATA.horizon||5;
+// Fixture ticker: upper case is home, lower case away, "-" a blank.
+// Coloured by the model's own fixture term for that player, in points
+// against an average run, so it says what the run is worth rather than
+// how hard it looks.
+function runHTML(p){
+  if(!p.run||!p.run.length)return "";
+  const f=p.fix5;
+  const cls=f==null?"":(f>0.3?"fx-good":f<-0.3?"fx-bad":"fx-mid");
+  return `<span class="run ${cls}" title="${f==null?"":(f>0?"+":"")+f.toFixed(1)+" pts vs an average run"}">${p.run.join(" ")}</span>`;
+}
+function fixTag(p){
+  if(p.fix5==null)return "";
+  return `<span class="fx ${p.fix5>0.3?"fx-good":p.fix5<-0.3?"fx-bad":"fx-mid"}">${p.fix5>0?"+":""}${p.fix5.toFixed(1)}</span>`;
+}
 function row(p,extra,pre){
   return `<tr><td>${pre?pre+". ":""}<span class="nm">${p.name}</span> <span class="tm">${p.team??""}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td>${extra}</tr>`;
 }
-const MARGIN=8;   // rest-of-season points a free agent must clear to justify a swap
+// Points over the horizon a free agent must clear to justify a swap. On
+// the old rest-of-season scale this was 8; five gameweeks is about an
+// eighth of a season, and the fixture run is worth roughly a point of it.
+const MARGIN=2;
 function waiverPlan(mine,free){
   const sq=[...mine],pool=[...free],plan=[];
   while(plan.length<8){
     let best=null;
     for(const pos of ["GKP","DEF","MID","FWD"]){
-      const drops=sq.filter(p=>p.pos===pos).sort((a,b)=>a.rest-b.rest);
+      const drops=sq.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
       if(!drops.length)continue;
       const d=drops[0];
-      const f=pool.filter(p=>p.pos===pos).sort((a,b)=>b.rest-a.rest)[0];
-      if(f&&f.rest-d.rest>MARGIN&&(!best||f.rest-d.rest>best.gain))
-        best={add:f,drop:d,gain:f.rest-d.rest,pos};
+      const f=pool.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a))[0];
+      if(f&&N5(f)-N5(d)>MARGIN&&(!best||N5(f)-N5(d)>best.gain))
+        best={add:f,drop:d,gain:N5(f)-N5(d),pos};
     }
     if(!best)break;
     plan.push(best);
@@ -168,31 +200,33 @@ function renderWaivers(ps){
   let h="";
   if(plan.length===0){
     h+=`<div class="card holdcard"><b class="h">Hold: 0 claims this week</b>
-    <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} rest-of-season switching margin.</div></div>`;
+    <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} switching margin over the next ${HZ()} gameweeks.</div></div>`;
   }else{
     h+=`<div class="card"><b class="h">Make ${plan.length} claim${plan.length>1?"s":""} this week</b>
-    <div class="note">Each swap clears the +${MARGIN} switching margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
-    <tr><th>#</th><th>add</th><th></th><th>drop</th><th style="text-align:right">gain</th></tr>`;
+    <div class="note">Gains are expected points over the next ${HZ()} gameweeks, fixtures included, and each swap clears the +${MARGIN} margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
+    <tr><th>#</th><th>add</th><th></th><th>drop</th><th>run</th><th style="text-align:right">gain</th></tr>`;
     plan.forEach((c,i)=>{
       h+=`<tr><td class="num">${i+1}</td>
       <td><span class="nm">${c.add.name}</span> <span class="tm">${c.add.team??""} n=${c.add.n_career}</span>${c.add.news?`<span class="flag">${c.add.news}</span>`:""}</td>
       <td><span class="pos ${c.pos}">${c.pos}</span></td>
-      <td>${c.drop.name} <span class="tm">${Math.round(c.drop.rest)}</span></td>
-      <td class="num"><span class="gain">+${c.gain.toFixed(0)}</span></td></tr>`;});
+      <td>${c.drop.name} <span class="tm">${N5(c.drop).toFixed(1)}</span></td>
+      <td>${runHTML(c.add)}</td>
+      <td class="num"><span class="gain">+${c.gain.toFixed(1)}</span></td></tr>`;});
     h+=`</table><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
   }
   h+=`<div class="card"><b class="h">Full board</b>
-  <div class="note">Best free agents vs your weakest at each position, before any swaps.</div><table>
-  <tr><th>free agent</th><th></th><th style="text-align:right">rest</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
+  <div class="note">Best free agents vs your weakest at each position over the next ${HZ()} gameweeks, before any swaps.</div><table>
+  <tr><th>free agent</th><th></th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
   for(const pos of ["GKP","DEF","MID","FWD"]){
-    const m=mine.filter(p=>p.pos===pos).sort((a,b)=>a.rest-b.rest);
+    const m=mine.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
     if(!m.length)continue;
-    for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>b.rest-a.rest).slice(0,3)){
-      const g=fa.rest-m[0].rest;
+    for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a)).slice(0,4)){
+      const g=N5(fa)-N5(m[0]);
       h+=`<tr><td><span class="nm">${fa.name}</span> <span class="tm">${fa.team??""} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
-      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${Math.round(fa.rest)}</td>
-      <td>${m[0].name} <span class="tm">${Math.round(m[0].rest)}</span></td>
-      <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(0)}</span></td></tr>`;
+      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${N5(fa).toFixed(1)}</td>
+      <td class="num">${fixTag(fa)}</td><td>${runHTML(fa)}</td>
+      <td>${m[0].name} <span class="tm">${N5(m[0]).toFixed(1)}</span></td>
+      <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(1)}</span></td></tr>`;
     }
   }
   h+=`</table></div>`;
@@ -354,17 +388,21 @@ let SORT={k:"rest",d:-1};
 function renderPlayers(ps){
   const q=(document.getElementById("pq")?.value||"").toLowerCase();
   let list=ps.filter(p=>!q||p.name.toLowerCase().includes(q)||(p.team||"").toLowerCase().includes(q));
+  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);});
   list=[...list].sort((a,b)=>SORT.d*((b[SORT.k]??0)-(a[SORT.k]??0)));
   let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
   <div class="card"><table><tr>
   <th data-k="name">player</th><th></th><th data-k="gwn" style="text-align:right">GW${NEXT+1}</th>
+  <th data-k="n5" style="text-align:right">next ${HZ()}</th><th data-k="fix5" style="text-align:right">fix</th><th>run</th>
   <th data-k="rest" style="text-align:right">rest</th><th data-k="avail" style="text-align:right">P(play)</th><th>owner</th></tr>`;
   for(const p of list.slice(0,150)){
     p.gwn=p.gw?p.gw[NEXT]:0;
     const own=p.mine?"YOU":(MGRS[p.owner]?MGRS[p.owner][1]:(p.owner?"?":"free"));
     h+=`<tr class="${p.mine?"mine-row":""}"><td><span class="nm">${p.name}</span> <span class="tm">${p.team??""} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
     <td><span class="pos ${p.pos}">${p.pos}</span></td>
-    <td class="num">${(p.gwn||0).toFixed(1)}</td><td class="num">${Math.round(p.rest)}</td>
+    <td class="num">${(p.gwn||0).toFixed(1)}</td>
+    <td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td>
+    <td class="num">${Math.round(p.rest)}</td>
     <td class="num">${p.avail}</td><td class="tm">${own}</td></tr>`;
   }
   h+=`</table></div>`;

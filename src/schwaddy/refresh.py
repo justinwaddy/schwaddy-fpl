@@ -13,12 +13,17 @@ import numpy as np
 import requests
 
 from . import api, compare, depth, liveform, livegws, overrides, weekly
-from .panel import build, SEASONS, LIVE
+from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
 from .availability import availability_path
 
 RAW = "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data"
+
+# gameweeks in the short-horizon view. Five is the span a waiver claim is
+# judged over, and the span over which the fixture list still differs
+# between clubs.
+HORIZON = 5
 
 
 def pull(data_dir):
@@ -183,6 +188,76 @@ def main():
     print(f"depth: {len(boost)} players absorbing minutes from flagged "
           f"team-mates")
 
+    # ---- the next-HORIZON gameweeks -------------------------------------
+    # Rest-of-season totals wash the fixture list out: every club plays
+    # everybody eventually, so over 38 gameweeks the schedule is nearly a
+    # constant and only the player differs. Over five it is not, and five
+    # is the horizon a waiver claim is actually judged on. Everything the
+    # site ranks on used to be "rest", which is why a good or bad run was
+    # invisible in the product even though the panel carried it.
+    #
+    # Measured rolling-origin over 23/24, 24/25 and 25/26: rank the whole
+    # league at each origin gameweek, then score what those players went
+    # on to make over the following five gameweeks.
+    #
+    #                rank rho vs realized      top-20 shortlist, realized pts
+    #   next5          .653  .694  .618          22.77  23.64  21.37
+    #   rest (old)     .600  .642  .556          22.11  22.74  20.54
+    #   next GW x5     .553  .593  .541          21.37  22.01  19.80
+    #
+    # Three seasons out of three, t = 12.5 to 13.8 on the correlation and
+    # 2.8 to 4.1 on the realized points. The third row matters too: simply
+    # shortening the horizon is not what does it, because repeating one
+    # gameweek five times is the WORST of the three. It is the schedule.
+    tshort = {t["id"]: t["short_name"] for t in d["teams"]}
+    hz = range(first_future_gw, min(38, first_future_gw + HORIZON))
+    opp_of = {}                      # (team id, gw) -> [opponent label]
+    for f in fx:
+        if f["event"] is None:
+            continue
+        g = f["event"] - 1
+        if g not in hz:
+            continue
+        # upper case = home, lower case = away, matching the site's ticker
+        opp_of.setdefault((f["team_h"], g), []).append(
+            tshort.get(f["team_a"], "?").upper())
+        opp_of.setdefault((f["team_a"], g), []).append(
+            tshort.get(f["team_h"], "?").lower())
+    qf = meta["n_fixture_x"]
+    beta = m.beta_[:qf] * m.y_sd_ if len(m.beta_) >= qf else np.zeros(qf)
+
+    def _fixture_raw(i):
+        """The model's fixture term over the horizon, in points."""
+        tot = 0.0
+        for g in hz:
+            col = n_hist * 38 + g
+            if meta["M"][i, col] <= 0:
+                continue               # blank gameweek: nothing to judge
+            tot += float(X[i, col, :qf] @ beta)
+        return tot
+
+    # A run is only kind or cruel relative to what everyone else at the
+    # same position faces in the same five weeks, so the reference point
+    # is that group's mean rather than any absolute zero. Centring the
+    # covariates is not enough on its own: the league's average opponent
+    # is not exactly the centring constant in any given five-week window,
+    # and the
+    # residual shows up as an offset that differs by position.
+    fix_raw, fix_mean = {}, {}
+    for i, code in enumerate(meta["codes"]):
+        if code in meta["current"]:
+            fix_raw[i] = _fixture_raw(i)
+    for grp in POS_GROUPS:
+        vals = [fix_raw[i] for i, c in enumerate(meta["codes"])
+                if i in fix_raw
+                and (ETYPE.get(info[c]["element_type"]) or "MID") == grp]
+        fix_mean[grp] = float(np.mean(vals)) if vals else 0.0
+
+    def fixture_points(i, pos):
+        if i not in fix_raw:
+            return None
+        return round(fix_raw[i] - fix_mean.get(pos, 0.0), 2)
+
     players = []
     for i, code in enumerate(meta["codes"]):
         if code not in meta["current"]:
@@ -207,15 +282,21 @@ def main():
         pv = m.pred_[i, n_hist * 38 + first_future_gw:]
         per_gw = np.concatenate([np.zeros(first_future_gw),
                                  (pv * np.array(path) * Mrow)]).round(2)
+        pos = ETYPE.get(e["element_type"]) or meta["pos_of"].get(code, "MID")
         players.append(dict(
             code=code, n_career=int(D[i].sum()),
             name=e["web_name"],
             # the draft API's classification governs squad and XI legality,
             # so it wins over the archive's, which can be a season stale
-            pos=ETYPE.get(e["element_type"]) or meta["pos_of"].get(code, "MID"),
+            pos=pos,
             team=e["team"], status=e["status"], news=(e.get("news") or "")[:90],
             avail=round(avail, 2), gw=per_gw.tolist(),
-            rest=float(per_gw.sum())))
+            rest=float(per_gw.sum()),
+            next5=round(float(per_gw[first_future_gw:
+                                     first_future_gw + HORIZON].sum()), 2),
+            fix5=fixture_points(i, pos),
+            run=["+".join(opp_of[(e["team"], g)])
+                 if (e["team"], g) in opp_of else "-" for g in hz]))
     owned = {}
     if args.league_id:
         es = api.element_status(args.league_id)
@@ -227,6 +308,7 @@ def main():
         p["owner"] = owned.get(pid)
         p["mine"] = owned.get(pid) == MY_ENTRY
     out = dict(generated=str(np.datetime64("now")),
+               horizon=HORIZON, first_gw=first_future_gw + 1,
                lambda_time=float(m.lambda_time),
                lambda_nn=(None if not np.isfinite(m.lambda_nn)
                           else float(m.lambda_nn)),
@@ -235,6 +317,12 @@ def main():
     json.dump(out, open(pj, "w"))
     print(f"wrote {pj}: {len(players)} players, "
           f"lambdas=({m.lambda_time}, {m.lambda_nn})")
+    kind = sorted((p for p in players if p["fix5"] is not None),
+                  key=lambda p: -p["fix5"])
+    if kind:
+        print(f"horizon: GW{first_future_gw + 1}-{min(38, first_future_gw + HORIZON)}"
+              f", fixture term {kind[-1]['fix5']:+.2f} to {kind[0]['fix5']:+.2f} pts"
+              f" (kindest run {kind[0]['name']}, hardest {kind[-1]['name']})")
     try:
         cmp_ = compare.write(args.data_dir, Y, D, meta, first_future_gw,
                              avail_of)

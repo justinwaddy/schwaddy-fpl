@@ -87,6 +87,59 @@ one gameweek doubled the spread of the opponent term across all remaining
 fixtures and left it correlated 0.27 with the settled rates it replaced.
 At weight 16 the correlation is 0.94.
 
+## The five-gameweek horizon
+Everything the site ranked on - the waiver plan, the full board, the squad
+card - used `rest`, the rest-of-season total. Over 38 gameweeks every club
+plays every other one, so `rest` is very nearly fixture-free: it says who
+the better player is and almost nothing about the run he is about to face.
+The panel has always carried the schedule (home dummy plus the opponent
+term above, read off the published fixture list for every future column),
+so the information was there; nothing in the product was using it.
+
+predictions.json now carries `next5` (the forecast summed over the next
+five gameweeks, availability and match count included), `fix5` (what that
+run is worth in points against the average run at the same position, from
+the model's own fitted covariate slopes) and `run` (the opponents, upper
+case for home, `-` for a blank). Waivers rank on `next5`.
+
+Rolling-origin over 23/24, 24/25 and 25/26: rank the league at each origin
+gameweek, then score what those players actually made over the next five.
+
+|                  | rank rho vs realized | top-20 shortlist, realized pts |
+|------------------|----------------------|--------------------------------|
+| next5            | .653  .694  .618     | 22.77  23.64  21.37            |
+| rest (old)       | .600  .642  .556     | 22.11  22.74  20.54            |
+| next GW x5       | .553  .593  .541     | 21.37  22.01  19.80            |
+
+Three seasons out of three: t = 12.5 to 13.8 on the correlation, 2.8 to
+4.1 on realized points, worth about +0.8 points per player claimed. The
+third row is the control - repeating one gameweek five times is the WORST
+of the three, so it is the schedule doing the work, not the shorter
+horizon.
+
+## Opponent attacking strength (tested, REJECTED)
+The opponent term is only the club's CONCEDED rate, which is the wrong
+side of the ball for a defender or a keeper. Pooled over five seasons the
+two slopes differ by position and by sign - conceded/scored is +0.37/-0.70
+for GKP, +0.27/-1.09 for DEF, +0.46/-0.37 for MID, +0.56/-0.29 for FWD -
+so for a defender the opponent's ATTACK is four times the term in use and
+is not carried at all.
+
+Adding it (panel.build(fixture_mode="both")), and adding it interacted
+with position ("pos"), both improve per-match RMSE and the within-player
+rank correlation slightly, and both LOSE realized XI points in every
+season tested: -3.68/-3.45/-4.45 and -3.47/-3.50/-6.13 over 23/24, 24/25
+and 25/26. Three out of three, most t-stats past -2. panel.build defaults
+to fixture_mode="basic".
+
+This is the same result the odds experiment below reached by a different
+route, and for what looks like the same reason: the low-rank block already
+carries team-level attacking and defensive strength, so an explicit
+opponent-attack term double-counts it and puts swing into the forecast
+that reorders the top of the board without being right often enough to pay
+for the churn. Accuracy on the average player and accuracy on the eleven
+you actually pick are not the same thing.
+
 ## The live season
 The public archive does not publish a season's per-gameweek rows until
 weeks into it, so build() spent the opening weeks fitting on last season

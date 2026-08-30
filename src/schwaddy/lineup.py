@@ -9,9 +9,11 @@ Availability: P(plays GW) from recent minutes share and the API status
 flags; expected GW points = P(plays) * projected per-match points.
 
 Waivers need the numeric league id: element-status marks who owns whom.
-A claim is recommended when a free agent's remaining-season expected
-points exceed the weakest same-position squad member's by more than the
-switching margin.
+A claim is recommended when a free agent's FIVE-GAMEWEEK expected points
+exceed the weakest same-position squad member's by more than the
+switching margin. Rest-of-season totals were used until it was noticed
+that they are almost fixture-free - every club plays every other one over
+38 gameweeks - so they cannot express a good or bad run.
 """
 import numpy as np
 
@@ -83,19 +85,25 @@ def pick_xi(squad):
     return xi, bench_gk + bench_out, form
 
 
-def waiver_claims(squad, free_agents, margin=8.0, top=5):
-    """Both lists: dicts with pos, name, rest (remaining-season expected
-    points). Recommends drop/add pairs ranked by gain."""
+def waiver_claims(squad, free_agents, margin=2.0, top=5, key="next5"):
+    """Both lists: dicts with pos, name, and the ranking field.
+
+    key defaults to "next5", the fixture-adjusted five-gameweek total,
+    not "rest". Over a whole season every club plays every other one, so
+    rest-of-season totals are very nearly fixture-free and a claim made on
+    them ignores the run the player is actually about to face. margin is
+    on the same scale as key, so it drops with the horizon.
+    """
     out = []
     for pos in ("GKP", "DEF", "MID", "FWD"):
         mine = sorted([p for p in squad if p["pos"] == pos],
-                      key=lambda p: p["rest"])
+                      key=lambda p: p.get(key, p["rest"]))
         if not mine:
             continue
         weakest = mine[0]
         for fa in sorted([p for p in free_agents if p["pos"] == pos],
-                         key=lambda p: -p["rest"])[:top]:
-            gain = fa["rest"] - weakest["rest"]
+                         key=lambda p: -p.get(key, p["rest"]))[:top]:
+            gain = fa.get(key, fa["rest"]) - weakest.get(key, weakest["rest"])
             if gain > margin:
                 out.append(dict(add=fa["name"], drop=weakest["name"],
                                 pos=pos, gain=round(gain, 1)))

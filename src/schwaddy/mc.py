@@ -353,4 +353,14 @@ class TropForecast:
         Lx = self._extend_factors(L, D)
         self.pred_ = ((Z @ coef).reshape(N, T) + Lx) * sd + mu
         self.L_, self.coef_, self.iters_ = Lx * sd, coef, iters
+        self.y_mu_, self.y_sd_ = mu, sd
+        # covariate slopes, on the standardized scale: multiply by y_sd_
+        # for points. Sliced out here because the caller cannot know where
+        # they sit without rebuilding the design's column layout.
+        S = int(season_of.max()) + 1
+        G = int(gw_of.max()) + 1
+        ng = int(self.unit_groups.max()) if self.unit_groups is not None else 0
+        off = 1 + (N - 1) + (S - 1) + (G - 1) + ng
+        self.beta_ = coef[off:] if X is not None and X.shape[2] else \
+            np.zeros(0)
         return self

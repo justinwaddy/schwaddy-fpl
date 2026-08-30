@@ -116,8 +116,15 @@ def make_sched_M(data_dir, seasons, codes):
 
 
 def run(data_dir=".", origins=range(1, 39), max_iter=300, verbose=True,
-        cv_kind="utility", season_idx=SEASON, ridge_unit=15.0):
-    Y, D, X, season_of, gw_of, meta = build(data_dir)
+        cv_kind="utility", season_idx=SEASON, ridge_unit=15.0,
+        fixture_mode="basic", collect=False):
+    """collect: also return the raw prediction column each gameweek, so a
+    caller can score the WITHIN-player fixture signal (does a player's
+    forecast rise and fall across his own gameweeks the way his realized
+    points do?). The pooled metrics above cannot see that: they are
+    dominated by between-player differences, which a fixture term does
+    not touch."""
+    Y, D, X, season_of, gw_of, meta = build(data_dir, fixture_mode=fixture_mode)
     base = season_idx * 38
     M = meta["M"]
     real = Y * M                               # realized GW totals
@@ -180,6 +187,10 @@ def run(data_dir=".", origins=range(1, 39), max_iter=300, verbose=True,
               for i in range(Y.shape[0])]
         xi, _, _ = pick_xi(sq)
         res["xi_best"] = float(sum(real[p["name"], col] for p in xi))
+        if collect:
+            res["played"] = played
+            res["pred"] = yhat.copy()
+            res["y"] = y.copy()
         rows.append(res)
         if verbose:
             print(f"GW{g:>2}  rmse {res['rmse']:.3f} (b1 {res['rmse_b1']:.3f} "
