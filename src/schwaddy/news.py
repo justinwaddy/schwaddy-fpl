@@ -39,7 +39,32 @@ MAX_OVERTAKES = 3        # table churn to report per run
 FREE_TAG = "free agent"  # single source for the unowned marker in text
 WRAP_DAYS = {0, 4, 5, 6}  # Mon, Fri, Sat, Sun - the nights we wrap up
 
-# said of a player who was on the pitch an hour and brought nothing back
+# A forward who plays an hour and returns nothing scores exactly 2 under
+# these settings: long_play is 2 and he has added nothing to it. That is
+# the crime worth mocking, so the test is "2 or fewer", not "under 2" -
+# the literal reading would catch only brief cameos and miss every ghost
+# who lasted the full ninety.
+RUTHLESS = [
+    "{p} led the line for {m} minutes and returned {n} pts ({tag}). "
+    "The nets are still up, untouched",
+    "{p}: {m} minutes, {n} pts ({tag}). Statistically indistinguishable "
+    "from an empty shirt",
+    "{p} spent {m} minutes offside for {n} pts ({tag}). The linesman got "
+    "more touches",
+    "{p} managed {n} pts in {m} minutes ({tag}). Strikers are paid to "
+    "score. Somebody tell him",
+    "{p}: {n} pts off {m} minutes ({tag}). The centre halves have never "
+    "had an easier afternoon",
+    "{p} completed {m} minutes and {n} pts ({tag}). A rumour in a shirt",
+    "{p} gave {tag} {n} pts from {m} minutes. You could have started a "
+    "bollard and saved the waiver",
+    "{p}: {m} minutes, {n} pts ({tag}). Touched the ball, allegedly",
+    "{p} returned {n} pts in {m} minutes ({tag}). Ghosted it, and not in "
+    "the way that wins games",
+    "{p} ran about for {m} minutes and brought back {n} pts ({tag}). "
+    "Excellent cardio",
+]
+# said of anyone else who was on the pitch an hour and brought nothing back
 FLOPS = [
     "{p} managed {n} pts in {m} minutes ({tag}) - a full shift, no wages",
     "{p}: {m} minutes, {n} pts ({tag}). Present, in the loosest sense",
@@ -327,10 +352,17 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
         flops = [(pid, p) for pid, p in today if owned.get(pid)
                  and p <= FLOP_PTS
                  and int((stats.get(pid) or {}).get("minutes") or 0) >= FLOP_MINS]
-        for pid, p in sorted(flops, key=lambda x: x[1])[:4]:
+        def _fwd(pid):
+            return (els.get(pid) or {}).get("element_type") == 4
+        # forwards first: a striker who did not threaten is the better story,
+        # and keepers and defenders carry the goals-conceded penalty, so an
+        # unweighted list fills up with them every week
+        flops.sort(key=lambda x: (not _fwd(x[0]), x[1]))
+        for pid, p in flops[:5]:
             tag, mine = owner_tag(pid)
             mins = int((stats.get(pid) or {}).get("minutes") or 0)
-            line = FLOPS[(pid + cur_gw) % len(FLOPS)]     # stable per player
+            lines = RUTHLESS if _fwd(pid) else FLOPS
+            line = lines[(pid + cur_gw) % len(lines)]     # stable per player
             new.append(dict(ts=ts, gw=cur_gw, type="flop", mine=mine,
                             text=line.format(p=pname(pid), n=p, m=mins,
                                              tag=tag)))
