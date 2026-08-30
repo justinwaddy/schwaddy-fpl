@@ -24,7 +24,7 @@ import json
 import os
 from datetime import date, datetime, timezone
 
-from . import api
+from . import api, liveform
 from .league import MY_ENTRY
 
 MAX_EVENTS = 220
@@ -234,9 +234,9 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
         fixtures = [f for f in api.fixtures() if f.get("event") == cur_gw]
     except Exception:
         fixtures, fx_ok = [], False
-    done_now = sorted(f["id"] for f in fixtures if f.get("finished"))
+    done_now = sorted(f["id"] for f in fixtures if liveform.settled(f))
     seen_fx = set(state.get("fx_done", []))
-    fresh_fx = [f for f in fixtures if f.get("finished")
+    fresh_fx = [f for f in fixtures if liveform.settled(f)
                 and f["id"] not in seen_fx]
     if cur_gw and fresh_fx and not finished:
         stats = _live(cur_gw)
@@ -253,7 +253,7 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
         else:
             picks = _picks(list(entry_name), cur_gw)
             exp = _expected(data_dir, id_of_code, cur_gw)
-            left_teams = {t for f in fixtures if not f.get("finished")
+            left_teams = {t for f in fixtures if not liveform.settled(f)
                           for t in (f["team_h"], f["team_a"])}
             live_tot = {}
             for s in det.get("standings", []):
@@ -361,7 +361,7 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
     # so a run that lands hours late still files under the right night and
     # never wraps the same evening twice
     try:
-        done_fx = [f for f in fixtures if f.get("finished")
+        done_fx = [f for f in fixtures if liveform.settled(f)
                    and f.get("kickoff_time")]
         last_day = max(f["kickoff_time"][:10] for f in done_fx) if done_fx else None
     except Exception:

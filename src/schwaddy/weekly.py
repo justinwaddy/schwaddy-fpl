@@ -17,7 +17,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-from . import api
+from . import api, liveform
 from .league import MY_ENTRY
 
 # draft squad rules; overridden from the bootstrap's own settings when present
@@ -122,7 +122,8 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
     settled_teams, playing_teams = set(), set()
     for f in fixtures:
         for t in (f["team_h"], f["team_a"]):
-            (settled_teams if f.get("finished") else playing_teams).add(t)
+            (settled_teams if liveform.settled(f)
+             else playing_teams).add(t)
     settled_teams -= playing_teams          # a double gameweek still to come
 
     try:

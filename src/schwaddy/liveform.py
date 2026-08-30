@@ -33,10 +33,20 @@ FULL = 90.0              # minutes in a match
 PREV_SEASON_WEIGHT = 0.10
 
 
+def settled(f):
+    """Is this fixture over? finished_provisional flips when the whistle
+    goes; finished waits on bonus points. For anything asking whether a
+    player can still add minutes or appear again, the whistle is the
+    question - a squad reading "11 still to play" an hour after kick-off
+    because bonus had not landed was the bug this exists to prevent.
+    """
+    return bool(f.get("finished") or f.get("finished_provisional"))
+
+
 def played_gws(fixtures, window=WINDOW):
-    """0-based gameweek indices with a finished fixture, most recent last."""
+    """0-based gameweek indices with a played fixture, most recent last."""
     gws = sorted({f["event"] - 1 for f in fixtures
-                  if f.get("event") and f.get("finished")})
+                  if f.get("event") and settled(f)})
     return gws[-window:]
 
 
@@ -45,7 +55,7 @@ def team_matches(fixtures):
     change the minutes a player could have played."""
     out = {}
     for f in fixtures:
-        if not f.get("event") or not f.get("finished"):
+        if not f.get("event") or not settled(f):
             continue
         gw = f["event"] - 1
         for t in (f["team_h"], f["team_a"]):
