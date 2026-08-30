@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, depth, liveform, livegws, overrides, weekly
+from . import api, compare, depth, liveform, livegws, overrides, weekly
 from .panel import build, SEASONS, LIVE
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -162,6 +162,7 @@ def main():
             prev_club[c2] = r2["team"]
     tname = {t["id"]: t["name"] for t in d["teams"]}
     ETYPE = {1: "GKP", 2: "DEF", 3: "MID", 4: "FWD"}
+    avail_of = {}
     id_of_code = {str(e["code"]): e["id"] for e in d["elements"]}
     # the archive lags the live season by weeks, so take this season's
     # minutes from the draft API rather than waiting for it
@@ -201,6 +202,7 @@ def main():
                                  e.get("news"), base, gw_dates,
                                  new_club=new_club)
         avail = path[0]
+        avail_of[code] = avail        # reused by the rival-prediction table
         Mrow = meta["M"][i, n_hist * 38 + first_future_gw:]
         pv = m.pred_[i, n_hist * 38 + first_future_gw:]
         per_gw = np.concatenate([np.zeros(first_future_gw),
@@ -233,6 +235,15 @@ def main():
     json.dump(out, open(pj, "w"))
     print(f"wrote {pj}: {len(players)} players, "
           f"lambdas=({m.lambda_time}, {m.lambda_nn})")
+    try:
+        cmp_ = compare.write(args.data_dir, Y, D, meta, first_future_gw,
+                             avail_of)
+        if cmp_:
+            print(f"rival predictions: {len(cmp_['players'])} players, "
+                  f"{cmp_['n_fpl']} with an FPL ep_next, "
+                  f"rank correlation {cmp_['spread']}")
+    except Exception as ex:
+        print(f"rival predictions skipped: {ex}")
     try:
         from . import news
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)

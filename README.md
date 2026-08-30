@@ -18,8 +18,10 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
+- src/schwaddy/compare.py     rival points predictions, data/compare.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - site/                       dashboard HTML; draft_room.html is the live draft tool
+- site/compare/               the same gameweek under four different predictors
 
 ## Availability
 P(plays) used to come from D over the last 8 archive matches, which fails
@@ -126,6 +128,23 @@ status for those players until the API catches up. Every applied override
 is printed by refresh, and each entry carries the date it was added; delete
 it once the API carries the news itself, since a stale override silently
 outranks real data.
+
+## Comparing predictions
+site/compare/ puts three rivals beside the model's number for the coming
+gameweek: FPL's own ep_next from the classic API, the season-to-date mean
+shrunk toward last season (backtest.py's B1), and the mean of the last
+four played matches (B2). B1 and B2 are per-appearance rates, multiplied
+by the same availability the model applies, so no column is flattered by a
+player who scores well and rarely plays.
+
+ep_next is computed under classic scoring rather than this league's draft
+scoring - the two tables overlap but are not identical, a keeper's goal
+being 10 here against 6 there - so it is an outside opinion, not a
+like-for-like number. The page says so where it is read.
+
+The interesting column is the spread. Sorting by it puts the players the
+four most disagree about at the top, and it is almost always B2: form
+chases a hot streak that the model's shrinkage is built to damp.
 
 ## The weekly league
 weekly.py writes data/league.json every run: each manager's live score,

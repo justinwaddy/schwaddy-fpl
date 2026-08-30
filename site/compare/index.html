@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schwaddy · prediction comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F1A31;--panel:#16233F;--panel2:#1C2B4D;--line:#26365C;--ink:#E9EEF8;
+--dim:#8FA0C4;--blue:#4A7FE0;--amber:#E8A13C;--green:#5FBF77;--red:#D95757;
+--gkp:#3FB8AF;--def:#5B8DEF;--mid:#6FBF73;--fwd:#E0854A}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",sans-serif;margin:0}
+header{padding:14px 12px 4px}
+h1{font:600 27px "Barlow Condensed";letter-spacing:.04em;text-transform:uppercase;margin:0}
+h1 em{color:var(--blue);font-style:normal}
+.sub{color:var(--dim);font:500 12px "IBM Plex Mono"}
+nav{display:flex;gap:6px;padding:10px 12px;flex-wrap:wrap}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--dim);
+font:600 12px "IBM Plex Mono";padding:5px 11px;cursor:pointer}
+.chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+main{padding:0 12px 40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.card b.h{font:600 15px "Barlow Condensed";letter-spacing:.03em;text-transform:uppercase;color:var(--dim)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:7px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{font:600 11px "IBM Plex Mono";color:var(--dim);cursor:pointer;white-space:nowrap}
+th.num,td.num{text-align:right;font-family:"IBM Plex Mono"}
+.nm{font-weight:600}.tm{color:var(--dim);font-size:12px}
+.pos{font:600 10px "IBM Plex Mono";padding:2px 5px;border-radius:4px;color:#0F1A31}
+.GKP{background:var(--gkp)}.DEF{background:var(--def)}.MID{background:var(--mid)}.FWD{background:var(--fwd)}
+.mine-row td{background:rgba(74,127,224,.10)}
+.note{color:var(--dim);font-size:12px;padding:8px 2px;line-height:1.6}
+.warn{border-color:var(--amber)}
+.hi{color:var(--amber)}.lo{color:var(--dim)}
+input[type=search]{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans";margin:6px 0}
+a{color:var(--blue)}
+</style></head><body>
+<header><h1>SCHWADDY <em>VS THE FIELD</em></h1>
+<div class="sub" id="meta">loading…</div></header>
+<nav id="filters"></nav>
+<main>
+  <div class="card warn"><b class="h">What you are looking at</b>
+    <div class="note">Four predictions of the same thing: points in the coming
+      gameweek.<br>
+      <b>trop</b> — this repository's model, availability already applied.<br>
+      <b>fpl</b> — FPL's own <span class="tm">ep_next</span>, straight from the
+      classic API.<br>
+      <b>b1</b> — season to date, shrunk toward last season (k=10).<br>
+      <b>b2</b> — mean of the player's last four played matches.<br>
+      b1 and b2 are per-appearance rates, multiplied by the same availability
+      the model uses, so no column is flattered by a player who scores well and
+      rarely plays.<br><br>
+      <b class="hi">Caveat on the fpl column:</b> ep_next is computed under
+      <i>classic</i> scoring, not this league's draft scoring. The two tables
+      overlap but are not identical — a keeper's goal is worth 10 here against 6
+      there, among other differences. Treat it as a good outside opinion, not a
+      like-for-like number.</div></div>
+  <div class="card" id="summary"></div>
+  <input type="search" id="q" placeholder="Search player or club">
+  <div class="card"><table id="tbl"></table></div>
+  <div class="note">Sorted by the model's number by default; click any heading
+    to sort. <a href="../">Back to the dashboard</a></div>
+</main>
+<script>
+const URL_="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/compare.json";
+let DATA=null,WHO="all",SORT={k:"trop",d:1};   // d=1 descending, -1 ascending
+const F=[["all","Everyone"],["mine","My squad"],["owned","Owned"],["free","Free agents"]];
+function num(v){return v==null?"–":v.toFixed(2);}
+function render(){
+  if(!DATA){document.getElementById("meta").textContent=
+    "No comparison data yet — it is written by the full refresh as data/compare.json.";return;}
+  document.getElementById("meta").textContent=
+    `GW${DATA.gw} · generated ${DATA.generated} UTC · ${DATA.players.length} players · `+
+    `${DATA.n_fpl} with an FPL number`;
+  document.getElementById("filters").innerHTML=
+    F.map(([k,l])=>`<button class="chip ${WHO===k?"on":""}" data-w="${k}">${l}</button>`).join("");
+  document.querySelectorAll("[data-w]").forEach(b=>b.onclick=()=>{WHO=b.dataset.w;render();});
+  const s=DATA.spread||{};
+  document.getElementById("summary").innerHTML=`<b class="h">Agreement with the model</b>
+    <table><tr><th>predictor</th><th class="num">rank correlation</th><th class="num">players</th></tr>`+
+    ["fpl","b1","b2"].map(k=>s[k]?`<tr><td>${k}</td><td class="num">${s[k].rho.toFixed(3)}</td>
+      <td class="num tm">${s[k].n}</td></tr>`:"").join("")+`</table>
+    <div class="note">Spearman-style rank correlation over players both rank.
+      A low number is not a verdict on either — it says they order players
+      differently, which is where the interesting disagreements live.</div>`;
+  const q=(document.getElementById("q").value||"").toLowerCase();
+  let list=DATA.players.filter(p=>
+    (WHO==="all"||(WHO==="mine"&&p.mine)||(WHO==="owned"&&p.owner)||
+     (WHO==="free"&&!p.owner)) &&
+    (!q||p.name.toLowerCase().includes(q)));
+  list=[...list].sort((a,b)=>{
+    const x=a[SORT.k],y=b[SORT.k];
+    if(x==null&&y==null)return 0;
+    if(x==null)return 1; if(y==null)return -1;   // missing values sink
+    return (typeof x==="string")
+      ? SORT.d*String(y).localeCompare(String(x))
+      : SORT.d*(y-x);});
+  const cols=[["name","player"],["pos","pos"],["avail","avail"],["trop","trop"],
+              ["fpl","fpl"],["b1","b1"],["b2","b2"],["gap","spread"]];
+  let h=`<tr>`+cols.map(([k,l])=>`<th class="${k==="name"||k==="pos"?"":"num"}"
+    data-k="${k}">${l}${SORT.k===k?(SORT.d>0?" ▾":" ▴"):""}</th>`).join("")+`</tr>`;
+  for(const p of list.slice(0,400)){
+    const vals=[p.trop,p.fpl,p.b1,p.b2].filter(v=>v!=null);
+    const gap=vals.length>1?Math.max(...vals)-Math.min(...vals):null;
+    h+=`<tr class="${p.mine?"mine-row":""}">
+      <td><span class="nm">${p.name}</span></td>
+      <td><span class="pos ${p.pos}">${p.pos}</span></td>
+      <td class="num tm">${p.avail.toFixed(2)}</td>
+      <td class="num">${num(p.trop)}</td>
+      <td class="num ${p.fpl==null?"lo":""}">${num(p.fpl)}</td>
+      <td class="num">${num(p.b1)}</td>
+      <td class="num">${num(p.b2)}</td>
+      <td class="num ${gap>2?"hi":"lo"}">${gap==null?"–":gap.toFixed(2)}</td></tr>`;
+  }
+  document.getElementById("tbl").innerHTML=h;
+  document.querySelectorAll("[data-k]").forEach(t=>t.onclick=()=>{
+    const k=t.dataset.k;
+    if(k==="gap"){DATA.players.forEach(p=>{
+      const v=[p.trop,p.fpl,p.b1,p.b2].filter(x=>x!=null);
+      p.gap=v.length>1?Math.max(...v)-Math.min(...v):null;});}
+    SORT=(SORT.k===k)?{k,d:-SORT.d}:{k,d:k==="name"?-1:1};render();});
+  document.getElementById("q").oninput=()=>render();
+}
+fetch(URL_,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{DATA=j;render();}).catch(()=>render());
+</script></body></html>
