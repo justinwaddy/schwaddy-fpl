@@ -303,9 +303,16 @@ function weeklyHTML(){
       left?` · ${left} players still to play`:" · everyone has played"}</div>`;
   if(left&&proj[0])h+=`<div class="note">Projected finish: ${
     proj.map(m=>`${m.name} ${m.proj.toFixed(0)}`).join(" · ")}</div>`;
+  const hz=ms.some(m=>m.next5!=null);
+  if(hz){
+    const byh=[...ms].sort((a,b)=>b.next5-a.next5);
+    h+=`<div class="note">Next ${WK.horizon||5} gameweeks, best XI each week:
+      ${byh.map(m=>`${m.name} ${m.next5.toFixed(0)}`).join(" · ")}</div>`;
+  }
   h+=`</div><div class="card"><table class="wk">
     <tr><th>manager</th><th class="num">pts</th><th class="num">subs</th>
-    <th class="num">to play</th><th class="num">projected</th><th></th></tr>`;
+    <th class="num">to play</th><th class="num">projected</th>${
+      hz?`<th class="num">next ${WK.horizon||5}</th>`:""}<th></th></tr>`;
   for(const m of ms){
     const open=WKOPEN===m.entry;
     h+=`<tr class="clk ${m.mine?"mine-row":""}" data-ent="${m.entry}">
@@ -314,13 +321,17 @@ function weeklyHTML(){
       <td class="num">${m.subs?`<span class="subin">+${m.subs}</span>`:"–"}</td>
       <td class="num">${m.to_play?`<span class="togo">${m.to_play}</span>`:"–"}</td>
       <td class="num">${m.proj.toFixed(0)}</td>
+      ${hz?`<td class="num">${m.next5!=null?m.next5.toFixed(0):"–"}</td>`:""}
       <td class="chev">${open?"▾":"▸"}</td></tr>`;
-    if(open)h+=`<tr><td colspan="6">${managerHTML(m)}</td></tr>`;
+    if(open)h+=`<tr><td colspan="${hz?7:6}">${managerHTML(m)}</td></tr>`;
   }
   h+=`</table></div><div class="note">Points include provisional substitutions:
     a starter whose match has finished without playing is replaced by the first
     eligible player on the bench, as the game will do at the deadline. Projected
-    adds the model's expected points for whoever is still to play.</div>`;
+    adds the model's expected points for whoever is still to play.${
+    hz?` The last column is a different question: the best legal XI in each of
+    the next ${WK.horizon||5} gameweeks, fixtures included, which is who is set
+    up for the month rather than who is winning the week.`:""}</div>`;
   return h;
 }
 function managerHTML(m){
@@ -335,19 +346,26 @@ function managerHTML(m){
       <span class="tm">${p.team}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
       <td><span class="pos ${p.pos}">${p.pos}</span></td>
       <td class="num">${st}</td><td class="num">${p.pts}</td>
-      <td class="num"><span class="tm">${p.ep_next?.toFixed(1)??"–"}</span></td></tr>`;
+      <td class="num"><span class="tm">${p.ep_next?.toFixed(1)??"–"}</span></td>
+      ${hz?`<td class="num"><span class="tm">${p.next5?.toFixed(1)??"–"}</span></td>
+      <td>${runHTML(p)}</td>`:""}</tr>`;
   };
+  const hz=m.squad.some(p=>p.next5!=null);
+  const cols=hz?7:5;
   let h=`<div class="det"><table>
     <tr><th>${m.name}'s XI</th><th></th><th class="num">played</th>
-    <th class="num">pts</th><th class="num">next GW</th></tr>`;
+    <th class="num">pts</th><th class="num">next GW</th>${
+      hz?`<th class="num">next ${WK.horizon||5}</th><th>run</th>`:""}</tr>`;
   h+=xi.map(cell).join("");
-  h+=`<tr class="benchsep"><td colspan="5">Bench · ${m.bench} pts</td></tr>`;
+  h+=`<tr class="benchsep"><td colspan="${cols}">Bench · ${m.bench} pts</td></tr>`;
   h+=bn.map(cell).join("")+`</table>
     <div class="note">${m.played} played, ${m.to_play} to come · this week
       ${m.live} so far, ${m.proj.toFixed(0)} projected${
       m.subs?` · ${m.subs} provisional sub${m.subs>1?"s":""}`:""}.
       Next GW column is expected points already discounted by the chance of
-      playing.</div></div>`;
+      playing${hz?`, and next ${WK.horizon||5} sums the same over the horizon,
+      so a player on a hard run reads lower than his rate alone would say`:""}.
+      </div></div>`;
   return h;
 }
 function overallHTML(ps){

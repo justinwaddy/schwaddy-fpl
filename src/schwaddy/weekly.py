@@ -12,6 +12,13 @@ already lost, so his replacement is worked out here under the same
 formation rules the game enforces. That makes the live table read like
 the final one rather than punishing a manager for a blank he has already
 covered on the bench.
+
+Each squad also carries the five-gameweek horizon from predictions.json -
+next5, the fixture term fix5, and the opponent run - and each manager a
+next5 for his best legal XI in each of those gameweeks. The live table
+says who is winning this week; that column says who is set up for the
+next month, which is a different question and the one a trade or a waiver
+is answered against.
 """
 import json
 import os
@@ -19,6 +26,7 @@ from datetime import datetime, timezone
 
 from . import api, liveform
 from .league import MY_ENTRY
+from .lineup import pick_xi
 
 # draft squad rules; overridden from the bootstrap's own settings when present
 RULES = dict(play=11, min_GKP=1, max_GKP=1, min_DEF=3, max_DEF=5,
@@ -103,6 +111,31 @@ def _expected(pred_gw, gw):
     return next((v for v in pred_gw[max(0, gw - 1):] if v > 0), 0.0)
 
 
+def _horizon_xi(squad, pred, rules, horizon):
+    """Best legal XI in each horizon gameweek, summed.
+
+    Not the same as summing the whole squad, and not the same as freezing
+    one eleven: a manager re-picks every week, so a player only counts in
+    the weeks he would actually start. Returns None when predictions.json
+    predates the horizon fields, which keeps this backwards compatible
+    with a league.json written against an older file.
+    """
+    if not horizon:
+        return None
+    tot = 0.0
+    for g in horizon:
+        pool = []
+        for p in squad:
+            row = (pred.get(p["id"]) or {}).get("gw") or []
+            pool.append(dict(name=p["id"], pos=p["pos"],
+                             ep=row[g] if len(row) > g else 0.0))
+        if len(pool) < rules["play"]:
+            return None
+        xi, _, _ = pick_xi(pool)
+        tot += sum(x["ep"] for x in xi)
+    return round(tot, 1)
+
+
 def build(data_dir, league_id, bootstrap, owned, id_of_code):
     """The whole weekly picture. Returns None when it cannot be built."""
     game = api.draft_game()
@@ -133,12 +166,17 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
         stats = {}
 
     pred = {}
+    horizon = None
     try:
         pj = json.load(open(f"{data_dir}/predictions.json"))
         for p in pj.get("players", []):
             pid = id_of_code.get(p.get("code"))
             if pid:
                 pred[pid] = p
+        if pj.get("horizon") and pj.get("first_gw"):
+            # absolute, zero-based gameweek columns of the horizon
+            horizon = list(range(pj["first_gw"] - 1,
+                                 pj["first_gw"] - 1 + pj["horizon"]))
     except Exception:
         pass
 
@@ -188,6 +226,8 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
                 ep_next=round((pr.get("gw") or [0])[gw] if pr.get("gw")
                               and len(pr["gw"]) > gw else 0.0, 2),
                 rest=round(pr.get("rest", 0.0), 1),
+                next5=pr.get("next5"), fix5=pr.get("fix5"),
+                run=pr.get("run"),
                 subbed_in=False, subbed_out=False))
         squad.sort(key=lambda x: x["slot"])
         apply_subs(squad, rules)
@@ -198,6 +238,10 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
         livepts = sum(p["pts"] for p in counting)
         togo = [p for p in counting if p["to_play"]]
         proj = livepts + sum(p["ep_week"] for p in togo)
+        # the horizon is squad-wide, not XI-wide: pick the best legal XI
+        # for each of the next five gameweeks separately, the way the
+        # manager will each week, rather than freezing one eleven
+        hz5 = _horizon_xi(squad, pred, rules, horizon)
         s = standings.get(ent, {})
         managers.append(dict(
             entry=ent, name=entry_name[ent], team=team_name[ent],
@@ -207,7 +251,8 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
             proj=round(proj, 1), bench=sum(p["pts"] for p in squad
                                            if p not in counting),
             rank=s.get("rank"), total=s.get("total"),
-            event_total=s.get("event_total", livepts), squad=squad))
+            event_total=s.get("event_total", livepts),
+            next5=hz5, squad=squad))
 
     managers.sort(key=lambda m: -m["live"])
     for i, m in enumerate(managers):
@@ -215,6 +260,7 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
     return dict(generated=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"),
                 gw=gw, finished=bool(game.get("current_event_finished")),
                 all_played=not any(m["to_play"] for m in managers),
+                horizon=(len(horizon) if horizon else None),
                 managers=managers)
 
 
