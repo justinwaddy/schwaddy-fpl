@@ -23,6 +23,14 @@
    "scope": "league",
    "text": "Window shuts 11pm Tuesday, so squads can still move before GW3. Already done: Spurs took Tonali and Savio, Chelsea took Morgan Rogers, Arsenal took Bruno Guimaraes and Konsa, United took Baleba and Tielemans. Newcastle have sold two midfielders - watch whether that touches Botman's minutes before you claim him.",
    "url": "https://www.aljazeera.com/sports/2026/8/31/transfer-deadline-day-2026-football-summer-signing-window-barcola-gakpo-alvarez"
+  },
+  {
+   "id": "2026-09-01-garner-surgery",
+   "ts": "2026-09-01T10:40",
+   "mine": true,
+   "scope": "mine",
+   "text": "Garner is working back from pre-season groin surgery, not out of favour - he missed the opening friendlies and was only expected back in first-team training around the start of the season. Your dashboard reads his 0.61 availability as a man who is not being picked; it is a man being reintroduced (11 mins in GW1, 61 in GW2). That trend points up, so he is a worse drop than Eze, who is simply not selected.",
+   "url": "https://www.goodisonnews.com/injuries/when-james-garner-is-expected-to-return-after-surgery-as-everton-trio-ruled-out"
   }
  ],
  "runs": [
@@ -30,6 +38,11 @@
    "ts": "2026-09-01T09:51",
    "published": 3,
    "note": "seeded by hand while building the pipeline"
+  },
+  {
+   "ts": "2026-09-01T10:40",
+   "published": 1,
+   "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
   }
  ]
 }
