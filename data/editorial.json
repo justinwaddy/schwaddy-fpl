@@ -47,6 +47,14 @@
    "scope": "mine",
    "text": "Munoz completed a permanent GBP22m move from Crystal Palace to Nottingham Forest, a three-year deal and a direct request from Oliver Glasner, who managed him before. He was a regular starter and a key contributor at Palace, so his 0.36 availability on your board is the same new-club discount hitting Marmoush, not a form or fitness concern - treat him as a starter, not a bench risk.",
    "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
+  },
+  {
+   "id": "2026-09-01-woltemade-juventus-loan",
+   "ts": "2026-09-01T22:00",
+   "mine": true,
+   "scope": "mine",
+   "text": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day - Juventus paid a GBP3.5m loan fee with no obligation to buy, so he plays in Serie A, not the Premier League, until at least next summer. Your dashboard already had him as your weakest forward at 0.37 availability; that reading understated the problem, since he can score you zero Premier League points for as long as the loan runs. He is now the clearest drop in your squad.",
+   "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
   }
  ],
  "runs": [
@@ -64,6 +72,11 @@
    "ts": "2026-09-01T21:39",
    "published": 2,
    "note": "Marmoush (Man City to Spurs, started and impressed on debut) and Munoz (Palace to Forest, permanent, Glasner's man) both hit the same new-club-discount blind spot the model has for Barcola - both are mine, both look like bench risks on the dashboard and are actually starters"
+  },
+  {
+   "ts": "2026-09-01T22:00",
+   "published": 1,
+   "note": "Woltemade (mine, weakest forward) loaned out to Juventus on deadline day - he is out of the Premier League entirely, not just out of favour, which the 0.37 availability figure did not capture"
   }
  ]
 }
