@@ -200,6 +200,22 @@ news and league state from raw.githubusercontent.com at load time, so the
 bot's refresh commits show up on the live site without a redeploy - and the
 cron pushes, which only ever write data/, never retrigger this workflow.
 
+## Live scores
+The cron is a batch pipeline - four runs a day, each minutes late, read
+through a CDN that caches for five more - so nothing that goes through it
+can be live. The Live tab does not go through it. It polls a Cloudflare
+Worker (live/worker.js, free tier) every 30 seconds while a match is on;
+the worker exists only because FPL's API sends no CORS headers, so it reads
+the live feed server-side, trims it to the six squads and hands the page one
+13KB JSON. Points, provisional bonus (3/2/1 on bps with FPL's tie rules,
+until the official bonus lands) and provisional subs are worked out in the
+page under the same rules as weekly.py, so the Live tab and the League tab
+agree once a gameweek settles: checked against GW2, every manager's score
+and bench match league.json exactly. The model is never re-scored live;
+only the scoreboard is. Deploying the worker is a one-off, five-minute
+job described in live/README.md; until its URL is pasted into LIVE_URL in
+site/index.html the tab shows the cron's last snapshot and says so.
+
 ## Comparing predictions
 site/compare/ puts three rivals beside the model's number for the coming
 gameweek: FPL's own ep_next from the classic API, the season-to-date mean
