@@ -597,7 +597,7 @@ function renderLive(){
     ctx.allDone?`GW${S.gw} ${S.finished?"final":"all played, awaiting bonus and processing"}`:
     ctx.next?`Next kick-off ${koText(ctx.next)}`:`GW${S.gw}`;
   h+=`<div class="card scorecard"><b class="h">Gameweek ${S.gw}</b>
-    <div class="lvstatus">${status} · feed ${upd} UTC${LIVEERR?` · <span class="stale">worker unreachable, showing last good feed</span>`:""}</div>
+    <div class="lvstatus">${status} · feed ${upd} UTC · ${pollText()}${LIVEERR?` · <span class="stale">worker unreachable, showing last good feed</span>`:""}</div>
     <table class="lv"><tr><th></th><th>manager</th><th class="num">GW</th><th class="num">on pitch</th>
     <th class="num">to play</th><th class="num">bench</th><th class="num">season</th></tr>`;
   ctx.mgrs.forEach((m,i)=>{
@@ -630,11 +630,24 @@ function renderLive(){
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
     const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
 }
+// When to poll next, in ms; null = not at all. In play: as fast as the
+// worker's cache allows (15s once the deployed worker says ttl 15).
+// Otherwise sleep until the next kick-off, plus 45s for FPL to flip the
+// match to started, retrying each minute if it is late. Gameweek over:
+// stop; a reload or the tab coming back into view polls again.
 function liveDelay(){
   if(!LIVE||!LIVECTX)return 60e3;
   if(LIVECTX.inplay.length)return Math.max(15,LIVE.ttl||30)*1000;
-  const ms=LIVECTX.next?new Date(LIVECTX.next)-Date.now():Infinity;
-  return ms<15*60e3?60e3:5*60e3;         // wake up as kick-off nears
+  if(!LIVECTX.next)return null;
+  const ms=new Date(LIVECTX.next)-Date.now()+45e3;
+  return Math.min(6*3600e3,Math.max(60e3,ms));
+}
+function pollText(){
+  const d=liveDelay();
+  if(d==null)return "not polling until the next gameweek";
+  if(LIVECTX&&LIVECTX.inplay.length)return `polling every ${d/1000}s`;
+  if(d>=120e3)return `sleeping until ${koText(new Date(Date.now()+d).toISOString())}`;
+  return "checking every minute";
 }
 async function pollLive(){
   clearTimeout(LIVETIMER);
@@ -650,7 +663,8 @@ async function pollLive(){
   }catch(e){LIVEERR=String(e.message||e);}
   renderLive();
   if(LIVE&&LIVECTX&&LIVECTX.inplay.length&&!LIVEAUTO){LIVEAUTO=true;document.getElementById("livetab").click();}
-  if(!document.hidden)LIVETIMER=setTimeout(pollLive,liveDelay());
+  const d=liveDelay();
+  if(d!=null&&!document.hidden)LIVETIMER=setTimeout(pollLive,d);
 }
 document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(LIVETIMER);else pollLive();});
 pollLive();

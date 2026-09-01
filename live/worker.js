@@ -6,7 +6,7 @@
  * ~600-player live feed down to the six squads in the league, bundles
  * everything the Live tab needs into ONE response, and caches that for
  * SNAP_TTL seconds. So however many people have the page open, FPL sees
- * at most one round of requests every 30s, and each viewer costs one
+ * at most one round of requests every 15s, and each viewer costs one
  * request per poll against the 100k/day free allowance.
  *
  * It does no scoring. Points, provisional bonus and provisional subs are
@@ -17,7 +17,8 @@
  */
 const DRAFT = "https://draft.premierleague.com/api";
 const LEAGUE = 9450;
-const SNAP_TTL = 30;      // seconds a composed snapshot is served from cache
+const SNAP_TTL = 15;      // seconds a composed snapshot is served from cache;
+                          // the page polls at this rate while a match is on
 const BOOT_TTL = 3600;    // names and clubs change rarely; cache for an hour
 const ETYPE = { 1: "GKP", 2: "DEF", 3: "MID", 4: "FWD" };
 

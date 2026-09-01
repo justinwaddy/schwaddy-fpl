@@ -1,17 +1,21 @@
 # Live scores
 
-The Live tab on the dashboard polls FPL's live feed every 30 seconds while
+The Live tab on the dashboard polls FPL's live feed every 15 seconds while
 a match is on and shows each manager's gameweek score as it happens, with
 provisional bonus and provisional subs applied, plus every fixture and
-who in the league has players in it.
+who in the league has players in it. Between matches it does not poll at
+all: it sleeps until the next kick-off, and stops once the gameweek is
+over. The status line under the gameweek heading says which it is doing.
 
 GitHub Pages cannot do this on its own: FPL's API sends no CORS headers, so
 a browser on a different origin is refused. `worker.js` is a tiny
 Cloudflare Worker that reads the API server-side, trims the feed to the six
-squads and hands the page one bundled JSON. It caches for 30 seconds, so FPL
-sees one round of requests per 30s no matter how many tabs are open, and
+squads and hands the page one bundled JSON. It caches for 15 seconds, so FPL
+sees one round of requests per 15s no matter how many tabs are open, and
 each viewer costs one request per poll against the free tier's 100,000 a
-day. Nothing in it is secret: the API is public and reads need no login.
+day. The page polls at whatever cache length the deployed worker reports,
+so polling faster than the worker can answer never happens. Nothing in it
+is secret: the API is public and reads need no login.
 
 Neither the model nor the cron are involved. Predictions and the news feed
 keep coming from the four daily refreshes; only the scoreboard is live.
@@ -28,6 +32,10 @@ keep coming from the four daily refreshes; only the scoreboard is live.
    and open it in a browser: you should see JSON starting `{"gw":`.
 5. Paste that URL into `LIVE_URL` near the top of the script in
    `site/index.html`, commit, push. The pages workflow redeploys the site.
+
+To update a deployed worker after `worker.js` changes: Workers & Pages ->
+schwaddy-live -> Edit code -> paste the new file -> Deploy. The page picks
+up a changed cache length on its next poll; nothing else to do.
 
 Or from a terminal, with Node installed:
 
@@ -53,9 +61,11 @@ gameweek settles.
 
 ## Limits worth knowing
 
-- FPL's own feed updates roughly every minute or two during a match. Polling
-  faster than 30s buys nothing.
+- FPL's own feed updates roughly every minute or two during a match, so
+  most 15s polls come back unchanged; the cost of that is one small
+  cached request, which is why it is set that low and no lower.
 - Cloudflare's free tier: 100,000 requests a day. Six people watching a
-  full Saturday at one request per 30s is about 10,000.
+  full Saturday at one request per 15s is about 20,000, and nothing at
+  all between matches.
 - If the worker is down the tab falls back to the cron's league.json and
   says so; the rest of the dashboard is unaffected.

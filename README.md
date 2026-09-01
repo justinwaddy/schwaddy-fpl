@@ -204,8 +204,10 @@ cron pushes, which only ever write data/, never retrigger this workflow.
 The cron is a batch pipeline - four runs a day, each minutes late, read
 through a CDN that caches for five more - so nothing that goes through it
 can be live. The Live tab does not go through it. It polls a Cloudflare
-Worker (live/worker.js, free tier) every 30 seconds while a match is on;
-the worker exists only because FPL's API sends no CORS headers, so it reads
+Worker (live/worker.js, free tier) every 15 seconds while a match is on,
+sleeps until the next kick-off between matches and stops when the
+gameweek is over; the worker exists only because FPL's API sends no CORS
+headers, so it reads
 the live feed server-side, trims it to the six squads and hands the page one
 13KB JSON. Points, provisional bonus (3/2/1 on bps with FPL's tie rules,
 until the official bonus lands) and provisional subs are worked out in the
