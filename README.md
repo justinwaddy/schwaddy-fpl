@@ -20,6 +20,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
+- .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 - site/compare/               the same gameweek under four different predictors
 
@@ -181,6 +182,23 @@ status for those players until the API catches up. Every applied override
 is printed by refresh, and each entry carries the date it was added; delete
 it once the API carries the news itself, since a stale override silently
 outranks real data.
+
+## Hosting
+
+site/ is published to GitHub Pages by .github/workflows/pages.yml: it uploads
+the directory as-is on any push to main that touches site/, and on manual
+dispatch. Live at https://justinwaddy.github.io/schwaddy-fpl/, with
+/compare/ and /draft_room.html alongside it.
+
+One switch has to be flipped by hand, once: Settings -> Pages -> Build and
+deployment -> Source -> "GitHub Actions". Until that is set the workflow
+fails at the deploy step. The repo also has to be public, or on a plan that
+allows Pages for private repos.
+
+Nothing under data/ is bundled into the deploy. The pages fetch predictions,
+news and league state from raw.githubusercontent.com at load time, so the
+bot's refresh commits show up on the live site without a redeploy - and the
+cron pushes, which only ever write data/, never retrigger this workflow.
 
 ## Comparing predictions
 site/compare/ puts three rivals beside the model's number for the coming
