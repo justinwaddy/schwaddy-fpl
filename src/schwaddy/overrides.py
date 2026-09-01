@@ -29,9 +29,12 @@ from datetime import date
 # player code -> (status, news, date added). Status codes match the API's
 # own: "u" unavailable, "i" injured, "s" suspended, "d" doubtful, "a" fit.
 OVERRIDES = {
-    # Ollie Watkins - moved to the Saudi Pro League.
-    # The API still had him at status "a" with no news the morning after.
-    "178301": ("u", "Has left the Premier League", "2026-08-26"),
+    # Empty, and that is the healthy state. The Watkins entry lived here
+    # for six days after his Saudi move while the API still had him at
+    # Aston Villa, status "a", no news; the API now carries status "u"
+    # itself, apply() reported the entry as redundant, and it was deleted.
+    # That is the loop working as intended - add one when the API lags a
+    # move, delete it when apply() says the API has caught up.
 }
 
 
