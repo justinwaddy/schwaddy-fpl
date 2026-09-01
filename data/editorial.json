@@ -31,6 +31,22 @@
    "scope": "mine",
    "text": "Garner is working back from pre-season groin surgery, not out of favour - he missed the opening friendlies and was only expected back in first-team training around the start of the season. Your dashboard reads his 0.61 availability as a man who is not being picked; it is a man being reintroduced (11 mins in GW1, 61 in GW2). That trend points up, so he is a worse drop than Eze, who is simply not selected.",
    "url": "https://www.goodisonnews.com/injuries/when-james-garner-is-expected-to-return-after-surgery-as-everton-trio-ruled-out"
+  },
+  {
+   "id": "2026-09-01-marmoush-spurs-debut",
+   "ts": "2026-09-01T21:39",
+   "mine": true,
+   "scope": "mine",
+   "text": "Marmoush left Man City for Tottenham on loan with a GBP60m obligation to buy, and started immediately - full 90 minutes on debut against Newcastle, three shots and three chances created, ahead of Richarlison and Solanke. Your dashboard has him at 0.35 availability, your worst outfield player, because the model reads a week-old transfer as a man not in the team; the real story is the opposite, he walked into the XI.",
+   "url": "https://www.rotowire.com/soccer/headlines/omar-marmoush-news-productive-in-spurs-debut-529718"
+  },
+  {
+   "id": "2026-09-01-munoz-forest-signing",
+   "ts": "2026-09-01T21:39",
+   "mine": true,
+   "scope": "mine",
+   "text": "Munoz completed a permanent GBP22m move from Crystal Palace to Nottingham Forest, a three-year deal and a direct request from Oliver Glasner, who managed him before. He was a regular starter and a key contributor at Palace, so his 0.36 availability on your board is the same new-club discount hitting Marmoush, not a form or fitness concern - treat him as a starter, not a bench risk.",
+   "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
   }
  ],
  "runs": [
@@ -43,6 +59,11 @@
    "ts": "2026-09-01T10:40",
    "published": 1,
    "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
+  },
+  {
+   "ts": "2026-09-01T21:39",
+   "published": 2,
+   "note": "Marmoush (Man City to Spurs, started and impressed on debut) and Munoz (Palace to Forest, permanent, Glasner's man) both hit the same new-club-discount blind spot the model has for Barcola - both are mine, both look like bench risks on the dashboard and are actually starters"
   }
  ]
 }
