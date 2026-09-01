@@ -19,6 +19,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/news.py        league news feed written to data/news.json
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
+- src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - site/                       dashboard HTML; draft_room.html is the live draft tool
@@ -270,6 +271,43 @@ moved in it, a projected finish from the morning run's forecasts, and whose
 players are still to come. Both append to data/news.json, which the News tab
 reads directly. Everything is diffed against the previous run's state, so an
 event fires once and re-running is a no-op.
+
+## The player card
+Every player name on the dashboard opens a card: what the model expects of
+him, what he has actually done this season, and whatever the feed has said
+about him. It is one delegated click handler over the whole page, so the
+squad XI, the bench, the waiver board, the full player table, any manager's
+expanded squad in the League tab and every name in the Live tab - squads
+and fixture chips alike - all open the same card. predictions.json players
+carry `code` and the league and live squads carry the element `id`; either
+resolves through the id-to-code index the stats file provides.
+
+The projection half is already on the page - it comes out of
+predictions.json. The other half is data/player_stats.json, written by
+playerstats.py on every refresh: season totals and set-piece duties off the
+draft bootstrap, plus a match log read out of the current season's gameweek
+file. The log holds appearances only, capped at the last 15 of them - the
+gameweek file carries a row per player per match whether he played or not,
+and fifteen rows of zeros is not a match log - and the rows are bare arrays
+under a `log_cols` header, which is about a third of the bytes of a dict
+per row. The whole file is a quarter of a megabyte and is fetched on load,
+because the club names in every table come out of it too: predictions.json
+carries the club as a team id, which the site used to print raw.
+
+The news half is matched client-side. Feed events are free text, and the
+feed writes a player the way the site does - "Watkins (AVL): ..." - so a
+card scans the text for his name on word boundaries, accents normalised
+away. Where the text tags a club straight after the name it has to be his
+club, which separates two players sharing a web name. Managers are named in
+the feed too and a manager and a player can be the same word, so where they
+collide the club tag is required rather than optional: "Justin 43" in a
+scoreline is not news about the Leeds full back, and the 21 scorelines that
+used to land on his card no longer do.
+
+The open card lives in the URL hash, so a card survives a reload, can be
+sent to someone, and the back button closes it. Everything degrades: if
+player_stats.json fails to load the card still shows the projection, and if
+predictions.json fails it still shows the stats.
 
 ## Lambda selection (backtest-informed)
 CV is under the decision loss (realized XI points on placebo blocks), not

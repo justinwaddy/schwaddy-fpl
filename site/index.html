@@ -96,6 +96,31 @@ color:var(--ink);border:1px solid transparent}
 .fxchip .who{color:var(--dim)}
 .provb{color:var(--amber);font:600 10px "IBM Plex Mono";white-space:nowrap}
 .stale{color:var(--amber);font-size:12px;padding:4px 2px}
+/* player card: any name on the page opens it */
+.pk{cursor:pointer;border-bottom:1px dotted var(--line)}
+.pk:hover,.pk:active{color:var(--blue);border-bottom-color:var(--blue)}
+.pkback{position:fixed;inset:0;background:rgba(8,14,28,.78);z-index:20;
+display:flex;align-items:flex-end;justify-content:center}
+.pkcard{background:var(--panel);border:1px solid var(--line);border-radius:14px 14px 0 0;
+width:100%;max-width:680px;max-height:92vh;overflow-y:auto;padding:12px 13px 30px}
+.pkcard th{cursor:default}
+@media(min-width:620px){.pkback{align-items:center}.pkcard{border-radius:14px}}
+.pkhd{display:flex;gap:10px;align-items:flex-start;position:sticky;top:-12px;z-index:1;
+background:var(--panel);padding:4px 0 8px;border-bottom:1px solid var(--line)}
+.pkhd h2{font:600 25px "Barlow Condensed";letter-spacing:.03em;text-transform:uppercase;line-height:1.1}
+.pkx{margin-left:auto;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
+color:var(--dim);font:600 14px "IBM Plex Mono";cursor:pointer;padding:5px 11px}
+.pkx:hover{color:var(--ink);border-color:var(--blue)}
+.pkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:6px;margin:8px 0 4px}
+.pkt{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.pkt b{display:block;font:600 17px "IBM Plex Mono"}
+.pkt span{color:var(--dim);font:600 10px "IBM Plex Mono";text-transform:uppercase;
+letter-spacing:.05em;white-space:nowrap}
+.pkalert{border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px;
+background:rgba(217,87,87,.13);border:1px solid var(--red)}
+.pkalert.warn{background:rgba(232,161,60,.13);border-color:var(--amber)}
+.pklog td,.pklog th{font-size:12px;padding:5px 4px}
+.pkempty{color:var(--dim);font-size:12px;padding:6px 2px}
 </style></head>
 <body>
 <header>
@@ -170,11 +195,11 @@ function renderSquad(ps){
   <div class="note">Fixture-adjusted. <b>fix</b> is what this run is worth against an average one, in points, from the model's own opponent terms - green is a kind draw, red a hard one.</div><table>
   <tr><th>player</th><th></th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th></tr>`;
   for(const p of [...mine].sort((a,b)=>N5(b)-N5(a)))
-    h+=`<tr><td><span class="nm">${p.name}</span> <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td></tr>`;
+    h+=`<tr><td>${nm(p)} <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td></tr>`;
   h+=`</table></div><div class="card"><b class="h">Rest of season</b><table>
   <tr><th>player</th><th></th><th style="text-align:right">rest</th><th>shape</th></tr>`;
   for(const p of [...mine].sort((a,b)=>b.rest-a.rest))
-    h+=`<tr><td><span class="nm">${p.name}</span> <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${Math.round(p.rest)}</td><td>${spark(p.gw||[])}</td></tr>`;
+    h+=`<tr><td>${nm(p)} <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${Math.round(p.rest)}</td><td>${spark(p.gw||[])}</td></tr>`;
   h+=`</table></div>`;
   document.getElementById("squad").innerHTML=h;
 }
@@ -197,7 +222,7 @@ function fixTag(p){
   return `<span class="fx ${p.fix5>0.3?"fx-good":p.fix5<-0.3?"fx-bad":"fx-mid"}">${p.fix5>0?"+":""}${p.fix5.toFixed(1)}</span>`;
 }
 function row(p,extra,pre){
-  return `<tr><td>${pre?pre+". ":""}<span class="nm">${p.name}</span> <span class="tm">${p.team??""}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td>${extra}</tr>`;
+  return `<tr><td>${pre?pre+". ":""}${nm(p)} <span class="tm">${club(p)}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td>${extra}</tr>`;
 }
 // Points over the horizon a free agent must clear to justify a swap. On
 // the old rest-of-season scale this was 8; five gameweeks is about an
@@ -235,9 +260,9 @@ function renderWaivers(ps){
     <tr><th>#</th><th>add</th><th></th><th>drop</th><th>run</th><th style="text-align:right">gain</th></tr>`;
     plan.forEach((c,i)=>{
       h+=`<tr><td class="num">${i+1}</td>
-      <td><span class="nm">${c.add.name}</span> <span class="tm">${c.add.team??""} n=${c.add.n_career}</span>${c.add.news?`<span class="flag">${c.add.news}</span>`:""}</td>
+      <td>${nm(c.add)} <span class="tm">${club(c.add)} n=${c.add.n_career}</span>${c.add.news?`<span class="flag">${c.add.news}</span>`:""}</td>
       <td><span class="pos ${c.pos}">${c.pos}</span></td>
-      <td>${c.drop.name} <span class="tm">${N5(c.drop).toFixed(1)}</span></td>
+      <td>${nm(c.drop,"")} <span class="tm">${N5(c.drop).toFixed(1)}</span></td>
       <td>${runHTML(c.add)}</td>
       <td class="num"><span class="gain">+${c.gain.toFixed(1)}</span></td></tr>`;});
     h+=`</table><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
@@ -250,10 +275,10 @@ function renderWaivers(ps){
     if(!m.length)continue;
     for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a)).slice(0,4)){
       const g=N5(fa)-N5(m[0]);
-      h+=`<tr><td><span class="nm">${fa.name}</span> <span class="tm">${fa.team??""} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
+      h+=`<tr><td>${nm(fa)} <span class="tm">${club(fa)} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
       <td><span class="pos ${pos}">${pos}</span></td><td class="num">${N5(fa).toFixed(1)}</td>
       <td class="num">${fixTag(fa)}</td><td>${runHTML(fa)}</td>
-      <td>${m[0].name} <span class="tm">${N5(m[0]).toFixed(1)}</span></td>
+      <td>${nm(m[0],"")} <span class="tm">${N5(m[0]).toFixed(1)}</span></td>
       <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(1)}</span></td></tr>`;
     }
   }
@@ -310,7 +335,7 @@ function renderNews(){
     ()=>{NEWSFILTER=b.dataset.f;renderNews();}));
 }
 fetch(NEWS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{NEWSDATA=j;renderNews();}).catch(()=>{renderNews();});
+  .then(j=>{NEWSDATA=j;renderNews();drawCard();}).catch(()=>{renderNews();});
 function renderLeague(ps){
   window.LASTPS=ps;
   const sec=document.getElementById("league");
@@ -373,7 +398,7 @@ function managerHTML(m){
                p.subbed_out?`<span class="subout">OUT</span> `:"";
     const st=p.to_play?`<span class="togo">to play</span>`:
              (p.mins?`${p.mins}'`:`<span class="tm">did not play</span>`);
-    return `<tr><td>${mark}<span class="nm">${p.name}</span>
+    return `<tr><td>${mark}${nm(p)}
       <span class="tm">${p.team}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
       <td><span class="pos ${p.pos}">${p.pos}</span></td>
       <td class="num">${st}</td><td class="num">${p.pts}</td>
@@ -440,6 +465,8 @@ function renderPlayers(ps){
   list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);});
   list=[...list].sort((a,b)=>SORT.d*((b[SORT.k]??0)-(a[SORT.k]??0)));
   let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
+  <div class="note">Tap any name, here or anywhere on the site, for that
+  player's stats, fixtures and news.</div>
   <div class="card"><table><tr>
   <th data-k="name">player</th><th></th><th data-k="gwn" style="text-align:right">GW${NEXT+1}</th>
   <th data-k="n5" style="text-align:right">next ${HZ()}</th><th data-k="fix5" style="text-align:right">fix</th><th>run</th>
@@ -447,7 +474,7 @@ function renderPlayers(ps){
   for(const p of list.slice(0,150)){
     p.gwn=p.gw?p.gw[NEXT]:0;
     const own=p.mine?"YOU":(MGRS[p.owner]?MGRS[p.owner][1]:(p.owner?"?":"free"));
-    h+=`<tr class="${p.mine?"mine-row":""}"><td><span class="nm">${p.name}</span> <span class="tm">${p.team??""} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
+    h+=`<tr class="${p.mine?"mine-row":""}"><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
     <td><span class="pos ${p.pos}">${p.pos}</span></td>
     <td class="num">${(p.gwn||0).toFixed(1)}</td>
     <td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td>
@@ -459,6 +486,216 @@ function renderPlayers(ps){
   sec.querySelector("#pq").addEventListener("input",()=>renderPlayers(DATA.players));
   sec.querySelectorAll("th[data-k]").forEach(t=>t.addEventListener("click",()=>{
     SORT={k:t.dataset.k,d:SORT.k===t.dataset.k?-SORT.d:-1};renderPlayers(DATA.players);}));
+}
+// ---- player card ----------------------------------------------------
+// Season stats and this season's match log, written by the refresh run
+// alongside predictions.json. Fetched up front because the club names in
+// every table come out of it too.
+const STATS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/player_stats.json";
+let STATS=null,ID2CODE={};
+fetch(STATS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{STATS=j;for(const c in j.players)ID2CODE[j.players[c].id]=c;
+    if(DATA)render();else if(window.LASTPS)renderLeague(window.LASTPS);drawCard();})
+  .catch(()=>{});
+// predictions.json holds the club as a team id, so a table can only name
+// the club once the stats file has landed. Until then, print what we have.
+function club(p,long){
+  const t=STATS&&STATS.teams&&STATS.teams[p.team];
+  return t?(long?t[1]:t[0]):(p.team??"");
+}
+// Every player name on the page routes here. predictions.json players
+// carry `code`, league.json squads carry the element `id`; either one
+// opens the same card.
+function nm(p,cls){
+  const a=p.code!=null?`data-pk="${p.code}"`:(p.id!=null?`data-pkid="${p.id}"`:"");
+  return `<span class="${cls===undefined?"nm":cls}${a?" pk":""}" ${a}>${p.name}</span>`;
+}
+document.addEventListener("click",ev=>{
+  const t=ev.target;
+  if(!t||!t.closest)return;
+  const el=t.closest("[data-pk],[data-pkid]");
+  if(!el)return;
+  const code=el.dataset.pk||ID2CODE[el.dataset.pkid];
+  if(code)openPlayer(code);
+});
+// The open card lives in the hash, so it survives a reload, can be shared,
+// and the back button closes it.
+function pkHash(){const m=(location.hash||"").match(/^#p\/([A-Za-z0-9_-]+)$/);return m?m[1]:null;}
+function openPlayer(code){
+  if(pkHash()===String(code))drawCard();else location.hash="p/"+code;
+}
+function closeCard(){if(pkHash())history.back();else drawCard();}
+window.addEventListener("hashchange",drawCard);
+window.addEventListener("keydown",e=>{if(e.key==="Escape"&&pkHash())closeCard();});
+const PKSTATUS={a:"News",d:"A doubt",i:"Injured",s:"Suspended",
+                u:"Unavailable",n:"Not available"};
+const ORDN=n=>n+(n===1?"st":n===2?"nd":n===3?"rd":"th");
+const tile=(l,v)=>`<div class="pkt"><b>${v}</b><span>${l}</span></div>`;
+function drawCard(){
+  let back=document.getElementById("pkback");
+  const code=pkHash();
+  if(!code){if(back)back.remove();document.body.style.overflow="";return;}
+  const P=((DATA&&DATA.players)||[]).find(x=>String(x.code)===code)||null;
+  const S=(STATS&&STATS.players)?STATS.players[code]:null;
+  if(!P&&!S)return;                  // nothing yet; the fetches re-draw
+  if(!back){
+    back=document.createElement("div");back.id="pkback";back.className="pkback";
+    back.addEventListener("click",e=>{if(e.target===back)closeCard();});
+    document.body.appendChild(back);
+  }
+  document.body.style.overflow="hidden";
+  back.innerHTML=`<div class="pkcard">${cardHTML(code,P,S)}</div>`;
+  back.querySelector(".pkx").addEventListener("click",closeCard);
+}
+function cardHTML(code,P,S){
+  const pos=(P&&P.pos)||(S&&S.pos)||"";
+  const name=(P&&P.name)||(S&&S.name)||"Player";
+  const tid=(P&&P.team)!=null?P.team:(S&&S.team);
+  const tm=STATS&&STATS.teams&&STATS.teams[tid];
+  const own=P?(P.mine?"your player":(MGRS[P.owner]?`${MGRS[P.owner][1]} · ${MGRS[P.owner][0]}`
+        :(P.owner?"owned":"free agent"))):"";
+  let h=`<div class="pkhd"><div>
+    <h2>${name} <span class="pos ${pos}">${pos}</span></h2>
+    <div class="sub">${[S&&S.full,tm?tm[1]:tid,own].filter(Boolean).join(" · ")}</div>
+    </div><button class="pkx" title="Close">&#10005;</button></div>`;
+  const st=(P&&P.status)||(S&&S.status)||"a";
+  const flag=(S&&S.news)||(P&&P.news)||"";
+  if(flag||st!=="a"){
+    h+=`<div class="pkalert ${st==="a"||st==="d"?"warn":""}">
+      <b>${PKSTATUS[st]||"Flagged"}</b>${flag?` &mdash; ${flag}`:""}${
+      S&&S.chance!=null?` · ${S.chance}% chance of playing`:""}${
+      S&&S.news_added?`<div class="tm">flagged ${S.news_added.replace("T"," ")}</div>`:""}</div>`;
+  }
+  if(P){
+    h+=`<div class="card"><b class="h">What the model expects</b><div class="pkg">
+      ${tile(`GW${NEXT+1}`,(P.gw?P.gw[NEXT]:0).toFixed(1))}
+      ${tile(`next ${HZ()}`,N5(P).toFixed(1))}
+      ${tile("fix",P.fix5==null?"&ndash;":(P.fix5>0?"+":"")+P.fix5.toFixed(1))}
+      ${tile("P(play)",P.avail!=null?P.avail.toFixed(2):"&ndash;")}
+      ${tile("rest",Math.round(P.rest))}
+      ${tile("career apps",P.n_career)}</div>`;
+    if(P.run&&P.run.length)h+=`<div class="note">Run: ${runHTML(P)} &mdash; upper
+      case is home, <b>-</b> a blank. <b>fix</b> is what that run is worth
+      against an average one, in points.</div>`;
+    if(P.gw&&P.gw.length>NEXT)h+=`<div class="note">Projected points, GW${NEXT+1}
+      to the end of the season ${spark(P.gw.slice(NEXT))}</div>`;
+    h+=`</div>`;
+  }
+  if(S&&S.s){
+    const g=k=>S.s[k]||0,f=(k,d)=>(S.s[k]||0).toFixed(d==null?1:d);
+    const ts=[tile("points",g("total_points")),tile("per game",f("points_per_game")),
+              tile("form",f("form")),tile("minutes",g("minutes")),
+              tile("starts",g("starts"))];
+    if(pos==="GKP")ts.push(tile("saves",g("saves")),tile("clean sheets",g("clean_sheets")),
+        tile("conceded",g("goals_conceded")),tile("xGC",f("expected_goals_conceded",2)),
+        tile("pens saved",g("penalties_saved")));
+    else{
+      ts.push(tile("goals",g("goals_scored")),tile("assists",g("assists")),
+              tile("xG",f("expected_goals",2)),tile("xA",f("expected_assists",2)));
+      if(pos==="DEF")ts.push(tile("clean sheets",g("clean_sheets")),
+                             tile("conceded",g("goals_conceded")));
+    }
+    ts.push(tile("bonus",g("bonus")),tile("bps",g("bps")));
+    // defensive contribution does not score for a keeper
+    if(pos!=="GKP")ts.push(tile("def. cont.",g("defensive_contribution")));
+    ts.push(tile("ict",f("ict_index")),
+            tile("cards",`${g("yellow_cards")}/${g("red_cards")}`));
+    h+=`<div class="card"><b class="h">${STATS.season} so far</b>
+      <div class="pkg">${ts.join("")}</div>`;
+    const sp=[];
+    if(S.sp){
+      if(S.sp.pen!=null)sp.push(`penalties ${ORDN(S.sp.pen)}`);
+      if(S.sp.fk!=null)sp.push(`free kicks ${ORDN(S.sp.fk)}`);
+      if(S.sp.ck!=null)sp.push(`corners ${ORDN(S.sp.ck)}`);
+    }
+    if(sp.length)h+=`<div class="note">Set pieces: ${sp.join(" · ")}.</div>`;
+    h+=`</div>`;
+  }
+  return h+logHTML(pos,S)+newsHTML(name,P,S);
+}
+function logHTML(pos,S){
+  if(!S)return "";
+  let h=`<div class="card"><b class="h">Match log</b>`;
+  if(!S.log||!S.log.length)
+    return h+`<div class="pkempty">No ${STATS.season} appearances on file yet.
+      The log is rebuilt by the morning refresh.</div></div>`;
+  const C={};STATS.log_cols.forEach((c,i)=>C[c]=i);
+  const T=t=>{const x=STATS.teams[t];return x?x[0]:t;};
+  h+=`<table class="pklog"><tr><th>gw</th><th>opp</th><th class="num">min</th>
+    <th class="num">pts</th><th class="num">g</th><th class="num">a</th>
+    <th class="num">xG</th><th class="num">xA</th>
+    <th class="num">${pos==="GKP"?"sv":"cs"}</th><th class="num">bon</th>
+    <th class="num">bps</th></tr>`;
+  for(const r of [...S.log].reverse()){
+    h+=`<tr><td class="tm">${r[C.gw]}</td>
+      <td>${T(r[C.opp])} <span class="tm">${r[C.home]?"H":"A"}</span></td>
+      <td class="num">${r[C.min]}</td><td class="num"><b>${r[C.pts]}</b></td>
+      <td class="num">${r[C.g]||""}</td><td class="num">${r[C.a]||""}</td>
+      <td class="num tm">${r[C.xg].toFixed(2)}</td>
+      <td class="num tm">${r[C.xa].toFixed(2)}</td>
+      <td class="num">${pos==="GKP"?r[C.sv]:(r[C.cs]?"&#10003;":"")}</td>
+      <td class="num">${r[C.b]||""}</td><td class="num tm">${r[C.bps]}</td></tr>`;
+  }
+  return h+`</table><div class="note">Last ${S.log.length} match${
+    S.log.length>1?"es":""} of ${STATS.season}.</div></div>`;
+}
+// The feed names players the way the site does - "Watkins (AVL): ..." - so
+// a card finds its own items by scanning the text for his name on word
+// boundaries. Where the feed tags a club straight after the name it has to
+// be his club, which is what separates two players sharing a web name.
+function pkNorm(s){return (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
+function pkEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+// Managers are named in the feed too, and a manager and a player can be
+// the same word: "Justin 43" in a scoreline is not news about a full back
+// of that name. Where they collide the club tag has to be there and has
+// to be his, which is how the feed writes a real item about him.
+function pkMgrNames(){
+  const out=[];
+  for(const k in MGRS)for(const v of MGRS[k])out.push(pkNorm(v));
+  if(WK&&WK.managers)for(const m of WK.managers)out.push(pkNorm(m.name),pkNorm(m.team));
+  return out;
+}
+function newsFor(P,S){
+  if(!NEWSDATA||!NEWSDATA.events)return [];
+  const mgr=pkMgrNames(),names=[];
+  for(const n of [P&&P.name,S&&S.name,S&&S.full]){
+    const v=pkNorm(n);
+    // two letters is not enough to pick anyone out of free text
+    if(v.length>2&&names.indexOf(v)<0)names.push(v);
+  }
+  if(!names.length)return [];
+  const tid=(P&&P.team)!=null?P.team:(S&&S.team);
+  const tm=STATS&&STATS.teams&&STATS.teams[tid];
+  const cl=tm?pkNorm(tm[0]):null;
+  const res=names.map(n=>({
+    re:new RegExp("(^|[^a-z0-9])"+pkEsc(n)+"(?![a-z0-9])"),
+    needsClub:cl&&mgr.indexOf(n)>=0}));
+  return NEWSDATA.events.filter(e=>{
+    const txt=pkNorm(e.text);
+    for(const r of res){
+      const m=r.re.exec(txt);
+      if(!m)continue;
+      const tag=txt.slice(m.index+m[0].length).match(/^\s*\(([a-z]{3})\)/);
+      if(tag&&cl&&tag[1]!==cl)continue;
+      if(r.needsClub&&!tag)continue;
+      return true;
+    }
+    return false;
+  });
+}
+function newsHTML(name,P,S){
+  let h=`<div class="card"><b class="h">Recent news</b>`;
+  if(!NEWSDATA)return h+`<div class="pkempty">Loading the feed&hellip;</div></div>`;
+  const evs=newsFor(P,S);
+  if(!evs.length)return h+`<div class="pkempty">Nothing in the feed mentions
+    ${name}.</div></div>`;
+  for(const e of evs.slice(0,12)){
+    const tag=`<span class="badge b-${e.type}">${e.type.toUpperCase()}</span>`;
+    h+=`<div class="ev">${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${tag}</a>`:tag}
+      <span style="flex:1">${e.text}</span>
+      <span class="when">${(e.ts||"").slice(5,10)}</span></div>`;
+  }
+  return h+`</div>`;
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
@@ -557,7 +794,7 @@ function pState(p,ctx){
 function liveManagerHTML(m,ctx){
   const cell=p=>{
     const mark=p.subbed_in?`<span class="subin">IN</span> `:p.subbed_out?`<span class="subout">OUT</span> `:"";
-    return `<tr><td>${mark}<span class="nm">${p.name}</span> <span class="tm">${p.team}</span></td>
+    return `<tr><td>${mark}${nm(p)} <span class="tm">${p.team}</span></td>
       <td><span class="pos ${p.pos}">${p.pos}</span></td>
       <td class="num">${pState(p,ctx)}</td>
       <td class="num ${p.playing?"live":""}">${p.pts}${p.pb?` <span class="provb">+${p.pb}b</span>`:""}</td></tr>`;
@@ -621,7 +858,7 @@ function renderLive(){
     chips.sort((a,b)=>b.p.pts-a.p.pts||a.p.name.localeCompare(b.p.name));
     const sc=f.started?`${f.hs??0} - ${f.as??0}`:"v";
     h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.h]||f.h}</span> ${sc} <span class="tm">${S.teams[f.a]||f.a}</span></span>${fxState(f)}</div>
-      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${c.p.name} ${
+      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} ${
         f.started?c.p.pts:""}${c.p.pb?`<span class="provb">+${c.p.pb}</span>`:""} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league has a starter here</span>`}</div></div>`;
   }
@@ -669,7 +906,8 @@ async function pollLive(){
 document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(LIVETIMER);else pollLive();});
 pollLive();
 fetch(RAW_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{j._src="live from GitHub";DATA=j;render();})
-  .catch(()=>{FALLBACK._src="embedded snapshot (push the repo for daily updates)";DATA=FALLBACK;render();});
+  .then(j=>{j._src="live from GitHub";DATA=j;render();drawCard();})
+  .catch(()=>{FALLBACK._src="embedded snapshot (push the repo for daily updates)";
+    DATA=FALLBACK;render();drawCard();});
 </script>
 </body></html>

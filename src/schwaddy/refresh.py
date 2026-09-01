@@ -12,7 +12,8 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import api, compare, depth, liveform, livegws, overrides, weekly
+from . import (api, compare, depth, liveform, livegws, overrides,
+               playerstats, weekly)
 from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -75,6 +76,22 @@ def _weekly(data_dir, league_id, bootstrap, owned, id_of_code):
     return st
 
 
+def _player_stats(data_dir, bootstrap):
+    """Season stats and match logs behind the dashboard's player card.
+
+    Never fatal: the card falls back to the projections alone, which come
+    from predictions.json and are already on the page.
+    """
+    try:
+        st = playerstats.write(data_dir, bootstrap)
+    except Exception as ex:
+        print(f"player stats skipped: {ex}")
+        return
+    logged = sum(1 for p in st["players"].values() if p["log"])
+    print(f"player stats: {len(st['players'])} players, "
+          f"{logged} with a {st['season']} match log")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", action="store_true")
@@ -102,6 +119,7 @@ def main():
         n_new = news.update(args.data_dir, args.league_id, d, owned,
                             id_of_code, weekly=wk)
         print(f"news feed updated: {n_new} new events")
+        _player_stats(args.data_dir, d)
         return
 
     pull(args.data_dir)
@@ -332,6 +350,7 @@ def main():
                   f"rank correlation {cmp_['spread']}")
     except Exception as ex:
         print(f"rival predictions skipped: {ex}")
+    _player_stats(args.data_dir, d)
     try:
         from . import news
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
