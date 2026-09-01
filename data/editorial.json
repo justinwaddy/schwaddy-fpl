@@ -1,0 +1,28 @@
+{
+ "items": [
+  {
+   "id": "2026-08-31-barcola-liverpool",
+   "ts": "2026-09-01T09:51",
+   "mine": false,
+   "scope": "free",
+   "text": "Liverpool sign Bradley Barcola from PSG for GBP123m, the window's biggest deal. He is NOT in the draft pool yet - FPL has not registered him (Watkins' Saudi move is five days old and still unposted). When he lands the model will underrate him for four gameweeks: no PL history means a 0.40 play prior and a 0.68 new-club discount, so expect a projection near the bottom of your board. Ignore it.",
+   "url": "https://www.clickondetroit.com/sports/2026/08/31/barcola-joins-liverpool-from-psg-in-166m-deal-for-biggest-signing-of-the-summer-transfer-window/"
+  },
+  {
+   "id": "2026-08-31-eze-benched",
+   "ts": "2026-09-01T09:51",
+   "mine": true,
+   "scope": "mine",
+   "text": "Eze benched again at Villa Park - Arsenal named Raya, White, Mosquera, Gabriel, Calafiori, Lewis-Skelly, Rice, Saka, Odegaard, Tzolis, Havertz. Third straight non-start, and your weakest midfielder at 7.97 over GW3-7. He is the second claim behind Botman.",
+   "url": "https://lastwordonsports.com/football/2026/08/31/aston-villa-vs-arsenal-31/"
+  },
+  {
+   "id": "2026-08-31-deadline-open",
+   "ts": "2026-09-01T09:51",
+   "mine": false,
+   "scope": "league",
+   "text": "Window shuts 11pm Tuesday, so squads can still move before GW3. Already done: Spurs took Tonali and Savio, Chelsea took Morgan Rogers, Arsenal took Bruno Guimaraes and Konsa, United took Baleba and Tielemans. Newcastle have sold two midfielders - watch whether that touches Botman's minutes before you claim him.",
+   "url": "https://www.aljazeera.com/sports/2026/8/31/transfer-deadline-day-2026-football-summer-signing-window-barcola-gakpo-alvarez"
+  }
+ ]
+}

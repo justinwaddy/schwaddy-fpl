@@ -55,6 +55,9 @@ padding:5px 12px;font:600 12px "IBM Plex Sans";cursor:pointer;margin:2px 6px 8px
 .b-lowlight{background:var(--red)}.b-freeagent{background:var(--gkp)}.b-bench{background:var(--fwd)}
 .b-race{background:var(--amber)}
 .b-flop{background:var(--red)}.b-wrap{background:var(--blue)}.b-pint{background:var(--amber)}
+.b-headline{background:var(--ink)}
+.ev a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--line)}
+.ev a:hover{border-bottom-color:var(--blue)}
 .wk tr.clk{cursor:pointer}.wk tr.clk:hover td{background:var(--panel2)}
 .wk td,.wk th{padding:7px 5px}
 .chev{color:var(--dim);font:11px "IBM Plex Mono"}
@@ -269,7 +272,9 @@ function renderNews(){
     for(const e of evs.slice(0,80)){
       const d=(e.ts||"").slice(0,10);
       if(d!==day){day=d;h+=`<div class="daysep">${d}</div>`;}
-      h+=`<div class="ev ${e.mine?"mine-row":""}"><span class="badge b-${e.type}">${e.type.toUpperCase()}</span>
+      const tag=`<span class="badge b-${e.type}">${e.type.toUpperCase()}</span>`;
+      h+=`<div class="ev ${e.mine?"mine-row":""}">${
+        e.url?`<a href="${e.url}" target="_blank" rel="noopener">${tag}</a>`:tag}
       <span style="flex:1">${e.text}</span><span class="when">${(e.ts||"").slice(11,16)}</span></div>`;
     }
     h+=`</div>`;

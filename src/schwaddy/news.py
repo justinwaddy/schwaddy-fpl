@@ -95,6 +95,43 @@ def _ord(n):
     return ORD.get(n, f"{n}th")
 
 
+ED_MAX = 40                # editorial items kept in the merge window
+
+
+def _editorial(data_dir, state):
+    """Unseen items from data/editorial.json, as feed events.
+
+    Written by a scheduled session, not by this pipeline, so everything
+    here is defensive: a malformed file, a missing field or a duplicate id
+    must never take the whole refresh down with it.
+    """
+    path = f"{data_dir}/editorial.json"
+    if not os.path.exists(path):
+        return []
+    try:
+        items = (json.load(open(path)) or {}).get("items") or []
+    except Exception:
+        return []
+    if not isinstance(items, list):
+        return []
+    seen = set(state.get("ed_seen", []))
+    out = []
+    for it in items[:ED_MAX]:
+        if not isinstance(it, dict):
+            continue
+        eid = str(it.get("id") or "")
+        text = (it.get("text") or "").strip()
+        if not eid or not text or eid in seen:
+            continue
+        seen.add(eid)
+        out.append(dict(ts=it.get("ts") or _now(), gw=it.get("gw"),
+                        type="headline", mine=bool(it.get("mine")),
+                        text=text[:400], url=(it.get("url") or "")[:300],
+                        scope=it.get("scope") or "league"))
+    state["ed_seen"] = sorted(seen)[-400:]
+    return out
+
+
 def _load(path):
     if os.path.exists(path):
         try:
@@ -567,9 +604,20 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
         state["txn_ready"] = True
     state["txn_seen"] = sorted(seen, key=str)
 
+    # Editorial headlines, written twice a day by a scheduled Claude
+    # session from the last 24 hours of real football news. They live in
+    # their own file for one reason: news.json is rewritten by every
+    # refresh run, so if both the cron and the scheduled session wrote it
+    # the two pushes would collide on rebase. Only this function writes
+    # news.json; only the scheduled session writes editorial.json.
+    for item in _editorial(data_dir, state):
+        new.append(item)
+
     # scope drives the news tab's filter: "mine" is your squad or entry,
     # "free" is chatter about players nobody owns, "league" is the rest
     for e in new:
+        if e.get("type") == "headline":
+            continue                    # carries the scope it was written with
         e["scope"] = ("mine" if e.get("mine") else
                       "free" if (e.get("type") == "freeagent"
                                  or f"({FREE_TAG})" in e.get("text", ""))
