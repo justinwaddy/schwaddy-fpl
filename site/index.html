@@ -355,7 +355,7 @@ function claudeClaimsHTML(ps,plan){
       ${c.confidence?`<span class="conf conf-${esc(c.confidence)}">${esc(c.confidence)}</span>`:""}</div>`;
     if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
     if(c.why)h+=`<div class="clwhy">${esc(c.why)}</div>`;
-    if(c.model)h+=`<div class="clmod"><b>Model:</b> ${esc(c.model)}</div>`;
+    if(c.model)h+=`<div class="clmod"><b>Model:</b> ${esc(String(c.model).replace(/^\s*model\s*:\s*/i,""))}</div>`;
     const src=Array.isArray(c.sources)?c.sources.filter(x=>x&&/^https?:/.test(x.url||"")):[];
     if(src.length)h+=`<div class="clsrc">${src.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title||x.url)} &rsaquo;</a>`).join("")}</div>`;
     h+=`</div>`;
