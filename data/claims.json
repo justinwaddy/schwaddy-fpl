@@ -1,8 +1,8 @@
 {
  "gw": 3,
  "waivers_close": "2026-09-03T17:30:00Z",
- "ts": "2026-09-02T08:13",
- "summary": "You sit bottom of the table on 79 points, so you process first this week if these players are still free when the run happens. Woltemade (loaned out to Juventus) and Eze (stuck behind Arsenal's front line) are clear-cut drops; fresh reporting keeps Munoz as a drop too, since he is still fighting Ola Aina for Forest's right-back berth. Garner stays a lower-confidence hedge - his recovery from groin surgery is trending up faster than the model credits. No fifth claim: Marmoush's real role (a nailed-on Spurs starter since his loan move) is far better than his 0.35 model rating so he stays, and the rest of the squad - including Bijol, whose two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both now injured - is performing at or above its model number.",
+ "ts": "2026-09-02T21:11 UTC",
+ "summary": "You sit bottom of the table on 79 points, so you process first this week if these players are still free when the run happens. Woltemade (loaned out to Juventus) and Eze (stuck behind Arsenal's front line) are clear-cut drops; fresh reporting keeps Munoz as a drop too, since he is still fighting Ola Aina for Forest's right-back berth. Garner stays a lower-confidence hedge - his recovery from groin surgery is trending up faster than the model credits. No fifth claim: a fresh pundit projection has Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which only strengthens the case for keeping him well above his 0.35 model rating; the rest of the squad - including Bijol, whose two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both still injured - is performing at or above its model number.",
  "claims": [
   {
    "rank": 1,
@@ -68,6 +68,12 @@
    "gw": 3,
    "claims": 4,
    "note": "No material change since the last run 18 minutes ago. Refreshed sourcing - confirmed Igor Jesus as Forest's starting striker ahead of Chris Wood, and Bournemouth's Hill, Rayan and Tavernier all in the latest predicted XI - and confirmed Bijol is not a drop risk since his two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both injured. Still no fifth claim: Marmoush's real starting role beats his model rating and the rest of the squad is performing at or above its number."
+  },
+  {
+   "ts": "2026-09-02T21:11 UTC",
+   "gw": 3,
+   "claims": 4,
+   "note": "No change to the four claims after a full club-by-club refresh - the model's numbers for every add/drop pair are unchanged and every squad member's situation (Munoz vs Aina, Woltemade in Serie A, Eze benched, Garner's careful reintroduction, Bijol's injured rivals) still checks out. The one new find was a pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, reinforcing rather than changing the decision to keep him over a fifth claim."
   }
  ]
 }

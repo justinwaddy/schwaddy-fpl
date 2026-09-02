@@ -87,6 +87,14 @@
    "scope": "mine",
    "text": "Leeds centre-back Joe Rodon was forced off with a hamstring injury in the 34th minute of Sunday's 1-1 draw with Brentford, and Ilia Gruev is separately out into mid-September with a meniscus problem - Farke's other fit centre-back options are Muharemovic, Bijol and Elvedi. Two of Bijol's rivals for the shirt are now sidelined, backing up rather than contradicting his 0.85 availability on your dashboard.",
    "url": "https://sports.yahoo.com/articles/joe-rodon-injury-hope-shared-144449831.html"
+  },
+  {
+   "id": "2026-09-02-marmoush-strongest-xi",
+   "ts": "2026-09-02T21:11 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Pundits are now projecting Marmoush inside Tottenham's strongest starting XI, with a player who was a regular last season dropped to make room. Your dashboard still has him at 0.35 availability and 5.6 next5, the same discount it gave him the day he arrived - that gap looks wider now than a week ago, not smaller.",
+   "url": "https://uk.sports.yahoo.com/news/tottenhams-strongest-starting-xi-omar-171000401.html"
   }
  ],
  "runs": [
@@ -119,6 +127,11 @@
    "ts": "2026-09-02T08:13",
    "published": 1,
    "note": "Leeds' Rodon (hamstring) and Gruev (meniscus) both sidelined, thinning the competition for Bijol's centre-back spot. Checked rivals' best assets (Bruno Fernandes, Mbeumo, Guehi, Dewsbury-Hall) for league-scope news but every lead traced back to stale Dec 2025/pre-season stories, not current - nothing else published this run"
+  },
+  {
+   "ts": "2026-09-02T21:11 UTC",
+   "published": 1,
+   "note": "Ran club-by-club searches on every squad member and free-agent target (Munoz/Aina, Garner, Bijol's rivals, Woltemade, Palace strikers, Bournemouth and Brighton free agents) but every lead just re-confirmed what was already published earlier today - the one new item was a fresh (17:10 UTC) pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which the model's 0.35 availability still does not reflect"
   }
  ]
 }
