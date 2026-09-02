@@ -137,6 +137,10 @@ background:rgba(217,87,87,.13);border:1px solid var(--red)}
 .conf{font:600 10px "IBM Plex Mono";padding:1px 6px;border-radius:9px;border:1px solid var(--line);color:var(--dim)}
 .conf-high{color:var(--green);border-color:var(--green)}.conf-low{color:var(--amber);border-color:var(--amber)}
 .loss{color:var(--red);font:600 13px "IBM Plex Mono"}
+/* sortable tables: the active column and its direction */
+th.on{color:var(--ink)}
+.mk td,.mk th{padding:6px 5px}
+.up{color:var(--green)}.dn{color:var(--red)}
 </style></head>
 <body>
 <header>
@@ -285,21 +289,63 @@ function renderWaivers(ps){
   }
   h+=`<div class="card"><b class="h">Full board</b>
   <div class="note">Best free agents vs your weakest at each position over the next ${HZ()} gameweeks, before any swaps.</div><table>
-  <tr><th>free agent</th><th></th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
+  <tr><th>free agent</th><th></th><th style="text-align:right">£</th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
   for(const pos of ["GKP","DEF","MID","FWD"]){
     const m=mine.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
     if(!m.length)continue;
     for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a)).slice(0,4)){
       const g=N5(fa)-N5(m[0]);
       h+=`<tr><td>${nm(fa)} <span class="tm">${club(fa)} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
-      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${N5(fa).toFixed(1)}</td>
+      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${gbp(fa)}</td><td class="num">${N5(fa).toFixed(1)}</td>
       <td class="num">${fixTag(fa)}</td><td>${runHTML(fa)}</td>
-      <td>${nm(m[0],"")} <span class="tm">${N5(m[0]).toFixed(1)}</span></td>
+      <td>${nm(m[0],"")} <span class="tm">${gbp(m[0])} ${N5(m[0]).toFixed(1)}</span></td>
       <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(1)}</span></td></tr>`;
     }
   }
   h+=`</table></div>`;
-  document.getElementById("waivers").innerHTML=h;
+  h+=marketHTML(free);
+  const sec=document.getElementById("waivers");sec.innerHTML=h;
+  sec.querySelectorAll("th[data-mk]").forEach(t=>t.addEventListener("click",()=>{
+    WSORT={k:t.dataset.mk,d:WSORT.k===t.dataset.mk?-WSORT.d:1};renderWaivers(DATA.players);}));
+  sec.querySelectorAll("[data-mpos]").forEach(b=>b.addEventListener("click",()=>{
+    WPOS=b.dataset.mpos;renderWaivers(DATA.players);}));
+  sec.querySelectorAll("[data-mall]").forEach(b=>b.addEventListener("click",()=>{
+    WALL=b.dataset.mall==="1";renderWaivers(DATA.players);}));
+}
+// The market: every unclaimed player with his classic-game price beside
+// the model's number, sortable on any column. Price is the one read the
+// model has not got - it separates a signing the model has not seen yet
+// (Barcola at 8.0 with next5 near zero) from a reserve it has seen plenty
+// of (a 4.5 with the same next5) - and the two disagreeing is the point.
+let WSORT={k:"price",d:1},WPOS="ALL",WALL=false;
+const MKT_ROWS=60;
+function marketHTML(free){
+  const rows=free.map(p=>{const r=px(p);return {p,name:p.name,pos:p.pos,
+    price:r?r[0]:null,chg:r?r[1]:null,sel:r?r[2]:null,pts:r?r[3]:null,
+    min:r?r[4]:null,form:r?r[5]:null,n5:N5(p),avail:p.avail,fix5:p.fix5};})
+    .filter(x=>WPOS==="ALL"||x.pos===WPOS).sort(sorter(WSORT.k,WSORT.d));
+  const shown=WALL?rows:rows.slice(0,MKT_ROWS);
+  const th=(k,l,r)=>`<th data-mk="${k}" class="${WSORT.k===k?"on":""}"${r?' style="text-align:right"':""}>${l}${WSORT.k===k?(WSORT.d>0?" ▾":" ▴"):""}</th>`;
+  let h=`<div class="card"><b class="h">Free agent market</b>
+  <div class="note">Every unclaimed player with his classic-game price: the market's read on him, beside the model's. <b>Δ</b> is the price move since the season started, <b>sel</b> how many classic managers own him, <b>pts</b> and <b>min</b> his season so far. Tap a heading to sort by it, again to flip.</div>
+  <div>${["ALL","GKP","DEF","MID","FWD"].map(x=>`<button class="chip ${WPOS===x?"on":""}" data-mpos="${x}">${x==="ALL"?"All":x}</button>`).join("")}</div>
+  ${PRICES?"":`<div class="stale">Prices not loaded - data/prices.json is written by the refresh runs and appears after the next one.</div>`}
+  <table class="mk"><tr>${th("name","player")}<th></th>${th("price","£",1)}${th("chg","Δ",1)}${th("sel","sel %",1)}${th("pts","pts",1)}${th("min","min",1)}${th("form","form",1)}${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}${th("avail","P(play)",1)}<th>run</th></tr>`;
+  for(const x of shown){
+    const p=x.p,f=x.chg==null?"":x.chg>0?"up":x.chg<0?"dn":"tm";
+    h+=`<tr><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
+    <td><span class="pos ${p.pos}">${p.pos}</span></td>
+    <td class="num">${x.price!=null?x.price.toFixed(1):"–"}</td>
+    <td class="num"><span class="${f}">${x.chg==null?"–":(x.chg>0?"+":"")+x.chg.toFixed(1)}</span></td>
+    <td class="num">${x.sel!=null?x.sel.toFixed(1):"–"}</td>
+    <td class="num">${x.pts??"–"}</td><td class="num">${x.min??"–"}</td>
+    <td class="num">${x.form!=null?x.form.toFixed(1):"–"}</td>
+    <td class="num">${x.n5.toFixed(1)}</td><td class="num">${fixTag(p)}</td>
+    <td class="num">${p.avail}</td><td>${runHTML(p)}</td></tr>`;
+  }
+  h+=`</table>`;
+  if(rows.length>MKT_ROWS)h+=`<div class="note"><button class="chip" data-mall="${WALL?0:1}">${WALL?`Show top ${MKT_ROWS}`:`Show all ${rows.length}`}</button></div>`;
+  return h+`</div>`;
 }
 // Claude's claims. A scheduled Claude session reads the day's football news,
 // weighs it against the model's board and writes data/claims.json: up to
@@ -312,6 +358,32 @@ const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/mai
 let CLAIMS=null;
 fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{CLAIMS=j;if(DATA)renderWaivers(DATA.players);}).catch(()=>{});
+// Classic-game prices, written by every refresh run as data/prices.json:
+// the market's prior on a player, which is the one read the model has not
+// got. Keyed by code; each row is [price, change since the season started,
+// selected by %, season points, minutes, form, status].
+const PRICES_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/prices.json";
+let PRICES=null;
+fetch(PRICES_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{PRICES=j;if(DATA){renderWaivers(DATA.players);renderPlayers(DATA.players);renderLeague(DATA.players);}}).catch(()=>{});
+const px=p=>(PRICES&&PRICES.players[String(p.code)])||null;
+const price=p=>{const r=px(p);return r?r[0]:null;};
+const gbp=p=>{const r=px(p);return r?`£${r[0].toFixed(1)}`:"";};
+// sum of the classic prices across a manager's squad
+function teamValue(entry){
+  if(!PRICES||!DATA)return null;
+  let s=0,n=0;
+  for(const p of DATA.players){if(p.owner==entry){const r=px(p);if(r){s+=r[0];n++;}}}
+  return n?s:null;
+}
+// One comparator for every sortable table. d=1 puts the biggest number
+// first and names in A-Z order; blanks always sink to the bottom.
+function sorter(k,d){
+  return (a,b)=>{const x=a[k],y=b[k];
+    const nx=x==null||x!==x,ny=y==null||y!==y;
+    if(nx||ny)return nx&&ny?0:nx?1:-1;
+    return typeof x==="string"?-d*x.localeCompare(y):d*(y-x);};
+}
 const esc=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function whenUK(iso){
   const d=new Date(iso);if(isNaN(d))return "";
@@ -443,12 +515,14 @@ function weeklyHTML(){
     h+=`<div class="note">Next ${WK.horizon||5} gameweeks, best XI each week:
       ${byh.map(m=>`${m.name} ${m.next5.toFixed(0)}`).join(" · ")}</div>`;
   }
+  const pv=!!PRICES;
   h+=`</div><div class="card"><table class="wk">
     <tr><th>manager</th><th class="num">pts</th><th class="num">subs</th>
     <th class="num">to play</th><th class="num">projected</th>${
-      hz?`<th class="num">next ${WK.horizon||5}</th>`:""}<th></th></tr>`;
+      hz?`<th class="num">next ${WK.horizon||5}</th>`:""}${
+      pv?`<th class="num">value</th>`:""}<th></th></tr>`;
   for(const m of ms){
-    const open=WKOPEN===m.entry;
+    const open=WKOPEN===m.entry,val=pv?teamValue(m.entry):null;
     h+=`<tr class="clk ${m.mine?"mine-row":""}" data-ent="${m.entry}">
       <td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
       <td class="num">${m.live}</td>
@@ -456,16 +530,19 @@ function weeklyHTML(){
       <td class="num">${m.to_play?`<span class="togo">${m.to_play}</span>`:"–"}</td>
       <td class="num">${m.proj.toFixed(0)}</td>
       ${hz?`<td class="num">${m.next5!=null?m.next5.toFixed(0):"–"}</td>`:""}
+      ${pv?`<td class="num">${val!=null?"£"+val.toFixed(1):"–"}</td>`:""}
       <td class="chev">${open?"▾":"▸"}</td></tr>`;
-    if(open)h+=`<tr><td colspan="${hz?7:6}">${managerHTML(m)}</td></tr>`;
+    if(open)h+=`<tr><td colspan="${6+(hz?1:0)+(pv?1:0)}">${managerHTML(m)}</td></tr>`;
   }
   h+=`</table></div><div class="note">Points include provisional substitutions:
     a starter whose match has finished without playing is replaced by the first
     eligible player on the bench, as the game will do at the deadline. Projected
     adds the model's expected points for whoever is still to play.${
-    hz?` The last column is a different question: the best legal XI in each of
+    hz?` Next ${WK.horizon||5} is a different question: the best legal XI in each of
     the next ${WK.horizon||5} gameweeks, fixtures included, which is who is set
-    up for the month rather than who is winning the week.`:""}</div>`;
+    up for the month rather than who is winning the week.`:""}${
+    pv?` Value is the squad priced in the classic game, GBP m across all fifteen
+    - the market's read on the squad, which is independent of the model's.`:""}</div>`;
   return h;
 }
 function managerHTML(m){
@@ -518,12 +595,18 @@ function overallHTML(ps){
   const st=(WK&&WK.managers)?[...WK.managers].filter(m=>m.rank)
         .sort((a,b)=>a.rank-b.rank):[];
   if(st.length){
+    const pv=!!PRICES;
     h+=`<div class="card"><b class="h">Standings</b><table>
-      <tr><th></th><th>manager</th><th class="num">total</th><th class="num">this GW</th></tr>`;
-    for(const m of st)h+=`<tr class="${m.mine?"mine-row":""}"><td class="tm">${m.rank}</td>
+      <tr><th></th><th>manager</th><th class="num">total</th><th class="num">this GW</th>${
+        pv?`<th class="num">value</th>`:""}</tr>`;
+    for(const m of st){
+      const val=pv?teamValue(m.entry):null;
+      h+=`<tr class="${m.mine?"mine-row":""}"><td class="tm">${m.rank}</td>
       <td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
-      <td class="num">${m.total??"–"}</td><td class="num">${m.live}</td></tr>`;
-    h+=`</table></div>`;
+      <td class="num">${m.total??"–"}</td><td class="num">${m.live}</td>${
+        pv?`<td class="num">${val!=null?"£"+val.toFixed(1):"–"}</td>`:""}</tr>`;
+    }
+    h+=`</table></div>${pv?`<div class="note">Value is the squad priced in the classic game, GBP m across all fifteen.</div>`:""}`;
   }
   h+=`<div class="card"><b class="h">Squad strength, rest of season</b><table>`;
   for(const r of rows){
@@ -536,24 +619,26 @@ function overallHTML(ps){
     of the season, plus 0.15 × the bench.</div>`;
   return h;
 }
-let SORT={k:"rest",d:-1};
+let SORT={k:"rest",d:1};
 function renderPlayers(ps){
   const q=(document.getElementById("pq")?.value||"").toLowerCase();
   let list=ps.filter(p=>!q||p.name.toLowerCase().includes(q)||(p.team||"").toLowerCase().includes(q));
-  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);});
-  list=[...list].sort((a,b)=>SORT.d*((b[SORT.k]??0)-(a[SORT.k]??0)));
+  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);p.price=price(p);});
+  list=[...list].sort(sorter(SORT.k,SORT.d));
+  const th=(k,l,r)=>`<th data-k="${k}" class="${SORT.k===k?"on":""}"${r?' style="text-align:right"':""}>${l}${SORT.k===k?(SORT.d>0?" ▾":" ▴"):""}</th>`;
   let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
   <div class="note">Tap any name, here or anywhere on the site, for that
-  player's stats, fixtures and news.</div>
+  player's stats, fixtures and news. Tap a heading to sort by it.</div>
   <div class="card"><table><tr>
-  <th data-k="name">player</th><th></th><th data-k="gwn" style="text-align:right">GW${NEXT+1}</th>
-  <th data-k="n5" style="text-align:right">next ${HZ()}</th><th data-k="fix5" style="text-align:right">fix</th><th>run</th>
-  <th data-k="rest" style="text-align:right">rest</th><th data-k="avail" style="text-align:right">P(play)</th><th>owner</th></tr>`;
+  ${th("name","player")}<th></th>${th("price","£",1)}${th("gwn",`GW${NEXT+1}`,1)}
+  ${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}<th>run</th>
+  ${th("rest","rest",1)}${th("avail","P(play)",1)}<th>owner</th></tr>`;
   for(const p of list.slice(0,150)){
     p.gwn=p.gw?p.gw[NEXT]:0;
     const own=p.mine?"YOU":(MGRS[p.owner]?MGRS[p.owner][1]:(p.owner?"?":"free"));
     h+=`<tr class="${p.mine?"mine-row":""}"><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
     <td><span class="pos ${p.pos}">${p.pos}</span></td>
+    <td class="num">${gbp(p)}</td>
     <td class="num">${(p.gwn||0).toFixed(1)}</td>
     <td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td>
     <td class="num">${Math.round(p.rest)}</td>
@@ -563,7 +648,7 @@ function renderPlayers(ps){
   const sec=document.getElementById("players");sec.innerHTML=h;
   sec.querySelector("#pq").addEventListener("input",()=>renderPlayers(DATA.players));
   sec.querySelectorAll("th[data-k]").forEach(t=>t.addEventListener("click",()=>{
-    SORT={k:t.dataset.k,d:SORT.k===t.dataset.k?-SORT.d:-1};renderPlayers(DATA.players);}));
+    SORT={k:t.dataset.k,d:SORT.k===t.dataset.k?-SORT.d:1};renderPlayers(DATA.players);}));
 }
 // ---- player card ----------------------------------------------------
 // Season stats and this season's match log, written by the refresh run

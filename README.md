@@ -22,6 +22,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
 - src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
+- src/schwaddy/prices.py      classic-game prices, the market's read beside the model's; data/prices.json, the sortable market table on the Waivers tab
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - site/                       dashboard HTML; draft_room.html is the live draft tool

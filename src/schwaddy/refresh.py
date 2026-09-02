@@ -13,7 +13,7 @@ import numpy as np
 import requests
 
 from . import (api, compare, depth, liveform, livegws, overrides,
-               playerstats, weekly)
+               playerstats, prices, weekly)
 from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -92,6 +92,19 @@ def _player_stats(data_dir, bootstrap):
           f"{logged} with a {st['season']} match log")
 
 
+def _prices(data_dir):
+    """Classic-game prices behind the Waivers tab's market table.
+
+    Never fatal: the site renders the price columns blank without it.
+    """
+    try:
+        out = prices.write(data_dir)
+    except Exception as ex:
+        print(f"prices skipped: {ex}")
+        return
+    print(f"prices: {len(out['players'])} players, GW{out['gw']}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", action="store_true")
@@ -120,6 +133,7 @@ def main():
                             id_of_code, weekly=wk)
         print(f"news feed updated: {n_new} new events")
         _player_stats(args.data_dir, d)
+        _prices(args.data_dir)
         return
 
     pull(args.data_dir)
@@ -351,6 +365,7 @@ def main():
     except Exception as ex:
         print(f"rival predictions skipped: {ex}")
     _player_stats(args.data_dir, d)
+    _prices(args.data_dir)
     try:
         from . import news
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
