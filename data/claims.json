@@ -1,15 +1,15 @@
 {
  "gw": 3,
  "waivers_close": "2026-09-03T17:30:00Z",
- "ts": "2026-09-02T07:50",
- "summary": "You sit bottom of the table so you process first this week, which makes all five claims live if the players are still free when the run happens. The clear needs are Woltemade (loaned out of the league entirely) and Eze (nailed to Arteta's bench); research also flips yesterday's read on Munoz, who turns out to be fighting Ola Aina for his spot rather than a guaranteed starter, so he is a drop too. Garner is a lower-confidence hedge - his recovery is trending up faster than the model credits, so only use that claim if you want to bank the safer floor.",
+ "ts": "2026-09-02T08:13",
+ "summary": "You sit bottom of the table on 79 points, so you process first this week if these players are still free when the run happens. Woltemade (loaned out to Juventus) and Eze (stuck behind Arsenal's front line) are clear-cut drops; fresh reporting keeps Munoz as a drop too, since he is still fighting Ola Aina for Forest's right-back berth. Garner stays a lower-confidence hedge - his recovery from groin surgery is trending up faster than the model credits. No fifth claim: Marmoush's real role (a nailed-on Spurs starter since his loan move) is far better than his 0.35 model rating so he stays, and the rest of the squad - including Bijol, whose two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both now injured - is performing at or above its model number.",
  "claims": [
   {
    "rank": 1,
    "pos": "DEF",
    "add": {"name": "Hill", "code": "463981", "club": "BOU"},
    "drop": {"name": "Muñoz", "code": "247348", "club": "NFO"},
-   "why": "New reporting says Munoz is competing with Ola Aina for Forest's right-back slot after his move from Palace, and he has just 1 Premier League start there so far - so yesterday's 'treat him as a starter' read was wrong. That settling-in risk lines up with his low 0.36 availability rather than contradicting it. Hill has been a fixture in Bournemouth's back line all season.",
+   "why": "Munoz remains in a genuine battle with Ola Aina for Forest's right-back slot after his move from Palace, with just 1 Premier League start there so far. Hill, by contrast, was named in Bournemouth's most recent predicted XI alongside Silva and Truffert in the back line - an every-week starter.",
    "model": "Model: Hill next5 16.1 vs Munoz 6.9, a 9.2pt gap. Agree with the model - the Aina competition explains why the number is that low.",
    "confidence": "high",
    "sources": [
@@ -21,11 +21,12 @@
    "pos": "FWD",
    "add": {"name": "Igor Jesus", "code": "482973", "club": "NFO"},
    "drop": {"name": "Woltemade", "code": "470313", "club": "NEW"},
-   "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - he can score you zero Premier League points for as long as that loan runs. This is a mandatory drop, not a judgement call.",
+   "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting lone striker in their 3-4-2-1, picked ahead of Chris Wood, who is still managing his fitness after an injury-hit campaign.",
    "model": "Model: Igor Jesus next5 14.5 vs Woltemade 5.5, +9.0. Fully agree - Woltemade's number was already the worst in your squad and the loan makes it categorical rather than just weak.",
    "confidence": "high",
    "sources": [
-    {"title": "Juventus sign Woltemade, Sarr on loan from Premier League", "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"}
+    {"title": "Juventus sign Woltemade, Sarr on loan from Premier League", "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"},
+    {"title": "Igor Jesus - Nottingham Forest Forward", "url": "https://www.espn.co.uk/football/player/_/id/287869/igor-jesus"}
    ]
   },
   {
@@ -33,7 +34,7 @@
    "pos": "MID",
    "add": {"name": "Rayan", "code": "499604", "club": "BOU"},
    "drop": {"name": "Eze", "code": "232413", "club": "ARS"},
-   "why": "Eze is stuck behind Arsenal's front line under Arteta - season stats show 0 starts and only cameo minutes so far, consistent with the benching at Villa Park already flagged. Rayan, the 19-year-old Brazilian Bournemouth signed in January, has become an established part of Iraola's side and is being talked up as a breakout name.",
+   "why": "Eze is still stuck behind Arsenal's front line under Arteta, an unused sub again at Villa Park, with no sign of a minutes trend pointing up. Rayan started in Bournemouth's most recent predicted XI in the front three alongside Kluivert and Tavernier and is being talked up as a breakout name.",
    "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
    "confidence": "high",
    "sources": [
@@ -46,7 +47,7 @@
    "pos": "MID",
    "add": {"name": "Groß", "code": "60307", "club": "BHA"},
    "drop": {"name": "Garner", "code": "232928", "club": "EVE"},
-   "why": "This is a hedge, not an urgent need. Garner's recovery from hernia surgery is running ahead of schedule - a shock start in the opening-day win and another start in midweek against Preston, helped along by Hayden Hackney's ankle knock - but Moyes still is not trusting him for a full 90. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
+   "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule - he started in midweek against Preston after Hayden Hackney's ankle knock - but Moyes still is not trusting him for a full 90. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
    "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
    "confidence": "low",
    "sources": [
@@ -61,6 +62,12 @@
    "gw": 3,
    "claims": 4,
    "note": "first run - four claims submitted (Munoz drop upgraded from yesterday's hold after fresh reporting on his Aina competition); a fifth was not included since the rest of the squad is either performing above its model rating (Marmoush, kept) or has no clear replacement worth the waiver priority this week"
+  },
+  {
+   "ts": "2026-09-02T08:13",
+   "gw": 3,
+   "claims": 4,
+   "note": "No material change since the last run 18 minutes ago. Refreshed sourcing - confirmed Igor Jesus as Forest's starting striker ahead of Chris Wood, and Bournemouth's Hill, Rayan and Tavernier all in the latest predicted XI - and confirmed Bijol is not a drop risk since his two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both injured. Still no fifth claim: Marmoush's real starting role beats his model rating and the rest of the squad is performing at or above its number."
   }
  ]
 }

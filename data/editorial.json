@@ -79,6 +79,14 @@
    "scope": "free",
    "text": "Crystal Palace's first-choice striker Mateta is out injured after a hamstring problem in training - reports range from four weeks to into October - which pushes free agent Jorgen Strand Larsen into the central striker role with Eddie Nketiah in support behind him. Both are more nailed on than the model's mid-table next5 figures suggest if you need a FWD option.",
    "url": "https://www.sportsmole.co.uk/football/crystal-palace/injury-news/news/latest-mateta-strand-larsen-update-from-glasner-as-palace-receive-triple-boost_591553.html"
+  },
+  {
+   "id": "2026-09-02-bijol-leeds-rivals-injured",
+   "ts": "2026-09-02T08:13",
+   "mine": true,
+   "scope": "mine",
+   "text": "Leeds centre-back Joe Rodon was forced off with a hamstring injury in the 34th minute of Sunday's 1-1 draw with Brentford, and Ilia Gruev is separately out into mid-September with a meniscus problem - Farke's other fit centre-back options are Muharemovic, Bijol and Elvedi. Two of Bijol's rivals for the shirt are now sidelined, backing up rather than contradicting his 0.85 availability on your dashboard.",
+   "url": "https://sports.yahoo.com/articles/joe-rodon-injury-hope-shared-144449831.html"
   }
  ],
  "runs": [
@@ -106,6 +114,11 @@
    "ts": "2026-09-02T07:50",
    "published": 3,
    "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
+  },
+  {
+   "ts": "2026-09-02T08:13",
+   "published": 1,
+   "note": "Leeds' Rodon (hamstring) and Gruev (meniscus) both sidelined, thinning the competition for Bijol's centre-back spot. Checked rivals' best assets (Bruno Fernandes, Mbeumo, Guehi, Dewsbury-Hall) for league-scope news but every lead traced back to stale Dec 2025/pre-season stories, not current - nothing else published this run"
   }
  ]
 }
