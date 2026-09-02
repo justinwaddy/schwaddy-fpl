@@ -17,6 +17,8 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/depth.py       club depth: minutes freed by flagged team-mates
 - src/schwaddy/overrides.py   manual status for transfers the API has not posted
 - src/schwaddy/news.py        league news feed written to data/news.json
+- data/editorial.json         headlines written twice a day by a scheduled Claude session
+- data/claims.json            Claude's five ranked waiver claims, same session, rendered on the Waivers tab
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
 - src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
@@ -271,6 +273,39 @@ moved in it, a projected finish from the morning run's forecasts, and whose
 players are still to come. Both append to data/news.json, which the News tab
 reads directly. Everything is diffed against the previous run's state, so an
 event fires once and re-running is a no-op.
+
+## Claude's five claims
+The Waivers tab used to hold one opinion, the model's: rank free agents on
+next5, swap in whoever clears the weakest at his position by two points.
+That board cannot see a surgery, a manager's quote on minutes, a signing
+walking straight into the XI or a loan out of the league - exactly the
+things that decide whether a claim is good. The editorial headlines put
+that knowledge in the feed; this puts it on the decision.
+
+data/claims.json is written by the same scheduled Claude session as the
+headlines, twice a day, from one round of research. It carries up to five
+add/drop pairs in submission order - waivers process by priority and a
+successful claim sends you to the back of the queue, so the pair you most
+want goes first - each with the reasoning, one sentence on what the model
+says and whether it is being overruled, a confidence, and the articles
+behind it. The card renders that above the model's board as "Claude: make
+5 claims this week", with the waiver deadline in UK time and, beside every
+swap, the model's own gain looked up live from predictions.json by player
+code, so the number stays current between research runs. A swap that is
+also on the model's board is tagged with its rank there; a player who has
+since been claimed, or dropped, is flagged.
+
+The file is the third writer into data/ and the same rule applies as to
+editorial.json: only the scheduled session writes it, the refresh cron
+never touches it, and the site reads it straight from raw so it is live
+the moment it is pushed. The session validates before it commits - every
+add is a current free agent and every drop is one of ours, add and drop
+share a position because the squad is full, a player appears in one claim
+only, names match predictions.json exactly - so an invented player cannot
+reach the page. When the gameweek moves on the old set is kept under
+"previous", six deep, which is the record for measuring the claims later.
+If the file is missing the card says so and the model's board stands
+alone.
 
 ## The player card
 Every player name on the dashboard opens a card: what the model expects of

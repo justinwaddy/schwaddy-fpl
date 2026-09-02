@@ -121,6 +121,22 @@ background:rgba(217,87,87,.13);border:1px solid var(--red)}
 .pkalert.warn{background:rgba(232,161,60,.13);border-color:var(--amber)}
 .pklog td,.pklog th{font-size:12px;padding:5px 4px}
 .pkempty{color:var(--dim);font-size:12px;padding:6px 2px}
+/* Claude's claims: the research card above the model's board */
+.clcard{border-color:var(--amber)}
+.clsub{color:var(--dim);font:500 12px "IBM Plex Mono";padding:3px 0 2px}
+.clsum{font-size:14px;padding:5px 0 6px;border-bottom:1px solid var(--line)}
+.cl{padding:9px 0;border-bottom:1px solid var(--line)}.cl:last-child{border-bottom:none}
+.clhd{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.clno{font:600 16px "Barlow Condensed";color:var(--amber);min-width:14px}
+.clarr{color:var(--dim);font:600 10px "IBM Plex Mono";text-transform:uppercase;letter-spacing:.06em}
+.clwhy{font-size:14px;padding:4px 0 0 22px}
+.clmod{color:var(--dim);font-size:12px;padding:3px 0 0 22px}
+.clsrc{padding:4px 0 0 22px;display:flex;flex-wrap:wrap;gap:3px 12px}
+.clsrc a{color:var(--blue);text-decoration:none;font:500 12px "IBM Plex Sans";border-bottom:1px solid var(--line)}
+.clsrc a:hover{border-bottom-color:var(--blue)}
+.conf{font:600 10px "IBM Plex Mono";padding:1px 6px;border-radius:9px;border:1px solid var(--line);color:var(--dim)}
+.conf-high{color:var(--green);border-color:var(--green)}.conf-low{color:var(--amber);border-color:var(--amber)}
+.loss{color:var(--red);font:600 13px "IBM Plex Mono"}
 </style></head>
 <body>
 <header>
@@ -250,12 +266,12 @@ function waiverPlan(mine,free){
 function renderWaivers(ps){
   const mine=ps.filter(p=>p.mine),free=ps.filter(p=>!p.owner);
   const plan=waiverPlan(mine,free);
-  let h="";
+  let h=claudeClaimsHTML(ps,plan);
   if(plan.length===0){
-    h+=`<div class="card holdcard"><b class="h">Hold: 0 claims this week</b>
+    h+=`<div class="card holdcard"><b class="h">Model: hold, 0 claims this week</b>
     <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} switching margin over the next ${HZ()} gameweeks.</div></div>`;
   }else{
-    h+=`<div class="card"><b class="h">Make ${plan.length} claim${plan.length>1?"s":""} this week</b>
+    h+=`<div class="card"><b class="h">Model: make ${plan.length} claim${plan.length>1?"s":""} this week</b>
     <div class="note">Gains are expected points over the next ${HZ()} gameweeks, fixtures included, and each swap clears the +${MARGIN} margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
     <tr><th>#</th><th>add</th><th></th><th>drop</th><th>run</th><th style="text-align:right">gain</th></tr>`;
     plan.forEach((c,i)=>{
@@ -284,6 +300,68 @@ function renderWaivers(ps){
   }
   h+=`</table></div>`;
   document.getElementById("waivers").innerHTML=h;
+}
+// Claude's claims. A scheduled Claude session reads the day's football news,
+// weighs it against the model's board and writes data/claims.json: up to
+// five ranked add/drop pairs, each with its reasoning, the model's view and
+// the articles behind it. Only that session writes the file, so it cannot
+// collide with the refresh cron, and the site reads it directly. The model
+// numbers shown beside each claim are looked up live from predictions.json
+// by player code, so they stay current between research runs.
+const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
+let CLAIMS=null;
+fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{CLAIMS=j;if(DATA)renderWaivers(DATA.players);}).catch(()=>{});
+const esc=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function whenUK(iso){
+  const d=new Date(iso);if(isNaN(d))return "";
+  return d.toLocaleString("en-GB",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Europe/London"});
+}
+function claudeClaimsHTML(ps,plan){
+  const C=CLAIMS,cl=(C&&Array.isArray(C.claims))?C.claims:[];
+  const title=!C?"Claude: 5 claims this week":cl.length?`Claude: make ${cl.length} claim${cl.length>1?"s":""} this week`:"Claude: hold this week";
+  let h=`<div class="card clcard"><b class="h">${title}</b>`;
+  if(!C){
+    return h+`<div class="note">Not researched yet. A scheduled Claude session reads the day's football news at 9am and 10pm UK, weighs it against the model's board below and writes its five claims with reasoning and sources to data/claims.json. This card fills in after its next run.</div></div>`;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=C.gw|0;
+  const closeT=new Date(C.waivers_close||"");
+  const closed=!isNaN(closeT)&&Date.now()>closeT.getTime();
+  h+=`<div class="clsub">GW${gw||"?"} · waivers ${closed?"closed":"close"} ${esc(whenUK(C.waivers_close))} UK · researched ${esc((C.ts||"").slice(0,16).replace("T"," "))} UTC</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">These claims were written for GW${gw}. The next research run (9am or 10pm UK) writes GW${cur}'s.</div>`;
+  if(C.summary)h+=`<div class="clsum">${esc(C.summary)}</div>`;
+  if(!cl.length)h+=`<div class="note">Nothing worth moving this week, in Claude's reading of the news.</div>`;
+  cl.forEach((c,i)=>{
+    const A=c.add||{},D=c.drop||{};
+    const a=by[String(A.code)],d=by[String(D.code)];
+    const pa=a||{code:A.code,name:A.name},pd=d||{code:D.code,name:D.name};
+    const pos=c.pos||(a&&a.pos)||"";
+    let mdl="";
+    if(a&&d){
+      const g=N5(a)-N5(d);
+      const k=plan.findIndex(x=>x.add===a&&x.drop===d);
+      mdl=`<span class="${g>0?"gain":"loss"}" title="model: ${N5(a).toFixed(1)} for ${esc(a.name)} against ${N5(d).toFixed(1)} for ${esc(d.name)} over the next ${HZ()} gameweeks">model ${g>0?"+":""}${g.toFixed(1)}</span>`;
+      if(k>=0)mdl+=` <span class="pill" title="the model's own board makes the same swap">model's #${k+1}</span>`;
+    }
+    const flags=[];
+    if(a&&a.owner)flags.push(`${esc(a.name)} is no longer a free agent`);
+    if(d&&!d.mine)flags.push(`${esc(d.name)} is no longer in your squad`);
+    h+=`<div class="cl"><div class="clhd"><span class="clno">${c.rank||i+1}</span>
+      ${pos?`<span class="pos ${pos}">${pos}</span>`:""}
+      <span class="clarr">add</span> ${nm(pa)} <span class="tm">${esc(A.club||(a?club(a):""))}</span>
+      <span class="clarr">drop</span> ${nm(pd)} <span class="tm">${esc(D.club||(d?club(d):""))}</span>
+      ${a?runHTML(a):""} ${mdl}
+      ${c.confidence?`<span class="conf conf-${esc(c.confidence)}">${esc(c.confidence)}</span>`:""}</div>`;
+    if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
+    if(c.why)h+=`<div class="clwhy">${esc(c.why)}</div>`;
+    if(c.model)h+=`<div class="clmod"><b>Model:</b> ${esc(c.model)}</div>`;
+    const src=Array.isArray(c.sources)?c.sources.filter(x=>x&&/^https?:/.test(x.url||"")):[];
+    if(src.length)h+=`<div class="clsrc">${src.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title||x.url)} &rsaquo;</a>`).join("")}</div>`;
+    h+=`</div>`;
+  });
+  h+=`<div class="note">Claude's own reading of the news, ranked in submission order, with the model's number beside each swap. The model's mechanical board is below; where the two disagree the reasoning says why.</div></div>`;
+  return h;
 }
 const NEWS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/news.json";
 const LEAGUE_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/league.json";
