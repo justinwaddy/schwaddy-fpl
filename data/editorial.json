@@ -55,6 +55,30 @@
    "scope": "mine",
    "text": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day - Juventus paid a GBP3.5m loan fee with no obligation to buy, so he plays in Serie A, not the Premier League, until at least next summer. Your dashboard already had him as your weakest forward at 0.37 availability; that reading understated the problem, since he can score you zero Premier League points for as long as the loan runs. He is now the clearest drop in your squad.",
    "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
+  },
+  {
+   "id": "2026-09-02-munoz-aina-competition",
+   "ts": "2026-09-02T07:50",
+   "mine": true,
+   "scope": "mine",
+   "text": "Correction to yesterday's read on Munoz: he is not a guaranteed Forest starter. Reports say he is competing with Ola Aina for the right-back slot after his move from Palace, and tracker stats show him with just 1 Premier League start there so far. That lines up with the low 0.36 availability on your board rather than contradicting it - he is a real drop candidate this week, not just a discounted new arrival.",
+   "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-joins-nottingham-forest-530029"
+  },
+  {
+   "id": "2026-09-02-garner-hackney-injury",
+   "ts": "2026-09-02T07:50",
+   "mine": true,
+   "scope": "mine",
+   "text": "Garner's recovery is running ahead of schedule - he started for Everton in midweek against Preston after Hayden Hackney went off with a rolled ankle that has him touch-and-go for the weekend. Moyes still says he is not yet trusting Garner for a full 90 minutes, so it is good news for his minutes rather than a nailed-on start.",
+   "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+  },
+  {
+   "id": "2026-09-02-palace-mateta-injury",
+   "ts": "2026-09-02T07:50",
+   "mine": false,
+   "scope": "free",
+   "text": "Crystal Palace's first-choice striker Mateta is out injured after a hamstring problem in training - reports range from four weeks to into October - which pushes free agent Jorgen Strand Larsen into the central striker role with Eddie Nketiah in support behind him. Both are more nailed on than the model's mid-table next5 figures suggest if you need a FWD option.",
+   "url": "https://www.sportsmole.co.uk/football/crystal-palace/injury-news/news/latest-mateta-strand-larsen-update-from-glasner-as-palace-receive-triple-boost_591553.html"
   }
  ],
  "runs": [
@@ -77,6 +101,11 @@
    "ts": "2026-09-01T22:00",
    "published": 1,
    "note": "Woltemade (mine, weakest forward) loaned out to Juventus on deadline day - he is out of the Premier League entirely, not just out of favour, which the 0.37 availability figure did not capture"
+  },
+  {
+   "ts": "2026-09-02T07:50",
+   "published": 3,
+   "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
   }
  ]
 }

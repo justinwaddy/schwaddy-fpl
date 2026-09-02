@@ -1,0 +1,66 @@
+{
+ "gw": 3,
+ "waivers_close": "2026-09-03T17:30:00Z",
+ "ts": "2026-09-02T07:50",
+ "summary": "You sit bottom of the table so you process first this week, which makes all five claims live if the players are still free when the run happens. The clear needs are Woltemade (loaned out of the league entirely) and Eze (nailed to Arteta's bench); research also flips yesterday's read on Munoz, who turns out to be fighting Ola Aina for his spot rather than a guaranteed starter, so he is a drop too. Garner is a lower-confidence hedge - his recovery is trending up faster than the model credits, so only use that claim if you want to bank the safer floor.",
+ "claims": [
+  {
+   "rank": 1,
+   "pos": "DEF",
+   "add": {"name": "Hill", "code": "463981", "club": "BOU"},
+   "drop": {"name": "Muñoz", "code": "247348", "club": "NFO"},
+   "why": "New reporting says Munoz is competing with Ola Aina for Forest's right-back slot after his move from Palace, and he has just 1 Premier League start there so far - so yesterday's 'treat him as a starter' read was wrong. That settling-in risk lines up with his low 0.36 availability rather than contradicting it. Hill has been a fixture in Bournemouth's back line all season.",
+   "model": "Model: Hill next5 16.1 vs Munoz 6.9, a 9.2pt gap. Agree with the model - the Aina competition explains why the number is that low.",
+   "confidence": "high",
+   "sources": [
+    {"title": "Daniel Munoz News: Joins Nottingham Forest", "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-joins-nottingham-forest-530029"}
+   ]
+  },
+  {
+   "rank": 2,
+   "pos": "FWD",
+   "add": {"name": "Igor Jesus", "code": "482973", "club": "NFO"},
+   "drop": {"name": "Woltemade", "code": "470313", "club": "NEW"},
+   "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - he can score you zero Premier League points for as long as that loan runs. This is a mandatory drop, not a judgement call.",
+   "model": "Model: Igor Jesus next5 14.5 vs Woltemade 5.5, +9.0. Fully agree - Woltemade's number was already the worst in your squad and the loan makes it categorical rather than just weak.",
+   "confidence": "high",
+   "sources": [
+    {"title": "Juventus sign Woltemade, Sarr on loan from Premier League", "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"}
+   ]
+  },
+  {
+   "rank": 3,
+   "pos": "MID",
+   "add": {"name": "Rayan", "code": "499604", "club": "BOU"},
+   "drop": {"name": "Eze", "code": "232413", "club": "ARS"},
+   "why": "Eze is stuck behind Arsenal's front line under Arteta - season stats show 0 starts and only cameo minutes so far, consistent with the benching at Villa Park already flagged. Rayan, the 19-year-old Brazilian Bournemouth signed in January, has become an established part of Iraola's side and is being talked up as a breakout name.",
+   "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
+   "confidence": "high",
+   "sources": [
+    {"title": "Eberechi Eze - Arsenal Midfielder", "url": "https://www.espn.com/soccer/player/_/id/251400/eberechi-eze"},
+    {"title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?", "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"}
+   ]
+  },
+  {
+   "rank": 4,
+   "pos": "MID",
+   "add": {"name": "Groß", "code": "60307", "club": "BHA"},
+   "drop": {"name": "Garner", "code": "232928", "club": "EVE"},
+   "why": "This is a hedge, not an urgent need. Garner's recovery from hernia surgery is running ahead of schedule - a shock start in the opening-day win and another start in midweek against Preston, helped along by Hayden Hackney's ankle knock - but Moyes still is not trusting him for a full 90. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
+   "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
+   "confidence": "low",
+   "sources": [
+    {"title": "Moyes provides James Garner injury update after Everton return", "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"}
+   ]
+  }
+ ],
+ "previous": [],
+ "runs": [
+  {
+   "ts": "2026-09-02T07:50",
+   "gw": 3,
+   "claims": 4,
+   "note": "first run - four claims submitted (Munoz drop upgraded from yesterday's hold after fresh reporting on his Aina competition); a fifth was not included since the rest of the squad is either performing above its model rating (Marmoush, kept) or has no clear replacement worth the waiver priority this week"
+  }
+ ]
+}
