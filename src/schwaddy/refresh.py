@@ -58,6 +58,42 @@ def pull(data_dir):
             print(f"live gameweek reconstruction skipped: {ex}")
 
 
+def _sync_owners(data_dir, owned, id_of_code):
+    """Carry fresh ownership into predictions.json without a refit.
+
+    Waivers process about a day before the deadline, and the next full
+    refresh is the following morning. In between, every page that reads
+    predictions.json - the squad, the waiver board, the Starters tab, the
+    Live tab's preview, and the scheduled session's own brief - would show
+    the squads as they were before the claims went through. Ownership is
+    a join, not a forecast, so the matchday runs can rewrite it in place
+    and leave every projection untouched. Only written when it changed.
+    """
+    from .league import MY_ENTRY
+    pj = f"{data_dir}/predictions.json"
+    if not os.path.exists(pj):
+        return
+    try:
+        d = json.load(open(pj))
+    except Exception as ex:
+        print(f"owner sync skipped: {ex}")
+        return
+    moved = []
+    for p in d.get("players", []):
+        pid = id_of_code.get(str(p.get("code")))
+        new = owned.get(pid)
+        if p.get("owner") != new:
+            moved.append(f"{p.get('name')} {p.get('owner')}->{new}")
+        p["owner"] = new
+        p["mine"] = new == MY_ENTRY
+    if not moved:
+        return
+    d["owned"] = {str(k): v for k, v in owned.items()}
+    json.dump(d, open(pj, "w"))
+    print(f"owner sync: {len(moved)} players moved: {', '.join(moved[:12])}"
+          f"{' ...' if len(moved) > 12 else ''}")
+
+
 def _weekly(data_dir, league_id, bootstrap, owned, id_of_code):
     """Live weekly state for the dashboard, and for the news feed to quote.
 
@@ -128,6 +164,7 @@ def main():
             owned = {s["element"]: s["owner"] for s in es["element_status"]
                      if s.get("owner")}
         id_of_code = {str(e["code"]): e["id"] for e in d["elements"]}
+        _sync_owners(args.data_dir, owned, id_of_code)
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
         n_new = news.update(args.data_dir, args.league_id, d, owned,
                             id_of_code, weekly=wk)

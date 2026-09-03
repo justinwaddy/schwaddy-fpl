@@ -211,6 +211,7 @@ function render(){
   document.getElementById("meta").textContent=
     `updated ${DATA.generated?DATA.generated.slice(0,16).replace("T"," "):"?"} UTC · next: GW${NEXT+1} · λ=(${DATA.lambda_time}, ${DATA.lambda_nn??"∞"}) · ${DATA._src}`;
   renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);renderStarters();
+  if(LIVE)renderLive();
 }
 function renderSquad(ps){
   const mine=ps.filter(p=>p.mine);
@@ -1079,9 +1080,62 @@ function liveManagerHTML(m,ctx){
       m.subs?` · ${m.subs} provisional sub${m.subs>1?"s":""}`:""}.
       An amber +b is provisional bonus from the bps table; it becomes real when FPL posts it.</div></div>`;
 }
+// Before the deadline the worker still reports the finished gameweek:
+// FPL keeps the coming week's line-ups hidden until the deadline passes,
+// so there is nothing to score yet. What IS known is the fixture list
+// and who owns whom, so the tab previews the coming gameweek from the
+// cron's data - each fixture with the league's players in it, and each
+// manager's count of players with a game - and hands over to the live
+// feed the moment the deadline passes and the worker rolls forward.
+const FIX_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/fixtures_2627.json";
+let FIXTURES=null,FIXREQ=false;
+function ensureFixtures(){
+  if(FIXREQ)return;FIXREQ=true;
+  fetch(FIX_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+    .then(j=>{FIXTURES=j;renderLive();}).catch(()=>{});
+}
+function previewGW(){
+  if(!LIVE||!LIVE.finished||!DATA)return 0;
+  const g=NEXT+1;return g>LIVE.gw?g:0;
+}
+function livePreviewHTML(g){
+  const S=LIVE,ps=DATA.players;
+  const fx=(FIXTURES||[]).filter(f=>f.event===g&&f.kickoff_time).sort((a,b)=>a.kickoff_time<b.kickoff_time?-1:1);
+  const playing=new Set();fx.forEach(f=>{playing.add(f.team_h);playing.add(f.team_a);});
+  const dl=(STARTERS&&STARTERS.gw===g&&STARTERS.deadline)||null;
+  const first=fx.length?fx[0].kickoff_time:null;
+  const own={};ps.forEach(p=>{if(p.owner)(own[p.owner]=own[p.owner]||[]).push(p);});
+  const mgrs=[...S.managers].sort((a,b)=>(b.total??0)-(a.total??0));
+  let h=`<div class="card scorecard"><b class="h">Gameweek ${g} · preview</b>
+    <div class="lvstatus">GW${S.gw} is final${dl?` · <b>deadline ${koText(dl)}</b>`:""}${first?` · first kick-off ${koText(first)}`:""} · line-ups are hidden until the deadline, then this tab scores live</div>
+    <table class="lv"><tr><th></th><th>manager</th><th class="num">with a game</th><th class="num">season</th></tr>`;
+  mgrs.forEach((m,i)=>{
+    const sq=own[m.entry]||[],n=sq.filter(p=>playing.has(p.team)).length;
+    h+=`<tr class="${m.entry===372099?"mine-row":""}"><td class="tm">${i+1}</td><td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
+      <td class="num">${FIXTURES?`${n} <span class="tm">of ${sq.length}</span>`:"…"}</td><td class="num">${m.total??"–"}</td></tr>`;
+  });
+  h+=`</table><div class="note">Squads as of the last refresh, after this week's waivers. Who is expected to start is on the Starters tab; the GW${S.gw} final table is on the League tab.</div></div>`;
+  h+=`<div class="card"><b class="h">Fixtures</b><div class="fxwrap">`;
+  if(!FIXTURES)h+=`<div class="note">Loading the fixture list…</div>`;
+  for(const f of fx){
+    const chips=ps.filter(p=>p.owner&&(p.team===f.team_h||p.team===f.team_a))
+      .map(p=>({p,who:(MGRS[p.owner]||[])[1]||p.owner,mine:p.mine}))
+      .sort((a,b)=>N5(b.p)-N5(a.p)||a.p.name.localeCompare(b.p.name));
+    h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.team_h]||f.team_h}</span> v <span class="tm">${S.teams[f.team_a]||f.team_a}</span></span><span class="fxmin ko">${koText(f.kickoff_time)}</span></div>
+      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} <span class="who">· ${c.who}</span></span>`).join(""):
+        `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
+  }
+  h+=`</div></div>`;
+  return h;
+}
 function renderLive(){
   const sec=document.getElementById("live");
   let h="";
+  const pg=previewGW();
+  if(pg){
+    if(!FIXTURES)ensureFixtures();
+    sec.innerHTML=livePreviewHTML(pg);return;
+  }
   if(!LIVE){
     h+=`<div class="card"><b class="h">Live scores</b><div class="note">${
       LIVE_URL?(LIVEERR?`Cannot reach the live worker (${LIVEERR}). Retrying.`:`Connecting to the live feed…`):

@@ -218,7 +218,26 @@ the live feed server-side, trims it to the six squads and hands the page one
 until the official bonus lands) and provisional subs are worked out in the
 page under the same rules as weekly.py, so the Live tab and the League tab
 agree once a gameweek settles: checked against GW2, every manager's score
-and bench match league.json exactly. The model is never re-scored live;
+and bench match league.json exactly.
+
+Before the deadline the worker still reports the finished gameweek, because
+FPL hides the coming week's line-ups until the deadline passes and there is
+nothing to score. The fixture list and the ownership are known, though, so
+from the moment the current gameweek is final the tab previews the next
+one from the cron's data: the deadline and first kick-off, each manager's
+count of players with a game, and every fixture with the league's players
+in it. It hands over to the live feed on its own when the worker rolls
+forward at the deadline.
+
+Ownership is the one thing in predictions.json that changes between
+refits: waivers process about a day before the deadline, and the next
+full refresh is the following morning. The matchday runs now carry fresh
+ownership into predictions.json in place (refresh._sync_owners), leaving
+every projection untouched, and there is an extra news run at 18:45 UK on
+Thursdays, fifteen minutes after the usual waiver time. So the squad, the
+waiver board, the Starters tab, the Live preview and the scheduled
+session's own brief all see the post-waiver squads within the hour rather
+than the next morning. The model is never re-scored live;
 only the scoreboard is. Deploying the worker is a one-off, five-minute
 job described in live/README.md; until its URL is pasted into LIVE_URL in
 site/index.html the tab shows the cron's last snapshot and says so.
