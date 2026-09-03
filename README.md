@@ -336,6 +336,16 @@ The validator refuses the file unless every player in it is ours, every
 one of ours is in it, statuses are from the fixed set, and each entry
 carries a source unless the API already marks him out.
 
+Below the verdicts sits a suggested XI that puts the two sources
+together. The model's expected points for the gameweek already carry its
+own availability estimate, so that is stripped back out to a
+per-appearance rate and replaced with the chance he starts according to
+the research: 0.95 for start, 0.75 likely, 0.5 doubt, 0.15 bench, 0 out.
+A player the research has not covered keeps the model's number. The
+eleven is then picked under the same formation rules as the My squad tab,
+and the card names exactly who it moves in and out against the model's
+own XI, so the disagreement is one line rather than two tables to compare.
+
 ## The player card
 Every player name on the dashboard opens a card: what the model expects of
 him, what he has actually done this season, and whatever the feed has said

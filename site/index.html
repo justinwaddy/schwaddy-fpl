@@ -505,7 +505,42 @@ function renderStarters(){
     h+=`<div class="note">In your squad since the research ran, not yet checked: ${missing.map(p=>`${nm(p)} <span class="tm">${club(p)}</span>`).join(", ")}.</div>`;
   }
   h+=`<div class="note">Claude's read of predicted line-ups, press conferences and injury lists for every player you hold. <b>start</b> is named in two or more predicted XIs or confirmed by the manager; <b>likely</b> one source or a rotation risk; <b>doubt</b> could go either way; <b>bench</b> fit but among the subs; <b>out</b> injured, suspended, not in the squad or no fixture. The model pill is its own probability that he plays, amber where it disagrees.</div></div>`;
+  h+=benchingHTML(S,ps);
   sec.innerHTML=h;
+}
+// Suggested XI: the research and the model together. The model's expected
+// points for the gameweek already carry its own availability estimate, so
+// that is stripped back out to a per-appearance rate and replaced with the
+// chance he starts according to the research. A player the research has
+// not covered keeps the model's own number. Formation rules are the same
+// pickXI the My squad tab uses, so the two XIs differ only where the
+// research changed a verdict.
+const ST_P={start:0.95,likely:0.75,doubt:0.5,bench:0.15,out:0};
+function benchingHTML(S,ps){
+  const mine=ps.filter(p=>p.mine);
+  if(!mine.length||!S||!Array.isArray(S.players))return "";
+  const st={};S.players.forEach(x=>{st[String(x.code)]=x;});
+  mine.forEach(p=>{
+    const ep=p.gw?p.gw[NEXT]:0,av=p.avail!=null?p.avail:1,x=st[String(p.code)];
+    const pst=x&&ST_P[x.status]!=null?ST_P[x.status]:av;
+    p.ep=ep;p.epb=ep/Math.max(av,0.2)*pst;p.st=x?x.status:null;
+  });
+  const M=pickXI(mine,"ep"),R=pickXI(mine,"epb");
+  const rset=new Set(R.xi.map(p=>p.code)),mset=new Set(M.xi.map(p=>p.code));
+  const bench=mine.filter(p=>!rset.has(p.code)).sort((a,b)=>(a.pos==="GKP"?-1:0)-(b.pos==="GKP"?-1:0)||b.epb-a.epb);
+  const ins=R.xi.filter(p=>!mset.has(p.code)),outs=M.xi.filter(p=>!rset.has(p.code));
+  const badge=p=>p.st?`<span class="stat s-${p.st}">${esc(p.st)}</span>`:`<span class="stat s-none">n/a</span>`;
+  const row=(p,pre)=>`<tr><td>${pre?`<span class="num">${pre}.</span> `:""}${nm(p)} <span class="tm">${club(p)}</span></td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${badge(p)}</td><td class="num">${p.ep.toFixed(1)}</td><td class="num"><b>${p.epb.toFixed(1)}</b></td></tr>`;
+  let h=`<div class="card holdcard"><b class="h">Suggested XI · GW${NEXT+1} · ${R.form?R.form.join("-"):""} · E[pts] ${R.total.toFixed(1)}</b>
+  <div class="note">Research and model together: the model's per-appearance rate for this gameweek times the chance he starts from the verdicts above (start 0.95, likely 0.75, doubt 0.5, bench 0.15, out 0). A player the research has not covered keeps the model's own availability.</div>`;
+  if(!ins.length&&!outs.length)h+=`<div class="clsum">Same eleven as the model's XI on the My squad tab.</div>`;
+  else h+=`<div class="clsum"><b>Changes against the model's XI:</b> out ${outs.map(p=>`${nm(p)} <span class="tm">${p.st||"?"}</span>`).join(", ")} · in ${ins.map(p=>`${nm(p)} <span class="tm">${p.st||"?"}</span>`).join(", ")}.</div>`;
+  h+=`<table><tr><th>player</th><th></th><th>verdict</th><th style="text-align:right">model</th><th style="text-align:right">adjusted</th></tr>`;
+  for(const p of [...R.xi].sort((a,b)=>posord(a.pos)-posord(b.pos)||b.epb-a.epb))h+=row(p);
+  h+=`<tr class="benchsep"><td colspan="5">Bench order</td></tr>`;
+  bench.forEach((p,i)=>{h+=row(p,i+1);});
+  h+=`</table><div class="note">Bench order is the adjusted number, keeper first as the game requires. The game applies substitutions only once the gameweek ends, so a doubt on the bench still covers a starter who does not play.</div></div>`;
+  return h;
 }
 const NEWS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/news.json";
 const LEAGUE_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/league.json";
