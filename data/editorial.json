@@ -111,6 +111,30 @@
    "scope": "free",
    "text": "Barcola is now registered in the FPL Draft pool after his GBP123m move to Liverpool, and reports say he is in contention to debut Friday away at Ipswich - but likely from the bench, having not played a competitive minute in 44 days. Your dashboard rates him 1.46 next5, near the bottom of all free agents; that reflects games missed, not a verdict on him once he starts.",
    "url": "https://uk.sports.yahoo.com/news/liverpool-decision-bradley-barcola-debut-092401728.html"
+  },
+  {
+   "id": "2026-09-03-garner-bench-not-starter",
+   "ts": "2026-09-03T20:54 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Correction on Garner: he did not start Everton's Carabao Cup win at Preston as reported Tuesday - he was a second-half substitute for the injured Hayden Hackney. Hackney is fit again, and Everton's predicted XI for Sunday's game against Manchester United has him starting ahead of Garner, who remains on the bench as Moyes carefully manages his return from groin surgery.",
+   "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+  },
+  {
+   "id": "2026-09-03-doku-return-pushed-back",
+   "ts": "2026-09-03T20:54 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Doku's return from his calf injury has been pushed back - Man City boss Enzo Maresca has ruled him out again for Saturday's game against Coventry, with a return now pointing to 13 September against Manchester United rather than the 5 September date on the dashboard. That is City's next fixture after this one, so it lines up with the GW4 waiver window, not this week.",
+   "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
+  },
+  {
+   "id": "2026-09-03-igor-jesus-confirmed-striker",
+   "ts": "2026-09-03T20:54 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Free agent Igor Jesus is confirmed as Nottingham Forest's first-choice striker ahead of Chris Wood under new manager Oliver Glasner, arriving in red-hot form with four goals in four preseason games. That explains why the model already rates him top of the free-agent forwards, well clear of your own Marmoush.",
+   "url": "https://www.fantasyfootballscout.co.uk/2026/08/20/fpl-2026-27-nottm-forest-best-players-set-piece-takers-predicted-xi-more"
   }
  ],
  "runs": [
@@ -153,6 +177,11 @@
    "ts": "2026-09-03T14:41 UTC",
    "published": 2,
    "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
+  },
+  {
+   "ts": "2026-09-03T20:54 UTC",
+   "published": 3,
+   "note": "Full deep-research pass ahead of GW3's deadline (squad now final after waivers processed): corrected Tuesday's misread on Garner (he was a sub, not a starter, at Preston - he's behind Hackney for Sunday), found Doku's calf return has slipped to 13 September (GW4) not the 5 September date shown on the dashboard, and confirmed Igor Jesus as Forest's nailed-on striker ahead of Chris Wood in red-hot preseason form. Also ran a full club-by-club sweep across all 15 squad players for starters.json - see claims.json and starters.json for what changed there."
   }
  ]
 }
