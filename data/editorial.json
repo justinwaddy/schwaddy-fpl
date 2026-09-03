@@ -95,6 +95,22 @@
    "scope": "mine",
    "text": "Pundits are now projecting Marmoush inside Tottenham's strongest starting XI, with a player who was a regular last season dropped to make room. Your dashboard still has him at 0.35 availability and 5.6 next5, the same discount it gave him the day he arrived - that gap looks wider now than a week ago, not smaller.",
    "url": "https://uk.sports.yahoo.com/news/tottenhams-strongest-starting-xi-omar-171000401.html"
+  },
+  {
+   "id": "2026-09-03-munoz-starts-forest",
+   "ts": "2026-09-03T14:41 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Reversing yesterday's read: Forest's predicted XI for Friday's home game against Tottenham has Daniel Munoz starting at right wing-back, with Ola Aina dropping to the bench, reunited with his old Crystal Palace boss Oliver Glasner. Your dashboard's 7.0 next5 for him still reflects the 'fighting Aina for the spot' story from earlier this week, not this - do not treat him as a drop candidate today.",
+   "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+  },
+  {
+   "id": "2026-09-03-barcola-liverpool-debut",
+   "ts": "2026-09-03T14:41 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Barcola is now registered in the FPL Draft pool after his GBP123m move to Liverpool, and reports say he is in contention to debut Friday away at Ipswich - but likely from the bench, having not played a competitive minute in 44 days. Your dashboard rates him 1.46 next5, near the bottom of all free agents; that reflects games missed, not a verdict on him once he starts.",
+   "url": "https://uk.sports.yahoo.com/news/liverpool-decision-bradley-barcola-debut-092401728.html"
   }
  ],
  "runs": [
@@ -132,6 +148,11 @@
    "ts": "2026-09-02T21:11 UTC",
    "published": 1,
    "note": "Ran club-by-club searches on every squad member and free-agent target (Munoz/Aina, Garner, Bijol's rivals, Woltemade, Palace strikers, Bournemouth and Brighton free agents) but every lead just re-confirmed what was already published earlier today - the one new item was a fresh (17:10 UTC) pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which the model's 0.35 availability still does not reflect"
+  },
+  {
+   "ts": "2026-09-03T14:41 UTC",
+   "published": 2,
+   "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
   }
  ]
 }
