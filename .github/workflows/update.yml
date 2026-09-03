@@ -60,10 +60,43 @@ jobs:
         run: python -m schwaddy.refresh --league-id 9450 --news-only
         working-directory: src
 
+      # Commit first, then rebase onto whatever landed on main meanwhile.
+      # The checkout is pinned to the SHA the run was queued at, so a run
+      # that queued behind another one starts behind main; the old
+      # "pull --rebase --autostash" then re-applied the stash over the
+      # other run's data, and when both had rewritten the same file it
+      # committed the conflict markers as JSON (player_stats.json and
+      # prices.json, 3 Sep). Every file this run writes is regenerated from
+      # the API at run time, so on a clash this run's copy is the fresher
+      # one: -X theirs on a rebase means exactly that. Then prove every
+      # data file still parses before it goes anywhere near main.
       - name: commit
         run: |
           git config user.name schwaddy-bot
           git config user.email bot@justinwaddy.co.uk
-          git pull --rebase --autostash origin main
-          git add data/ && git commit -m "auto refresh" || echo "no changes"
-          git push
+          git add data/
+          git commit -m "auto refresh" || { echo "no changes"; exit 0; }
+          for i in 1 2 3 4; do
+            if git pull --rebase -X theirs origin main; then
+              python3 - <<'EOF'
+          import glob, json, sys
+          bad = []
+          for f in glob.glob("data/*.json"):
+              try:
+                  t = open(f, encoding="utf-8").read()
+                  assert "<<<<<<<" not in t and ">>>>>>>" not in t, "conflict markers"
+                  json.loads(t)
+              except Exception as ex:
+                  bad.append(f"{f}: {ex}")
+          if bad:
+              print("REFUSING TO PUSH, broken data files:\n  " + "\n  ".join(bad))
+              sys.exit(1)
+          print("all data/*.json parse")
+          EOF
+              git push && exit 0
+            else
+              git rebase --abort || true
+            fi
+            echo "push race, retry $i"; sleep 10
+          done
+          echo "could not push after 4 attempts"; exit 1
