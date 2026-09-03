@@ -1,7 +1,7 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-03T20:54 UTC",
+ "ts": "2026-09-03T21:08 UTC",
  "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). The clearest calls are swapping in Igor Jesus, now confirmed as Forest's first-choice striker over Chris Wood, for Marmoush, who faces genuine competition from Solanke on a winless Spurs side, and dropping Garner - who did not actually start last midweek as earlier reported and remains behind Hackney in Everton's pecking order - for Leeds' rock-solid Ampadu. Barcola and Doku are lower-confidence calls: Barcola is a confirmed bench option for his Liverpool debut rather than the starter his fee might suggest, and Doku's injury return is pegged for right around this gameweek, so trading him for Bournemouth's breakout find Rayan is more of a hedge than a certainty. The rest of the squad - Gvardiol, Milenkovic, Bijol (boosted by Rodon's injury), Collins, Munoz (now a confirmed starter at Forest despite his low model number), Schade, Tavernier, Strand Larsen and Haaland - are all confirmed starters performing at or above their model rating, so a fifth claim is not warranted this week.",
  "claims": [
   {
@@ -62,7 +62,7 @@
    "rank": 3,
    "pos": "MID",
    "add": {
-    "name": "E.Le Fée",
+    "name": "E.Le F\u00e9e",
     "code": "484420",
     "club": "SUN"
    },
@@ -176,7 +176,7 @@
      "rank": 3,
      "pos": "MID",
      "add": {
-      "name": "Groß",
+      "name": "Gro\u00df",
       "code": "60307",
       "club": "BHA"
      },
@@ -232,6 +232,12 @@
    "gw": 4,
    "claims": 4,
    "note": "First run for the GW4 window (GW3 waivers have processed and the squad moved on since last week's file, which is now filed under previous). Four claims: Igor Jesus for Marmoush (Forest's confirmed #1 striker over Wood vs a Marmoush facing real competition from Solanke), Ampadu for Garner (Garner was a sub, not a starter, at Preston as earlier reported, and is behind Hackney for Sunday), Le Fee for Barcola (Barcola confirmed bench for his Liverpool debut), and a low-confidence Rayan for Doku (Doku's return is pegged for right around this gameweek, so it's a hedge). No fifth claim - the rest of the defense and attack are confirmed starters outperforming their model numbers."
+  },
+  {
+   "ts": "2026-09-03T21:08 UTC",
+   "gw": 4,
+   "claims": 4,
+   "note": "No change. Re-checked all four adds and drops (Igor Jesus/Marmoush, Ampadu/Garner, Le Fee/Barcola, Rayan/Doku) plus rivals across a fresh club-by-club sweep 13 minutes after the last update - Forest's Munoz/Milenkovic, Rodon's hamstring, Doku's calf timeline and Barcola's expected bench debut at Ipswich all check out exactly as before. Still no fifth claim; the rest of the squad remains confirmed starters above their model numbers."
   }
  ]
 }

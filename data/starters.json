@@ -1,7 +1,7 @@
 {
  "gw": 3,
  "deadline": "2026-09-04T17:30:00Z",
- "ts": "2026-09-03T20:54 UTC",
+ "ts": "2026-09-03T21:08 UTC",
  "summary": "12 of 15 confirmed starters, with Barcola on the bench for his Liverpool debut, Doku out until 13 September, and Garner also on the bench behind Hackney - a correction on Garner, who did not actually start midweek as earlier reported. Marmoush is likely rather than nailed given genuine competition from Solanke at Tottenham. The dashboard's My squad tab should treat Doku, Garner and Barcola as non-starters this gameweek despite their model availability figures, and Munoz and Bijol as safer starts than their model numbers suggest.",
  "players": [
   {
@@ -39,7 +39,7 @@
    ]
   },
   {
-   "name": "Muñoz",
+   "name": "Mu\u00f1oz",
    "code": "247348",
    "club": "NFO",
    "pos": "DEF",
@@ -77,7 +77,7 @@
    ]
   },
   {
-   "name": "Milenković",
+   "name": "Milenkovi\u0107",
    "code": "227444",
    "club": "NFO",
    "pos": "DEF",
@@ -280,6 +280,12 @@
    "gw": 3,
    "kind": "deep",
    "note": "First deep pass for GW3 now the squad is final post-waivers. All 15 players researched club-by-club against confirmed and predicted lineups for this weekend's fixtures. Three status corrections against the model's own availability figures: Munoz and Bijol are safer starts than their low/mid figures suggest (Munoz confirmed over Aina at Forest, Bijol locked in after Rodon's 8-10 week hamstring injury), while Garner is a bench risk despite a moderate 0.61 figure - he did not actually start Everton's midweek Cup tie as earlier reported, he was a substitute, and Hackney is preferred for Sunday. Doku confirmed out until 13 September. Barcola confirmed bench for his Liverpool debut."
+  },
+  {
+   "ts": "2026-09-03T21:08 UTC",
+   "gw": 3,
+   "kind": "light",
+   "note": "no change - re-checked every squad member's club news 13 minutes after the deep pass (Forest's Munoz/Milenkovic confirmed, Rodon's hamstring 8-10 weeks, Doku's calf pegged for 13 Sept, Barcola expected off the bench at Ipswich, Marmoush vs Solanke at Forest unchanged); one lead on a fresh Solanke ankle knock did not stand up to a follow-up read (only stale pre-season articles), so all 15 verdicts stand as published this evening"
   }
  ]
 }
