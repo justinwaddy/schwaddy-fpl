@@ -137,6 +137,16 @@ background:rgba(217,87,87,.13);border:1px solid var(--red)}
 .conf{font:600 10px "IBM Plex Mono";padding:1px 6px;border-radius:9px;border:1px solid var(--line);color:var(--dim)}
 .conf-high{color:var(--green);border-color:var(--green)}.conf-low{color:var(--amber);border-color:var(--amber)}
 .loss{color:var(--red);font:600 13px "IBM Plex Mono"}
+/* Starters: will each of my players start this gameweek */
+.st{padding:9px 0;border-bottom:1px solid var(--line)}.st:last-child{border-bottom:none}
+.sthd{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.stat{font:600 10px "IBM Plex Mono";padding:2px 7px;border-radius:9px;color:#0F1A31;white-space:nowrap;
+text-transform:uppercase;letter-spacing:.05em;min-width:52px;text-align:center}
+.s-start{background:var(--green)}.s-likely{background:var(--gkp)}.s-doubt{background:var(--amber)}
+.s-bench{background:var(--dim)}.s-out{background:var(--red)}.s-none{background:var(--panel2);color:var(--dim)}
+.stv{font-weight:600;font-size:13px}
+.stnote{font-size:13px;padding:3px 0 0 22px}
+.pill.warn{color:var(--amber);border-color:var(--amber)}
 /* sortable tables: the active column and its direction */
 th.on{color:var(--ink)}
 .mk td,.mk th{padding:6px 5px}
@@ -154,6 +164,7 @@ th.on{color:var(--ink)}
 <button class="tab on" data-v="squad">My squad</button>
 <button class="tab" data-v="live" id="livetab">Live</button>
 <button class="tab" data-v="waivers">Waivers</button>
+<button class="tab" data-v="starters">Starters</button>
 <button class="tab" data-v="news">News</button>
 <button class="tab" data-v="league">League</button>
 <button class="tab" data-v="players">All players</button>
@@ -161,6 +172,7 @@ th.on{color:var(--ink)}
 <section id="squad" class="on"></section>
 <section id="live"></section>
 <section id="waivers"></section>
+<section id="starters"></section>
 <section id="news"></section>
 <section id="league"></section>
 <section id="players"></section>
@@ -198,7 +210,7 @@ function render(){
   const ps=DATA.players;NEXT=nextGW(ps);
   document.getElementById("meta").textContent=
     `updated ${DATA.generated?DATA.generated.slice(0,16).replace("T"," "):"?"} UTC · next: GW${NEXT+1} · λ=(${DATA.lambda_time}, ${DATA.lambda_nn??"∞"}) · ${DATA._src}`;
-  renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);
+  renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);renderStarters();
 }
 function renderSquad(ps){
   const mine=ps.filter(p=>p.mine);
@@ -434,6 +446,66 @@ function claudeClaimsHTML(ps,plan){
   });
   h+=`<div class="note">Claude's own reading of the news, ranked in submission order, with the model's number beside each swap. The model's mechanical board is below; where the two disagree the reasoning says why.</div></div>`;
   return h;
+}
+// Starters. Once a week, on the first run after the gameweek's waivers have
+// processed and the squad is final, the same scheduled Claude session does a
+// deep pass over every player in it - predicted line-ups, the manager's
+// press conference, the injury lists - and writes data/starters.json: a
+// verdict per player with the evidence and the articles. Later runs before
+// the deadline amend a verdict only where the day's news changes it. The
+// model's own availability number is shown beside each verdict, looked up
+// live from predictions.json, and flagged where the two disagree.
+const STARTERS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/starters.json";
+let STARTERS=null;
+fetch(STARTERS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{STARTERS=j;renderStarters();}).catch(()=>{renderStarters();});
+const ST_ORDER={start:0,likely:1,doubt:2,bench:3,out:4};
+function renderStarters(){
+  const sec=document.getElementById("starters");if(!sec)return;
+  const S=STARTERS,ps=(DATA&&DATA.players)||[];
+  if(!S||!Array.isArray(S.players)){
+    sec.innerHTML=`<div class="card clcard"><b class="h">Starters</b><div class="note">Not researched yet. Once a week, on the first run after the gameweek's waivers have processed, Claude checks every player in your squad against predicted line-ups, press conferences and the injury lists and writes data/starters.json. This tab fills in after that run.</div></div>`;
+    return;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=S.gw|0;
+  const dl=new Date(S.deadline||"");const passed=!isNaN(dl)&&Date.now()>dl.getTime();
+  const counts={start:0,likely:0,doubt:0,bench:0,out:0};
+  S.players.forEach(x=>{if(counts[x.status]!=null)counts[x.status]++;});
+  const last=Array.isArray(S.runs)&&S.runs.length?S.runs[S.runs.length-1]:null;
+  let h=`<div class="card clcard"><b class="h">Starters · GW${gw||"?"}</b>
+  <div class="clsub">deadline ${passed?"passed ":""}${esc(whenUK(S.deadline))} UK · researched ${esc((S.ts||"").slice(0,16).replace("T"," "))} UTC${last&&last.kind==="light"?` · last checked ${esc((last.ts||"").slice(0,16).replace("T"," "))} UTC`:""}</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">These verdicts were for GW${gw}. GW${cur}'s are written on the first research run after its waivers process.</div>`;
+  h+=`<div class="pkg">${["start","likely","doubt","bench","out"].map(k=>`<div class="pkt"><b>${counts[k]}</b><span>${k}</span></div>`).join("")}</div>`;
+  if(S.summary)h+=`<div class="clsum">${esc(S.summary)}</div>`;
+  const rows=[...S.players].sort((a,b)=>(ST_ORDER[a.status]??9)-(ST_ORDER[b.status]??9)||posord(a.pos||"FWD")-posord(b.pos||"FWD")||String(a.name).localeCompare(String(b.name)));
+  const seen=new Set();
+  for(const x of rows){
+    const a=by[String(x.code)];seen.add(String(x.code));
+    const p=a||{code:x.code,name:x.name};
+    const pos=x.pos||(a&&a.pos)||"";
+    const st=ST_ORDER[x.status]!=null?x.status:"none";
+    let mdl="";
+    if(a&&a.avail!=null){
+      const av=a.avail;
+      const dis=((st==="start"||st==="likely")&&av<0.5)||((st==="bench"||st==="out")&&av>0.8);
+      mdl=`<span class="pill ${dis?"warn":""}" title="the model's probability that he plays${dis?" - disagrees with this verdict":""}">model ${av.toFixed(2)}</span>`;
+    }
+    const nextfx=a&&a.run&&a.run.length?`<span class="run" title="next fixture: upper case home, lower case away">${esc(a.run[0])}</span>`:"";
+    h+=`<div class="st"><div class="sthd"><span class="stat s-${st}">${esc(x.status||"?")}</span>
+      ${nm(p)} ${pos?`<span class="pos ${pos}">${pos}</span>`:""} <span class="tm">${esc(x.club||(a?club(a):""))}</span> ${nextfx}
+      <span class="stv">${esc(x.verdict||"")}</span> ${mdl}${a&&!a.mine?` <span class="flag" style="display:inline">no longer in your squad</span>`:""}</div>`;
+    if(x.note)h+=`<div class="stnote">${esc(x.note)}</div>`;
+    const src=Array.isArray(x.sources)?x.sources.filter(u=>u&&/^https?:/.test(u.url||"")):[];
+    if(src.length)h+=`<div class="clsrc">${src.map(u=>`<a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.title||u.url)} &rsaquo;</a>`).join("")}</div>`;
+    h+=`</div>`;
+  }
+  const missing=ps.filter(p=>p.mine&&!seen.has(String(p.code)));
+  if(missing.length){
+    h+=`<div class="note">In your squad since the research ran, not yet checked: ${missing.map(p=>`${nm(p)} <span class="tm">${club(p)}</span>`).join(", ")}.</div>`;
+  }
+  h+=`<div class="note">Claude's read of predicted line-ups, press conferences and injury lists for every player you hold. <b>start</b> is named in two or more predicted XIs or confirmed by the manager; <b>likely</b> one source or a rotation risk; <b>doubt</b> could go either way; <b>bench</b> fit but among the subs; <b>out</b> injured, suspended, not in the squad or no fixture. The model pill is its own probability that he plays, amber where it disagrees.</div></div>`;
+  sec.innerHTML=h;
 }
 const NEWS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/news.json";
 const LEAGUE_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/league.json";

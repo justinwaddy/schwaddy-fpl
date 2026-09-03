@@ -19,6 +19,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/news.py        league news feed written to data/news.json
 - data/editorial.json         headlines written twice a day by a scheduled Claude session
 - data/claims.json            Claude's five ranked waiver claims, same session, rendered on the Waivers tab
+- data/starters.json          will each of my players start: weekly deep research, first run after waivers
 - src/schwaddy/weekly.py      live weekly league state, data/league.json
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
 - src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
@@ -307,6 +308,33 @@ reach the page. When the gameweek moves on the old set is kept under
 "previous", six deep, which is the record for measuring the claims later.
 If the file is missing the card says so and the model's board stands
 alone.
+
+## Starters, once a week
+Waivers process about a day before the deadline, and from then until the
+deadline the squad is the squad. That is the one moment in the week when
+the question "will each of my fifteen actually start" is both answerable
+and worth answering, so that is when it is asked. The scheduled session's
+brief works out from the draft bootstrap whether it is inside that window
+(waivers_time passed, deadline_time not) and whether starters.json already
+covers the gameweek. The first run inside the window does a deep pass:
+15-25 searches on top of the ordinary ones, at least one per club, aimed
+at predicted line-ups, the manager's press conference and the injury
+lists, and writes data/starters.json with a verdict per player - start,
+likely, doubt, bench or out - a one-line reason, the evidence, and the
+articles. Later runs in the window amend a verdict only where the day's
+news changes it, and runs outside the window do not touch the file.
+
+The Starters tab renders it: counts across the top, the squad sorted from
+start to out, the next fixture beside each name, and the model's own
+probability that he plays as a pill, amber where it disagrees with the
+verdict in either direction. That disagreement is the point of the page.
+The model reads minutes; it cannot read a press conference. A player who
+has joined the squad since the research ran is listed as not yet checked
+rather than silently missing, and a player who has left is flagged.
+
+The validator refuses the file unless every player in it is ours, every
+one of ours is in it, statuses are from the fixed set, and each entry
+carries a source unless the API already marks him out.
 
 ## The player card
 Every player name on the dashboard opens a card: what the model expects of
