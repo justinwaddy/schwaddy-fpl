@@ -243,9 +243,20 @@ see that manager's squad tab and, on Ed's, the prices. The engine's output
 is not on any of them, which is the part that matters.
 
 ## League news, and the roast box
-data/league_news.json is written once a day by its own scheduled session,
-separately from the editorial lane, and it is the only feed those six
-pages show. Every reported item cites the article it came from, from a
+The News tab carries two feeds side by side, newest first, with chips to
+filter to news, waivers, injuries or results.
+
+The league's own running record comes through public.json: who claimed
+whom, who is injured or cleared, who hauled, who left points on the bench,
+how the table moved. Those are facts of the draft, so they travel. Three
+kinds do not, and public.py names them: "projection" is the model talking,
+"squad" is written from Justin's chair ("Your GW2 still to play"), and
+"headline" is the editorial lane, which is research commissioned for one
+manager. A text filter sits behind that type whitelist as well, so an
+event that discusses a forecast is dropped whatever it calls itself.
+
+data/league_news.json is the second feed, written once a day by its own
+scheduled session, separately from the editorial lane. Every reported item cites the article it came from, from a
 named outlet, so a claim is one click from its source; the session is
 barred from sportsmole and from rumour aggregators, and barred from
 reading any of the engine's files at all, so the page cannot quietly hand

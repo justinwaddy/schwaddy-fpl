@@ -40,6 +40,20 @@ SQUAD_KEYS = ("id", "slot", "name", "pos", "team", "pts", "mins", "played",
               "settled", "to_play", "status", "news", "subbed_in", "subbed_out")
 
 
+# The pipeline's own feed is mostly public fact - who claimed whom, who is
+# injured, who hauled, how the table moved - and that is worth carrying.
+# Three kinds are not. "projection" is the model talking. "squad" is
+# written from Justin's chair ("Your GW2 still to play"). "headline" is
+# the editorial lane, which is research commissioned for one manager.
+NEWS_TYPES = ("move", "injury", "recovery", "haul", "flop", "lowlight",
+              "score", "live", "wrap", "overtake", "race", "bench", "pint",
+              "freeagent")
+NEWS_KEEP = 150
+# Belt and braces over the type whitelist: an event whose text talks about
+# a forecast does not travel, whatever it calls itself.
+NEWS_BANNED_TEXT = ("project", "expected pts", "the model", "next 5", "next5")
+
+
 def _load(path):
     return json.load(open(path)) if os.path.exists(path) else None
 
@@ -124,11 +138,23 @@ def build(data_dir):
             s={k: s[k] for k in PUBLIC_STATS if k in s}))
     players.sort(key=lambda p: (-(p["s"].get("total_points") or 0), p["name"] or ""))
 
+    news = []
+    for e in (_load(f"{data_dir}/news.json") or {}).get("events") or []:
+        if e.get("type") not in NEWS_TYPES:
+            continue
+        text = (e.get("text") or "").strip()
+        low = text.lower()
+        if not text or any(b in low for b in NEWS_BANNED_TEXT):
+            continue
+        news.append(dict(ts=e.get("ts"), type=e.get("type"), text=text[:400]))
+    news.sort(key=lambda e: e.get("ts") or "", reverse=True)
+
     return dict(
         generated=stats.get("generated") or league.get("generated"),
         season=stats.get("season"), gw=gw,
         finished=league.get("finished"), all_played=league.get("all_played"),
-        teams=teams, managers=managers, players=players)
+        teams=teams, managers=managers, players=players,
+        news=news[:NEWS_KEEP])
 
 
 def _code_of(p, stats):

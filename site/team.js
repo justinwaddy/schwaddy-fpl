@@ -268,36 +268,63 @@ document.addEventListener("DOMContentLoaded", () => {
  * a workflow that appends it to data/roasts.json. The worker needs no
  * more permission than it already had for the schedule.
  */
+// Two feeds land on one page. The daily round-up and the matchday opinion
+// come from league_news.json; the running record of the league - who
+// claimed whom, who is injured, who hauled, how the table moved - is
+// carried in public.json, already stripped of the engine's forecasts and
+// of anything written from one manager's chair.
+const NEWSGROUP = {
+  move: "moves", injury: "injuries", recovery: "injuries",
+  haul: "results", flop: "results", lowlight: "results", score: "results",
+  live: "results", wrap: "results", overtake: "results", race: "results",
+  bench: "results", pint: "results", freeagent: "results",
+  news: "news", opinion: "news",
+};
+let NEWSFILTER = "all";
+function newsFeed() {
+  const out = [];
+  for (const e of (NEWS && NEWS.items) || []) {
+    out.push({ ts: e.ts, kind: e.kind === "opinion" ? "opinion" : "news",
+               text: e.text, source: e.source });
+  }
+  for (const e of (PUB && PUB.news) || []) {
+    out.push({ ts: e.ts, kind: e.type, text: e.text, source: null });
+  }
+  return out.sort((a, b) => String(b.ts || "").localeCompare(String(a.ts || "")));
+}
 function renderNews() {
   const sec = $("news");
   const btn = SUGGEST_URL
     ? `<button class="btn" id="suggest">Suggest a headline or a roast</button>`
     : "";
   let h = `<div class="card"><b class="h">League news</b>
-    <div class="note">One round-up a day, plus the odd opinion on a matchday. Every reported item
-    links to the outlet it came from.</div><div class="row">${btn}</div></div>`;
-  if (!NEWS) {
-    h += ERR.news
-      ? `<div class="card"><div class="note">Could not load the feed (${esc(ERR.news)}).</div></div>`
+    <div class="note">A round-up a day with the article behind every reported item, the odd opinion on
+    a matchday, and the league's own running record: waivers, injuries, hauls and the table.</div>
+    <div class="row">${btn}</div></div>`;
+  const all = newsFeed();
+  if (!all.length) {
+    h += (ERR.news || ERR.pub)
+      ? `<div class="card"><div class="note">Could not load the feed (${esc(ERR.news || ERR.pub)}).</div></div>`
       : `<div class="card"><div class="note">Loading the feed&hellip;</div></div>`;
   } else {
-    const items = (NEWS.items || []).slice().sort((a, b) => (b.ts || "").localeCompare(a.ts || ""));
+    const F = [["all", "Everything"], ["news", "News"], ["moves", "Waivers"],
+               ["injuries", "Injuries"], ["results", "Results"]];
+    h += F.map(([k, lab]) => `<button class="chip ${NEWSFILTER === k ? "on" : ""}" data-f="${k}">${lab}</button>`).join("");
+    const items = all.filter(e => NEWSFILTER === "all" || NEWSGROUP[e.kind] === NEWSFILTER);
     if (!items.length) {
-      h += `<div class="card"><div class="note">Nothing posted yet. The first round-up lands with
-        tomorrow morning's run.</div></div>`;
+      h += `<div class="card"><div class="note">Nothing under that filter yet.</div></div>`;
     } else {
       h += `<div class="card">`;
       let day = "";
-      for (const e of items.slice(0, 60)) {
-        const d = (e.ts || "").slice(0, 10);
+      for (const e of items.slice(0, 120)) {
+        const d = String(e.ts || "").slice(0, 10);
         if (d !== day) { day = d; h += `<div class="daysep">${esc(d)}</div>`; }
-        const kind = e.kind === "opinion" ? "opinion" : "news";
         const src = e.source && e.source.url
           ? `<a class="src" href="${esc(e.source.url)}" target="_blank" rel="noopener">${esc(e.source.title || e.source.url)} &rsaquo;</a>`
           : "";
-        h += `<div class="ev"><span class="badge b-${kind}">${kind.toUpperCase()}</span>
+        h += `<div class="ev"><span class="badge b-${esc(e.kind)}">${esc(String(e.kind).toUpperCase())}</span>
           <span style="flex:1">${esc(e.text)}${src}</span>
-          <span class="when">${esc((e.ts || "").slice(11, 16))}</span></div>`;
+          <span class="when">${esc(String(e.ts || "").slice(11, 16))}</span></div>`;
       }
       h += `</div>`;
     }
@@ -305,6 +332,8 @@ function renderNews() {
   sec.innerHTML = h;
   const b = $("suggest");
   if (b) b.addEventListener("click", openSuggest);
+  sec.querySelectorAll("[data-f]").forEach(c => c.addEventListener("click",
+    () => { NEWSFILTER = c.dataset.f; renderNews(); }));
 }
 
 function openSuggest() {
