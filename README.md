@@ -444,6 +444,30 @@ is fifteen, so past fifty minutes elapsed a 45 is HALF TIME and before it is
 out from the clock in the second half would mean guessing the first half's
 stoppage and the length of the break as well.
 
+At half time the card opens a board above the players: possession, shots,
+on target, pass accuracy, tackles, fouls, corners, offsides, cards and
+saves, each as two numbers either side of what they measure with a bar
+behind them split the way the numbers are. It is the shape the old World
+Cup games used, written from memory of that layout rather than from a
+reference, so it is the recognisable form and not a replica. It opens
+itself at half time and at full time and can be opened by hand at any
+other point in the match.
+
+None of that is in either FPL API, whose fixture stats are only the ones
+that score points. It comes from the league's own Opta feed, which is
+public and keyed on the Opta id FPL happens to carry as the fixture code:
+code 2645221 is altIds.opta "g2645221" is pulse match 128949. The worker
+maps the ids in one call and then fetches one stats page per match in
+play, inside the same fifteen-second cache, and a failure there costs the
+board and nothing else.
+
+Building it turned up a real bug in the player rows. A player's minutes
+and the fixture clock come from different parts of the feed and do not
+move together: at half time the fixture sits on 45 while the players still
+read 41, and a five-minute rule written for open play called the entire
+pitch substituted. The gap has to be wide before it means anything now,
+and during the break it means nothing at all.
+
 When one of the reader's own players gains three points or more between two
 polls - a goal, an assist, a clean sheet, a bonus jump, never a minutes tick -
 his head sails across the screen on a parabola and the confetti goes up. The

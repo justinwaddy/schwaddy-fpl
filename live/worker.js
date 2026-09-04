@@ -22,6 +22,19 @@ const DRAFT = "https://draft.premierleague.com/api";
 // fixture ids, same team ids, so the minute is read across from there and
 // everything else still comes from the draft side.
 const CLASSIC = "https://fantasy.premierleague.com/api";
+// Match stats - possession, shots, corners, fouls - are in neither FPL
+// API. They come from the league's own Opta feed, which is public and
+// keyed on the same Opta id FPL carries as the fixture `code`: FPL code
+// 2645221 is altIds.opta "g2645221", which is pulse match 128949.
+const PULSE = "https://footballapi.pulselive.com/football";
+const PULSE_HEAD = { Origin: "https://www.premierleague.com", "User-Agent": "Mozilla/5.0" };
+// what the half-time board shows, in the order it shows it
+const MATCH_STATS = {
+  poss: "possession_percentage", sh: "total_scoring_att", sot: "ontarget_scoring_att",
+  pass: "total_pass", pacc: "accurate_pass", tkl: "total_tackle", foul: "fk_foul_lost",
+  cor: "won_corners", off: "total_offside", yel: "total_yel_card", red: "total_red_card",
+  sv: "saves",
+};
 const LEAGUE = 9450;
 const SNAP_TTL = 15;      // seconds a composed snapshot is served from cache;
                           // the page polls at this rate while a match is on
@@ -65,12 +78,56 @@ function json(body, status = 200, extra = {}) {
   });
 }
 
-async function get(url) {
-  const r = await fetch(url, { headers: { "User-Agent": "schwaddy-fpl-live" } });
+async function get(url, extra) {
+  const r = await fetch(url, {
+    headers: { "User-Agent": "schwaddy-fpl-live", ...(extra || {}) },
+  });
   if (!r.ok) throw new Error(`${r.status} from ${url}`);
   return r.json();
 }
 
+/* Opta stats for the matches that are actually on. Never fatal: without
+   it the cards simply have no half-time board. One call to map the ids,
+   then one per live match, all inside the 15-second snapshot cache. */
+async function matchStats(fixtures) {
+  const live = fixtures.filter(f => f.started);
+  if (!live.length) return {};
+  let index;
+  try {
+    const j = await get(`${PULSE}/fixtures?comps=1&statuses=L,C&page=0&pageSize=40&sort=desc&altIds=true`, PULSE_HEAD);
+    index = {};
+    for (const m of j.content || []) {
+      const opta = ((m.altIds || {}).opta || "").replace(/^g/, "");
+      if (opta) index[opta] = m.id;
+    }
+  } catch (e) { console.log(`pulse fixtures failed: ${e.message}`); return {}; }
+
+  const out = {};
+  await Promise.all(live.map(async f => {
+    const pid = index[String(f.code)];
+    if (pid == null) return;
+    try {
+      const j = await get(`${PULSE}/stats/match/${pid}`, PULSE_HEAD);
+      const teams = ((j.entity || {}).teams || []).map(t => String(t.team.id));
+      if (teams.length !== 2) return;
+      const side = {};
+      for (const k in j.data || {}) {
+        const m = {};
+        for (const st of (j.data[k] || {}).M || []) m[st.name] = st.value;
+        side[k] = m;
+      }
+      const st = {};
+      for (const key in MATCH_STATS) {
+        const src = MATCH_STATS[key];
+        const h = side[teams[0]] || {}, a = side[teams[1]] || {};
+        if (h[src] == null && a[src] == null) continue;
+        st[key] = [+(h[src] || 0), +(a[src] || 0)];
+      }
+      if (Object.keys(st).length) out[f.id] = st;
+    } catch (e) { console.log(`pulse stats ${pid} failed: ${e.message}`); }
+  }));
+  return out;
+}
 /* bootstrap-static is ~1MB; keep only what the page names players with */
 async function bootstrap(cache, origin) {
   const key = new Request(`${origin}/boot`);
@@ -198,8 +255,12 @@ export async function compose(cache, origin = "https://live.invalid") {
       hs: f.team_h_score, as: f.team_a_score,
       started: !!f.started, fin: !!(f.finished || f.finished_provisional),
       min: minuteOf(f), ko: f.kickoff_time, bonus_in: bonusIn, bps,
+      code: f.code,
     };
   });
+
+  const stats2 = await matchStats(fx);
+  for (const f of fx) { if (stats2[f.id]) f.st = stats2[f.id]; delete f.code; }
 
   return {
     gw, finished: !!game.current_event_finished,

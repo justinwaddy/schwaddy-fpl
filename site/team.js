@@ -1121,15 +1121,64 @@ function celebrate(who, code) {
    the second half it would be a bad guess: the elapsed time by then also
    contains the first half's stoppage and the length of the break, neither
    of which anybody tells us. */
-function fixtureState(f) {
-  if (f.fin) return `<span class="mtmin ft">FT</span>`;
-  if (!f.started) return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
+function matchPhase(f) {
+  if (f.fin) return "ft";
+  if (!f.started) return "pre";
   const m = f.min || 0;
   const el = f.ko ? (Date.now() - Date.parse(f.ko)) / 60000 : null;
-  if (m === 45 && el != null && el >= 50) return `<span class="mtmin ht">HALF TIME</span>`;
-  if (m === 45 || m === 90) return `<span class="mtmin">${m}<sup>+</sup></span>`;
-  if (!m) return `<span class="mtmin">LIVE</span>`;
-  return `<span class="mtmin">${m}'</span>`;
+  if (m === 45 && el != null && el >= 50) return "ht";
+  if (m === 45 || m === 90) return "stoppage";
+  return m ? "live" : "nostart";
+}
+function fixtureState(f) {
+  const ph = matchPhase(f);
+  if (ph === "ft") return `<span class="mtmin ft">FT</span>`;
+  if (ph === "pre") return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
+  if (ph === "ht") return `<span class="mtmin ht">HALF TIME</span>`;
+  if (ph === "stoppage") return `<span class="mtmin">${f.min}<sup>+</sup></span>`;
+  if (ph === "nostart") return `<span class="mtmin">LIVE</span>`;
+  return `<span class="mtmin">${f.min}'</span>`;
+}
+// The half-time board, in the shape the old World Cup games used: the two
+// numbers either side of what they measure, and a bar behind them split
+// the way the numbers are. Written from memory of that layout rather than
+// from a reference, so it is the recognisable form and not a replica.
+//
+// None of this is in either FPL API. It comes from the league's own Opta
+// feed, which the worker looks up by the Opta id FPL happens to carry as
+// the fixture code.
+const MSTAT = [
+  ["poss", "Possession", "%"], ["sh", "Shots", ""], ["sot", "On target", ""],
+  ["pacc", "Pass accuracy", "%"], ["tkl", "Tackles", ""], ["foul", "Fouls", ""],
+  ["cor", "Corners", ""], ["off", "Offsides", ""], ["yel", "Yellow cards", ""],
+  ["red", "Red cards", ""], ["sv", "Saves", ""],
+];
+function statBoard(f) {
+  const st = f.st;
+  if (!st) return "";
+  const rows = [];
+  for (const [k, label, unit] of MSTAT) {
+    let v = st[k];
+    if (k === "pacc") {
+      if (!st.pacc || !st.pass) continue;
+      v = [0, 1].map(i => st.pass[i] ? Math.round((st.pacc[i] / st.pass[i]) * 100) : 0);
+    }
+    if (!v || (!v[0] && !v[1])) continue;          // nothing has happened yet
+    const tot = v[0] + v[1] || 1;
+    const pc = Math.round((v[0] / tot) * 100);
+    const fmt = x => (unit === "%" ? Math.round(x) + "%" : String(Math.round(x)));
+    rows.push(`<div class="msrow">
+      <b>${esc(fmt(v[0]))}</b>
+      <span class="msmid"><span class="mslab">${esc(label)}</span>
+        <span class="msbar"><i style="width:${pc}%"></i></span></span>
+      <b class="away">${esc(fmt(v[1]))}</b></div>`);
+  }
+  if (!rows.length) return "";
+  const ph = matchPhase(f);
+  const open = ph === "ht" || ph === "ft";
+  const title = ph === "ht" ? "Half time" : ph === "ft" ? "Full time" : "Match stats";
+  return `<details class="msbox"${open ? " open" : ""}>
+    <summary>${esc(title)}</summary><div class="mstats">${rows.join("")}</div></details>`;
 }
 function crest(tid, name) {
   const t = PUB && PUB.teams && PUB.teams[tid];
@@ -1208,11 +1257,17 @@ function liveRoles(L) {
    it, and it cannot tell a substituted man from one who came on. */
 function matchRole(e, f) {
   const on = f.started && !f.fin, played = e.min > 0;
-  const started = e.starts == null
-    ? (played && f.min && e.min >= f.min - 2) : !!e.starts;
+  // A player's minutes and the fixture clock come from different parts of
+  // the feed and do not move together - at half time the fixture sits on
+  // 45 while the players can still read 41, which called the whole pitch
+  // substituted. So the gap has to be wide before it means anything, and
+  // during the break it means nothing at all.
+  const ph = matchPhase(f);
+  const gap = f.min ? f.min - e.min : 0;
+  const started = e.starts == null ? (played && f.min && gap <= 5) : !!e.starts;
   if (!f.started) return { t: "", c: "" };
   if (!played) return on ? { t: "not on", c: "off" } : { t: "did not play", c: "off" };
-  if (started && on && f.min && e.min < f.min - 2) return { t: "subbed off", c: "off" };
+  if (started && on && ph !== "ht" && gap > 5) return { t: "subbed off", c: "off" };
   if (!started) return { t: on ? "on as sub" : "sub", c: "on" };
   return { t: on ? "on" : "played", c: "on" };
 }
@@ -1272,6 +1327,7 @@ function matchHTML(f, L, ix) {
         <div>${fixtureState(f)}</div></span>
       <span class="mtside away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
     </div>
+    ${statBoard(f)}
     <div class="mtcols">
       <div class="mtcol"><div class="mtcolh">${crest(f.h, hn)}${esc(hn)}</div>
         ${sideHTML(f.h, f, L, ix)}</div>
