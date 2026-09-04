@@ -158,7 +158,24 @@ function drawCard() {
   if (x) x.addEventListener("click", closeCard);
 }
 const tile = (l, v) => `<div class="pkt"><b>${v}</b><span>${esc(l)}</span></div>`;
+// only worth a tile if the game actually reports it for him
+const tileIf = (l, v, dp) => v == null ? "" :
+  tile(l, dp == null ? v : (Math.round(v * 10 ** dp) / 10 ** dp).toFixed(dp));
+/* Where he sits among everybody, and among his own position. Computed off
+   the stats file on the fly - it is 652 players and one click. */
+function pkRanks(code, S) {
+  if (!STATS || !STATS.players || !S) return null;
+  const all = Object.values(STATS.players);
+  const pts = p => (p.s && p.s.total_points) || 0;
+  const mine = pts(S);
+  const played = all.filter(p => (p.s && p.s.minutes) || 0);
+  const samePos = played.filter(p => p.pos === S.pos);
+  const rank = list => list.filter(p => pts(p) > mine).length + 1;
+  return { overall: rank(played), of: played.length,
+           pos: rank(samePos), posOf: samePos.length, draft: S.draft_rank || null };
+}
 const PKSTATUS = { d: "A doubt", i: "Injured", s: "Suspended", u: "Unavailable", n: "Not available" };
+const POSNAME = { GKP: "goalkeepers", DEF: "defenders", MID: "midfielders", FWD: "forwards" };
 function cardHTML() {
   const code = typeof CARD === "string" ? CARD : null;
   const S = (STATS && STATS.players && code) ? STATS.players[code] : null;
@@ -190,15 +207,64 @@ function cardHTML() {
       pos === "GKP" || pos === "DEF" ? g("clean_sheets") : g("bonus"))}
     ${pos === "GKP" ? tile("saves", g("saves")) : ""}
     ${P && P.next ? tile("next", esc(P.next)) : ""}</div>`;
+
+  const R = pkRanks(code, S);
+  if (R) {
+    h += `<div class="pkrank">${[
+      `<b>${ordinal(R.overall)}</b> of ${R.of} who have played, on points`,
+      `<b>${ordinal(R.pos)}</b> of ${R.posOf} ${esc(POSNAME[S.pos] || S.pos)}`,
+      R.draft ? `drafted <b>${ordinal(R.draft)}</b> overall by the game's own ranking` : "",
+    ].filter(Boolean).join(" &middot; ")}</div>`;
+  }
+
   const cols = (STATS && STATS.log_cols) || [];
   const log = (S && S.log) || [];
+
+  // The underlying numbers: what he is doing rather than what he has been
+  // paid for. Only the ones the game reports for him appear, so a keeper
+  // does not get an empty expected-assists box.
+  const per90 = k => st.minutes ? (g(k) * 90) / st.minutes : null;
+  const und = [
+    tileIf("pts / 90", st.minutes ? (g("total_points") * 90) / st.minutes : null, 1),
+    tileIf("xG", st.expected_goals, 2),
+    tileIf("xA", st.expected_assists, 2),
+    st.expected_goals != null && st.goals_scored != null
+      ? tile("vs xG", (g("goals_scored") - g("expected_goals") >= 0 ? "+" : "") +
+          (g("goals_scored") - g("expected_goals")).toFixed(2)) : "",
+    tileIf("threat", st.threat, 0),
+    tileIf("creativity", st.creativity, 0),
+    tileIf("influence", st.influence, 0),
+    tileIf("ICT", st.ict_index, 1),
+    tileIf("BPS", st.bps, 0),
+    tileIf("def. actions", st.defensive_contribution, 0),
+    tileIf("tackles", st.tackles, 0),
+    tileIf("clearances, blocks, interceptions", st.clearances_blocks_interceptions, 0),
+    tileIf("recoveries", st.recoveries, 0),
+    pos === "GKP" ? tileIf("xG conceded", st.expected_goals_conceded, 2) : "",
+  ].filter(Boolean);
+  if (und.length) {
+    h += `<div class="pksec">Underlying numbers</div><div class="pkg">${und.join("")}</div>`;
+  }
+
+  if (log.length) {
+    const ip = k => cols.indexOf(k);
+    const best = log.reduce((a, r) => (a && a[ip("pts")] >= r[ip("pts")] ? a : r), null);
+    const blanks = log.filter(r => (r[ip("pts")] || 0) <= 2).length;
+    const starts = log.filter(r => (r[ip("min")] || 0) >= 60).length;
+    h += `<div class="pkrank">${[
+      best ? `best week <b>${best[ip("pts")]}</b> in GW${best[ip("gw")]}` : "",
+      `<b>${blanks}</b> of ${log.length} appearance${log.length > 1 ? "s" : ""} returned two points or fewer`,
+      `<b>${starts}</b> full hour${starts === 1 ? "" : "s"} or more`,
+    ].filter(Boolean).join(" &middot; ")}</div>`;
+  }
   if (log.length) {
     const i = k => cols.indexOf(k);
     h += `<div class="wrap"><table class="pklog">
       <tr>${ths(["GW", "num"])}<th>opponent</th>${ths(["mins", "num"], ["pts", "num"],
         ["G", "num"], ["A", "num"], ["CS", "num"], ["B", "num"])}</tr>`;
+    const tname = id => ((STATS && STATS.teams && STATS.teams[id]) || [])[0] || String(id);
     for (const r of [...log].reverse()) {
-      const opp = String(r[i("opp")] || "");
+      const opp = tname(r[i("opp")]);
       h += `<tr><td class="num">${esc(r[i("gw")])}</td>
         <td><span class="run">${esc(r[i("home")] ? opp.toUpperCase() : opp.toLowerCase())}</span>
           <span class="tm">${r[i("home")] ? "home" : "away"}</span></td>

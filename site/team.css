@@ -113,7 +113,8 @@ background:var(--panel);padding:4px 0 8px;border-bottom:1px solid var(--line)}
 .pkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:6px;margin:8px 0 4px}
 .pkt{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
 .pkt b{display:block;font:600 17px "IBM Plex Mono",ui-monospace,monospace}
-.pkt span{color:var(--dim);font:600 10px "IBM Plex Mono",ui-monospace,monospace;text-transform:uppercase;
+.pkt span{display:block;white-space:normal;line-height:1.25;
+color:var(--dim);font:600 10px "IBM Plex Mono",ui-monospace,monospace;text-transform:uppercase;
 letter-spacing:.05em;white-space:nowrap}
 .pkalert{border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px;
 background:rgba(232,161,60,.13);border:1px solid var(--amber)}
@@ -207,3 +208,8 @@ td.num.warn{color:var(--amber)}
 .legend{display:flex;flex-wrap:wrap;gap:2px 12px;padding:2px 0 8px;color:var(--dim);
 font-size:11px;line-height:1.5}
 .legend b{color:var(--tm,#8fa3c4);font-weight:600}
+/* the card's context lines and its second, underlying-numbers grid */
+.pkrank{color:var(--dim);font-size:12px;line-height:1.6;padding:2px 0 8px}
+.pkrank b{color:var(--ink);font-weight:600}
+.pksec{font:600 11px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em;
+text-transform:uppercase;color:var(--dim);padding:10px 0 6px;border-top:1px solid var(--line);margin-top:6px}
