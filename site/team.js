@@ -642,6 +642,10 @@ function liveTable(L) {
     allDone: L.fixtures.length > 0 && L.fixtures.every(f => f.fin),
   };
 }
+function ordinal(n) {
+  const s = ["th", "st", "nd", "rd"], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
 function koText(iso) {
   const d = new Date(iso);
   if (isNaN(d)) return "";
@@ -735,24 +739,27 @@ function matchHTML(f, L, ix) {
       <div class="mtcol">${sideHTML(f.a, f, L, ix)}</div>
     </div></div>`;
 }
-/* One line in the gameweek's fixture list: the schedule, not the scoring.
-   own(tid) returns [total owned, how many are the reader's], so the same
+/* One line in the gameweek's fixture list, and under it everyone in the
+   league who is in that match. A count would fit in less room, but which
+   of your own players have a game is the thing worth knowing, and only
+   the names say it. chips(f) yields {p, who, mine, pts, pb} so the same
    row serves the live feed and the pre-deadline preview. */
-function fxRow(f, name, own) {
+function fxRow(f, name, chips) {
   const hn = name(f.h), an = name(f.a);
-  // a bare count beside a scoreline reads as part of the score, so these
-  // say what they are
-  const side = tid => {
-    const [all, mine] = own(tid);
-    if (mine) return `<span class="fxc me">${mine} of yours</span>`;
-    if (all) return `<span class="fxc">${all} in league</span>`;
-    return "";
-  };
   const mid = f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v";
-  return `<div class="fxr${f.started && !f.fin ? " on" : ""}">
-    <span class="fxs">${side(f.h)}<span class="nm">${esc(hn)}</span>${crest(f.h, hn)}</span>
-    <span class="fxm"><b>${mid}</b>${fixtureState(f)}</span>
-    <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span>${side(f.a)}</span>
+  const men = chips(f);
+  const body = men.length ? men.map(c =>
+    `<span class="fxchip${c.mine ? " mine" : ""}">${nameTag(c.p)}${
+      c.pts == null ? "" : ` ${c.pts}`}${
+      c.pb ? `<span class="provb">+${c.pb}</span>` : ""}<span class="who">&middot; ${esc(c.who)}</span></span>`
+  ).join("") : `<span class="fxnone">Nobody in the league owns a player here.</span>`;
+  return `<div class="fxi${f.started && !f.fin ? " on" : ""}">
+    <div class="fxr">
+      <span class="fxs"><span class="nm">${esc(hn)}</span>${crest(f.h, hn)}</span>
+      <span class="fxm"><b>${mid}</b>${fixtureState(f)}</span>
+      <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
+    </div>
+    <div class="fxplayers">${body}</div>
   </div>`;
 }
 /* The coming gameweek, from public.json, for the stretch between the last
@@ -760,17 +767,22 @@ function fxRow(f, name, own) {
    one. No scores exist yet, so these rows are the schedule only. */
 function previewFixtures() {
   if (!PUB || !(PUB.fixtures || []).length) return "";
+  const who = {};
+  for (const m of PUB.managers || []) who[m.entry] = m.name;
   const name = tid => ((PUB.teams || {})[tid] || [])[0] || String(tid);
-  const own = tid => {
-    const ps = (PUB.players || []).filter(p => p.team === tid && p.owner != null);
-    return [ps.length, ps.filter(p => p.owner === ME).length];
-  };
+  const chips = f => (PUB.players || [])
+    .filter(p => (p.team === f.h || p.team === f.a) && p.owner != null)
+    .map(p => ({ p, who: who[p.owner] || "", mine: p.owner === ME, pts: null, pb: 0 }))
+    .sort((a, b) => (b.mine - a.mine) || String(a.p.name).localeCompare(String(b.p.name)));
   return PUB.fixtures
-    .map(([h, a, ko]) => fxRow({ h, a, ko, started: false, fin: false }, name, own))
+    .map(([h, a, ko]) => fxRow({ h, a, ko, started: false, fin: false }, name, chips))
     .join("");
 }
-function tickerText(L, ix) {
-  const rows = (L.managers || []).map(m => {
+/* Everyone's gameweek points as they stand, highest first. The Live tab
+   uses it twice: the reader's own line in the header, and the whole table
+   in the ticker. */
+function liveStandings(L, ix) {
+  return (L.managers || []).map(m => {
     const squad = (m.picks || []).map(([id, slot]) => {
       const e = L.elements[id] || { p: "MID", t: null, pts: 0, min: 0 };
       return { id, slot, pos: e.p, tid: e.t, pts: (e.pts || 0) + (ix.bonus[id] || 0),
@@ -784,6 +796,8 @@ function tickerText(L, ix) {
     const c = squad.filter(p => (p.slot <= R.play && !p.subbed_out) || p.subbed_in);
     return { m, live: c.reduce((a, p) => a + p.pts, 0) };
   }).sort((a, b) => b.live - a.live);
+}
+function tickerText(rows) {
   return rows.map((r, i) =>
     `<span class="${r.m.entry === ME ? "me" : ""}">${i + 1}. ${esc(r.m.name)} <b>${r.live}</b></span>`)
     .join(`<em>&middot;</em>`);
@@ -808,13 +822,22 @@ function renderLive() {
       <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>
       <div class="card"><b class="h" id="lvfxh"></b><div class="fxl" id="lvfxb"></div></div>`;
   }
-  const t = tickerText(LIVE, ix);
+  const rows = liveStandings(LIVE, ix);
+  const t = tickerText(rows);
   if (t !== TICK) { TICK = t; $("lvticker").innerHTML = t + `<em>&middot;</em>` + t; }
 
+  // the header leads with what the reader came for: his own points this
+  // gameweek, and where that puts him
+  const meAt = rows.findIndex(r => r.m.entry === ME);
+  const head = meAt < 0 ? `<b class="lvpts">Gameweek ${LIVE.gw}</b>`
+    : `<b class="lvpts">Gameweek ${LIVE.gw}: you have ${rows[meAt].live}</b>
+       <span class="lvrank">${ordinal(meAt + 1)} of ${rows.length}${
+         meAt ? `, ${rows[0].live - rows[meAt].live} behind ${esc(rows[0].m.name)}` : ""}</span>`;
+
   if (inplay.length) {
-    $("lvstat").innerHTML = `<span class="livedot"></span><b>LIVE</b> &middot;
+    $("lvstat").innerHTML = `${head}<span class="lvsep"><span class="livedot"></span><b>LIVE</b> &middot;
       ${inplay.length} match${inplay.length > 1 ? "es" : ""} in play &middot;
-      feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC`;
+      feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC</span>`;
     // most relevant first: where you have the most players
     const mineIn = f => Object.keys(LIVE.elements || {})
       .filter(id => ix.owner[id] === ME &&
@@ -829,9 +852,9 @@ function renderLive() {
   } else {
     const next = fx.filter(f => !f.started).map(f => f.ko).sort()[0] ||
       (PUB && PUB.next_gw > LIVE.gw ? ((PUB.fixtures || [])[0] || [])[2] : null);
-    $("lvstat").innerHTML = next
+    $("lvstat").innerHTML = head + `<span class="lvsep">${next
       ? `Nothing in play. Next kick-off ${esc(koText(next))}.`
-      : `Every match in gameweek ${LIVE.gw} has finished.`;
+      : `Every match in gameweek ${LIVE.gw} has finished.`}</span>`;
     $("lvbody").innerHTML = "";
   }
 
@@ -840,15 +863,25 @@ function renderLive() {
   const ahead = fx.length && fx.every(f => f.fin) &&
     PUB && PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length;
   const name = tid => LIVE.teams[tid] || String(tid);
-  const own = tid => {
-    const ids = Object.keys(LIVE.elements || {})
-      .filter(id => LIVE.elements[id].t === tid && ix.owner[id] != null);
-    return [ids.length, ids.filter(id => ix.owner[id] === ME).length];
-  };
+  const chips = f => Object.keys(LIVE.elements || {})
+    .filter(id => {
+      const e = LIVE.elements[id];
+      return (e.t === f.h || e.t === f.a) && ix.owner[id] != null;
+    })
+    .map(id => {
+      const e = LIVE.elements[id], m = ix.mgr[ix.owner[id]];
+      const rows = ((e.ex || {})[f.id] || []);
+      const pb = rows.some(r => /bonus/i.test(String(r[0]))) ? 0 : (ix.bonus[id] || 0);
+      return { p: { name: e.n, id: +id }, who: m ? m.name : "",
+               mine: ix.owner[id] === ME,
+               pts: f.started ? (e.pts || 0) + pb : null, pb: f.started ? pb : 0 };
+    })
+    .sort((a, b) => (b.mine - a.mine) || ((b.pts || 0) - (a.pts || 0)) ||
+      String(a.p.name).localeCompare(String(b.p.name)));
   $("lvfxh").textContent = `Gameweek ${ahead ? PUB.next_gw : LIVE.gw} fixtures`;
   $("lvfxb").innerHTML = (ahead ? previewFixtures() : [...fx]
     .sort((a, b) => String(a.ko || "").localeCompare(String(b.ko || "")))
-    .map(f => fxRow(f, name, own)).join("")) ||
+    .map(f => fxRow(f, name, chips)).join("")) ||
     `<div class="note">No fixtures in this gameweek.</div>`;
 }
 function liveDelay() {

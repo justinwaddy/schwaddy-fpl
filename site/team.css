@@ -164,9 +164,10 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mtnone{color:var(--dim);font-size:12px;padding:8px 2px}
 /* the gameweek's fixture list, which stays under the live cards all week */
 .fxl{margin-top:2px}
-.fxr{display:flex;align-items:center;gap:8px;padding:7px 2px;border-top:1px solid var(--line)}
-.fxr:first-child{border-top:none}
-.fxr.on{background:var(--panel2)}
+.fxi{border-top:1px solid var(--line);padding:2px 0}
+.fxi:first-child{border-top:none}
+.fxi.on{background:var(--panel2)}
+.fxr{display:flex;align-items:center;gap:8px;padding:7px 2px 3px}
 .fxs{display:flex;align-items:center;gap:6px;flex:1;min-width:0;justify-content:flex-end}
 .fxs.away{justify-content:flex-start}
 .fxs img{width:20px;height:20px;object-fit:contain;flex:none}
@@ -177,3 +178,11 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fxm{flex:none;width:96px;text-align:center;line-height:1.2}
 .fxm b{display:block;font:600 15px "IBM Plex Mono",ui-monospace,monospace}
 @media(max-width:420px){.fxm{width:74px}.fxs .nm{font-size:13px}}
+/* who in the league is in each fixture - the point of the list */
+.fxi .fxplayers{border-bottom:none;padding:2px 2px 8px;justify-content:center}
+.fxnone{font:500 11px "IBM Plex Mono",ui-monospace,monospace;color:var(--dim)}
+/* the Live header: your own points this week, then what the feed is doing */
+.lvpts{font:600 15px "Barlow Condensed",system-ui;letter-spacing:.03em;text-transform:uppercase;
+color:var(--ink)}
+.lvrank{color:var(--dim);font-weight:400;padding-left:6px}
+.lvsep{display:block;padding-top:2px}
