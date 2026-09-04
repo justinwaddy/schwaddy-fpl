@@ -30,7 +30,6 @@ HORIZON = 5
 def pull(data_dir):
     json.dump(api.draft_bootstrap(), open(f"{data_dir}/draft_bootstrap.json", "w"))
     json.dump(api.fixtures(), open(f"{data_dir}/fixtures_2627.json", "w"))
-    live_archive = False
     for s in SEASONS + [LIVE]:
         for f in ("gws/merged_gw.csv", "players_raw.csv", "teams.csv"):
             out = f"{data_dir}/{f.split('/')[-1].replace('.csv', '')}_{s}.csv" \
@@ -45,17 +44,41 @@ def pull(data_dir):
                     continue                   # archive not started yet
                 r.raise_for_status()
             open(out, "w").write(r.text)
-            if s == LIVE and "merged" in f:
-                live_archive = True       # the real archive has caught up
-    if not live_archive:
-        # the archive lags the live season by weeks; rebuild it from the API
-        # so the fit is not stuck on last season while squads have changed
-        try:
-            fx = json.load(open(f"{data_dir}/fixtures_2627.json"))
-            n = livegws.write(data_dir, fx)
-            print(f"live gameweeks reconstructed from the API: {n} rows")
-        except Exception as ex:
-            print(f"live gameweek reconstruction skipped: {ex}")
+
+    # The archive lags the live season, so the reconstruction fills in
+    # whatever it has not published yet.
+    #
+    # This used to stand down entirely the moment the archive appeared for
+    # the live season, on the theory that it had caught up. It had not: it
+    # published gameweek 1 and stopped, which overwrote the reconstruction
+    # with a file one gameweek short and then skipped rebuilding it. The
+    # panel fitted without the newest gameweek, availability read it, and
+    # the match logs behind the player card ended a week early - and it
+    # would have stayed that way all season, since the archive always
+    # lags. livegws.write keeps rows that are already there and only adds
+    # the finished gameweeks the file is missing, so running it always is
+    # strictly additive: the archive still takes over its own gameweeks,
+    # it just no longer holds the newest one hostage.
+    try:
+        fx = json.load(open(f"{data_dir}/fixtures_2627.json"))
+        had = _gws_in(f"{data_dir}/gws_{LIVE}.csv")
+        n = livegws.write(data_dir, fx)
+        now = _gws_in(f"{data_dir}/gws_{LIVE}.csv")
+        added = sorted(now - had)
+        print(f"live gameweeks: {n} rows, {sorted(now)} present"
+              + (f", added {added} the archive had not published" if added else ""))
+    except Exception as ex:
+        print(f"live gameweek reconstruction skipped: {ex}")
+
+
+def _gws_in(path):
+    """Which gameweeks a gameweek file holds, empty if it has none."""
+    if not os.path.exists(path):
+        return set()
+    try:
+        return {int(float(r["GW"])) for r in csv.DictReader(open(path))}
+    except Exception:
+        return set()
 
 
 def _sync_owners(data_dir, owned, id_of_code):

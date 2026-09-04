@@ -29,6 +29,37 @@ const esc = x => String(x ?? "").replace(/[&<>"]/g,
   c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const $ = id => document.getElementById(id);
 const POSORD = { GKP: 0, DEF: 1, MID: 2, FWD: 3 };
+// What every column means, in a hover. The tables are dense and most of
+// the headings are three letters, so this is the difference between a
+// table you can read and one you have to guess at.
+const TIPS = {
+  player: "The player. Click the name for his season and match by match.",
+  pos: "Position: goalkeeper, defender, midfielder or forward.",
+  next: "His club's next fixture. Upper case means at home, lower case away, a dash means no game that week.",
+  pts: "Total points this season.",
+  season: "His total points this season, across every gameweek.",
+  GW: "Points in this gameweek, with provisional bonus and substitutions applied.",
+  G: "Goals scored this season.",
+  A: "Assists this season.",
+  CS: "Clean sheets this season. Worth points to goalkeepers and defenders.",
+  SV: "Saves this season. Goalkeepers earn a point for every three.",
+  B: "Bonus points this season, the extra one to three awarded to the best performers in a match.",
+  mins: "Minutes played this season.",
+  form: "The game's form figure: average points per match over the last 30 days.",
+  PPG: "Points per game: his season total divided by the games he has appeared in.",
+  value: "His price in the classic game, in millions. Not used in draft, but a fair read on how the market rates him.",
+  owner: "Which manager holds him, or free agent if nobody does.",
+  played: "Minutes played in this gameweek, or when his match kicks off if it is still to come.",
+  manager: "The manager and his team name.",
+  bench: "Points sitting on the bench this gameweek. They do not count unless a substitution brings them on.",
+  "to play": "How many of his eleven have a match still to come this gameweek.",
+  "on pitch": "How many of his eleven are playing right now.",
+};
+const th = (label, cls) => {
+  const tip = TIPS[label];
+  return `<th class="${cls || ""}"${tip ? ` title="${esc(tip)}"` : ""}>${esc(label)}</th>`;
+};
+const ths = (...cols) => cols.map(c => Array.isArray(c) ? th(c[0], c[1]) : th(c)).join("");
 const S = (p, k) => (p.s && p.s[k] != null ? p.s[k] : 0);
 
 function get(url, onOk, key) {
@@ -58,9 +89,122 @@ function priceOf(code) {
 }
 function me() { return (PUB && PUB.managers || []).find(m => m.entry === ME) || null; }
 function counting(p) { return (p.slot <= 11 && !p.subbed_out) || p.subbed_in; }
+// Every player name on every table routes to the same card. public.json
+// players carry `code`; the squads that come out of league.json and the
+// live feed carry the element `id`, so either one resolves.
+function nameTag(p) {
+  const a = p.code != null ? `data-pk="${esc(p.code)}"`
+    : (p.id != null ? `data-pkid="${esc(p.id)}"` : "");
+  return `<span class="nm${a ? " pk" : ""}" ${a}>${esc(p.name)}</span>`;
+}
 function nameCell(p, extra) {
-  return `<td>${extra || ""}<span class="nm">${esc(p.name)}</span>
+  return `<td>${extra || ""}${nameTag(p)}
     <span class="tm">${esc(club(p))}</span>${p.news ? `<span class="flag">${esc(p.news)}</span>` : ""}</td>`;
+}
+
+/* ---------------- the player card ----------------
+ * Season totals and the match log, both straight from the game. The stats
+ * file is a quarter of a megabyte and most visits never open a card, so it
+ * is fetched the first time somebody asks for one rather than on load.
+ */
+const STATS_URL = RAW + "player_stats.json";
+let STATS = null, STATSREQ = false, ID2CODE = {}, CARD = null;
+function ensureStats(then) {
+  if (STATS) { then(); return; }
+  if (!STATSREQ) {
+    STATSREQ = true;
+    fetch(STATS_URL, { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(j => {
+        STATS = j;
+        for (const c in j.players || {}) ID2CODE[j.players[c].id] = c;
+        drawCard();
+      })
+      .catch(e => { ERR.stats = String(e.message || e); drawCard(); });
+  }
+  then();
+}
+document.addEventListener("click", ev => {
+  const el = ev.target && ev.target.closest && ev.target.closest("[data-pk],[data-pkid]");
+  if (!el) return;
+  const code = el.dataset.pk || ID2CODE[el.dataset.pkid];
+  CARD = code || { id: el.dataset.pkid };
+  ensureStats(drawCard);
+});
+function closeCard() { CARD = null; drawCard(); }
+window.addEventListener("keydown", e => { if (e.key === "Escape" && CARD) closeCard(); });
+function drawCard() {
+  let back = $("pkback");
+  if (!CARD) { if (back) back.remove(); document.body.style.overflow = ""; return; }
+  // clicked from a squad before the stats file landed: resolve the id now
+  if (typeof CARD !== "string" && STATS) CARD = ID2CODE[CARD.id] || CARD;
+  if (!back) {
+    back = document.createElement("div");
+    back.id = "pkback"; back.className = "back";
+    back.addEventListener("click", e => { if (e.target === back) closeCard(); });
+    document.body.appendChild(back);
+  }
+  document.body.style.overflow = "hidden";
+  back.innerHTML = `<div class="modal">${cardHTML()}</div>`;
+  const x = back.querySelector(".x");
+  if (x) x.addEventListener("click", closeCard);
+}
+const tile = (l, v) => `<div class="pkt"><b>${v}</b><span>${esc(l)}</span></div>`;
+const PKSTATUS = { d: "A doubt", i: "Injured", s: "Suspended", u: "Unavailable", n: "Not available" };
+function cardHTML() {
+  const code = typeof CARD === "string" ? CARD : null;
+  const S = (STATS && STATS.players && code) ? STATS.players[code] : null;
+  const P = ((PUB && PUB.players) || []).find(x => String(x.code) === String(code)) || null;
+  if (!S && !P) {
+    return `<div class="pkhd"><div><h2>Player</h2></div><button class="x">&#10005;</button></div>
+      <div class="pkempty">${ERR.stats ? "Could not load the stats file (" + esc(ERR.stats) + ")."
+        : "Loading his numbers&hellip;"}</div>`;
+  }
+  const name = (S && S.name) || (P && P.name) || "Player";
+  const pos = (S && S.pos) || (P && P.pos) || "";
+  const tid = P ? P.team : (S && S.team);
+  const own = P && P.owner ? (mgrName(P.owner) || "owned") : "free agent";
+  const st = (S && S.s) || {};
+  const g = k => st[k] != null ? st[k] : 0;
+  let h = `<div class="pkhd"><div>
+    <h2>${esc(name)} <span class="pos ${pos}">${pos}</span></h2>
+    <div class="sub">${[S && S.full, clubLong(tid), own].filter(Boolean).map(esc).join(" &middot; ")}</div>
+    </div><button class="x" title="Close">&#10005;</button></div>`;
+  if (S && (S.news || (S.status && S.status !== "a"))) {
+    h += `<div class="pkalert">${esc(PKSTATUS[S.status] || "Fitness note")}${
+      S.news ? ": " + esc(S.news) : ""}</div>`;
+  }
+  h += `<div class="pkg">
+    ${tile("points", g("total_points"))}${tile("per game", g("points_per_game"))}
+    ${tile("form", g("form"))}${tile("minutes", g("minutes"))}
+    ${tile("starts", g("starts"))}${tile("goals", g("goals_scored"))}
+    ${tile("assists", g("assists"))}${tile(pos === "GKP" || pos === "DEF" ? "clean sheets" : "bonus",
+      pos === "GKP" || pos === "DEF" ? g("clean_sheets") : g("bonus"))}
+    ${pos === "GKP" ? tile("saves", g("saves")) : ""}
+    ${P && P.next ? tile("next", esc(P.next)) : ""}</div>`;
+  const cols = (STATS && STATS.log_cols) || [];
+  const log = (S && S.log) || [];
+  if (log.length) {
+    const i = k => cols.indexOf(k);
+    h += `<div class="wrap"><table class="pklog">
+      <tr>${ths(["GW", "num"])}<th>opponent</th>${ths(["mins", "num"], ["pts", "num"],
+        ["G", "num"], ["A", "num"], ["CS", "num"], ["B", "num"])}</tr>`;
+    for (const r of [...log].reverse()) {
+      const opp = String(r[i("opp")] || "");
+      h += `<tr><td class="num">${esc(r[i("gw")])}</td>
+        <td><span class="run">${esc(r[i("home")] ? opp.toUpperCase() : opp.toLowerCase())}</span>
+          <span class="tm">${r[i("home")] ? "home" : "away"}</span></td>
+        <td class="num">${esc(r[i("min")])}</td><td class="num"><b>${esc(r[i("pts")])}</b></td>
+        <td class="num">${esc(r[i("g")])}</td><td class="num">${esc(r[i("a")])}</td>
+        <td class="num">${esc(r[i("cs")])}</td><td class="num">${esc(r[i("b")])}</td></tr>`;
+    }
+    h += `</table></div><div class="note">Every match he has appeared in this season, newest first.
+      Upper case is a home game.</div>`;
+  } else {
+    h += `<div class="pkempty">${STATS ? "No appearances this season yet."
+      : "Loading his match log&hellip;"}</div>`;
+  }
+  return h;
 }
 
 /* ---------------- My squad ---------------- */
@@ -85,10 +229,9 @@ function renderSquad() {
       <td class="num">${S(f, "form")}</td><td class="num">${S(f, "points_per_game")}</td>
       ${SHOW_PRICES ? `<td class="num">${priceOf(p.code) != null ? "&pound;" + priceOf(p.code).toFixed(1) : "-"}</td>` : ""}</tr>`;
   };
-  const rhead = `<tr><th>player</th><th></th><th>next</th><th class="num">pts</th>
-    <th class="num">G</th><th class="num">A</th><th class="num">CS</th><th class="num">B</th>
-    <th class="num">mins</th><th class="num">form</th><th class="num">PPG</th>
-    ${SHOW_PRICES ? `<th class="num">value</th>` : ""}</tr>`;
+  const rhead = `<tr>${th("player")}<th></th>${ths("next", ["pts", "num"], ["G", "num"],
+    ["A", "num"], ["CS", "num"], ["B", "num"], ["mins", "num"], ["form", "num"], ["PPG", "num"])}
+    ${SHOW_PRICES ? th("value", "num") : ""}</tr>`;
   const cell = p => {
     const full = byCode[p.id] || {};
     const mark = p.subbed_in ? `<span class="subin">IN</span> ` :
@@ -104,9 +247,8 @@ function renderSquad() {
       <td class="num">${S(full, "assists")}</td>
       <td class="num">${S(full, "minutes")}</td></tr>`;
   };
-  const head = `<tr><th>player</th><th></th><th>next</th><th class="num">played</th>
-    <th class="num">GW</th><th class="num">season</th><th class="num">G</th>
-    <th class="num">A</th><th class="num">mins</th></tr>`;
+  const head = `<tr>${th("player")}<th></th>${ths("next", ["played", "num"], ["GW", "num"],
+    ["season", "num"], ["G", "num"], ["A", "num"], ["mins", "num"])}</tr>`;
   sec.innerHTML = `${roster.length ? `<div class="card"><b class="h">Squad · ${esc(m.team)}</b>
     <div class="note">The fifteen you hold now, with this season's totals as the game reports them.</div>
     <div class="wrap"><table>${rhead}${roster.map(rcell).join("")}</table></div></div>` : ""}
@@ -138,8 +280,8 @@ function renderLeague() {
     return n ? t : null;
   };
   let h = `<div class="card"><b class="h">Gameweek ${PUB.gw}</b><div class="wrap"><table>
-    <tr><th></th><th>manager</th><th class="num">GW</th><th class="num">bench</th>
-    <th class="num">to play</th><th class="num">season</th>${SHOW_PRICES ? `<th class="num">value</th>` : ""}<th></th></tr>`;
+    <tr><th></th>${ths("manager", ["GW", "num"], ["bench", "num"], ["to play", "num"],
+      ["season", "num"])}${SHOW_PRICES ? th("value", "num") : ""}<th></th></tr>`;
   rows.forEach((m, i) => {
     const v = value(m);
     h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-e="${m.entry}">
@@ -170,9 +312,9 @@ function squadHTML(m, byId) {
   };
   const xi = m.squad.filter(counting), bn = m.squad.filter(p => !counting(p));
   return `<div class="det"><div class="wrap"><table>
-    <tr><th>${esc(m.name)}'s XI</th><th></th><th>next</th><th class="num">played</th>
-    <th class="num">GW</th><th class="num">season</th><th class="num">G</th><th class="num">A</th>
-    ${SHOW_PRICES ? `<th class="num">value</th>` : ""}</tr>
+    <tr><th title="${esc(TIPS.player)}">${esc(m.name)}'s XI</th><th></th>
+    ${ths("next", ["played", "num"], ["GW", "num"], ["season", "num"], ["G", "num"], ["A", "num"])}
+    ${SHOW_PRICES ? th("value", "num") : ""}</tr>
     ${xi.map(cell).join("")}
     <tr class="benchsep"><td colspan="${SHOW_PRICES ? 9 : 8}">Bench · ${m.bench} pts</td></tr>
     ${bn.map(cell).join("")}</table></div></div>`;
@@ -203,7 +345,9 @@ function renderPlayers() {
   }).slice(0, 400);
   let h = `<input type="search" id="pq" placeholder="Search a player or club" value="${esc(PQ)}">
     <div class="card"><div class="wrap"><table><tr>` +
-    cols.map(([k, lab, num]) => `<th class="s ${num ? "num" : ""}" data-k="${k}">${lab}${PSORT.k === k ? (PSORT.dir < 0 ? " &darr;" : " &uarr;") : ""}</th>`).join("") + `</tr>`;
+    cols.map(([k, lab, num]) => `<th class="s ${num ? "num" : ""}" data-k="${k}"
+      title="${esc((TIPS[lab] || "") + (TIPS[lab] ? " " : "") + "Click to sort.")}">${esc(lab)}${
+      PSORT.k === k ? (PSORT.dir < 0 ? " &darr;" : " &uarr;") : ""}</th>`).join("") + `</tr>`;
   for (const p of list) {
     const own = mgrName(p.owner);
     h += `<tr class="${p.owner === ME ? "mine-row" : ""}">${nameCell(p)}
@@ -512,8 +656,8 @@ function renderLive() {
       : ctx.next ? `Next kick-off ${koText(ctx.next)}` : `GW${LIVE.gw}`;
   let h = `<div class="card scorecard"><b class="h">Gameweek ${LIVE.gw}</b>
     <div class="lvstatus">${status} · feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC</div>
-    <div class="wrap"><table><tr><th></th><th>manager</th><th class="num">GW</th>
-    <th class="num">on pitch</th><th class="num">to play</th><th class="num">bench</th><th></th></tr>`;
+    <div class="wrap"><table><tr><th></th>${ths("manager", ["GW", "num"], ["on pitch", "num"],
+      ["to play", "num"], ["bench", "num"])}<th></th></tr>`;
   ctx.mgrs.forEach((m, i) => {
     h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-l="${m.entry}"><td class="tm">${i + 1}</td>
       <td><span class="nm">${esc(m.name)}</span> <span class="tm">${esc(m.team)}</span></td>
@@ -535,7 +679,7 @@ function renderLive() {
       ? `<span class="fxmin">${f.min || 0}'</span>` : `<span class="fxmin ko">${koText(f.ko)}</span>`;
     h += `<div><div class="fxrow"><span class="fxscore"><span class="tm">${esc(LIVE.teams[f.h] || f.h)}</span>
       ${f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v"} <span class="tm">${esc(LIVE.teams[f.a] || f.a)}</span></span>${st}</div>
-      <div class="fxplayers">${chips.length ? chips.map(c => `<span class="fxchip ${c.mine ? "mine" : ""}">${esc(c.p.name)}
+      <div class="fxplayers">${chips.length ? chips.map(c => `<span class="fxchip ${c.mine ? "mine" : ""}">${nameTag(c.p)}
         ${f.started ? c.p.pts : ""}${c.p.pb ? `<span class="provb">+${c.p.pb}</span>` : ""}
         <span class="who">· ${esc(c.who)}</span></span>`).join("") :
       `<span class="tm" style="font-size:11px">nobody in the league has a starter here</span>`}</div></div>`;
@@ -551,13 +695,14 @@ function liveSquad(m) {
     const mark = p.subbed_in ? `<span class="subin">IN</span> ` : p.subbed_out ? `<span class="subout">OUT</span> ` : "";
     const st = p.playing ? (p.mins ? `<span class="fxmin">${p.mins}'</span>` : `<span class="tm">on bench</span>`)
       : p.settled ? (p.mins ? `${p.mins}'` : `<span class="tm">did not play</span>`) : `<span class="togo">to play</span>`;
-    return `<tr><td>${mark}<span class="nm">${esc(p.name)}</span> <span class="tm">${esc(p.team)}</span></td>
+    return `<tr><td>${mark}${nameTag(p)} <span class="tm">${esc(p.team)}</span></td>
       <td><span class="pos ${p.pos}">${p.pos}</span></td><td class="num">${st}</td>
       <td class="num">${p.pts}${p.pb ? ` <span class="provb">+${p.pb}b</span>` : ""}</td></tr>`;
   };
   const xi = m.squad.filter(p => m.counting.includes(p)), bn = m.squad.filter(p => !m.counting.includes(p));
   return `<div class="det"><div class="wrap"><table>
-    <tr><th>${esc(m.name)}'s XI</th><th></th><th class="num">played</th><th class="num">pts</th></tr>
+    <tr><th title="${esc(TIPS.player)}">${esc(m.name)}'s XI</th><th></th>
+    ${ths(["played", "num"], ["GW", "num"])}</tr>
     ${xi.map(cell).join("")}<tr class="benchsep"><td colspan="4">Bench · ${m.bench} pts</td></tr>
     ${bn.map(cell).join("")}</table></div></div>`;
 }

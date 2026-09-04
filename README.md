@@ -149,6 +149,21 @@ that reorders the top of the board without being right often enough to pay
 for the churn. Accuracy on the average player and accuracy on the eleven
 you actually pick are not the same thing.
 
+## When the archive lags
+pull() used to stand down from reconstructing the live season the moment
+the public archive published anything for it. The archive published
+gameweek 1 and stopped, which overwrote the reconstruction with a file one
+gameweek short and then skipped rebuilding it. The panel fitted without the
+newest gameweek, availability read it, and the match logs behind every
+player card ended a week early - and it would have stayed that way all
+season, since the archive always lags.
+
+The reconstruction now runs every time. livegws.write keeps the rows
+already in the file and only adds the finished gameweeks it is missing, so
+this is strictly additive: the archive still owns the gameweeks it has
+published, it just no longer holds the newest one hostage. The refresh
+prints which gameweeks are present and which it had to add.
+
 ## The live season
 The public archive does not publish a season's per-gameweek rows until
 weeks into it, so build() spent the opening weeks fitting on last season
@@ -195,8 +210,14 @@ outranks real data.
 
 site/ is published to GitHub Pages by .github/workflows/pages.yml: it uploads
 the directory as-is on any push to main that touches site/, and on manual
-dispatch. Live at https://justinwaddy.github.io/schwaddy-fpl/, with
-/compare/ and /draft_room.html alongside it.
+dispatch. Live at https://justinwaddy.github.io/schwaddy-fpl/.
+
+The root is a landing page listing the six managers, since the other five
+now have links to this site and the base URL is where they will land. The
+full engine dashboard sits at /justino/, with /compare/ and
+/draft_room.html alongside it at the root as before. The landing page does
+not link /justino/: it is a public URL like everything else here, but it
+is not advertised to the league.
 
 One switch has to be flipped by hand, once: Settings -> Pages -> Build and
 deployment -> Source -> "GitHub Actions". Until that is set the workflow
@@ -231,6 +252,13 @@ manager looking at his own page would have seen players he no longer had.
 Each manager therefore carries his roster as it stands now as well, and
 the page leads with that; the gameweek eleven sits underneath it, labelled
 as the week it scored.
+
+Clicking any player name on any of the six pages opens a card: his season
+totals and every match he has played, straight from the game. The stats
+file behind it is a quarter of a megabyte and most visits never open a
+card, so it is fetched on the first click rather than on load. Column
+headings carry a tooltip saying what the column is, which the three-letter
+ones need.
 
 The six pages share site/team.css and site/team.js. Each index.html is
 twenty lines that name the manager and load them, so there is one copy of

@@ -101,3 +101,19 @@ font:14px "IBM Plex Sans",system-ui}
 .msg.err{color:var(--red)}.msg.ok{color:var(--green)}
 .x{margin-left:auto;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
 color:var(--dim);font:600 14px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer;padding:5px 11px}
+
+/* player card: any name on the page opens it */
+.pk{cursor:pointer;border-bottom:1px dotted var(--line)}
+.pk:hover,.pk:active{color:var(--blue);border-bottom-color:var(--blue)}
+.pkhd{display:flex;gap:10px;align-items:flex-start;position:sticky;top:-14px;z-index:1;
+background:var(--panel);padding:4px 0 8px;border-bottom:1px solid var(--line)}
+.pkhd h2{font:600 25px "Barlow Condensed",system-ui;letter-spacing:.03em;text-transform:uppercase;line-height:1.1}
+.pkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(84px,1fr));gap:6px;margin:8px 0 4px}
+.pkt{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.pkt b{display:block;font:600 17px "IBM Plex Mono",ui-monospace,monospace}
+.pkt span{color:var(--dim);font:600 10px "IBM Plex Mono",ui-monospace,monospace;text-transform:uppercase;
+letter-spacing:.05em;white-space:nowrap}
+.pkalert{border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px;
+background:rgba(232,161,60,.13);border:1px solid var(--amber)}
+.pklog td,.pklog th{font-size:12px;padding:5px 4px}
+.pkempty{color:var(--dim);font-size:12px;padding:6px 2px}

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schwaddy Engine · 27 Richmond Road Cup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0F1A31;--panel:#16233F;--panel2:#1C2B4D;--line:#26365C;--ink:#E9EEF8;
+--dim:#8FA0C4;--blue:#4A7FE0;--amber:#E8A13C;--green:#5FBF77;--red:#D95757;
+--gkp:#3FB8AF;--def:#5B8DEF;--mid:#6FBF73;--fwd:#E0854A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",sans-serif}
+header{padding:16px 14px 8px}
+h1{font:600 30px "Barlow Condensed";letter-spacing:.04em;text-transform:uppercase}
+h1 em{color:var(--blue);font-style:normal}
+.sub{color:var(--dim);font:500 12px "IBM Plex Mono"}
+nav{display:flex;gap:6px;padding:10px 12px;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);z-index:5}
+.tab{background:var(--panel);border:1px solid var(--line);border-radius:8px;color:var(--dim);
+padding:8px 13px;font:600 13px "IBM Plex Sans";cursor:pointer}
+.tab.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+section{padding:8px 12px 40px;display:none}section.on{display:block}
+table{width:100%;border-collapse:collapse}
+th,td{padding:7px 6px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{font:600 11px "IBM Plex Mono";color:var(--dim);cursor:pointer;white-space:nowrap}
+td.num{font:500 13px "IBM Plex Mono";text-align:right;white-space:nowrap}
+.pos{font:600 11px "IBM Plex Mono";padding:2px 5px;border-radius:4px;color:#0F1A31}
+.GKP{background:var(--gkp)}.DEF{background:var(--def)}.MID{background:var(--mid)}.FWD{background:var(--fwd)}
+.nm{font-weight:600}.tm{color:var(--dim);font-size:12px}
+.run{font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.4px;white-space:nowrap}
+.fx{font-size:11px;padding:1px 4px;border-radius:4px;font-weight:600}
+.fx-good,.run.fx-good{color:var(--green)}
+.fx-bad,.run.fx-bad{color:var(--red)}
+.fx-mid,.run.fx-mid{color:var(--dim)}
+.fx{background:var(--panel2)}
+.flag{color:var(--amber);font-size:11px;display:block}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+.card b.h{font:600 15px "Barlow Condensed";letter-spacing:.03em;text-transform:uppercase;color:var(--dim)}
+.gain{color:var(--green);font:600 13px "IBM Plex Mono"}
+.bar{height:8px;border-radius:4px;background:var(--blue)}
+input[type=search]{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;
+color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans";margin:6px 0}
+.note{color:var(--dim);font-size:12px;padding:8px 2px}
+svg.spark{vertical-align:middle}
+.mine-row{background:rgba(74,127,224,.10)}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--dim);
+padding:5px 12px;font:600 12px "IBM Plex Sans";cursor:pointer;margin:2px 6px 8px 0}
+.chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+.ev{display:flex;gap:9px;padding:8px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.ev:last-child{border-bottom:none}
+.badge{font:600 10px "IBM Plex Mono";padding:2px 6px;border-radius:4px;color:#0F1A31;white-space:nowrap}
+.b-injury{background:var(--red)}.b-recovery{background:var(--green)}.b-haul{background:var(--amber)}
+.b-score{background:var(--blue)}.b-overtake{background:var(--amber)}.b-move{background:var(--dim)}
+.b-live{background:var(--green)}.b-projection{background:var(--blue)}.b-squad{background:var(--mid)}
+.b-lowlight{background:var(--red)}.b-freeagent{background:var(--gkp)}.b-bench{background:var(--fwd)}
+.b-race{background:var(--amber)}
+.b-flop{background:var(--red)}.b-wrap{background:var(--blue)}.b-pint{background:var(--amber)}
+.b-headline{background:var(--ink)}
+.ev a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--line)}
+.ev a:hover{border-bottom-color:var(--blue)}
+.wk tr.clk{cursor:pointer}.wk tr.clk:hover td{background:var(--panel2)}
+.wk td,.wk th{padding:7px 5px}
+.chev{color:var(--dim);font:11px "IBM Plex Mono"}
+.det{background:var(--panel2);border-radius:8px;padding:2px 10px 8px;margin:2px 0 8px}
+.det table{margin:0}.det td{border-bottom:1px solid var(--line);font-size:13px}
+.subin{color:var(--green);font:600 10px "IBM Plex Mono"}
+.subout{color:var(--red);font:600 10px "IBM Plex Mono";text-decoration:line-through}
+.togo{color:var(--amber);font:11px "IBM Plex Mono"}
+.benchsep td{color:var(--dim);font:600 10px "IBM Plex Mono";text-transform:uppercase;
+letter-spacing:.08em;border-bottom:none;padding-top:10px}
+.pill{display:inline-block;font:600 10px "IBM Plex Mono";padding:1px 6px;border-radius:9px;
+background:var(--panel);border:1px solid var(--line);color:var(--dim)}
+.scorecard{border-color:var(--blue)}
+.bigline{font:600 14px "IBM Plex Mono";line-height:1.7;padding:3px 0}
+.daysep{font:600 10px "IBM Plex Mono";color:var(--dim);text-transform:uppercase;
+letter-spacing:.08em;padding:11px 2px 5px}
+.ev .when{color:var(--dim);font:11px "IBM Plex Mono";white-space:nowrap}
+.holdcard{border-color:var(--green)}
+.livedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);
+margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+.lvstatus{font:600 12px "IBM Plex Mono";color:var(--dim);padding:2px 0 6px}
+.lvstatus b{color:var(--ink)}
+.lv tr.clk{cursor:pointer}.lv tr.clk:hover td{background:var(--panel2)}
+.lv td.num.live{color:var(--green)}
+.fxrow{display:flex;justify-content:space-between;align-items:baseline;padding:9px 2px 2px}
+.fxscore{font:600 17px "Barlow Condensed";letter-spacing:.04em}
+.fxscore .tm{font:600 17px "Barlow Condensed";letter-spacing:.04em}
+.fxmin{font:600 12px "IBM Plex Mono";color:var(--green);white-space:nowrap}
+.fxmin.ft{color:var(--dim)}.fxmin.ko{color:var(--amber)}
+.fxplayers{display:flex;flex-wrap:wrap;gap:4px;padding:3px 2px 9px;border-bottom:1px solid var(--line)}
+.fxwrap>div:last-child .fxplayers{border-bottom:none}
+.fxchip{font:500 11px "IBM Plex Mono";background:var(--panel2);border-radius:4px;padding:2px 6px;
+color:var(--ink);border:1px solid transparent}
+.fxchip.mine{border-color:var(--blue)}
+.fxchip .who{color:var(--dim)}
+.provb{color:var(--amber);font:600 10px "IBM Plex Mono";white-space:nowrap}
+.stale{color:var(--amber);font-size:12px;padding:4px 2px}
+/* player card: any name on the page opens it */
+.pk{cursor:pointer;border-bottom:1px dotted var(--line)}
+.pk:hover,.pk:active{color:var(--blue);border-bottom-color:var(--blue)}
+.pkback{position:fixed;inset:0;background:rgba(8,14,28,.78);z-index:20;
+display:flex;align-items:flex-end;justify-content:center}
+.pkcard{background:var(--panel);border:1px solid var(--line);border-radius:14px 14px 0 0;
+width:100%;max-width:680px;max-height:92vh;overflow-y:auto;padding:12px 13px 30px}
+.pkcard th{cursor:default}
+@media(min-width:620px){.pkback{align-items:center}.pkcard{border-radius:14px}}
+.pkhd{display:flex;gap:10px;align-items:flex-start;position:sticky;top:-12px;z-index:1;
+background:var(--panel);padding:4px 0 8px;border-bottom:1px solid var(--line)}
+.pkhd h2{font:600 25px "Barlow Condensed";letter-spacing:.03em;text-transform:uppercase;line-height:1.1}
+.pkx{margin-left:auto;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
+color:var(--dim);font:600 14px "IBM Plex Mono";cursor:pointer;padding:5px 11px}
+.pkx:hover{color:var(--ink);border-color:var(--blue)}
+.pkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:6px;margin:8px 0 4px}
+.pkt{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.pkt b{display:block;font:600 17px "IBM Plex Mono"}
+.pkt span{color:var(--dim);font:600 10px "IBM Plex Mono";text-transform:uppercase;
+letter-spacing:.05em;white-space:nowrap}
+.pkalert{border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px;
+background:rgba(217,87,87,.13);border:1px solid var(--red)}
+.pkalert.warn{background:rgba(232,161,60,.13);border-color:var(--amber)}
+.pklog td,.pklog th{font-size:12px;padding:5px 4px}
+.pkempty{color:var(--dim);font-size:12px;padding:6px 2px}
+/* Claude's claims: the research card above the model's board */
+.clcard{border-color:var(--amber)}
+.clsub{color:var(--dim);font:500 12px "IBM Plex Mono";padding:3px 0 2px}
+.clsum{font-size:14px;padding:5px 0 6px;border-bottom:1px solid var(--line)}
+.cl{padding:9px 0;border-bottom:1px solid var(--line)}.cl:last-child{border-bottom:none}
+.clhd{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.clno{font:600 16px "Barlow Condensed";color:var(--amber);min-width:14px}
+.clarr{color:var(--dim);font:600 10px "IBM Plex Mono";text-transform:uppercase;letter-spacing:.06em}
+.clwhy{font-size:14px;padding:4px 0 0 22px}
+.clmod{color:var(--dim);font-size:12px;padding:3px 0 0 22px}
+.clsrc{padding:4px 0 0 22px;display:flex;flex-wrap:wrap;gap:3px 12px}
+.clsrc a{color:var(--blue);text-decoration:none;font:500 12px "IBM Plex Sans";border-bottom:1px solid var(--line)}
+.clsrc a:hover{border-bottom-color:var(--blue)}
+.conf{font:600 10px "IBM Plex Mono";padding:1px 6px;border-radius:9px;border:1px solid var(--line);color:var(--dim)}
+.conf-high{color:var(--green);border-color:var(--green)}.conf-low{color:var(--amber);border-color:var(--amber)}
+.loss{color:var(--red);font:600 13px "IBM Plex Mono"}
+/* Starters: will each of my players start this gameweek */
+.st{padding:9px 0;border-bottom:1px solid var(--line)}.st:last-child{border-bottom:none}
+.sthd{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+.stat{font:600 10px "IBM Plex Mono";padding:2px 7px;border-radius:9px;color:#0F1A31;white-space:nowrap;
+text-transform:uppercase;letter-spacing:.05em;min-width:52px;text-align:center}
+.s-start{background:var(--green)}.s-likely{background:var(--gkp)}.s-doubt{background:var(--amber)}
+.s-bench{background:var(--dim)}.s-out{background:var(--red)}.s-none{background:var(--panel2);color:var(--dim)}
+.stv{font-weight:600;font-size:13px}
+.stnote{font-size:13px;padding:3px 0 0 22px}
+.pill.warn{color:var(--amber);border-color:var(--amber)}
+/* sortable tables: the active column and its direction */
+th.on{color:var(--ink)}
+.mk td,.mk th{padding:6px 5px}
+.up{color:var(--green)}.dn{color:var(--red)}
+</style></head>
+<body>
+<header>
+<h1>Schwaddy <em>Engine</em></h1>
+<div class="sub" id="meta">loading…</div>
+<div class="sub"><a href="../compare/" style="color:var(--blue)">Compare predictions
+  &rsaquo;</a> <span class="tm">this model against FPL's own numbers and two
+  simple baselines</span></div>
+</header>
+<nav>
+<button class="tab on" data-v="squad">My squad</button>
+<button class="tab" data-v="live" id="livetab">Live</button>
+<button class="tab" data-v="waivers">Waivers</button>
+<button class="tab" data-v="starters">Starters</button>
+<button class="tab" data-v="news">News</button>
+<button class="tab" data-v="league">League</button>
+<button class="tab" data-v="players">All players</button>
+</nav>
+<section id="squad" class="on"></section>
+<section id="live"></section>
+<section id="waivers"></section>
+<section id="starters"></section>
+<section id="news"></section>
+<section id="league"></section>
+<section id="players"></section>
+<script>
+const RAW_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/predictions.json";
+// Live tab: URL of the Cloudflare worker in live/worker.js. Empty = tab
+// shows the cron snapshot and the setup note. See live/README.md.
+const LIVE_URL="https://schwaddy-live.justinl-waddy.workers.dev/";
+const FALLBACK={"generated":"2026-08-23T07:32:17","lambda_time":0.03,"lambda_nn":null,"players":[{"code":"141746","n_career":170,"name":"B.Fernandes","pos":"MID","team":16,"status":"a","news":"","avail":1.0,"gw":[5.41,5.54,5.21,5.37,5.04,5.37,5.26,5.52,5.12,5.35,5.37,5.51,5.18,5.68,5.15,4.8,5.57,5.5,5.38,5.58,5.23,5.61,5.17,5.43,5.29,5.13,5.1,5.01,5.4,5.09,5.54,5.27,5.46,5.31,5.12,5.6,5.2,5.4],"rest":202.27,"owner":363607,"mine":false},{"code":"178301","n_career":178,"name":"Watkins","pos":"FWD","team":2,"status":"a","news":"","avail":1.0,"gw":[4.4,4.16,4.44,4.74,4.28,4.41,4.38,4.37,4.52,4.24,4.67,4.45,4.48,4.7,4.4,4.35,4.78,4.72,4.62,4.37,4.64,4.45,4.62,4.26,4.53,4.34,4.65,4.23,4.63,4.46,4.53,3.89,4.7,4.33,4.23,4.73,3.99,4.64],"rest":169.32999999999996,"owner":372099,"mine":true},{"code":"226597","n_career":161,"name":"Gabriel","pos":"DEF","team":1,"status":"a","news":"","avail":0.92,"gw":[4.68,4.23,4.5,4.35,4.05,4.38,4.23,4.49,4.23,4.49,4.44,4.3,4.19,4.48,4.51,4.5,4.34,4.34,4.79,4.56,4.39,4.66,3.99,4.51,4.24,4.43,4.31,4.33,4.21,4.56,4.34,4.45,4.32,4.61,4.21,4.55,4.15,4.38],"rest":166.72000000000003,"owner":421435,"mine":false},{"code":"446008","n_career":166,"name":"Mbeumo","pos":"MID","team":16,"status":"a","news":"","avail":1.0,"gw":[4.34,4.47,4.13,4.3,3.97,4.29,4.18,4.44,4.05,4.27,4.3,4.43,4.1,4.6,4.08,3.72,4.5,4.43,4.31,4.51,4.16,4.53,4.09,4.35,4.22,4.06,4.02,3.93,4.32,4.01,4.47,4.2,4.39,4.24,4.05,4.53,4.13,4.33],"rest":161.45000000000002,"owner":299912,"mine":false},{"code":"222531","n_career":146,"name":"Gibbs-White","pos":"MID","team":18,"status":"a","news":"","avail":0.92,"gw":[4.53,4.15,4.46,4.22,4.28,3.91,3.93,4.21,4.07,4.06,4.28,4.37,4.1,4.42,4.05,4.36,4.2,4.26,4.57,4.47,3.95,4.49,4.06,4.35,4.02,4.27,4.16,4.28,4.17,4.43,4.19,4.37,4.33,4.08,4.21,3.78,4.33,4.14],"rest":160.51000000000002,"owner":45811,"mine":false},{"code":"97032","n_career":168,"name":"Virgil","pos":"DEF","team":14,"status":"a","news":"","avail":1.0,"gw":[4.12,4.18,4.03,4.33,3.8,3.74,3.92,4.13,3.68,3.81,4.3,3.94,4.03,4.05,4.23,4.31,4.12,3.98,4.5,3.93,4.21,4.02,4.11,3.47,3.9,4.19,4.09,4.0,4.22,4.04,4.25,3.91,4.03,4.2,3.56,4.26,3.76,4.16],"rest":153.51,"owner":282287,"mine":false},{"code":"424876","n_career":102,"name":"Szoboszlai","pos":"MID","team":14,"status":"a","news":"","avail":1.0,"gw":[4.06,4.12,3.97,4.27,3.74,3.68,3.86,4.07,3.62,3.76,4.24,3.88,3.97,3.99,4.18,4.25,4.06,3.92,4.44,3.87,4.15,3.96,4.05,3.41,3.84,4.13,4.04,3.94,4.16,3.99,4.19,3.85,3.97,4.14,3.5,4.21,3.7,4.11],"rest":151.29,"owner":282287,"mine":false},{"code":"223094","n_career":125,"name":"Haaland","pos":"FWD","team":15,"status":"a","news":"","avail":0.76,"gw":[4.19,3.85,4.14,3.97,3.9,3.75,4.11,3.86,3.96,3.81,4.16,3.57,4.05,3.98,4.04,4.14,4.01,3.93,4.32,3.97,4.11,3.91,3.7,3.85,3.87,4.06,3.98,3.94,3.9,4.14,3.9,4.03,3.88,4.1,3.99,3.98,3.96,3.79],"rest":150.79999999999998,"owner":372099,"mine":true},{"code":"244851","n_career":112,"name":"Palmer","pos":"MID","team":6,"status":"a","news":"","avail":0.92,"gw":[3.84,3.9,3.35,4.18,3.59,3.82,3.69,4.07,3.88,3.61,4.16,3.76,3.85,4.12,3.49,3.95,3.91,3.89,4.25,3.75,3.97,3.9,3.91,3.69,3.7,3.97,3.76,3.91,3.52,3.91,3.97,3.66,3.77,3.79,3.71,4.01,3.67,3.93],"rest":145.80999999999997,"owner":45811,"mine":false},{"code":"200720","n_career":59,"name":"Kelleher","pos":"GKP","team":4,"status":"a","news":"","avail":1.0,"gw":[4.2,3.79,3.94,3.91,3.8,3.49,3.98,3.82,3.9,3.57,4.09,3.73,3.44,3.87,3.7,4.07,3.91,3.89,4.18,3.34,3.97,3.81,3.9,3.7,3.59,3.98,3.85,3.91,3.62,4.14,3.82,4.04,4.0,3.5,3.81,3.82,3.95,3.65],"rest":145.67999999999998,"owner":363607,"mine":false},{"code":"502500","n_career":46,"name":"Thiago","pos":"FWD","team":4,"status":"a","news":"","avail":1.0,"gw":[4.2,3.79,3.94,3.91,3.8,3.49,3.98,3.81,3.9,3.57,4.09,3.73,3.44,3.87,3.69,4.06,3.91,3.89,4.18,3.34,3.97,3.81,3.9,3.7,3.58,3.98,3.85,3.91,3.62,4.13,3.82,4.04,4.0,3.5,3.81,3.82,3.95,3.65],"rest":145.63,"owner":282287,"mine":false},{"code":"215413","n_career":99,"name":"Dewsbury-Hall","pos":"MID","team":9,"status":"a","news":"","avail":1.0,"gw":[4.05,3.74,3.96,3.96,3.88,3.59,3.92,3.29,3.7,3.96,3.85,4.02,3.57,4.09,3.62,3.73,4.02,3.81,4.02,3.98,3.84,4.09,3.68,4.01,3.93,3.58,4.03,3.32,3.64,4.18,3.68,3.99,3.92,3.73,3.91,3.76,3.42,3.73],"rest":145.19999999999996,"owner":299912,"mine":false},{"code":"215379","n_career":116,"name":"Anderson","pos":"MID","team":15,"status":"a","news":"","avail":0.68,"gw":[2.88,2.57,2.84,2.68,3.85,3.65,4.13,3.8,3.93,3.73,4.2,3.41,4.05,3.96,4.04,4.17,3.99,3.89,4.41,3.94,4.13,3.86,3.58,3.79,3.81,4.07,3.96,3.91,3.85,4.17,3.86,4.03,3.83,4.11,3.98,3.96,3.93,3.71],"rest":144.66000000000003,"owner":null,"mine":false},{"code":"17761","n_career":174,"name":"Tarkowski","pos":"DEF","team":9,"status":"a","news":"","avail":1.0,"gw":[3.99,3.68,3.9,3.9,3.82,3.53,3.86,3.23,3.64,3.9,3.79,3.96,3.51,4.03,3.56,3.67,3.96,3.75,3.96,3.92,3.78,4.03,3.62,3.95,3.87,3.52,3.97,3.26,3.58,4.12,3.62,3.93,3.86,3.67,3.85,3.7,3.36,3.67],"rest":142.92,"owner":45811,"mine":false},{"code":"484420","n_career":36,"name":"E.Le Fée","pos":"MID","team":20,"status":"a","news":"","avail":1.0,"gw":[3.79,3.84,3.63,3.56,3.19,3.58,3.6,3.94,3.6,3.75,3.69,3.98,3.53,3.79,3.82,3.84,3.68,3.66,4.17,3.93,3.64,4.04,3.64,3.79,3.57,3.76,3.63,3.68,3.82,3.28,3.93,3.58,3.62,3.94,3.4,3.95,3.56,3.55],"rest":140.95000000000002,"owner":299912,"mine":false},{"code":"153682","n_career":123,"name":"Wilson","pos":"MID","team":13,"status":"a","news":"","avail":0.68,"gw":[2.57,2.68,2.46,2.81,3.73,3.03,3.88,3.63,3.63,3.94,3.79,4.03,3.33,4.13,3.68,3.94,3.74,3.84,4.14,3.73,3.83,4.02,3.69,3.94,3.54,3.81,3.73,3.86,3.81,3.85,3.92,3.67,3.98,3.77,3.36,3.71,3.76,3.58],"rest":138.54,"owner":421435,"mine":false},{"code":"533463","n_career":110,"name":"O.Dango","pos":"MID","team":4,"status":"a","news":"","avail":1.0,"gw":[3.99,3.58,3.73,3.7,3.59,3.28,3.77,3.61,3.69,3.36,3.88,3.52,3.23,3.66,3.49,3.86,3.7,3.68,3.98,3.13,3.76,3.6,3.69,3.49,3.38,3.77,3.64,3.7,3.41,3.93,3.61,3.83,3.79,3.29,3.6,3.61,3.74,3.44],"rest":137.71000000000004,"owner":45811,"mine":false},{"code":"494521","n_career":37,"name":"Truffert","pos":"DEF","team":3,"status":"a","news":"","avail":0.92,"gw":[3.41,3.73,3.6,3.9,3.63,3.32,3.68,3.51,3.76,3.52,3.87,3.54,3.6,3.95,3.1,3.85,3.71,3.57,3.94,3.5,3.88,3.62,3.7,3.56,3.39,3.66,3.65,3.71,3.77,3.64,3.53,3.49,3.38,3.61,3.62,3.53,3.64,3.49],"rest":137.55999999999997,"owner":363607,"mine":false},{"code":"437730","n_career":113,"name":"Semenyo","pos":"MID","team":15,"status":"a","news":"","avail":0.84,"gw":[3.86,3.48,3.8,3.62,3.54,3.37,3.77,3.49,3.61,3.44,3.83,3.17,3.7,3.63,3.69,3.81,3.66,3.57,4.01,3.61,3.77,3.55,3.31,3.49,3.5,3.72,3.63,3.58,3.53,3.81,3.54,3.68,3.52,3.76,3.64,3.63,3.6,3.41],"rest":137.33,"owner":45811,"mine":false},{"code":"85633","n_career":85,"name":"Sels","pos":"GKP","team":18,"status":"a","news":"","avail":1.0,"gw":[3.93,3.51,3.86,3.59,3.65,3.25,3.27,3.57,3.42,3.41,3.65,3.75,3.46,3.8,3.4,3.74,3.57,3.64,3.97,3.87,3.3,3.89,3.41,3.73,3.37,3.65,3.53,3.66,3.53,3.82,3.56,3.76,3.71,3.44,3.58,3.11,3.71,3.5],"rest":136.57000000000002,"owner":null,"mine":false},{"code":"244850","n_career":83,"name":"Rogers","pos":"MID","team":6,"status":"a","news":"","avail":0.62,"gw":[2.52,2.56,2.18,2.75,3.45,3.68,3.55,3.93,3.74,3.47,4.02,3.62,3.71,3.98,3.35,3.81,3.77,3.75,4.11,3.61,3.83,3.76,3.77,3.55,3.56,3.83,3.62,3.77,3.38,3.77,3.83,3.52,3.63,3.65,3.57,3.87,3.53,3.79],"rest":135.79,"owner":363607,"mine":false},{"code":"200834","n_career":32,"name":"Mukiele","pos":"DEF","team":20,"status":"a","news":"","avail":0.92,"gw":[3.63,3.68,3.48,3.42,3.07,3.44,3.46,3.76,3.45,3.59,3.54,3.8,3.39,3.63,3.66,3.67,3.53,3.51,3.97,3.76,3.49,3.86,3.49,3.63,3.42,3.6,3.48,3.53,3.65,3.16,3.76,3.43,3.47,3.77,3.27,3.78,3.42,3.41],"rest":135.05999999999997,"owner":299912,"mine":false},{"code":"111234","n_career":180,"name":"Pickford","pos":"GKP","team":9,"status":"a","news":"","avail":1.0,"gw":[3.78,3.47,3.69,3.68,3.6,3.31,3.64,3.01,3.42,3.68,3.58,3.75,3.3,3.82,3.34,3.45,3.74,3.53,3.74,3.7,3.57,3.81,3.41,3.73,3.66,3.3,3.75,3.04,3.36,3.91,3.4,3.71,3.65,3.45,3.64,3.48,3.14,3.45],"rest":134.68999999999997,"owner":372099,"mine":true},{"code":"465247","n_career":32,"name":"Lammens","pos":"GKP","team":16,"status":"a","news":"","avail":1.0,"gw":[3.6,3.73,3.4,3.56,3.23,3.55,3.44,3.71,3.31,3.53,3.56,3.7,3.36,3.86,3.34,2.98,3.76,3.69,3.57,3.77,3.42,3.8,3.36,3.62,3.48,3.32,3.28,3.2,3.59,3.27,3.73,3.46,3.65,3.5,3.31,3.79,3.39,3.59],"rest":133.41000000000003,"owner":45811,"mine":false},{"code":"247348","n_career":78,"name":"Muñoz","pos":"DEF","team":8,"status":"a","news":"","avail":0.92,"gw":[3.47,3.39,3.4,3.83,3.3,3.43,3.29,3.69,3.41,3.57,3.57,3.71,3.28,3.47,3.58,3.35,3.32,3.73,3.61,3.65,3.46,3.81,3.4,3.67,3.53,3.35,3.63,2.85,3.57,3.56,3.6,3.14,3.39,3.61,3.26,3.61,3.34,3.63],"rest":132.46,"owner":372099,"mine":true},{"code":"430871","n_career":115,"name":"Cunha","pos":"MID","team":16,"status":"a","news":"","avail":0.84,"gw":[3.54,3.65,3.37,3.51,3.23,3.5,3.41,3.63,3.3,3.49,3.51,3.62,3.34,3.76,3.32,3.02,3.68,3.61,3.51,3.68,3.39,3.7,3.34,3.55,3.44,3.31,3.28,3.2,3.53,3.27,3.65,3.43,3.58,3.46,3.3,3.7,3.37,3.53],"rest":131.71,"owner":282287,"mine":false},{"code":"440993","n_career":64,"name":"Ndiaye","pos":"MID","team":9,"status":"a","news":"","avail":1.0,"gw":[3.69,3.38,3.6,3.6,3.52,3.23,3.56,2.93,3.34,3.6,3.5,3.67,3.21,3.73,3.26,3.37,3.66,3.45,3.66,3.62,3.49,3.73,3.33,3.65,3.57,3.22,3.67,2.96,3.28,3.82,3.32,3.63,3.56,3.37,3.56,3.4,3.06,3.37],"rest":131.57000000000002,"owner":421435,"mine":false},{"code":"513418","n_career":101,"name":"Schade","pos":"MID","team":4,"status":"a","news":"","avail":1.0,"gw":[3.81,3.41,3.56,3.52,3.41,3.1,3.59,3.43,3.52,3.19,3.7,3.34,3.06,3.48,3.31,3.68,3.53,3.5,3.8,2.95,3.58,3.43,3.52,3.31,3.2,3.6,3.47,3.52,3.23,3.75,3.44,3.65,3.61,3.12,3.43,3.43,3.56,3.26],"rest":131.00000000000003,"owner":372099,"mine":true},{"code":"221466","n_career":113,"name":"Senesi","pos":"DEF","team":19,"status":"a","news":"","avail":0.62,"gw":[2.44,2.56,2.37,2.6,3.52,3.27,3.75,3.47,3.61,3.46,3.9,3.45,3.61,3.43,3.52,3.52,3.84,3.73,3.47,3.51,3.83,3.54,3.6,3.52,3.38,3.34,3.79,3.37,3.66,3.56,3.72,3.52,3.8,3.09,3.57,3.6,3.59,3.38],"rest":130.89,"owner":null,"mine":false},{"code":"154561","n_career":164,"name":"Raya","pos":"GKP","team":1,"status":"a","news":"","avail":0.84,"gw":[3.71,3.29,3.54,3.41,3.13,3.43,3.3,3.54,3.29,3.54,3.49,3.36,3.26,3.52,3.55,3.54,3.39,3.4,3.81,3.59,3.44,3.69,3.08,3.55,3.3,3.48,3.36,3.39,3.27,3.59,3.39,3.5,3.38,3.65,3.28,3.59,3.22,3.44],"rest":130.69,"owner":372099,"mine":true},{"code":"232928","n_career":110,"name":"Garner","pos":"MID","team":9,"status":"a","news":"","avail":1.0,"gw":[3.65,3.34,3.56,3.55,3.47,3.18,3.52,2.88,3.3,3.56,3.45,3.62,3.17,3.69,3.21,3.32,3.62,3.41,3.62,3.57,3.44,3.69,3.28,3.6,3.53,3.18,3.62,2.91,3.24,3.78,3.27,3.58,3.52,3.33,3.51,3.35,3.02,3.32],"rest":129.85999999999999,"owner":null,"mine":false},{"code":"204480","n_career":177,"name":"Rice","pos":"MID","team":1,"status":"a","news":"","avail":0.84,"gw":[3.67,3.26,3.51,3.37,3.1,3.4,3.27,3.5,3.26,3.5,3.46,3.33,3.22,3.49,3.52,3.51,3.36,3.36,3.77,3.56,3.41,3.65,3.04,3.51,3.27,3.44,3.33,3.36,3.24,3.56,3.36,3.46,3.35,3.61,3.25,3.56,3.19,3.4],"rest":129.41,"owner":282287,"mine":false},{"code":"80201","n_career":152,"name":"Leno","pos":"GKP","team":10,"status":"a","news":"","avail":1.0,"gw":[3.65,3.23,3.53,3.47,3.36,3.17,3.6,3.38,3.18,3.53,3.18,3.61,3.29,3.4,3.54,3.39,3.59,3.2,3.53,3.7,3.42,3.62,3.27,3.28,3.44,2.78,3.69,3.08,3.21,3.7,3.28,3.48,3.33,3.55,3.5,3.44,3.52,3.21],"rest":129.32999999999998,"owner":null,"mine":false},{"code":"243298","n_career":122,"name":"Gakpo","pos":"MID","team":14,"status":"a","news":"","avail":1.0,"gw":[3.46,3.53,3.37,3.68,3.15,3.09,3.26,3.48,3.02,3.16,3.64,3.29,3.38,3.39,3.58,3.65,3.47,3.33,3.85,3.27,3.56,3.37,3.46,2.82,3.25,3.54,3.44,3.35,3.56,3.39,3.6,3.26,3.38,3.54,2.9,3.61,3.1,3.51],"rest":128.69,"owner":282287,"mine":false},{"code":"432830","n_career":148,"name":"Collins","pos":"DEF","team":4,"status":"a","news":"","avail":1.0,"gw":[3.75,3.34,3.49,3.46,3.35,3.04,3.53,3.36,3.45,3.12,3.64,3.28,2.99,3.42,3.24,3.61,3.46,3.44,3.73,2.89,3.52,3.36,3.45,3.25,3.13,3.53,3.4,3.46,3.17,3.68,3.37,3.59,3.55,3.05,3.36,3.37,3.5,3.2],"rest":128.53,"owner":372099,"mine":true},{"code":"232185","n_career":84,"name":"Sarr","pos":"MID","team":8,"status":"d","news":"Groin injury - 75% chance of playing","avail":0.69,"gw":[2.52,3.28,3.29,3.72,3.19,3.32,3.19,3.58,3.3,3.46,3.47,3.61,3.17,3.36,3.47,3.24,3.21,3.62,3.5,3.54,3.35,3.7,3.29,3.56,3.42,3.24,3.52,2.74,3.46,3.45,3.49,3.04,3.28,3.5,3.15,3.51,3.23,3.52],"rest":127.49000000000001,"owner":282287,"mine":false},{"code":"227444","n_career":75,"name":"Milenković","pos":"DEF","team":18,"status":"a","news":"","avail":1.0,"gw":[3.64,3.22,3.57,3.3,3.36,2.96,2.98,3.28,3.13,3.12,3.36,3.46,3.17,3.51,3.11,3.45,3.28,3.35,3.68,3.58,3.01,3.6,3.12,3.44,3.08,3.36,3.24,3.37,3.24,3.53,3.27,3.46,3.42,3.15,3.29,2.82,3.42,3.21],"rest":125.53999999999999,"owner":372099,"mine":true},{"code":"551226","n_career":72,"name":"Fernandes","pos":"MID","team":19,"status":"a","news":"","avail":0.68,"gw":[2.33,2.46,2.25,2.5,3.35,3.08,3.6,3.29,3.45,3.29,3.76,3.27,3.45,3.25,3.35,3.35,3.7,3.57,3.29,3.34,3.68,3.37,3.44,3.35,3.2,3.15,3.65,3.19,3.5,3.39,3.57,3.35,3.66,2.88,3.41,3.44,3.42,3.2],"rest":124.78,"owner":null,"mine":false},{"code":"215136","n_career":129,"name":"N.Williams","pos":"DEF","team":18,"status":"a","news":"","avail":1.0,"gw":[3.62,3.2,3.54,3.28,3.34,2.94,2.96,3.26,3.11,3.1,3.34,3.44,3.15,3.49,3.09,3.43,3.26,3.32,3.66,3.55,2.98,3.57,3.1,3.41,3.06,3.33,3.21,3.34,3.22,3.51,3.24,3.44,3.4,3.13,3.26,2.8,3.4,3.19],"rest":124.67000000000002,"owner":45811,"mine":false},{"code":"208706","n_career":146,"name":"Bruno G.","pos":"MID","team":1,"status":"d","news":"Thigh injury - 75% chance of playing","avail":0.43,"gw":[1.87,2.21,2.39,2.29,3.1,3.4,3.26,3.5,3.26,3.5,3.46,3.33,3.22,3.48,3.52,3.51,3.36,3.36,3.77,3.56,3.4,3.65,3.04,3.51,3.27,3.44,3.33,3.35,3.24,3.56,3.36,3.46,3.34,3.61,3.24,3.56,3.18,3.4],"rest":124.29000000000002,"owner":null,"mine":false},{"code":"499604","n_career":14,"name":"Rayan","pos":"MID","team":3,"status":"a","news":"","avail":0.92,"gw":[3.05,3.38,3.24,3.55,3.27,2.97,3.32,3.16,3.4,3.16,3.52,3.19,3.24,3.59,2.74,3.49,3.36,3.21,3.58,3.15,3.52,3.26,3.34,3.21,3.03,3.3,3.29,3.35,3.41,3.28,3.17,3.13,3.02,3.26,3.26,3.17,3.29,3.14],"rest":124.0,"owner":null,"mine":false},{"code":"498016","n_career":35,"name":"Roefs","pos":"GKP","team":20,"status":"a","news":"","avail":0.92,"gw":[3.33,3.38,3.18,3.12,2.78,3.14,3.16,3.47,3.16,3.3,3.24,3.5,3.09,3.33,3.36,3.38,3.23,3.21,3.68,3.46,3.19,3.56,3.19,3.33,3.13,3.3,3.18,3.23,3.36,2.86,3.46,3.13,3.17,3.47,2.97,3.48,3.12,3.11],"rest":123.74,"owner":421435,"mine":false},{"code":"232413","n_career":138,"name":"Eze","pos":"MID","team":1,"status":"a","news":"","avail":0.92,"gw":[3.55,3.09,3.37,3.22,2.91,3.25,3.1,3.36,3.09,3.36,3.31,3.17,3.05,3.34,3.38,3.36,3.2,3.21,3.65,3.42,3.25,3.53,2.85,3.37,3.1,3.29,3.17,3.2,3.07,3.42,3.2,3.32,3.19,3.48,3.08,3.42,3.01,3.25],"rest":123.59000000000002,"owner":372099,"mine":true},{"code":"482973","n_career":37,"name":"Igor Jesus","pos":"FWD","team":18,"status":"a","news":"","avail":1.0,"gw":[3.59,3.16,3.51,3.25,3.3,2.9,2.93,3.23,3.08,3.07,3.31,3.41,3.12,3.46,3.06,3.39,3.23,3.29,3.63,3.52,2.95,3.54,3.07,3.38,3.03,3.3,3.18,3.31,3.19,3.47,3.21,3.41,3.36,3.09,3.23,2.76,3.36,3.16],"rest":123.44,"owner":45811,"mine":false},{"code":"441266","n_career":96,"name":"Gravenberch","pos":"MID","team":14,"status":"a","news":"","avail":1.0,"gw":[3.31,3.37,3.22,3.53,3.0,2.94,3.11,3.33,2.87,3.01,3.49,3.13,3.23,3.24,3.43,3.5,3.31,3.18,3.7,3.12,3.41,3.21,3.3,2.66,3.1,3.39,3.29,3.19,3.41,3.24,3.45,3.11,3.22,3.39,2.75,3.46,2.95,3.36],"rest":122.91,"owner":null,"mine":false},{"code":"231747","n_career":148,"name":"Mateta","pos":"FWD","team":8,"status":"a","news":"","avail":0.92,"gw":[3.21,3.13,3.13,3.56,3.04,3.17,3.03,3.43,3.14,3.31,3.31,3.45,3.02,3.21,3.31,3.09,3.06,3.47,3.35,3.39,3.2,3.55,3.14,3.41,3.27,3.09,3.37,2.58,3.31,3.3,3.34,2.88,3.13,3.34,3.0,3.35,3.08,3.37],"rest":122.52,"owner":421435,"mine":false},{"code":"84450","n_career":92,"name":"Xhaka","pos":"MID","team":20,"status":"a","news":"","avail":1.0,"gw":[3.31,3.36,3.14,3.08,2.7,3.1,3.12,3.45,3.11,3.27,3.2,3.49,3.04,3.31,3.34,3.35,3.2,3.18,3.68,3.45,3.15,3.55,3.15,3.3,3.08,3.27,3.14,3.2,3.33,2.79,3.44,3.09,3.13,3.45,2.91,3.47,3.08,3.06],"rest":122.47,"owner":363607,"mine":false},{"code":"475168","n_career":120,"name":"João Pedro","pos":"FWD","team":6,"status":"a","news":"","avail":0.76,"gw":[3.22,3.27,2.81,3.49,3.01,3.2,3.09,3.41,3.25,3.02,3.48,3.15,3.22,3.44,2.93,3.31,3.27,3.26,3.55,3.14,3.32,3.27,3.28,3.1,3.1,3.33,3.15,3.27,2.96,3.28,3.32,3.07,3.16,3.17,3.11,3.36,3.08,3.29],"rest":122.14,"owner":299912,"mine":false},{"code":"199598","n_career":34,"name":"Ampadu","pos":"MID","team":13,"status":"a","news":"","avail":0.92,"gw":[3.22,3.35,3.07,3.54,3.16,2.53,3.3,3.07,3.08,3.36,3.22,3.44,2.8,3.54,3.12,3.36,3.18,3.26,3.55,3.17,3.25,3.43,3.13,3.36,3.0,3.24,3.17,3.28,3.24,3.28,3.34,3.11,3.4,3.21,2.83,3.15,3.2,3.03],"rest":121.97,"owner":null,"mine":false},{"code":"172649","n_career":107,"name":"Henderson","pos":"GKP","team":8,"status":"a","news":"","avail":0.92,"gw":[3.2,3.11,3.12,3.55,3.02,3.15,3.02,3.41,3.13,3.29,3.3,3.44,3.0,3.19,3.3,3.07,3.04,3.46,3.33,3.37,3.19,3.53,3.12,3.39,3.25,3.07,3.35,2.57,3.29,3.28,3.32,2.87,3.11,3.33,2.98,3.34,3.07,3.35],"rest":121.91,"owner":null,"mine":false},{"code":"434752","n_career":24,"name":"Bijol","pos":"DEF","team":13,"status":"a","news":"","avail":0.92,"gw":[3.22,3.35,3.06,3.54,3.16,2.52,3.3,3.07,3.08,3.36,3.21,3.44,2.79,3.54,3.11,3.36,3.17,3.26,3.54,3.17,3.25,3.43,3.13,3.36,2.99,3.24,3.16,3.28,3.24,3.28,3.34,3.11,3.39,3.2,2.82,3.15,3.19,3.02],"rest":121.83,"owner":null,"mine":false},{"code":"243016","n_career":160,"name":"Mac Allister","pos":"MID","team":14,"status":"a","news":"","avail":1.0,"gw":[3.27,3.34,3.19,3.49,2.96,2.9,3.07,3.29,2.84,2.97,3.46,3.1,3.19,3.21,3.39,3.47,3.28,3.14,3.66,3.09,3.37,3.18,3.27,2.63,3.06,3.35,3.25,3.16,3.38,3.2,3.41,3.07,3.19,3.35,2.72,3.42,2.91,3.32],"rest":121.54999999999997,"owner":null,"mine":false},{"code":"60307","n_career":111,"name":"Groß","pos":"MID","team":5,"status":"a","news":"","avail":0.92,"gw":[3.4,3.07,3.41,3.3,2.77,2.86,3.27,3.13,2.8,3.26,3.28,3.41,3.04,3.21,3.29,3.42,3.19,3.26,3.53,3.41,3.16,3.2,3.1,3.38,2.98,3.35,3.22,3.19,3.11,3.51,3.06,3.3,3.1,3.35,3.16,3.12,3.26,2.64],"rest":121.5,"owner":null,"mine":false},{"code":"465642","n_career":35,"name":"Thiaw","pos":"DEF","team":17,"status":"a","news":"","avail":1.0,"gw":[3.49,3.18,3.4,3.31,3.26,2.97,3.28,3.07,3.25,3.0,3.04,3.05,3.22,3.42,3.14,3.12,3.21,3.43,3.31,3.12,3.4,2.76,3.22,3.04,3.22,2.77,3.42,2.94,3.08,3.54,3.12,3.43,3.45,3.06,3.29,3.11,3.2,3.11],"rest":121.43000000000002,"owner":null,"mine":false},{"code":"220237","n_career":84,"name":"Botman","pos":"DEF","team":17,"status":"a","news":"","avail":1.0,"gw":[3.49,3.18,3.4,3.31,3.25,2.96,3.28,3.07,3.25,3.0,3.04,3.05,3.22,3.42,3.14,3.12,3.21,3.43,3.31,3.12,3.4,2.76,3.22,3.04,3.22,2.77,3.42,2.93,3.08,3.53,3.12,3.43,3.45,3.06,3.29,3.11,3.2,3.11],"rest":121.39000000000001,"owner":null,"mine":false},{"code":"538207","n_career":59,"name":"Osula","pos":"FWD","team":17,"status":"a","news":"","avail":1.0,"gw":[3.49,3.18,3.4,3.31,3.25,2.96,3.28,3.07,3.25,3.0,3.04,3.05,3.22,3.42,3.14,3.12,3.21,3.43,3.31,3.12,3.4,2.76,3.22,3.04,3.22,2.77,3.42,2.93,3.08,3.53,3.12,3.43,3.45,3.06,3.29,3.11,3.2,3.1],"rest":121.38000000000001,"owner":null,"mine":false},{"code":"60689","n_career":138,"name":"Wood","pos":"FWD","team":18,"status":"a","news":"","avail":0.92,"gw":[3.5,3.11,3.43,3.19,3.24,2.87,2.9,3.17,3.03,3.02,3.24,3.34,3.07,3.38,3.01,3.32,3.17,3.23,3.54,3.44,2.92,3.46,3.02,3.31,2.99,3.24,3.13,3.25,3.13,3.4,3.15,3.34,3.3,3.05,3.17,2.75,3.3,3.11],"rest":121.21999999999998,"owner":372099,"mine":true},{"code":"494595","n_career":33,"name":"Wirtz","pos":"MID","team":14,"status":"a","news":"","avail":0.92,"gw":[3.26,3.32,3.18,3.46,2.97,2.92,3.07,3.27,2.86,2.98,3.43,3.1,3.18,3.2,3.37,3.43,3.26,3.14,3.61,3.08,3.35,3.17,3.25,2.66,3.06,3.33,3.24,3.15,3.35,3.19,3.38,3.07,3.18,3.33,2.75,3.39,2.93,3.3],"rest":121.17,"owner":363607,"mine":false},{"code":"463981","n_career":43,"name":"Hill","pos":"DEF","team":3,"status":"a","news":"","avail":0.92,"gw":[2.97,3.29,3.16,3.46,3.19,2.88,3.24,3.07,3.32,3.08,3.43,3.1,3.16,3.51,2.66,3.41,3.27,3.13,3.5,3.06,3.44,3.18,3.26,3.13,2.95,3.22,3.21,3.27,3.33,3.2,3.09,3.05,2.94,3.17,3.18,3.09,3.2,3.05],"rest":120.85000000000001,"owner":null,"mine":false},{"code":"489639","n_career":93,"name":"Verbruggen","pos":"GKP","team":5,"status":"a","news":"","avail":0.92,"gw":[3.38,3.06,3.39,3.28,2.75,2.84,3.25,3.11,2.78,3.24,3.27,3.39,3.02,3.19,3.27,3.4,3.17,3.25,3.51,3.39,3.14,3.19,3.08,3.36,2.96,3.33,3.2,3.17,3.1,3.49,3.04,3.28,3.08,3.33,3.14,3.1,3.24,2.62],"rest":120.78999999999999,"owner":45811,"mine":false},{"code":"177815","n_career":123,"name":"Calvert-Lewin","pos":"FWD","team":13,"status":"a","news":"","avail":0.92,"gw":[3.18,3.32,3.03,3.51,3.13,2.49,3.27,3.04,3.04,3.33,3.18,3.41,2.76,3.5,3.08,3.33,3.14,3.23,3.51,3.13,3.22,3.4,3.1,3.32,2.96,3.21,3.13,3.25,3.2,3.24,3.31,3.07,3.36,3.17,2.79,3.12,3.16,2.99],"rest":120.61,"owner":45811,"mine":false},{"code":"201658","n_career":113,"name":"Tavernier","pos":"MID","team":3,"status":"a","news":"","avail":0.92,"gw":[2.96,3.28,3.15,3.46,3.18,2.88,3.23,3.07,3.31,3.07,3.43,3.1,3.15,3.5,2.65,3.4,3.27,3.12,3.49,3.06,3.43,3.17,3.25,3.12,2.94,3.21,3.2,3.26,3.32,3.19,3.08,3.04,2.93,3.17,3.17,3.08,3.2,3.05],"rest":120.57000000000001,"owner":null,"mine":false},{"code":"224117","n_career":35,"name":"Gyökeres","pos":"FWD","team":1,"status":"a","news":"","avail":0.92,"gw":[3.46,3.01,3.28,3.13,2.83,3.16,3.02,3.28,3.01,3.28,3.23,3.08,2.97,3.26,3.29,3.28,3.12,3.13,3.57,3.34,3.17,3.44,2.77,3.29,3.02,3.21,3.09,3.12,2.99,3.34,3.12,3.23,3.1,3.4,3.0,3.34,2.93,3.17],"rest":120.46000000000001,"owner":363607,"mine":false},{"code":"457569","n_career":58,"name":"Petrović","pos":"GKP","team":3,"status":"a","news":"","avail":0.92,"gw":[2.95,3.27,3.14,3.45,3.17,2.86,3.22,3.05,3.3,3.06,3.41,3.08,3.14,3.49,2.64,3.39,3.25,3.11,3.48,3.05,3.42,3.16,3.24,3.11,2.93,3.2,3.19,3.25,3.31,3.18,3.07,3.03,2.92,3.16,3.16,3.07,3.18,3.04],"rest":120.13000000000001,"owner":null,"mine":false},{"code":"448047","n_career":115,"name":"Enzo","pos":"MID","team":6,"status":"a","news":"","avail":0.84,"gw":[3.16,3.22,2.72,3.47,2.94,3.14,3.02,3.37,3.2,2.95,3.45,3.09,3.17,3.42,2.84,3.27,3.22,3.21,3.53,3.08,3.28,3.22,3.23,3.03,3.03,3.28,3.09,3.22,2.87,3.23,3.28,3.0,3.1,3.11,3.04,3.32,3.01,3.24],"rest":120.04999999999998,"owner":363607,"mine":false},{"code":"212319","n_career":126,"name":"Richarlison","pos":"FWD","team":19,"status":"a","news":"","avail":0.92,"gw":[3.15,3.32,3.04,3.38,3.08,2.83,3.31,3.03,3.17,3.02,3.46,3.01,3.17,2.99,3.08,3.08,3.4,3.29,3.02,3.07,3.39,3.1,3.16,3.08,2.94,2.9,3.35,2.93,3.22,3.12,3.28,3.08,3.36,2.65,3.13,3.16,3.15,2.94],"rest":118.83999999999999,"owner":299912,"mine":false},{"code":"201666","n_career":151,"name":"Barnes","pos":"MID","team":17,"status":"a","news":"","avail":1.0,"gw":[3.39,3.07,3.29,3.2,3.15,2.86,3.17,2.96,3.14,2.89,2.93,2.94,3.12,3.31,3.03,3.01,3.1,3.32,3.2,3.01,3.29,2.65,3.11,2.94,3.12,2.66,3.31,2.83,2.97,3.43,3.01,3.32,3.34,2.95,3.19,3.01,3.1,3.0],"rest":117.32,"owner":null,"mine":false},{"code":"532529","n_career":65,"name":"Hinshelwood","pos":"MID","team":5,"status":"a","news":"","avail":0.92,"gw":[3.29,2.96,3.3,3.19,2.66,2.75,3.16,3.02,2.69,3.15,3.17,3.3,2.93,3.1,3.18,3.31,3.08,3.15,3.42,3.3,3.05,3.09,2.99,3.27,2.87,3.24,3.11,3.08,3.0,3.4,2.95,3.19,2.99,3.24,3.05,3.01,3.15,2.53],"rest":117.32,"owner":null,"mine":false},{"code":"232892","n_career":94,"name":"Bassey","pos":"DEF","team":10,"status":"a","news":"","avail":1.0,"gw":[3.34,2.92,3.22,3.15,3.04,2.85,3.28,3.07,2.86,3.21,2.86,3.3,2.97,3.09,3.22,3.07,3.27,2.88,3.21,3.38,3.1,3.3,2.96,2.96,3.12,2.46,3.37,2.76,2.89,3.38,2.96,3.16,3.01,3.23,3.18,3.12,3.2,2.89],"rest":117.24000000000002,"owner":null,"mine":false},{"code":"493250","n_career":66,"name":"Amad","pos":"MID","team":16,"status":"d","news":"Unspecified injury - 75% chance of playing","avail":0.75,"gw":[2.39,3.32,2.98,3.15,2.82,3.14,3.03,3.29,2.9,3.12,3.15,3.28,2.95,3.45,2.93,2.57,3.35,3.28,3.16,3.36,3.01,3.38,2.94,3.2,3.07,2.91,2.87,2.78,3.17,2.86,3.32,3.05,3.24,3.09,2.9,3.38,2.98,3.18],"rest":116.95,"owner":null,"mine":false},{"code":"512462","n_career":56,"name":"O'Brien","pos":"DEF","team":9,"status":"a","news":"","avail":1.0,"gw":[3.3,2.99,3.21,3.2,3.12,2.83,3.17,2.53,2.94,3.2,3.1,3.27,2.82,3.34,2.86,2.97,3.26,3.05,3.26,3.22,3.09,3.33,2.93,3.25,3.18,2.82,3.27,2.56,2.88,3.43,2.92,3.23,3.17,2.97,3.16,3.0,2.66,2.97],"rest":116.46,"owner":null,"mine":false},{"code":"441264","n_career":31,"name":"Brobbey","pos":"FWD","team":20,"status":"a","news":"","avail":1.0,"gw":[3.14,3.19,2.97,2.91,2.53,2.93,2.95,3.28,2.95,3.1,3.03,3.32,2.87,3.14,3.17,3.19,3.03,3.01,3.51,3.28,2.98,3.39,2.98,3.14,2.91,3.1,2.97,3.03,3.16,2.62,3.27,2.92,2.96,3.29,2.74,3.3,2.91,2.89],"rest":116.05999999999999,"owner":45811,"mine":false},{"code":"106760","n_career":102,"name":"Shaw","pos":"DEF","team":16,"status":"a","news":"","avail":1.0,"gw":[3.14,3.27,2.94,3.1,2.77,3.09,2.98,3.25,2.85,3.08,3.1,3.24,2.91,3.41,2.88,2.52,3.3,3.23,3.11,3.31,2.96,3.34,2.9,3.16,3.02,2.86,2.82,2.74,3.13,2.81,3.27,3.0,3.19,3.04,2.85,3.33,2.93,3.13],"rest":115.96000000000001,"owner":null,"mine":false},{"code":"249231","n_career":113,"name":"Lewis-Potter","pos":"DEF","team":4,"status":"a","news":"","avail":1.0,"gw":[3.42,3.01,3.16,3.13,3.02,2.7,3.2,3.03,3.12,2.79,3.31,2.95,2.66,3.08,2.91,3.28,3.13,3.11,3.4,2.55,3.19,3.03,3.12,2.91,2.8,3.2,3.07,3.13,2.84,3.35,3.04,3.25,3.22,2.72,3.03,3.04,3.17,2.87],"rest":115.94000000000001,"owner":null,"mine":false},{"code":"59735","n_career":29,"name":"Darlow","pos":"GKP","team":16,"status":"a","news":"","avail":0.62,"gw":[2.2,2.28,2.08,2.18,2.9,3.2,3.1,3.34,2.97,3.18,3.2,3.33,3.02,3.48,3.0,2.67,3.39,3.32,3.21,3.4,3.07,3.42,3.02,3.25,3.13,2.98,2.95,2.87,3.23,2.94,3.36,3.11,3.28,3.15,2.97,3.42,3.05,3.23],"rest":115.88000000000001,"owner":null,"mine":false},{"code":"106611","n_career":99,"name":"Keane","pos":"DEF","team":9,"status":"a","news":"","avail":0.92,"gw":[3.26,2.97,3.18,3.17,3.1,2.83,3.14,2.55,2.94,3.17,3.08,3.23,2.82,3.29,2.86,2.96,3.23,3.03,3.23,3.19,3.07,3.29,2.92,3.21,3.15,2.82,3.23,2.58,2.88,3.38,2.91,3.2,3.14,2.96,3.13,2.99,2.68,2.96],"rest":115.72999999999999,"owner":null,"mine":false},{"code":"444102","n_career":66,"name":"Evanilson","pos":"FWD","team":3,"status":"a","news":"","avail":0.92,"gw":[2.83,3.15,3.02,3.33,3.05,2.74,3.1,2.93,3.18,2.94,3.29,2.96,3.02,3.37,2.52,3.27,3.13,2.99,3.36,2.93,3.3,3.04,3.12,2.99,2.81,3.08,3.07,3.13,3.19,3.06,2.95,2.91,2.8,3.04,3.04,2.95,3.06,2.92],"rest":115.57000000000002,"owner":299912,"mine":false},{"code":"469142","n_career":104,"name":"Van Hecke","pos":"DEF","team":19,"status":"a","news":"","avail":0.62,"gw":[2.16,2.27,2.08,2.31,3.1,2.85,3.33,3.05,3.19,3.04,3.48,3.02,3.19,3.0,3.1,3.1,3.42,3.3,3.04,3.09,3.4,3.12,3.18,3.1,2.96,2.92,3.37,2.95,3.24,3.14,3.3,3.1,3.38,2.67,3.15,3.18,3.17,2.96],"rest":115.41000000000001,"owner":363607,"mine":false},{"code":"224967","n_career":137,"name":"Mykolenko","pos":"DEF","team":9,"status":"a","news":"","avail":1.0,"gw":[3.25,2.94,3.16,3.15,3.07,2.78,3.12,2.48,2.9,3.16,3.05,3.22,2.77,3.29,2.81,2.92,3.22,3.01,3.22,3.17,3.04,3.29,2.88,3.2,3.13,2.78,3.22,2.51,2.84,3.38,2.87,3.18,3.12,2.93,3.11,2.96,2.62,2.93],"rest":114.68000000000002,"owner":null,"mine":false},{"code":"209244","n_career":149,"name":"Foden","pos":"MID","team":15,"status":"a","news":"","avail":0.84,"gw":[3.24,2.86,3.19,3.0,2.92,2.75,3.15,2.87,2.99,2.82,3.21,2.55,3.08,3.01,3.07,3.19,3.04,2.95,3.39,2.99,3.15,2.93,2.69,2.87,2.89,3.1,3.01,2.96,2.92,3.19,2.92,3.07,2.9,3.14,3.02,3.01,2.98,2.8],"rest":113.82000000000001,"owner":299912,"mine":false},{"code":"440089","n_career":117,"name":"Damsgaard","pos":"MID","team":4,"status":"a","news":"","avail":0.92,"gw":[3.33,2.96,3.09,3.06,2.96,2.67,3.13,2.98,3.06,2.75,3.23,2.9,2.64,3.02,2.87,3.21,3.07,3.05,3.32,2.54,3.12,2.98,3.06,2.87,2.77,3.13,3.01,3.06,2.8,3.27,2.98,3.18,3.15,2.69,2.97,2.98,3.1,2.83],"rest":113.78999999999999,"owner":null,"mine":false},{"code":"472769","n_career":41,"name":"O'Reilly","pos":"DEF","team":15,"status":"a","news":"","avail":0.76,"gw":[3.21,2.87,3.16,2.99,2.92,2.77,3.13,2.88,2.99,2.83,3.19,2.59,3.07,3.01,3.06,3.17,3.03,2.95,3.35,2.99,3.13,2.93,2.72,2.88,2.89,3.09,3.01,2.96,2.92,3.17,2.93,3.06,2.91,3.12,3.02,3.01,2.98,2.81],"rest":113.7,"owner":421435,"mine":false},{"code":"607464","n_career":49,"name":"Kayode","pos":"DEF","team":4,"status":"a","news":"","avail":1.0,"gw":[3.36,2.95,3.1,3.07,2.96,2.64,3.14,2.97,3.06,2.73,3.25,2.89,2.6,3.02,2.85,3.22,3.07,3.05,3.34,2.49,3.13,2.97,3.06,2.85,2.74,3.14,3.01,3.07,2.78,3.29,2.98,3.19,3.16,2.66,2.97,2.98,3.11,2.81],"rest":113.66,"owner":null,"mine":false},{"code":"201895","n_career":33,"name":"Alderete","pos":"DEF","team":20,"status":"a","news":"","avail":0.92,"gw":[3.07,3.11,2.92,2.86,2.51,2.88,2.89,3.2,2.89,3.03,2.97,3.24,2.82,3.07,3.1,3.11,2.97,2.95,3.41,3.2,2.93,3.29,2.93,3.06,2.86,3.04,2.92,2.97,3.09,2.59,3.19,2.87,2.91,3.2,2.71,3.21,2.85,2.84],"rest":113.65999999999998,"owner":null,"mine":false},{"code":"244723","n_career":176,"name":"Mitchell","pos":"DEF","team":8,"status":"a","news":"","avail":0.92,"gw":[2.98,2.89,2.9,3.33,2.8,2.93,2.8,3.19,2.91,3.07,3.08,3.22,2.78,2.97,3.08,2.85,2.82,3.24,3.12,3.15,2.97,3.31,2.91,3.17,3.04,2.85,3.13,2.35,3.07,3.07,3.1,2.65,2.89,3.11,2.76,3.12,2.85,3.13],"rest":113.59,"owner":null,"mine":false},{"code":"114243","n_career":152,"name":"J.Murphy","pos":"MID","team":17,"status":"a","news":"","avail":1.0,"gw":[3.28,2.97,3.19,3.1,3.05,2.76,3.07,2.86,3.04,2.79,2.83,2.84,3.01,3.21,2.93,2.91,3.0,3.22,3.1,2.91,3.19,2.55,3.01,2.83,3.01,2.56,3.21,2.73,2.87,3.32,2.91,3.22,3.24,2.85,3.08,2.9,2.99,2.9],"rest":113.44,"owner":null,"mine":false},{"code":"441164","n_career":115,"name":"Pedro Porro","pos":"DEF","team":19,"status":"i","news":"Lack of match fitness - Expected back 29 Aug","avail":0.0,"gw":[0.0,0.0,1.56,2.8,3.17,2.89,3.42,3.11,3.26,3.1,3.58,3.09,3.27,3.06,3.17,3.17,3.52,3.39,3.11,3.16,3.5,3.19,3.26,3.17,3.02,2.97,3.47,3.0,3.32,3.21,3.38,3.16,3.47,2.7,3.23,3.26,3.24,3.02],"rest":113.4,"owner":45811,"mine":false},{"code":"169528","n_career":128,"name":"Robinson","pos":"DEF","team":10,"status":"a","news":"","avail":1.0,"gw":[3.23,2.81,3.11,3.05,2.94,2.75,3.18,2.96,2.76,3.11,2.76,3.19,2.87,2.98,3.12,2.97,3.17,2.78,3.11,3.28,2.99,3.2,2.85,2.86,3.02,2.36,3.27,2.66,2.79,3.28,2.86,3.06,2.91,3.13,3.08,3.01,3.1,2.79],"rest":113.35,"owner":null,"mine":false},{"code":"485055","n_career":13,"name":"Kinsky","pos":"GKP","team":19,"status":"a","news":"","avail":0.92,"gw":[3.01,3.18,2.9,3.24,2.93,2.68,3.17,2.88,3.02,2.88,3.31,2.86,3.03,2.84,2.93,2.93,3.26,3.14,2.88,2.93,3.24,2.96,3.02,2.93,2.8,2.75,3.21,2.78,3.07,2.97,3.13,2.93,3.21,2.51,2.99,3.02,3.0,2.8],"rest":113.31999999999998,"owner":299912,"mine":false},{"code":"437499","n_career":67,"name":"Lacroix","pos":"DEF","team":6,"status":"a","news":"","avail":0.57,"gw":[2.1,2.13,1.79,2.3,2.86,3.06,2.94,3.29,3.12,2.87,3.37,3.01,3.09,3.33,2.76,3.18,3.14,3.12,3.45,3.0,3.2,3.14,3.15,2.95,2.95,3.2,3.01,3.14,2.79,3.15,3.2,2.92,3.02,3.03,2.96,3.24,2.93,3.16],"rest":113.05,"owner":282287,"mine":false},{"code":"50175","n_career":141,"name":"Welbeck","pos":"FWD","team":6,"status":"d","news":"Unspecified injury - 75% chance of playing","avail":0.47,"gw":[1.58,2.15,1.77,2.33,2.85,3.07,2.94,3.32,3.14,2.86,3.41,3.01,3.1,3.37,2.74,3.21,3.16,3.14,3.5,3.0,3.22,3.15,3.17,2.95,2.95,3.23,3.01,3.16,2.78,3.17,3.22,2.91,3.02,3.04,2.96,3.26,2.92,3.18],"rest":112.95,"owner":null,"mine":false},{"code":"209036","n_career":160,"name":"Guéhi","pos":"DEF","team":15,"status":"a","news":"","avail":0.76,"gw":[3.19,2.85,3.14,2.97,2.9,2.75,3.11,2.86,2.96,2.81,3.16,2.57,3.05,2.98,3.04,3.14,3.01,2.93,3.32,2.97,3.11,2.91,2.69,2.85,2.87,3.06,2.98,2.94,2.9,3.14,2.9,3.03,2.88,3.1,2.99,2.98,2.96,2.79],"rest":112.78999999999999,"owner":299912,"mine":false},{"code":"98980","n_career":169,"name":"Martinez","pos":"GKP","team":2,"status":"a","news":"","avail":0.84,"gw":[2.91,2.71,2.95,3.2,2.81,2.93,2.9,2.89,3.02,2.78,3.15,2.96,2.98,3.16,2.91,2.87,3.24,3.18,3.1,2.89,3.11,2.96,3.1,2.8,3.03,2.87,3.12,2.77,3.11,2.96,3.03,2.49,3.17,2.86,2.77,3.19,2.57,3.12],"rest":112.57,"owner":421435,"mine":false},{"code":"462424","n_career":127,"name":"Saliba","pos":"DEF","team":1,"status":"i","news":"Back injury - Unknown return date","avail":0.04,"gw":[0.18,0.47,1.02,1.46,1.78,2.46,2.83,3.38,3.13,3.38,3.33,3.2,3.1,3.36,3.39,3.38,3.23,3.24,3.65,3.44,3.28,3.53,2.92,3.39,3.15,3.32,3.21,3.23,3.12,3.44,3.23,3.34,3.22,3.49,3.12,3.43,3.06,3.28],"rest":112.17,"owner":null,"mine":false},{"code":"220362","n_career":57,"name":"Disasi","pos":"DEF","team":6,"status":"a","news":"","avail":0.68,"gw":[2.08,2.12,1.71,2.33,2.79,3.03,2.89,3.31,3.1,2.8,3.4,2.96,3.06,3.36,2.67,3.18,3.13,3.11,3.5,2.96,3.2,3.12,3.14,2.9,2.9,3.2,2.97,3.13,2.71,3.14,3.19,2.86,2.98,2.99,2.91,3.24,2.87,3.15],"rest":112.09,"owner":null,"mine":false},{"code":"199796","n_career":151,"name":"Cash","pos":"DEF","team":2,"status":"a","news":"","avail":1.0,"gw":[2.88,2.64,2.93,3.23,2.76,2.9,2.87,2.86,3.01,2.73,3.16,2.94,2.97,3.18,2.88,2.84,3.27,3.21,3.11,2.86,3.12,2.94,3.11,2.75,3.02,2.83,3.14,2.71,3.12,2.94,3.02,2.38,3.19,2.82,2.71,3.21,2.48,3.13],"rest":111.84999999999998,"owner":null,"mine":false},{"code":"466052","n_career":31,"name":"Cherki","pos":"MID","team":15,"status":"a","news":"","avail":0.84,"gw":[3.18,2.8,3.13,2.94,2.86,2.69,3.09,2.81,2.93,2.76,3.15,2.49,3.02,2.95,3.01,3.13,2.98,2.89,3.33,2.93,3.09,2.87,2.63,2.81,2.82,3.04,2.95,2.9,2.86,3.13,2.86,3.0,2.84,3.08,2.96,2.95,2.92,2.73],"rest":111.51,"owner":421435,"mine":false},{"code":"434399","n_career":25,"name":"Reinildo","pos":"DEF","team":20,"status":"a","news":"","avail":1.0,"gw":[3.01,3.06,2.84,2.78,2.4,2.8,2.82,3.15,2.81,2.97,2.9,3.19,2.74,3.0,3.04,3.05,2.9,2.88,3.38,3.14,2.85,3.25,2.85,3.0,2.78,2.97,2.84,2.9,3.03,2.49,3.14,2.79,2.83,3.15,2.61,3.17,2.77,2.76],"rest":111.04,"owner":null,"mine":false},{"code":"122806","n_career":162,"name":"McGinn","pos":"MID","team":2,"status":"a","news":"","avail":0.92,"gw":[2.86,2.64,2.9,3.18,2.75,2.88,2.85,2.84,2.98,2.72,3.12,2.91,2.94,3.14,2.86,2.82,3.22,3.16,3.07,2.84,3.08,2.91,3.07,2.74,2.99,2.81,3.1,2.71,3.08,2.92,2.99,2.4,3.14,2.81,2.71,3.17,2.49,3.09],"rest":110.88999999999999,"owner":null,"mine":false},{"code":"223340","n_career":158,"name":"Saka","pos":"MID","team":1,"status":"a","news":"","avail":0.68,"gw":[3.13,2.8,3.0,2.89,2.67,2.91,2.81,2.99,2.8,3.0,2.96,2.85,2.77,2.98,3.01,3.0,2.88,2.88,3.21,3.04,2.92,3.12,2.62,3.0,2.81,2.95,2.86,2.88,2.78,3.04,2.88,2.96,2.87,3.08,2.79,3.04,2.74,2.91],"rest":110.83,"owner":421435,"mine":false},{"code":"481655","n_career":37,"name":"Zubimendi","pos":"MID","team":1,"status":"a","news":"","avail":0.92,"gw":[3.21,2.75,3.03,2.88,2.58,2.91,2.76,3.02,2.75,3.02,2.97,2.83,2.71,3.0,3.04,3.03,2.86,2.87,3.32,3.09,2.92,3.19,2.52,3.03,2.77,2.96,2.83,2.86,2.74,3.09,2.86,2.98,2.85,3.14,2.74,3.08,2.68,2.91],"rest":110.77999999999999,"owner":null,"mine":false},{"code":"232787","n_career":116,"name":"Gallagher","pos":"MID","team":19,"status":"a","news":"","avail":1.0,"gw":[2.93,3.11,2.81,3.18,2.85,2.57,3.1,2.79,2.94,2.78,3.26,2.77,2.95,2.74,2.85,2.85,3.2,3.07,2.79,2.84,3.18,2.87,2.94,2.85,2.7,2.65,3.15,2.68,3.0,2.89,3.06,2.84,3.15,2.38,2.91,2.94,2.92,2.7],"rest":110.19,"owner":null,"mine":false},{"code":"219847","n_career":130,"name":"Havertz","pos":"FWD","team":1,"status":"a","news":"","avail":0.84,"gw":[3.13,2.72,2.97,2.83,2.56,2.86,2.73,2.96,2.72,2.96,2.92,2.79,2.68,2.95,2.98,2.97,2.82,2.82,3.23,3.02,2.87,3.11,2.5,2.97,2.73,2.9,2.79,2.82,2.7,3.02,2.82,2.92,2.81,3.07,2.71,3.02,2.65,2.86],"rest":108.89,"owner":363607,"mine":false},{"code":"487676","n_career":38,"name":"Hume","pos":"DEF","team":20,"status":"a","news":"","avail":1.0,"gw":[2.94,2.99,2.78,2.71,2.34,2.73,2.75,3.09,2.75,2.9,2.84,3.13,2.68,2.94,2.97,2.99,2.84,2.81,3.32,3.08,2.79,3.19,2.79,2.94,2.72,2.91,2.78,2.83,2.97,2.43,3.08,2.73,2.77,3.09,2.55,3.1,2.71,2.7],"rest":108.66,"owner":null,"mine":false},{"code":"231416","n_career":42,"name":"F.Kadıoğlu","pos":"DEF","team":5,"status":"a","news":"","avail":0.92,"gw":[3.06,2.73,3.07,2.96,2.43,2.52,2.93,2.79,2.46,2.92,2.94,3.07,2.7,2.87,2.95,3.08,2.85,2.92,3.19,3.07,2.82,2.86,2.76,3.04,2.64,3.01,2.88,2.85,2.77,3.17,2.72,2.96,2.76,3.01,2.82,2.78,2.92,2.3],"rest":108.58000000000001,"owner":null,"mine":false},{"code":"486385","n_career":96,"name":"Beto","pos":"FWD","team":9,"status":"a","news":"","avail":0.92,"gw":[3.05,2.76,2.96,2.96,2.89,2.62,2.93,2.34,2.72,2.96,2.86,3.02,2.61,3.08,2.65,2.75,3.02,2.82,3.02,2.98,2.86,3.08,2.71,3.0,2.94,2.61,3.02,2.37,2.67,3.17,2.7,2.99,2.93,2.75,2.92,2.78,2.47,2.75],"rest":107.72,"owner":null,"mine":false},{"code":"427637","n_career":71,"name":"Aaronson","pos":"MID","team":13,"status":"a","news":"","avail":0.92,"gw":[2.84,2.98,2.69,3.16,2.79,2.15,2.92,2.69,2.7,2.98,2.84,3.07,2.42,3.16,2.74,2.98,2.8,2.89,3.17,2.79,2.88,3.06,2.75,2.98,2.62,2.87,2.79,2.9,2.86,2.9,2.96,2.73,3.02,2.83,2.45,2.77,2.82,2.65],"rest":107.6,"owner":null,"mine":false},{"code":"215059","n_career":138,"name":"Sánchez","pos":"GKP","team":6,"status":"a","news":"","avail":0.84,"gw":[2.83,2.89,2.38,3.14,2.61,2.81,2.69,3.04,2.87,2.62,3.12,2.75,2.84,3.08,2.51,2.93,2.89,2.87,3.2,2.75,2.95,2.89,2.9,2.7,2.7,2.95,2.76,2.89,2.54,2.9,2.94,2.66,2.76,2.78,2.71,2.98,2.68,2.91],"rest":107.42,"owner":282287,"mine":false},{"code":"444180","n_career":69,"name":"Anthony","pos":"MID","team":4,"status":"a","news":"","avail":0.62,"gw":[2.22,1.97,2.06,2.04,2.9,2.61,3.06,2.91,2.99,2.69,3.16,2.83,2.57,2.96,2.8,3.14,3.0,2.98,3.25,2.47,3.05,2.91,2.99,2.8,2.7,3.07,2.95,3.0,2.73,3.21,2.92,3.12,3.08,2.63,2.91,2.91,3.04,2.76],"rest":107.39,"owner":null,"mine":false},{"code":"88894","n_career":77,"name":"Barkley","pos":"MID","team":2,"status":"a","news":"","avail":1.0,"gw":[2.76,2.52,2.81,3.11,2.64,2.78,2.75,2.73,2.89,2.61,3.04,2.82,2.85,3.06,2.76,2.72,3.15,3.08,2.98,2.74,3.0,2.82,2.99,2.63,2.9,2.71,3.02,2.59,3.0,2.82,2.9,2.26,3.07,2.7,2.59,3.09,2.36,3.01],"rest":107.26,"owner":null,"mine":false},{"code":"166989","n_career":152,"name":"Tielemans","pos":"MID","team":16,"status":"a","news":"","avail":0.68,"gw":[2.04,2.13,1.9,2.01,2.63,2.96,2.85,3.11,2.71,2.94,2.96,3.1,2.77,3.27,2.74,2.39,3.16,3.09,2.97,3.17,2.82,3.2,2.76,3.02,2.88,2.72,2.69,2.6,2.99,2.68,3.13,2.86,3.05,2.9,2.71,3.19,2.79,2.99],"rest":106.88,"owner":null,"mine":false},{"code":"135720","n_career":34,"name":"Danso","pos":"DEF","team":19,"status":"a","news":"","avail":1.0,"gw":[2.84,3.02,2.72,3.09,2.76,2.49,3.01,2.7,2.86,2.7,3.17,2.68,2.86,2.66,2.76,2.76,3.11,2.98,2.7,2.75,3.09,2.78,2.85,2.76,2.61,2.57,3.06,2.6,2.91,2.8,2.98,2.76,3.07,2.29,2.82,2.85,2.83,2.61],"rest":106.85999999999997,"owner":null,"mine":false},{"code":"586309","n_career":38,"name":"Barry","pos":"FWD","team":9,"status":"a","news":"","avail":1.0,"gw":[3.03,2.72,2.94,2.93,2.85,2.56,2.9,2.26,2.68,2.94,2.83,3.0,2.55,3.07,2.59,2.7,3.0,2.79,3.0,2.95,2.82,3.07,2.66,2.98,2.91,2.56,3.0,2.29,2.62,3.16,2.65,2.96,2.9,2.71,2.89,2.73,2.4,2.71],"rest":106.31,"owner":null,"mine":false},{"code":"204936","n_career":32,"name":"Donnarumma","pos":"GKP","team":15,"status":"a","news":"","avail":0.76,"gw":[3.01,2.67,2.97,2.8,2.73,2.57,2.93,2.68,2.79,2.63,2.99,2.39,2.87,2.81,2.86,2.97,2.83,2.75,3.15,2.79,2.93,2.73,2.52,2.68,2.69,2.89,2.81,2.77,2.72,2.97,2.73,2.86,2.71,2.92,2.82,2.81,2.78,2.61],"rest":106.14,"owner":282287,"mine":false},{"code":"503301","n_career":63,"name":"Hutchinson","pos":"MID","team":18,"status":"a","news":"","avail":1.0,"gw":[3.13,2.71,3.05,2.79,2.85,2.45,2.47,2.77,2.62,2.61,2.85,2.95,2.66,3.0,2.6,2.94,2.77,2.83,3.17,3.06,2.49,3.08,2.61,2.93,2.57,2.84,2.73,2.85,2.73,3.02,2.75,2.95,2.91,2.64,2.77,2.31,2.91,2.7],"rest":106.07,"owner":null,"mine":false},{"code":"547027","n_career":20,"name":"Diarra","pos":"MID","team":20,"status":"a","news":"","avail":0.92,"gw":[2.86,2.91,2.71,2.65,2.3,2.67,2.69,2.99,2.68,2.82,2.76,3.03,2.62,2.86,2.89,2.9,2.76,2.74,3.2,2.99,2.72,3.09,2.72,2.86,2.65,2.83,2.71,2.76,2.88,2.39,2.98,2.66,2.7,3.0,2.5,3.01,2.65,2.64],"rest":105.78000000000002,"owner":null,"mine":false},{"code":"207283","n_career":155,"name":"Jensen","pos":"MID","team":4,"status":"a","news":"","avail":1.0,"gw":[3.14,2.74,2.89,2.85,2.74,2.43,2.93,2.76,2.85,2.52,3.03,2.68,2.39,2.81,2.64,3.01,2.86,2.84,3.13,2.28,2.91,2.76,2.85,2.64,2.53,2.93,2.8,2.85,2.57,3.08,2.77,2.98,2.95,2.45,2.76,2.76,2.9,2.59],"rest":105.60000000000002,"owner":null,"mine":false},{"code":"470313","n_career":33,"name":"Woltemade","pos":"FWD","team":17,"status":"a","news":"","avail":0.92,"gw":[3.04,2.75,2.95,2.87,2.82,2.55,2.84,2.65,2.81,2.59,2.62,2.63,2.79,2.97,2.71,2.7,2.78,2.98,2.87,2.69,2.95,2.36,2.79,2.62,2.79,2.37,2.97,2.53,2.65,3.08,2.69,2.98,2.99,2.64,2.85,2.69,2.77,2.68],"rest":105.00999999999998,"owner":null,"mine":false},{"code":"465351","n_career":109,"name":"Matheus N.","pos":"DEF","team":15,"status":"a","news":"","avail":0.76,"gw":[2.98,2.64,2.94,2.77,2.7,2.54,2.9,2.65,2.76,2.6,2.96,2.36,2.84,2.78,2.83,2.94,2.8,2.72,3.12,2.76,2.9,2.7,2.49,2.65,2.66,2.86,2.78,2.74,2.69,2.94,2.7,2.83,2.68,2.89,2.79,2.78,2.75,2.58],"rest":105.00000000000001,"owner":363607,"mine":false},{"code":"511499","n_career":44,"name":"Tel","pos":"MID","team":19,"status":"a","news":"","avail":1.0,"gw":[2.78,2.97,2.66,3.03,2.7,2.43,2.96,2.65,2.8,2.64,3.11,2.62,2.8,2.6,2.7,2.7,3.05,2.93,2.64,2.7,3.04,2.73,2.79,2.7,2.56,2.51,3.0,2.54,2.85,2.75,2.92,2.7,3.01,2.24,2.76,2.79,2.78,2.55],"rest":104.69000000000001,"owner":null,"mine":false},{"code":"427623","n_career":89,"name":"Richards","pos":"DEF","team":8,"status":"a","news":"","avail":0.84,"gw":[2.73,2.65,2.65,3.05,2.56,2.69,2.56,2.92,2.66,2.81,2.82,2.95,2.55,2.72,2.82,2.61,2.58,2.96,2.85,2.89,2.72,3.03,2.66,2.9,2.78,2.61,2.86,2.15,2.81,2.81,2.84,2.43,2.65,2.85,2.53,2.85,2.61,2.87],"rest":103.99,"owner":null,"mine":false},{"code":"95658","n_career":116,"name":"Maguire","pos":"DEF","team":16,"status":"a","news":"","avail":0.84,"gw":[2.81,2.92,2.64,2.78,2.5,2.77,2.68,2.9,2.57,2.76,2.78,2.89,2.61,3.03,2.59,2.29,2.95,2.88,2.78,2.95,2.66,2.97,2.61,2.82,2.71,2.58,2.54,2.47,2.8,2.54,2.92,2.69,2.85,2.73,2.57,2.97,2.64,2.8],"rest":103.94999999999997,"owner":45811,"mine":false},{"code":"216646","n_career":151,"name":"Wissa","pos":"FWD","team":17,"status":"a","news":"","avail":0.92,"gw":[3.01,2.72,2.92,2.84,2.79,2.52,2.81,2.62,2.79,2.56,2.59,2.6,2.76,2.94,2.69,2.67,2.75,2.95,2.84,2.66,2.92,2.34,2.76,2.6,2.76,2.34,2.94,2.5,2.63,3.05,2.66,2.95,2.97,2.61,2.82,2.66,2.74,2.65],"rest":103.92999999999998,"owner":null,"mine":false},{"code":"78916","n_career":158,"name":"Burn","pos":"DEF","team":17,"status":"a","news":"","avail":0.92,"gw":[3.01,2.72,2.92,2.84,2.79,2.52,2.81,2.62,2.78,2.55,2.59,2.6,2.76,2.94,2.68,2.67,2.75,2.95,2.84,2.66,2.92,2.33,2.75,2.59,2.76,2.34,2.94,2.49,2.62,3.04,2.66,2.95,2.96,2.61,2.82,2.66,2.74,2.65],"rest":103.82999999999998,"owner":null,"mine":false},{"code":"560262","n_career":32,"name":"Kroupi.Jr","pos":"FWD","team":3,"status":"i","news":"Foot injury - Unknown return date","avail":0.05,"gw":[0.14,0.47,0.9,1.49,1.83,2.05,2.78,2.93,3.17,2.93,3.29,2.96,3.02,3.36,2.51,3.26,3.13,2.99,3.35,2.92,3.29,3.03,3.11,2.98,2.8,3.07,3.07,3.12,3.18,3.06,2.94,2.9,2.79,3.03,3.03,2.94,3.06,2.91],"rest":103.79,"owner":null,"mine":false},{"code":"195546","n_career":117,"name":"Buendía","pos":"MID","team":2,"status":"a","news":"","avail":1.0,"gw":[2.66,2.43,2.71,3.01,2.54,2.68,2.65,2.64,2.79,2.51,2.94,2.72,2.75,2.97,2.66,2.62,3.05,2.99,2.89,2.64,2.9,2.72,2.89,2.53,2.8,2.61,2.92,2.49,2.9,2.73,2.8,2.16,2.97,2.6,2.5,3.0,2.26,2.91],"rest":103.53999999999999,"owner":null,"mine":false},{"code":"503139","n_career":77,"name":"Scott","pos":"MID","team":3,"status":"a","news":"","avail":0.84,"gw":[2.53,2.82,2.7,2.98,2.73,2.45,2.78,2.62,2.85,2.63,2.95,2.65,2.71,3.02,2.24,2.93,2.81,2.68,3.01,2.62,2.96,2.72,2.8,2.67,2.51,2.76,2.75,2.8,2.86,2.74,2.64,2.6,2.5,2.72,2.72,2.64,2.74,2.61],"rest":103.44999999999999,"owner":null,"mine":false},{"code":"220627","n_career":91,"name":"Justin","pos":"DEF","team":13,"status":"a","news":"","avail":0.92,"gw":[2.73,2.87,2.58,3.05,2.67,2.04,2.81,2.58,2.59,2.87,2.73,2.95,2.31,3.05,2.63,2.87,2.69,2.77,3.06,2.68,2.77,2.94,2.64,2.87,2.51,2.75,2.68,2.79,2.75,2.79,2.85,2.62,2.91,2.72,2.34,2.66,2.71,2.54],"rest":103.36999999999999,"owner":null,"mine":false},{"code":"651426","n_career":19,"name":"Canvot","pos":"DEF","team":8,"status":"a","news":"","avail":0.84,"gw":[2.7,2.63,2.63,3.03,2.54,2.66,2.54,2.9,2.64,2.79,2.8,2.92,2.53,2.7,2.8,2.59,2.56,2.94,2.83,2.86,2.69,3.01,2.64,2.88,2.76,2.59,2.84,2.13,2.79,2.79,2.82,2.4,2.63,2.82,2.51,2.83,2.59,2.85],"rest":103.16,"owner":null,"mine":false},{"code":"206915","n_career":121,"name":"C.Jones","pos":"MID","team":14,"status":"d","news":"Hip injury - 75% chance of playing","avail":0.75,"gw":[2.1,2.86,2.71,3.02,2.49,2.43,2.6,2.82,2.36,2.5,2.98,2.62,2.72,2.73,2.92,2.99,2.8,2.67,3.19,2.61,2.89,2.7,2.79,2.15,2.59,2.87,2.78,2.68,2.9,2.73,2.93,2.6,2.71,2.88,2.24,2.95,2.44,2.85],"rest":102.79999999999997,"owner":null,"mine":false},{"code":"232653","n_career":137,"name":"J.Ramsey","pos":"MID","team":17,"status":"a","news":"","avail":1.0,"gw":[2.98,2.67,2.88,2.79,2.74,2.45,2.76,2.55,2.73,2.49,2.52,2.53,2.71,2.9,2.62,2.61,2.69,2.91,2.79,2.6,2.88,2.25,2.7,2.53,2.71,2.25,2.91,2.42,2.56,3.02,2.6,2.91,2.93,2.54,2.78,2.6,2.69,2.59],"rest":101.79,"owner":null,"mine":false},{"code":"491279","n_career":73,"name":"Van de Ven","pos":"DEF","team":19,"status":"i","news":"Unspecified injury - Expected back 29 Aug","avail":0.0,"gw":[0.0,0.0,1.39,2.52,2.82,2.55,3.07,2.77,2.92,2.76,3.23,2.74,2.92,2.72,2.82,2.82,3.17,3.04,2.76,2.81,3.15,2.85,2.91,2.82,2.67,2.63,3.12,2.66,2.97,2.87,3.04,2.82,3.13,2.36,2.88,2.91,2.9,2.67],"rest":101.19,"owner":null,"mine":false},{"code":"486672","n_career":142,"name":"Caicedo","pos":"MID","team":6,"status":"a","news":"","avail":0.92,"gw":[2.66,2.73,2.17,3.0,2.42,2.64,2.51,2.89,2.71,2.43,2.98,2.58,2.67,2.94,2.31,2.78,2.73,2.71,3.07,2.57,2.79,2.72,2.74,2.52,2.52,2.8,2.58,2.73,2.35,2.74,2.79,2.48,2.59,2.61,2.53,2.83,2.49,2.75],"rest":101.06,"owner":null,"mine":false},{"code":"516895","n_career":77,"name":"Mainoo","pos":"MID","team":16,"status":"a","news":"","avail":0.92,"gw":[2.73,2.85,2.54,2.69,2.39,2.69,2.59,2.83,2.46,2.67,2.69,2.82,2.51,2.97,2.49,2.16,2.88,2.81,2.7,2.89,2.56,2.91,2.51,2.74,2.62,2.47,2.44,2.36,2.72,2.43,2.85,2.6,2.77,2.64,2.46,2.91,2.54,2.72],"rest":100.61,"owner":null,"mine":false},{"code":"485711","n_career":30,"name":"Šeško","pos":"FWD","team":16,"status":"a","news":"","avail":0.76,"gw":[2.71,2.81,2.56,2.68,2.43,2.68,2.59,2.79,2.49,2.66,2.68,2.78,2.53,2.91,2.51,2.24,2.83,2.78,2.69,2.84,2.57,2.86,2.53,2.72,2.62,2.5,2.47,2.4,2.7,2.46,2.81,2.61,2.75,2.64,2.49,2.86,2.55,2.7],"rest":100.42999999999999,"owner":421435,"mine":false},{"code":"248875","n_career":83,"name":"Doku","pos":"MID","team":15,"status":"i","news":"Calf injury - Expected back 5 Sep","avail":0.0,"gw":[0.0,0.0,0.0,1.47,2.29,2.69,3.09,2.81,2.93,2.76,3.15,2.49,3.02,2.95,3.01,3.13,2.98,2.89,3.33,2.93,3.09,2.87,2.63,2.81,2.82,3.04,2.95,2.9,2.86,3.13,2.86,3.0,2.84,3.08,2.96,2.95,2.92,2.73],"rest":100.36,"owner":null,"mine":false},{"code":"444765","n_career":63,"name":"Van den Berg","pos":"DEF","team":4,"status":"i","news":"Groin injury - Unknown return date","avail":0.05,"gw":[0.16,0.43,0.91,1.35,1.74,1.96,2.77,2.92,3.0,2.7,3.17,2.84,2.58,2.97,2.81,3.15,3.01,2.99,3.26,2.48,3.06,2.92,3.0,2.81,2.71,3.08,2.96,3.01,2.74,3.22,2.93,3.13,3.09,2.64,2.92,2.92,3.05,2.77],"rest":100.16000000000001,"owner":null,"mine":false},{"code":"216094","n_career":21,"name":"Frimpong","pos":"DEF","team":14,"status":"a","news":"","avail":0.92,"gw":[2.7,2.76,2.62,2.9,2.42,2.36,2.52,2.72,2.3,2.43,2.87,2.54,2.63,2.64,2.81,2.88,2.71,2.58,3.06,2.53,2.79,2.62,2.7,2.11,2.51,2.77,2.68,2.6,2.8,2.64,2.83,2.52,2.62,2.78,2.19,2.84,2.37,2.75],"rest":100.1,"owner":null,"mine":false},{"code":"577669","n_career":33,"name":"Sadiki","pos":"MID","team":20,"status":"a","news":"","avail":1.0,"gw":[2.71,2.76,2.55,2.48,2.11,2.5,2.52,2.86,2.52,2.67,2.61,2.9,2.45,2.71,2.74,2.76,2.6,2.58,3.09,2.85,2.56,2.96,2.56,2.71,2.49,2.68,2.55,2.6,2.74,2.2,2.85,2.5,2.54,2.86,2.32,2.87,2.48,2.47],"rest":99.91000000000001,"owner":null,"mine":false},{"code":"166477","n_career":149,"name":"Castagne","pos":"DEF","team":10,"status":"a","news":"","avail":1.0,"gw":[2.87,2.45,2.75,2.69,2.58,2.38,2.81,2.6,2.4,2.74,2.39,2.83,2.51,2.62,2.75,2.6,2.8,2.41,2.74,2.91,2.63,2.83,2.49,2.49,2.65,2.0,2.9,2.29,2.42,2.91,2.49,2.69,2.54,2.77,2.71,2.65,2.73,2.43],"rest":99.45000000000002,"owner":null,"mine":false},{"code":"219168","n_career":96,"name":"Isak","pos":"FWD","team":14,"status":"a","news":"","avail":0.68,"gw":[2.67,2.71,2.61,2.81,2.45,2.41,2.53,2.68,2.37,2.46,2.79,2.55,2.61,2.62,2.75,2.79,2.67,2.58,2.93,2.54,2.73,2.6,2.66,2.23,2.52,2.72,2.65,2.59,2.73,2.62,2.76,2.53,2.61,2.72,2.29,2.77,2.42,2.7],"rest":99.38000000000001,"owner":282287,"mine":false},{"code":"466525","n_career":29,"name":"Stach","pos":"MID","team":13,"status":"a","news":"","avail":0.68,"gw":[2.62,2.72,2.51,2.86,2.58,2.11,2.68,2.51,2.52,2.72,2.62,2.78,2.31,2.85,2.54,2.72,2.59,2.65,2.86,2.58,2.65,2.78,2.56,2.72,2.46,2.64,2.58,2.67,2.63,2.66,2.71,2.54,2.75,2.61,2.33,2.57,2.6,2.48],"rest":99.27,"owner":null,"mine":false},{"code":"544877","n_career":99,"name":"Kerkez","pos":"DEF","team":14,"status":"a","news":"","avail":0.92,"gw":[2.67,2.73,2.59,2.87,2.39,2.33,2.49,2.69,2.27,2.4,2.84,2.51,2.6,2.61,2.78,2.85,2.68,2.55,3.03,2.5,2.76,2.59,2.67,2.08,2.48,2.74,2.65,2.57,2.77,2.61,2.8,2.49,2.59,2.75,2.16,2.81,2.34,2.72],"rest":98.96,"owner":45811,"mine":false},{"code":"209289","n_career":126,"name":"Smith Rowe","pos":"MID","team":10,"status":"a","news":"","avail":1.0,"gw":[2.85,2.43,2.73,2.67,2.56,2.37,2.8,2.58,2.38,2.73,2.38,2.81,2.49,2.6,2.74,2.59,2.79,2.4,2.73,2.9,2.62,2.82,2.47,2.48,2.64,1.98,2.89,2.28,2.41,2.9,2.48,2.68,2.53,2.75,2.7,2.64,2.72,2.41],"rest":98.93,"owner":null,"mine":false},{"code":"98747","n_career":134,"name":"Pope","pos":"GKP","team":17,"status":"a","news":"","avail":0.76,"gw":[2.82,2.58,2.75,2.68,2.64,2.42,2.65,2.5,2.63,2.45,2.47,2.48,2.61,2.76,2.55,2.54,2.6,2.77,2.68,2.53,2.75,2.26,2.61,2.48,2.61,2.27,2.76,2.4,2.5,2.85,2.53,2.77,2.78,2.49,2.67,2.53,2.6,2.53],"rest":98.49999999999999,"owner":null,"mine":false},{"code":"487838","n_career":81,"name":"Hall","pos":"DEF","team":17,"status":"a","news":"","avail":0.92,"gw":[2.86,2.57,2.77,2.69,2.64,2.37,2.66,2.47,2.63,2.41,2.44,2.45,2.61,2.79,2.53,2.52,2.6,2.8,2.69,2.51,2.77,2.19,2.61,2.44,2.61,2.19,2.79,2.35,2.48,2.9,2.51,2.8,2.82,2.46,2.67,2.51,2.59,2.5],"rest":98.2,"owner":null,"mine":false},{"code":"496221","n_career":66,"name":"Wharton","pos":"MID","team":8,"status":"a","news":"","avail":0.84,"gw":[2.57,2.49,2.5,2.89,2.41,2.53,2.41,2.77,2.51,2.66,2.66,2.79,2.39,2.57,2.66,2.46,2.43,2.81,2.7,2.73,2.56,2.88,2.51,2.75,2.62,2.46,2.71,2.0,2.66,2.65,2.68,2.27,2.49,2.69,2.38,2.7,2.45,2.71],"rest":98.10999999999999,"owner":null,"mine":false},{"code":"216051","n_career":146,"name":"Dalot","pos":"DEF","team":16,"status":"a","news":"","avail":0.84,"gw":[2.65,2.76,2.49,2.62,2.35,2.62,2.52,2.74,2.41,2.6,2.62,2.74,2.46,2.88,2.44,2.14,2.79,2.73,2.63,2.8,2.5,2.82,2.45,2.67,2.56,2.42,2.39,2.32,2.64,2.38,2.77,2.54,2.7,2.57,2.41,2.82,2.48,2.65],"rest":98.08,"owner":299912,"mine":false},{"code":"153133","n_career":161,"name":"Iwobi","pos":"MID","team":10,"status":"a","news":"","avail":0.76,"gw":[2.77,2.45,2.68,2.63,2.55,2.4,2.73,2.56,2.41,2.67,2.41,2.74,2.49,2.58,2.68,2.57,2.72,2.43,2.67,2.8,2.59,2.74,2.48,2.49,2.61,2.11,2.79,2.33,2.43,2.8,2.48,2.64,2.52,2.69,2.65,2.6,2.67,2.43],"rest":97.99000000000001,"owner":372099,"mine":true},{"code":"247412","n_career":70,"name":"Strand Larsen","pos":"FWD","team":8,"status":"a","news":"","avail":0.92,"gw":[2.55,2.47,2.48,2.91,2.38,2.51,2.37,2.77,2.49,2.65,2.65,2.8,2.36,2.55,2.66,2.43,2.4,2.81,2.69,2.73,2.54,2.89,2.48,2.75,2.61,2.43,2.71,1.93,2.65,2.64,2.68,2.22,2.47,2.69,2.34,2.69,2.42,2.71],"rest":97.50999999999999,"owner":null,"mine":false},{"code":"248857","n_career":89,"name":"Madueke","pos":"MID","team":1,"status":"a","news":"","avail":0.84,"gw":[2.82,2.41,2.66,2.52,2.25,2.55,2.42,2.65,2.41,2.65,2.61,2.48,2.37,2.64,2.67,2.66,2.51,2.51,2.92,2.71,2.56,2.8,2.19,2.66,2.42,2.59,2.48,2.51,2.39,2.71,2.51,2.61,2.5,2.76,2.4,2.71,2.34,2.55],"rest":97.11,"owner":null,"mine":false},{"code":"449027","n_career":10,"name":"Mamardashvili","pos":"GKP","team":14,"status":"a","news":"","avail":0.76,"gw":[2.61,2.65,2.54,2.77,2.37,2.33,2.46,2.62,2.28,2.38,2.74,2.47,2.54,2.56,2.7,2.75,2.61,2.51,2.9,2.46,2.68,2.54,2.6,2.12,2.45,2.66,2.59,2.52,2.68,2.55,2.71,2.45,2.54,2.67,2.19,2.72,2.34,2.64],"rest":96.9,"owner":null,"mine":false},{"code":"244042","n_career":78,"name":"Muniz","pos":"FWD","team":10,"status":"a","news":"","avail":1.0,"gw":[2.79,2.37,2.67,2.6,2.49,2.3,2.73,2.52,2.31,2.66,2.31,2.75,2.42,2.54,2.67,2.52,2.72,2.33,2.66,2.83,2.55,2.75,2.41,2.41,2.57,1.91,2.82,2.21,2.34,2.83,2.41,2.61,2.46,2.68,2.63,2.57,2.65,2.35],"rest":96.35,"owner":null,"mine":false},{"code":"463067","n_career":69,"name":"Georginio","pos":"MID","team":5,"status":"a","news":"","avail":0.92,"gw":[2.73,2.41,2.74,2.63,2.11,2.19,2.6,2.46,2.13,2.6,2.62,2.74,2.37,2.54,2.62,2.75,2.52,2.6,2.86,2.74,2.49,2.54,2.43,2.71,2.31,2.68,2.56,2.52,2.45,2.84,2.39,2.63,2.43,2.68,2.49,2.45,2.59,1.97],"rest":96.12000000000002,"owner":null,"mine":false},{"code":"247632","n_career":116,"name":"Neto","pos":"MID","team":6,"status":"a","news":"","avail":0.76,"gw":[2.52,2.57,2.12,2.8,2.32,2.5,2.4,2.71,2.55,2.33,2.78,2.45,2.53,2.75,2.23,2.61,2.57,2.56,2.85,2.45,2.63,2.57,2.58,2.4,2.4,2.63,2.45,2.57,2.26,2.58,2.62,2.37,2.46,2.47,2.41,2.66,2.38,2.59],"rest":95.62999999999998,"owner":null,"mine":false},{"code":"214225","n_career":37,"name":"Rodon","pos":"DEF","team":13,"status":"a","news":"","avail":0.84,"gw":[2.52,2.64,2.38,2.81,2.47,1.89,2.59,2.38,2.39,2.65,2.52,2.72,2.13,2.81,2.42,2.65,2.48,2.56,2.81,2.47,2.55,2.71,2.44,2.64,2.31,2.54,2.47,2.57,2.54,2.57,2.63,2.42,2.68,2.5,2.16,2.46,2.5,2.34],"rest":95.32000000000001,"owner":null,"mine":false},{"code":"75115","n_career":116,"name":"Wilson","pos":"FWD","team":4,"status":"a","news":"","avail":0.68,"gw":[2.0,1.73,1.83,1.81,2.55,2.24,2.73,2.56,2.65,2.32,2.84,2.48,2.19,2.62,2.44,2.81,2.66,2.64,2.93,2.09,2.72,2.56,2.65,2.45,2.34,2.73,2.6,2.66,2.37,2.89,2.57,2.79,2.75,2.25,2.56,2.57,2.7,2.4],"rest":94.68,"owner":null,"mine":false},{"code":"198869","n_career":130,"name":"White","pos":"DEF","team":1,"status":"a","news":"","avail":0.76,"gw":[2.73,2.35,2.58,2.45,2.21,2.48,2.36,2.57,2.35,2.57,2.53,2.41,2.32,2.56,2.59,2.58,2.44,2.45,2.81,2.62,2.49,2.71,2.16,2.58,2.36,2.52,2.42,2.44,2.33,2.62,2.44,2.54,2.43,2.67,2.34,2.62,2.29,2.48],"rest":94.40000000000002,"owner":null,"mine":false},{"code":"248056","n_career":27,"name":"Tanaka","pos":"MID","team":13,"status":"a","news":"","avail":0.92,"gw":[2.46,2.6,2.31,2.79,2.41,1.77,2.55,2.32,2.32,2.61,2.46,2.69,2.04,2.78,2.36,2.61,2.42,2.51,2.79,2.41,2.5,2.68,2.38,2.6,2.24,2.49,2.41,2.53,2.48,2.52,2.59,2.35,2.64,2.45,2.07,2.4,2.44,2.27],"rest":93.24999999999999,"owner":null,"mine":false},{"code":"202993","n_career":105,"name":"Bentancur","pos":"MID","team":19,"status":"a","news":"","avail":0.84,"gw":[2.47,2.62,2.37,2.68,2.4,2.17,2.61,2.36,2.48,2.35,2.75,2.34,2.49,2.32,2.4,2.4,2.7,2.59,2.35,2.4,2.68,2.42,2.48,2.4,2.28,2.24,2.65,2.26,2.53,2.44,2.58,2.4,2.66,2.01,2.45,2.48,2.46,2.28],"rest":92.95,"owner":null,"mine":false},{"code":"508395","n_career":95,"name":"Yarmoliuk","pos":"MID","team":4,"status":"a","news":"","avail":0.92,"gw":[2.78,2.41,2.54,2.51,2.41,2.12,2.58,2.43,2.51,2.2,2.68,2.35,2.09,2.47,2.32,2.66,2.52,2.5,2.77,1.99,2.57,2.43,2.51,2.32,2.22,2.58,2.46,2.51,2.25,2.72,2.43,2.63,2.6,2.14,2.42,2.43,2.55,2.27],"rest":92.88,"owner":null,"mine":false},{"code":"467779","n_career":50,"name":"Wieffer","pos":"MID","team":5,"status":"a","news":"","avail":0.76,"gw":[2.59,2.32,2.59,2.5,2.07,2.14,2.48,2.36,2.09,2.47,2.49,2.6,2.28,2.43,2.49,2.6,2.41,2.47,2.69,2.59,2.38,2.42,2.34,2.57,2.24,2.54,2.44,2.41,2.35,2.67,2.3,2.5,2.33,2.54,2.39,2.35,2.47,1.96],"rest":91.85999999999999,"owner":null,"mine":false},{"code":"611922","n_career":19,"name":"Ngumoha","pos":"MID","team":14,"status":"a","news":"","avail":0.92,"gw":[2.49,2.54,2.41,2.69,2.2,2.14,2.3,2.5,2.08,2.21,2.65,2.32,2.41,2.42,2.6,2.66,2.49,2.36,2.84,2.31,2.57,2.4,2.48,1.89,2.29,2.56,2.47,2.38,2.58,2.42,2.61,2.3,2.41,2.56,1.97,2.62,2.16,2.53],"rest":91.82000000000001,"owner":null,"mine":false},{"code":"222694","n_career":86,"name":"Struijk","pos":"DEF","team":5,"status":"a","news":"","avail":0.57,"gw":[1.83,1.63,1.83,1.77,2.12,2.19,2.57,2.44,2.14,2.56,2.58,2.7,2.36,2.51,2.58,2.7,2.5,2.57,2.8,2.7,2.47,2.51,2.41,2.67,2.3,2.64,2.53,2.5,2.43,2.79,2.38,2.6,2.41,2.64,2.47,2.43,2.56,1.99],"rest":91.81,"owner":null,"mine":false},{"code":"210462","n_career":58,"name":"I.Sangaré","pos":"MID","team":18,"status":"a","news":"","avail":0.84,"gw":[2.69,2.34,2.63,2.41,2.46,2.12,2.14,2.39,2.27,2.26,2.46,2.54,2.3,2.58,2.25,2.53,2.39,2.44,2.73,2.64,2.16,2.65,2.26,2.52,2.22,2.45,2.35,2.46,2.36,2.6,2.38,2.54,2.51,2.28,2.39,2.0,2.51,2.33],"rest":91.54,"owner":null,"mine":false},{"code":"549912","n_career":28,"name":"Talbi","pos":"MID","team":20,"status":"a","news":"","avail":0.84,"gw":[2.47,2.51,2.33,2.28,1.96,2.3,2.31,2.59,2.31,2.44,2.39,2.63,2.25,2.47,2.5,2.51,2.38,2.36,2.79,2.59,2.34,2.68,2.34,2.47,2.28,2.44,2.33,2.38,2.49,2.04,2.59,2.29,2.33,2.6,2.14,2.61,2.28,2.27],"rest":91.26999999999998,"owner":null,"mine":false},{"code":"435997","n_career":27,"name":"Okafor","pos":"MID","team":13,"status":"a","news":"","avail":0.68,"gw":[2.39,2.49,2.27,2.62,2.35,1.88,2.45,2.28,2.28,2.49,2.39,2.55,2.07,2.62,2.31,2.49,2.36,2.42,2.63,2.35,2.41,2.54,2.32,2.49,2.22,2.4,2.35,2.43,2.4,2.43,2.48,2.31,2.52,2.38,2.1,2.34,2.37,2.24],"rest":90.41999999999999,"owner":null,"mine":false},{"code":"200785","n_career":78,"name":"Adams","pos":"MID","team":3,"status":"d","news":"Unspecified injury - 75% chance of playing","avail":0.63,"gw":[1.65,2.49,2.37,2.65,2.4,2.12,2.44,2.29,2.51,2.3,2.62,2.32,2.37,2.69,1.91,2.6,2.48,2.35,2.68,2.29,2.63,2.39,2.46,2.34,2.18,2.43,2.42,2.47,2.53,2.41,2.31,2.27,2.17,2.39,2.39,2.31,2.41,2.28],"rest":90.32000000000001,"owner":null,"mine":false},{"code":"174874","n_career":163,"name":"Andersen","pos":"DEF","team":10,"status":"s","news":"Suspended until 30 Aug","avail":0.04,"gw":[0.14,0.37,0.82,1.2,1.55,1.82,2.5,2.6,2.43,2.73,2.43,2.8,2.53,2.62,2.73,2.61,2.78,2.45,2.72,2.87,2.63,2.8,2.51,2.52,2.65,2.1,2.86,2.35,2.46,2.87,2.51,2.68,2.56,2.74,2.7,2.65,2.72,2.46],"rest":89.47,"owner":null,"mine":false},{"code":"577725","n_career":40,"name":"King","pos":"MID","team":10,"status":"a","news":"","avail":1.0,"gw":[2.58,2.16,2.46,2.4,2.29,2.1,2.53,2.31,2.11,2.46,2.11,2.54,2.22,2.33,2.47,2.32,2.52,2.13,2.46,2.63,2.34,2.55,2.2,2.21,2.37,1.71,2.62,2.01,2.14,2.63,2.21,2.41,2.26,2.48,2.43,2.36,2.45,2.14],"rest":88.65000000000002,"owner":null,"mine":false},{"code":"509416","n_career":65,"name":"Ayari","pos":"MID","team":5,"status":"a","news":"","avail":0.76,"gw":[2.49,2.22,2.5,2.4,1.97,2.04,2.38,2.27,1.99,2.37,2.39,2.5,2.19,2.33,2.39,2.5,2.31,2.38,2.59,2.49,2.29,2.33,2.24,2.47,2.14,2.45,2.34,2.31,2.25,2.58,2.2,2.4,2.24,2.44,2.29,2.26,2.37,1.86],"rest":88.16000000000001,"owner":null,"mine":false},{"code":"184029","n_career":154,"name":"Ødegaard","pos":"MID","team":1,"status":"a","news":"","avail":0.68,"gw":[2.52,2.18,2.38,2.27,2.05,2.3,2.19,2.38,2.18,2.38,2.34,2.24,2.15,2.36,2.39,2.38,2.26,2.27,2.59,2.42,2.3,2.5,2.01,2.39,2.19,2.33,2.24,2.26,2.17,2.42,2.26,2.35,2.25,2.46,2.17,2.42,2.12,2.3],"rest":87.37,"owner":null,"mine":false},{"code":"477555","n_career":40,"name":"Bobb","pos":"MID","team":10,"status":"a","news":"","avail":1.0,"gw":[2.54,2.12,2.42,2.36,2.25,2.06,2.49,2.27,2.07,2.42,2.07,2.5,2.18,2.29,2.43,2.28,2.48,2.09,2.42,2.59,2.3,2.51,2.16,2.17,2.33,1.67,2.58,1.97,2.1,2.59,2.17,2.37,2.22,2.44,2.39,2.32,2.41,2.1],"rest":87.12999999999998,"owner":null,"mine":false},{"code":"596777","n_career":38,"name":"Dorgu","pos":"DEF","team":16,"status":"a","news":"","avail":0.68,"gw":[2.35,2.44,2.21,2.32,2.1,2.32,2.24,2.42,2.16,2.31,2.32,2.42,2.19,2.53,2.18,1.93,2.46,2.41,2.33,2.46,2.23,2.48,2.19,2.36,2.27,2.16,2.14,2.08,2.34,2.13,2.44,2.26,2.38,2.28,2.15,2.48,2.21,2.35],"rest":87.03,"owner":45811,"mine":false},{"code":"488024","n_career":34,"name":"Yeremy","pos":"MID","team":8,"status":"a","news":"","avail":0.92,"gw":[2.26,2.17,2.18,2.61,2.08,2.21,2.08,2.47,2.19,2.35,2.36,2.5,2.06,2.25,2.36,2.13,2.1,2.52,2.4,2.43,2.25,2.59,2.18,2.45,2.32,2.13,2.41,1.63,2.35,2.35,2.38,1.93,2.17,2.39,2.04,2.4,2.13,2.41],"rest":86.22000000000001,"owner":null,"mine":false},{"code":"578153","n_career":26,"name":"Khusanov","pos":"DEF","team":15,"status":"a","news":"","avail":0.76,"gw":[2.49,2.14,2.44,2.27,2.2,2.04,2.4,2.15,2.26,2.11,2.46,1.86,2.35,2.28,2.34,2.44,2.3,2.22,2.62,2.27,2.41,2.2,1.99,2.15,2.17,2.36,2.28,2.24,2.19,2.44,2.2,2.33,2.18,2.39,2.29,2.28,2.26,2.09],"rest":86.09000000000002,"owner":null,"mine":false},{"code":"83299","n_career":148,"name":"Dunk","pos":"DEF","team":5,"status":"a","news":"","avail":0.76,"gw":[2.43,2.15,2.43,2.34,1.91,1.98,2.32,2.2,1.93,2.31,2.33,2.43,2.12,2.27,2.33,2.44,2.25,2.31,2.53,2.43,2.22,2.26,2.18,2.4,2.07,2.38,2.28,2.25,2.19,2.51,2.14,2.34,2.17,2.38,2.22,2.19,2.3,1.79],"rest":85.71,"owner":null,"mine":false},{"code":"466075","n_career":44,"name":"Calafiori","pos":"DEF","team":1,"status":"a","news":"","avail":0.68,"gw":[2.47,2.13,2.34,2.23,2.01,2.25,2.14,2.33,2.13,2.33,2.3,2.19,2.1,2.32,2.34,2.34,2.22,2.22,2.55,2.38,2.25,2.45,1.96,2.34,2.14,2.28,2.19,2.21,2.12,2.38,2.22,2.3,2.21,2.42,2.12,2.38,2.08,2.25],"rest":85.61999999999999,"owner":299912,"mine":false},{"code":"159506","n_career":75,"name":"Aina","pos":"DEF","team":18,"status":"a","news":"","avail":0.68,"gw":[2.47,2.19,2.42,2.25,2.29,2.01,2.03,2.23,2.13,2.12,2.29,2.35,2.16,2.39,2.12,2.34,2.23,2.28,2.5,2.43,2.05,2.44,2.12,2.34,2.1,2.28,2.2,2.29,2.21,2.4,2.22,2.36,2.32,2.14,2.24,1.92,2.32,2.18],"rest":85.36,"owner":372099,"mine":true},{"code":"448514","n_career":128,"name":"Aït-Nouri","pos":"DEF","team":15,"status":"a","news":"","avail":0.68,"gw":[2.44,2.13,2.4,2.25,2.18,2.04,2.37,2.14,2.24,2.1,2.42,1.88,2.31,2.26,2.3,2.4,2.28,2.21,2.56,2.24,2.37,2.19,2.0,2.14,2.15,2.33,2.26,2.22,2.18,2.4,2.18,2.3,2.17,2.36,2.27,2.26,2.23,2.08],"rest":85.24000000000001,"owner":null,"mine":false},{"code":"514254","n_career":48,"name":"Gomez","pos":"MID","team":5,"status":"a","news":"","avail":0.76,"gw":[2.41,2.14,2.42,2.33,1.89,1.96,2.3,2.19,1.91,2.3,2.31,2.42,2.11,2.25,2.31,2.42,2.24,2.3,2.51,2.41,2.21,2.25,2.16,2.39,2.06,2.37,2.26,2.23,2.17,2.5,2.13,2.33,2.16,2.36,2.21,2.18,2.29,1.78],"rest":85.17,"owner":null,"mine":false},{"code":"216055","n_career":30,"name":"Florentino","pos":"MID","team":12,"status":"a","news":"","avail":0.57,"gw":[1.7,1.5,1.69,1.58,2.07,2.27,2.0,2.45,2.23,2.41,2.42,2.44,2.21,2.4,2.48,2.19,2.55,2.5,2.06,2.55,2.31,2.6,2.15,2.51,1.99,2.15,2.44,2.12,2.21,2.51,2.18,2.41,2.3,2.52,2.12,2.29,2.14,2.38],"rest":85.03,"owner":null,"mine":false},{"code":"210156","n_career":89,"name":"Awoniyi","pos":"FWD","team":7,"status":"a","news":"","avail":0.57,"gw":[1.33,1.7,1.38,1.7,2.08,2.32,2.28,2.44,2.33,2.13,2.52,2.3,2.42,2.31,2.38,2.27,2.51,2.52,2.44,2.33,2.46,2.27,2.45,2.17,2.37,2.17,2.52,2.08,2.19,2.26,2.07,2.27,2.21,2.44,2.17,2.57,2.13,2.38],"rest":84.86999999999998,"owner":null,"mine":false},{"code":"250199","n_career":87,"name":"Dominguez","pos":"MID","team":18,"status":"a","news":"","avail":1.0,"gw":[2.57,2.15,2.5,2.23,2.29,1.89,1.91,2.21,2.06,2.05,2.29,2.39,2.1,2.44,2.04,2.38,2.21,2.28,2.61,2.51,1.94,2.53,2.05,2.37,2.01,2.28,2.17,2.29,2.17,2.46,2.19,2.39,2.35,2.08,2.22,1.75,2.35,2.14],"rest":84.85,"owner":null,"mine":false},{"code":"448089","n_career":115,"name":"Gomes","pos":"MID","team":2,"status":"i","news":"Calf injury - Unknown return date","avail":0.03,"gw":[0.08,0.23,0.51,0.84,1.41,1.84,2.19,2.42,2.55,2.31,2.68,2.49,2.51,2.7,2.45,2.41,2.77,2.71,2.63,2.43,2.65,2.49,2.63,2.33,2.56,2.4,2.66,2.3,2.64,2.5,2.56,2.02,2.7,2.39,2.3,2.72,2.11,2.65],"rest":84.77000000000001,"owner":null,"mine":false},{"code":"122798","n_career":136,"name":"Robertson","pos":"DEF","team":19,"status":"a","news":"","avail":0.57,"gw":[1.59,1.69,1.52,1.73,2.27,2.04,2.48,2.22,2.35,2.21,2.61,2.2,2.35,2.18,2.27,2.27,2.56,2.45,2.22,2.26,2.55,2.29,2.34,2.27,2.14,2.1,2.52,2.13,2.39,2.3,2.45,2.26,2.52,1.88,2.32,2.34,2.33,2.14],"rest":84.74,"owner":null,"mine":false},{"code":"244954","n_career":74,"name":"Pau","pos":"DEF","team":2,"status":"a","news":"","avail":0.76,"gw":[2.17,1.99,2.2,2.43,2.08,2.18,2.15,2.15,2.26,2.05,2.38,2.21,2.23,2.4,2.17,2.13,2.46,2.41,2.34,2.15,2.35,2.21,2.34,2.07,2.27,2.13,2.36,2.04,2.34,2.21,2.27,1.79,2.4,2.12,2.04,2.42,1.86,2.35],"rest":84.11000000000001,"owner":null,"mine":false},{"code":"184349","n_career":72,"name":"Sessegnon","pos":"MID","team":10,"status":"a","news":"","avail":0.68,"gw":[2.37,2.08,2.29,2.24,2.17,2.04,2.33,2.18,2.05,2.28,2.05,2.34,2.12,2.2,2.29,2.19,2.32,2.06,2.28,2.4,2.21,2.34,2.11,2.11,2.22,1.78,2.39,1.98,2.07,2.4,2.11,2.25,2.15,2.3,2.26,2.22,2.28,2.07],"rest":83.53,"owner":null,"mine":false},{"code":"465730","n_career":29,"name":"De Cuyper","pos":"DEF","team":5,"status":"a","news":"","avail":0.76,"gw":[2.36,2.09,2.37,2.28,1.84,1.91,2.25,2.14,1.87,2.25,2.27,2.37,2.06,2.2,2.27,2.38,2.19,2.25,2.46,2.37,2.16,2.2,2.11,2.34,2.01,2.32,2.22,2.19,2.13,2.45,2.08,2.28,2.11,2.32,2.16,2.13,2.24,1.73],"rest":83.35999999999999,"owner":null,"mine":false},{"code":"54469","n_career":109,"name":"Smith","pos":"DEF","team":3,"status":"a","news":"","avail":0.76,"gw":[2.01,2.28,2.17,2.42,2.2,1.94,2.24,2.1,2.3,2.1,2.4,2.13,2.17,2.46,1.76,2.37,2.26,2.15,2.45,2.09,2.4,2.19,2.25,2.14,2.0,2.22,2.21,2.26,2.31,2.21,2.12,2.08,1.99,2.18,2.19,2.11,2.21,2.09],"rest":83.16000000000001,"owner":null,"mine":false},{"code":"482609","n_career":91,"name":"Gusto","pos":"DEF","team":6,"status":"a","news":"","avail":0.84,"gw":[2.19,2.25,1.74,2.5,1.96,2.17,2.05,2.4,2.23,1.98,2.48,2.11,2.2,2.44,1.87,2.29,2.25,2.23,2.56,2.11,2.31,2.25,2.26,2.05,2.06,2.31,2.11,2.25,1.9,2.26,2.3,2.02,2.12,2.14,2.07,2.34,2.03,2.27],"rest":83.06,"owner":null,"mine":false},{"code":"199798","n_career":167,"name":"Konsa","pos":"DEF","team":1,"status":"a","news":"","avail":0.51,"gw":[1.7,1.45,1.6,1.52,1.98,2.26,2.14,2.35,2.13,2.35,2.31,2.19,2.09,2.33,2.36,2.35,2.22,2.22,2.59,2.4,2.26,2.49,1.93,2.36,2.14,2.29,2.19,2.22,2.11,2.4,2.22,2.31,2.21,2.45,2.12,2.4,2.06,2.26],"rest":82.96000000000002,"owner":363607,"mine":false},{"code":"174594","n_career":30,"name":"Nmecha","pos":"FWD","team":13,"status":"a","news":"","avail":0.84,"gw":[2.19,2.31,2.05,2.49,2.14,1.56,2.27,2.06,2.06,2.32,2.19,2.4,1.8,2.48,2.1,2.32,2.15,2.23,2.49,2.14,2.22,2.39,2.11,2.32,1.99,2.21,2.14,2.25,2.21,2.25,2.3,2.09,2.35,2.18,1.83,2.13,2.17,2.02],"rest":82.91,"owner":null,"mine":false},{"code":"485047","n_career":47,"name":"Morato","pos":"DEF","team":18,"status":"a","news":"","avail":0.84,"gw":[2.46,2.11,2.4,2.18,2.23,1.89,1.91,2.17,2.04,2.03,2.23,2.31,2.07,2.36,2.02,2.3,2.16,2.22,2.5,2.41,1.93,2.43,2.03,2.29,2.0,2.22,2.13,2.23,2.13,2.37,2.15,2.32,2.28,2.05,2.17,1.78,2.28,2.1],"rest":82.88999999999999,"owner":null,"mine":false},{"code":"230001","n_career":57,"name":"Mazraoui","pos":"DEF","team":16,"status":"a","news":"","avail":0.76,"gw":[2.24,2.34,2.09,2.21,1.97,2.21,2.13,2.33,2.03,2.2,2.22,2.32,2.07,2.44,2.05,1.78,2.37,2.31,2.22,2.37,2.11,2.39,2.06,2.26,2.16,2.03,2.01,1.94,2.23,2.0,2.35,2.14,2.28,2.17,2.02,2.39,2.09,2.24],"rest":82.77000000000001,"owner":null,"mine":false},{"code":"433154","n_career":144,"name":"McNeil","pos":"MID","team":8,"status":"a","news":"","avail":0.51,"gw":[1.52,1.47,1.48,1.72,2.09,2.2,2.09,2.41,2.18,2.32,2.32,2.44,2.08,2.23,2.32,2.14,2.11,2.45,2.35,2.38,2.23,2.51,2.18,2.4,2.29,2.14,2.36,1.72,2.32,2.31,2.34,1.97,2.17,2.35,2.06,2.35,2.13,2.37],"rest":82.49999999999999,"owner":null,"mine":false},{"code":"154566","n_career":110,"name":"Solanke","pos":"FWD","team":19,"status":"a","news":"","avail":0.68,"gw":[2.18,2.31,2.1,2.35,2.13,1.94,2.3,2.09,2.2,2.09,2.41,2.08,2.2,2.06,2.13,2.13,2.37,2.28,2.09,2.13,2.35,2.15,2.19,2.13,2.03,2.0,2.33,2.02,2.23,2.16,2.28,2.13,2.34,1.82,2.17,2.19,2.18,2.03],"rest":82.3,"owner":421435,"mine":false},{"code":"449434","n_career":139,"name":"Elanga","pos":"MID","team":17,"status":"a","news":"","avail":0.84,"gw":[2.42,2.15,2.34,2.26,2.22,1.97,2.23,2.06,2.21,2.0,2.03,2.04,2.19,2.35,2.12,2.1,2.18,2.36,2.26,2.1,2.33,1.8,2.19,2.04,2.19,1.81,2.36,1.95,2.07,2.45,2.1,2.36,2.38,2.05,2.25,2.1,2.17,2.09],"rest":82.27999999999999,"owner":null,"mine":false},{"code":"554197","n_career":18,"name":"Rigg","pos":"MID","team":20,"status":"a","news":"","avail":0.84,"gw":[2.23,2.28,2.09,2.04,1.72,2.06,2.08,2.35,2.07,2.2,2.15,2.39,2.01,2.23,2.26,2.27,2.14,2.12,2.55,2.35,2.1,2.44,2.1,2.23,2.04,2.2,2.1,2.14,2.25,1.8,2.35,2.05,2.09,2.36,1.9,2.37,2.04,2.03],"rest":82.18000000000002,"owner":null,"mine":false},{"code":"209400","n_career":59,"name":"Kamada","pos":"MID","team":8,"status":"a","news":"","avail":0.92,"gw":[2.15,2.06,2.07,2.5,1.97,2.1,1.97,2.36,2.08,2.24,2.25,2.39,1.95,2.14,2.25,2.03,1.99,2.41,2.29,2.32,2.14,2.48,2.08,2.34,2.21,2.02,2.3,1.52,2.24,2.24,2.27,1.82,2.06,2.28,1.94,2.29,2.02,2.3],"rest":82.07,"owner":null,"mine":false},{"code":"242898","n_career":136,"name":"Johnson","pos":"MID","team":9,"status":"a","news":"","avail":0.57,"gw":[1.65,1.47,1.6,1.59,2.28,2.04,2.32,1.78,2.13,2.35,2.26,2.4,2.02,2.46,2.06,2.15,2.4,2.22,2.4,2.36,2.25,2.46,2.12,2.39,2.32,2.03,2.4,1.81,2.08,2.53,2.11,2.37,2.32,2.15,2.31,2.18,1.9,2.15],"rest":81.82000000000002,"owner":null,"mine":false},{"code":"226182","n_career":66,"name":"Bogle","pos":"DEF","team":13,"status":"a","news":"","avail":0.76,"gw":[2.16,2.27,2.03,2.43,2.12,1.59,2.23,2.04,2.04,2.28,2.16,2.35,1.81,2.42,2.08,2.28,2.13,2.2,2.43,2.12,2.19,2.34,2.09,2.28,1.98,2.18,2.12,2.21,2.18,2.21,2.26,2.07,2.31,2.15,1.84,2.1,2.14,2.0],"rest":81.82000000000001,"owner":null,"mine":false},{"code":"184341","n_career":107,"name":"Mount","pos":"MID","team":16,"status":"d","news":"Foot injury - 50% chance of playing","avail":0.42,"gw":[1.13,2.36,2.08,2.22,1.95,2.22,2.12,2.34,2.01,2.2,2.22,2.34,2.06,2.48,2.04,1.74,2.39,2.33,2.23,2.4,2.1,2.42,2.05,2.27,2.16,2.02,1.99,1.92,2.24,1.98,2.37,2.14,2.3,2.17,2.01,2.42,2.08,2.25],"rest":81.75,"owner":null,"mine":false},{"code":"500040","n_career":20,"name":"Mosquera","pos":"DEF","team":1,"status":"a","news":"","avail":0.84,"gw":[2.41,1.99,2.24,2.1,1.83,2.13,2.0,2.23,1.99,2.24,2.19,2.06,1.95,2.22,2.25,2.24,2.09,2.1,2.5,2.29,2.14,2.39,1.77,2.25,2.0,2.18,2.06,2.09,1.97,2.29,2.09,2.2,2.08,2.34,1.98,2.29,1.92,2.13],"rest":81.22000000000001,"owner":421435,"mine":false},{"code":"432422","n_career":78,"name":"Tonali","pos":"MID","team":19,"status":"a","news":"","avail":0.57,"gw":[1.52,1.63,1.45,1.66,2.17,1.94,2.38,2.13,2.25,2.12,2.52,2.1,2.25,2.09,2.17,2.17,2.46,2.36,2.12,2.17,2.45,2.19,2.25,2.17,2.05,2.01,2.42,2.03,2.3,2.21,2.35,2.17,2.43,1.78,2.22,2.25,2.23,2.05],"rest":81.22,"owner":null,"mine":false},{"code":"448104","n_career":24,"name":"Hincapie","pos":"DEF","team":1,"status":"a","news":"","avail":0.68,"gw":[2.34,2.01,2.21,2.1,1.88,2.12,2.01,2.2,2.01,2.2,2.17,2.06,1.98,2.19,2.22,2.21,2.09,2.09,2.42,2.25,2.13,2.33,1.83,2.21,2.02,2.16,2.07,2.09,1.99,2.25,2.09,2.17,2.08,2.29,2.0,2.25,1.95,2.12],"rest":80.79,"owner":null,"mine":false},{"code":"212314","n_career":91,"name":"Lukić","pos":"MID","team":12,"status":"a","news":"","avail":0.57,"gw":[1.61,1.41,1.6,1.49,1.94,2.14,1.87,2.32,2.1,2.27,2.29,2.3,2.08,2.27,2.34,2.06,2.41,2.37,1.93,2.42,2.18,2.47,2.02,2.37,1.86,2.02,2.31,1.98,2.08,2.38,2.05,2.28,2.17,2.39,1.99,2.16,2.0,2.24],"rest":80.16999999999999,"owner":null,"mine":false},{"code":"437505","n_career":32,"name":"Isidor","pos":"FWD","team":20,"status":"a","news":"","avail":0.84,"gw":[2.18,2.22,2.04,1.99,1.67,2.0,2.02,2.3,2.02,2.15,2.09,2.33,1.96,2.18,2.2,2.22,2.09,2.07,2.49,2.3,2.05,2.39,2.05,2.18,1.99,2.15,2.04,2.09,2.2,1.75,2.29,2.0,2.03,2.3,1.85,2.31,1.99,1.97],"rest":80.14999999999998,"owner":null,"mine":false},{"code":"152551","n_career":125,"name":"Lerma","pos":"MID","team":8,"status":"a","news":"","avail":0.84,"gw":[2.1,2.02,2.03,2.42,1.94,2.06,1.93,2.29,2.04,2.18,2.19,2.32,1.92,2.09,2.19,1.98,1.95,2.33,2.22,2.26,2.09,2.4,2.03,2.27,2.15,1.98,2.24,1.52,2.18,2.18,2.21,1.8,2.02,2.22,1.9,2.22,1.98,2.24],"rest":80.09,"owner":null,"mine":false},{"code":"91651","n_career":112,"name":"Kovačić","pos":"MID","team":15,"status":"a","news":"","avail":0.76,"gw":[2.32,1.98,2.27,2.1,2.03,1.88,2.24,1.99,2.09,1.94,2.3,1.7,2.18,2.12,2.17,2.27,2.14,2.06,2.45,2.1,2.24,2.04,1.83,1.99,2.0,2.19,2.11,2.07,2.03,2.27,2.03,2.16,2.01,2.23,2.13,2.11,2.09,1.92],"rest":79.78,"owner":null,"mine":false},{"code":"513466","n_career":16,"name":"Röhl","pos":"MID","team":9,"status":"a","news":"","avail":0.76,"gw":[2.27,2.04,2.2,2.2,2.14,1.92,2.17,1.69,2.01,2.2,2.12,2.25,1.91,2.3,1.94,2.03,2.25,2.09,2.25,2.22,2.11,2.3,1.99,2.24,2.18,1.92,2.25,1.72,1.96,2.37,1.99,2.22,2.17,2.03,2.17,2.05,1.79,2.03],"rest":79.69000000000001,"owner":null,"mine":false},{"code":"444145","n_career":155,"name":"Martinelli","pos":"MID","team":1,"status":"a","news":"","avail":0.76,"gw":[2.32,1.95,2.17,2.05,1.8,2.08,1.95,2.17,1.95,2.17,2.13,2.01,1.91,2.15,2.18,2.17,2.04,2.04,2.41,2.22,2.08,2.31,1.75,2.18,1.96,2.11,2.01,2.04,1.93,2.22,2.04,2.13,2.03,2.27,1.94,2.22,1.88,2.08],"rest":79.04999999999998,"owner":null,"mine":false},{"code":"487053","n_career":73,"name":"Udogie","pos":"DEF","team":19,"status":"a","news":"","avail":0.92,"gw":[2.1,2.27,1.99,2.33,2.03,1.78,2.26,1.98,2.12,1.97,2.41,1.95,2.12,1.93,2.03,2.03,2.35,2.23,1.97,2.02,2.33,2.05,2.11,2.03,1.89,1.85,2.3,1.88,2.17,2.07,2.23,2.02,2.31,1.6,2.08,2.11,2.1,1.89],"rest":78.89,"owner":null,"mine":false},{"code":"167512","n_career":12,"name":"O'Nien","pos":"DEF","team":20,"status":"a","news":"","avail":0.76,"gw":[2.12,2.16,2.0,1.95,1.66,1.97,1.98,2.23,1.98,2.09,2.05,2.26,1.92,2.12,2.15,2.16,2.04,2.03,2.41,2.23,2.01,2.31,2.01,2.12,1.95,2.1,2.0,2.04,2.14,1.73,2.23,1.96,1.99,2.24,1.83,2.24,1.95,1.94],"rest":78.29999999999998,"owner":null,"mine":false},{"code":"463034","n_career":65,"name":"Delap","pos":"FWD","team":6,"status":"a","news":"","avail":0.84,"gw":[2.06,2.12,1.61,2.37,1.84,2.04,1.92,2.27,2.1,1.85,2.35,1.98,2.07,2.31,1.74,2.16,2.12,2.1,2.43,1.98,2.18,2.12,2.13,1.93,1.93,2.18,1.99,2.12,1.77,2.13,2.17,1.89,1.99,2.01,1.94,2.21,1.91,2.14],"rest":78.16,"owner":null,"mine":false},{"code":"469272","n_career":28,"name":"Tchaouna","pos":"MID","team":7,"status":"a","news":"","avail":0.57,"gw":[1.2,1.57,1.25,1.57,1.89,2.13,2.09,2.26,2.14,1.95,2.33,2.12,2.23,2.13,2.19,2.08,2.33,2.33,2.26,2.14,2.28,2.08,2.26,1.99,2.18,1.98,2.33,1.9,2.0,2.07,1.88,2.09,2.02,2.25,1.98,2.38,1.94,2.19],"rest":77.98999999999998,"owner":null,"mine":false},{"code":"592031","n_career":65,"name":"Minteh","pos":"MID","team":5,"status":"i","news":"Leg injury - Expected back 28 Nov","avail":0.0,"gw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.58,2.22,2.95,3.03,3.16,2.93,3.01,3.27,3.15,2.9,2.94,2.84,3.12,2.72,3.09,2.96,2.93,2.86,3.25,2.8,3.04,2.84,3.09,2.9,2.86,3.0,2.38],"rest":77.82000000000001,"owner":null,"mine":false},{"code":"67089","n_career":91,"name":"Dubravka","pos":"GKP","team":19,"status":"a","news":"","avail":0.46,"gw":[1.44,1.52,1.38,1.55,2.06,1.87,2.23,2.02,2.12,2.02,2.34,2.0,2.13,1.99,2.06,2.06,2.29,2.21,2.02,2.05,2.28,2.07,2.12,2.06,1.96,1.93,2.26,1.95,2.16,2.09,2.2,2.06,2.26,1.74,2.1,2.12,2.11,1.96],"rest":76.78999999999999,"owner":null,"mine":false},{"code":"490094","n_career":58,"name":"Iroegbunam","pos":"MID","team":9,"status":"i","news":"Thigh injury - Unknown return date","avail":0.05,"gw":[0.12,0.32,0.71,1.06,1.37,1.51,2.09,1.74,2.12,2.36,2.26,2.42,2.01,2.48,2.05,2.15,2.42,2.22,2.42,2.38,2.26,2.48,2.11,2.4,2.34,2.01,2.42,1.77,2.07,2.57,2.1,2.39,2.33,2.15,2.32,2.18,1.87,2.15],"rest":76.13000000000001,"owner":null,"mine":false},{"code":"441302","n_career":70,"name":"Maatsen","pos":"DEF","team":2,"status":"a","news":"","avail":0.84,"gw":[1.95,1.75,1.99,2.24,1.85,1.96,1.94,1.93,2.06,1.82,2.18,1.99,2.02,2.2,1.95,1.91,2.27,2.22,2.14,1.93,2.15,2.0,2.14,1.84,2.06,1.91,2.16,1.81,2.15,2.0,2.06,1.53,2.21,1.9,1.81,2.23,1.61,2.15],"rest":76.02000000000001,"owner":null,"mine":false},{"code":"221820","n_career":73,"name":"Martinez","pos":"DEF","team":16,"status":"a","news":"","avail":0.68,"gw":[2.06,2.15,1.92,2.03,1.81,2.03,1.95,2.13,1.86,2.01,2.03,2.12,1.9,2.24,1.88,1.64,2.17,2.12,2.04,2.17,1.94,2.19,1.89,2.07,1.98,1.87,1.85,1.79,2.05,1.84,2.15,1.97,2.09,1.99,1.86,2.19,1.92,2.05],"rest":75.94999999999999,"owner":null,"mine":false},{"code":"575458","n_career":9,"name":"Jair Cunha","pos":"DEF","team":18,"status":"a","news":"","avail":0.84,"gw":[2.28,1.93,2.22,2.0,2.04,1.71,1.73,1.98,1.85,1.84,2.04,2.13,1.89,2.17,1.84,2.12,1.98,2.03,2.31,2.22,1.75,2.24,1.84,2.11,1.81,2.04,1.94,2.05,1.95,2.19,1.96,2.13,2.09,1.87,1.98,1.59,2.09,1.92],"rest":75.86000000000001,"owner":null,"mine":false},{"code":"451340","n_career":107,"name":"Mitoma","pos":"MID","team":5,"status":"i","news":"Hamstring injury - Unknown return date","avail":0.04,"gw":[0.12,0.32,0.72,1.03,1.12,1.45,2.05,2.16,1.89,2.27,2.29,2.39,2.08,2.22,2.29,2.4,2.21,2.27,2.48,2.39,2.18,2.22,2.13,2.36,2.03,2.34,2.24,2.21,2.15,2.47,2.1,2.3,2.13,2.34,2.18,2.15,2.26,1.75],"rest":75.69000000000001,"owner":null,"mine":false},{"code":"535301","n_career":91,"name":"Baleba","pos":"MID","team":5,"status":"i","news":"Ankle injury - Unknown return date","avail":0.05,"gw":[0.12,0.31,0.73,1.04,1.07,1.4,2.05,2.14,1.81,2.27,2.29,2.42,2.04,2.22,2.29,2.43,2.2,2.27,2.54,2.42,2.17,2.21,2.11,2.39,1.98,2.36,2.23,2.2,2.12,2.52,2.07,2.31,2.11,2.36,2.17,2.13,2.27,1.65],"rest":75.42,"owner":null,"mine":false},{"code":"207189","n_career":102,"name":"Berge","pos":"MID","team":10,"status":"a","news":"","avail":0.76,"gw":[2.17,1.85,2.08,2.03,1.95,1.81,2.13,1.97,1.81,2.08,1.81,2.14,1.9,1.98,2.08,1.97,2.12,1.83,2.07,2.2,1.99,2.15,1.88,1.89,2.01,1.51,2.2,1.73,1.84,2.2,1.89,2.04,1.93,2.09,2.05,2.01,2.07,1.84],"rest":75.30000000000001,"owner":null,"mine":false},{"code":"570526","n_career":50,"name":"Bergvall","pos":"MID","team":19,"status":"a","news":"","avail":0.84,"gw":[2.0,2.15,1.9,2.21,1.93,1.7,2.14,1.88,2.01,1.88,2.28,1.86,2.01,1.84,1.93,1.93,2.22,2.12,1.88,1.93,2.21,1.95,2.01,1.93,1.81,1.77,2.18,1.79,2.06,1.97,2.11,1.93,2.19,1.54,1.98,2.01,1.99,1.81],"rest":75.04,"owner":null,"mine":false},{"code":"444463","n_career":60,"name":"Fofana","pos":"DEF","team":6,"status":"s","news":"Suspended until 6 Sep","avail":0.04,"gw":[0.11,0.34,0.52,1.12,1.18,1.63,1.84,2.4,2.23,1.97,2.48,2.11,2.19,2.44,1.86,2.29,2.25,2.23,2.56,2.1,2.31,2.24,2.25,2.05,2.06,2.31,2.11,2.25,1.9,2.25,2.3,2.02,2.12,2.14,2.07,2.34,2.03,2.27],"rest":74.86999999999999,"owner":null,"mine":false},{"code":"510281","n_career":51,"name":"Savinho","pos":"MID","team":15,"status":"a","news":"","avail":0.76,"gw":[2.19,1.85,2.14,1.97,1.9,1.75,2.11,1.86,1.96,1.81,2.17,1.57,2.05,1.99,2.04,2.14,2.01,1.93,2.32,1.97,2.11,1.91,1.7,1.86,1.87,2.06,1.98,1.94,1.9,2.14,1.9,2.03,1.88,2.1,2.0,1.98,1.96,1.79],"rest":74.84,"owner":null,"mine":false},{"code":"149484","n_career":98,"name":"Mings","pos":"DEF","team":2,"status":"a","news":"","avail":0.68,"gw":[1.93,1.77,1.96,2.16,1.85,1.94,1.92,1.91,2.01,1.82,2.12,1.96,1.98,2.13,1.93,1.9,2.19,2.15,2.08,1.91,2.09,1.96,2.08,1.84,2.02,1.89,2.1,1.81,2.09,1.97,2.02,1.59,2.14,1.89,1.81,2.15,1.66,2.09],"rest":74.82000000000001,"owner":null,"mine":false},{"code":"547719","n_career":55,"name":"L.Miley","pos":"MID","team":17,"status":"a","news":"","avail":0.68,"gw":[2.15,1.94,2.08,2.02,1.98,1.79,2.0,1.86,1.98,1.81,1.84,1.84,1.96,2.1,1.91,1.89,1.95,2.1,2.02,1.89,2.08,1.65,1.96,1.84,1.96,1.66,2.1,1.77,1.86,2.17,1.89,2.1,2.11,1.85,2.01,1.89,1.95,1.88],"rest":73.84,"owner":null,"mine":false},{"code":"223827","n_career":29,"name":"Ballard","pos":"DEF","team":20,"status":"a","news":"","avail":0.59,"gw":[1.99,2.02,1.89,1.86,1.63,1.87,1.88,2.08,1.88,1.97,1.93,2.1,1.83,1.99,2.01,2.02,1.93,1.92,2.21,2.07,1.9,2.14,1.9,1.99,1.86,1.97,1.89,1.93,2.01,1.69,2.07,1.86,1.89,2.08,1.76,2.09,1.85,1.85],"rest":73.80999999999999,"owner":282287,"mine":false},{"code":"499169","n_career":42,"name":"Lewis-Skelly","pos":"DEF","team":1,"status":"a","news":"","avail":0.84,"gw":[2.2,1.78,2.04,1.9,1.62,1.93,1.79,2.03,1.78,2.03,1.98,1.85,1.75,2.01,2.04,2.03,1.89,1.89,2.3,2.09,1.93,2.18,1.57,2.04,1.8,1.97,1.86,1.88,1.77,2.09,1.89,1.99,1.87,2.14,1.77,2.08,1.71,1.93],"rest":73.39999999999998,"owner":null,"mine":false},{"code":"173879","n_career":12,"name":"Abraham","pos":"FWD","team":2,"status":"d","news":"Knock - 75% chance of playing","avail":0.57,"gw":[1.41,1.7,1.91,2.14,1.79,1.89,1.86,1.86,1.97,1.76,2.09,1.92,1.94,2.11,1.88,1.84,2.17,2.12,2.05,1.86,2.06,1.92,2.05,1.78,1.98,1.84,2.07,1.75,2.05,1.92,1.98,1.5,2.11,1.83,1.75,2.13,1.57,2.06],"rest":72.61999999999999,"owner":null,"mine":false},{"code":"470315","n_career":7,"name":"Netz","pos":"DEF","team":18,"status":"a","news":"","avail":0.76,"gw":[2.15,1.83,2.1,1.9,1.94,1.64,1.66,1.88,1.77,1.76,1.94,2.02,1.8,2.06,1.75,2.01,1.88,1.93,2.18,2.1,1.67,2.12,1.76,2.0,1.73,1.94,1.85,1.95,1.85,2.07,1.87,2.02,1.99,1.78,1.89,1.53,1.99,1.83],"rest":72.13999999999999,"owner":null,"mine":false},{"code":"155503","n_career":7,"name":"Woodman","pos":"GKP","team":14,"status":"a","news":"","avail":0.59,"gw":[1.94,1.98,1.89,2.07,1.76,1.72,1.83,1.95,1.68,1.77,2.05,1.84,1.89,1.9,2.01,2.06,1.95,1.86,2.17,1.83,2.0,1.89,1.94,1.56,1.82,1.99,1.93,1.88,2.0,1.9,2.02,1.82,1.89,1.99,1.61,2.03,1.73,1.97],"rest":72.12,"owner":null,"mine":false},{"code":"215711","n_career":122,"name":"Bailey","pos":"MID","team":2,"status":"a","news":"","avail":0.76,"gw":[1.85,1.67,1.88,2.11,1.76,1.86,1.83,1.83,1.94,1.73,2.06,1.89,1.91,2.07,1.85,1.81,2.14,2.09,2.01,1.83,2.03,1.89,2.02,1.75,1.95,1.81,2.04,1.72,2.02,1.89,1.95,1.47,2.08,1.8,1.72,2.1,1.54,2.03],"rest":71.92999999999999,"owner":null,"mine":false},{"code":"111317","n_career":78,"name":"Brooks","pos":"MID","team":3,"status":"d","news":"Unspecified injury - 75% chance of playing","avail":0.63,"gw":[1.28,2.01,1.88,2.16,1.91,1.63,1.96,1.81,2.03,1.81,2.13,1.83,1.89,2.2,1.43,2.11,1.99,1.86,2.19,1.8,2.14,1.9,1.98,1.85,1.69,1.94,1.93,1.99,2.04,1.92,1.82,1.78,1.68,1.9,1.9,1.82,1.92,1.79],"rest":71.9,"owner":null,"mine":false},{"code":"458249","n_career":56,"name":"Zirkzee","pos":"FWD","team":16,"status":"a","news":"","avail":0.84,"gw":[1.96,2.07,1.79,1.93,1.66,1.93,1.83,2.05,1.72,1.91,1.93,2.05,1.77,2.19,1.75,1.45,2.1,2.04,1.94,2.11,1.81,2.13,1.76,1.98,1.87,1.73,1.7,1.63,1.95,1.69,2.08,1.85,2.01,1.88,1.72,2.13,1.79,1.96],"rest":71.85,"owner":null,"mine":false},{"code":"477424","n_career":81,"name":"Gvardiol","pos":"DEF","team":15,"status":"a","news":"","avail":0.51,"gw":[2.02,1.79,1.99,1.88,1.83,1.73,1.97,1.8,1.87,1.77,2.01,1.6,1.93,1.89,1.92,1.99,1.9,1.85,2.12,1.88,1.97,1.83,1.69,1.8,1.81,1.94,1.89,1.86,1.83,1.99,1.83,1.92,1.82,1.96,1.89,1.89,1.87,1.75],"rest":71.28,"owner":372099,"mine":true},{"code":"575476","n_career":93,"name":"Murillo","pos":"DEF","team":18,"status":"a","news":"","avail":0.59,"gw":[2.07,1.82,2.03,1.87,1.91,1.67,1.68,1.86,1.77,1.77,1.91,1.97,1.8,2.0,1.76,1.96,1.86,1.9,2.1,2.04,1.7,2.05,1.77,1.95,1.74,1.9,1.83,1.91,1.84,2.01,1.85,1.97,1.94,1.78,1.86,1.59,1.94,1.82],"rest":71.2,"owner":363607,"mine":false},{"code":"606745","n_career":21,"name":"Heaven","pos":"DEF","team":16,"status":"a","news":"","avail":0.68,"gw":[1.9,1.98,1.76,1.87,1.65,1.87,1.79,1.97,1.7,1.85,1.87,1.96,1.74,2.08,1.72,1.48,2.01,1.96,1.88,2.01,1.78,2.03,1.73,1.91,1.82,1.71,1.68,1.63,1.89,1.68,1.99,1.8,1.93,1.83,1.7,2.03,1.76,1.89],"rest":69.84,"owner":null,"mine":false},{"code":"180135","n_career":135,"name":"Longstaff","pos":"MID","team":13,"status":"a","news":"","avail":0.76,"gw":[1.84,1.96,1.72,2.11,1.8,1.27,1.91,1.72,1.73,1.96,1.84,2.03,1.5,2.11,1.76,1.96,1.81,1.88,2.11,1.8,1.87,2.02,1.77,1.96,1.66,1.86,1.8,1.9,1.86,1.89,1.95,1.75,1.99,1.83,1.52,1.79,1.83,1.69],"rest":69.76,"owner":null,"mine":false},{"code":"172780","n_career":122,"name":"Maddison","pos":"MID","team":19,"status":"a","news":"","avail":0.59,"gw":[1.85,1.96,1.78,2.0,1.8,1.64,1.95,1.77,1.86,1.76,2.04,1.75,1.86,1.74,1.8,1.8,2.01,1.93,1.76,1.8,2.0,1.81,1.85,1.8,1.71,1.68,1.98,1.7,1.89,1.83,1.93,1.8,1.98,1.52,1.83,1.85,1.84,1.71],"rest":69.57,"owner":372099,"mine":true},{"code":"460028","n_career":77,"name":"Colwill","pos":"DEF","team":6,"status":"a","news":"","avail":0.59,"gw":[1.83,1.87,1.51,2.05,1.67,1.82,1.73,1.98,1.86,1.68,2.04,1.78,1.84,2.01,1.6,1.9,1.87,1.86,2.09,1.77,1.92,1.87,1.88,1.74,1.74,1.92,1.78,1.87,1.63,1.88,1.91,1.71,1.79,1.8,1.75,1.94,1.72,1.89],"rest":69.5,"owner":null,"mine":false},{"code":"184667","n_career":93,"name":"Lindelöf","pos":"DEF","team":2,"status":"a","news":"","avail":0.76,"gw":[1.77,1.59,1.81,2.04,1.68,1.79,1.76,1.75,1.87,1.65,1.98,1.81,1.84,2.0,1.77,1.74,2.06,2.02,1.94,1.75,1.95,1.81,1.94,1.67,1.87,1.73,1.96,1.64,1.95,1.82,1.87,1.39,2.0,1.73,1.65,2.02,1.47,1.96],"rest":69.04999999999998,"owner":null,"mine":false},{"code":"438234","n_career":35,"name":"Marmoush","pos":"MID","team":15,"status":"a","news":"","avail":0.59,"gw":[1.99,1.72,1.95,1.82,1.76,1.64,1.92,1.73,1.81,1.69,1.97,1.5,1.88,1.83,1.87,1.95,1.85,1.78,2.09,1.81,1.93,1.77,1.6,1.72,1.74,1.89,1.83,1.79,1.76,1.95,1.76,1.86,1.75,1.92,1.83,1.83,1.81,1.67],"rest":68.97000000000001,"owner":null,"mine":false},{"code":"493105","n_career":112,"name":"Garnacho","pos":"MID","team":2,"status":"a","news":"","avail":0.46,"gw":[1.24,1.13,1.26,1.4,1.75,1.84,1.82,1.81,1.91,1.72,2.01,1.86,1.88,2.03,1.83,1.79,2.09,2.04,1.98,1.81,1.99,1.86,1.98,1.74,1.92,1.79,2.0,1.71,1.98,1.87,1.92,1.49,2.03,1.79,1.71,2.05,1.55,1.99],"rest":68.57,"owner":null,"mine":false},{"code":"480455","n_career":79,"name":"Branthwaite","pos":"DEF","team":9,"status":"a","news":"","avail":0.59,"gw":[1.94,1.76,1.89,1.88,1.84,1.66,1.86,1.49,1.73,1.89,1.82,1.92,1.66,1.96,1.68,1.75,1.92,1.8,1.92,1.9,1.82,1.96,1.72,1.91,1.87,1.66,1.93,1.5,1.7,2.02,1.72,1.9,1.86,1.75,1.86,1.77,1.57,1.75],"rest":68.53999999999999,"owner":null,"mine":false},{"code":"550615","n_career":23,"name":"George","pos":"MID","team":9,"status":"a","news":"","avail":0.84,"gw":[1.99,1.73,1.91,1.91,1.84,1.6,1.88,1.35,1.69,1.91,1.82,1.96,1.59,2.02,1.62,1.72,1.96,1.79,1.96,1.93,1.81,2.02,1.68,1.95,1.89,1.59,1.97,1.37,1.64,2.1,1.67,1.93,1.88,1.72,1.87,1.74,1.46,1.72],"rest":68.18999999999998,"owner":null,"mine":false},{"code":"482442","n_career":105,"name":"P.M.Sarr","pos":"MID","team":19,"status":"i","news":"Hamstring injury - Unknown return date","avail":0.04,"gw":[0.1,0.32,0.58,0.99,1.17,1.31,1.93,1.91,2.03,1.9,2.26,1.89,2.03,1.87,1.95,1.95,2.22,2.12,1.91,1.95,2.2,1.97,2.02,1.95,1.84,1.81,2.18,1.83,2.07,1.99,2.12,1.95,2.18,1.6,2.0,2.02,2.01,1.84],"rest":67.97000000000001,"owner":null,"mine":false},{"code":"204120","n_career":11,"name":"Boscagli","pos":"DEF","team":5,"status":"a","news":"","avail":0.59,"gw":[1.92,1.71,1.92,1.85,1.51,1.57,1.83,1.74,1.53,1.83,1.84,1.92,1.68,1.79,1.84,1.93,1.78,1.83,2.0,1.92,1.76,1.79,1.72,1.9,1.64,1.88,1.8,1.78,1.73,1.99,1.69,1.85,1.72,1.88,1.76,1.74,1.82,1.42],"rest":67.80999999999999,"owner":null,"mine":false},{"code":"532605","n_career":28,"name":"Andrey Santos","pos":"MID","team":16,"status":"a","news":"","avail":0.51,"gw":[1.29,1.35,1.18,1.27,1.61,1.86,1.78,1.97,1.68,1.85,1.87,1.97,1.72,2.09,1.7,1.43,2.02,1.96,1.87,2.02,1.76,2.04,1.71,1.91,1.81,1.68,1.66,1.59,1.88,1.65,1.99,1.79,1.93,1.82,1.67,2.04,1.74,1.89],"rest":67.05,"owner":null,"mine":false},{"code":"204968","n_career":118,"name":"Yates","pos":"MID","team":18,"status":"i","news":"Unspecified injury - Unknown return date","avail":0.05,"gw":[0.11,0.28,0.66,0.88,1.2,1.23,1.49,1.94,1.8,1.79,2.01,2.1,1.83,2.15,1.78,2.09,1.94,1.99,2.3,2.21,1.68,2.22,1.79,2.08,1.75,2.0,1.89,2.01,1.9,2.16,1.92,2.1,2.06,1.81,1.94,1.51,2.06,1.87],"rest":66.53,"owner":null,"mine":false},{"code":"647850","n_career":21,"name":"Kostoulas","pos":"FWD","team":5,"status":"a","news":"","avail":0.76,"gw":[1.92,1.65,1.93,1.84,1.4,1.47,1.81,1.7,1.42,1.8,1.82,1.93,1.62,1.76,1.82,1.93,1.74,1.81,2.02,1.92,1.72,1.76,1.67,1.9,1.57,1.88,1.77,1.74,1.68,2.01,1.64,1.83,1.67,1.87,1.72,1.69,1.8,1.29],"rest":66.52,"owner":null,"mine":false},{"code":"432714","n_career":61,"name":"McAtee","pos":"MID","team":18,"status":"a","news":"","avail":0.76,"gw":[2.0,1.68,1.94,1.74,1.78,1.48,1.5,1.73,1.61,1.6,1.79,1.86,1.64,1.9,1.6,1.85,1.73,1.77,2.03,1.95,1.52,1.96,1.6,1.84,1.58,1.78,1.69,1.79,1.7,1.91,1.71,1.86,1.83,1.63,1.73,1.38,1.83,1.67],"rest":66.19000000000001,"owner":null,"mine":false},{"code":"180974","n_career":138,"name":"Joelinton","pos":"MID","team":17,"status":"i","news":"Unspecified injury - Unknown return date","avail":0.03,"gw":[0.11,0.29,0.62,0.91,1.19,1.34,1.8,1.86,1.98,1.81,1.84,1.84,1.96,2.1,1.91,1.89,1.95,2.1,2.02,1.89,2.08,1.65,1.96,1.84,1.96,1.66,2.1,1.77,1.86,2.17,1.89,2.1,2.11,1.85,2.01,1.89,1.95,1.88],"rest":66.14,"owner":null,"mine":false},{"code":"493362","n_career":28,"name":"Xavi","pos":"MID","team":19,"status":"i","news":"Knee injury - Unknown return date","avail":0.03,"gw":[0.1,0.31,0.56,0.96,1.14,1.29,1.86,1.86,1.97,1.86,2.18,1.85,1.97,1.83,1.9,1.9,2.14,2.05,1.86,1.9,2.13,1.92,1.96,1.9,1.8,1.77,2.1,1.79,2.0,1.93,2.05,1.9,2.11,1.59,1.94,1.96,1.95,1.8],"rest":66.09,"owner":null,"mine":false},{"code":"476887","n_career":14,"name":"Bakwa","pos":"MID","team":18,"status":"a","news":"","avail":0.68,"gw":[1.97,1.68,1.91,1.74,1.78,1.51,1.52,1.72,1.62,1.61,1.78,1.84,1.65,1.88,1.61,1.84,1.72,1.77,1.99,1.92,1.54,1.93,1.61,1.83,1.59,1.77,1.69,1.78,1.7,1.89,1.71,1.85,1.82,1.63,1.73,1.41,1.82,1.68],"rest":66.04,"owner":null,"mine":false},{"code":"547701","n_career":52,"name":"Gray","pos":"MID","team":19,"status":"a","news":"","avail":0.68,"gw":[1.76,1.88,1.68,1.93,1.7,1.52,1.87,1.67,1.77,1.66,1.98,1.65,1.77,1.63,1.7,1.7,1.94,1.85,1.66,1.7,1.93,1.72,1.77,1.7,1.6,1.57,1.9,1.59,1.81,1.73,1.85,1.7,1.91,1.39,1.74,1.76,1.75,1.6],"rest":66.03999999999999,"owner":null,"mine":false},{"code":"449871","n_career":112,"name":"Onana","pos":"MID","team":2,"status":"i","news":"Knee injury - Unknown return date","avail":0.03,"gw":[0.09,0.26,0.57,0.95,1.07,1.41,1.67,1.85,1.95,1.76,2.05,1.9,1.92,2.07,1.87,1.83,2.13,2.08,2.02,1.85,2.03,1.9,2.02,1.78,1.96,1.83,2.04,1.75,2.02,1.91,1.96,1.53,2.07,1.82,1.75,2.09,1.59,2.03],"rest":65.38000000000001,"owner":null,"mine":false},{"code":"489888","n_career":31,"name":"Adli","pos":"MID","team":3,"status":"i","news":"Unspecified injury - Unknown return date","avail":0.04,"gw":[0.09,0.3,0.56,0.96,1.15,1.24,1.75,1.81,2.01,1.81,2.11,1.84,1.89,2.17,1.47,2.09,1.98,1.86,2.16,1.81,2.11,1.9,1.97,1.86,1.71,1.93,1.93,1.97,2.02,1.92,1.83,1.79,1.7,1.9,1.9,1.83,1.92,1.8],"rest":65.05,"owner":null,"mine":false},{"code":"225796","n_career":97,"name":"James","pos":"DEF","team":6,"status":"a","news":"","avail":0.51,"gw":[1.71,1.74,1.43,1.9,1.57,1.7,1.62,1.84,1.73,1.58,1.88,1.66,1.71,1.86,1.51,1.77,1.75,1.73,1.93,1.66,1.78,1.74,1.75,1.63,1.63,1.78,1.66,1.74,1.53,1.75,1.78,1.61,1.67,1.68,1.63,1.8,1.61,1.76],"rest":64.81,"owner":421435,"mine":false},{"code":"204580","n_career":157,"name":"Janelt","pos":"MID","team":4,"status":"a","news":"","avail":0.59,"gw":[1.91,1.67,1.76,1.74,1.68,1.49,1.78,1.69,1.74,1.54,1.85,1.64,1.46,1.72,1.61,1.83,1.74,1.73,1.9,1.4,1.78,1.68,1.74,1.61,1.55,1.79,1.71,1.74,1.57,1.88,1.69,1.82,1.8,1.5,1.68,1.69,1.77,1.59],"rest":64.47,"owner":null,"mine":false},{"code":"200089","n_career":125,"name":"Willock","pos":"MID","team":17,"status":"a","news":"","avail":0.76,"gw":[1.91,1.67,1.84,1.77,1.73,1.51,1.75,1.59,1.73,1.54,1.57,1.57,1.71,1.85,1.64,1.63,1.7,1.86,1.77,1.63,1.84,1.36,1.7,1.57,1.71,1.36,1.86,1.49,1.59,1.94,1.63,1.86,1.87,1.58,1.76,1.62,1.69,1.62],"rest":64.02,"owner":null,"mine":false},{"code":"616077","n_career":6,"name":"Dowman","pos":"MID","team":1,"status":"a","news":"","avail":0.59,"gw":[1.87,1.57,1.75,1.65,1.46,1.68,1.58,1.75,1.57,1.75,1.72,1.62,1.55,1.74,1.76,1.75,1.65,1.65,1.94,1.79,1.68,1.85,1.42,1.75,1.58,1.71,1.63,1.64,1.56,1.79,1.65,1.72,1.64,1.82,1.57,1.79,1.52,1.68],"rest":63.800000000000004,"owner":null,"mine":false},{"code":"158499","n_career":120,"name":"Christie","pos":"MID","team":3,"status":"s","news":"Suspended until 29 Aug","avail":0.04,"gw":[0.08,0.29,0.55,0.94,1.12,1.2,1.71,1.76,1.96,1.77,2.06,1.79,1.84,2.12,1.42,2.04,1.93,1.81,2.11,1.76,2.06,1.85,1.92,1.81,1.66,1.88,1.88,1.93,1.98,1.87,1.78,1.74,1.65,1.85,1.85,1.78,1.87,1.75],"rest":63.37,"owner":null,"mine":false},{"code":"496208","n_career":11,"name":"Gannon-Doak","pos":"MID","team":3,"status":"a","news":"","avail":0.68,"gw":[1.51,1.75,1.65,1.87,1.67,1.44,1.71,1.58,1.76,1.59,1.85,1.61,1.65,1.9,1.28,1.83,1.73,1.63,1.9,1.58,1.85,1.66,1.72,1.62,1.49,1.69,1.69,1.73,1.77,1.68,1.6,1.57,1.48,1.66,1.66,1.6,1.68,1.57],"rest":63.209999999999994,"owner":null,"mine":false},{"code":"465694","n_career":35,"name":"N.Gonzalez","pos":"MID","team":15,"status":"a","news":"","avail":0.59,"gw":[1.83,1.57,1.8,1.66,1.61,1.49,1.77,1.57,1.66,1.54,1.82,1.35,1.72,1.67,1.72,1.8,1.69,1.63,1.94,1.66,1.77,1.61,1.45,1.57,1.58,1.73,1.67,1.64,1.61,1.8,1.61,1.71,1.59,1.76,1.68,1.67,1.65,1.52],"rest":63.120000000000005,"owner":null,"mine":false},{"code":"502697","n_career":53,"name":"Alcaraz","pos":"MID","team":9,"status":"a","news":"","avail":0.68,"gw":[1.79,1.58,1.73,1.73,1.67,1.48,1.7,1.27,1.55,1.73,1.66,1.77,1.47,1.82,1.5,1.57,1.77,1.63,1.77,1.74,1.65,1.81,1.54,1.76,1.71,1.47,1.77,1.29,1.51,1.88,1.54,1.75,1.7,1.57,1.7,1.59,1.36,1.57],"rest":62.10000000000001,"owner":null,"mine":false},{"code":"624773","n_career":22,"name":"Estêvão","pos":"MID","team":6,"status":"a","news":"","avail":0.59,"gw":[1.64,1.68,1.32,1.85,1.48,1.62,1.54,1.79,1.66,1.49,1.84,1.58,1.64,1.82,1.41,1.71,1.68,1.67,1.9,1.58,1.72,1.68,1.68,1.54,1.54,1.72,1.58,1.68,1.43,1.68,1.72,1.52,1.59,1.6,1.55,1.74,1.53,1.69],"rest":62.09,"owner":421435,"mine":false},{"code":"191866","n_career":111,"name":"Ajer","pos":"DEF","team":4,"status":"a","news":"","avail":0.59,"gw":[1.85,1.61,1.7,1.68,1.61,1.43,1.72,1.62,1.67,1.48,1.79,1.57,1.4,1.65,1.55,1.77,1.68,1.67,1.84,1.34,1.71,1.62,1.67,1.55,1.49,1.72,1.64,1.68,1.51,1.81,1.63,1.75,1.73,1.44,1.62,1.62,1.7,1.52],"rest":62.03999999999999,"owner":null,"mine":false},{"code":"56979","n_career":96,"name":"Henderson","pos":"MID","team":6,"status":"d","news":"Wrist injury - 75% chance of playing","avail":0.34,"gw":[0.86,1.18,0.9,1.32,1.51,1.67,1.58,1.86,1.72,1.52,1.92,1.63,1.69,1.89,1.43,1.77,1.74,1.72,1.99,1.62,1.78,1.73,1.74,1.58,1.58,1.78,1.63,1.73,1.45,1.74,1.78,1.55,1.63,1.65,1.59,1.81,1.56,1.75],"rest":61.58000000000001,"owner":null,"mine":false},{"code":"72147","n_career":7,"name":"M.Bizot","pos":"GKP","team":2,"status":"a","news":"","avail":0.51,"gw":[1.59,1.47,1.61,1.77,1.53,1.6,1.58,1.57,1.65,1.51,1.73,1.62,1.63,1.74,1.59,1.56,1.79,1.75,1.7,1.58,1.71,1.62,1.7,1.52,1.66,1.56,1.72,1.5,1.71,1.62,1.66,1.33,1.75,1.56,1.5,1.76,1.38,1.71],"rest":61.540000000000006,"owner":null,"mine":false},{"code":"200617","n_career":73,"name":"James","pos":"MID","team":13,"status":"a","news":"","avail":0.76,"gw":[1.61,1.73,1.49,1.88,1.57,1.04,1.68,1.49,1.5,1.73,1.61,1.8,1.27,1.88,1.53,1.73,1.58,1.65,1.88,1.57,1.64,1.79,1.54,1.73,1.43,1.64,1.57,1.67,1.63,1.66,1.72,1.52,1.76,1.6,1.29,1.56,1.6,1.46],"rest":61.03,"owner":null,"mine":false},{"code":"577016","n_career":21,"name":"Acheampong","pos":"DEF","team":6,"status":"a","news":"","avail":0.68,"gw":[1.6,1.65,1.24,1.85,1.42,1.59,1.49,1.77,1.63,1.43,1.83,1.54,1.61,1.81,1.34,1.68,1.65,1.64,1.9,1.54,1.7,1.65,1.66,1.49,1.5,1.7,1.54,1.65,1.37,1.66,1.69,1.47,1.55,1.56,1.5,1.73,1.48,1.67],"rest":60.78,"owner":null,"mine":false},{"code":"551210","n_career":21,"name":"Hato","pos":"DEF","team":6,"status":"a","news":"","avail":0.84,"gw":[1.6,1.66,1.15,1.91,1.38,1.58,1.46,1.81,1.64,1.39,1.89,1.52,1.61,1.85,1.28,1.7,1.66,1.64,1.97,1.52,1.72,1.66,1.67,1.47,1.47,1.72,1.53,1.66,1.31,1.67,1.71,1.43,1.53,1.55,1.48,1.75,1.45,1.68],"rest":60.67999999999999,"owner":null,"mine":false},{"code":"550864","n_career":53,"name":"Yoro","pos":"DEF","team":16,"status":"a","news":"","avail":0.76,"gw":[1.66,1.76,1.51,1.63,1.38,1.63,1.54,1.74,1.44,1.61,1.63,1.73,1.48,1.86,1.47,1.19,1.78,1.73,1.64,1.79,1.52,1.81,1.48,1.67,1.57,1.45,1.42,1.36,1.65,1.41,1.76,1.56,1.7,1.59,1.44,1.81,1.5,1.66],"rest":60.56,"owner":421435,"mine":false},{"code":"209046","n_career":104,"name":"Hudson-Odoi","pos":"MID","team":18,"status":"a","news":"","avail":0.51,"gw":[1.77,1.55,1.73,1.59,1.62,1.42,1.43,1.58,1.51,1.5,1.62,1.67,1.53,1.7,1.5,1.67,1.58,1.62,1.79,1.73,1.44,1.74,1.5,1.66,1.48,1.62,1.56,1.62,1.56,1.71,1.57,1.68,1.65,1.51,1.58,1.35,1.65,1.55],"rest":60.53999999999999,"owner":null,"mine":false},{"code":"205651","n_career":111,"name":"G.Jesus","pos":"FWD","team":1,"status":"a","news":"","avail":0.59,"gw":[1.78,1.49,1.66,1.57,1.37,1.59,1.49,1.66,1.49,1.66,1.63,1.53,1.46,1.65,1.67,1.66,1.56,1.56,1.85,1.7,1.59,1.77,1.33,1.67,1.49,1.62,1.54,1.56,1.47,1.7,1.56,1.63,1.55,1.74,1.48,1.7,1.44,1.59],"rest":60.46,"owner":null,"mine":false},{"code":"492859","n_career":45,"name":"Gnonto","pos":"MID","team":13,"status":"i","news":"Hamstring injury - Unknown return date","avail":0.04,"gw":[0.09,0.28,0.49,0.93,1.03,0.85,1.66,1.63,1.64,1.9,1.77,1.97,1.38,2.06,1.67,1.9,1.73,1.81,2.06,1.72,1.8,1.96,1.69,1.89,1.56,1.79,1.72,1.82,1.79,1.82,1.88,1.67,1.93,1.75,1.41,1.71,1.75,1.59],"rest":60.1,"owner":null,"mine":false},{"code":"171314","n_career":133,"name":"Rúben","pos":"DEF","team":15,"status":"a","news":"","avail":0.43,"gw":[1.67,1.48,1.64,1.55,1.51,1.42,1.62,1.48,1.54,1.45,1.66,1.31,1.59,1.55,1.58,1.64,1.57,1.52,1.75,1.54,1.62,1.51,1.39,1.48,1.49,1.6,1.55,1.53,1.5,1.64,1.51,1.58,1.5,1.62,1.56,1.55,1.54,1.44],"rest":58.67999999999999,"owner":282287,"mine":false},{"code":"116535","n_career":146,"name":"A.Becker","pos":"GKP","team":14,"status":"a","news":"","avail":0.43,"gw":[1.56,1.59,1.52,1.66,1.43,1.4,1.48,1.57,1.37,1.43,1.64,1.49,1.53,1.53,1.61,1.64,1.56,1.5,1.73,1.48,1.6,1.52,1.56,1.28,1.47,1.59,1.55,1.51,1.61,1.53,1.62,1.47,1.52,1.6,1.32,1.63,1.41,1.58],"rest":58.09,"owner":299912,"mine":false},{"code":"432720","n_career":31,"name":"Trafford","pos":"GKP","team":13,"status":"a","news":"","avail":0.29,"gw":[0.96,1.01,0.91,1.07,1.39,1.09,1.45,1.35,1.35,1.48,1.41,1.52,1.22,1.56,1.37,1.48,1.4,1.44,1.57,1.39,1.43,1.52,1.37,1.48,1.31,1.43,1.39,1.44,1.42,1.44,1.47,1.36,1.5,1.41,1.23,1.38,1.4,1.32],"rest":51.72,"owner":363607,"mine":false},{"code":"439509","n_career":14,"name":"Tzolis","pos":"MID","team":1,"status":"a","news":"","avail":0.27,"gw":[0.86,0.73,0.81,0.76,0.99,1.14,1.07,1.19,1.07,1.19,1.16,1.1,1.05,1.18,1.19,1.19,1.12,1.12,1.31,1.21,1.14,1.26,0.97,1.19,1.07,1.16,1.1,1.12,1.06,1.21,1.12,1.17,1.11,1.24,1.06,1.21,1.03,1.14],"rest":41.80000000000001,"owner":299912,"mine":false},{"code":"620109","n_career":0,"name":"Palestra","pos":"?","team":6,"status":"a","news":"","avail":0.27,"gw":[0.77,0.79,0.63,0.87,1.03,1.13,1.07,1.24,1.15,1.03,1.27,1.1,1.14,1.26,0.98,1.19,1.17,1.16,1.31,1.1,1.19,1.16,1.17,1.07,1.07,1.19,1.1,1.16,1.0,1.17,1.19,1.06,1.1,1.11,1.08,1.21,1.06,1.17],"rest":41.650000000000006,"owner":299912,"mine":false},{"code":"551466","n_career":0,"name":"Gonzalo","pos":"?","team":10,"status":"a","news":"","avail":0.27,"gw":[0.84,0.73,0.81,0.79,1.12,1.04,1.21,1.13,1.05,1.18,1.04,1.22,1.09,1.13,1.19,1.13,1.21,1.05,1.18,1.25,1.14,1.22,1.08,1.08,1.15,0.89,1.25,1.0,1.06,1.25,1.08,1.16,1.11,1.19,1.17,1.15,1.18,1.06],"rest":41.61,"owner":363607,"mine":false},{"code":"445087","n_career":0,"name":"Araujo","pos":"?","team":14,"status":"a","news":"","avail":0.27,"gw":[0.79,0.81,0.77,0.85,1.04,1.01,1.08,1.17,0.99,1.04,1.24,1.09,1.13,1.14,1.21,1.24,1.17,1.11,1.32,1.09,1.2,1.13,1.16,0.91,1.08,1.19,1.16,1.12,1.2,1.14,1.22,1.08,1.13,1.2,0.94,1.22,1.02,1.18],"rest":41.57000000000001,"owner":282287,"mine":false},{"code":"551499","n_career":0,"name":"Munoz","pos":"?","team":14,"status":"a","news":"","avail":0.27,"gw":[0.79,0.81,0.77,0.85,1.04,1.01,1.08,1.17,0.99,1.04,1.24,1.09,1.13,1.14,1.21,1.24,1.17,1.11,1.32,1.09,1.2,1.13,1.16,0.91,1.08,1.19,1.16,1.12,1.2,1.14,1.22,1.08,1.13,1.2,0.94,1.22,1.02,1.18],"rest":41.57000000000001,"owner":372099,"mine":true},{"code":"543968","n_career":0,"name":"Emersonn","pos":"?","team":12,"status":"a","news":"","avail":0.27,"gw":[0.83,0.73,0.82,0.77,1.02,1.11,0.98,1.2,1.09,1.17,1.18,1.19,1.08,1.17,1.21,1.07,1.24,1.22,1.01,1.24,1.13,1.27,1.05,1.22,0.98,1.05,1.19,1.04,1.08,1.23,1.07,1.18,1.13,1.23,1.04,1.12,1.05,1.16],"rest":41.54999999999999,"owner":282287,"mine":false}]};
+const MGRS={"45811": ["Return of the Djedi", "Edward"], "282287": ["Delap Dance", "Ben C"], "299912": ["Haramball Enthusiast", "Marcus"], "363607": ["Quantum of Tzolis", "Ben D"], "372099": ["Schwaddy", "Justin"], "421435": ["Pardinho", "Rob"]};
+const CAP={GKP:2,DEF:5,MID:5,FWD:3};
+let DATA=null,NEXT=0;
+function nextGW(ps){for(let g=0;g<38;g++){if(ps.some(p=>p.gw&&p.gw[g]>0))return g;}return 37;}
+function pickXI(sq,key){
+  const by={GKP:[],DEF:[],MID:[],FWD:[]};
+  sq.forEach(p=>{if(by[p.pos])by[p.pos].push(p)});
+  for(const k in by)by[k].sort((a,b)=>b[key]-a[key]);
+  let best=-1e18,xi=null,form=null;
+  for(let d=3;d<=5;d++)for(let m=2;m<=5;m++){const f=10-d-m;if(f<1||f>3)continue;
+    if(by.GKP.length<1||by.DEF.length<d||by.MID.length<m||by.FWD.length<f)continue;
+    const c=[by.GKP[0],...by.DEF.slice(0,d),...by.MID.slice(0,m),...by.FWD.slice(0,f)];
+    const s=c.reduce((a,p)=>a+p[key],0);
+    if(s>best){best=s;xi=c;form=[d,m,f];}}
+  return {xi:xi||[],form,total:best>-1e17?best:0};
+}
+function spark(gw){
+  const w=90,h=20,n=Math.min(38,gw.length);
+  const mx=Math.max(...gw,1);
+  let pts="";
+  for(let i=0;i<n;i++){pts+=(i*(w/n)).toFixed(1)+","+(h-gw[i]/mx*h).toFixed(1)+" ";}
+  return `<svg class="spark" width="${w}" height="${h}"><polyline points="${pts}" fill="none" stroke="#4A7FE0" stroke-width="1.4"/></svg>`;
+}
+function posord(p){return {GKP:0,DEF:1,MID:2,FWD:3}[p]}
+function render(){
+  const ps=DATA.players;NEXT=nextGW(ps);
+  document.getElementById("meta").textContent=
+    `updated ${DATA.generated?DATA.generated.slice(0,16).replace("T"," "):"?"} UTC · next: GW${NEXT+1} · λ=(${DATA.lambda_time}, ${DATA.lambda_nn??"∞"}) · ${DATA._src}`;
+  PKIDX=null;                       // names index is built from DATA and STATS
+  renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);renderStarters();
+  renderNews();
+  if(LIVE)renderLive();
+}
+function renderSquad(ps){
+  const mine=ps.filter(p=>p.mine);
+  mine.forEach(p=>p.ep=p.gw?p.gw[NEXT]:0);
+  const {xi,form,total}=pickXI(mine,"ep");
+  const xiset=new Set(xi.map(p=>p.name));
+  const bench=mine.filter(p=>!xiset.has(p.name)).sort((a,b)=>(a.pos==="GKP"?-1:0)-(b.pos==="GKP"?-1:0)||b.ep-a.ep);
+  let h=`<div class="card"><b class="h">GW${NEXT+1} XI · ${form?form.join("-"):""} · E[pts] ${total.toFixed(1)}</b><table>`;
+  for(const p of xi.sort((a,b)=>posord(a.pos)-posord(b.pos)||b.ep-a.ep))
+    h+=row(p,`<td class="num">${p.ep.toFixed(1)}</td>`);
+  h+=`</table></div><div class="card"><b class="h">Bench order</b><table>`;
+  bench.forEach((p,i)=>h+=row(p,`<td class="num">${p.ep.toFixed(1)}</td>`,i+1));
+  h+=`</table></div><div class="card"><b class="h">Next ${HZ()} gameweeks</b>
+  <div class="note">Fixture-adjusted. <b>fix</b> is what this run is worth against an average one, in points, from the model's own opponent terms - green is a kind draw, red a hard one.</div><table>
+  <tr><th>player</th><th></th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th></tr>`;
+  for(const p of [...mine].sort((a,b)=>N5(b)-N5(a)))
+    h+=`<tr><td>${nm(p)} <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td></tr>`;
+  h+=`</table></div><div class="card"><b class="h">Rest of season</b><table>
+  <tr><th>player</th><th></th><th style="text-align:right">rest</th><th>shape</th></tr>`;
+  for(const p of [...mine].sort((a,b)=>b.rest-a.rest))
+    h+=`<tr><td>${nm(p)} <span class="tm">${p.pos}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td></td><td class="num">${Math.round(p.rest)}</td><td>${spark(p.gw||[])}</td></tr>`;
+  h+=`</table></div>`;
+  document.getElementById("squad").innerHTML=h;
+}
+// Five-gameweek totals. Older predictions.json files (and the embedded
+// fallback) have no next5, so fall back to a flat slice of the season.
+const N5=p=>p.next5!=null?p.next5:(p.rest||0)*5/38;
+const HZ=()=>DATA.horizon||5;
+// Fixture ticker: upper case is home, lower case away, "-" a blank.
+// Coloured by the model's own fixture term for that player, in points
+// against an average run, so it says what the run is worth rather than
+// how hard it looks.
+function runHTML(p){
+  if(!p.run||!p.run.length)return "";
+  const f=p.fix5;
+  const cls=f==null?"":(f>0.3?"fx-good":f<-0.3?"fx-bad":"fx-mid");
+  return `<span class="run ${cls}" title="${f==null?"":(f>0?"+":"")+f.toFixed(1)+" pts vs an average run"}">${p.run.join(" ")}</span>`;
+}
+function fixTag(p){
+  if(p.fix5==null)return "";
+  return `<span class="fx ${p.fix5>0.3?"fx-good":p.fix5<-0.3?"fx-bad":"fx-mid"}">${p.fix5>0?"+":""}${p.fix5.toFixed(1)}</span>`;
+}
+function row(p,extra,pre){
+  return `<tr><td>${pre?pre+". ":""}${nm(p)} <span class="tm">${club(p)}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span></td>${extra}</tr>`;
+}
+// Points over the horizon a free agent must clear to justify a swap. On
+// the old rest-of-season scale this was 8; five gameweeks is about an
+// eighth of a season, and the fixture run is worth roughly a point of it.
+const MARGIN=2;
+function waiverPlan(mine,free){
+  const sq=[...mine],pool=[...free],plan=[];
+  while(plan.length<8){
+    let best=null;
+    for(const pos of ["GKP","DEF","MID","FWD"]){
+      const drops=sq.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
+      if(!drops.length)continue;
+      const d=drops[0];
+      const f=pool.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a))[0];
+      if(f&&N5(f)-N5(d)>MARGIN&&(!best||N5(f)-N5(d)>best.gain))
+        best={add:f,drop:d,gain:N5(f)-N5(d),pos};
+    }
+    if(!best)break;
+    plan.push(best);
+    sq.splice(sq.indexOf(best.drop),1);sq.push(best.add);
+    pool.splice(pool.indexOf(best.add),1);pool.push(best.drop);
+  }
+  return plan;
+}
+function renderWaivers(ps){
+  const mine=ps.filter(p=>p.mine),free=ps.filter(p=>!p.owner);
+  const plan=waiverPlan(mine,free);
+  let h=claudeClaimsHTML(ps,plan);
+  if(plan.length===0){
+    h+=`<div class="card holdcard"><b class="h">Model: hold, 0 claims this week</b>
+    <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} switching margin over the next ${HZ()} gameweeks.</div></div>`;
+  }else{
+    h+=`<div class="card"><b class="h">Model: make ${plan.length} claim${plan.length>1?"s":""} this week</b>
+    <div class="note">Gains are expected points over the next ${HZ()} gameweeks, fixtures included, and each swap clears the +${MARGIN} margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
+    <tr><th>#</th><th>add</th><th></th><th>drop</th><th>run</th><th style="text-align:right">gain</th></tr>`;
+    plan.forEach((c,i)=>{
+      h+=`<tr><td class="num">${i+1}</td>
+      <td>${nm(c.add)} <span class="tm">${club(c.add)} n=${c.add.n_career}</span>${c.add.news?`<span class="flag">${c.add.news}</span>`:""}</td>
+      <td><span class="pos ${c.pos}">${c.pos}</span></td>
+      <td>${nm(c.drop,"")} <span class="tm">${N5(c.drop).toFixed(1)}</span></td>
+      <td>${runHTML(c.add)}</td>
+      <td class="num"><span class="gain">+${c.gain.toFixed(1)}</span></td></tr>`;});
+    h+=`</table><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
+  }
+  h+=`<div class="card"><b class="h">Full board</b>
+  <div class="note">Best free agents vs your weakest at each position over the next ${HZ()} gameweeks, before any swaps.</div><table>
+  <tr><th>free agent</th><th></th><th style="text-align:right">£</th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
+  for(const pos of ["GKP","DEF","MID","FWD"]){
+    const m=mine.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
+    if(!m.length)continue;
+    for(const fa of free.filter(p=>p.pos===pos).sort((a,b)=>N5(b)-N5(a)).slice(0,4)){
+      const g=N5(fa)-N5(m[0]);
+      h+=`<tr><td>${nm(fa)} <span class="tm">${club(fa)} n=${fa.n_career}</span>${fa.news?`<span class="flag">${fa.news}</span>`:""}</td>
+      <td><span class="pos ${pos}">${pos}</span></td><td class="num">${gbp(fa)}</td><td class="num">${N5(fa).toFixed(1)}</td>
+      <td class="num">${fixTag(fa)}</td><td>${runHTML(fa)}</td>
+      <td>${nm(m[0],"")} <span class="tm">${gbp(m[0])} ${N5(m[0]).toFixed(1)}</span></td>
+      <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(1)}</span></td></tr>`;
+    }
+  }
+  h+=`</table></div>`;
+  h+=marketHTML(free);
+  const sec=document.getElementById("waivers");sec.innerHTML=h;
+  sec.querySelectorAll("th[data-mk]").forEach(t=>t.addEventListener("click",()=>{
+    WSORT={k:t.dataset.mk,d:WSORT.k===t.dataset.mk?-WSORT.d:1};renderWaivers(DATA.players);}));
+  sec.querySelectorAll("[data-mpos]").forEach(b=>b.addEventListener("click",()=>{
+    WPOS=b.dataset.mpos;renderWaivers(DATA.players);}));
+  sec.querySelectorAll("[data-mall]").forEach(b=>b.addEventListener("click",()=>{
+    WALL=b.dataset.mall==="1";renderWaivers(DATA.players);}));
+}
+// The market: every unclaimed player with his classic-game price beside
+// the model's number, sortable on any column. Price is the one read the
+// model has not got - it separates a signing the model has not seen yet
+// (Barcola at 8.0 with next5 near zero) from a reserve it has seen plenty
+// of (a 4.5 with the same next5) - and the two disagreeing is the point.
+let WSORT={k:"price",d:1},WPOS="ALL",WALL=false;
+const MKT_ROWS=60;
+function marketHTML(free){
+  const rows=free.map(p=>{const r=px(p);return {p,name:p.name,pos:p.pos,
+    price:r?r[0]:null,chg:r?r[1]:null,sel:r?r[2]:null,pts:r?r[3]:null,
+    min:r?r[4]:null,form:r?r[5]:null,n5:N5(p),avail:p.avail,fix5:p.fix5};})
+    .filter(x=>WPOS==="ALL"||x.pos===WPOS).sort(sorter(WSORT.k,WSORT.d));
+  const shown=WALL?rows:rows.slice(0,MKT_ROWS);
+  const th=(k,l,r)=>`<th data-mk="${k}" class="${WSORT.k===k?"on":""}"${r?' style="text-align:right"':""}>${l}${WSORT.k===k?(WSORT.d>0?" ▾":" ▴"):""}</th>`;
+  let h=`<div class="card"><b class="h">Free agent market</b>
+  <div class="note">Every unclaimed player with his classic-game price: the market's read on him, beside the model's. <b>Δ</b> is the price move since the season started, <b>sel</b> how many classic managers own him, <b>pts</b> and <b>min</b> his season so far. Tap a heading to sort by it, again to flip.</div>
+  <div>${["ALL","GKP","DEF","MID","FWD"].map(x=>`<button class="chip ${WPOS===x?"on":""}" data-mpos="${x}">${x==="ALL"?"All":x}</button>`).join("")}</div>
+  ${PRICES?"":`<div class="stale">Prices not loaded - data/prices.json is written by the refresh runs and appears after the next one.</div>`}
+  <table class="mk"><tr>${th("name","player")}<th></th>${th("price","£",1)}${th("chg","Δ",1)}${th("sel","sel %",1)}${th("pts","pts",1)}${th("min","min",1)}${th("form","form",1)}${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}${th("avail","P(play)",1)}<th>run</th></tr>`;
+  for(const x of shown){
+    const p=x.p,f=x.chg==null?"":x.chg>0?"up":x.chg<0?"dn":"tm";
+    h+=`<tr><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
+    <td><span class="pos ${p.pos}">${p.pos}</span></td>
+    <td class="num">${x.price!=null?x.price.toFixed(1):"–"}</td>
+    <td class="num"><span class="${f}">${x.chg==null?"–":(x.chg>0?"+":"")+x.chg.toFixed(1)}</span></td>
+    <td class="num">${x.sel!=null?x.sel.toFixed(1):"–"}</td>
+    <td class="num">${x.pts??"–"}</td><td class="num">${x.min??"–"}</td>
+    <td class="num">${x.form!=null?x.form.toFixed(1):"–"}</td>
+    <td class="num">${x.n5.toFixed(1)}</td><td class="num">${fixTag(p)}</td>
+    <td class="num">${p.avail}</td><td>${runHTML(p)}</td></tr>`;
+  }
+  h+=`</table>`;
+  if(rows.length>MKT_ROWS)h+=`<div class="note"><button class="chip" data-mall="${WALL?0:1}">${WALL?`Show top ${MKT_ROWS}`:`Show all ${rows.length}`}</button></div>`;
+  return h+`</div>`;
+}
+// Claude's claims. A scheduled Claude session reads the day's football news,
+// weighs it against the model's board and writes data/claims.json: up to
+// five ranked add/drop pairs, each with its reasoning, the model's view and
+// the articles behind it. Only that session writes the file, so it cannot
+// collide with the refresh cron, and the site reads it directly. The model
+// numbers shown beside each claim are looked up live from predictions.json
+// by player code, so they stay current between research runs.
+const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
+let CLAIMS=null;
+fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{CLAIMS=j;if(DATA)renderWaivers(DATA.players);}).catch(()=>{});
+// Classic-game prices, written by every refresh run as data/prices.json:
+// the market's prior on a player, which is the one read the model has not
+// got. Keyed by code; each row is [price, change since the season started,
+// selected by %, season points, minutes, form, status].
+const PRICES_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/prices.json";
+let PRICES=null;
+fetch(PRICES_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{PRICES=j;if(DATA){renderWaivers(DATA.players);renderPlayers(DATA.players);renderLeague(DATA.players);}}).catch(()=>{});
+const px=p=>(PRICES&&PRICES.players[String(p.code)])||null;
+const price=p=>{const r=px(p);return r?r[0]:null;};
+const gbp=p=>{const r=px(p);return r?`£${r[0].toFixed(1)}`:"";};
+// sum of the classic prices across a manager's squad
+function teamValue(entry){
+  if(!PRICES||!DATA)return null;
+  let s=0,n=0;
+  for(const p of DATA.players){if(p.owner==entry){const r=px(p);if(r){s+=r[0];n++;}}}
+  return n?s:null;
+}
+// One comparator for every sortable table. d=1 puts the biggest number
+// first and names in A-Z order; blanks always sink to the bottom.
+function sorter(k,d){
+  return (a,b)=>{const x=a[k],y=b[k];
+    const nx=x==null||x!==x,ny=y==null||y!==y;
+    if(nx||ny)return nx&&ny?0:nx?1:-1;
+    return typeof x==="string"?-d*x.localeCompare(y):d*(y-x);};
+}
+const esc=x=>String(x??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function whenUK(iso){
+  const d=new Date(iso);if(isNaN(d))return "";
+  return d.toLocaleString("en-GB",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Europe/London"});
+}
+function claudeClaimsHTML(ps,plan){
+  const C=CLAIMS,cl=(C&&Array.isArray(C.claims))?C.claims:[];
+  const title=!C?"Claude: 5 claims this week":cl.length?`Claude: make ${cl.length} claim${cl.length>1?"s":""} this week`:"Claude: hold this week";
+  let h=`<div class="card clcard"><b class="h">${title}</b>`;
+  if(!C){
+    return h+`<div class="note">Not researched yet. A scheduled Claude session reads the day's football news at 9am and 10pm UK, weighs it against the model's board below and writes its five claims with reasoning and sources to data/claims.json. This card fills in after its next run.</div></div>`;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=C.gw|0;
+  const closeT=new Date(C.waivers_close||"");
+  const closed=!isNaN(closeT)&&Date.now()>closeT.getTime();
+  h+=`<div class="clsub">GW${gw||"?"} · waivers ${closed?"closed":"close"} ${esc(whenUK(C.waivers_close))} UK · researched ${esc((C.ts||"").slice(0,16).replace("T"," "))} UTC</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">These claims were written for GW${gw}. The next research run (9am or 10pm UK) writes GW${cur}'s.</div>`;
+  if(C.summary)h+=`<div class="clsum">${esc(C.summary)}</div>`;
+  if(!cl.length)h+=`<div class="note">Nothing worth moving this week, in Claude's reading of the news.</div>`;
+  cl.forEach((c,i)=>{
+    const A=c.add||{},D=c.drop||{};
+    const a=by[String(A.code)],d=by[String(D.code)];
+    const pa=a||{code:A.code,name:A.name},pd=d||{code:D.code,name:D.name};
+    const pos=c.pos||(a&&a.pos)||"";
+    let mdl="";
+    if(a&&d){
+      const g=N5(a)-N5(d);
+      const k=plan.findIndex(x=>x.add===a&&x.drop===d);
+      mdl=`<span class="${g>0?"gain":"loss"}" title="model: ${N5(a).toFixed(1)} for ${esc(a.name)} against ${N5(d).toFixed(1)} for ${esc(d.name)} over the next ${HZ()} gameweeks">model ${g>0?"+":""}${g.toFixed(1)}</span>`;
+      if(k>=0)mdl+=` <span class="pill" title="the model's own board makes the same swap">model's #${k+1}</span>`;
+    }
+    const flags=[];
+    if(a&&a.owner)flags.push(`${esc(a.name)} is no longer a free agent`);
+    if(d&&!d.mine)flags.push(`${esc(d.name)} is no longer in your squad`);
+    h+=`<div class="cl"><div class="clhd"><span class="clno">${c.rank||i+1}</span>
+      ${pos?`<span class="pos ${pos}">${pos}</span>`:""}
+      <span class="clarr">add</span> ${nm(pa)} <span class="tm">${esc(A.club||(a?club(a):""))}</span>
+      <span class="clarr">drop</span> ${nm(pd)} <span class="tm">${esc(D.club||(d?club(d):""))}</span>
+      ${a?runHTML(a):""} ${mdl}
+      ${c.confidence?`<span class="conf conf-${esc(c.confidence)}">${esc(c.confidence)}</span>`:""}</div>`;
+    if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
+    if(c.why)h+=`<div class="clwhy">${esc(c.why)}</div>`;
+    if(c.model)h+=`<div class="clmod"><b>Model:</b> ${esc(String(c.model).replace(/^\s*model\s*:\s*/i,""))}</div>`;
+    const src=Array.isArray(c.sources)?c.sources.filter(x=>x&&/^https?:/.test(x.url||"")):[];
+    if(src.length)h+=`<div class="clsrc">${src.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title||x.url)} &rsaquo;</a>`).join("")}</div>`;
+    h+=`</div>`;
+  });
+  h+=`<div class="note">Claude's own reading of the news, ranked in submission order, with the model's number beside each swap. The model's mechanical board is below; where the two disagree the reasoning says why.</div></div>`;
+  return h;
+}
+// Starters. Once a week, on the first run after the gameweek's waivers have
+// processed and the squad is final, the same scheduled Claude session does a
+// deep pass over every player in it - predicted line-ups, the manager's
+// press conference, the injury lists - and writes data/starters.json: a
+// verdict per player with the evidence and the articles. Later runs before
+// the deadline amend a verdict only where the day's news changes it. The
+// model's own availability number is shown beside each verdict, looked up
+// live from predictions.json, and flagged where the two disagree.
+const STARTERS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/starters.json";
+let STARTERS=null;
+fetch(STARTERS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{STARTERS=j;renderStarters();}).catch(()=>{renderStarters();});
+const ST_ORDER={start:0,likely:1,doubt:2,bench:3,out:4};
+function renderStarters(){
+  const sec=document.getElementById("starters");if(!sec)return;
+  const S=STARTERS,ps=(DATA&&DATA.players)||[];
+  if(!S||!Array.isArray(S.players)){
+    sec.innerHTML=`<div class="card clcard"><b class="h">Starters</b><div class="note">Not researched yet. Once a week, on the first run after the gameweek's waivers have processed, Claude checks every player in your squad against predicted line-ups, press conferences and the injury lists and writes data/starters.json. This tab fills in after that run.</div></div>`;
+    return;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=S.gw|0;
+  const dl=new Date(S.deadline||"");const passed=!isNaN(dl)&&Date.now()>dl.getTime();
+  const counts={start:0,likely:0,doubt:0,bench:0,out:0};
+  S.players.forEach(x=>{if(counts[x.status]!=null)counts[x.status]++;});
+  const last=Array.isArray(S.runs)&&S.runs.length?S.runs[S.runs.length-1]:null;
+  let h=`<div class="card clcard"><b class="h">Starters · GW${gw||"?"}</b>
+  <div class="clsub">deadline ${passed?"passed ":""}${esc(whenUK(S.deadline))} UK · researched ${esc((S.ts||"").slice(0,16).replace("T"," "))} UTC${last&&last.kind==="light"?` · last checked ${esc((last.ts||"").slice(0,16).replace("T"," "))} UTC`:""}</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">These verdicts were for GW${gw}. GW${cur}'s are written on the first research run after its waivers process.</div>`;
+  h+=`<div class="pkg">${["start","likely","doubt","bench","out"].map(k=>`<div class="pkt"><b>${counts[k]}</b><span>${k}</span></div>`).join("")}</div>`;
+  if(S.summary)h+=`<div class="clsum">${esc(S.summary)}</div>`;
+  const rows=[...S.players].sort((a,b)=>(ST_ORDER[a.status]??9)-(ST_ORDER[b.status]??9)||posord(a.pos||"FWD")-posord(b.pos||"FWD")||String(a.name).localeCompare(String(b.name)));
+  const seen=new Set();
+  for(const x of rows){
+    const a=by[String(x.code)];seen.add(String(x.code));
+    const p=a||{code:x.code,name:x.name};
+    const pos=x.pos||(a&&a.pos)||"";
+    const st=ST_ORDER[x.status]!=null?x.status:"none";
+    let mdl="";
+    if(a&&a.avail!=null){
+      const av=a.avail;
+      const dis=((st==="start"||st==="likely")&&av<0.5)||((st==="bench"||st==="out")&&av>0.8);
+      mdl=`<span class="pill ${dis?"warn":""}" title="the model's probability that he plays${dis?" - disagrees with this verdict":""}">model ${av.toFixed(2)}</span>`;
+    }
+    const nextfx=a&&a.run&&a.run.length?`<span class="run" title="next fixture: upper case home, lower case away">${esc(a.run[0])}</span>`:"";
+    h+=`<div class="st"><div class="sthd"><span class="stat s-${st}">${esc(x.status||"?")}</span>
+      ${nm(p)} ${pos?`<span class="pos ${pos}">${pos}</span>`:""} <span class="tm">${esc(x.club||(a?club(a):""))}</span> ${nextfx}
+      <span class="stv">${esc(x.verdict||"")}</span> ${mdl}${a&&!a.mine?` <span class="flag" style="display:inline">no longer in your squad</span>`:""}</div>`;
+    if(x.note)h+=`<div class="stnote">${esc(x.note)}</div>`;
+    const src=Array.isArray(x.sources)?x.sources.filter(u=>u&&/^https?:/.test(u.url||"")):[];
+    if(src.length)h+=`<div class="clsrc">${src.map(u=>`<a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.title||u.url)} &rsaquo;</a>`).join("")}</div>`;
+    h+=`</div>`;
+  }
+  const missing=ps.filter(p=>p.mine&&!seen.has(String(p.code)));
+  if(missing.length){
+    h+=`<div class="note">In your squad since the research ran, not yet checked: ${missing.map(p=>`${nm(p)} <span class="tm">${club(p)}</span>`).join(", ")}.</div>`;
+  }
+  h+=`<div class="note">Claude's read of predicted line-ups, press conferences and injury lists for every player you hold. <b>start</b> is named in two or more predicted XIs or confirmed by the manager; <b>likely</b> one source or a rotation risk; <b>doubt</b> could go either way; <b>bench</b> fit but among the subs; <b>out</b> injured, suspended, not in the squad or no fixture. The model pill is its own probability that he plays, amber where it disagrees.</div></div>`;
+  h+=benchingHTML(S,ps);
+  sec.innerHTML=h;
+}
+// Suggested XI: the research and the model together. The model's expected
+// points for the gameweek already carry its own availability estimate, so
+// that is stripped back out to a per-appearance rate and replaced with the
+// chance he starts according to the research. A player the research has
+// not covered keeps the model's own number. Formation rules are the same
+// pickXI the My squad tab uses, so the two XIs differ only where the
+// research changed a verdict.
+const ST_P={start:0.95,likely:0.75,doubt:0.5,bench:0.15,out:0};
+function benchingHTML(S,ps){
+  const mine=ps.filter(p=>p.mine);
+  if(!mine.length||!S||!Array.isArray(S.players))return "";
+  const st={};S.players.forEach(x=>{st[String(x.code)]=x;});
+  mine.forEach(p=>{
+    const ep=p.gw?p.gw[NEXT]:0,av=p.avail!=null?p.avail:1,x=st[String(p.code)];
+    const pst=x&&ST_P[x.status]!=null?ST_P[x.status]:av;
+    p.ep=ep;p.epb=ep/Math.max(av,0.2)*pst;p.st=x?x.status:null;
+  });
+  const M=pickXI(mine,"ep"),R=pickXI(mine,"epb");
+  const rset=new Set(R.xi.map(p=>p.code)),mset=new Set(M.xi.map(p=>p.code));
+  const bench=mine.filter(p=>!rset.has(p.code)).sort((a,b)=>(a.pos==="GKP"?-1:0)-(b.pos==="GKP"?-1:0)||b.epb-a.epb);
+  const ins=R.xi.filter(p=>!mset.has(p.code)),outs=M.xi.filter(p=>!rset.has(p.code));
+  const badge=p=>p.st?`<span class="stat s-${p.st}">${esc(p.st)}</span>`:`<span class="stat s-none">n/a</span>`;
+  const row=(p,pre)=>`<tr><td>${pre?`<span class="num">${pre}.</span> `:""}${nm(p)} <span class="tm">${club(p)}</span></td><td><span class="pos ${p.pos}">${p.pos}</span></td><td>${badge(p)}</td><td class="num">${p.ep.toFixed(1)}</td><td class="num"><b>${p.epb.toFixed(1)}</b></td></tr>`;
+  let h=`<div class="card holdcard"><b class="h">Suggested XI · GW${NEXT+1} · ${R.form?R.form.join("-"):""} · E[pts] ${R.total.toFixed(1)}</b>
+  <div class="note">Research and model together: the model's per-appearance rate for this gameweek times the chance he starts from the verdicts above (start 0.95, likely 0.75, doubt 0.5, bench 0.15, out 0). A player the research has not covered keeps the model's own availability.</div>`;
+  if(!ins.length&&!outs.length)h+=`<div class="clsum">Same eleven as the model's XI on the My squad tab.</div>`;
+  else h+=`<div class="clsum"><b>Changes against the model's XI:</b> out ${outs.map(p=>`${nm(p)} <span class="tm">${p.st||"?"}</span>`).join(", ")} · in ${ins.map(p=>`${nm(p)} <span class="tm">${p.st||"?"}</span>`).join(", ")}.</div>`;
+  h+=`<table><tr><th>player</th><th></th><th>verdict</th><th style="text-align:right">model</th><th style="text-align:right">adjusted</th></tr>`;
+  for(const p of [...R.xi].sort((a,b)=>posord(a.pos)-posord(b.pos)||b.epb-a.epb))h+=row(p);
+  h+=`<tr class="benchsep"><td colspan="5">Bench order</td></tr>`;
+  bench.forEach((p,i)=>{h+=row(p,i+1);});
+  h+=`</table><div class="note">Bench order is the adjusted number, keeper first as the game requires. The game applies substitutions only once the gameweek ends, so a doubt on the bench still covers a starter who does not play.</div></div>`;
+  return h;
+}
+const NEWS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/news.json";
+const LEAGUE_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/league.json";
+let WK=null,WKTAB="weekly",WKOPEN=null;
+fetch(LEAGUE_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{WK=j;if(window.LASTPS)renderLeague(window.LASTPS);
+            if(typeof LIVE!=="undefined"&&!LIVE)renderLive();}).catch(()=>{});
+// Player names inside feed text, made clickable. The feed is free text
+// written by the pipeline and by the scheduled session, so a name has to
+// be found in prose rather than read off a field. Same matching the
+// player card uses in reverse: normalise accents away, match on word
+// boundaries, and where the text tags a club straight after the name
+// ("Watkins (AVL): ...") that tag has to be his club. Two players sharing
+// a web name need the tag to tell them apart; without it, one owned
+// player wins and otherwise the name is left as plain text. Managers are
+// named in the feed too and a manager and a player can be the same word,
+// so those always need the tag - "Justin 43" in a scoreline is not the
+// Leeds full back. Everything is escaped on the way out, so feed text can
+// never inject markup into the page.
+let PKIDX=null,PKRE=null,PKMGR=[],PKBYCODE={};
+// NFD changes the length of a string, so a match found in the normalised
+// text cannot be sliced out of the original without a map back.
+function pkNormMap(s){
+  let out="";const map=[];
+  for(let i=0;i<s.length;i++){
+    const c=s[i].normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+    for(let j=0;j<c.length;j++){out+=c[j];map.push(i);}
+  }
+  map.push(s.length);
+  return {norm:out,map};
+}
+function buildPkIndex(){
+  PKIDX={};PKBYCODE={};PKMGR=pkMgrNames();
+  const add=(raw,code,team)=>{
+    const n=pkNorm(raw);
+    if(n.length<3)return;                 // two letters picks out nobody
+    (PKIDX[n]=PKIDX[n]||[]).push({code:String(code),team});
+  };
+  for(const p of (DATA&&DATA.players)||[]){PKBYCODE[String(p.code)]=p;add(p.name,p.code,p.team);}
+  if(STATS&&STATS.players)for(const c in STATS.players){
+    const st=STATS.players[c];
+    if(st&&st.full)add(st.full,c,st.team);
+  }
+  const names=Object.keys(PKIDX).sort((a,b)=>b.length-a.length||(a<b?-1:1));
+  PKRE=names.length?new RegExp("(^|[^a-z0-9])("+names.map(pkEsc).join("|")+")(?![a-z0-9])","g"):null;
+}
+function pkClubOf(c){
+  const t=STATS&&STATS.teams&&STATS.teams[c.team];
+  return t?pkNorm(t[0]):null;
+}
+function pkResolve(name,tag){
+  const seen={},uniq=[];
+  for(const c of PKIDX[name]||[])if(!seen[c.code]){seen[c.code]=1;uniq.push(c);}
+  if(!uniq.length)return null;
+  if(tag){
+    const hit=uniq.filter(c=>pkClubOf(c)===tag);
+    return hit.length===1?hit[0].code:null;   // tagged with a club that is not his: not him
+  }
+  if(PKMGR.indexOf(name)>=0)return null;      // manager collision: the tag is required
+  if(uniq.length===1)return uniq[0].code;
+  const owned=uniq.filter(c=>{const p=PKBYCODE[c.code];return p&&p.owner;});
+  return owned.length===1?owned[0].code:null;
+}
+function linkNames(text){
+  if(text==null)return "";
+  if(PKIDX===null)buildPkIndex();
+  if(!PKRE)return esc(text);
+  const {norm,map}=pkNormMap(String(text));
+  let out="",last=0,m;
+  PKRE.lastIndex=0;
+  while((m=PKRE.exec(norm))!==null){
+    const a=m.index+m[1].length,b=a+m[2].length;
+    const tag=norm.slice(b).match(/^\s*\(([a-z]{3})\)/);
+    let code=pkResolve(m[2],tag?tag[1]:null);
+    // A web name is often a first name ("Enzo"), and the feed also names
+    // managers and pundits. Where the very next word is capitalised the
+    // text is naming somebody with a surname the index does not carry -
+    // "Enzo Maresca" is Man City's manager, not Chelsea's midfielder - so
+    // an untagged match that is a prefix of a longer name is left alone.
+    if(code!=null&&!tag&&/^\s+[A-Z]/.test(String(text).slice(map[b])))code=null;
+    if(code!=null){
+      const oa=map[a],ob=map[b];
+      out+=esc(String(text).slice(last,oa))+
+           `<span class="pk" data-pk="${esc(code)}">${esc(String(text).slice(oa,ob))}</span>`;
+      last=ob;
+    }
+    PKRE.lastIndex=b;                    // a name can sit right next to another
+  }
+  return out+esc(String(text).slice(last));
+}
+let NEWSDATA=null,NEWSFILTER="all";
+// older events predate the scope field; derive it so the filter still works
+function evScope(e){
+  return e.scope || (e.mine?"mine":(e.type==="freeagent"?"free":"league"));
+}
+function renderNews(){
+  const sec=document.getElementById("news");
+  const F=[["all","All news"],["league","League only"],["mine","Just me"]];
+  let h=F.map(([k,l])=>`<button class="chip ${NEWSFILTER===k?"on":""}" data-f="${k}">${l}</button>`).join("");
+  if(!NEWSDATA||!NEWSDATA.events){
+    h+=`<div class="note">No news feed yet. It is generated by the refresh runs and committed as data/news.json, so it appears after the next cron run.</div>`;
+  }else{
+    const evs=NEWSDATA.events.filter(e=>{
+      const sc=evScope(e);
+      return NEWSFILTER==="all"||(NEWSFILTER==="league"&&sc!=="free")||
+             (NEWSFILTER==="mine"&&sc==="mine");
+    });
+    // newest scoreboard pinned on top, with the projection under it mid-gameweek
+    const top=NEWSDATA.events.find(e=>e.type==="live"||e.type==="score");
+    const prj=NEWSDATA.events.find(e=>e.type==="projection");
+    if(top){
+      h+=`<div class="card scorecard"><b class="h">Scoreboard</b>
+      <div class="bigline">${linkNames(top.text)}</div>`;
+      if(prj&&top.type==="live")h+=`<div class="note">${linkNames(prj.text)}</div>`;
+      h+=`</div>`;
+    }
+    if(!evs.length)h+=`<div class="note">Nothing here under this filter yet.</div>`;
+    h+=`<div class="card">`;
+    let day="";
+    for(const e of evs.slice(0,80)){
+      const d=(e.ts||"").slice(0,10);
+      if(d!==day){day=d;h+=`<div class="daysep">${d}</div>`;}
+      const tag=`<span class="badge b-${e.type}">${e.type.toUpperCase()}</span>`;
+      h+=`<div class="ev ${e.mine?"mine-row":""}">${
+        e.url?`<a href="${esc(e.url)}" target="_blank" rel="noopener">${tag}</a>`:tag}
+      <span style="flex:1">${linkNames(e.text)}</span><span class="when">${esc((e.ts||"").slice(11,16))}</span></div>`;
+    }
+    h+=`</div>`;
+  }
+  sec.innerHTML=h;
+  sec.querySelectorAll("[data-f]").forEach(b=>b.addEventListener("click",
+    ()=>{NEWSFILTER=b.dataset.f;renderNews();}));
+}
+fetch(NEWS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{NEWSDATA=j;renderNews();drawCard();}).catch(()=>{renderNews();});
+function renderLeague(ps){
+  window.LASTPS=ps;
+  const sec=document.getElementById("league");
+  const T=[["weekly","This week"],["overall","Overall"]];
+  let h=T.map(([k,l])=>`<button class="chip ${WKTAB===k?"on":""}" data-w="${k}">${l}</button>`).join("");
+  h+=(WKTAB==="weekly")?weeklyHTML():overallHTML(ps);
+  sec.innerHTML=h;
+  sec.querySelectorAll("[data-w]").forEach(b=>b.addEventListener("click",
+    ()=>{WKTAB=b.dataset.w;renderLeague(ps);}));
+  sec.querySelectorAll("[data-ent]").forEach(r=>r.addEventListener("click",()=>{
+    const e=+r.dataset.ent;WKOPEN=(WKOPEN===e?null:e);renderLeague(ps);}));
+}
+function weeklyHTML(){
+  if(!WK||!WK.managers)return `<div class="note">No live gameweek data yet. It is
+    written by the refresh runs as data/league.json and appears after the next one.</div>`;
+  const ms=[...WK.managers].sort((a,b)=>b.live-a.live);
+  const left=ms.reduce((a,m)=>a+m.to_play,0);
+  const lead=ms[0],proj=[...ms].sort((a,b)=>b.proj-a.proj);
+  let h=`<div class="card scorecard"><b class="h">Gameweek ${WK.gw}</b>
+    <div class="bigline">${lead?`${lead.name} leads on ${lead.live}`:""}${
+      left?` · ${left} players still to play`:" · everyone has played"}</div>`;
+  if(left&&proj[0])h+=`<div class="note">Projected finish: ${
+    proj.map(m=>`${m.name} ${m.proj.toFixed(0)}`).join(" · ")}</div>`;
+  const hz=ms.some(m=>m.next5!=null);
+  if(hz){
+    const byh=[...ms].sort((a,b)=>b.next5-a.next5);
+    h+=`<div class="note">Next ${WK.horizon||5} gameweeks, best XI each week:
+      ${byh.map(m=>`${m.name} ${m.next5.toFixed(0)}`).join(" · ")}</div>`;
+  }
+  const pv=!!PRICES;
+  h+=`</div><div class="card"><table class="wk">
+    <tr><th>manager</th><th class="num">pts</th><th class="num">subs</th>
+    <th class="num">to play</th><th class="num">projected</th>${
+      hz?`<th class="num">next ${WK.horizon||5}</th>`:""}${
+      pv?`<th class="num">value</th>`:""}<th></th></tr>`;
+  for(const m of ms){
+    const open=WKOPEN===m.entry,val=pv?teamValue(m.entry):null;
+    h+=`<tr class="clk ${m.mine?"mine-row":""}" data-ent="${m.entry}">
+      <td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
+      <td class="num">${m.live}</td>
+      <td class="num">${m.subs?`<span class="subin">+${m.subs}</span>`:"–"}</td>
+      <td class="num">${m.to_play?`<span class="togo">${m.to_play}</span>`:"–"}</td>
+      <td class="num">${m.proj.toFixed(0)}</td>
+      ${hz?`<td class="num">${m.next5!=null?m.next5.toFixed(0):"–"}</td>`:""}
+      ${pv?`<td class="num">${val!=null?"£"+val.toFixed(1):"–"}</td>`:""}
+      <td class="chev">${open?"▾":"▸"}</td></tr>`;
+    if(open)h+=`<tr><td colspan="${6+(hz?1:0)+(pv?1:0)}">${managerHTML(m)}</td></tr>`;
+  }
+  h+=`</table></div><div class="note">Points include provisional substitutions:
+    a starter whose match has finished without playing is replaced by the first
+    eligible player on the bench, as the game will do at the deadline. Projected
+    adds the model's expected points for whoever is still to play.${
+    hz?` Next ${WK.horizon||5} is a different question: the best legal XI in each of
+    the next ${WK.horizon||5} gameweeks, fixtures included, which is who is set
+    up for the month rather than who is winning the week.`:""}${
+    pv?` Value is the squad priced in the classic game, GBP m across all fifteen
+    - the market's read on the squad, which is independent of the model's.`:""}</div>`;
+  return h;
+}
+function managerHTML(m){
+  const counting=p=>(p.slot<=11&&!p.subbed_out)||p.subbed_in;
+  const xi=m.squad.filter(counting),bn=m.squad.filter(p=>!counting(p));
+  const cell=p=>{
+    const mark=p.subbed_in?`<span class="subin">IN</span> `:
+               p.subbed_out?`<span class="subout">OUT</span> `:"";
+    const st=p.to_play?`<span class="togo">to play</span>`:
+             (p.mins?`${p.mins}'`:`<span class="tm">did not play</span>`);
+    return `<tr><td>${mark}${nm(p)}
+      <span class="tm">${p.team}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
+      <td><span class="pos ${p.pos}">${p.pos}</span></td>
+      <td class="num">${st}</td><td class="num">${p.pts}</td>
+      <td class="num"><span class="tm">${p.ep_next?.toFixed(1)??"–"}</span></td>
+      ${hz?`<td class="num"><span class="tm">${p.next5?.toFixed(1)??"–"}</span></td>
+      <td>${runHTML(p)}</td>`:""}</tr>`;
+  };
+  const hz=m.squad.some(p=>p.next5!=null);
+  const cols=hz?7:5;
+  let h=`<div class="det"><table>
+    <tr><th>${m.name}'s XI</th><th></th><th class="num">played</th>
+    <th class="num">pts</th><th class="num">next GW</th>${
+      hz?`<th class="num">next ${WK.horizon||5}</th><th>run</th>`:""}</tr>`;
+  h+=xi.map(cell).join("");
+  h+=`<tr class="benchsep"><td colspan="${cols}">Bench · ${m.bench} pts</td></tr>`;
+  h+=bn.map(cell).join("")+`</table>
+    <div class="note">${m.played} played, ${m.to_play} to come · this week
+      ${m.live} so far, ${m.proj.toFixed(0)} projected${
+      m.subs?` · ${m.subs} provisional sub${m.subs>1?"s":""}`:""}.
+      Next GW column is expected points already discounted by the chance of
+      playing${hz?`, and next ${WK.horizon||5} sums the same over the horizon,
+      so a player on a hard run reads lower than his rate alone would say`:""}.
+      </div></div>`;
+  return h;
+}
+function overallHTML(ps){
+  const byOwner={};
+  ps.forEach(p=>{if(p.owner)byOwner[p.owner]=byOwner[p.owner]||[],byOwner[p.owner].push(p);});
+  const rows=[];
+  for(const o in byOwner){
+    const sq=byOwner[o];sq.forEach(p=>p.ep=p.rest);
+    const {total}=pickXI(sq,"rest");
+    const bench=sq.reduce((a,p)=>a+p.rest,0)-total;
+    rows.push({o,strength:total+0.15*bench,n:sq.length});
+  }
+  rows.sort((a,b)=>b.strength-a.strength);
+  const mx=rows[0]?rows[0].strength:1;
+  let h="";
+  const st=(WK&&WK.managers)?[...WK.managers].filter(m=>m.rank)
+        .sort((a,b)=>a.rank-b.rank):[];
+  if(st.length){
+    const pv=!!PRICES;
+    h+=`<div class="card"><b class="h">Standings</b><table>
+      <tr><th></th><th>manager</th><th class="num">total</th><th class="num">this GW</th>${
+        pv?`<th class="num">value</th>`:""}</tr>`;
+    for(const m of st){
+      const val=pv?teamValue(m.entry):null;
+      h+=`<tr class="${m.mine?"mine-row":""}"><td class="tm">${m.rank}</td>
+      <td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
+      <td class="num">${m.total??"–"}</td><td class="num">${m.live}</td>${
+        pv?`<td class="num">${val!=null?"£"+val.toFixed(1):"–"}</td>`:""}</tr>`;
+    }
+    h+=`</table></div>${pv?`<div class="note">Value is the squad priced in the classic game, GBP m across all fifteen.</div>`:""}`;
+  }
+  h+=`<div class="card"><b class="h">Squad strength, rest of season</b><table>`;
+  for(const r of rows){
+    const m=MGRS[r.o]||[r.o,""];
+    h+=`<tr class="${r.o==372099?"mine-row":""}"><td><span class="nm">${m[0]}</span> <span class="tm">${m[1]}</span></td>
+    <td style="width:45%"><div class="bar" style="width:${(r.strength/mx*100).toFixed(0)}%"></div></td>
+    <td class="num">${Math.round(r.strength)}</td></tr>`;
+  }
+  h+=`</table></div><div class="note">Best legal XI by projected points to the end
+    of the season, plus 0.15 × the bench.</div>`;
+  return h;
+}
+let SORT={k:"rest",d:1};
+function renderPlayers(ps){
+  const q=(document.getElementById("pq")?.value||"").toLowerCase();
+  let list=ps.filter(p=>!q||p.name.toLowerCase().includes(q)||(p.team||"").toLowerCase().includes(q));
+  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);p.price=price(p);});
+  list=[...list].sort(sorter(SORT.k,SORT.d));
+  const th=(k,l,r)=>`<th data-k="${k}" class="${SORT.k===k?"on":""}"${r?' style="text-align:right"':""}>${l}${SORT.k===k?(SORT.d>0?" ▾":" ▴"):""}</th>`;
+  let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
+  <div class="note">Tap any name, here or anywhere on the site, for that
+  player's stats, fixtures and news. Tap a heading to sort by it.</div>
+  <div class="card"><table><tr>
+  ${th("name","player")}<th></th>${th("price","£",1)}${th("gwn",`GW${NEXT+1}`,1)}
+  ${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}<th>run</th>
+  ${th("rest","rest",1)}${th("avail","P(play)",1)}<th>owner</th></tr>`;
+  for(const p of list.slice(0,150)){
+    p.gwn=p.gw?p.gw[NEXT]:0;
+    const own=p.mine?"YOU":(MGRS[p.owner]?MGRS[p.owner][1]:(p.owner?"?":"free"));
+    h+=`<tr class="${p.mine?"mine-row":""}"><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
+    <td><span class="pos ${p.pos}">${p.pos}</span></td>
+    <td class="num">${gbp(p)}</td>
+    <td class="num">${(p.gwn||0).toFixed(1)}</td>
+    <td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td>
+    <td class="num">${Math.round(p.rest)}</td>
+    <td class="num">${p.avail}</td><td class="tm">${own}</td></tr>`;
+  }
+  h+=`</table></div>`;
+  const sec=document.getElementById("players");sec.innerHTML=h;
+  sec.querySelector("#pq").addEventListener("input",()=>renderPlayers(DATA.players));
+  sec.querySelectorAll("th[data-k]").forEach(t=>t.addEventListener("click",()=>{
+    SORT={k:t.dataset.k,d:SORT.k===t.dataset.k?-SORT.d:1};renderPlayers(DATA.players);}));
+}
+// ---- player card ----------------------------------------------------
+// Season stats and this season's match log, written by the refresh run
+// alongside predictions.json. Fetched up front because the club names in
+// every table come out of it too.
+const STATS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/player_stats.json";
+let STATS=null,ID2CODE={};
+fetch(STATS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{STATS=j;for(const c in j.players)ID2CODE[j.players[c].id]=c;
+    if(DATA)render();else if(window.LASTPS)renderLeague(window.LASTPS);drawCard();})
+  .catch(()=>{});
+// predictions.json holds the club as a team id, so a table can only name
+// the club once the stats file has landed. Until then, print what we have.
+function club(p,long){
+  const t=STATS&&STATS.teams&&STATS.teams[p.team];
+  return t?(long?t[1]:t[0]):(p.team??"");
+}
+// Every player name on the page routes here. predictions.json players
+// carry `code`, league.json squads carry the element `id`; either one
+// opens the same card.
+function nm(p,cls){
+  const a=p.code!=null?`data-pk="${p.code}"`:(p.id!=null?`data-pkid="${p.id}"`:"");
+  return `<span class="${cls===undefined?"nm":cls}${a?" pk":""}" ${a}>${p.name}</span>`;
+}
+document.addEventListener("click",ev=>{
+  const t=ev.target;
+  if(!t||!t.closest)return;
+  const el=t.closest("[data-pk],[data-pkid]");
+  if(!el)return;
+  const code=el.dataset.pk||ID2CODE[el.dataset.pkid];
+  if(code)openPlayer(code);
+});
+// The open card lives in the hash, so it survives a reload, can be shared,
+// and the back button closes it.
+function pkHash(){const m=(location.hash||"").match(/^#p\/([A-Za-z0-9_-]+)$/);return m?m[1]:null;}
+function openPlayer(code){
+  if(pkHash()===String(code))drawCard();else location.hash="p/"+code;
+}
+function closeCard(){if(pkHash())history.back();else drawCard();}
+window.addEventListener("hashchange",drawCard);
+window.addEventListener("keydown",e=>{if(e.key==="Escape"&&pkHash())closeCard();});
+const PKSTATUS={a:"News",d:"A doubt",i:"Injured",s:"Suspended",
+                u:"Unavailable",n:"Not available"};
+const ORDN=n=>n+(n===1?"st":n===2?"nd":n===3?"rd":"th");
+const tile=(l,v)=>`<div class="pkt"><b>${v}</b><span>${l}</span></div>`;
+function drawCard(){
+  let back=document.getElementById("pkback");
+  const code=pkHash();
+  if(!code){if(back)back.remove();document.body.style.overflow="";return;}
+  const P=((DATA&&DATA.players)||[]).find(x=>String(x.code)===code)||null;
+  const S=(STATS&&STATS.players)?STATS.players[code]:null;
+  if(!P&&!S)return;                  // nothing yet; the fetches re-draw
+  if(!back){
+    back=document.createElement("div");back.id="pkback";back.className="pkback";
+    back.addEventListener("click",e=>{if(e.target===back)closeCard();});
+    document.body.appendChild(back);
+  }
+  document.body.style.overflow="hidden";
+  back.innerHTML=`<div class="pkcard">${cardHTML(code,P,S)}</div>`;
+  back.querySelector(".pkx").addEventListener("click",closeCard);
+}
+function cardHTML(code,P,S){
+  const pos=(P&&P.pos)||(S&&S.pos)||"";
+  const name=(P&&P.name)||(S&&S.name)||"Player";
+  const tid=(P&&P.team)!=null?P.team:(S&&S.team);
+  const tm=STATS&&STATS.teams&&STATS.teams[tid];
+  const own=P?(P.mine?"your player":(MGRS[P.owner]?`${MGRS[P.owner][1]} · ${MGRS[P.owner][0]}`
+        :(P.owner?"owned":"free agent"))):"";
+  let h=`<div class="pkhd"><div>
+    <h2>${name} <span class="pos ${pos}">${pos}</span></h2>
+    <div class="sub">${[S&&S.full,tm?tm[1]:tid,own].filter(Boolean).join(" · ")}</div>
+    </div><button class="pkx" title="Close">&#10005;</button></div>`;
+  const st=(P&&P.status)||(S&&S.status)||"a";
+  const flag=(S&&S.news)||(P&&P.news)||"";
+  if(flag||st!=="a"){
+    h+=`<div class="pkalert ${st==="a"||st==="d"?"warn":""}">
+      <b>${PKSTATUS[st]||"Flagged"}</b>${flag?` &mdash; ${flag}`:""}${
+      S&&S.chance!=null?` · ${S.chance}% chance of playing`:""}${
+      S&&S.news_added?`<div class="tm">flagged ${S.news_added.replace("T"," ")}</div>`:""}</div>`;
+  }
+  if(P){
+    h+=`<div class="card"><b class="h">What the model expects</b><div class="pkg">
+      ${tile(`GW${NEXT+1}`,(P.gw?P.gw[NEXT]:0).toFixed(1))}
+      ${tile(`next ${HZ()}`,N5(P).toFixed(1))}
+      ${tile("fix",P.fix5==null?"&ndash;":(P.fix5>0?"+":"")+P.fix5.toFixed(1))}
+      ${tile("P(play)",P.avail!=null?P.avail.toFixed(2):"&ndash;")}
+      ${tile("rest",Math.round(P.rest))}
+      ${tile("career apps",P.n_career)}</div>`;
+    if(P.run&&P.run.length)h+=`<div class="note">Run: ${runHTML(P)} &mdash; upper
+      case is home, <b>-</b> a blank. <b>fix</b> is what that run is worth
+      against an average one, in points.</div>`;
+    if(P.gw&&P.gw.length>NEXT)h+=`<div class="note">Projected points, GW${NEXT+1}
+      to the end of the season ${spark(P.gw.slice(NEXT))}</div>`;
+    h+=`</div>`;
+  }
+  if(S&&S.s){
+    const g=k=>S.s[k]||0,f=(k,d)=>(S.s[k]||0).toFixed(d==null?1:d);
+    const ts=[tile("points",g("total_points")),tile("per game",f("points_per_game")),
+              tile("form",f("form")),tile("minutes",g("minutes")),
+              tile("starts",g("starts"))];
+    if(pos==="GKP")ts.push(tile("saves",g("saves")),tile("clean sheets",g("clean_sheets")),
+        tile("conceded",g("goals_conceded")),tile("xGC",f("expected_goals_conceded",2)),
+        tile("pens saved",g("penalties_saved")));
+    else{
+      ts.push(tile("goals",g("goals_scored")),tile("assists",g("assists")),
+              tile("xG",f("expected_goals",2)),tile("xA",f("expected_assists",2)));
+      if(pos==="DEF")ts.push(tile("clean sheets",g("clean_sheets")),
+                             tile("conceded",g("goals_conceded")));
+    }
+    ts.push(tile("bonus",g("bonus")),tile("bps",g("bps")));
+    // defensive contribution does not score for a keeper
+    if(pos!=="GKP")ts.push(tile("def. cont.",g("defensive_contribution")));
+    ts.push(tile("ict",f("ict_index")),
+            tile("cards",`${g("yellow_cards")}/${g("red_cards")}`));
+    h+=`<div class="card"><b class="h">${STATS.season} so far</b>
+      <div class="pkg">${ts.join("")}</div>`;
+    const sp=[];
+    if(S.sp){
+      if(S.sp.pen!=null)sp.push(`penalties ${ORDN(S.sp.pen)}`);
+      if(S.sp.fk!=null)sp.push(`free kicks ${ORDN(S.sp.fk)}`);
+      if(S.sp.ck!=null)sp.push(`corners ${ORDN(S.sp.ck)}`);
+    }
+    if(sp.length)h+=`<div class="note">Set pieces: ${sp.join(" · ")}.</div>`;
+    h+=`</div>`;
+  }
+  return h+logHTML(pos,S)+newsHTML(name,P,S);
+}
+function logHTML(pos,S){
+  if(!S)return "";
+  let h=`<div class="card"><b class="h">Match log</b>`;
+  if(!S.log||!S.log.length)
+    return h+`<div class="pkempty">No ${STATS.season} appearances on file yet.
+      The log is rebuilt by the morning refresh.</div></div>`;
+  const C={};STATS.log_cols.forEach((c,i)=>C[c]=i);
+  const T=t=>{const x=STATS.teams[t];return x?x[0]:t;};
+  h+=`<table class="pklog"><tr><th>gw</th><th>opp</th><th class="num">min</th>
+    <th class="num">pts</th><th class="num">g</th><th class="num">a</th>
+    <th class="num">xG</th><th class="num">xA</th>
+    <th class="num">${pos==="GKP"?"sv":"cs"}</th><th class="num">bon</th>
+    <th class="num">bps</th></tr>`;
+  for(const r of [...S.log].reverse()){
+    h+=`<tr><td class="tm">${r[C.gw]}</td>
+      <td>${T(r[C.opp])} <span class="tm">${r[C.home]?"H":"A"}</span></td>
+      <td class="num">${r[C.min]}</td><td class="num"><b>${r[C.pts]}</b></td>
+      <td class="num">${r[C.g]||""}</td><td class="num">${r[C.a]||""}</td>
+      <td class="num tm">${r[C.xg].toFixed(2)}</td>
+      <td class="num tm">${r[C.xa].toFixed(2)}</td>
+      <td class="num">${pos==="GKP"?r[C.sv]:(r[C.cs]?"&#10003;":"")}</td>
+      <td class="num">${r[C.b]||""}</td><td class="num tm">${r[C.bps]}</td></tr>`;
+  }
+  return h+`</table><div class="note">Last ${S.log.length} match${
+    S.log.length>1?"es":""} of ${STATS.season}.</div></div>`;
+}
+// The feed names players the way the site does - "Watkins (AVL): ..." - so
+// a card finds its own items by scanning the text for his name on word
+// boundaries. Where the feed tags a club straight after the name it has to
+// be his club, which is what separates two players sharing a web name.
+function pkNorm(s){return (s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
+function pkEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");}
+// Managers are named in the feed too, and a manager and a player can be
+// the same word: "Justin 43" in a scoreline is not news about a full back
+// of that name. Where they collide the club tag has to be there and has
+// to be his, which is how the feed writes a real item about him.
+function pkMgrNames(){
+  const out=[];
+  for(const k in MGRS)for(const v of MGRS[k])out.push(pkNorm(v));
+  if(WK&&WK.managers)for(const m of WK.managers)out.push(pkNorm(m.name),pkNorm(m.team));
+  return out;
+}
+function newsFor(P,S){
+  if(!NEWSDATA||!NEWSDATA.events)return [];
+  const mgr=pkMgrNames(),names=[];
+  for(const n of [P&&P.name,S&&S.name,S&&S.full]){
+    const v=pkNorm(n);
+    // two letters is not enough to pick anyone out of free text
+    if(v.length>2&&names.indexOf(v)<0)names.push(v);
+  }
+  if(!names.length)return [];
+  const tid=(P&&P.team)!=null?P.team:(S&&S.team);
+  const tm=STATS&&STATS.teams&&STATS.teams[tid];
+  const cl=tm?pkNorm(tm[0]):null;
+  const res=names.map(n=>({
+    re:new RegExp("(^|[^a-z0-9])"+pkEsc(n)+"(?![a-z0-9])"),
+    needsClub:cl&&mgr.indexOf(n)>=0}));
+  return NEWSDATA.events.filter(e=>{
+    const txt=pkNorm(e.text);
+    for(const r of res){
+      const m=r.re.exec(txt);
+      if(!m)continue;
+      const tag=txt.slice(m.index+m[0].length).match(/^\s*\(([a-z]{3})\)/);
+      if(tag&&cl&&tag[1]!==cl)continue;
+      if(r.needsClub&&!tag)continue;
+      return true;
+    }
+    return false;
+  });
+}
+function newsHTML(name,P,S){
+  let h=`<div class="card"><b class="h">Recent news</b>`;
+  if(!NEWSDATA)return h+`<div class="pkempty">Loading the feed&hellip;</div></div>`;
+  const evs=newsFor(P,S);
+  if(!evs.length)return h+`<div class="pkempty">Nothing in the feed mentions
+    ${name}.</div></div>`;
+  for(const e of evs.slice(0,12)){
+    const tag=`<span class="badge b-${e.type}">${e.type.toUpperCase()}</span>`;
+    h+=`<div class="ev">${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${tag}</a>`:tag}
+      <span style="flex:1">${e.text}</span>
+      <span class="when">${(e.ts||"").slice(5,10)}</span></div>`;
+  }
+  return h+`</div>`;
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
+  document.querySelectorAll("section").forEach(x=>x.classList.remove("on"));
+  t.classList.add("on");document.getElementById(t.dataset.v).classList.add("on");
+}));
+
+/* ---------------- Live tab ----------------
+   Polls the worker (live/worker.js) for one bundled snapshot of the
+   gameweek and does the arithmetic here: points, provisional bonus and
+   provisional subs, under the same rules weekly.py applies, so this tab
+   and the cron's League tab agree once a gameweek settles. */
+let LIVE=null,LIVEERR=null,LIVEOPEN=null,LIVETIMER=null,LIVEAUTO=false,LIVECTX=null;
+const DEFRULES={play:11,min_GKP:1,max_GKP:1,min_DEF:3,max_DEF:5,min_MID:2,max_MID:5,min_FWD:1,max_FWD:3};
+// FPL bonus: 3/2/1 on bps; a tie shares the higher award and swallows the
+// places below it. Only counts until the official bonus is in the feed.
+function provBonus(f){
+  const out={};
+  if(!f.started||f.bonus_in)return out;
+  const s=f.bps.filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
+  let i=0;
+  while(i<s.length&&i<3){
+    const v=s[i][1],grp=s.filter(x=>x[1]===v),pts=[3,2,1][i];
+    grp.forEach(x=>out[x[0]]=pts);i+=grp.length;
+  }
+  return out;
+}
+function applySubs(squad,R){            // mirror of weekly.apply_subs
+  const start=squad.filter(p=>p.slot<=R.play),bench=squad.filter(p=>p.slot>R.play);
+  let counts={};start.forEach(p=>counts[p.pos]=(counts[p.pos]||0)+1);
+  const breach=c=>["GKP","DEF","MID","FWD"].reduce((a,k)=>
+    a+Math.max(0,R["min_"+k]-(c[k]||0))+Math.max(0,(c[k]||0)-R["max_"+k]),0);
+  const used=new Set();
+  for(const gone of start.filter(p=>p.settled&&!p.played)){
+    for(const c of bench){
+      if(used.has(c.id)||!c.played)continue;
+      if((gone.pos==="GKP")!==(c.pos==="GKP"))continue;   // keepers only for keepers
+      const t={...counts};t[gone.pos]=(t[gone.pos]||0)-1;t[c.pos]=(t[c.pos]||0)+1;
+      if(breach(t)>breach(counts))continue;
+      gone.subbed_out=true;c.subbed_in=true;used.add(c.id);counts=t;break;
+    }
+  }
+}
+function liveTable(S){
+  const R={...DEFRULES};
+  for(const k in (S.rules||{}))if(Number.isInteger(S.rules[k]))R[k]=S.rules[k];
+  const teamFx={};
+  S.fixtures.forEach(f=>{(teamFx[f.h]=teamFx[f.h]||[]).push(f);(teamFx[f.a]=teamFx[f.a]||[]).push(f);});
+  const bonus={};
+  S.fixtures.forEach(f=>{const b=provBonus(f);for(const k in b)bonus[k]=(bonus[k]||0)+b[k];});
+  // a club with no fixture has nothing to come, so it counts as settled;
+  // a club with one match done and one to play (double) does not
+  const settled=t=>{const fs=teamFx[t]||[];return !fs.length||fs.every(f=>f.fin);};
+  const playing=t=>(teamFx[t]||[]).some(f=>f.started&&!f.fin);
+  const mgrs=S.managers.map(m=>{
+    const squad=m.picks.map(([id,slot])=>{
+      const e=S.elements[id]||{n:String(id),t:null,p:"MID",pts:0,min:0,bps:0,fx:[]};
+      const pb=bonus[id]||0;
+      return {id,slot,name:e.n,pos:e.p,tid:e.t,team:S.teams[e.t]||"?",pts:e.pts+pb,pb,
+        mins:e.min,played:e.min>0,settled:settled(e.t),to_play:!settled(e.t),
+        playing:playing(e.t),subbed_in:false,subbed_out:false};
+    }).sort((a,b)=>a.slot-b.slot);
+    applySubs(squad,R);
+    const counting=squad.filter(p=>(p.slot<=R.play&&!p.subbed_out)||p.subbed_in);
+    const togo=counting.filter(p=>p.to_play);
+    return {...m,squad,counting,mine:m.entry===372099,
+      live:counting.reduce((a,p)=>a+p.pts,0),
+      bench:squad.filter(p=>!counting.includes(p)).reduce((a,p)=>a+p.pts,0),
+      to_play:togo.length,played:counting.length-togo.length,
+      inplay:counting.filter(p=>p.playing).length,
+      subs:squad.filter(p=>p.subbed_in).length};
+  });
+  mgrs.sort((a,b)=>b.live-a.live||(a.rank??99)-(b.rank??99));
+  const inplay=S.fixtures.filter(f=>f.started&&!f.fin);
+  const next=S.fixtures.filter(f=>!f.started).map(f=>f.ko).sort()[0]||null;
+  return {mgrs,teamFx,inplay,next,allDone:S.fixtures.length>0&&S.fixtures.every(f=>f.fin)};
+}
+function koText(iso){
+  const d=new Date(iso);
+  return d.toLocaleDateString("en-GB",{weekday:"short"})+" "+
+         d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+}
+function fxState(f){
+  return f.fin?`<span class="fxmin ft">FT</span>`:
+         f.started?`<span class="fxmin">${f.min||0}'</span>`:
+         `<span class="fxmin ko">${koText(f.ko)}</span>`;
+}
+function pState(p,ctx){
+  const fs=ctx.teamFx[p.tid]||[];
+  if(!fs.length)return `<span class="tm">blank</span>`;
+  if(p.playing)return p.mins?`<span class="fxmin">${p.mins}'</span>`:`<span class="tm">on bench</span>`;
+  if(p.settled)return p.mins?`${p.mins}'`:`<span class="tm">did not play</span>`;
+  const f=fs.find(x=>!x.started);
+  return `<span class="togo">${f?koText(f.ko):"to play"}</span>`;
+}
+function liveManagerHTML(m,ctx){
+  const cell=p=>{
+    const mark=p.subbed_in?`<span class="subin">IN</span> `:p.subbed_out?`<span class="subout">OUT</span> `:"";
+    return `<tr><td>${mark}${nm(p)} <span class="tm">${p.team}</span></td>
+      <td><span class="pos ${p.pos}">${p.pos}</span></td>
+      <td class="num">${pState(p,ctx)}</td>
+      <td class="num ${p.playing?"live":""}">${p.pts}${p.pb?` <span class="provb">+${p.pb}b</span>`:""}</td></tr>`;
+  };
+  const xi=m.squad.filter(p=>m.counting.includes(p)),bn=m.squad.filter(p=>!m.counting.includes(p));
+  return `<div class="det"><table>
+    <tr><th>${m.name}'s XI</th><th></th><th class="num">played</th><th class="num">pts</th></tr>
+    ${xi.map(cell).join("")}
+    <tr class="benchsep"><td colspan="4">Bench · ${m.bench} pts</td></tr>
+    ${bn.map(cell).join("")}</table>
+    <div class="note">${m.played} played, ${m.to_play} to come${m.inplay?`, ${m.inplay} on the pitch now`:""}${
+      m.subs?` · ${m.subs} provisional sub${m.subs>1?"s":""}`:""}.
+      An amber +b is provisional bonus from the bps table; it becomes real when FPL posts it.</div></div>`;
+}
+// Before the deadline the worker still reports the finished gameweek:
+// FPL keeps the coming week's line-ups hidden until the deadline passes,
+// so there is nothing to score yet. What IS known is the fixture list
+// and who owns whom, so the tab previews the coming gameweek from the
+// cron's data - each fixture with the league's players in it, and each
+// manager's count of players with a game - and hands over to the live
+// feed the moment the deadline passes and the worker rolls forward.
+const FIX_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/fixtures_2627.json";
+let FIXTURES=null,FIXREQ=false;
+function ensureFixtures(){
+  if(FIXREQ)return;FIXREQ=true;
+  fetch(FIX_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+    .then(j=>{FIXTURES=j;renderLive();}).catch(()=>{});
+}
+function previewGW(){
+  if(!LIVE||!LIVE.finished||!DATA)return 0;
+  const g=NEXT+1;return g>LIVE.gw?g:0;
+}
+function livePreviewHTML(g){
+  const S=LIVE,ps=DATA.players;
+  const fx=(FIXTURES||[]).filter(f=>f.event===g&&f.kickoff_time).sort((a,b)=>a.kickoff_time<b.kickoff_time?-1:1);
+  const playing=new Set();fx.forEach(f=>{playing.add(f.team_h);playing.add(f.team_a);});
+  const dl=(STARTERS&&STARTERS.gw===g&&STARTERS.deadline)||null;
+  const first=fx.length?fx[0].kickoff_time:null;
+  const own={};ps.forEach(p=>{if(p.owner)(own[p.owner]=own[p.owner]||[]).push(p);});
+  const mgrs=[...S.managers].sort((a,b)=>(b.total??0)-(a.total??0));
+  let h=`<div class="card scorecard"><b class="h">Gameweek ${g} · preview</b>
+    <div class="lvstatus">GW${S.gw} is final${dl?` · <b>deadline ${koText(dl)}</b>`:""}${first?` · first kick-off ${koText(first)}`:""} · line-ups are hidden until the deadline, then this tab scores live</div>
+    <table class="lv"><tr><th></th><th>manager</th><th class="num">with a game</th><th class="num">season</th></tr>`;
+  mgrs.forEach((m,i)=>{
+    const sq=own[m.entry]||[],n=sq.filter(p=>playing.has(p.team)).length;
+    h+=`<tr class="${m.entry===372099?"mine-row":""}"><td class="tm">${i+1}</td><td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
+      <td class="num">${FIXTURES?`${n} <span class="tm">of ${sq.length}</span>`:"…"}</td><td class="num">${m.total??"–"}</td></tr>`;
+  });
+  h+=`</table><div class="note">Squads as of the last refresh, after this week's waivers. Who is expected to start is on the Starters tab; the GW${S.gw} final table is on the League tab.</div></div>`;
+  h+=`<div class="card"><b class="h">Fixtures</b><div class="fxwrap">`;
+  if(!FIXTURES)h+=`<div class="note">Loading the fixture list…</div>`;
+  for(const f of fx){
+    const chips=ps.filter(p=>p.owner&&(p.team===f.team_h||p.team===f.team_a))
+      .map(p=>({p,who:(MGRS[p.owner]||[])[1]||p.owner,mine:p.mine}))
+      .sort((a,b)=>N5(b.p)-N5(a.p)||a.p.name.localeCompare(b.p.name));
+    h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.team_h]||f.team_h}</span> v <span class="tm">${S.teams[f.team_a]||f.team_a}</span></span><span class="fxmin ko">${koText(f.kickoff_time)}</span></div>
+      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} <span class="who">· ${c.who}</span></span>`).join(""):
+        `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
+  }
+  h+=`</div></div>`;
+  return h;
+}
+function renderLive(){
+  const sec=document.getElementById("live");
+  let h="";
+  const pg=previewGW();
+  if(pg){
+    if(!FIXTURES)ensureFixtures();
+    sec.innerHTML=livePreviewHTML(pg);return;
+  }
+  if(!LIVE){
+    h+=`<div class="card"><b class="h">Live scores</b><div class="note">${
+      LIVE_URL?(LIVEERR?`Cannot reach the live worker (${LIVEERR}). Retrying.`:`Connecting to the live feed…`):
+      `Not switched on yet. Deploy <code>live/worker.js</code> to Cloudflare (free, five
+       minutes, steps in <code>live/README.md</code>) and paste its URL into
+       <code>LIVE_URL</code> at the top of this page's script.`}</div>`;
+    if(WK&&WK.managers){
+      const st=[...WK.managers].sort((a,b)=>b.live-a.live);
+      h+=`<div class="note">Last cron snapshot, ${WK.generated?WK.generated.replace("T"," "):"?"} UTC, GW${WK.gw}:</div>
+        <table><tr><th>manager</th><th class="num">GW</th><th class="num">to play</th><th class="num">season</th></tr>`;
+      for(const m of st)h+=`<tr class="${m.mine?"mine-row":""}"><td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span></td>
+        <td class="num">${m.live}</td><td class="num">${m.to_play}</td><td class="num">${m.total??"–"}</td></tr>`;
+      h+=`</table>`;
+    }
+    h+=`</div>`;sec.innerHTML=h;return;
+  }
+  const S=LIVE,ctx=liveTable(S);LIVECTX=ctx;
+  const upd=(S.fetched||"").slice(11,19);
+  const status=ctx.inplay.length?`<span class="livedot"></span><b>LIVE</b> · ${ctx.inplay.length} match${ctx.inplay.length>1?"es":""} in play`:
+    ctx.allDone?`GW${S.gw} ${S.finished?"final":"all played, awaiting bonus and processing"}`:
+    ctx.next?`Next kick-off ${koText(ctx.next)}`:`GW${S.gw}`;
+  h+=`<div class="card scorecard"><b class="h">Gameweek ${S.gw}</b>
+    <div class="lvstatus">${status} · feed ${upd} UTC · ${pollText()}${LIVEERR?` · <span class="stale">worker unreachable, showing last good feed</span>`:""}</div>
+    <table class="lv"><tr><th></th><th>manager</th><th class="num">GW</th><th class="num">on pitch</th>
+    <th class="num">to play</th><th class="num">bench</th><th class="num">season</th></tr>`;
+  ctx.mgrs.forEach((m,i)=>{
+    h+=`<tr class="clk ${m.mine?"mine-row":""}" data-lent="${m.entry}"><td class="tm">${i+1}</td>
+      <td><span class="nm">${m.name}</span> <span class="tm">${m.team}</span> <span class="chev">${LIVEOPEN===m.entry?"▾":"▸"}</span></td>
+      <td class="num ${m.inplay?"live":""}">${m.live}</td><td class="num">${m.inplay||""}</td>
+      <td class="num">${m.to_play||""}</td><td class="num"><span class="tm">${m.bench}</span></td>
+      <td class="num">${m.total??"–"}</td></tr>`;
+    if(LIVEOPEN===m.entry)h+=`<tr><td colspan="7" style="padding:0 0 6px">${liveManagerHTML(m,ctx)}</td></tr>`;
+  });
+  h+=`</table><div class="note">GW is this week's XI with provisional bonus and provisional subs.
+    Season is the table as FPL has it; it moves when the gameweek is processed.</div></div>`;
+  // fixtures: in play first, then by kick-off, finished last
+  const order=f=>f.started&&!f.fin?0:!f.started?1:2;
+  const fxs=[...S.fixtures].sort((a,b)=>order(a)-order(b)||(a.ko<b.ko?-1:a.ko>b.ko?1:0));
+  h+=`<div class="card"><b class="h">Fixtures</b><div class="fxwrap">`;
+  for(const f of fxs){
+    const chips=[];
+    for(const m of ctx.mgrs)for(const p of m.counting)if(p.tid===f.h||p.tid===f.a)
+      chips.push({p,who:m.name,mine:m.mine});
+    chips.sort((a,b)=>b.p.pts-a.p.pts||a.p.name.localeCompare(b.p.name));
+    const sc=f.started?`${f.hs??0} - ${f.as??0}`:"v";
+    h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.h]||f.h}</span> ${sc} <span class="tm">${S.teams[f.a]||f.a}</span></span>${fxState(f)}</div>
+      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} ${
+        f.started?c.p.pts:""}${c.p.pb?`<span class="provb">+${c.p.pb}</span>`:""} <span class="who">· ${c.who}</span></span>`).join(""):
+        `<span class="tm" style="font-size:11px">no one in the league has a starter here</span>`}</div></div>`;
+  }
+  h+=`</div></div>`;
+  sec.innerHTML=h;
+  sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
+    const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
+}
+// When to poll next, in ms; null = not at all. In play: as fast as the
+// worker's cache allows (15s once the deployed worker says ttl 15).
+// Otherwise sleep until the next kick-off, plus 45s for FPL to flip the
+// match to started, retrying each minute if it is late. Gameweek over:
+// stop; a reload or the tab coming back into view polls again.
+function liveDelay(){
+  if(!LIVE||!LIVECTX)return 60e3;
+  if(LIVECTX.inplay.length)return Math.max(15,LIVE.ttl||30)*1000;
+  if(!LIVECTX.next)return null;
+  const ms=new Date(LIVECTX.next)-Date.now()+45e3;
+  return Math.min(6*3600e3,Math.max(60e3,ms));
+}
+function pollText(){
+  const d=liveDelay();
+  if(d==null)return "not polling until the next gameweek";
+  if(LIVECTX&&LIVECTX.inplay.length)return `polling every ${d/1000}s`;
+  if(d>=120e3)return `sleeping until ${koText(new Date(Date.now()+d).toISOString())}`;
+  return "checking every minute";
+}
+async function pollLive(){
+  clearTimeout(LIVETIMER);
+  if(!LIVE_URL){renderLive();return;}
+  if(!LIVE)renderLive();                                   // "connecting" until the first answer
+  try{
+    const ab=new AbortController();const to=setTimeout(()=>ab.abort(new Error("no answer in 10s")),10000);
+    const r=await fetch(LIVE_URL,{cache:"no-store",signal:ab.signal}).finally(()=>clearTimeout(to));
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    const j=await r.json();
+    if(j.error)throw new Error(j.error);
+    LIVE=j;LIVEERR=null;
+  }catch(e){LIVEERR=String(e.message||e);}
+  renderLive();
+  if(LIVE&&LIVECTX&&LIVECTX.inplay.length&&!LIVEAUTO){LIVEAUTO=true;document.getElementById("livetab").click();}
+  const d=liveDelay();
+  if(d!=null&&!document.hidden)LIVETIMER=setTimeout(pollLive,d);
+}
+document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(LIVETIMER);else pollLive();});
+pollLive();
+fetch(RAW_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{j._src="live from GitHub";DATA=j;render();drawCard();})
+  .catch(()=>{FALLBACK._src="embedded snapshot (push the repo for daily updates)";
+    DATA=FALLBACK;render();drawCard();});
+</script>
+</body></html>
