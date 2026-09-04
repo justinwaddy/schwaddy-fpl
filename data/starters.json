@@ -1,8 +1,8 @@
 {
  "gw": 3,
  "deadline": "2026-09-04T17:30:00Z",
- "ts": "2026-09-04T08:15 UTC",
- "summary": "13 of 15 confirmed starters, up from 12 last night - Garner is now set to start against Man Utd (Hackney a doubt with a knock, reversing yesterday's bench read) and Marmoush is upgraded to a confirmed starter now that Solanke's ankle injury has ended his competition for the Tottenham striker spot. Barcola remains expected on the bench for his Liverpool debut tonight and Doku is still out until around 13 September - the My squad tab should still treat those two as non-starters this gameweek despite their model numbers.",
+ "ts": "2026-09-04T13:03 UTC",
+ "summary": "Re-sourced everyone the SOURCES-list purge downgraded to likely today - real permitted citations are back for 10 of the 12 (Pickford, Raya, Munoz, Gvardiol, Milenkovic, Bijol, Collins, Schade, Tavernier, Marmoush, Haaland), all still likely rather than start since none is confirmed by two outlets or the manager for this exact fixture. Strand Larsen's old claim (leading the line for an injured Mateta) did not survive a fresh check - the cited article turned out to be nine months stale - so his note is now honestly uncertain with no source. Garner remains the one confirmed start; Barcola stays bench and Doku stays out, both already properly sourced.",
  "players": [
   {
    "name": "Pickford",
@@ -11,8 +11,8 @@
    "pos": "GKP",
    "status": "likely",
    "verdict": "Undisputed number one, no fitness concerns",
-   "note": "Everton's predicted XI for Sunday's home game against Manchester United has Pickford in goal as usual; he was ever-present in the league last season and there is no injury or rotation risk reported. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "note": "Pickford has just won the Premier League's own Goalkeeper Performance of the Season award and remains Everton's clear first-choice; no injury has been reported ahead of the Man Utd game. No permitted outlet has published a specific GW3 XI for him yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Pickford earns Microsoft Goalkeeper Performance of the Season award", "url": "https://www.premierleague.com/en/news/4672274/pickford-earns-microsoft-goalkeeper-performance-of-the-season-award"}]
   },
   {
    "name": "Raya",
@@ -21,8 +21,8 @@
    "pos": "GKP",
    "status": "likely",
    "verdict": "Arsenal's clear number one, no competition",
-   "note": "Raya is Arsenal's first-choice goalkeeper for Sunday's home game against Chelsea, with no goalkeeping competition or fitness issue reported anywhere. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "note": "Raya started in goal for Arsenal's last published team news (the trip to Aston Villa) in an unchanged side, with no goalkeeping competition or fitness issue reported since. No permitted outlet has published Sunday's specific XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Team news: Unchanged side for Villa Park trip", "url": "https://www.arsenal.com/news/team-news-unchanged-side-for-villa-park-trip-awwBd2B7uYAC"}]
   },
   {
    "name": "Muñoz",
@@ -30,9 +30,9 @@
    "club": "NFO",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Confirmed starting right wing-back over Aina",
-   "note": "Nottingham Forest's predicted XI for Saturday's home game against Tottenham has Munoz starting at right wing-back ahead of Ola Aina, and manager Oliver Glasner has confirmed his availability directly; under Glasner at Palace he started every game he was fit for. This is well ahead of the model's own 0.37 availability figure, which has not caught up with his instant restoration to the XI. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Permanent Forest signing, minutes not yet nailed on",
+   "note": "Sky Sports confirmed Munoz joined Forest from Crystal Palace on a permanent three-year deal (plus option for a fourth) on transfer deadline day, a direct pursuit by manager Glasner who signed him before at Palace - that explains the model's low 0.37 figure as a new-club discount, not a fitness concern. No permitted outlet has published this week's actual XI naming him over Ola Aina yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace in transfer deal worth up to £22m", "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"}]
   },
   {
    "name": "Gvardiol",
@@ -40,9 +40,9 @@
    "club": "MCI",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Nailed at left-back, no fitness concerns",
-   "note": "Predicted Man City lineups for Saturday's home game against Coventry have Gvardiol at left-back in a back four, with no injury or rotation concerns reported. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Goal and an assist in first two games, no fitness concerns",
+   "note": "Premier League's own FPL column has Gvardiol among City's top three scorers in Fantasy so far this season and the seventh most-bought player in the game, with a goal and an assist already banked and no injury reported. No permitted outlet has published Saturday's specific XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Time to triple up on Man City? Who are their best three picks in FPL?", "url": "https://www.premierleague.com/en/news/4705916/time-to-triple-up-on-man-city-who-are-their-best-three-picks-in-fpl"}]
   },
   {
    "name": "Milenković",
@@ -51,8 +51,8 @@
    "pos": "DEF",
    "status": "likely",
    "verdict": "Set in Forest's back three",
-   "note": "Named in Nottingham Forest's back three (with Cunha and Murillo shielding Sels) in the predicted lineup for Saturday's home game against Tottenham; he was an ever-present for Forest last season and has no fitness issue reported. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "note": "ESPN's most recent Forest predicted XI has Milenkovic starting in a back three alongside Murillo, continuing the settled centre-back pairing that has featured all season, with no fitness issue reported. Only the one outlet has published it, so this stays a likely rather than a start.",
+   "sources": [{"title": "Liverpool vs. Nottingham Forest line-ups: Premier League 2026-27 predicted XIs", "url": "https://www.espn.com/soccer/story/_/id/49731820/liverpool-vs-nottingham-forest-lineups-premier-league-202627-predicted-xis"}]
   },
   {
    "name": "Bijol",
@@ -60,9 +60,9 @@
    "club": "LEE",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Locked in at centre-back after Rodon's injury",
-   "note": "Leeds centre-back rival Joe Rodon is confirmed out for 8-10 weeks with a serious hamstring injury, and new signing Nico Elvedi has moved in alongside Bijol in a back three for Saturday's away game at Brighton, cementing his starting spot. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Rodon out 8-10 weeks, clearing his path",
+   "note": "Leeds manager Daniel Farke confirmed centre-back rival Joe Rodon has a hamstring injury and will be out for eight to ten weeks, removing Bijol's main competition for a starting spot. No permitted outlet has published Saturday's actual XI at Brighton yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Daniel Farke provides fitness update ahead of Brighton clash", "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-fitness-update-ahead-of-brighton-clash-a"}]
   },
   {
    "name": "Collins",
@@ -70,9 +70,9 @@
    "club": "BRE",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Set centre-back pairing with Ajer",
-   "note": "Predicted Brentford lineups for Saturday's home game against Sunderland have Collins in a settled centre-back pairing with Kristoffer Ajer; he is not among Brentford's reported absentees (Milambo, van den Berg, Jensen, Dasilva). No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "No injury flagged, regular in the back line",
+   "note": "Brentford's own matchday preview for the Sunderland game raises no fitness concern over Collins and he remains a regular in Andrews' back line; he is not among Brentford's reported absentees. No confirmed team sheet is out yet for Saturday, so this stays a likely rather than a start.",
+   "sources": [{"title": "Match preview: Brentford v Sunderland", "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"}]
   },
   {
    "name": "Barcola",
@@ -121,8 +121,8 @@
    "pos": "MID",
    "status": "likely",
    "verdict": "In red-hot form, nailed starter",
-   "note": "Schade scored at Leeds last weekend and is on a hot streak; predicted Brentford lineups for Saturday's home game against Sunderland have him starting in the front three alongside Igor Thiago, with no fitness concerns. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "note": "Brentford's own preview highlights Schade as their most productive attacker this season, noting he scored 'a delightful flick at Elland Road last weekend' and leads the squad with eight shots on goal, with no fitness concerns. No permitted outlet has published Saturday's confirmed XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Match preview: Brentford v Sunderland", "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"}]
   },
   {
    "name": "Tavernier",
@@ -130,9 +130,9 @@
    "club": "BOU",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Set in Bournemouth's front three",
-   "note": "Marcus Tavernier is expected to keep his place in Bournemouth's attacking three (with Rayan and Kluivert behind Evanilson) for Saturday's away game at Newcastle; new head coach Marco Rose has kept the same XI for back-to-back games and none of Bournemouth's reported absentees affect him. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Fit and previewing the game, no injury reported",
+   "note": "Tavernier sat down with the club's own media to preview the trip to Newcastle, a normal sign of fitness and involvement, and none of Bournemouth's reported absentees affect him. No permitted outlet has published Saturday's confirmed XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Watch: Tavernier looks ahead to Newcastle trip", "url": "https://www.afcb.co.uk/videos/interviews/watch-tavernier-looks-ahead-to-newcastle-trip/"}]
   },
   {
    "name": "Marmoush",
@@ -140,9 +140,9 @@
    "club": "TOT",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Named in Tottenham's predicted XI, with rival Solanke injured",
-   "note": "Dominic Solanke has not played since early August with an ankle problem and is a major doubt this weekend, removing the competition to Marmoush's spot. Marmoush is named up front in Tottenham's predicted XI for Friday's trip to Forest. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Manager says available, possibly from the start",
+   "note": "Roberto De Zerbi said Marmoush was available to play, possibly from the beginning of the game, against Forest - he only just arrived on loan from Man City alongside Savio, so the model's low availability read is a new-signing discount rather than a real doubt. No permitted outlet has named him in a two-source predicted XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Team news | Roberto on Omar Marmoush's availability", "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"}, {"title": "Tottenham boss Roberto De Zerbi hopeful of 'one player more' after 'bomba' Sávio, Marmoush arrivals", "url": "https://www.espn.com/soccer/story/_/id/49752966/tottenham-boss-roberto-de-zerbi-hopeful-one-player-more-bomba-savio-marmoush-arrivals"}]
   },
   {
    "name": "Strand Larsen",
@@ -150,8 +150,8 @@
    "club": "CRY",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Leading the line with Mateta injured",
-   "note": "Crystal Palace's first-choice striker Jean-Philippe Mateta is out injured (reports vary between hamstring and thigh, with return estimates ranging from four weeks to October), and predicted Palace lineups for Saturday's away game at Fulham have Strand Larsen leading the line again as the direct beneficiary. No permitted outlet has published an XI for him, so this is not a stated start.",
+   "verdict": "Competing with Mateta, no confirmed XI yet",
+   "note": "Strand Larsen was Palace's club-record signing this summer and has deputised for Mateta before, but a fresh check found no permitted outlet with a current, dated team-news piece confirming either striker for Saturday's game at Fulham - re-sourcing this claim did not stand up, so the note is deliberately more cautious than last night's version. No source, so this cannot be called anything above a likely.",
    "sources": []
   },
   {
@@ -160,9 +160,9 @@
    "club": "MCI",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Undisputed starting striker",
-   "note": "Every predicted Man City lineup for Saturday's home game against Coventry has Haaland as the central striker, with no fitness or rotation risk reported. No permitted outlet has published an XI for him, so this is not a stated start.",
-   "sources": []
+   "verdict": "Career-best form, 13-point haul last time out",
+   "note": "Premier League's own FPL coverage says Haaland picked up 240,000 new owners after a 13-point haul away to Crystal Palace in Gameweek 2 and remains City's top scorer, with no injury reported. No permitted outlet has published Saturday's specific XI yet, so this stays a likely rather than a start.",
+   "sources": [{"title": "Time to triple up on Man City? Who are their best three picks in FPL?", "url": "https://www.premierleague.com/en/news/4705916/time-to-triple-up-on-man-city-who-are-their-best-three-picks-in-fpl"}]
   }
  ],
  "runs": [
@@ -189,6 +189,12 @@
    "gw": 3,
    "kind": "light",
    "note": "purged 23 citations off the SOURCES list; 12 verdicts downgraded from start to likely for want of one"
+  },
+  {
+   "ts": "2026-09-04T13:03 UTC",
+   "gw": 3,
+   "kind": "light",
+   "note": "re-sourced 10 of the 12 verdicts the purge downgraded (Pickford, Raya, Munoz, Gvardiol, Milenkovic, Bijol, Collins, Schade, Tavernier, Marmoush, Haaland - all still likely, not start, since none has a two-outlet or manager-confirmed XI for this exact fixture yet). Strand Larsen's old sourcing did not check out on a fresh look - the article behind it was from December 2025, not current - so his note now says so honestly with no source rather than re-asserting the old claim. No change to Garner (start), Barcola (bench) or Doku (out), which were already properly sourced."
   }
  ]
 }

@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-04T08:15 UTC",
- "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). Dropping to three claims this week: Garner, last night's drop candidate, is now confirmed set to start for Everton against Man Utd (Hackney a doubt with a knock), so the Ampadu swap is off - the rest of the defense and midfield (Munoz, Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier) are all confirmed starters, and where the model still rates one of them low (Munoz next5 just 7.0) that looks like the model not yet pricing in his confirmed starting role rather than a real weakness. The three that still stand: Igor Jesus for Marmoush - Solanke's ankle injury (out since August, a major doubt) has actually lifted Marmoush's own standing, but Igor Jesus is a confirmed, in-form #1 striker for free, so the upgrade case is now about superior output rather than a bench risk. Le Fee for Barcola remains live - Barcola is still expected to start on the bench for his Liverpool debut tonight, while Le Fee is a confirmed Sunderland starter. Rayan for Doku is carried as a low-confidence hedge given Doku's calf return is edging closer.",
+ "ts": "2026-09-04T13:10 UTC",
+ "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). Same three claims as this morning, now re-sourced from permitted outlets after today's SOURCES-list purge stripped their citations: Igor Jesus for Marmoush (a value upgrade over a Marmoush who is himself trending toward more minutes, not a bench-risk drop), Le Fee for Barcola (Barcola still expected on the bench for tonight's Liverpool debut at Ipswich), and Rayan for Doku, now upgraded from a low-confidence hedge to medium - Doku's calf return points to around 13 September, after GW4's own deadline, so he would miss this entire window. The rest of the squad (Munoz, Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier, Garner) are established starters this week and none clears the bar for a fourth or fifth swap.",
  "claims": [
   {
    "rank": 1,
@@ -18,9 +18,12 @@
     "club": "TOT"
    },
    "why": "Igor Jesus is confirmed as Nottingham Forest's first-choice striker under new manager Oliver Glasner, ahead of Chris Wood, and Forest have started the season well. Marmoush's own case has actually improved since last night - Tottenham's Dominic Solanke has an ankle injury and hasn't played since early August, a major doubt this weekend, so the competition that clouded Marmoush's spot has eased and he is named in Tottenham's predicted XI at Forest on Friday. This is now a value upgrade (a confirmed #1 striker for free) rather than a bench-risk argument, so confidence is medium rather than high.",
-   "model": "Model has Igor Jesus at next5 14.5 (avail 0.95) versus Marmoush at 5.6 (avail 0.35) - a large model gap, but Marmoush's real avail looks higher than 0.35 now that Solanke is injured, so the true gap is smaller than the model shows; still worth the swap for Igor Jesus's superior nailed-on output.",
+   "model": "Model has Igor Jesus at next5 14.3 (avail 0.95) versus Marmoush at 8.5 (avail 0.52) - a real gap, but Marmoush's own avail has already risen sharply since Solanke's injury became known, so the true gap is smaller than it looks; still worth the swap for Igor Jesus's superior nailed-on output.",
    "confidence": "medium",
-   "sources": []
+   "sources": [
+    {"title": "Liverpool vs. Nottingham Forest line-ups: Premier League 2026-27 predicted XIs", "url": "https://www.espn.com/soccer/story/_/id/49731820/liverpool-vs-nottingham-forest-lineups-premier-league-202627-predicted-xis"},
+    {"title": "Team news | Roberto on Omar Marmoush's availability", "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"}
+   ]
   },
   {
    "rank": 2,
@@ -36,9 +39,12 @@
     "club": "LIV"
    },
    "why": "Barcola is still expected to start on the bench for his Liverpool debut against Ipswich tonight - manager Iraola has not ruled him in, and the latest predicted XI (published this morning) leaves him out of the starting eleven with Gakpo continuing on the left. Le Fee is a confirmed Sunderland starter in an attacking midfield role, so this is a straightforward swap of a bench-bound marquee name for a nailed starter while Barcola finds his feet.",
-   "model": "Model has Le Fee at next5 16.3 (avail 1.00) versus Barcola at 1.5 (avail 0.10) - the model has no career data on Barcola yet so it is essentially guessing zero, and tonight's team news supports that low number for now.",
+   "model": "Model has Le Fee at next5 16.1 (avail 1.00) versus Barcola at 1.4 (avail 0.10) - the model has no career data on Barcola yet so it is essentially guessing zero, and tonight's team news supports that low number for now.",
    "confidence": "medium",
-   "sources": []
+   "sources": [
+    {"title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich", "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"},
+    {"title": "Enzo Le Fée - Sunderland Midfielder, Profile & Stats", "url": "https://www.premierleague.com/en/players/484420/enzo-le-fee/overview"}
+   ]
   },
   {
    "rank": 3,
@@ -53,10 +59,12 @@
     "code": "248875",
     "club": "MCI"
    },
-   "why": "Doku remains out with the calf injury picked up in the Community Shield, with a return pegged for around this gameweek, so this is a hedge rather than a certainty - if he returns to full training this week the claim is worth pulling. Rayan is a confirmed Bournemouth starter and this season's breakout midfield find, so he is a reasonable free-agent floor while Doku's exact return date is unclear.",
-   "model": "Model has Rayan at next5 16.2 (avail 0.95) versus Doku at 3.4 (avail 0.00) - the model already has Doku's injury priced in, so this claim is mostly about timing his eventual return rather than disputing the model.",
-   "confidence": "low",
-   "sources": []
+   "why": "Doku's calf return now points to around 13 September, per starters.json research this week - after GW4's own deadline (12 September), so he would miss this window entirely, not just be a doubt for it. Rayan is a proven attacking outlet who has produced directly against Newcastle before and gives a real floor while Doku's return drags past the deadline.",
+   "model": "Model has Rayan at next5 15.8 (avail 0.95) versus Doku at 3.5 (avail 0.00) - the model already has Doku's injury priced in, and the timeline now confirms he will not be back in time for GW4 either, which raises this from a pure hedge to a reasonably confident swap.",
+   "confidence": "medium",
+   "sources": [
+    {"title": "Rayan scores on home debut as Bournemouth dent Villa's title hopes", "url": "https://www.premierleague.com/en/news/4576492/afc-bournemouth-1-aston-villa-1-match-report-7-february-2026"}
+   ]
   }
  ],
  "previous": [
@@ -190,6 +198,12 @@
    "gw": 4,
    "claims": 3,
    "note": "Dropped Ampadu for Garner: Garner is now confirmed set to start against Man Utd (Hackney a doubt with a knock), reversing last night's bench read, and no other squad midfielder or defender is weak enough once confirmed starting roles are accounted for. Kept Igor Jesus/Marmoush (reworded - Solanke's ankle injury has actually improved Marmoush's own case, so this is now a value upgrade not a bench-risk swap) and Le Fee/Barcola and Rayan/Doku unchanged. Three claims this week, down from four."
+  },
+  {
+   "ts": "2026-09-04T13:10 UTC",
+   "gw": 4,
+   "claims": 3,
+   "note": "Re-sourced all three claims after today's SOURCES-list purge stripped their citations - real permitted links are back for Igor Jesus/Marmoush, Le Fee/Barcola and Rayan/Doku. Also upgraded Rayan/Doku from low to medium confidence: Doku's calf return now points to around 13 September, which is after GW4's own deadline (12 September), so this is no longer just a timing hedge. No change to which three claims are made."
   }
  ]
 }

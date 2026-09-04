@@ -15,6 +15,22 @@
    "scope": "mine",
    "text": "Reversing the bench read published last night: multiple reports now have Garner set to start for Everton against Manchester United on Sunday, with Hackney a doubt after picking up a knock. Sky Sports says Garner is playing well enough to be linked with an England call-up.",
    "url": "https://www.skysports.com/football/news/11095/13509049/james-garner-everton-midfielder-showing-manchester-united-what-theyre-missing-and-is-now-knocking-on-the-door-for-an-england-call-up"
+  },
+  {
+   "id": "2026-09-04-rodon-injury-clears-bijol",
+   "ts": "2026-09-04T13:10 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Leeds boss Daniel Farke confirmed centre-back rival Joe Rodon has a hamstring injury and will be out for eight to ten weeks, removing Bijol's main competition for a starting spot for the rest of this international window and beyond.",
+   "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-fitness-update-ahead-of-brighton-clash-a"
+  },
+  {
+   "id": "2026-09-04-marmoush-available-forest",
+   "ts": "2026-09-04T13:10 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Tottenham boss Roberto De Zerbi said Marmoush is available to play, possibly from kickoff, against Forest - direct manager confirmation for a player who only just arrived on loan from Man City alongside Savio. The model's availability figure has been rising with the news but is still a step behind what the manager is actually saying.",
+   "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"
   }
  ],
  "runs": [
@@ -77,6 +93,11 @@
    "ts": "2026-09-04T12:30",
    "kind": "sources",
    "note": "dropped 17 of 19 items whose only citation was off the SOURCES list"
+  },
+  {
+   "ts": "2026-09-04T13:10 UTC",
+   "published": 2,
+   "note": "Two items the source purge had removed, republished with permitted citations found this run: Rodon's 8-10 week hamstring injury (clears Bijol's path at Leeds, leedsunited.com) and De Zerbi confirming Marmoush available, possibly from the start, against Forest (tottenhamhotspur.com). Also re-sourced starters.json and claims.json this run - see their own run logs. Nothing else material found in a fresh club-by-club sweep, including a check on Strand Larsen (his old 'leading the line' claim did not survive a fresh look at the source, which turned out to be nine months stale, so not republished)."
   }
  ]
 }
