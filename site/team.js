@@ -507,6 +507,16 @@ function relevantNames() {
     return names.some(nm => low.includes(nm));
   };
 }
+// When the page stops being about the week just gone. Not at the final
+// whistle - a gameweek is worth looking at for a few days after it ends,
+// and the league settles its pint on it - but on the day the next one
+// starts. The League tab and the Live tab share this so they cannot
+// disagree about which gameweek it is.
+function comingUp() {
+  const ko = ((PUB && PUB.fixtures) || [])[0];
+  return !!(ko && ko[2] && (Date.parse(ko[2]) - Date.now()) < 24 * 3600e3
+            && PUB.next_gw > PUB.gw);
+}
 function renderLeague() {
   const sec = $("league");
   if (!PUB) { sec.innerHTML = loading("league"); return; }
@@ -517,8 +527,7 @@ function renderLeague() {
   // opening a manager shows the fifteen he holds rather than the eleven
   // that played six days ago. The live feed takes over at kick-off.
   const ko = ((PUB.fixtures || [])[0] || [])[2];
-  const soon = ko && (Date.parse(ko) - Date.now()) < 24 * 3600e3;
-  const AHEAD = !LV && soon && PUB.next_gw > PUB.gw;
+  const AHEAD = !LV && comingUp();
   const rows = [...(PUB.managers || [])].sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
   const value = m => {
     if (!SHOW_PRICES || !PRICES) return null;
@@ -1265,12 +1274,14 @@ function renderLive() {
   const ix = liveIndex(LIVE);
   const fx = LIVE.fixtures || [];
   const inplay = fx.filter(f => f.started && !f.fin);
-  // once the feed's gameweek is done the tab is about the next one, which
+  // Once the feed's gameweek is done the tab turns to the next one, which
   // only public.json knows about until the deadline rolls the feed
-  // forward. The weekly pot is per gameweek, so it reads zero for
-  // everybody until a ball is kicked - last week's total is last week's.
-  const ahead = fx.length > 0 && fx.every(f => f.fin) &&
-    PUB && PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length > 0;
+  // forward. It waits for the day of the first kick-off though, the same
+  // rule the League tab uses: the week that has just finished is the one
+  // people are still arguing about on the Tuesday, and zeroing the ticker
+  // hours after the last whistle throws that away.
+  const ahead = fx.length > 0 && fx.every(f => f.fin) && comingUp() &&
+    PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length > 0;
   const gwNum = ahead ? PUB.next_gw : LIVE.gw;
   // the ticker is left alone unless its text changes, so the scroll does
   // not jump back to the start every fifteen seconds

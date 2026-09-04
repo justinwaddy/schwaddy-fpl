@@ -422,9 +422,21 @@ moment the breakdown itself names a Bonus row, or the two would be added
 together and every hauling player would read three points high.
 
 Multiple matches mean multiple cards, ordered by how many of the reader's
-own players are in each, so his game is the one at the top. With nothing
-in play the cards are simply absent and a line says when the next kick-off
-is, or that the gameweek is over; the ticker and the fixtures stay.
+own players are in each, so his game is the one at the top.
+
+A card disappears at its own final whistle - it is the live half, and that
+match is no longer live. Everything it was showing survives in the fixture
+list underneath, which flips that row to FT with the score and keeps every
+player's points on it, and in the ticker, which keeps the running weekly
+total. With nothing in play at all the cards are simply absent and a line
+says when the next kick-off is, or that the gameweek is over.
+
+When the week itself is over the tab does not immediately forget it. Both
+this tab and the League table turn to the next gameweek on the day of its
+first kick-off, not at the last whistle - the same rule in one function so
+they cannot disagree - because the week just gone is the one still being
+argued about on the Tuesday, and the pint is settled on it. Until then the
+ticker holds the final standings and the fixture list holds ten FT rows.
 
 These are public URLs on GitHub Pages. Anyone who guesses another
 manager's path can open it, which changes nothing except that they would
