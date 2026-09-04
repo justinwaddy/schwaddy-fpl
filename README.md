@@ -265,15 +265,20 @@ twenty lines that name the manager and load them, so there is one copy of
 the logic. Prices are the one thing that differs: only Ed's page fetches
 data/prices.json, and only Ed's page has the value columns.
 
-### The League tab is the front page
-It opens there, and it is first in the row. The table is the thing the
-league actually argues about, so it should not be two taps away.
+### The News tab opens on the league
+The tab order is News, Live, My squad, League, All players, and News opens
+on its League chip rather than on everything.
 
-Under the table is Player news: every fitness note the game is carrying on
-a player one of the six holds, plus the fifty best players in the game on
-points - a hamstring at the top of the board is a waiver claim whoever
-owns him - and then the feed's own player items, cut to the ones that name
-one of those players. Every name in it opens the card.
+That chip is not only the league's own doings. It also carries every player
+item about somebody one of the six holds, or one of the fifty best players
+in the game on points - a hamstring at the top of the board is a waiver
+claim whoever owns him - so the one view answers "what happened that
+affects us". The Players chip is still everything, ours or not.
+
+Above the feed under that chip is Fitness, right now: every one of those
+players the game currently has a note against. The feed reports changes;
+this is the standing state, which is what anybody actually wants an hour
+before a deadline. Every name in it opens the card.
 
 The names in the News tab are links too. The text is escaped first and the
 names matched against the escaped form, so the linking can never introduce
@@ -284,7 +289,8 @@ becoming a link to Chelsea's Enzo; and a manager's name always wins over a
 player's, because James Justin is a real Leicester defender and "Justin"
 in this feed means the manager, twelve times on one screen.
 
-On the day of the first kick-off the table stops being about last week.
+The League tab itself is the table. On the day of the first kick-off it
+stops being about last week.
 Every gameweek column reads zero, the header says when the first match is,
 and opening a manager shows the fifteen he holds rather than the eleven
 that played six days ago. The live feed takes over at kick-off. The league

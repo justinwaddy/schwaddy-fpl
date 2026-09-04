@@ -492,30 +492,42 @@ function relevant() {
     .slice(0, TOPN).forEach(add);
   return by;
 }
-/* The feed, cut down to items that name one of those players. */
-function playerUpdates() {
-  const rel = relevant();
-  if (!rel.size) return { hurt: [], items: [] };
+/* Does this line of text name one of them? Built once per render. */
+function relevantNames() {
   const names = [];
-  for (const p of rel.values()) {
+  for (const p of relevant().values()) {
     for (const nm of [p.name, p.full]) {
       const k = String(nm || "").trim();
       if (k.length >= 3) names.push(k.toLowerCase());
     }
   }
-  const hits = t => {
+  if (!names.length) return null;
+  return t => {
     const low = String(t || "").toLowerCase();
     return names.some(nm => low.includes(nm));
   };
-  const items = newsFeed()
-    .filter(e => NEWSGROUP[e.kind] === "players" && hits(e.text))
-    .slice(0, 40);
-  // and the game's own availability notes, which are not in the feed at all
-  const hurt = [...rel.values()]
+}
+/* The feed reports changes; this is the standing state. Every one of our
+   players the game currently has a note against, which is the first thing
+   anybody wants before a deadline. */
+function availabilityHTML() {
+  const hurt = [...relevant().values()]
     .filter(p => (p.status && p.status !== "a") || p.news)
     .sort((a, b) => (a.owner == null) - (b.owner == null) ||
       String(a.name).localeCompare(String(b.name)));
-  return { hurt, items };
+  if (!hurt.length) return "";
+  return `<div class="card"><b class="h">Fitness, right now</b>
+    <div class="note">Everyone one of the six holds, plus the fifty best in the game on points.
+    Click a name for his card.</div>
+    <div class="wrap"><table>
+    <tr>${th("player")}<th></th>${ths("owner", ["next", ""])}<th>the game says</th></tr>` +
+    hurt.map(p => `<tr><td>${nameTag(p)}<div class="tm">${esc(club(p))}</div></td>
+      <td><span class="pos ${p.pos}">${p.pos}</span></td>
+      <td class="tm">${esc(mgrName(p.owner) || "free agent")}</td>
+      <td class="run">${esc(p.next || "")}</td>
+      <td><span class="badge b-${p.status && p.status !== "a" ? "injury" : "news"}">${
+        esc(PKSTATUS[p.status] || "note")}</span> ${esc(p.news || "")}</td></tr>`).join("") +
+    `</table></div></div>`;
 }
 function renderLeague() {
   const sec = $("league");
@@ -590,36 +602,6 @@ function renderLeague() {
     }
   });
   h += `</table></div><div class="note">Click a manager for his squad.</div></div>`;
-
-  // Everything happening to the players that matter to this league
-  const up = playerUpdates();
-  h += `<div class="card"><b class="h">Player news</b>
-    <div class="note">Everyone one of the six holds, plus the fifty best in the game on points.
-    Click a name for his card.</div>`;
-  if (up.hurt.length) {
-    h += `<div class="wrap"><table>
-      <tr>${th("player")}<th></th>${ths("owner", ["next", ""])}<th>the game says</th></tr>` +
-      up.hurt.map(p => `<tr><td>${nameTag(p)}<div class="tm">${esc(club(p))}</div></td>
-        <td><span class="pos ${p.pos}">${p.pos}</span></td>
-        <td class="tm">${esc(mgrName(p.owner) || "free agent")}</td>
-        <td class="run">${esc(p.next || "")}</td>
-        <td><span class="badge b-${p.status && p.status !== "a" ? "injury" : "news"}">${
-          esc(PKSTATUS[p.status] || "note")}</span> ${esc(p.news || "")}</td></tr>`).join("") +
-      `</table></div>`;
-  }
-  if (up.items.length) {
-    h += `<div class="feed">` + up.items.map(e =>
-      `<div class="ev"><span class="badge b-${esc(e.kind)}">${esc(String(e.kind).toUpperCase())}</span>
-        <span style="flex:1">${linkPlayers(esc(reword(e.text)))}${
-          e.source && e.source.url ? ` <a href="${esc(e.source.url)}" target="_blank" rel="noopener">${
-            esc(e.source.title || "source")}</a>` : ""}</span>
-        <span class="when">${esc(String(e.ts || "").slice(0, 16).replace("T", " "))}</span></div>`).join("") +
-      `</div>`;
-  }
-  if (!up.hurt.length && !up.items.length) {
-    h += `<div class="note">${PUB ? "Nothing to report on anybody's players." : "Loading&hellip;"}</div>`;
-  }
-  h += `</div>`;
   sec.innerHTML = h;
   sec.querySelectorAll("[data-e]").forEach(r => r.addEventListener("click", () => {
     const e = +r.dataset.e; LGOPEN = (LGOPEN === e ? null : e); renderLeague();
@@ -789,7 +771,11 @@ const NEWSGROUP = {
   lowlight: "players", freeagent: "players", headline: "players",
   news: "players",
 };
-let NEWSFILTER = "all";
+// The League chip opens the tab. It is not only the league's own doings:
+// it also carries every player item about somebody one of the six holds,
+// or one of the fifty best in the game, because that is the news this
+// league acts on. The Players chip is still everything, ours or not.
+let NEWSFILTER = "league";
 // Player names in the feed become links to the card. The text is escaped
 // first and the names are matched against the escaped form, so the
 // replacement can never introduce markup the feed did not have.
@@ -899,7 +885,14 @@ function renderNews() {
     h += `<div class="chiprow">` + F.map(([k, lab]) =>
       `<button class="chip ${NEWSFILTER === k ? "on" : ""}" data-f="${k}">${lab}</button>`).join("")
       + btn + `</div>`;
-    const items = all.filter(e => NEWSFILTER === "all" || NEWSGROUP[e.kind] === NEWSFILTER);
+    const ours = NEWSFILTER === "league" ? relevantNames() : null;
+    const items = all.filter(e => {
+      if (NEWSFILTER === "all") return true;
+      const g = NEWSGROUP[e.kind];
+      if (g === NEWSFILTER) return true;
+      return NEWSFILTER === "league" && g === "players" && ours && ours(e.text);
+    });
+    if (NEWSFILTER === "league") h += availabilityHTML();
     if (!items.length) {
       h += `<div class="card"><div class="note">Nothing under that filter yet.</div></div>`;
     } else {
