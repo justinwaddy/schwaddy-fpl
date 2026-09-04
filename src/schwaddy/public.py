@@ -106,6 +106,18 @@ def build(data_dir):
 
     teams = stats.get("teams") or {}
     gw = league.get("gw")
+
+    # When line-ups lock. The pages compute the countdown themselves from
+    # this, rather than anybody writing "closes today" into a file that is
+    # wrong by tomorrow. waivers_time is the same gameweek's waiver
+    # processing, which is the other clock a manager cares about.
+    boot = _load(f"{data_dir}/draft_bootstrap.json") or {}
+    ev = boot.get("events") or {}
+    nxt_ev = next((e for e in (ev.get("data") or [])
+                   if e.get("id") == ev.get("next")), None)
+    deadline = (nxt_ev or {}).get("deadline_time")
+    waivers = (nxt_ev or {}).get("waivers_time")
+    next_gw = (nxt_ev or {}).get("id")
     nxt = _next_fixtures(fixtures, (gw or 0) + 1)
 
     # ownership is a fact of the draft, not a projection; it comes from
@@ -181,6 +193,7 @@ def build(data_dir):
     return dict(
         generated=stats.get("generated") or league.get("generated"),
         season=stats.get("season"), gw=gw,
+        next_gw=next_gw, deadline=deadline, waivers=waivers,
         finished=league.get("finished"), all_played=league.get("all_played"),
         teams=teams, managers=managers, players=players,
         news=news[:NEWS_KEEP])

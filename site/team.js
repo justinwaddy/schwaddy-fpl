@@ -294,6 +294,35 @@ function newsFeed() {
   }
   return out.sort((a, b) => String(b.ts || "").localeCompare(String(a.ts || "")));
 }
+// When line-ups lock. Worked out on the page from the deadline in
+// public.json rather than written into the feed by anybody, so it cannot
+// say "closes today" on a Sunday. Shows the waiver time too once that is
+// the next clock rather than the one just gone.
+function deadlineHTML() {
+  const d = PUB && PUB.deadline ? new Date(PUB.deadline) : null;
+  if (!d || isNaN(d)) return "";
+  const ms = d - Date.now(), gw = PUB.next_gw || "";
+  const uk = o => d.toLocaleString("en-GB", { timeZone: "Europe/London", ...o });
+  const at = uk({ hour: "2-digit", minute: "2-digit" });
+  const day = uk({ weekday: "long", day: "numeric", month: "long" });
+  const today = uk({ year: "numeric", month: "2-digit", day: "2-digit" }) ===
+    new Date().toLocaleString("en-GB", { timeZone: "Europe/London", year: "numeric", month: "2-digit", day: "2-digit" });
+  let when, note;
+  if (ms <= 0) {
+    when = `<em>closed</em> ${today ? "earlier today" : day} at ${at}`;
+    note = `Gameweek ${gw} is under way, so the eleven you had at the deadline is the eleven that scores.`;
+  } else {
+    const h = Math.floor(ms / 3600e3), m = Math.round(ms % 3600e3 / 60e3);
+    const left = h >= 24 ? `${Math.floor(h / 24)}d ${h % 24}h` : h ? `${h}h ${m}m` : `${m}m`;
+    when = `closes <em>${today ? "today" : day}</em> at <em>${at}</em> UK, in ${left}`;
+    note = `Anything you change after that will not count. Substitutions are applied automatically
+      when the gameweek ends: a starter who does not play is replaced by the first eligible player
+      on your bench, so the bench order matters.`;
+  }
+  return `<div class="card dl"><b class="h">Bench and line-up deadline</b>
+    <div class="dlbig">Gameweek ${gw} ${when}</div>
+    <div class="note">${note}</div></div>`;
+}
 function renderNews() {
   const sec = $("news");
   const btn = SUGGEST_URL
@@ -302,7 +331,7 @@ function renderNews() {
   let h = `<div class="card"><b class="h">League news</b>
     <div class="note">A round-up a day with the article behind every reported item, the odd opinion on
     a matchday, and the league's own running record: waivers, injuries, hauls and the table.</div>
-    <div class="row">${btn}</div></div>`;
+    <div class="row">${btn}</div></div>` + deadlineHTML();
   const all = newsFeed();
   if (!all.length) {
     h += (ERR.news || ERR.pub)

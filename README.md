@@ -243,8 +243,15 @@ see that manager's squad tab and, on Ed's, the prices. The engine's output
 is not on any of them, which is the part that matters.
 
 ## League news, and the roast box
-The News tab carries two feeds side by side, newest first, with chips to
-filter to news, waivers, injuries or results.
+The News tab opens with the deadline: which gameweek, what time line-ups
+lock in UK time, and how long is left. It is computed on the page from the
+deadline in public.json rather than written into the feed by anybody, so
+it cannot say "closes today" on a Sunday, and once the deadline passes it
+says so and explains that the eleven standing at the deadline is the one
+that scores.
+
+Under it are two feeds side by side, newest first, with chips to filter to
+news, waivers, injuries or results.
 
 The league's own running record comes through public.json: who claimed
 whom, who is injured or cleared, who hauled, who left points on the bench,
