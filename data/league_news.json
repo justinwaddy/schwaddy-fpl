@@ -1,5 +1,50 @@
 {
- "generated": null,
- "items": [],
- "runs": []
+  "generated": "2026-09-04T11:42 UTC",
+  "items": [
+    {
+      "id": "2026-09-04-gakpo-vote-of-confidence",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Andoni Iraola used his pre-Ipswich press conference to back Cody Gakpo, saying the forward has trained well through pre-season and is now 'in a good place physically, mentally.' Ben C, who owns Gakpo, gets a settled attacking option as Liverpool try to open their away account tonight.",
+      "source": {"title": "Andoni Iraola press conference: Gakpo, squad balance, Ipswich v Liverpool and more", "url": "https://www.liverpoolfc.com/news/andoni-iraola-press-conference-gakpo-squad-balance-ipswich-v-liverpool-and-more"}
+    },
+    {
+      "id": "2026-09-04-liverpool-injury-list",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Iraola's press conference also covered the treatment room: Joe Gomez is closest to returning and should join training next week, Giovanni Leoni and Federico Chiesa are targeted for the international break, and Conor Bradley and especially Hugo Ekitike remain further away. None of those names sit in any of the six squads, but it is the backdrop as Ben C, Ben D, Marcus and Edward all lean on Liverpool players tonight.",
+      "source": {"title": "Injury news: Iraola provides update on Gomez, Leoni, Chiesa, Bradley and Ekitike", "url": "https://www.liverpoolfc.com/news/injury-news-iraola-provides-update-gomez-leoni-chiesa-bradley-and-ekitike"}
+    },
+    {
+      "id": "2026-09-04-enzo-fernandez-city",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Manchester City completed a British-record-equalling 125 million pound deadline-day deal for Enzo Fernandez from Chelsea, reuniting the World Cup winner with former boss Enzo Maresca. Ben D owns Fernandez, who swaps a bench role at Stamford Bridge for a starting berth in a City midfield chasing the title.",
+      "source": {"title": "Man City sign Enzo Fernandez from Chelsea for joint-record fee", "url": "https://www.espn.com/soccer/story/_/id/49794375/man-city-agree-record-equalling-125m-deal-chelsea-enzo-fernandez-sources"}
+    },
+    {
+      "id": "2026-09-04-mosquera-saka-villa",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Cristhian Mosquera was withdrawn as a precaution in Arsenal's 1-0 win at Aston Villa after feeling discomfort, with Arteta saying afterwards 'he's fine, but he was feeling like he was about to have something.' Bukayo Saka scored the only goal. Robert owns both Mosquera and Saka, so it was a mixed week for Pardinho.",
+      "source": {"title": "Arsenal's Mikel Arteta downplays Cristhian Mosquera injury concerns", "url": "https://www.espn.com/soccer/story/_/id/49791654/arsenal-mikel-arteta-downplays-christhian-mosquera-injury-concerns"}
+    },
+    {
+      "id": "2026-09-04-opinion-haaland-bottom",
+      "ts": "2026-09-04T11:42",
+      "kind": "opinion",
+      "text": "Justin captains Erling Haaland and still sits last in the table, 41 points off Marcus at the top after two gameweeks. Owning the most nailed-on captain option in the game only helps if the other fourteen shirts turn up too.",
+      "source": null
+    },
+    {
+      "id": "2026-09-04-opinion-ben-c-liverpool-stack",
+      "ts": "2026-09-04T11:42",
+      "kind": "opinion",
+      "text": "Ben C has five of his fifteen players pencilled into Liverpool's likely XI at Ipswich tonight: Virgil, Frimpong, Szoboszlai, Gakpo and Isak. That is either the smartest stack in the league or the most stressful ninety minutes of his gameweek.",
+      "source": null
+    }
+  ],
+  "runs": [
+    {"ts": "2026-09-04T11:42 UTC", "news": 4, "opinion": 2, "matchday": true, "note": "First successful run; page was empty and roast archive had nothing to draw on, so both opinion pieces are original observations from the table and tonight's Ipswich v Liverpool team news (Justin bottom despite Haaland, Ben C's five-player Liverpool stack). Led with Iraola's pre-Ipswich presser (Gakpo backing, injury list) plus Enzo Fernandez's move to City and Mosquera/Saka news from Arsenal's win at Villa. Passed over an Eze calf-injury story and older Man City/Chelsea press-conference hits after checking their dates and finding them weeks old, not from the last 24 hours."}
+  ]
 }
