@@ -417,12 +417,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // claimed whom, who is injured, who hauled, how the table moved - is
 // carried in public.json, already stripped of the engine's forecasts and
 // of anything written from one manager's chair.
+// Two ways to read the feed: what happened to the six of you, and what
+// happened to footballers. A waiver is a manager's doing, an opinion is
+// about a manager, a scoreline is the competition; a hamstring, a hat
+// trick and a transfer are the player's.
 const NEWSGROUP = {
-  move: "moves", injury: "injuries", recovery: "injuries",
-  haul: "results", flop: "results", lowlight: "results", score: "results",
-  live: "results", wrap: "results", overtake: "results", race: "results",
-  bench: "results", pint: "results", freeagent: "results",
-  news: "news", opinion: "news", headline: "news", squad: "results",
+  move: "league", score: "league", live: "league", wrap: "league",
+  overtake: "league", race: "league", bench: "league", pint: "league",
+  squad: "league", opinion: "league",
+  injury: "players", recovery: "players", haul: "players", flop: "players",
+  lowlight: "players", freeagent: "players", headline: "players",
+  news: "players",
 };
 let NEWSFILTER = "all";
 function newsFeed() {
@@ -470,21 +475,20 @@ function deadlineHTML() {
 function renderNews() {
   const sec = $("news");
   const btn = SUGGEST_URL
-    ? `<button class="btn" id="suggest">Suggest a headline or a roast</button>`
+    ? `<button class="btn" id="suggest" title="Suggest a headline, or a line about one of the other five">Suggest a roast</button>`
     : "";
-  let h = `<div class="card"><b class="h">League news</b>
-    <div class="note">A round-up a day with the article behind every reported item, the odd opinion on
-    a matchday, and the league's own running record: waivers, injuries, hauls and the table.</div>
-    <div class="row">${btn}</div></div>` + deadlineHTML();
+  let h = deadlineHTML();
   const all = newsFeed();
   if (!all.length) {
+    h += `<div class="chiprow">${btn}</div>`;
     h += (ERR.news || ERR.pub)
       ? `<div class="card"><div class="note">Could not load the feed (${esc(ERR.news || ERR.pub)}).</div></div>`
       : `<div class="card"><div class="note">Loading the feed&hellip;</div></div>`;
   } else {
-    const F = [["all", "Everything"], ["news", "News"], ["moves", "Waivers"],
-               ["injuries", "Injuries"], ["results", "Results"]];
-    h += F.map(([k, lab]) => `<button class="chip ${NEWSFILTER === k ? "on" : ""}" data-f="${k}">${lab}</button>`).join("");
+    const F = [["all", "All news"], ["league", "League"], ["players", "Players"]];
+    h += `<div class="chiprow">` + F.map(([k, lab]) =>
+      `<button class="chip ${NEWSFILTER === k ? "on" : ""}" data-f="${k}">${lab}</button>`).join("")
+      + btn + `</div>`;
     const items = all.filter(e => NEWSFILTER === "all" || NEWSGROUP[e.kind] === NEWSFILTER);
     if (!items.length) {
       h += `<div class="card"><div class="note">Nothing under that filter yet.</div></div>`;
@@ -512,7 +516,10 @@ function renderNews() {
 }
 
 function openSuggest() {
-  const others = (PUB && PUB.managers || []).filter(m => m.entry !== ME);
+  // Everybody is fair game, the manager whose page this is included. The
+  // pages are public and shared around, so excluding the one you happen to
+  // be looking at only meant Ed could not be roasted from Ed's page.
+  const others = (PUB && PUB.managers || []);
   const back = document.createElement("div");
   back.className = "back";
   back.innerHTML = `<div class="modal">

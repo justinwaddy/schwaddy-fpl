@@ -54,6 +54,8 @@ color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans",system-ui;margin:6px
 .chip{background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--dim);
 padding:5px 12px;font:600 12px "IBM Plex Sans",system-ui;cursor:pointer;margin:2px 6px 8px 0}
 .chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}
+.chiprow{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px}
+.chiprow .btn{margin-left:auto}
 .ev a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--line)}
 .ev a:hover{border-bottom-color:var(--blue)}
 .src{display:block;padding-top:3px}
