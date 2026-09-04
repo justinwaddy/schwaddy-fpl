@@ -688,11 +688,75 @@ function liveIndex(L) {
     const b = provBonus(f);
     for (const k in b) bonus[k] = (bonus[k] || 0) + b[k];
   }
-  return { owner, mgr, bonus };
+  return { owner, mgr, bonus, roles: liveRoles(L) };
+}
+// The feed spells its scoring reasons out at length. On one line in half
+// a column they need to be short, and the collapsible underneath still
+// carries the full name, the count and the points.
+const EVENT_SHORT = {
+  "minutes played": null,            // the minute count says this already
+  "goals scored": "goal", "assists": "assist", "clean sheets": "clean sheet",
+  "goals conceded": "conceded", "own goals": "own goal", "saves": "saves",
+  "penalties saved": "pen save", "penalties missed": "pen miss",
+  "yellow cards": "yellow", "red cards": "red", "bonus": "bonus",
+  "defensive contribution": "def. actions",
+};
+function eventChips(rows, pb) {
+  const out = [];
+  for (const [name, val, pts] of rows) {
+    const key = String(name).toLowerCase();
+    if (!pts) continue;
+    if (key in EVENT_SHORT && EVENT_SHORT[key] === null) continue;
+    const label = EVENT_SHORT[key] || String(name).toLowerCase();
+    // "2 bonus +2" says the same thing twice; a count only helps where it
+    // differs from the points, as saves and defensive actions do
+    const text = (val > 1 && val !== Math.abs(pts)) ? `${val} ${label}` : label;
+    out.push(`<span class="ev${pts < 0 ? " bad" : ""}">${esc(text)} ${
+      pts > 0 ? "+" : ""}${pts}</span>`);
+  }
+  if (pb) out.push(`<span class="ev prov">bonus, provisional +${pb}</span>`);
+  return out.join("");
+}
+/* Who is in each manager's counting eleven once the automatic
+   substitutions are applied, so a row can say XI or bench honestly rather
+   than reading the slot number and hoping. */
+function liveRoles(L) {
+  const roles = {};
+  const R = { ...RULES };
+  for (const k in (L.rules || {})) if (Number.isInteger(L.rules[k])) R[k] = L.rules[k];
+  for (const m of L.managers || []) {
+    const squad = (m.picks || []).map(([id, slot]) => {
+      const e = L.elements[id] || { p: "MID", t: null, min: 0 };
+      return { id, slot, pos: e.p, tid: e.t, mins: e.min, played: e.min > 0,
+               settled: !(L.fixtures || []).some(x => (x.h === e.t || x.a === e.t) && !x.fin),
+               subbed_in: false, subbed_out: false };
+    }).sort((a, b) => a.slot - b.slot);
+    applySubs(squad, R);
+    for (const p of squad) {
+      roles[p.id] = { xi: (p.slot <= R.play && !p.subbed_out) || p.subbed_in,
+                      slot: p.slot, sub_in: p.subbed_in, sub_out: p.subbed_out };
+    }
+  }
+  return roles;
+}
+/* What he is doing in the match itself. `starts` comes from the feed; the
+   fallback guess is only used against an older worker that does not send
+   it, and it cannot tell a substituted man from one who came on. */
+function matchRole(e, f) {
+  const on = f.started && !f.fin, played = e.min > 0;
+  const started = e.starts == null
+    ? (played && f.min && e.min >= f.min - 2) : !!e.starts;
+  if (!f.started) return { t: "", c: "" };
+  if (!played) return on ? { t: "not on", c: "off" } : { t: "did not play", c: "off" };
+  if (started && on && f.min && e.min < f.min - 2) return { t: "subbed off", c: "off" };
+  if (!started) return { t: on ? "on as sub" : "sub", c: "on" };
+  return { t: on ? "on" : "played", c: "on" };
 }
 function playerRow(id, e, f, ix) {
   const ent = ix.owner[id], m = ix.mgr[ent];
   const key = f.id + ":" + id;
+  const role = (ix.roles || {})[id] || {};
+  const mr = matchRole(e, f);
   const rows = ((e.ex || {})[f.id] || []).filter(x => x[2] || x[1]);
   // provBonus only fires while the fixture says bonus is not in, but the
   // two signals come from different parts of the feed and could disagree
@@ -709,10 +773,20 @@ function playerRow(id, e, f, ix) {
   if (!body) {
     body = `<div><span>${e.min ? "No scoring events yet." : "Not on the pitch yet."}</span></div>`;
   }
+  const meta = [
+    `<span class="who">${esc(m ? m.name : "")}</span>`,
+    role.xi === undefined ? "" :
+      `<span class="tag ${role.xi ? "xi" : "bn"}">${role.xi ? "XI" : "bench"}${
+        role.sub_in ? " &uarr;" : role.sub_out ? " &darr;" : ""}</span>`,
+    mr.t ? `<span class="tag ${mr.c}">${mr.t}</span>` : "",
+    e.min ? `<span class="mins">${e.min}'</span>` : "",
+    eventChips(rows, pb),
+  ].filter(Boolean).join("");
   return `<details class="pl" data-k="${esc(key)}"${LVOPEN.has(key) ? " open" : ""}>
-    <summary><span class="nm">${esc(e.n)}</span>
-      <span class="who">${esc(m ? m.name : "")}</span>
-      <span class="pts">${pts}${pb ? `<span class="provb">+${pb}b</span>` : ""}</span></summary>
+    <summary>
+      <span class="plmain"><span class="nm">${esc(e.n)}</span>
+        <span class="pts">${pts}${pb ? `<span class="provb">+${pb}b</span>` : ""}</span></span>
+      <span class="plmeta">${meta}</span></summary>
     <div class="contrib">${body}</div></details>`;
 }
 function sideHTML(tid, f, L, ix) {
@@ -815,6 +889,13 @@ function renderLive() {
   const ix = liveIndex(LIVE);
   const fx = LIVE.fixtures || [];
   const inplay = fx.filter(f => f.started && !f.fin);
+  // once the feed's gameweek is done the tab is about the next one, which
+  // only public.json knows about until the deadline rolls the feed
+  // forward. The weekly pot is per gameweek, so it reads zero for
+  // everybody until a ball is kicked - last week's total is last week's.
+  const ahead = fx.length > 0 && fx.every(f => f.fin) &&
+    PUB && PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length > 0;
+  const gwNum = ahead ? PUB.next_gw : LIVE.gw;
   // the ticker is left alone unless its text changes, so the scroll does
   // not jump back to the start every fifteen seconds
   if (!sec.querySelector("#lvticker")) {
@@ -822,17 +903,21 @@ function renderLive() {
       <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>
       <div class="card"><b class="h" id="lvfxh"></b><div class="fxl" id="lvfxb"></div></div>`;
   }
-  const rows = liveStandings(LIVE, ix);
+  const rows = ahead
+    ? [...(PUB.managers || [])].sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99))
+        .map(m => ({ m, live: 0 }))
+    : liveStandings(LIVE, ix);
   const t = tickerText(rows);
   if (t !== TICK) { TICK = t; $("lvticker").innerHTML = t + `<em>&middot;</em>` + t; }
 
   // the header leads with what the reader came for: his own points this
   // gameweek, and where that puts him
   const meAt = rows.findIndex(r => r.m.entry === ME);
-  const head = meAt < 0 ? `<b class="lvpts">Gameweek ${LIVE.gw}</b>`
-    : `<b class="lvpts">Gameweek ${LIVE.gw}: you have ${rows[meAt].live}</b>
-       <span class="lvrank">${ordinal(meAt + 1)} of ${rows.length}${
-         meAt ? `, ${rows[0].live - rows[meAt].live} behind ${esc(rows[0].m.name)}` : ""}</span>`;
+  const head = meAt < 0 ? `<b class="lvpts">Gameweek ${gwNum}</b>`
+    : `<b class="lvpts">Gameweek ${gwNum}: you have ${rows[meAt].live}</b>
+       <span class="lvrank">${ahead ? "nobody has scored yet"
+         : `${ordinal(meAt + 1)} of ${rows.length}${
+             meAt ? `, ${rows[0].live - rows[meAt].live} behind ${esc(rows[0].m.name)}` : ""}`}</span>`;
 
   if (inplay.length) {
     $("lvstat").innerHTML = `${head}<span class="lvsep"><span class="livedot"></span><b>LIVE</b> &middot;
@@ -854,14 +939,10 @@ function renderLive() {
       (PUB && PUB.next_gw > LIVE.gw ? ((PUB.fixtures || [])[0] || [])[2] : null);
     $("lvstat").innerHTML = head + `<span class="lvsep">${next
       ? `Nothing in play. Next kick-off ${esc(koText(next))}.`
-      : `Every match in gameweek ${LIVE.gw} has finished.`}</span>`;
+      : `Every match in gameweek ${gwNum} has finished.`}</span>`;
     $("lvbody").innerHTML = "";
   }
 
-  // once the feed's gameweek is done the fixtures worth showing are the
-  // next one's, which only public.json knows about until the deadline
-  const ahead = fx.length && fx.every(f => f.fin) &&
-    PUB && PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length;
   const name = tid => LIVE.teams[tid] || String(tid);
   const chips = f => Object.keys(LIVE.elements || {})
     .filter(id => {
@@ -878,7 +959,7 @@ function renderLive() {
     })
     .sort((a, b) => (b.mine - a.mine) || ((b.pts || 0) - (a.pts || 0)) ||
       String(a.p.name).localeCompare(String(b.p.name)));
-  $("lvfxh").textContent = `Gameweek ${ahead ? PUB.next_gw : LIVE.gw} fixtures`;
+  $("lvfxh").textContent = `Gameweek ${gwNum} fixtures`;
   $("lvfxb").innerHTML = (ahead ? previewFixtures() : [...fx]
     .sort((a, b) => String(a.ko || "").localeCompare(String(b.ko || "")))
     .map(f => fxRow(f, name, chips)).join("")) ||

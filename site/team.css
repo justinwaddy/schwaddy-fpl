@@ -148,15 +148,22 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:560px){.mtcols{grid-template-columns:1fr}.mtcol+.mtcol{border-left:none;border-top:1px solid var(--line);padding-top:8px}}
 .pl{border-top:1px solid var(--line)}
 .pl:first-child{border-top:none}
-.pl summary{display:flex;align-items:baseline;gap:6px;padding:7px 2px;cursor:pointer;list-style:none}
+.pl summary{display:block;padding:7px 2px;cursor:pointer;list-style:none}
+.plmain{display:flex;align-items:baseline;gap:6px}
+.plmeta{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding-top:2px}
+.plmeta .who{font-size:11px}
+.plmeta .mins{font:600 10px "IBM Plex Mono",ui-monospace,monospace;color:var(--dim)}
+.tag{font:600 9px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase;
+border:1px solid var(--line);border-radius:3px;padding:1px 4px;color:var(--dim)}
+.tag.xi{border-color:var(--blue);color:var(--blue)}
+.tag.on{border-color:var(--green);color:var(--green)}
+.tag.off{border-color:var(--line);color:var(--dim)}
 .pl summary::-webkit-details-marker{display:none}
-.pl summary::after{content:"\25B8";color:var(--dim);font-size:10px;margin-left:auto;padding-left:6px}
-.pl[open] summary::after{content:"\25BE"}
+.plmain::after{content:"\25B8";color:var(--dim);font-size:10px;padding-left:6px}
+.pl[open] .plmain::after{content:"\25BE"}
 .pl summary:hover{background:var(--panel2)}
 .pl .who{color:var(--dim);font-size:11px}
 .pl .pts{font:600 14px "IBM Plex Mono",ui-monospace,monospace;margin-left:auto}
-.pl summary::after{order:2}
-.pl .pts{order:1}
 .contrib{padding:2px 2px 8px 6px}
 .contrib div{display:flex;gap:8px;font-size:12px;color:var(--dim);padding:2px 0}
 .contrib b{color:var(--ink);margin-left:auto;font:600 12px "IBM Plex Mono",ui-monospace,monospace}
@@ -186,3 +193,7 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 color:var(--ink)}
 .lvrank{color:var(--dim);font-weight:400;padding-left:6px}
 .lvsep{display:block;padding-top:2px}
+.ev{font:600 9px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.03em;text-transform:uppercase;
+background:var(--panel2);border-radius:3px;padding:1px 4px;color:var(--green)}
+.ev.bad{color:var(--amber)}
+.ev.prov{color:var(--amber)}

@@ -279,6 +279,13 @@ The header above all of it leads with what the reader came for: his points
 this gameweek, where that puts him, and the gap to the leader, then a line
 saying what the feed is doing.
 
+Both the header and the ticker are per gameweek, because the league plays
+for a pint a week and last week's total is last week's. The feed disagrees
+for four days of every seven - it keeps reporting the finished gameweek
+until the next deadline - so once its fixtures are all final the tab reads
+zero for everybody and says nobody has scored yet, ordered on the season
+table, rather than showing Monday's scores as though they were Saturday's.
+
 Which gameweek that is takes some care. The live feed reports whichever
 one the game itself calls current, which from the last whistle on Monday
 until Friday's deadline is the week that has just finished - so a tab
@@ -296,12 +303,21 @@ respects prefers-reduced-motion.
 
 Above the fixture list, while a match is on, is one card per match in
 play: the two crests either side, the score between them and the minute
-under that. Each side lists only the
-league's players in that match - the rest of the twenty-two is on
-television - with his points beside him, and his own scoring breakdown as
-a collapsible under the row: minutes, goals, assists, cards, bonus, each
-with what the game paid for it. That breakdown comes from the API's own
-explain block, which the live worker now passes through per fixture.
+under that. Each side lists only the league's players in that match - the
+rest of the twenty-two is on television - and each row carries his points,
+who owns him, whether he is in that manager's counting eleven or on the
+bench (with an arrow where an automatic substitution moved him), what he
+is doing in the match - on, subbed off, on as a sub, not on - how many
+minutes he has, and what he has actually done: goal +6, 4 saves +1, 2
+conceded -1. Opening the row gives the same breakdown in full, with the
+counts and the game's own wording.
+
+That comes from the API's explain block, which the live worker passes
+through per fixture. Whether a man started needs the `starts` stat as
+well: minutes alone cannot separate someone who came on from someone who
+has been substituted off, since both sit below the match clock. Against an
+older worker that does not send it the page falls back to the guess and
+simply cannot label a substitution.
 
 Bonus is the awkward one. The official three-two-one lands minutes after
 the whistle, so until then the card shows the provisional bonus computed

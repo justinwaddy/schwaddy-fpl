@@ -153,6 +153,10 @@ export async function compose(cache, origin = "https://live.invalid") {
       n: meta[0], t: meta[1], p: meta[2],
       pts: st.total_points || 0, min: st.minutes || 0,
       bonus: st.bonus || 0, bps: st.bps || 0,
+      // whether he was in the starting eleven, which is the only way to
+      // tell a man who came on from one who has been substituted off:
+      // both sit on fewer minutes than the match has been played
+      starts: st.starts || 0,
       fx: Object.keys(ex).map(Number), ex,
     };
   }
