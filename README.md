@@ -268,9 +268,16 @@ data/prices.json, and only Ed's page has the value columns.
 ### The Live tab, on the six pages
 The tab is always there, and its bottom half is the gameweek's fixture
 list: every match in kick-off order, the crests, the score or the kick-off
-time, and how many of the league's players are on each side - "2 of
-yours" where they are the reader's, the league's count where they are not,
-spelled out because a bare number beside a scoreline reads as part of it.
+time, and under each one every player in the league who is in that match:
+his name, his owner, and his points once it has started. The reader's own
+are outlined and sort to the front. A count would have fitted in less
+room, but which of your own players have a game is the thing worth
+knowing, and only the names say it. They are clickable through to the
+player card, same as every other name on the page.
+
+The header above all of it leads with what the reader came for: his points
+this gameweek, where that puts him, and the gap to the leader, then a line
+saying what the feed is doing.
 
 Which gameweek that is takes some care. The live feed reports whichever
 one the game itself calls current, which from the last whistle on Monday
@@ -281,8 +288,8 @@ once every match in the feed is final the list switches to those: no
 scores, just the kick-offs and who owns whom. It hands back to the feed
 when the deadline rolls it forward.
 
-What comes and goes is the live half above it. A ticker runs across the
-top, the six managers in live-points order,
+What comes and goes is the live half above it. A ticker runs under the
+header, the six managers in live-points order,
 re-rendered whenever the standings change and left alone when they do not,
 so the marquee does not jump back to the start every fifteen seconds. It
 respects prefers-reduced-motion.
