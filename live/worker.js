@@ -16,6 +16,12 @@
  * Deploy: see live/README.md. Nothing here is secret; the API is public.
  */
 const DRAFT = "https://draft.premierleague.com/api";
+// The draft fixtures endpoint reports minutes: 0 for the whole of a live
+// match - checked against a real one, 0-2 after 35 minutes and still
+// saying zero - while the classic game's fixture list has the clock. Same
+// fixture ids, same team ids, so the minute is read across from there and
+// everything else still comes from the draft side.
+const CLASSIC = "https://fantasy.premierleague.com/api";
 const LEAGUE = 9450;
 const SNAP_TTL = 15;      // seconds a composed snapshot is served from cache;
                           // the page polls at this rate while a match is on
@@ -93,12 +99,27 @@ export async function compose(cache, origin = "https://live.invalid") {
   const gw = game.current_event;
   if (!gw) throw new Error("no current gameweek");
 
-  const [boot, det, fixtures, live] = await Promise.all([
+  const [boot, det, fixtures, live, clock] = await Promise.all([
     bootstrap(cache, origin),
     get(`${DRAFT}/league/${LEAGUE}/details`),
     get(`${DRAFT}/event/${gw}/fixtures`),
     get(`${DRAFT}/event/${gw}/live`),
+    // never fatal: without it the page says LIVE instead of a minute
+    get(`${CLASSIC}/fixtures/?event=${gw}`).catch(() => null),
   ]);
+
+  // id first, then the pair of teams, so a mismatch in one numbering does
+  // not silently hand a match somebody else's clock
+  const clocks = {};
+  for (const f of clock || []) {
+    if (typeof f.minutes !== "number") continue;
+    clocks[`i${f.id}`] = f.minutes;
+    clocks[`t${f.team_h}v${f.team_a}`] = f.minutes;
+  }
+  const minuteOf = f => {
+    const m = clocks[`i${f.id}`] ?? clocks[`t${f.team_h}v${f.team_a}`];
+    return typeof m === "number" ? m : (f.minutes || 0);
+  };
 
   // manager names the way weekly.py does it: first name, with a last
   // initial only when two managers share one (Ben C / Ben D)
@@ -176,7 +197,7 @@ export async function compose(cache, origin = "https://live.invalid") {
       id: f.id, h: f.team_h, a: f.team_a,
       hs: f.team_h_score, as: f.team_a_score,
       started: !!f.started, fin: !!(f.finished || f.finished_provisional),
-      min: f.minutes || 0, ko: f.kickoff_time, bonus_in: bonusIn, bps,
+      min: minuteOf(f), ko: f.kickoff_time, bonus_in: bonusIn, bps,
     };
   });
 

@@ -409,7 +409,18 @@ conceded -1. Opening the row gives the same breakdown in full, with the
 counts and the game's own wording.
 
 That comes from the API's explain block, which the live worker passes
-through per fixture. Whether a man started needs the `starts` stat as
+through per fixture.
+
+The match clock does not come from the draft API at all. Its fixture list
+reports minutes: 0 for the whole of a live game - caught during
+Ipswich-Liverpool, 0-2 and thirty-five minutes played, still saying zero -
+while the classic game's fixture list for the same fixture id had 35. So
+the worker reads the minute across from there, matching on fixture id and
+falling back to the pair of team ids, and everything else still comes from
+the draft side. If that call fails the page says LIVE rather than a
+minute: a started match with no clock is a feed without one, not a match
+in its first minute, and "0'" sitting there all evening looks far more
+broken than saying nothing about the time. Whether a man started needs the `starts` stat as
 well: minutes alone cannot separate someone who came on from someone who
 has been substituted off, since both sit below the match clock. Against an
 older worker that does not send it the page falls back to the guess and

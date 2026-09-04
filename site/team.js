@@ -1050,7 +1050,11 @@ let LVOPEN = new Set(), TICK = "";
 function fixtureState(f) {
   if (f.fin) return `<span class="mtmin ft">FT</span>`;
   if (!f.started) return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
-  return `<span class="mtmin">${f.min || 0}'</span>`;
+  // a started match with no clock is a feed that has not got one, not a
+  // match in its first minute, and "0'" sitting there all evening looks
+  // far more broken than saying nothing about the time
+  return f.min ? `<span class="mtmin">${f.min}'</span>`
+    : `<span class="mtmin">LIVE</span>`;
 }
 function crest(tid, name) {
   const t = PUB && PUB.teams && PUB.teams[tid];
