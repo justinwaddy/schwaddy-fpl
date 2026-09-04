@@ -1,9 +1,15 @@
 name: refresh
 on:
+  # BACKSTOP ONLY. These are the same times cron/worker.js holds, and it
+  # is the one that fires on time: measured over twelve consecutive
+  # scheduled runs, GitHub was a median of 152 minutes late, worst 305,
+  # never within five minutes, and it dropped the 13:45 slot entirely on
+  # every one of those days. The Cloudflare worker dispatches the workflow
+  # through the API instead, which starts within seconds, and skips its
+  # dispatch if one of these already ran in the last 20 minutes. Keep them
+  # until that worker has a few clean days behind it; see cron/README.md.
   schedule:
-    # times are UTC; UK is +1 during BST. GitHub queues scheduled jobs on
-    # shared runners and has been running these hours late, so treat them
-    # as "some time after", not as clock times.
+    # times are UTC; UK is +1 during BST.
     - cron: "35 8 * * *"    # 09:35 UK  full refresh, after scores finalise
     - cron: "45 13 * * *"   # 14:45 UK  news, after the 12:30 kick-off finishes
     - cron: "0 17 * * *"    # 18:00 UK  news, after the 15:00 kick-off finishes

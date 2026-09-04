@@ -26,6 +26,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/prices.py      classic-game prices, the market's read beside the model's; data/prices.json, the sortable market table on the Waivers tab
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
+- cron/worker.js              Cloudflare cron that dispatches the refresh on time
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 - site/compare/               the same gameweek under four different predictors
 
@@ -204,6 +205,24 @@ Nothing under data/ is bundled into the deploy. The pages fetch predictions,
 news and league state from raw.githubusercontent.com at load time, so the
 bot's refresh commits show up on the live site without a redeploy - and the
 cron pushes, which only ever write data/, never retrigger this workflow.
+
+## Scheduling
+GitHub's `schedule:` crons are queued on shared runners and arrive when
+GitHub gets round to them. Over twelve consecutive scheduled runs of
+update.yml the median was 152 minutes late, the worst 305, none inside
+five minutes, and the 13:45 UTC slot never fired at all - GitHub drops a
+scheduled run rather than queueing it when the pool is busy. A dashboard
+that exists to be right before a deadline cannot be built on that.
+
+cron/worker.js is a Cloudflare Worker on Cron Triggers, which do fire on
+time, and it dispatches update.yml through the API, which starts a run
+within seconds instead of queueing it. It asks GitHub when the workflow
+last ran and skips if that was under 20 minutes ago, so the backstop cron
+and a push cannot stack two refits on each other. The GitHub schedule
+stays as that backstop until the worker has proved itself, and the
+worker's status page says whether its token is configured. Deploy is a
+one-off five-minute job described in cron/README.md; until it is done the
+GitHub crons run alone, late, exactly as before.
 
 ## Live scores
 The cron is a batch pipeline - four runs a day, each minutes late, read

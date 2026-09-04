@@ -210,7 +210,9 @@ function render(){
   const ps=DATA.players;NEXT=nextGW(ps);
   document.getElementById("meta").textContent=
     `updated ${DATA.generated?DATA.generated.slice(0,16).replace("T"," "):"?"} UTC · next: GW${NEXT+1} · λ=(${DATA.lambda_time}, ${DATA.lambda_nn??"∞"}) · ${DATA._src}`;
+  PKIDX=null;                       // names index is built from DATA and STATS
   renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);renderStarters();
+  renderNews();
   if(LIVE)renderLive();
 }
 function renderSquad(ps){
@@ -549,6 +551,89 @@ let WK=null,WKTAB="weekly",WKOPEN=null;
 fetch(LEAGUE_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{WK=j;if(window.LASTPS)renderLeague(window.LASTPS);
             if(typeof LIVE!=="undefined"&&!LIVE)renderLive();}).catch(()=>{});
+// Player names inside feed text, made clickable. The feed is free text
+// written by the pipeline and by the scheduled session, so a name has to
+// be found in prose rather than read off a field. Same matching the
+// player card uses in reverse: normalise accents away, match on word
+// boundaries, and where the text tags a club straight after the name
+// ("Watkins (AVL): ...") that tag has to be his club. Two players sharing
+// a web name need the tag to tell them apart; without it, one owned
+// player wins and otherwise the name is left as plain text. Managers are
+// named in the feed too and a manager and a player can be the same word,
+// so those always need the tag - "Justin 43" in a scoreline is not the
+// Leeds full back. Everything is escaped on the way out, so feed text can
+// never inject markup into the page.
+let PKIDX=null,PKRE=null,PKMGR=[],PKBYCODE={};
+// NFD changes the length of a string, so a match found in the normalised
+// text cannot be sliced out of the original without a map back.
+function pkNormMap(s){
+  let out="";const map=[];
+  for(let i=0;i<s.length;i++){
+    const c=s[i].normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+    for(let j=0;j<c.length;j++){out+=c[j];map.push(i);}
+  }
+  map.push(s.length);
+  return {norm:out,map};
+}
+function buildPkIndex(){
+  PKIDX={};PKBYCODE={};PKMGR=pkMgrNames();
+  const add=(raw,code,team)=>{
+    const n=pkNorm(raw);
+    if(n.length<3)return;                 // two letters picks out nobody
+    (PKIDX[n]=PKIDX[n]||[]).push({code:String(code),team});
+  };
+  for(const p of (DATA&&DATA.players)||[]){PKBYCODE[String(p.code)]=p;add(p.name,p.code,p.team);}
+  if(STATS&&STATS.players)for(const c in STATS.players){
+    const st=STATS.players[c];
+    if(st&&st.full)add(st.full,c,st.team);
+  }
+  const names=Object.keys(PKIDX).sort((a,b)=>b.length-a.length||(a<b?-1:1));
+  PKRE=names.length?new RegExp("(^|[^a-z0-9])("+names.map(pkEsc).join("|")+")(?![a-z0-9])","g"):null;
+}
+function pkClubOf(c){
+  const t=STATS&&STATS.teams&&STATS.teams[c.team];
+  return t?pkNorm(t[0]):null;
+}
+function pkResolve(name,tag){
+  const seen={},uniq=[];
+  for(const c of PKIDX[name]||[])if(!seen[c.code]){seen[c.code]=1;uniq.push(c);}
+  if(!uniq.length)return null;
+  if(tag){
+    const hit=uniq.filter(c=>pkClubOf(c)===tag);
+    return hit.length===1?hit[0].code:null;   // tagged with a club that is not his: not him
+  }
+  if(PKMGR.indexOf(name)>=0)return null;      // manager collision: the tag is required
+  if(uniq.length===1)return uniq[0].code;
+  const owned=uniq.filter(c=>{const p=PKBYCODE[c.code];return p&&p.owner;});
+  return owned.length===1?owned[0].code:null;
+}
+function linkNames(text){
+  if(text==null)return "";
+  if(PKIDX===null)buildPkIndex();
+  if(!PKRE)return esc(text);
+  const {norm,map}=pkNormMap(String(text));
+  let out="",last=0,m;
+  PKRE.lastIndex=0;
+  while((m=PKRE.exec(norm))!==null){
+    const a=m.index+m[1].length,b=a+m[2].length;
+    const tag=norm.slice(b).match(/^\s*\(([a-z]{3})\)/);
+    let code=pkResolve(m[2],tag?tag[1]:null);
+    // A web name is often a first name ("Enzo"), and the feed also names
+    // managers and pundits. Where the very next word is capitalised the
+    // text is naming somebody with a surname the index does not carry -
+    // "Enzo Maresca" is Man City's manager, not Chelsea's midfielder - so
+    // an untagged match that is a prefix of a longer name is left alone.
+    if(code!=null&&!tag&&/^\s+[A-Z]/.test(String(text).slice(map[b])))code=null;
+    if(code!=null){
+      const oa=map[a],ob=map[b];
+      out+=esc(String(text).slice(last,oa))+
+           `<span class="pk" data-pk="${esc(code)}">${esc(String(text).slice(oa,ob))}</span>`;
+      last=ob;
+    }
+    PKRE.lastIndex=b;                    // a name can sit right next to another
+  }
+  return out+esc(String(text).slice(last));
+}
 let NEWSDATA=null,NEWSFILTER="all";
 // older events predate the scope field; derive it so the filter still works
 function evScope(e){
@@ -571,8 +656,8 @@ function renderNews(){
     const prj=NEWSDATA.events.find(e=>e.type==="projection");
     if(top){
       h+=`<div class="card scorecard"><b class="h">Scoreboard</b>
-      <div class="bigline">${top.text}</div>`;
-      if(prj&&top.type==="live")h+=`<div class="note">${prj.text}</div>`;
+      <div class="bigline">${linkNames(top.text)}</div>`;
+      if(prj&&top.type==="live")h+=`<div class="note">${linkNames(prj.text)}</div>`;
       h+=`</div>`;
     }
     if(!evs.length)h+=`<div class="note">Nothing here under this filter yet.</div>`;
@@ -583,8 +668,8 @@ function renderNews(){
       if(d!==day){day=d;h+=`<div class="daysep">${d}</div>`;}
       const tag=`<span class="badge b-${e.type}">${e.type.toUpperCase()}</span>`;
       h+=`<div class="ev ${e.mine?"mine-row":""}">${
-        e.url?`<a href="${e.url}" target="_blank" rel="noopener">${tag}</a>`:tag}
-      <span style="flex:1">${e.text}</span><span class="when">${(e.ts||"").slice(11,16)}</span></div>`;
+        e.url?`<a href="${esc(e.url)}" target="_blank" rel="noopener">${tag}</a>`:tag}
+      <span style="flex:1">${linkNames(e.text)}</span><span class="when">${esc((e.ts||"").slice(11,16))}</span></div>`;
     }
     h+=`</div>`;
   }
