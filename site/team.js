@@ -1047,14 +1047,89 @@ function koText(iso) {
 // provisional until the official award lands, the same arithmetic the
 // League tab uses, so the two never disagree.
 let LVOPEN = new Set(), TICK = "";
+/* One of yours has just done something. The poll before is the baseline,
+   so the first poll after a page load never celebrates - otherwise
+   opening the page on a Saturday evening would fire off everything that
+   happened while you were out. Three points is the floor: a goal, an
+   assist, a clean sheet, a bonus jump. Minutes ticking over is not a
+   moment. */
+let LVSEEN = null, PARTY = false;
+const PARTY_FLOOR = 3;
+function scorers(L, ix) {
+  const now = {};
+  for (const id in L.elements || {}) {
+    if (ix.owner[id] == null) continue;
+    now[id] = (L.elements[id].pts || 0) + (ix.bonus[id] || 0);
+  }
+  const was = LVSEEN;
+  LVSEEN = now;
+  if (!was) return [];
+  return Object.keys(now)
+    .filter(id => ix.owner[id] === ME && now[id] - (was[id] ?? now[id]) >= PARTY_FLOOR)
+    .map(id => ({ id, gain: now[id] - was[id], pts: now[id], e: L.elements[id] }))
+    .sort((a, b) => b.gain - a.gain);
+}
+/* A head on a parabola across the screen, and confetti. Deliberately
+   silly; it is a league that plays for a pint. Reduced motion turns the
+   whole thing off rather than doing a lesser version of it. */
+function celebrate(who, code) {
+  if (PARTY || !document.body) return;
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  PARTY = true;
+  const wrap = document.createElement("div");
+  wrap.className = "party";
+  wrap.innerHTML = `<canvas class="pconf"></canvas>
+    <div class="phead">${code ? `<img alt="" src="https://resources.premierleague.com/premierleague/photos/players/250x250/p${esc(code)}.png">` : ""}
+      <b>${esc(who.name)}</b><span>+${who.gain}</span></div>`;
+  document.body.appendChild(wrap);
+
+  const cv = wrap.querySelector(".pconf");
+  const w = cv.width = innerWidth, h = cv.height = innerHeight;
+  const g = cv.getContext("2d");
+  const hue = ["#5b8dff", "#f5b544", "#39d98a", "#ff6b6b", "#e9eef8"];
+  const bits = Array.from({ length: 140 }, () => ({
+    x: w / 2 + (Math.random() - 0.5) * w * 0.6, y: h * 0.55,
+    vx: (Math.random() - 0.5) * 9, vy: -Math.random() * 13 - 4,
+    r: 3 + Math.random() * 5, a: Math.random() * 6.3, s: (Math.random() - 0.5) * 0.3,
+    c: hue[(Math.random() * hue.length) | 0],
+  }));
+  const t0 = performance.now();
+  (function frame(t) {
+    const age = t - t0;
+    g.clearRect(0, 0, w, h);
+    for (const b of bits) {
+      b.x += b.vx; b.y += b.vy; b.vy += 0.32; b.vx *= 0.995; b.a += b.s;
+      g.save(); g.translate(b.x, b.y); g.rotate(b.a);
+      g.fillStyle = b.c; g.globalAlpha = Math.max(0, 1 - age / 3200);
+      g.fillRect(-b.r, -b.r * 0.6, b.r * 2, b.r * 1.2);
+      g.restore();
+    }
+    if (age < 3200) requestAnimationFrame(frame);
+    else { wrap.remove(); PARTY = false; }
+  })(t0);
+}
+/* The feed's minute, read for what it actually means.
+
+   It caps at 45 and at 90, so first-half stoppage and the half-time break
+   are the same number: caught one live at 45 with 54.7 minutes gone since
+   kick-off. The wall clock separates them - nobody plays ten minutes of
+   first-half stoppage, and the break is fifteen - so past fifty minutes
+   elapsed a 45 is half time and before that it is stoppage.
+
+   The plus carries no number because the feed has none. Working one out
+   from the clock would be a guess wearing the clothes of a fact, and in
+   the second half it would be a bad guess: the elapsed time by then also
+   contains the first half's stoppage and the length of the break, neither
+   of which anybody tells us. */
 function fixtureState(f) {
   if (f.fin) return `<span class="mtmin ft">FT</span>`;
   if (!f.started) return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
-  // a started match with no clock is a feed that has not got one, not a
-  // match in its first minute, and "0'" sitting there all evening looks
-  // far more broken than saying nothing about the time
-  return f.min ? `<span class="mtmin">${f.min}'</span>`
-    : `<span class="mtmin">LIVE</span>`;
+  const m = f.min || 0;
+  const el = f.ko ? (Date.now() - Date.parse(f.ko)) / 60000 : null;
+  if (m === 45 && el != null && el >= 50) return `<span class="mtmin ht">HALF TIME</span>`;
+  if (m === 45 || m === 90) return `<span class="mtmin">${m}<sup>+</sup></span>`;
+  if (!m) return `<span class="mtmin">LIVE</span>`;
+  return `<span class="mtmin">${m}'</span>`;
 }
 function crest(tid, name) {
   const t = PUB && PUB.teams && PUB.teams[tid];
@@ -1295,6 +1370,16 @@ function renderLive() {
     sec.innerHTML = `<div class="ticker"><div class="tickrow" id="lvticker"></div></div>
       <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>
       <div class="card"><b class="h" id="lvfxh"></b><div class="fxl" id="lvfxb"></div></div>`;
+  }
+  // the celebration wants a face, and the face lives in the stats file,
+  // so pull it in the first time a match is actually on rather than
+  // waiting for somebody to open a card mid-goal
+  if (inplay.length && !STATSREQ) ensureStats(() => {});
+  // before anything is drawn: has one of yours just scored?
+  const got = scorers(LIVE, ix);
+  if (got.length && document.visibilityState === "visible") {
+    const top = got[0];
+    celebrate({ name: top.e.n, gain: top.gain }, ID2CODE[top.id]);
   }
   const rows = ahead
     ? [...(PUB.managers || [])].sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99))
