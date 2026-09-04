@@ -1198,8 +1198,10 @@ function matchHTML(f, L, ix) {
       <span class="mtside away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
     </div>
     <div class="mtcols">
-      <div class="mtcol">${sideHTML(f.h, f, L, ix)}</div>
-      <div class="mtcol">${sideHTML(f.a, f, L, ix)}</div>
+      <div class="mtcol"><div class="mtcolh">${crest(f.h, hn)}${esc(hn)}</div>
+        ${sideHTML(f.h, f, L, ix)}</div>
+      <div class="mtcol"><div class="mtcolh">${crest(f.a, an)}${esc(an)}</div>
+        ${sideHTML(f.a, f, L, ix)}</div>
     </div></div>`;
 }
 /* One line in the gameweek's fixture list, and under it everyone in the

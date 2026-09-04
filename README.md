@@ -400,7 +400,10 @@ respects prefers-reduced-motion.
 Above the fixture list, while a match is on, is one card per match in
 play: the two crests either side, the score between them and the minute
 under that. Each side lists only the league's players in that match - the
-rest of the twenty-two is on television - and each row carries his points,
+rest of the twenty-two is on television - and each column names its club
+once the two of them stack on a phone, because an empty home side reading
+"nobody in the league owns a player here" above seven away players looks
+like a statement about the match that the rest of the card contradicts. and each row carries his points,
 who owns him, whether he is in that manager's counting eleven or on the
 bench (with an arrow where an automatic substitution moved him), what he
 is doing in the match - on, subbed off, on as a sub, not on - how many
