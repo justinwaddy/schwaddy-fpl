@@ -265,6 +265,32 @@ twenty lines that name the manager and load them, so there is one copy of
 the logic. Prices are the one thing that differs: only Ed's page fetches
 data/prices.json, and only Ed's page has the value columns.
 
+### What the league table says
+The gameweek columns were points, bench points and "to play", and by the
+time anyone read them two of the three were blank: "to play" is zero once
+a week is over, and bench points is the one number in draft you cannot do
+anything about. They are gone. What is there now is the week itself - the
+points, where he finished it, how many of his fifteen got a minute, how
+many got none, the automatic substitutions the game made for him, his best
+scorer, and what the best legal eleven out of his fifteen would have added,
+which is the whole of what selection cost him. Then his squad's injuries as
+they stand today, and the season total.
+
+Zeros are printed as zeros. A blank cell reads as a broken column, which is
+how the old one read.
+
+The gameweek half of the table now comes from the live feed whenever the
+feed is ahead of the cron - a started fixture in a gameweek at least as new
+as the one public.json scored - so on a Saturday it moves every fifteen
+seconds instead of four times a day. The season column stays on
+public.json, because the game only moves that when it processes the week,
+and a settled gameweek defers to public.json entirely, including its
+tie-breaks.
+
+Every table also carries a line above or below it saying what each column
+is. The tooltips are still there, but a tooltip is nothing on a phone and
+that is where these are read.
+
 ### The Live tab, on the six pages
 The tab is always there, and its bottom half is the gameweek's fixture
 list: every match in kick-off order, the crests, the score or the kick-off

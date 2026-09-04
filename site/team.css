@@ -200,3 +200,10 @@ color:var(--ink)}
 background:var(--panel2);border-radius:3px;padding:1px 4px;color:var(--green)}
 .evp.bad{color:var(--amber)}
 .evp.prov{color:var(--amber)}
+/* a number worth noticing on the league table: blanks, points given up, the unfit */
+td.num.warn{color:var(--amber)}
+/* what the columns are, said in the page rather than in a hover nobody on
+   a phone can reach */
+.legend{display:flex;flex-wrap:wrap;gap:2px 12px;padding:2px 0 8px;color:var(--dim);
+font-size:11px;line-height:1.5}
+.legend b{color:var(--tm,#8fa3c4);font-weight:600}

@@ -55,10 +55,11 @@ const TIPS = {
   "to play": "How many of his eleven have a match still to come this gameweek.",
   "on pitch": "How many of his eleven are playing right now.",
   "GW#": "Where he finished in this gameweek alone, whatever the season table says.",
-  "played": "How many of his eleven actually got on the pitch this gameweek.",
-  "0 min": "How many of his eleven never left the bench at their club. Every one of them is a scoring slot that returned nothing.",
+  "played": "How many of his fifteen got on the pitch this gameweek.",
+  "0 min": "How many of his fifteen never got a minute - injured, suspended, dropped or an unused substitute.",
   "subs": "Automatic substitutions the game made for him: a bench player brought on because a starter did not play.",
-  "top": "His highest scorer this gameweek.",
+  "top": "His highest scorer among the eleven that counted this gameweek.",
+  "cost": "What team selection cost him: the best legal eleven out of his fifteen, less what his actual eleven scored. Zero means he could not have done better.",
   "best XI": "What his eleven would have scored with perfect hindsight - the best legal eleven out of all fifteen. The gap to GW is what team selection cost him.",
   "unfit": "Players in his squad as it stands now who are injured, suspended, doubtful or otherwise not available. This one is about today, not the gameweek above.",
 };
@@ -266,19 +267,78 @@ function renderSquad() {
     ${bn.map(cell).join("")}</table></div>
     <div class="note">The eleven that scored gameweek ${PUB.gw}, with provisional substitutions applied
     the way the game applies them when a week ends. Waivers process the day before a deadline, so
-    just after they run this is last week's team and the squad above is the current one.</div></div>`;
+    just after they run this is last week's team and the squad above is the current one.</div></div>
+    <div class="card"><b class="h">What the columns mean</b>
+    ${legend([["next", "his club's next fixture - capitals at home, lower case away, a dash means no game"],
+      ["pts", "his points this season"], ["G", "goals"], ["A", "assists"],
+      ["CS", "clean sheets"], ["B", "bonus points"], ["mins", "minutes this season"],
+      ["form", "average points per match over the last thirty days"],
+      ["PPG", "points per game he has appeared in"],
+      ["played", "minutes in the gameweek below, or when his match kicks off"],
+      ["GW", "his points in that gameweek"], ["season", "his points across the season"],
+      ["IN / OUT", "an automatic substitution brought him on, or took him off"]]
+      .concat(SHOW_PRICES ? [["value", "his price in the classic game, in millions"]] : []))}
+    </div>`;
 }
 function ordinal(n) {
   if (n == null) return "unranked";
-  return n + (n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th");
+  const s = ["th", "st", "nd", "rd"], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+// A hover tooltip is nothing on a phone, and these tables are mostly read
+// on one. So every table also says what its columns are, in a line above
+// it, short enough to skim past once you know.
+function legend(pairs) {
+  return `<div class="legend">${pairs.map(([k, v]) =>
+    `<span><b>${esc(k)}</b> ${esc(v)}</span>`).join("")}</div>`;
 }
 
 /* ---------------- League ---------------- */
 let LGOPEN = null;
+// The best legal eleven out of all fifteen, scored with hindsight. In
+// draft the only selection lever is who you leave out and in what bench
+// order, so the gap between this and what he actually scored is the whole
+// of what team selection cost him that week.
+function bestEleven(squad) {
+  const by = { GKP: [], DEF: [], MID: [], FWD: [] };
+  for (const p of squad) (by[p.pos] || by.MID).push(p.pts || 0);
+  for (const k in by) by[k].sort((a, b) => b - a);
+  const take = (k, n) => by[k].slice(0, n).reduce((a, b) => a + b, 0);
+  const enough = (k, n) => by[k].length >= n;
+  let best = null;
+  for (let d = 3; d <= 5; d++) for (let m = 2; m <= 5; m++) {
+    const f = 11 - 1 - d - m;
+    if (f < 1 || f > 3) continue;
+    if (!enough("GKP", 1) || !enough("DEF", d) || !enough("MID", m) || !enough("FWD", f)) continue;
+    const t = take("GKP", 1) + take("DEF", d) + take("MID", m) + take("FWD", f);
+    if (best == null || t > best) best = t;
+  }
+  return best;
+}
+// The cron writes public.json four times a day. On a Saturday that is not
+// often enough for a table, and the live worker already knows - so
+// whenever the feed has a started fixture in a gameweek at least as new as
+// the one public.json scored, the gameweek half of this table comes from
+// the feed and moves with it. The season column stays on public.json,
+// because the game only moves that when it processes the week.
+function leagueLive() {
+  if (!LIVE || !PUB) return null;
+  if ((LIVE.gw ?? -1) < (PUB.gw ?? 0)) return null;
+  if (!(LIVE.fixtures || []).some(f => f.started)) return null;
+  // when the cron has already scored the gameweek the feed is reporting
+  // and nothing is in play, public.json is the game's own word for it -
+  // including the tie-breaks in its gameweek ranking
+  const t = liveTable(LIVE);
+  if (LIVE.gw === PUB.gw && !t.inplay.length) return null;
+  const by = {};
+  t.mgrs.forEach((m, i) => { by[m.entry] = { ...m, gw_rank: i + 1 }; });
+  return { gw: LIVE.gw, by, inplay: t.inplay.length };
+}
 function renderLeague() {
   const sec = $("league");
   if (!PUB) { sec.innerHTML = loading("league"); return; }
   const byId = {}; (PUB.players || []).forEach(p => { byId[p.id] = p; });
+  const LV = leagueLive();
   const rows = [...(PUB.managers || [])].sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
   const value = m => {
     if (!SHOW_PRICES || !PRICES) return null;
@@ -286,22 +346,53 @@ function renderLeague() {
     for (const p of m.squad) { const c = byId[p.id]; const v = c && priceOf(c.code); if (v) { t += v; n++; } }
     return n ? t : null;
   };
-  let h = `<div class="card"><b class="h">Gameweek ${PUB.gw}</b><div class="wrap"><table>
-    <tr><th></th>${ths("manager", ["GW", "num"], ["bench", "num"], ["to play", "num"],
+  const cols = 10 + (SHOW_PRICES ? 1 : 0);
+  let h = `<div class="card"><b class="h">Gameweek ${LV ? LV.gw : PUB.gw}</b>
+    ${LV && LV.inplay ? `<div class="lvstatus"><span class="livedot"></span><b>LIVE</b> &middot;
+      ${LV.inplay} match${LV.inplay > 1 ? "es" : ""} in play &middot; updating as points land</div>` : ""}
+    ${legend([["GW", "points this gameweek"], ["GW#", "where he finished it"],
+      ["played", "of his fifteen who got minutes"], ["0 min", "who got none"],
+      ["subs", "automatic substitutions made for him"], ["top", "his best scorer"],
+      ["cost", "what the best legal eleven of his fifteen would have added"],
+      ["unfit", "injured or doubtful in his squad right now"],
+      ["season", "his total, as the game has it"]])}
+    <div class="wrap"><table>
+    <tr><th></th>${ths("manager", ["GW", "num"], ["GW#", "num"], ["played", "num"],
+      ["0 min", "num"], ["subs", "num"], "top", ["cost", "num"], ["unfit", "num"],
       ["season", "num"])}${SHOW_PRICES ? th("value", "num") : ""}<th></th></tr>`;
-  rows.forEach((m, i) => {
-    const v = value(m);
+  rows.forEach((m0, i) => {
+    const lv = LV && LV.by[m0.entry];
+    // roster and prices are public.json's; everything about the gameweek
+    // comes from whichever of the two is further along
+    const m = lv ? { ...m0, ...lv } : m0;
+    const v = value(m0);
+    const xi = (m.squad || []).filter(counting);
+    // across all fifteen, not the eleven: after the automatic
+    // substitutions the counting eleven has almost always all played, so
+    // that version of the column would sit on 11 and 0 every week
+    const played = (m.squad || []).filter(p => p.mins).length;
+    const blanks = (m.squad || []).length - played;
+    const top = xi.reduce((a, p) => (a && a.pts >= p.pts ? a : p), null);
+    const best = bestEleven(m.squad || []);
+    const cost = best == null ? null : Math.max(0, best - (m.live ?? 0));
+    const unfit = (m.roster || []).filter(p => p.status && p.status !== "a").length;
     h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-e="${m.entry}">
       <td class="tm">${i + 1}</td>
       <td><span class="nm">${esc(m.name)}</span> <span class="tm">${esc(m.team)}</span></td>
-      <td class="num">${m.live}</td><td class="num"><span class="tm">${m.bench}</span></td>
-      <td class="num">${m.to_play || ""}</td><td class="num">${m.total ?? "-"}</td>
+      <td class="num">${m.live}</td>
+      <td class="num"><span class="tm">${m.gw_rank ? ordinal(m.gw_rank) : "-"}</span></td>
+      <td class="num">${played}</td>
+      <td class="num${blanks ? " warn" : ""}">${blanks}</td>
+      <td class="num"><span class="tm">${m.subs || 0}</span></td>
+      <td>${top && top.pts ? `${nameTag(top)} <span class="tm">${top.pts}</span>` : `<span class="tm">-</span>`}</td>
+      <td class="num${cost ? " warn" : ""}">${cost ? "-" + cost : "0"}</td>
+      <td class="num${unfit ? " warn" : ""}">${unfit}</td>
+      <td class="num">${m.total ?? "-"}</td>
       ${SHOW_PRICES ? `<td class="num">${v != null ? "&pound;" + v.toFixed(1) : "-"}</td>` : ""}
       <td class="chev">${LGOPEN === m.entry ? "&#9662;" : "&#9656;"}</td></tr>`;
-    if (LGOPEN === m.entry) h += `<tr><td colspan="${SHOW_PRICES ? 8 : 7}" style="padding:0 0 6px">${squadHTML(m, byId)}</td></tr>`;
+    if (LGOPEN === m.entry) h += `<tr><td colspan="${cols + 2}" style="padding:0 0 6px">${squadHTML(m, byId)}</td></tr>`;
   });
-  h += `</table></div><div class="note">Season is the table as the game has it; it moves when the
-    gameweek is processed. Click a manager for the squad.</div></div>`;
+  h += `</table></div><div class="note">Click a manager for his squad.</div></div>`;
   sec.innerHTML = h;
   sec.querySelectorAll("[data-e]").forEach(r => r.addEventListener("click", () => {
     const e = +r.dataset.e; LGOPEN = (LGOPEN === e ? null : e); renderLeague();
@@ -329,6 +420,18 @@ function squadHTML(m, byId) {
 
 /* ---------------- All players ---------------- */
 let PSORT = { k: "total_points", dir: -1 }, PQ = "";
+// The search box is built once and never rewritten. Rendering the whole
+// section on every keystroke replaced the input with a new node, so the
+// phone keyboard closed on the first letter typed and the caret went with
+// it; refocusing afterwards was focusing the element that had just been
+// thrown away.
+function playersShell(sec) {
+  if (sec.querySelector("#pq")) return;
+  sec.innerHTML = `<input type="search" id="pq" placeholder="Search a player or club"
+    value="${esc(PQ)}" autocomplete="off" autocapitalize="off" autocorrect="off"
+    spellcheck="false"><div id="pbody"></div>`;
+  $("pq").addEventListener("input", e => { PQ = e.target.value; renderPlayers(); });
+}
 function renderPlayers() {
   const sec = $("players");
   if (!PUB) { sec.innerHTML = loading("players"); return; }
@@ -350,8 +453,15 @@ function renderPlayers() {
     const x = val(a), y = val(b);
     return (typeof x === "string" ? x.localeCompare(y) : x - y) * PSORT.dir;
   }).slice(0, 400);
-  let h = `<input type="search" id="pq" placeholder="Search a player or club" value="${esc(PQ)}">
-    <div class="card"><div class="wrap"><table><tr>` +
+  playersShell(sec);
+  let h = `<div class="card">
+    ${legend([["pos", "goalkeeper, defender, midfielder, forward"], ["owner", "who holds him"],
+      ["next", "his club's next fixture - capitals at home, lower case away"],
+      ["mins", "minutes this season"], ["pts", "points this season"], ["G", "goals"],
+      ["A", "assists"], ["CS", "clean sheets"], ["SV", "saves"], ["B", "bonus points"],
+      ["form", "points per match over the last thirty days"], ["PPG", "points per appearance"]]
+      .concat(SHOW_PRICES ? [["value", "his classic-game price"]] : []))}
+    <div class="wrap"><table><tr>` +
     cols.map(([k, lab, num]) => `<th class="s ${num ? "num" : ""}" data-k="${k}"
       title="${esc((TIPS[lab] || "") + (TIPS[lab] ? " " : "") + "Click to sort.")}">${esc(lab)}${
       PSORT.k === k ? (PSORT.dir < 0 ? " &darr;" : " &uarr;") : ""}</th>`).join("") + `</tr>`;
@@ -370,14 +480,12 @@ function renderPlayers() {
   }
   h += `</table></div><div class="note">Every player in the game, ${list.length} shown, sorted by
     the column you click. All figures are this season's totals as the game reports them.</div></div>`;
-  sec.innerHTML = h;
-  sec.querySelectorAll("[data-k]").forEach(th => th.addEventListener("click", () => {
+  $("pbody").innerHTML = h;
+  $("pbody").querySelectorAll("[data-k]").forEach(th => th.addEventListener("click", () => {
     const k = th.dataset.k;
     PSORT = { k, dir: PSORT.k === k ? -PSORT.dir : (k === "name" || k === "owner" || k === "next" ? 1 : -1) };
     renderPlayers();
   }));
-  const box = $("pq");
-  if (box) box.addEventListener("input", () => { PQ = box.value; renderPlayers(); box.focus(); });
 }
 
 function loading(what) {
@@ -648,10 +756,6 @@ function liveTable(L) {
     next: L.fixtures.filter(f => !f.started).map(f => f.ko).sort()[0] || null,
     allDone: L.fixtures.length > 0 && L.fixtures.every(f => f.fin),
   };
-}
-function ordinal(n) {
-  const s = ["th", "st", "nd", "rd"], v = n % 100;
-  return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 function koText(iso) {
   const d = new Date(iso);
@@ -990,7 +1094,7 @@ async function pollLive() {
     if (j.error) throw new Error(j.error);
     LIVE = j; LIVEERR = null;
   } catch (e) { LIVEERR = String(e.message || e); }
-  renderLive();
+  renderLive(); renderLeague();
   const d = liveDelay();
   if (d != null && !document.hidden) LIVETIMER = setTimeout(pollLive, d);
 }
