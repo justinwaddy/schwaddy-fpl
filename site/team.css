@@ -45,6 +45,7 @@ color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans",system-ui;margin:6px
 .b-score{background:var(--blue)}.b-live{background:var(--green)}.b-wrap{background:var(--blue)}
 .b-overtake{background:var(--amber)}.b-race{background:var(--amber)}.b-bench{background:var(--fwd)}
 .b-pint{background:var(--amber)}.b-freeagent{background:var(--gkp)}
+.b-headline{background:var(--ink)}.b-squad{background:var(--mid)}
 .chip{background:var(--panel);border:1px solid var(--line);border-radius:14px;color:var(--dim);
 padding:5px 12px;font:600 12px "IBM Plex Sans",system-ui;cursor:pointer;margin:2px 6px 8px 0}
 .chip.on{color:var(--ink);border-color:var(--blue);background:var(--panel2)}

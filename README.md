@@ -248,12 +248,25 @@ filter to news, waivers, injuries or results.
 
 The league's own running record comes through public.json: who claimed
 whom, who is injured or cleared, who hauled, who left points on the bench,
-how the table moved. Those are facts of the draft, so they travel. Three
-kinds do not, and public.py names them: "projection" is the model talking,
-"squad" is written from Justin's chair ("Your GW2 still to play"), and
-"headline" is the editorial lane, which is research commissioned for one
-manager. A text filter sits behind that type whitelist as well, so an
-event that discusses a forecast is dropped whatever it calls itself.
+how the table moved, and the editorial lane's football news with the
+article behind it. Almost all of it travels - 203 of 220 events.
+
+The exception is the research into Justin's own starting eleven, which is
+the one thing in the feed that is genuinely an edge. Headlines, squad
+notes and projections carry a scope, and news.py sets it to "mine" exactly
+when the item is about his own squad, so that is the line: those stay
+behind and the same kinds scoped to the league or a free agent travel. The
+scope test is applied only to those three kinds, because it is set loosely
+elsewhere - the gameweek scoreboards are "mine" too, and using it
+generally would drop half the league's results.
+
+Two guards sit behind that. Anything addressed to him directly is cut,
+whatever it is filed under, since "Your GW2 best: Haaland 13" arrives as a
+score. And a sentence discussing the forecast is removed from an item
+rather than the item being dropped: the editorial lane often closes a
+piece of real news with a line on what the model makes of the player, and
+losing the Barcola signing over its last sentence would be a poor trade.
+An item cut down to nothing goes entirely.
 
 data/league_news.json is the second feed, written once a day by its own
 scheduled session, separately from the editorial lane. Every reported item cites the article it came from, from a

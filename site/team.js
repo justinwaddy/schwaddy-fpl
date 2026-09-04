@@ -278,7 +278,7 @@ const NEWSGROUP = {
   haul: "results", flop: "results", lowlight: "results", score: "results",
   live: "results", wrap: "results", overtake: "results", race: "results",
   bench: "results", pint: "results", freeagent: "results",
-  news: "news", opinion: "news",
+  news: "news", opinion: "news", headline: "news", squad: "results",
 };
 let NEWSFILTER = "all";
 function newsFeed() {
@@ -288,7 +288,9 @@ function newsFeed() {
                text: e.text, source: e.source });
   }
   for (const e of (PUB && PUB.news) || []) {
-    out.push({ ts: e.ts, kind: e.type, text: e.text, source: null });
+    // editorial items carry the article they came from; the rest do not
+    out.push({ ts: e.ts, kind: e.type, text: e.text,
+               source: e.url ? { title: "Source", url: e.url } : null });
   }
   return out.sort((a, b) => String(b.ts || "").localeCompare(String(a.ts || "")));
 }

@@ -23,6 +23,7 @@ fetches.
 """
 import json
 import os
+import re
 
 # The counting stats the game publishes. Deliberately no expected-goals or
 # ICT family: those are somebody else's model, and the point of this file
@@ -40,22 +41,46 @@ SQUAD_KEYS = ("id", "slot", "name", "pos", "team", "pts", "mins", "played",
               "settled", "to_play", "status", "news", "subbed_in", "subbed_out")
 
 
-# The pipeline's own feed is mostly public fact - who claimed whom, who is
-# injured, who hauled, how the table moved - and that is worth carrying.
-# Three kinds are not. "projection" is the model talking. "squad" is
-# written from Justin's chair ("Your GW2 still to play"). "headline" is
-# the editorial lane, which is research commissioned for one manager.
-NEWS_TYPES = ("move", "injury", "recovery", "haul", "flop", "lowlight",
-              "score", "live", "wrap", "overtake", "race", "bench", "pint",
-              "freeagent")
-NEWS_KEEP = 150
-# Belt and braces over the type whitelist: an event whose text talks about
-# a forecast does not travel, whatever it calls itself.
-NEWS_BANNED_TEXT = ("project", "expected pts", "the model", "next 5", "next5")
+# Every kind of event in the pipeline's feed travels, because almost all of
+# it is plain fact about the league: who claimed whom, who is injured, who
+# hauled, how the table moved, and the editorial lane's football news.
+#
+# The exception is the research into Justin's own starting eleven, which is
+# the one thing here that is genuinely his edge - whether Garner starts,
+# whether Marmoush is in the XI, what the model projects. Those three kinds
+# of event carry a scope, and news.py sets it to "mine" exactly when the
+# item is about his own squad, so that is the line: a headline, a squad
+# note or a projection scoped to him stays behind, and the same kinds
+# scoped to the league or to a free agent travel like everything else.
+#
+# The scope test is applied only to those three. It is set loosely
+# elsewhere - the GW scoreboards are "mine" too - so using it as a general
+# filter would drop half the league's results.
+PERSONAL_TYPES = ("headline", "squad", "projection")
+NEWS_KEEP = 400   # the whole feed comfortably; news.py trims its own file
+# Belt and braces over the scope rule: a sentence that talks about the
+# forecast does not travel, whatever event it is filed under. The editorial
+# lane often closes a piece of ordinary football news with a line on what
+# the model makes of the player - "he is NOT in the draft pool yet ... when
+# he lands the model will underrate him for four gameweeks". Dropping the
+# whole item over that loses real news, so only the offending sentence is
+# cut, and the item goes only if nothing is left standing.
+NEWS_BANNED_TEXT = ("project", "expected pts", "the model", "model will",
+                    "your dashboard", "next 5", "next5", "availability")
 
 
 def _load(path):
     return json.load(open(path)) if os.path.exists(path) else None
+
+
+def _trim(text):
+    """The text with any sentence about the forecast taken out."""
+    text = (text or "").strip()
+    keep = [s for s in re.split(r"(?<=[.!?])\s+", text)
+            if not any(b in s.lower() for b in NEWS_BANNED_TEXT)]
+    out = " ".join(keep).strip()
+    # a fragment left over from heavy cutting says nothing; drop it
+    return out if len(out) >= 25 else ""
 
 
 def _next_fixtures(fixtures, gw):
@@ -140,13 +165,17 @@ def build(data_dir):
 
     news = []
     for e in (_load(f"{data_dir}/news.json") or {}).get("events") or []:
-        if e.get("type") not in NEWS_TYPES:
+        kind = e.get("type") or ""
+        if kind in PERSONAL_TYPES and e.get("scope") == "mine":
+            continue                     # his own starters, and the model
+        text = _trim(e.get("text") or "")
+        # news.py addresses Justin directly in a few places, and not only
+        # in the three personal kinds: "Your GW2 best: Haaland 13, ..." is
+        # filed as a score. Anything written to him is written for him.
+        if not text or text.lower().startswith("your "):
             continue
-        text = (e.get("text") or "").strip()
-        low = text.lower()
-        if not text or any(b in low for b in NEWS_BANNED_TEXT):
-            continue
-        news.append(dict(ts=e.get("ts"), type=e.get("type"), text=text[:400]))
+        news.append(dict(ts=e.get("ts"), type=kind, text=text[:400],
+                         url=(e.get("url") or "")[:300] or None))
     news.sort(key=lambda e: e.get("ts") or "", reverse=True)
 
     return dict(
