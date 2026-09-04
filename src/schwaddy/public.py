@@ -125,6 +125,13 @@ def build(data_dir):
     waivers = (nxt_ev or {}).get("waivers_time")
     next_gw = (nxt_ev or {}).get("id")
     nxt = _next_fixtures(fixtures, (gw or 0) + 1)
+    # The coming gameweek's fixture list. The live feed reports whichever
+    # gameweek the game itself considers current, which between a Monday
+    # and the next deadline is the one that has just finished, so without
+    # this the Live tab spends half the week showing last week's results.
+    nxt_fx = sorted(([f.get("team_h"), f.get("team_a"), f.get("kickoff_time")]
+                     for f in fixtures if f.get("event") == next_gw),
+                    key=lambda r: r[2] or "")
 
     # ownership is a fact of the draft, not a projection; it comes from
     # predictions.json only because that is where the id->owner map is
@@ -202,7 +209,7 @@ def build(data_dir):
         next_gw=next_gw, deadline=deadline, waivers=waivers,
         finished=league.get("finished"), all_played=league.get("all_played"),
         teams=teams, managers=managers, players=players,
-        news=news[:NEWS_KEEP])
+        fixtures=nxt_fx, news=news[:NEWS_KEEP])
 
 
 def _code_of(p, stats):

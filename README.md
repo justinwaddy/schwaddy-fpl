@@ -272,6 +272,15 @@ time, and how many of the league's players are on each side - "2 of
 yours" where they are the reader's, the league's count where they are not,
 spelled out because a bare number beside a scoreline reads as part of it.
 
+Which gameweek that is takes some care. The live feed reports whichever
+one the game itself calls current, which from the last whistle on Monday
+until Friday's deadline is the week that has just finished - so a tab
+built only on the feed would spend half of every week showing last week's
+results. public.json therefore carries the coming gameweek's fixtures, and
+once every match in the feed is final the list switches to those: no
+scores, just the kick-offs and who owns whom. It hands back to the feed
+when the deadline rolls it forward.
+
 What comes and goes is the live half above it. A ticker runs across the
 top, the six managers in live-points order,
 re-rendered whenever the standings change and left alone when they do not,

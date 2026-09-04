@@ -735,17 +735,17 @@ function matchHTML(f, L, ix) {
       <div class="mtcol">${sideHTML(f.a, f, L, ix)}</div>
     </div></div>`;
 }
-/* One line in the gameweek's fixture list: the schedule, not the scoring. */
-function fxRow(f, L, ix) {
-  const hn = L.teams[f.h] || f.h, an = L.teams[f.a] || f.a;
-  const own = tid => Object.keys(L.elements || {})
-    .filter(id => L.elements[id].t === tid && ix.owner[id] != null);
+/* One line in the gameweek's fixture list: the schedule, not the scoring.
+   own(tid) returns [total owned, how many are the reader's], so the same
+   row serves the live feed and the pre-deadline preview. */
+function fxRow(f, name, own) {
+  const hn = name(f.h), an = name(f.a);
   // a bare count beside a scoreline reads as part of the score, so these
   // say what they are
   const side = tid => {
-    const ids = own(tid), mine = ids.filter(id => ix.owner[id] === ME).length;
+    const [all, mine] = own(tid);
     if (mine) return `<span class="fxc me">${mine} of yours</span>`;
-    if (ids.length) return `<span class="fxc">${ids.length} in league</span>`;
+    if (all) return `<span class="fxc">${all} in league</span>`;
     return "";
   };
   const mid = f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v";
@@ -754,6 +754,20 @@ function fxRow(f, L, ix) {
     <span class="fxm"><b>${mid}</b>${fixtureState(f)}</span>
     <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span>${side(f.a)}</span>
   </div>`;
+}
+/* The coming gameweek, from public.json, for the stretch between the last
+   whistle and the next deadline when the live feed still reports the old
+   one. No scores exist yet, so these rows are the schedule only. */
+function previewFixtures() {
+  if (!PUB || !(PUB.fixtures || []).length) return "";
+  const name = tid => ((PUB.teams || {})[tid] || [])[0] || String(tid);
+  const own = tid => {
+    const ps = (PUB.players || []).filter(p => p.team === tid && p.owner != null);
+    return [ps.length, ps.filter(p => p.owner === ME).length];
+  };
+  return PUB.fixtures
+    .map(([h, a, ko]) => fxRow({ h, a, ko, started: false, fin: false }, name, own))
+    .join("");
 }
 function tickerText(L, ix) {
   const rows = (L.managers || []).map(m => {
@@ -813,17 +827,28 @@ function renderLive() {
         if (d.open) LVOPEN.add(d.dataset.k); else LVOPEN.delete(d.dataset.k);
       }));
   } else {
-    const next = fx.filter(f => !f.started).map(f => f.ko).sort()[0];
+    const next = fx.filter(f => !f.started).map(f => f.ko).sort()[0] ||
+      (PUB && PUB.next_gw > LIVE.gw ? ((PUB.fixtures || [])[0] || [])[2] : null);
     $("lvstat").innerHTML = next
       ? `Nothing in play. Next kick-off ${esc(koText(next))}.`
       : `Every match in gameweek ${LIVE.gw} has finished.`;
     $("lvbody").innerHTML = "";
   }
 
-  $("lvfxh").textContent = `Gameweek ${LIVE.gw} fixtures`;
-  $("lvfxb").innerHTML = [...fx]
+  // once the feed's gameweek is done the fixtures worth showing are the
+  // next one's, which only public.json knows about until the deadline
+  const ahead = fx.length && fx.every(f => f.fin) &&
+    PUB && PUB.next_gw > LIVE.gw && (PUB.fixtures || []).length;
+  const name = tid => LIVE.teams[tid] || String(tid);
+  const own = tid => {
+    const ids = Object.keys(LIVE.elements || {})
+      .filter(id => LIVE.elements[id].t === tid && ix.owner[id] != null);
+    return [ids.length, ids.filter(id => ix.owner[id] === ME).length];
+  };
+  $("lvfxh").textContent = `Gameweek ${ahead ? PUB.next_gw : LIVE.gw} fixtures`;
+  $("lvfxb").innerHTML = (ahead ? previewFixtures() : [...fx]
     .sort((a, b) => String(a.ko || "").localeCompare(String(b.ko || "")))
-    .map(f => fxRow(f, LIVE, ix)).join("") ||
+    .map(f => fxRow(f, name, own)).join("")) ||
     `<div class="note">No fixtures in this gameweek.</div>`;
 }
 function liveDelay() {

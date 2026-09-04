@@ -1,15 +1,5 @@
 {
- "items": [
-  {
-   "id": "2026-09-04-a5cf108f34",
-   "key": "a5cf108f34",
-   "ts": "2026-09-04T12:40",
-   "frm": "Justin",
-   "about": "Robert",
-   "text": "End-to-end test of the suggest box, please ignore and delete.",
-   "used": false
-  }
- ],
+ "items": [],
  "runs": [
   {
    "ts": "2026-09-04T12:40",
