@@ -435,6 +435,23 @@ from bps under the same rules as everywhere else - and suppresses it the
 moment the breakdown itself names a Bonus row, or the two would be added
 together and every hauling player would read three points high.
 
+The clock reads what the feed means rather than what it says. FPL's minute
+caps at 45 and at 90, so first-half stoppage and the half-time break are the
+same number - caught one live at 45 with 54.7 minutes gone. The wall clock
+separates them: nobody plays ten minutes of first-half stoppage and the break
+is fifteen, so past fifty minutes elapsed a 45 is HALF TIME and before it is
+45+. The plus carries no number because the feed has none, and working one
+out from the clock in the second half would mean guessing the first half's
+stoppage and the length of the break as well.
+
+When one of the reader's own players gains three points or more between two
+polls - a goal, an assist, a clean sheet, a bonus jump, never a minutes tick -
+his head sails across the screen on a parabola and the confetti goes up. The
+poll before is the baseline, so opening the page at nine on a Saturday does
+not fire off everything that happened while you were out, and
+prefers-reduced-motion turns the whole thing off rather than doing a smaller
+version of it.
+
 Multiple matches mean multiple cards, ordered by how many of the reader's
 own players are in each, so his game is the one at the top.
 
@@ -537,6 +554,27 @@ standings, and never about anything a person did not put into the league.
 Suggestions are marked used once they run, so a line does not come round
 twice, and the archive is never published - the pages show the opinion,
 not who asked for it.
+
+## Confirmed line-ups, an hour before kick-off
+Teamsheets are published one hour before a match and neither FPL API carries
+them, so this is a research job against the same sources list: read the
+confirmed eleven, never a predicted one, and say so plainly where a sheet is
+not out rather than guessing at it. The output is one item per kick-off slot
+on the league news page, grouped by manager - who of his is starting, who has
+been left out.
+
+Routines take one cron expression with an hourly floor, and kick-offs land at
+:00 and :30, so "one hour before each kick-off" cannot be scheduled
+literally. Hourly at :00 across the match window catches every slot between
+thirty and sixty minutes before it starts, always after the sheets are out,
+and a gate in the first step stops the run in one command when nothing is
+due - which is most firings.
+
+The prompt is .github/routines/lineups.md. It has to be created in the
+claude.ai Routines UI: the MCP create_trigger call available inside a Claude
+Code session stores no repository and no tools, so a Routine made that way
+fires into an empty container and dies before it reads anything. Both
+existing Routines were made in the UI.
 
 ## Bugs and ideas
 Every page carries a button in the top right - the six manager pages, the
