@@ -1,5 +1,64 @@
 {
- "generated": null,
- "items": [],
- "runs": []
+ "generated": "2026-09-04T11:40 UTC",
+ "items": [
+  {
+   "id": "2026-09-04-woltemade-juventus-loan",
+   "ts": "2026-09-04T11:40",
+   "kind": "news",
+   "text": "Nick Woltemade has left Newcastle on a season-long loan to Juventus, completing his medical in Turin on deadline day. It comes just a year after his club-record 69 million pound move from Stuttgart, and takes him out of the Premier League entirely - a blow for Justin, whose Schwaddy squad carries him up front.",
+   "source": {"title": "Matias Fernandez-Pardo transfer news: Newcastle sign Lille forward ahead of transfer deadline in deal worth £51m", "url": "https://www.skysports.com/football/news/11095/13579855/matias-fernandez-pardo-transfer-news-newcastle-sign-lille-forward-ahead-of-transfer-deadline-in-deal-worth-lb51m"}
+  },
+  {
+   "id": "2026-09-04-liverpool-ipswich-team-news",
+   "ts": "2026-09-04T11:40",
+   "kind": "news",
+   "text": "Liverpool travel to Ipswich tonight with Bradley Barcola in line for his debut after his move from PSG, though boss Andoni Iraola may start him from the bench given he has not played since mid-July. Joe Gomez, Conor Bradley, Federico Chiesa, Hugo Ekitike and Giovanni Leoni are all still out. It is a big night for Marcus, who owns keeper Alisson Becker, and for Ben C, who has five Liverpool players on his books including Virgil van Dijk in a defense that has already conceded four goals in two games.",
+   "source": {"title": "Ipswich Town v Liverpool: Team news", "url": "https://www.liverpoolfc.com/news/ipswich-town-v-liverpool-team-news"}
+  },
+  {
+   "id": "2026-09-04-arsenal-saliba-out",
+   "ts": "2026-09-04T11:40",
+   "kind": "news",
+   "text": "Arsenal have confirmed William Saliba faces an extended spell out after aggravating a back injury at the World Cup, with his return not expected until around the November international break. Robert, who owns both Gabriel and Cristhian Mosquera in Arsenal's back line, and Marcus, who has Riccardo Calafiori, will be watching how Mikel Arteta covers the gap.",
+   "source": {"title": "William Saliba injury: Arsenal confirm France international will miss extended period after returning from World Cup with back problem", "url": "https://www.skysports.com/football/news/11670/13566125/william-saliba-injury-arsenal-confirm-france-international-will-miss-extended-period-after-returning-from-world-cup-with-back-problem"}
+  },
+  {
+   "id": "2026-09-04-arsenal-chelsea-derby",
+   "ts": "2026-09-04T11:40",
+   "kind": "news",
+   "text": "Arsenal host Chelsea on Sunday with both sides unbeaten through two games, but Chelsea are managing an injury to Moises Caicedo in midfield, a problem made worse by selling Enzo Fernandez to Manchester City in the same window - he now lines up for Ben D rather than Chelsea. Robert has three of Sunday's Chelsea players in Martinez, James and Estevao, plus Arsenal pair Gabriel and Saka, giving him a stake on both sides of the derby.",
+   "source": {"title": "Arsenal vs Chelsea: Does Xabi Alonso have a style issue? And will it affect ability to compete at top of Premier League?", "url": "https://www.skysports.com/football/news/11668/13580427/arsenal-vs-chelsea-does-xabi-alonso-have-a-style-issue-and-will-it-affect-ability-to-compete-at-top-of-premier-league"}
+  },
+  {
+   "id": "2026-09-04-man-utd-carrick-everton",
+   "ts": "2026-09-04T11:40",
+   "kind": "news",
+   "text": "Michael Carrick says he is convinced Manchester United's squad is stronger than at the start of the transfer window, pointing to how his side fought back from 0-3 down at Hull to beat Ipswich 5-2, ahead of Sunday's trip to Everton. Ben D owns Bruno Fernandes and Edward has Harry Maguire and keeper Senne Lammens in United's XI, while Justin's Everton pair of Jordan Pickford and James Garner are on the other side.",
+   "source": {"title": "Manchester United latest: Michael Carrick happy with transfer business and convinced that his squad has improved after summer window", "url": "https://www.skysports.com/football/news/11661/13580994/manchester-united-latest-michael-carrick-happy-with-transfer-business-and-convinced-that-his-squad-has-improved-after-summer-window"}
+  },
+  {
+   "id": "2026-09-04-op-schwaddy-front-line",
+   "ts": "2026-09-04T11:40",
+   "kind": "opinion",
+   "text": "Schwaddy was already leaning hard on Haaland and Marmoush up front, and losing a fourth senior forward off the depth chart to a loan move is not what a squad rooted to the bottom of the table needed this week.",
+   "source": null
+  },
+  {
+   "id": "2026-09-04-op-haramball-lead",
+   "ts": "2026-09-04T11:40",
+   "kind": "opinion",
+   "text": "Two gameweeks in and Haramball Enthusiast already has a comfortable points cushion built from six different clubs rather than one standout name, which is the sort of start that leaves the other five unsure which transfer would even close the gap.",
+   "source": null
+  },
+  {
+   "id": "2026-09-04-op-delap-dance-liverpool",
+   "ts": "2026-09-04T11:40",
+   "kind": "opinion",
+   "text": "Delap Dance is putting five Liverpool players on the pitch at Portman Road tonight at once, full-backs bombing on included - glorious when it clicks, but this squad's entire week now hinges on one Anfield away day.",
+   "source": null
+  }
+ ],
+ "runs": [
+  {"ts": "2026-09-04T11:40 UTC", "news": 5, "opinion": 3, "matchday": true, "note": "First run, page was empty and roast archive had zero entries so all three opinion pieces are original: Justin's thin front line after Woltemade's loan exit, Marcus's early points lead, and Ben C's five-player Liverpool stack for tonight's Ipswich match. News led with Woltemade's move to Juventus and Liverpool's Ipswich team news, plus Arsenal/Chelsea derby and Man Utd/Everton previews for Sunday."}
+ ]
 }
