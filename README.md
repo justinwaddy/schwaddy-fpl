@@ -366,7 +366,12 @@ The tab is always there, and its bottom half is the gameweek's fixture
 list: every match in kick-off order, the crests, the score or the kick-off
 time, and under each one every player in the league who is in that match:
 his name, his owner, and his points once it has started. The reader's own
-are outlined and sort to the front. A count would have fitted in less
+are outlined and sort to the front. Clicking one opens his match underneath
+the row - what he did, minute by scoring event, his minutes, whether he was
+in the eleven and what happened to him in the game. That works for a match
+that finished days ago as much as one that is on, because the scoring
+breakdown is in the feed for every fixture of the gameweek and not only the
+live ones. A count would have fitted in less
 room, but which of your own players have a game is the thing worth
 knowing, and only the names say it. They are clickable through to the
 player card, same as every other name on the page.
@@ -409,7 +414,9 @@ bench (with an arrow where an automatic substitution moved him), what he
 is doing in the match - on, subbed off, on as a sub, not on - how many
 minutes he has, and what he has actually done: goal +6, 4 saves +1, 2
 conceded -1. Opening the row gives the same breakdown in full, with the
-counts and the game's own wording.
+counts and the game's own wording. His name is underlined and takes its own
+click, opening the season card rather than the row - inside a collapsible
+one click would otherwise do both.
 
 That comes from the API's explain block, which the live worker passes
 through per fixture.
@@ -441,7 +448,12 @@ same number - caught one live at 45 with 54.7 minutes gone. The league's own
 feed settles it properly: it names the phase, "1" or "2", so half time is a
 fact rather than a guess, and it carries the clock to the second. The wall
 clock heuristic survives as the fallback for a match the stats feed has not
-got. The plus after 45 or 90 carries no number because neither feed has one.
+got. The plus after 45 or 90 does carry a number, once the worker passing the
+league's clock is deployed: FPL's minute stops at the cap and can never tell
+us the added time, but the real clock does not stop, so 92:00 in the second
+half is 90+2. Without it the plus stands alone. Which half the cap belongs
+to is decided by the minute rather than by the phase, because reading 90 as
+"45+" when a field was missing is exactly what an earlier version did.
 
 It also ticks. A snapshot is cached fifteen seconds at the worker and polled
 every fifteen at the page, so the minute in it is up to half a minute old

@@ -156,6 +156,9 @@ function ensureStats(then) {
 document.addEventListener("click", ev => {
   const el = ev.target && ev.target.closest && ev.target.closest("[data-pk],[data-pkid]");
   if (!el) return;
+  // inside a collapsible row the same click would also toggle the row, so
+  // the name takes the click and the rest of the row keeps its own job
+  if (el.closest("summary")) { ev.preventDefault(); ev.stopPropagation(); }
   const code = el.dataset.pk || ID2CODE[el.dataset.pkid];
   CARD = code || { id: el.dataset.pkid };
   ensureStats(drawCard);
@@ -1053,7 +1056,7 @@ let LVOPEN = new Set(), TICK = "";
    happened while you were out. Three points is the floor: a goal, an
    assist, a clean sheet, a bonus jump. Minutes ticking over is not a
    moment. */
-let LVSEEN = null, PARTY = false;
+let LVSEEN = null, PARTY = false, FXOPEN = {};
 const PARTY_FLOOR = 3;
 function scorers(L, ix) {
   const now = {};
@@ -1133,6 +1136,7 @@ function matchPhase(f) {
     if (f.phase === "2" && m >= 90) return "stoppage";
     return "live";
   }
+  if ((f.min || 0) >= 90) return "stoppage";
   if (f.phase && f.pstatus === "L") return "ht";     // a named break
   const el = f.ko ? (Date.now() - Date.parse(f.ko)) / 60000 : null;
   if ((f.min || 0) === 45 && el != null && el >= 50) return "ht";
@@ -1160,7 +1164,16 @@ function fixtureState(f) {
   if (ph === "pre") return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
   if (ph === "ht") return `<span class="mtmin ht">HALF TIME</span>`;
   if (ph === "stoppage") {
-    return `<span class="mtmin">${f.phase === "2" ? 90 : 45}<sup>+</sup></span>`;
+    // which half is decided by the minute, not by the phase: the phase is
+    // only there once the worker carrying it is deployed, and reading 90
+    // as "45+" because a field was missing is exactly what it used to do.
+    const m = liveMinute(f);
+    const cap = (f.phase === "2" || m >= 90 || (f.min || 0) >= 90) ? 90 : 45;
+    // FPL's minute stops at the cap so it can never tell us the added
+    // time. The league's own clock does not stop, so when the worker is
+    // passing it through, 92:00 in the second half is 90+2.
+    const add = f.csecs != null ? Math.max(0, m - cap) : 0;
+    return `<span class="mtmin">${cap}<sup>+${add || ""}</sup></span>`;
   }
   if (ph === "nostart") return `<span class="mtmin">LIVE</span>`;
   return `<span class="mtmin">${liveMinute(f)}'</span>`;
@@ -1329,7 +1342,7 @@ function playerRow(id, e, f, ix) {
   ].filter(Boolean).join("");
   return `<details class="pl" data-k="${esc(key)}"${LVOPEN.has(key) ? " open" : ""}>
     <summary>
-      <span class="plmain"><span class="nm">${esc(e.n)}</span>
+      <span class="plmain">${nameTag({ name: e.n, id: +id })}
         <span class="pts">${pts}${pb ? `<span class="provb">+${pb}b</span>` : ""}</span></span>
       <span class="plmeta">${meta}</span></summary>
     <div class="contrib">${body}</div></details>`;
@@ -1370,11 +1383,14 @@ function fxRow(f, name, chips) {
   const hn = name(f.h), an = name(f.a);
   const mid = f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v";
   const men = chips(f);
+  const open = FXOPEN[f.id];
   const body = men.length ? men.map(c =>
-    `<span class="fxchip${c.mine ? " mine" : ""}">${nameTag(c.p)}${
+    `<span class="fxchip${c.mine ? " mine" : ""}${String(c.p.id) === String(open) ? " open" : ""}"
+       data-fx="${esc(f.id)}" data-pid="${esc(c.p.id)}">${esc(c.p.name)}${
       c.pts == null ? "" : ` ${c.pts}`}${
       c.pb ? `<span class="provb">+${c.pb}</span>` : ""}<span class="who">&middot; ${esc(c.who)}</span></span>`
   ).join("") : `<span class="fxnone">Nobody in the league owns a player here.</span>`;
+  const shown = open ? fxDetail(f, open) : "";
   return `<div class="fxi${f.started && !f.fin ? " on" : ""}">
     <div class="fxr">
       <span class="fxs"><span class="nm">${esc(hn)}</span>${crest(f.h, hn)}</span>
@@ -1382,6 +1398,40 @@ function fxRow(f, name, chips) {
       <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
     </div>
     <div class="fxplayers">${body}</div>
+    ${shown}
+  </div>`;
+}
+/* What one player did in one match, opened from the fixture list. Works
+   for a match that finished days ago as well as one that is on: the
+   scoring breakdown is in the feed for every fixture of the gameweek,
+   not only the live ones. */
+function fxDetail(f, pid) {
+  if (!LIVE) return "";
+  const e = (LIVE.elements || {})[pid];
+  if (!e) return "";
+  const ix = liveIndex(LIVE);
+  const m = ix.mgr[ix.owner[pid]];
+  const role = (ix.roles || {})[pid] || {};
+  const mr = matchRole(e, f);
+  const rows = ((e.ex || {})[f.id] || []).filter(x => x[2] || x[1]);
+  const pb = rows.some(r => /bonus/i.test(String(r[0]))) ? 0 : (ix.bonus[pid] || 0);
+  const meta = [
+    m ? `<span class="who">${esc(who(m.entry, m.name))}</span>` : "",
+    role.xi === undefined ? "" :
+      `<span class="tag ${role.xi ? "xi" : "bn"}">${role.xi ? "XI" : "bench"}</span>`,
+    mr.t ? `<span class="tag ${mr.c}">${esc(mr.t)}</span>` : "",
+    `<span class="mins">${e.min || 0} min</span>`,
+  ].filter(Boolean).join("");
+  let body = rows.map(([nm, val, p]) =>
+    `<div><span>${esc(nm)}</span><span class="tm">${esc(val)}</span><b>${p > 0 ? "+" : ""}${esc(p)}</b></div>`).join("");
+  if (pb) body += `<div class="prov"><span>Bonus, provisional</span><span class="tm">${e.bps || 0} bps</span><b>+${pb}</b></div>`;
+  if (!body) body = `<div><span>${e.min ? "Nothing that scores." : "Did not play."}</span></div>`;
+  return `<div class="fxdet">
+    <div class="fxdh">${nameTag({ name: e.n, id: +pid })}
+      <span class="pts">${(e.pts || 0) + pb}</span></div>
+    <div class="plmeta">${meta}</div>
+    <div class="contrib">${body}</div>
+    <div class="fxdn">Click his name for the season card.</div>
   </div>`;
 }
 /* The coming gameweek, from public.json, for the stretch between the last
@@ -1524,6 +1574,13 @@ function renderLive() {
     .sort((a, b) => String(a.ko || "").localeCompare(String(b.ko || "")))
     .map(f => fxRow(f, name, chips)).join("")) ||
     `<div class="note">No fixtures in this gameweek.</div>`;
+  $("lvfxb").querySelectorAll("[data-fx][data-pid]").forEach(c =>
+    c.addEventListener("click", ev => {
+      if (ev.target.closest("[data-pk],[data-pkid]")) return;   // the card wins
+      const fid = c.dataset.fx, pid = c.dataset.pid;
+      FXOPEN[fid] = String(FXOPEN[fid]) === String(pid) ? null : pid;
+      renderLive();
+    }));
 }
 /* Repaint just the clocks, once a second. Re-rendering the cards that
    often would close every breakdown somebody had opened. */
