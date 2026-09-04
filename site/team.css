@@ -104,9 +104,13 @@ font:14px "IBM Plex Sans",system-ui}
 .x{margin-left:auto;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
 color:var(--dim);font:600 14px "IBM Plex Mono",ui-monospace,monospace;cursor:pointer;padding:5px 11px}
 
-/* player card: any name on the page opens it */
+/* player card: any name on the page opens it. The hover half is gated on a
+   real pointer: a phone leaves :hover stuck on whatever you last tapped, so
+   an ungated rule makes a chip you have just closed look like it is still
+   open. :active is fine unqualified - it clears when the finger lifts. */
 .pk{cursor:pointer;border-bottom:1px dotted var(--line)}
-.pk:hover,.pk:active{color:var(--blue);border-bottom-color:var(--blue)}
+.pk:active{color:var(--blue);border-bottom-color:var(--blue)}
+@media (hover:hover){.pk:hover{color:var(--blue);border-bottom-color:var(--blue)}}
 .pkhd{display:flex;gap:10px;align-items:flex-start;position:sticky;top:-14px;z-index:1;
 background:var(--panel);padding:4px 0 8px;border-bottom:1px solid var(--line)}
 .pkhd h2{font:600 25px "Barlow Condensed",system-ui;letter-spacing:.03em;text-transform:uppercase;line-height:1.1}
@@ -276,10 +280,10 @@ text-transform:uppercase;color:var(--dim);white-space:nowrap}
 /* a name you can click is a name that looks clickable */
 .nm.pk{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;
 text-underline-offset:3px;text-decoration-color:var(--line)}
-.nm.pk:hover{text-decoration-color:var(--blue);color:var(--blue)}
+@media (hover:hover){.nm.pk:hover{text-decoration-color:var(--blue);color:var(--blue)}}
 /* one player's match, opened from a chip in the fixture list */
 .fxchip{cursor:pointer}
-.fxchip:hover{border-color:var(--blue)}
+@media (hover:hover){.fxchip:hover{border-color:var(--blue)}}
 .fxchip.open{border-color:var(--blue);background:var(--panel)}
 .fxdet{background:var(--panel);border:1px solid var(--blue);border-radius:8px;
 margin:2px 2px 8px;padding:8px 10px}
