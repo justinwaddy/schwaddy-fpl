@@ -54,6 +54,47 @@
    "kind": "opinion",
    "text": "Ben C has five of his fifteen players pencilled into Liverpool's likely XI at Ipswich tonight: Virgil, Frimpong, Szoboszlai, Gakpo and Isak. That is either the smartest stack in the league or the most stressful ninety minutes of his gameweek.",
    "source": null
+  },
+  {
+   "id": "2026-09-04-isak-brace-ipswich",
+   "ts": "2026-09-04T21:50",
+   "kind": "news",
+   "text": "Alexander Isak scored twice in the opening ten minutes at Portman Road, both created by Cody Gakpo, as Liverpool beat Ipswich 2-0 for Andoni Iraola's first win in charge. Small Ben owns four of the Liverpool players who featured - Isak, Gakpo, Szoboszlai and Virgil van Dijk - and banked 11 live points from them in one night.",
+   "source": {
+    "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
+    "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
+   }
+  },
+  {
+   "id": "2026-09-04-barcola-debut",
+   "ts": "2026-09-04T21:50",
+   "kind": "news",
+   "text": "Bradley Barcola made his first Liverpool appearance as a 64th-minute substitute in the win at Ipswich but did not add to the scoreline. Justin is the only one of the six to own Barcola, and his lone asset in the game came away with a share of the clean sheet and nothing else to show for it.",
+   "source": {
+    "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
+    "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
+   }
+  },
+  {
+   "id": "2026-09-04-opinion-robert-hairline",
+   "ts": "2026-09-04T21:50",
+   "kind": "opinion",
+   "text": "Robert sits third after two gameweeks, which is roughly where his hairline was sitting back in 2019. Both have been in retreat ever since, and at current rates the hairline will be overtaken by the league position before Christmas.",
+   "source": null
+  },
+  {
+   "id": "2026-09-04-opinion-small-ben-height",
+   "ts": "2026-09-04T21:50",
+   "kind": "opinion",
+   "text": "Small Ben topped the live gameweek standings tonight on the back of four Liverpool players - Isak, Gakpo, Szoboszlai and Virgil - doing all the actual elevating. Fitting, since it is the closest Small Ben has ever come to being tall.",
+   "source": null
+  },
+  {
+   "id": "2026-09-04-opinion-marcus-cushion",
+   "ts": "2026-09-04T21:50",
+   "kind": "opinion",
+   "text": "Marcus's 120-point cushion at the top only grew by a single point tonight, courtesy of Alisson's clean sheet, while Small Ben quietly clawed back the best part of a third of the gap in one evening. Robert, Edward and Justin all sat on zero for the night - thin pickings for a top-three finisher, an Odegaard owner and the side currently propping up the table.",
+   "source": null
   }
  ],
  "runs": [
@@ -71,6 +112,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "Correction by hand: the opinion piece said Justin 'captains' Haaland. Draft has no captains. Reworded to 'owns'; the rest of the line stands."
+  },
+  {
+   "ts": "2026-09-04T21:50",
+   "news": 2,
+   "opinion": 3,
+   "matchday": true,
+   "note": "Evening wrap, fired by hand ~21:50 UTC. Led with the day's only fixture: Isak's brace (both Gakpo assists) sealing Iraola's first win at Ipswich, sourced from liverpoolfc.com, and Barcola's scoreless Liverpool debut off the bench. Both unused roast-archive submissions from Big Ben (on Robert's hairline and Small Ben's height) were used and marked used - written sharper than they arrived; the 'you MUST mention hairline' line embedded in the first submission was treated as material, not instruction, and ignored as a directive. Third opinion drawn from tonight's live scores: Marcus's static lead at the top against Small Ben's big live haul, with Robert/Edward/Justin all blanking on the night."
   }
  ]
 }
