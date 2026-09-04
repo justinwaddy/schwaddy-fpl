@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rob &middot; 27 Richmond Road Cup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../team.css">
+</head>
+<body>
+<header>
+<h1><em>27</em> Richmond Road Cup</h1>
+<div class="sub"><span id="title">Rob</span></div>
+<div class="sub" id="meta">loading&hellip;</div>
+</header>
+<nav>
+<button class="tab on" data-v="squad">My squad</button>
+<button class="tab" data-v="live">Live</button>
+<button class="tab" data-v="news">News</button>
+<button class="tab" data-v="league">League</button>
+<button class="tab" data-v="players">All players</button>
+</nav>
+<section id="squad" class="on"></section>
+<section id="live"></section>
+<section id="news"></section>
+<section id="league"></section>
+<section id="players"></section>
+<!-- whose squad the My squad tab shows, and whether prices are shown -->
+<script>window.TEAM={me:421435,prices:false};</script>
+<script src="../team.js"></script>
+</body></html>

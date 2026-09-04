@@ -1,0 +1,60 @@
+# A suggested headline or roast, filed from a per-manager site.
+#
+# The sites are static, so the box on the News tab posts to the Cloudflare
+# worker (cron/worker.js), which dispatches this. The worker only needs
+# permission to start a workflow; the committing is done here, with the
+# runner's own credentials, so the token handed to Cloudflare never needs
+# write access to the repository contents.
+#
+# Everything arriving from that endpoint is untrusted, so the inputs are
+# passed through the environment and parsed by a script rather than
+# interpolated into a shell line.
+name: suggest
+on:
+  workflow_dispatch:
+    inputs:
+      from_name:
+        description: "Who is suggesting it"
+        required: true
+        type: string
+      about_name:
+        description: "Who it is about, blank for the league in general"
+        required: false
+        default: ""
+        type: string
+      text:
+        description: "The suggestion"
+        required: true
+        type: string
+concurrency:
+  group: suggest          # one writer at a time; they all append to one file
+  cancel-in-progress: false
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    permissions: {contents: write}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: append
+        env:
+          FROM_NAME: ${{ inputs.from_name }}
+          ABOUT_NAME: ${{ inputs.about_name }}
+          TEXT: ${{ inputs.text }}
+        run: python3 .github/scripts/append_roast.py
+      - name: commit
+        run: |
+          git config user.name schwaddy-bot
+          git config user.email bot@justinwaddy.co.uk
+          git add data/roasts.json
+          git commit -m "roast: a suggestion from the league" || { echo "nothing new"; exit 0; }
+          for i in 1 2 3 4; do
+            if git pull --rebase -X theirs origin main; then
+              python3 -c "import json;json.load(open('data/roasts.json'));print('roasts.json parses')"
+              git push && exit 0
+            else
+              git rebase --abort || true
+            fi
+            echo "push race, retry $i"; sleep 5
+          done
+          echo "could not push after 4 attempts"; exit 1

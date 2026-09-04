@@ -21,6 +21,28 @@ const REPO = "justinwaddy/schwaddy-fpl";
 const WORKFLOW = "update.yml";
 const REF = "main";
 
+// The suggest-a-roast box on the per-manager sites posts here. The pages
+// are static, so they cannot store anything themselves; this hands the
+// suggestion to a workflow, which appends it to data/roasts.json. That
+// needs no permission beyond the Actions write this token already has -
+// the workflow does the committing with its own credentials.
+const SUGGEST_WORKFLOW = "suggest.yml";
+const MAX_TEXT = 500;
+// Only these six are in the league, so only these six can be named. A
+// dispatch is cheap but not free, and this is a public endpoint.
+const ENTRIES = {
+  45811: "Edward", 282287: "Ben C", 299912: "Marcus",
+  363607: "Ben D", 372099: "Justin", 421435: "Robert",
+};
+// Browsers send Origin on a cross-origin POST. This will not stop anyone
+// determined, since the sites are public and so is this worker, but it
+// turns away everything casual.
+const ALLOWED_ORIGINS = [
+  "https://justinwaddy.github.io",
+  "https://justinwaddy.co.uk",
+  "https://www.justinwaddy.co.uk",
+];
+
 // If a run is already this new, the dispatch is skipped: GitHub's own
 // backstop cron, or a push, has already done the work. Keeps the two
 // triggers from stacking two refits on top of each other.
@@ -45,6 +67,7 @@ export default {
   // it never touches the token.
   async fetch(req, env) {
     const url = new URL(req.url);
+    if (url.pathname === "/suggest") return suggest(req, env);
     if (url.pathname !== "/" && url.pathname !== "/status") {
       return json({ error: "not found" }, 404);
     }
@@ -58,10 +81,56 @@ export default {
   },
 };
 
-function json(body, status = 200) {
+function json(body, status = 200, extra = {}) {
   return new Response(JSON.stringify(body, null, 2), {
-    status, headers: { "Content-Type": "application/json; charset=utf-8" },
+    status, headers: { "Content-Type": "application/json; charset=utf-8", ...extra },
   });
+}
+
+function cors(origin) {
+  const ok = origin && ALLOWED_ORIGINS.includes(origin);
+  return {
+    "Access-Control-Allow-Origin": ok ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Max-Age": "86400",
+  };
+}
+
+/* A suggested headline or roast, on its way to data/roasts.json. */
+async function suggest(req, env) {
+  const origin = req.headers.get("Origin") || "";
+  const h = cors(origin);
+  if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
+  if (req.method !== "POST") return json({ error: "post only" }, 405, h);
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+    return json({ error: "not allowed from there" }, 403, h);
+  }
+  if (!env.GH_TOKEN) return json({ error: "not configured yet" }, 503, h);
+
+  let body;
+  try { body = await req.json(); } catch { return json({ error: "send JSON" }, 400, h); }
+
+  const text = String(body && body.text || "").trim().replace(/\s+/g, " ");
+  if (text.length < 4) return json({ error: "say a bit more than that" }, 400, h);
+  if (text.length > MAX_TEXT) return json({ error: `keep it under ${MAX_TEXT} characters` }, 400, h);
+
+  const from = ENTRIES[body.from];
+  if (!from) return json({ error: "unknown sender" }, 400, h);
+  const about = body.about == null ? "" : ENTRIES[body.about];
+  if (body.about != null && !about) return json({ error: "unknown target" }, 400, h);
+
+  try {
+    await gh(`/repos/${REPO}/actions/workflows/${SUGGEST_WORKFLOW}/dispatches`, env, {
+      method: "POST",
+      body: JSON.stringify({ ref: REF, inputs: { from_name: from, about_name: about, text } }),
+    });
+  } catch (e) {
+    console.log(`suggest dispatch failed: ${e.message}`);
+    return json({ error: "could not file that, try again in a minute" }, 502, h);
+  }
+  console.log(`suggestion from ${from} about ${about || "the league"}: ${text.slice(0, 80)}`);
+  return json({ ok: true }, 200, h);
 }
 
 async function gh(path, env, init = {}) {

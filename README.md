@@ -27,6 +27,8 @@ static JSON + HTML to justinwaddy.co.uk.
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - cron/worker.js              Cloudflare cron that dispatches the refresh on time
+- src/schwaddy/public.py      model-free data/public.json for the per-manager sites
+- site/team.js, site/team.css shared front end for site/<manager>/
 - site/                       dashboard HTML; draft_room.html is the live draft tool
 - site/compare/               the same gameweek under four different predictors
 
@@ -205,6 +207,65 @@ Nothing under data/ is bundled into the deploy. The pages fetch predictions,
 news and league state from raw.githubusercontent.com at load time, so the
 bot's refresh commits show up on the live site without a redeploy - and the
 cron pushes, which only ever write data/, never retrigger this workflow.
+
+## The other five managers
+site/ed/, site/rob/, site/bben/, site/sben/, site/justin/ and site/marcus/
+are one page each for the six managers in the league: My squad, Live,
+News, League and All players, and nothing else. No waiver board, no
+starters, no suggested XI, no projections anywhere.
+
+Leaving a column out of a table would not have been enough. The page
+fetches its data, so anything the file carries is one devtools tab away
+from the reader whether it is rendered or not. So the sites read
+data/public.json and nothing else from the pipeline, and public.py builds
+that file from a whitelist of fields rather than by deleting the ones that
+must not travel: a whitelist cannot leak a covariate somebody adds
+upstream next month. What survives is what the game itself publishes -
+ownership, live and settled scores, the table, each player's counting
+stats and his next fixture. What does not: everything in predictions.json,
+and the model columns league.json carries alongside the real ones.
+
+league.json holds the squads as they were for the gameweek it scored, and
+waivers process a day before the next deadline, so between the two a
+manager looking at his own page would have seen players he no longer had.
+Each manager therefore carries his roster as it stands now as well, and
+the page leads with that; the gameweek eleven sits underneath it, labelled
+as the week it scored.
+
+The six pages share site/team.css and site/team.js. Each index.html is
+twenty lines that name the manager and load them, so there is one copy of
+the logic. Prices are the one thing that differs: only Ed's page fetches
+data/prices.json, and only Ed's page has the value columns.
+
+These are public URLs on GitHub Pages. Anyone who guesses another
+manager's path can open it, which changes nothing except that they would
+see that manager's squad tab and, on Ed's, the prices. The engine's output
+is not on any of them, which is the part that matters.
+
+## League news, and the roast box
+data/league_news.json is written once a day by its own scheduled session,
+separately from the editorial lane, and it is the only feed those six
+pages show. Every reported item cites the article it came from, from a
+named outlet, so a claim is one click from its source; the session is
+barred from sportsmole and from rumour aggregators, and barred from
+reading any of the engine's files at all, so the page cannot quietly hand
+one manager an edge.
+
+On a matchday it also writes one to three OPINION pieces of its own. Those
+draw on data/roasts.json, an archive the managers fill themselves: the
+News tab has a box where anyone can name another manager and suggest a
+line. The pages are static, so the box posts to the Cloudflare worker,
+which asks GitHub to run .github/workflows/suggest.yml, which appends it.
+The worker needs no permission beyond the Actions write it already had for
+the schedule - the committing is done by the runner with its own
+credentials, and everything arriving from that public endpoint is capped,
+scrubbed and matched against the six managers before it is written.
+
+The opinions are football only, about squads, results, transfers and the
+standings, and never about anything a person did not put into the league.
+Suggestions are marked used once they run, so a line does not come round
+twice, and the archive is never published - the pages show the opinion,
+not who asked for it.
 
 ## Scheduling
 GitHub's `schedule:` crons are queued on shared runners and arrive when

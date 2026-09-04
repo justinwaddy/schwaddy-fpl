@@ -72,3 +72,23 @@ must match exactly, since Cloudflare hands the matched expression to the
 handler and the worker looks the slot up by it. A cron with no matching
 slot logs `no slot for cron ...` and does nothing, which is the safe way
 round. Then `npx wrangler deploy` again.
+
+## The suggest endpoint
+
+The same worker also answers `POST /suggest`, which is where the box on
+the per-manager sites files a suggested headline or roast. It validates
+the payload, caps the text, checks the sender and target are two of the
+six managers, and dispatches `.github/workflows/suggest.yml`, which does
+the committing. That needs no permission beyond the Actions write the
+token already has.
+
+The endpoint is public, like the sites. It checks the browser's `Origin`
+header against the GitHub Pages and custom-domain origins, which turns
+away everything casual without pretending to be a real boundary. If it
+ever attracts nuisance traffic, the fix is a shared key in the body or a
+Workers KV rate limit, neither of which is worth the setup today.
+
+**After changing `worker.js` you must redeploy it**, either with
+`npx wrangler deploy` from this folder or by pasting the file into the
+dashboard editor and clicking Deploy. The cron triggers and the `GH_TOKEN`
+secret survive a redeploy; only the code changes.

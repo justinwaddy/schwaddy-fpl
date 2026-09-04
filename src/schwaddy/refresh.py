@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import (api, compare, depth, liveform, livegws, overrides,
+from . import (api, compare, depth, liveform, livegws, overrides, public,
                playerstats, prices, weekly)
 from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
@@ -141,6 +141,22 @@ def _prices(data_dir):
     print(f"prices: {len(out['players'])} players, GW{out['gw']}")
 
 
+def _public(data_dir):
+    """The model-free file the per-manager sites read.
+
+    Built last, because it reads what the writers above just produced.
+    Never fatal: those sites keep serving the previous copy rather than
+    taking the whole refresh down with them.
+    """
+    try:
+        out = public.write(data_dir)
+    except Exception as ex:
+        print(f"public view skipped: {ex}")
+        return
+    print(f"public view: {len(out['managers'])} managers, "
+          f"{len(out['players'])} players, GW{out['gw']}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cv", action="store_true")
@@ -171,6 +187,7 @@ def main():
         print(f"news feed updated: {n_new} new events")
         _player_stats(args.data_dir, d)
         _prices(args.data_dir)
+        _public(args.data_dir)
         return
 
     pull(args.data_dir)
@@ -403,6 +420,7 @@ def main():
         print(f"rival predictions skipped: {ex}")
     _player_stats(args.data_dir, d)
     _prices(args.data_dir)
+    _public(args.data_dir)
     try:
         from . import news
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
