@@ -193,7 +193,10 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 color:var(--ink)}
 .lvrank{color:var(--dim);font-weight:400;padding-left:6px}
 .lvsep{display:block;padding-top:2px}
-.ev{font:600 9px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.03em;text-transform:uppercase;
+/* a scoring event on a live player row. NOT .ev - the News tab has owned
+   that class since the first version of this file, and taking it turned
+   every headline green and shouting. */
+.evp{font:600 9px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.03em;text-transform:uppercase;
 background:var(--panel2);border-radius:3px;padding:1px 4px;color:var(--green)}
-.ev.bad{color:var(--amber)}
-.ev.prov{color:var(--amber)}
+.evp.bad{color:var(--amber)}
+.evp.prov{color:var(--amber)}

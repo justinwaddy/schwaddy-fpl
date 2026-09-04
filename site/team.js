@@ -54,12 +54,19 @@ const TIPS = {
   bench: "Points sitting on the bench this gameweek. They do not count unless a substitution brings them on.",
   "to play": "How many of his eleven have a match still to come this gameweek.",
   "on pitch": "How many of his eleven are playing right now.",
+  "GW#": "Where he finished in this gameweek alone, whatever the season table says.",
+  "played": "How many of his eleven actually got on the pitch this gameweek.",
+  "0 min": "How many of his eleven never left the bench at their club. Every one of them is a scoring slot that returned nothing.",
+  "subs": "Automatic substitutions the game made for him: a bench player brought on because a starter did not play.",
+  "top": "His highest scorer this gameweek.",
+  "best XI": "What his eleven would have scored with perfect hindsight - the best legal eleven out of all fifteen. The gap to GW is what team selection cost him.",
+  "unfit": "Players in his squad as it stands now who are injured, suspended, doubtful or otherwise not available. This one is about today, not the gameweek above.",
 };
-const th = (label, cls) => {
-  const tip = TIPS[label];
+const th = (label, cls, tip0) => {
+  const tip = tip0 || TIPS[label];
   return `<th class="${cls || ""}"${tip ? ` title="${esc(tip)}"` : ""}>${esc(label)}</th>`;
 };
-const ths = (...cols) => cols.map(c => Array.isArray(c) ? th(c[0], c[1]) : th(c)).join("");
+const ths = (...cols) => cols.map(c => Array.isArray(c) ? th(c[0], c[1], c[2]) : th(c)).join("");
 const S = (p, k) => (p.s && p.s[k] != null ? p.s[k] : 0);
 
 function get(url, onOk, key) {
@@ -711,10 +718,10 @@ function eventChips(rows, pb) {
     // "2 bonus +2" says the same thing twice; a count only helps where it
     // differs from the points, as saves and defensive actions do
     const text = (val > 1 && val !== Math.abs(pts)) ? `${val} ${label}` : label;
-    out.push(`<span class="ev${pts < 0 ? " bad" : ""}">${esc(text)} ${
+    out.push(`<span class="evp${pts < 0 ? " bad" : ""}">${esc(text)} ${
       pts > 0 ? "+" : ""}${pts}</span>`);
   }
-  if (pb) out.push(`<span class="ev prov">bonus, provisional +${pb}</span>`);
+  if (pb) out.push(`<span class="evp prov">bonus, provisional +${pb}</span>`);
   return out.join("");
 }
 /* Who is in each manager's counting eleven once the automatic
