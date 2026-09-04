@@ -507,28 +507,6 @@ function relevantNames() {
     return names.some(nm => low.includes(nm));
   };
 }
-/* The feed reports changes; this is the standing state. Every one of our
-   players the game currently has a note against, which is the first thing
-   anybody wants before a deadline. */
-function availabilityHTML() {
-  const hurt = [...relevant().values()]
-    .filter(p => (p.status && p.status !== "a") || p.news)
-    .sort((a, b) => (a.owner == null) - (b.owner == null) ||
-      String(a.name).localeCompare(String(b.name)));
-  if (!hurt.length) return "";
-  return `<div class="card"><b class="h">Fitness, right now</b>
-    <div class="note">Everyone one of the six holds, plus the fifty best in the game on points.
-    Click a name for his card.</div>
-    <div class="wrap"><table>
-    <tr>${th("player")}<th></th>${ths("owner", ["next", ""])}<th>the game says</th></tr>` +
-    hurt.map(p => `<tr><td>${nameTag(p)}<div class="tm">${esc(club(p))}</div></td>
-      <td><span class="pos ${p.pos}">${p.pos}</span></td>
-      <td class="tm">${esc(mgrName(p.owner) || "free agent")}</td>
-      <td class="run">${esc(p.next || "")}</td>
-      <td><span class="badge b-${p.status && p.status !== "a" ? "injury" : "news"}">${
-        esc(PKSTATUS[p.status] || "note")}</span> ${esc(p.news || "")}</td></tr>`).join("") +
-    `</table></div></div>`;
-}
 function renderLeague() {
   const sec = $("league");
   if (!PUB) { sec.innerHTML = loading("league"); return; }
@@ -892,7 +870,6 @@ function renderNews() {
       if (g === NEWSFILTER) return true;
       return NEWSFILTER === "league" && g === "players" && ours && ours(e.text);
     });
-    if (NEWSFILTER === "league") h += availabilityHTML();
     if (!items.length) {
       h += `<div class="card"><div class="note">Nothing under that filter yet.</div></div>`;
     } else {

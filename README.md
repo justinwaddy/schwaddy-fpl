@@ -275,10 +275,7 @@ in the game on points - a hamstring at the top of the board is a waiver
 claim whoever owns him - so the one view answers "what happened that
 affects us". The Players chip is still everything, ours or not.
 
-Above the feed under that chip is Fitness, right now: every one of those
-players the game currently has a note against. The feed reports changes;
-this is the standing state, which is what anybody actually wants an hour
-before a deadline. Every name in it opens the card.
+Every name in the feed opens the card.
 
 The names in the News tab are links too. The text is escaped first and the
 names matched against the escaped form, so the linking can never introduce
