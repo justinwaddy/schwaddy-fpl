@@ -98,6 +98,11 @@
    "ts": "2026-09-04T13:10 UTC",
    "published": 2,
    "note": "Two items the source purge had removed, republished with permitted citations found this run: Rodon's 8-10 week hamstring injury (clears Bijol's path at Leeds, leedsunited.com) and De Zerbi confirming Marmoush available, possibly from the start, against Forest (tottenhamhotspur.com). Also re-sourced starters.json and claims.json this run - see their own run logs. Nothing else material found in a fresh club-by-club sweep, including a check on Strand Larsen (his old 'leading the line' claim did not survive a fresh look at the source, which turned out to be nine months stale, so not republished)."
+  },
+  {
+   "ts": "2026-09-04T21:10 UTC",
+   "published": 0,
+   "note": "Full club-by-club sweep ~8 hours after the last run (Everton, Arsenal, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Tottenham, Palace, Sunderland) plus two general searches on deadline-day fallout and rivals. Everything already published held up: Garner still favoured in Everton's predicted double pivot for Sunday even with Hackney now cleared of his ankle knock, Bijol has no fresh fitness concern ahead of Brighton, Strand Larsen is confirmed leading the Palace line at Fulham, and Doku's calf timeline still points past GW4's deadline. One lead - conflicting reports that Ola Aina, not Munoz, starts at right wing-back for Forest against Tottenham - never cleared a permitted outlet (only Sports Mole, GiveMeSport and thehardtackle carried it), so it was left out rather than reversing Wednesday's Forest-sourced correction on a weak citation. Nothing else was material enough to publish."
   }
  ]
 }

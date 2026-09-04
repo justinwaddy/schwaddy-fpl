@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-04T13:10 UTC",
- "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). Same three claims as this morning, now re-sourced from permitted outlets after today's SOURCES-list purge stripped their citations: Igor Jesus for Marmoush (a value upgrade over a Marmoush who is himself trending toward more minutes, not a bench-risk drop), Le Fee for Barcola (Barcola still expected on the bench for tonight's Liverpool debut at Ipswich), and Rayan for Doku, now upgraded from a low-confidence hedge to medium - Doku's calf return points to around 13 September, after GW4's own deadline, so he would miss this entire window. The rest of the squad (Munoz, Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier, Garner) are established starters this week and none clears the bar for a fourth or fifth swap.",
+ "ts": "2026-09-04T21:10 UTC",
+ "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). Same three claims held up after a fresh club-by-club sweep tonight: Igor Jesus for Marmoush, Le Fee for Barcola, and Rayan for Doku (calf return still pointing past GW4's own deadline). One lead worth watching but not acted on - reports that Ola Aina, not Munoz, starts at right wing-back for Forest this weekend - never cleared a permitted outlet, so Munoz stays off the drop list until that clears Forest's own site or a permitted outlet. The rest of the squad (Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier, Garner) remain established starters this week and none clears the bar for a fourth or fifth swap.",
  "claims": [
   {
    "rank": 1,
@@ -197,6 +197,12 @@
    "gw": 4,
    "claims": 3,
    "note": "Re-sourced all three claims after today's SOURCES-list purge stripped their citations - real permitted links are back for Igor Jesus/Marmoush, Le Fee/Barcola and Rayan/Doku. Also upgraded Rayan/Doku from low to medium confidence: Doku's calf return now points to around 13 September, which is after GW4's own deadline (12 September), so this is no longer just a timing hedge. No change to which three claims are made."
+  },
+  {
+   "ts": "2026-09-04T21:10 UTC",
+   "gw": 4,
+   "claims": 3,
+   "note": "No change. Fresh club-by-club sweep ~8 hours later re-confirmed all three claims (Igor Jesus/Marmoush, Le Fee/Barcola, Rayan/Doku) plus checked Bijol, Garner and the rest of the squad for anything that would open a fourth claim - nothing did. Reports naming Aina ahead of Munoz at Forest right wing-back surfaced but only through unpermitted outlets, so Munoz was not added as a drop candidate on that alone."
   }
  ]
 }
