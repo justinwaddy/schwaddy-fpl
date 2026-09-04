@@ -505,6 +505,29 @@ Suggestions are marked used once they run, so a line does not come round
 twice, and the archive is never published - the pages show the opinion,
 not who asked for it.
 
+## Bugs and ideas
+Every page carries a button in the top right - the six manager pages, the
+engine, the comparison and the landing page. It files a bug report or a
+feature idea into data/feedback.json, which we go through at the end of
+the week.
+
+It posts through the same worker endpoint as the roast box, tagging the
+kind onto the front of the text ("[bug] ..." / "[idea] ..."), which the
+workflow strips and routes on. A dedicated endpoint would have been
+tidier and would also have meant another hand redeploy of the worker in
+the Cloudflare dashboard for no behaviour this does not already have.
+Reports never reach data/roasts.json: that file is what the matchday
+opinion pieces are written from, and "the ticker jumps on mobile" is not a
+joke about anybody.
+
+A manager's page knows whose it is and files under him. The landing page
+cannot know, so it asks rather than guessing and filing Ed's bug report
+under Justin's name.
+
+The landing page itself is six square tiles, two across and three down,
+named for the managers rather than their teams - Big Ben and Small Ben
+included, which is what the league calls them.
+
 ## Scheduling
 GitHub's `schedule:` crons are queued on shared runners and arrive when
 GitHub gets round to them. Over twelve consecutive scheduled runs of

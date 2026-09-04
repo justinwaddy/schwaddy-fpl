@@ -46,11 +46,11 @@ jobs:
         run: |
           git config user.name schwaddy-bot
           git config user.email bot@justinwaddy.co.uk
-          git add data/roasts.json
-          git commit -m "roast: a suggestion from the league" || { echo "nothing new"; exit 0; }
+          git add data/roasts.json data/feedback.json
+          git commit -m "from the league: a suggestion or a report" || { echo "nothing new"; exit 0; }
           for i in 1 2 3 4; do
             if git pull --rebase -X theirs origin main; then
-              python3 -c "import json;json.load(open('data/roasts.json'));print('roasts.json parses')"
+              python3 -c "import json,os;[print(f,'parses') or json.load(open(f)) for f in ('data/roasts.json','data/feedback.json') if os.path.exists(f)]"
               git push && exit 0
             else
               git rebase --abort || true
