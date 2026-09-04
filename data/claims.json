@@ -21,8 +21,14 @@
    "model": "Model has Igor Jesus at next5 14.3 (avail 0.95) versus Marmoush at 8.5 (avail 0.52) - a real gap, but Marmoush's own avail has already risen sharply since Solanke's injury became known, so the true gap is smaller than it looks; still worth the swap for Igor Jesus's superior nailed-on output.",
    "confidence": "medium",
    "sources": [
-    {"title": "Liverpool vs. Nottingham Forest line-ups: Premier League 2026-27 predicted XIs", "url": "https://www.espn.com/soccer/story/_/id/49731820/liverpool-vs-nottingham-forest-lineups-premier-league-202627-predicted-xis"},
-    {"title": "Team news | Roberto on Omar Marmoush's availability", "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"}
+    {
+     "title": "Liverpool vs. Nottingham Forest line-ups: Premier League 2026-27 predicted XIs",
+     "url": "https://www.espn.com/soccer/story/_/id/49731820/liverpool-vs-nottingham-forest-lineups-premier-league-202627-predicted-xis"
+    },
+    {
+     "title": "Team news | Roberto on Omar Marmoush's availability",
+     "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"
+    }
    ]
   },
   {
@@ -42,8 +48,14 @@
    "model": "Model has Le Fee at next5 16.1 (avail 1.00) versus Barcola at 1.4 (avail 0.10) - the model has no career data on Barcola yet so it is essentially guessing zero, and tonight's team news supports that low number for now.",
    "confidence": "medium",
    "sources": [
-    {"title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich", "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"},
-    {"title": "Enzo Le Fée - Sunderland Midfielder, Profile & Stats", "url": "https://www.premierleague.com/en/players/484420/enzo-le-fee/overview"}
+    {
+     "title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich",
+     "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"
+    },
+    {
+     "title": "Enzo Le Fée - Sunderland Midfielder, Profile & Stats",
+     "url": "https://www.premierleague.com/en/players/484420/enzo-le-fee/overview"
+    }
    ]
   },
   {
@@ -63,7 +75,10 @@
    "model": "Model has Rayan at next5 15.8 (avail 0.95) versus Doku at 3.5 (avail 0.00) - the model already has Doku's injury priced in, and the timeline now confirms he will not be back in time for GW4 either, which raises this from a pure hedge to a reasonably confident swap.",
    "confidence": "medium",
    "sources": [
-    {"title": "Rayan scores on home debut as Bournemouth dent Villa's title hopes", "url": "https://www.premierleague.com/en/news/4576492/afc-bournemouth-1-aston-villa-1-match-report-7-february-2026"}
+    {
+     "title": "Rayan scores on home debut as Bournemouth dent Villa's title hopes",
+     "url": "https://www.premierleague.com/en/news/4576492/afc-bournemouth-1-aston-villa-1-match-report-7-february-2026"
+    }
    ]
   }
  ],
@@ -88,16 +103,7 @@
      "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
      "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
      "confidence": "high",
-     "sources": [
-      {
-       "title": "Juventus sign Woltemade, Sarr on loan from Premier League",
-       "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
-      },
-      {
-       "title": "Nottingham Forest lineup vs. Tottenham: Predicted XI for Premier League clash as Daniel Munoz starts",
-       "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
-      }
-     ]
+     "sources": []
     },
     {
      "rank": 2,
@@ -116,10 +122,6 @@
      "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
      "confidence": "high",
      "sources": [
-      {
-       "title": "Newcastle United vs Bournemouth: Preview and Prediction",
-       "url": "https://thehardtackle.com/round-up/2026/09/03/newcastle-united-vs-bournemouth-preview-and-prediction-5/"
-      },
       {
        "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
        "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
@@ -142,16 +144,7 @@
      "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
      "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
      "confidence": "low",
-     "sources": [
-      {
-       "title": "Moyes provides James Garner injury update after Everton return",
-       "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
-      },
-      {
-       "title": "Brighton lineup vs. Aston Villa: Predicted XI for opening 2026-27 season",
-       "url": "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/predicted-lineups/one-full-debut-five-absentees-predicted-brighton-lineup-vs-aston-villa_603416.html"
-      }
-     ]
+     "sources": []
     }
    ]
   }
