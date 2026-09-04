@@ -104,7 +104,7 @@ def build(data_dir):
     preds = _load(f"{data_dir}/predictions.json") or {}
     fixtures = _load(f"{data_dir}/fixtures_2627.json") or []
 
-    teams = stats.get("teams") or {}
+    teams = dict(stats.get("teams") or {})
     gw = league.get("gw")
 
     # When line-ups lock. The pages compute the countdown themselves from
@@ -112,6 +112,12 @@ def build(data_dir):
     # wrong by tomorrow. waivers_time is the same gameweek's waiver
     # processing, which is the other clock a manager cares about.
     boot = _load(f"{data_dir}/draft_bootstrap.json") or {}
+    # the club's own code, which is what the league's badge URLs are keyed
+    # on: resources.premierleague.com/premierleague/badges/70/t<code>.png
+    for t in boot.get("teams") or []:
+        row = teams.get(str(t.get("id")))
+        if row and len(row) < 3:
+            teams[str(t["id"])] = [row[0], row[1], t.get("code")]
     ev = boot.get("events") or {}
     nxt_ev = next((e for e in (ev.get("data") or [])
                    if e.get("id") == ev.get("next")), None)

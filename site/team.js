@@ -648,70 +648,152 @@ function koText(iso) {
   return d.toLocaleDateString("en-GB", { weekday: "short" }) + " " +
     d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
 }
+// The Live tab is a match view, not a table: one card per game actually
+// being played, ordered by how many of your own players are in it. It only
+// exists while a game is on - the tab hides itself otherwise, since a live
+// tab with nothing live is just a worse League tab.
+//
+// Points shown are the league's players only, both sides, each one opening
+// to show how he got them. Provisional bonus is folded in and labelled as
+// provisional until the official award lands, the same arithmetic the
+// League tab uses, so the two never disagree.
+let LVOPEN = new Set(), TICK = "";
+function fixtureState(f) {
+  if (f.fin) return `<span class="mtmin ft">FT</span>`;
+  if (!f.started) return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
+  return `<span class="mtmin">${f.min || 0}'</span>`;
+}
+function crest(tid, name) {
+  const t = PUB && PUB.teams && PUB.teams[tid];
+  const code = t && t[2];
+  const alt = esc(name || (t && t[0]) || "");
+  return code
+    ? `<img src="https://resources.premierleague.com/premierleague/badges/70/t${code}.png"
+        alt="${alt}" loading="lazy" onerror="this.remove()">`
+    : "";
+}
+/* Who owns whom, and the provisional bonus, for one snapshot. */
+function liveIndex(L) {
+  const owner = {}, mgr = {};
+  for (const m of L.managers || []) {
+    mgr[m.entry] = m;
+    for (const [id] of m.picks || []) owner[id] = m.entry;
+  }
+  const bonus = {};
+  for (const f of L.fixtures || []) {
+    const b = provBonus(f);
+    for (const k in b) bonus[k] = (bonus[k] || 0) + b[k];
+  }
+  return { owner, mgr, bonus };
+}
+function playerRow(id, e, f, ix) {
+  const ent = ix.owner[id], m = ix.mgr[ent];
+  const key = f.id + ":" + id;
+  const rows = ((e.ex || {})[f.id] || []).filter(x => x[2] || x[1]);
+  // provBonus only fires while the fixture says bonus is not in, but the
+  // two signals come from different parts of the feed and could disagree
+  // for a poll or two around the award. If the breakdown already names a
+  // bonus, that is the official one and it is in his points already.
+  const official = rows.some(r => /bonus/i.test(String(r[0])));
+  const pb = official ? 0 : (ix.bonus[id] || 0);
+  const pts = (e.pts || 0) + pb;
+  let body = rows.map(([name, val, p]) =>
+    `<div><span>${esc(name)}</span><span class="tm">${esc(val)}</span><b>${p > 0 ? "+" : ""}${esc(p)}</b></div>`).join("");
+  if (pb) {
+    body += `<div class="prov"><span>Bonus, provisional</span><span class="tm">${e.bps || 0} bps</span><b>+${pb}</b></div>`;
+  }
+  if (!body) {
+    body = `<div><span>${e.min ? "No scoring events yet." : "Not on the pitch yet."}</span></div>`;
+  }
+  return `<details class="pl" data-k="${esc(key)}"${LVOPEN.has(key) ? " open" : ""}>
+    <summary><span class="nm">${esc(e.n)}</span>
+      <span class="who">${esc(m ? m.name : "")}</span>
+      <span class="pts">${pts}${pb ? `<span class="provb">+${pb}b</span>` : ""}</span></summary>
+    <div class="contrib">${body}</div></details>`;
+}
+function sideHTML(tid, f, L, ix) {
+  const ids = Object.keys(L.elements || {})
+    .filter(id => (L.elements[id].t === tid) && ix.owner[id] != null)
+    .sort((a, b) => ((L.elements[b].pts || 0) + (ix.bonus[b] || 0)) -
+                    ((L.elements[a].pts || 0) + (ix.bonus[a] || 0)));
+  if (!ids.length) return `<div class="mtnone">Nobody in the league owns a player here.</div>`;
+  return ids.map(id => playerRow(id, L.elements[id], f, ix)).join("");
+}
+function matchHTML(f, L, ix) {
+  const hn = L.teams[f.h] || f.h, an = L.teams[f.a] || f.a;
+  const mine = Object.keys(L.elements || {})
+    .some(id => ix.owner[id] === ME && (L.elements[id].t === f.h || L.elements[id].t === f.a));
+  return `<div class="mt ${mine ? "mine" : ""}">
+    <div class="mthead">
+      <span class="mtside">${crest(f.h, hn)}<span class="nm">${esc(hn)}</span></span>
+      <span class="mtmid"><span class="mtscore">${f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v"}</span>
+        <div>${fixtureState(f)}</div></span>
+      <span class="mtside away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
+    </div>
+    <div class="mtcols">
+      <div class="mtcol">${sideHTML(f.h, f, L, ix)}</div>
+      <div class="mtcol">${sideHTML(f.a, f, L, ix)}</div>
+    </div></div>`;
+}
+function tickerText(L, ix) {
+  const rows = (L.managers || []).map(m => {
+    const squad = (m.picks || []).map(([id, slot]) => {
+      const e = L.elements[id] || { p: "MID", t: null, pts: 0, min: 0 };
+      return { id, slot, pos: e.p, tid: e.t, pts: (e.pts || 0) + (ix.bonus[id] || 0),
+               mins: e.min, played: e.min > 0,
+               settled: !(L.fixtures || []).some(f => (f.h === e.t || f.a === e.t) && !f.fin),
+               subbed_in: false, subbed_out: false };
+    }).sort((a, b) => a.slot - b.slot);
+    const R = { ...RULES };
+    for (const k in (L.rules || {})) if (Number.isInteger(L.rules[k])) R[k] = L.rules[k];
+    applySubs(squad, R);
+    const c = squad.filter(p => (p.slot <= R.play && !p.subbed_out) || p.subbed_in);
+    return { m, live: c.reduce((a, p) => a + p.pts, 0) };
+  }).sort((a, b) => b.live - a.live);
+  return rows.map((r, i) =>
+    `<span class="${r.m.entry === ME ? "me" : ""}">${i + 1}. ${esc(r.m.name)} <b>${r.live}</b></span>`)
+    .join(`<em>&middot;</em>`);
+}
 function renderLive() {
-  const sec = $("live");
+  const sec = $("live"), tab = document.querySelector('.tab[data-v="live"]');
   if (!sec) return;
-  if (!LIVE) {
-    sec.innerHTML = `<div class="card"><b class="h">Live scores</b><div class="note">${LIVEERR
-      ? `Cannot reach the live feed (${esc(LIVEERR)}). Retrying.` : "Connecting to the live feed&hellip;"}</div></div>`;
+  const inplay = LIVE ? (LIVE.fixtures || []).filter(f => f.started && !f.fin) : [];
+  // the tab exists only while something is on
+  if (tab) tab.hidden = !inplay.length;
+  if (!inplay.length) {
+    if (tab && tab.classList.contains("on")) {
+      const news = document.querySelector('.tab[data-v="news"]');
+      if (news) news.click();
+    }
+    sec.innerHTML = `<div class="card"><b class="h">Live</b><div class="note">${LIVEERR
+      ? `Cannot reach the live feed (${esc(LIVEERR)}). Retrying.`
+      : LIVE ? "No match in play. This tab comes back when the next one kicks off."
+             : "Connecting to the live feed&hellip;"}</div></div>`;
     return;
   }
-  const ctx = liveTable(LIVE); LIVECTX = ctx;
-  const status = ctx.inplay.length
-    ? `<span class="livedot"></span><b>LIVE</b> · ${ctx.inplay.length} match${ctx.inplay.length > 1 ? "es" : ""} in play`
-    : ctx.allDone ? `GW${LIVE.gw} ${LIVE.finished ? "final" : "all played, awaiting bonus"}`
-      : ctx.next ? `Next kick-off ${koText(ctx.next)}` : `GW${LIVE.gw}`;
-  let h = `<div class="card scorecard"><b class="h">Gameweek ${LIVE.gw}</b>
-    <div class="lvstatus">${status} · feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC</div>
-    <div class="wrap"><table><tr><th></th>${ths("manager", ["GW", "num"], ["on pitch", "num"],
-      ["to play", "num"], ["bench", "num"])}<th></th></tr>`;
-  ctx.mgrs.forEach((m, i) => {
-    h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-l="${m.entry}"><td class="tm">${i + 1}</td>
-      <td><span class="nm">${esc(m.name)}</span> <span class="tm">${esc(m.team)}</span></td>
-      <td class="num">${m.live}</td><td class="num">${m.inplay || ""}</td>
-      <td class="num">${m.to_play || ""}</td><td class="num"><span class="tm">${m.bench}</span></td>
-      <td class="chev">${LIVEOPEN === m.entry ? "&#9662;" : "&#9656;"}</td></tr>`;
-    if (LIVEOPEN === m.entry) h += `<tr><td colspan="7" style="padding:0 0 6px">${liveSquad(m)}</td></tr>`;
-  });
-  h += `</table></div><div class="note">Provisional bonus and provisional substitutions are applied
-    the way the game will apply them at the end of the week.</div></div>`;
-  const order = f => f.started && !f.fin ? 0 : !f.started ? 1 : 2;
-  h += `<div class="card"><b class="h">Fixtures</b><div class="fxwrap">`;
-  for (const f of [...LIVE.fixtures].sort((a, b) => order(a) - order(b) || (a.ko < b.ko ? -1 : 1))) {
-    const chips = [];
-    for (const m of ctx.mgrs) for (const p of m.counting) if (p.tid === f.h || p.tid === f.a)
-      chips.push({ p, who: m.name, mine: m.entry === ME });
-    chips.sort((a, b) => b.p.pts - a.p.pts);
-    const st = f.fin ? `<span class="fxmin ft">FT</span>` : f.started
-      ? `<span class="fxmin">${f.min || 0}'</span>` : `<span class="fxmin ko">${koText(f.ko)}</span>`;
-    h += `<div><div class="fxrow"><span class="fxscore"><span class="tm">${esc(LIVE.teams[f.h] || f.h)}</span>
-      ${f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v"} <span class="tm">${esc(LIVE.teams[f.a] || f.a)}</span></span>${st}</div>
-      <div class="fxplayers">${chips.length ? chips.map(c => `<span class="fxchip ${c.mine ? "mine" : ""}">${nameTag(c.p)}
-        ${f.started ? c.p.pts : ""}${c.p.pb ? `<span class="provb">+${c.p.pb}</span>` : ""}
-        <span class="who">· ${esc(c.who)}</span></span>`).join("") :
-      `<span class="tm" style="font-size:11px">nobody in the league has a starter here</span>`}</div></div>`;
+  const ix = liveIndex(LIVE);
+  // the ticker is left alone unless its text changes, so the scroll does
+  // not jump back to the start every fifteen seconds
+  if (!sec.querySelector("#lvticker")) {
+    sec.innerHTML = `<div class="ticker"><div class="tickrow" id="lvticker"></div></div>
+      <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>`;
   }
-  h += `</div></div>`;
-  sec.innerHTML = h;
-  sec.querySelectorAll("[data-l]").forEach(r => r.addEventListener("click", () => {
-    const e = +r.dataset.l; LIVEOPEN = (LIVEOPEN === e ? null : e); renderLive();
-  }));
-}
-function liveSquad(m) {
-  const cell = p => {
-    const mark = p.subbed_in ? `<span class="subin">IN</span> ` : p.subbed_out ? `<span class="subout">OUT</span> ` : "";
-    const st = p.playing ? (p.mins ? `<span class="fxmin">${p.mins}'</span>` : `<span class="tm">on bench</span>`)
-      : p.settled ? (p.mins ? `${p.mins}'` : `<span class="tm">did not play</span>`) : `<span class="togo">to play</span>`;
-    return `<tr><td>${mark}${nameTag(p)} <span class="tm">${esc(p.team)}</span></td>
-      <td><span class="pos ${p.pos}">${p.pos}</span></td><td class="num">${st}</td>
-      <td class="num">${p.pts}${p.pb ? ` <span class="provb">+${p.pb}b</span>` : ""}</td></tr>`;
-  };
-  const xi = m.squad.filter(p => m.counting.includes(p)), bn = m.squad.filter(p => !m.counting.includes(p));
-  return `<div class="det"><div class="wrap"><table>
-    <tr><th title="${esc(TIPS.player)}">${esc(m.name)}'s XI</th><th></th>
-    ${ths(["played", "num"], ["GW", "num"])}</tr>
-    ${xi.map(cell).join("")}<tr class="benchsep"><td colspan="4">Bench · ${m.bench} pts</td></tr>
-    ${bn.map(cell).join("")}</table></div></div>`;
+  const t = tickerText(LIVE, ix);
+  if (t !== TICK) { TICK = t; $("lvticker").innerHTML = t + `<em>&middot;</em>` + t; }
+  $("lvstat").innerHTML = `<span class="livedot"></span><b>LIVE</b> &middot;
+    ${inplay.length} match${inplay.length > 1 ? "es" : ""} in play &middot;
+    feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC`;
+  // most relevant first: where you have the most players
+  const mineIn = f => Object.keys(LIVE.elements || {})
+    .filter(id => ix.owner[id] === ME &&
+      (LIVE.elements[id].t === f.h || LIVE.elements[id].t === f.a)).length;
+  const order = [...inplay].sort((a, b) => mineIn(b) - mineIn(a) ||
+    String(a.ko || "").localeCompare(String(b.ko || "")));
+  $("lvbody").innerHTML = order.map(f => matchHTML(f, LIVE, ix)).join("");
+  $("lvbody").querySelectorAll("details[data-k]").forEach(d =>
+    d.addEventListener("toggle", () => {
+      if (d.open) LVOPEN.add(d.dataset.k); else LVOPEN.delete(d.dataset.k);
+    }));
 }
 function liveDelay() {
   if (!LIVE || !LIVECTX) return 60e3;

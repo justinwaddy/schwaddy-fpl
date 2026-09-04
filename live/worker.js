@@ -133,16 +133,27 @@ export async function compose(cache, origin = "https://live.invalid") {
   });
 
   // per-player live line, owned players only, plus which fixtures scored it
+  // and how. `ex` is the API's own breakdown, [name, value, points] per
+  // scoring stat per fixture, which is what lets the page show why a
+  // player has the points he has rather than just the total.
   const elements = {};
   for (const id of owned) {
     const l = live.elements[id] || live.elements[String(id)] || {};
     const st = l.stats || {};
     const meta = boot.elements[id] || ["?", null, "MID"];
+    const ex = {};
+    for (const block of l.explain || []) {
+      const [stats, fid] = block;
+      if (fid == null) continue;
+      ex[fid] = (stats || [])
+        .filter(x => x && (x.points || x.value))
+        .map(x => [x.name || x.stat, x.value ?? 0, x.points ?? 0]);
+    }
     elements[id] = {
       n: meta[0], t: meta[1], p: meta[2],
       pts: st.total_points || 0, min: st.minutes || 0,
       bonus: st.bonus || 0, bps: st.bps || 0,
-      fx: (l.explain || []).map(x => x[1]).filter(x => x != null),
+      fx: Object.keys(ex).map(Number), ex,
     };
   }
 
