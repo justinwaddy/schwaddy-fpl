@@ -24,6 +24,11 @@ const SUGGEST_URL = "https://schwaddy-cron.justinl-waddy.workers.dev/suggest";
 const ME = (window.TEAM || {}).me;
 const SHOW_PRICES = !!(window.TEAM || {}).prices;
 let PUB = null, NEWS = null, PRICES = null, ERR = {};
+// Every finished gameweek's squads. A quarter of a megabyte by May and
+// most visits never look back, so it is fetched the first time somebody
+// presses an arrow rather than on load - the same bargain as the stats
+// file behind the player card.
+let HIST = null, HISTREQ = false, GWVIEW = null;
 
 const esc = x => String(x ?? "").replace(/[&<>"]/g,
   c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -282,13 +287,49 @@ function cardHTML() {
 }
 
 /* ---------------- My squad ---------------- */
+function wantHistory() {
+  if (HIST || HISTREQ) return;
+  HISTREQ = true;
+  get(RAW + "gw_history.json", j => { HIST = j; renderSquad(); }, "hist");
+}
+function histGWs() {
+  return Object.keys((HIST && HIST.gws) || {}).map(Number).sort((a, b) => a - b);
+}
+/* The gameweek being looked at, and the squad that played it. Null view
+   means the one public.json scored, which is what the page opens on. */
+function gwBlock(m) {
+  if (GWVIEW == null || !HIST) return null;
+  const blk = (HIST.gws || {})[String(GWVIEW)];
+  const row = blk && blk.managers && blk.managers[String(m.entry)];
+  return row ? { gw: GWVIEW, ...row } : null;
+}
+function gwNav(cur) {
+  const gws = histGWs();
+  const all = gws.includes(cur) ? gws : gws.concat(cur).sort((a, b) => a - b);
+  const at = all.indexOf(cur);
+  const btn = (g, label, on) =>
+    `<button class="gwb" ${on ? `data-gw="${g}"` : "disabled"}>${label}</button>`;
+  return `<span class="gwnav">
+    ${btn(all[at - 1], "&#9666;", at > 0)}
+    <select class="gwsel">${all.map(g =>
+      `<option value="${g}"${g === cur ? " selected" : ""}>GW${g}</option>`).join("")}</select>
+    ${btn(all[at + 1], "&#9656;", at >= 0 && at < all.length - 1)}
+  </span>`;
+}
 function renderSquad() {
   const sec = $("squad");
   if (!PUB) { sec.innerHTML = loading("squad"); return; }
   const m = me();
   if (!m) { sec.innerHTML = `<div class="card"><div class="note">No squad found for this team yet.</div></div>`; return; }
   const byCode = {}; (PUB.players || []).forEach(p => { byCode[p.id] = p; });
-  const xi = m.squad.filter(counting), bn = m.squad.filter(p => !counting(p));
+  wantHistory();
+  // the gameweek on show: the one public.json scored unless an arrow has
+  // moved us somewhere else in the archive
+  const past = gwBlock(m);
+  const view = past || { gw: PUB.gw, live: m.live, bench: m.bench, subs: m.subs,
+                         squad: m.squad, gw_rank: m.gw_rank };
+  const sq = view.squad || [];
+  const xi = sq.filter(counting), bn = sq.filter(p => !counting(p));
   // The roster is who he holds right now; the gameweek table below is who
   // scored last week. Between waivers processing and the next deadline
   // those are different squads, so the current one leads.
@@ -326,14 +367,19 @@ function renderSquad() {
   sec.innerHTML = `${roster.length ? `<div class="card"><b class="h">Squad · ${esc(m.team)}</b>
     <div class="note">The fifteen you hold now, with this season's totals as the game reports them.</div>
     <div class="wrap"><table>${rhead}${roster.map(rcell).join("")}</table></div></div>` : ""}
-    <div class="card scorecard"><b class="h">GW${PUB.gw} · ${m.live} pts</b>
-    <div class="lvstatus">${m.played} played, ${m.to_play} to come · bench ${m.bench} · season ${m.total ?? "-"} pts · ${ordinal(m.rank)} in the league</div>
+    <div class="card scorecard"><b class="h">GW${view.gw} · ${view.live} pts ${gwNav(view.gw)}</b>
+    <div class="lvstatus">${sq.filter(p => p.mins).length} of ${sq.length} played &middot;
+      bench ${view.bench} &middot; ${view.subs || 0} automatic sub${view.subs === 1 ? "" : "s"}
+      ${view.gw_rank ? `&middot; ${ordinal(view.gw_rank)} that week` : ""}
+      ${past ? "" : `&middot; season ${m.total ?? "-"} pts &middot; ${ordinal(m.rank)} in the league`}</div>
     <div class="wrap"><table>${head}${xi.map(cell).join("")}
-    <tr class="benchsep"><td colspan="9">Bench · ${m.bench} pts</td></tr>
+    <tr class="benchsep"><td colspan="9">Bench · ${view.bench} pts</td></tr>
     ${bn.map(cell).join("")}</table></div>
-    <div class="note">The eleven that scored gameweek ${PUB.gw}, with provisional substitutions applied
-    the way the game applies them when a week ends. Waivers process the day before a deadline, so
-    just after they run this is last week's team and the squad above is the current one.</div></div>
+    <div class="note">The eleven that scored gameweek ${view.gw}, with the substitutions the game
+    makes automatically when a week ends.${past ? "" : ` Waivers process the day before a deadline,
+    so just after they run this is last week's team and the squad above is the current one.`}
+    ${HIST ? "" : ERR.hist ? " (Earlier gameweeks unavailable: " + esc(ERR.hist) + ".)"
+      : " Loading the earlier gameweeks&hellip;"}</div></div>
     <div class="card"><b class="h">What the columns mean</b>
     ${legend([["next", "his club's next fixture - capitals at home, lower case away, a dash means no game"],
       ["pts", "his points this season"], ["G", "goals"], ["A", "assists"],
@@ -345,6 +391,15 @@ function renderSquad() {
       ["IN / OUT", "an automatic substitution brought him on, or took him off"]]
       .concat(SHOW_PRICES ? [["value", "his price in the classic game, in millions"]] : []))}
     </div>`;
+  sec.querySelectorAll("[data-gw]").forEach(b => b.addEventListener("click", () => {
+    const g = +b.dataset.gw;
+    GWVIEW = g === PUB.gw ? null : g; renderSquad();
+  }));
+  const sel = sec.querySelector(".gwsel");
+  if (sel) sel.addEventListener("change", () => {
+    const g = +sel.value;
+    GWVIEW = g === PUB.gw ? null : g; renderSquad();
+  });
 }
 function ordinal(n) {
   if (n == null) return "unranked";

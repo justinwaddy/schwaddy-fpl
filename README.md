@@ -265,6 +265,34 @@ twenty lines that name the manager and load them, so there is one copy of
 the logic. Prices are the one thing that differs: only Ed's page fetches
 data/prices.json, and only Ed's page has the value columns.
 
+### Looking back at a gameweek
+The tabs only ever knew the gameweek the cron last scored, which is the
+right thing for a live table and useless for the argument a six-man league
+actually has on a Sunday. The second card on My squad now steps through
+every finished gameweek - arrows either side, a dropdown between them - and
+shows the squad that played it, what each man returned, the automatic
+substitutions the game made, and where that week finished.
+
+data/gw_history.json holds it. A gameweek that has been scored never
+changes, so each one is fetched once, from the draft API's own picks, and
+the file is only ever appended to: six calls a week rather than six hundred
+on every run. The points come out of player_stats.json, which already
+carries every player's match log, so no second live call is needed. Checked
+against league.json for GW2: all six managers' scores and bench points
+match exactly. It is a quarter of a megabyte by May and most visits never
+press an arrow, so the page fetches it on the first press rather than on
+load, the same bargain as the stats file behind the player card.
+
+Building it turned up a real bug in the match logs. gws_2026-27.csv carries
+the classic game's element id, and player_stats.json is keyed on the draft
+id. The two agree for everyone registered before the season - both games
+number that intake identically - and diverge for the 52 players added
+since, so those cards were showing somebody else's matches: Matt Targett's
+were filed under Mamadou Sangare, and Sangare's own GW2 was missing, which
+is what made a manager's reconstructed week come out three points light.
+The rows are keyed by the draft id the full name resolves to now, falling
+back to the column only when the name is unknown.
+
 ### What the league table says
 The gameweek columns were points, bench points and "to play", and by the
 time anyone read them two of the three were blank: "to play" is zero once

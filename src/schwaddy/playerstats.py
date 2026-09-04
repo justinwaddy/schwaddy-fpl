@@ -71,19 +71,29 @@ def _f2(v):
     return round(_num(v, float, 0.0), 2)
 
 
-def _log_rows(data_dir, season=LIVE):
+def _log_rows(data_dir, season=LIVE, id_of_name=None):
     """{element id: [row, ...]} for the current season, newest gameweek last.
 
     Missing file, or a reconstruction that predates a column, is not fatal:
     a player with no rows simply gets no match log on his card.
+
+    The `element` column is the classic game's id. It agrees with the draft
+    id for everyone registered before the season - the two games number
+    that intake identically - and diverges for players added later, 52 of
+    them this season. So the row is keyed by the draft id its full name
+    resolves to, and only falls back to the raw column when the name is
+    unknown. Keying on the column alone silently filed Matt Targett's
+    matches under Mamadou Sangaré.
     """
     path = f"{data_dir}/gws_{season}.csv"
     if not os.path.exists(path):
         return {}
+    names = id_of_name or {}
     by_el = {}
     with open(path) as fh:
         for r in csv.DictReader(fh):
-            eid = _num(r.get("element"), int, None)
+            eid = names.get((r.get("name") or "").strip().lower()) \
+                or _num(r.get("element"), int, None)
             gw = _num(r.get("GW") or r.get("round"), int, None)
             if eid is None or gw is None:
                 continue
@@ -133,7 +143,13 @@ def _set_pieces(e):
 def build(data_dir, bootstrap=None):
     if bootstrap is None:
         bootstrap = json.load(open(f"{data_dir}/draft_bootstrap.json"))
-    logs = _log_rows(data_dir)
+    id_of_name = {}
+    for e in bootstrap["elements"]:
+        full = " ".join(x for x in (e.get("first_name"),
+                                    e.get("second_name")) if x).strip().lower()
+        if full:
+            id_of_name[full] = e["id"]
+    logs = _log_rows(data_dir, id_of_name=id_of_name)
     players = {}
     for e in bootstrap["elements"]:
         # zeros are dropped: two thirds of the grid is a zero in August

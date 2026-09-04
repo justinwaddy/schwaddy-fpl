@@ -12,7 +12,7 @@ import argparse, csv, io, json, os, sys
 import numpy as np
 import requests
 
-from . import (api, compare, depth, liveform, livegws, overrides, public,
+from . import (api, compare, depth, history, liveform, livegws, overrides, public,
                playerstats, prices, weekly)
 from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
@@ -151,6 +151,22 @@ def _player_stats(data_dir, bootstrap):
           f"{logged} with a {st['season']} match log")
 
 
+def _history(data_dir, bootstrap):
+    """Every finished gameweek's squads, for the look-back on My squad.
+
+    Only ever adds the gameweeks it does not already hold, so this is one
+    round of API calls a week rather than one a run. Never fatal: without
+    it the tab simply shows the current gameweek and no arrows.
+    """
+    try:
+        out = history.write(data_dir, bootstrap)
+    except Exception as ex:
+        print(f"gameweek history skipped: {ex}")
+        return
+    print(f"gameweek history: {len(out['gws'])} gameweeks "
+          f"({', '.join('GW' + g for g in out['gws'])})")
+
+
 def _prices(data_dir):
     """Classic-game prices behind the Waivers tab's market table.
 
@@ -209,6 +225,7 @@ def main():
                             id_of_code, weekly=wk)
         print(f"news feed updated: {n_new} new events")
         _player_stats(args.data_dir, d)
+        _history(args.data_dir, d)
         _prices(args.data_dir)
         _public(args.data_dir)
         return
@@ -442,6 +459,7 @@ def main():
     except Exception as ex:
         print(f"rival predictions skipped: {ex}")
     _player_stats(args.data_dir, d)
+    _history(args.data_dir, d)
     _prices(args.data_dir)
     _public(args.data_dir)
     try:
