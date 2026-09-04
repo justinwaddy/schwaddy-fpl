@@ -648,10 +648,10 @@ function koText(iso) {
   return d.toLocaleDateString("en-GB", { weekday: "short" }) + " " +
     d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
 }
-// The Live tab is a match view, not a table: one card per game actually
-// being played, ordered by how many of your own players are in it. It only
-// exists while a game is on - the tab hides itself otherwise, since a live
-// tab with nothing live is just a worse League tab.
+// The Live tab is a match view, not a table. It is always there, because
+// the gameweek's fixture list is worth looking at before anything kicks
+// off; what comes and goes is the live part above it, one card per game
+// actually being played, ordered by how many of your own players are in it.
 //
 // Points shown are the league's players only, both sides, each one opening
 // to show how he got them. Provisional bonus is folded in and labelled as
@@ -735,6 +735,26 @@ function matchHTML(f, L, ix) {
       <div class="mtcol">${sideHTML(f.a, f, L, ix)}</div>
     </div></div>`;
 }
+/* One line in the gameweek's fixture list: the schedule, not the scoring. */
+function fxRow(f, L, ix) {
+  const hn = L.teams[f.h] || f.h, an = L.teams[f.a] || f.a;
+  const own = tid => Object.keys(L.elements || {})
+    .filter(id => L.elements[id].t === tid && ix.owner[id] != null);
+  // a bare count beside a scoreline reads as part of the score, so these
+  // say what they are
+  const side = tid => {
+    const ids = own(tid), mine = ids.filter(id => ix.owner[id] === ME).length;
+    if (mine) return `<span class="fxc me">${mine} of yours</span>`;
+    if (ids.length) return `<span class="fxc">${ids.length} in league</span>`;
+    return "";
+  };
+  const mid = f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v";
+  return `<div class="fxr${f.started && !f.fin ? " on" : ""}">
+    <span class="fxs">${side(f.h)}<span class="nm">${esc(hn)}</span>${crest(f.h, hn)}</span>
+    <span class="fxm"><b>${mid}</b>${fixtureState(f)}</span>
+    <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span>${side(f.a)}</span>
+  </div>`;
+}
 function tickerText(L, ix) {
   const rows = (L.managers || []).map(m => {
     const squad = (m.picks || []).map(([id, slot]) => {
@@ -755,45 +775,56 @@ function tickerText(L, ix) {
     .join(`<em>&middot;</em>`);
 }
 function renderLive() {
-  const sec = $("live"), tab = document.querySelector('.tab[data-v="live"]');
+  const sec = $("live");
   if (!sec) return;
-  const inplay = LIVE ? (LIVE.fixtures || []).filter(f => f.started && !f.fin) : [];
-  // the tab exists only while something is on
-  if (tab) tab.hidden = !inplay.length;
-  if (!inplay.length) {
-    if (tab && tab.classList.contains("on")) {
-      const news = document.querySelector('.tab[data-v="news"]');
-      if (news) news.click();
-    }
+  if (!LIVE) {
     sec.innerHTML = `<div class="card"><b class="h">Live</b><div class="note">${LIVEERR
       ? `Cannot reach the live feed (${esc(LIVEERR)}). Retrying.`
-      : LIVE ? "No match in play. This tab comes back when the next one kicks off."
-             : "Connecting to the live feed&hellip;"}</div></div>`;
+      : "Connecting to the live feed&hellip;"}</div></div>`;
+    TICK = "";
     return;
   }
   const ix = liveIndex(LIVE);
+  const fx = LIVE.fixtures || [];
+  const inplay = fx.filter(f => f.started && !f.fin);
   // the ticker is left alone unless its text changes, so the scroll does
   // not jump back to the start every fifteen seconds
   if (!sec.querySelector("#lvticker")) {
     sec.innerHTML = `<div class="ticker"><div class="tickrow" id="lvticker"></div></div>
-      <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>`;
+      <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>
+      <div class="card"><b class="h" id="lvfxh"></b><div class="fxl" id="lvfxb"></div></div>`;
   }
   const t = tickerText(LIVE, ix);
   if (t !== TICK) { TICK = t; $("lvticker").innerHTML = t + `<em>&middot;</em>` + t; }
-  $("lvstat").innerHTML = `<span class="livedot"></span><b>LIVE</b> &middot;
-    ${inplay.length} match${inplay.length > 1 ? "es" : ""} in play &middot;
-    feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC`;
-  // most relevant first: where you have the most players
-  const mineIn = f => Object.keys(LIVE.elements || {})
-    .filter(id => ix.owner[id] === ME &&
-      (LIVE.elements[id].t === f.h || LIVE.elements[id].t === f.a)).length;
-  const order = [...inplay].sort((a, b) => mineIn(b) - mineIn(a) ||
-    String(a.ko || "").localeCompare(String(b.ko || "")));
-  $("lvbody").innerHTML = order.map(f => matchHTML(f, LIVE, ix)).join("");
-  $("lvbody").querySelectorAll("details[data-k]").forEach(d =>
-    d.addEventListener("toggle", () => {
-      if (d.open) LVOPEN.add(d.dataset.k); else LVOPEN.delete(d.dataset.k);
-    }));
+
+  if (inplay.length) {
+    $("lvstat").innerHTML = `<span class="livedot"></span><b>LIVE</b> &middot;
+      ${inplay.length} match${inplay.length > 1 ? "es" : ""} in play &middot;
+      feed ${esc((LIVE.fetched || "").slice(11, 19))} UTC`;
+    // most relevant first: where you have the most players
+    const mineIn = f => Object.keys(LIVE.elements || {})
+      .filter(id => ix.owner[id] === ME &&
+        (LIVE.elements[id].t === f.h || LIVE.elements[id].t === f.a)).length;
+    const order = [...inplay].sort((a, b) => mineIn(b) - mineIn(a) ||
+      String(a.ko || "").localeCompare(String(b.ko || "")));
+    $("lvbody").innerHTML = order.map(f => matchHTML(f, LIVE, ix)).join("");
+    $("lvbody").querySelectorAll("details[data-k]").forEach(d =>
+      d.addEventListener("toggle", () => {
+        if (d.open) LVOPEN.add(d.dataset.k); else LVOPEN.delete(d.dataset.k);
+      }));
+  } else {
+    const next = fx.filter(f => !f.started).map(f => f.ko).sort()[0];
+    $("lvstat").innerHTML = next
+      ? `Nothing in play. Next kick-off ${esc(koText(next))}.`
+      : `Every match in gameweek ${LIVE.gw} has finished.`;
+    $("lvbody").innerHTML = "";
+  }
+
+  $("lvfxh").textContent = `Gameweek ${LIVE.gw} fixtures`;
+  $("lvfxb").innerHTML = [...fx]
+    .sort((a, b) => String(a.ko || "").localeCompare(String(b.ko || "")))
+    .map(f => fxRow(f, LIVE, ix)).join("") ||
+    `<div class="note">No fixtures in this gameweek.</div>`;
 }
 function liveDelay() {
   if (!LIVE || !LIVECTX) return 60e3;

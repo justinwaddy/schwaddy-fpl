@@ -266,18 +266,21 @@ the logic. Prices are the one thing that differs: only Ed's page fetches
 data/prices.json, and only Ed's page has the value columns.
 
 ### The Live tab, on the six pages
-The tab exists only while a match is actually in play - started and not
-finished. There is nothing to watch otherwise, and a tab that is always
-there but usually empty invites a click that goes nowhere, so it is hidden
-between matches and the page falls back to News.
+The tab is always there, and its bottom half is the gameweek's fixture
+list: every match in kick-off order, the crests, the score or the kick-off
+time, and how many of the league's players are on each side - "2 of
+yours" where they are the reader's, the league's count where they are not,
+spelled out because a bare number beside a scoreline reads as part of it.
 
-A ticker runs across the top, the six managers in live-points order,
+What comes and goes is the live half above it. A ticker runs across the
+top, the six managers in live-points order,
 re-rendered whenever the standings change and left alone when they do not,
 so the marquee does not jump back to the start every fifteen seconds. It
 respects prefers-reduced-motion.
 
-Under it is one card per match in play: the two crests either side, the
-score between them and the minute under that. Each side lists only the
+Above the fixture list, while a match is on, is one card per match in
+play: the two crests either side, the score between them and the minute
+under that. Each side lists only the
 league's players in that match - the rest of the twenty-two is on
 television - with his points beside him, and his own scoring breakdown as
 a collapsible under the row: minutes, goals, assists, cards, bonus, each
@@ -291,7 +294,9 @@ moment the breakdown itself names a Bonus row, or the two would be added
 together and every hauling player would read three points high.
 
 Multiple matches mean multiple cards, ordered by how many of the reader's
-own players are in each, so his game is the one at the top.
+own players are in each, so his game is the one at the top. With nothing
+in play the cards are simply absent and a line says when the next kick-off
+is, or that the gameweek is over; the ticker and the fixtures stay.
 
 These are public URLs on GitHub Pages. Anyone who guesses another
 manager's path can open it, which changes nothing except that they would

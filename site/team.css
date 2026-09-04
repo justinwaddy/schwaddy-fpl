@@ -162,3 +162,18 @@ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .contrib b{color:var(--ink);margin-left:auto;font:600 12px "IBM Plex Mono",ui-monospace,monospace}
 .contrib .prov{color:var(--amber)}
 .mtnone{color:var(--dim);font-size:12px;padding:8px 2px}
+/* the gameweek's fixture list, which stays under the live cards all week */
+.fxl{margin-top:2px}
+.fxr{display:flex;align-items:center;gap:8px;padding:7px 2px;border-top:1px solid var(--line)}
+.fxr:first-child{border-top:none}
+.fxr.on{background:var(--panel2)}
+.fxs{display:flex;align-items:center;gap:6px;flex:1;min-width:0;justify-content:flex-end}
+.fxs.away{justify-content:flex-start}
+.fxs img{width:20px;height:20px;object-fit:contain;flex:none}
+.fxs .nm{font:600 14px "Barlow Condensed",system-ui;letter-spacing:.03em;text-transform:uppercase;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fxc{font:600 10px "IBM Plex Mono",ui-monospace,monospace;color:var(--dim);white-space:nowrap}
+.fxc.me{color:var(--blue)}
+.fxm{flex:none;width:96px;text-align:center;line-height:1.2}
+.fxm b{display:block;font:600 15px "IBM Plex Mono",ui-monospace,monospace}
+@media(max-width:420px){.fxm{width:74px}.fxs .nm{font-size:13px}}
