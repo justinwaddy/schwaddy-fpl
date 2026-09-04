@@ -278,8 +278,12 @@ it cannot say "closes today" on a Sunday, and once the deadline passes it
 says so and explains that the eleven standing at the deadline is the one
 that scores.
 
-Under it are two feeds side by side, newest first, with chips to filter to
-news, waivers, injuries or results.
+Under it are two feeds side by side, newest first, with three chips: all
+news, the league, or the players. A waiver is a manager's doing, an
+opinion is about a manager and a scoreline is the competition; a
+hamstring, a hat trick and a transfer belong to the player. The suggest
+button sits on the right of that same row rather than under a heading of
+its own.
 
 The league's own running record comes through public.json: who claimed
 whom, who is injured or cleared, who hauled, who left points on the bench,
@@ -312,8 +316,10 @@ one manager an edge.
 
 On a matchday it also writes one to three OPINION pieces of its own. Those
 draw on data/roasts.json, an archive the managers fill themselves: the
-News tab has a box where anyone can name another manager and suggest a
-line. The pages are static, so the box posts to the Cloudflare worker,
+News tab has a box where anyone can name a manager and suggest a line.
+Every one of the six can be named, including whoever's page you happen to
+be on: these pages are public and get passed around, so excluding the
+owner only meant Ed could not be roasted from Ed's page. The pages are static, so the box posts to the Cloudflare worker,
 which asks GitHub to run .github/workflows/suggest.yml, which appends it.
 The worker needs no permission beyond the Actions write it already had for
 the schedule - the committing is done by the runner with its own
