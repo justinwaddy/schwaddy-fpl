@@ -8,6 +8,15 @@
    "about": "Robert",
    "text": "Rob’s chances of first place receding more than his hairline. You MUST mention hairline",
    "used": false
+  },
+  {
+   "id": "2026-09-04-a8bbcabc4b",
+   "key": "a8bbcabc4b",
+   "ts": "2026-09-04T13:36",
+   "frm": "Ben D",
+   "about": null,
+   "text": "Ben C’s chance of winning is the same as his height: small",
+   "used": false
   }
  ],
  "runs": [
@@ -22,6 +31,12 @@
    "frm": "Ben D",
    "about": "Robert",
    "chars": 87
+  },
+  {
+   "ts": "2026-09-04T13:36",
+   "frm": "Ben D",
+   "about": null,
+   "chars": 58
   }
  ]
 }
