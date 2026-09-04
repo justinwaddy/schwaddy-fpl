@@ -1,291 +1,293 @@
 {
- "gw": 3,
- "deadline": "2026-09-04T17:30:00Z",
- "ts": "2026-09-03T21:08 UTC",
- "summary": "12 of 15 confirmed starters, with Barcola on the bench for his Liverpool debut, Doku out until 13 September, and Garner also on the bench behind Hackney - a correction on Garner, who did not actually start midweek as earlier reported. Marmoush is likely rather than nailed given genuine competition from Solanke at Tottenham. The dashboard's My squad tab should treat Doku, Garner and Barcola as non-starters this gameweek despite their model availability figures, and Munoz and Bijol as safer starts than their model numbers suggest.",
- "players": [
-  {
-   "name": "Pickford",
-   "code": "111234",
-   "club": "EVE",
-   "pos": "GKP",
-   "status": "start",
-   "verdict": "Undisputed number one, no fitness concerns",
-   "note": "Everton's predicted XI for Sunday's home game against Manchester United has Pickford in goal as usual; he was ever-present in the league last season and there is no injury or rotation risk reported.",
-   "sources": [
+  "gw": 3,
+  "deadline": "2026-09-04T17:30:00Z",
+  "ts": "2026-09-04T08:15 UTC",
+  "summary": "13 of 15 confirmed starters, up from 12 last night - Garner is now set to start against Man Utd (Hackney a doubt with a knock, reversing yesterday's bench read) and Marmoush is upgraded to a confirmed starter now that Solanke's ankle injury has ended his competition for the Tottenham striker spot. Barcola remains expected on the bench for his Liverpool debut tonight and Doku is still out until around 13 September - the My squad tab should still treat those two as non-starters this gameweek despite their model numbers.",
+  "players": [
     {
-     "title": "Everton Predicted XI GW3: Johnson, Dibling, Beto vs Manchester United",
-     "url": "https://www.footballdream.in/lineups/everton"
+      "name": "Pickford",
+      "code": "111234",
+      "club": "EVE",
+      "pos": "GKP",
+      "status": "start",
+      "verdict": "Undisputed number one, no fitness concerns",
+      "note": "Everton's predicted XI for Sunday's home game against Manchester United has Pickford in goal as usual; he was ever-present in the league last season and there is no injury or rotation risk reported.",
+      "sources": [
+        {
+          "title": "Everton Predicted XI GW3: Johnson, Dibling, Beto vs Manchester United",
+          "url": "https://www.footballdream.in/lineups/everton"
+        },
+        {
+          "title": "Jordan Pickford News: Back with Toffees for new season",
+          "url": "https://www.rotowire.com/soccer/headlines/jordan-pickford-news-back-with-toffees-for-new-season-526411"
+        }
+      ]
     },
     {
-     "title": "Jordan Pickford News: Back with Toffees for new season",
-     "url": "https://www.rotowire.com/soccer/headlines/jordan-pickford-news-back-with-toffees-for-new-season-526411"
-    }
-   ]
-  },
-  {
-   "name": "Raya",
-   "code": "154561",
-   "club": "ARS",
-   "pos": "GKP",
-   "status": "start",
-   "verdict": "Arsenal's clear number one, no competition",
-   "note": "Raya is Arsenal's first-choice goalkeeper for Sunday's home game against Chelsea, with no goalkeeping competition or fitness issue reported anywhere.",
-   "sources": [
-    {
-     "title": "Arsenal vs Chelsea Prediction, Lineups & Team News",
-     "url": "https://www.rotowire.com/soccer/article/arsenal-vs-chelsea-prediction-predicted-lineups-team-news-131768"
-    }
-   ]
-  },
-  {
-   "name": "Mu\u00f1oz",
-   "code": "247348",
-   "club": "NFO",
-   "pos": "DEF",
-   "status": "start",
-   "verdict": "Confirmed starting right wing-back over Aina",
-   "note": "Nottingham Forest's predicted XI for Saturday's home game against Tottenham has Munoz starting at right wing-back ahead of Ola Aina, and manager Oliver Glasner has confirmed his availability directly; under Glasner at Palace he started every game he was fit for. This is well ahead of the model's own 0.37 availability figure, which has not caught up with his instant restoration to the XI.",
-   "sources": [
-    {
-     "title": "Nottingham Forest lineup vs. Tottenham: Munoz makes the XI",
-     "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+      "name": "Raya",
+      "code": "154561",
+      "club": "ARS",
+      "pos": "GKP",
+      "status": "start",
+      "verdict": "Arsenal's clear number one, no competition",
+      "note": "Raya is Arsenal's first-choice goalkeeper for Sunday's home game against Chelsea, with no goalkeeping competition or fitness issue reported anywhere.",
+      "sources": [
+        {
+          "title": "Arsenal vs Chelsea Prediction, Lineups & Team News",
+          "url": "https://www.rotowire.com/soccer/article/arsenal-vs-chelsea-prediction-predicted-lineups-team-news-131768"
+        }
+      ]
     },
     {
-     "title": "Daniel Munoz News: Available for Forest debut",
-     "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-available-for-forest-debut-530761"
-    }
-   ]
-  },
-  {
-   "name": "Gvardiol",
-   "code": "477424",
-   "club": "MCI",
-   "pos": "DEF",
-   "status": "start",
-   "verdict": "Nailed at left-back, no fitness concerns",
-   "note": "Predicted Man City lineups for Saturday's home game against Coventry have Gvardiol at left-back in a back four, with no injury or rotation concerns reported.",
-   "sources": [
-    {
-     "title": "Man City XI vs Coventry: Predicted lineup, confirmed team news, injury latest",
-     "url": "https://sports.yahoo.com/articles/man-city-xi-vs-coventry-140422465.html"
+      "name": "Mu\u00f1oz",
+      "code": "247348",
+      "club": "NFO",
+      "pos": "DEF",
+      "status": "start",
+      "verdict": "Confirmed starting right wing-back over Aina",
+      "note": "Nottingham Forest's predicted XI for Saturday's home game against Tottenham has Munoz starting at right wing-back ahead of Ola Aina, and manager Oliver Glasner has confirmed his availability directly; under Glasner at Palace he started every game he was fit for. This is well ahead of the model's own 0.37 availability figure, which has not caught up with his instant restoration to the XI.",
+      "sources": [
+        {
+          "title": "Nottingham Forest lineup vs. Tottenham: Munoz makes the XI",
+          "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+        },
+        {
+          "title": "Daniel Munoz News: Available for Forest debut",
+          "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-available-for-forest-debut-530761"
+        }
+      ]
     },
     {
-     "title": "Man City lineup vs. Coventry: Predicted XI",
-     "url": "https://www.sportsmole.co.uk/football/man-city/predicted-lineups/will-fernandez-ndiaye-make-their-debuts-predicted-man-city-lineup-vs-coventry_604325.html"
-    }
-   ]
-  },
-  {
-   "name": "Milenkovi\u0107",
-   "code": "227444",
-   "club": "NFO",
-   "pos": "DEF",
-   "status": "start",
-   "verdict": "Set in Forest's back three",
-   "note": "Named in Nottingham Forest's back three (with Cunha and Murillo shielding Sels) in the predicted lineup for Saturday's home game against Tottenham; he was an ever-present for Forest last season and has no fitness issue reported.",
-   "sources": [
-    {
-     "title": "Nottingham Forest lineup vs. Tottenham: Munoz makes the XI",
-     "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
-    }
-   ]
-  },
-  {
-   "name": "Bijol",
-   "code": "434752",
-   "club": "LEE",
-   "pos": "DEF",
-   "status": "start",
-   "verdict": "Locked in at centre-back after Rodon's injury",
-   "note": "Leeds centre-back rival Joe Rodon is confirmed out for 8-10 weeks with a serious hamstring injury, and new signing Nico Elvedi has moved in alongside Bijol in a back three for Saturday's away game at Brighton, cementing his starting spot.",
-   "sources": [
-    {
-     "title": "Leeds lineup vs. Brighton: Predicted XI including Rodon replacement",
-     "url": "https://www.sportsmole.co.uk/football/leeds-united/predicted-lineups/who-will-replace-injured-rodon-predicted-leeds-lineup-vs-brighton_604335.html"
-    }
-   ]
-  },
-  {
-   "name": "Collins",
-   "code": "432830",
-   "club": "BRE",
-   "pos": "DEF",
-   "status": "start",
-   "verdict": "Set centre-back pairing with Ajer",
-   "note": "Predicted Brentford lineups for Saturday's home game against Sunderland have Collins in a settled centre-back pairing with Kristoffer Ajer; he is not among Brentford's reported absentees (Milambo, van den Berg, Jensen, Dasilva).",
-   "sources": [
-    {
-     "title": "Sunderland vs. Brentford lineups: Predicted starting XI, team news",
-     "url": "https://sports.yahoo.com/article/sunderland-vs-brentford-lineups-predicted-072001783.html"
+      "name": "Gvardiol",
+      "code": "477424",
+      "club": "MCI",
+      "pos": "DEF",
+      "status": "start",
+      "verdict": "Nailed at left-back, no fitness concerns",
+      "note": "Predicted Man City lineups for Saturday's home game against Coventry have Gvardiol at left-back in a back four, with no injury or rotation concerns reported.",
+      "sources": [
+        {
+          "title": "Man City XI vs Coventry: Predicted lineup, confirmed team news, injury latest",
+          "url": "https://sports.yahoo.com/articles/man-city-xi-vs-coventry-140422465.html"
+        },
+        {
+          "title": "Man City lineup vs. Coventry: Predicted XI",
+          "url": "https://www.sportsmole.co.uk/football/man-city/predicted-lineups/will-fernandez-ndiaye-make-their-debuts-predicted-man-city-lineup-vs-coventry_604325.html"
+        }
+      ]
     },
     {
-     "title": "Preview: Brentford vs Sunderland - prediction, team news, lineups",
-     "url": "https://www.sportsmole.co.uk/football/brentford/preview/brentford-vs-sunderland-prediction-team-news-lineups_604351.html"
-    }
-   ]
-  },
-  {
-   "name": "Barcola",
-   "code": "482616",
-   "club": "LIV",
-   "pos": "MID",
-   "status": "bench",
-   "verdict": "Available but expected on the bench for his debut",
-   "note": "Manager Andoni Iraola confirmed Barcola is available for Friday's away game at Ipswich after his GBP123m move from PSG, but was noncommittal on starting him given his lack of pre-season minutes; two independent predicted lineups have him on the bench behind Gakpo, Wirtz and Isak, with an impact-sub role the more likely outcome. That matches the model's very low 0.10 availability figure for now, well below what a GBP123m marquee arrival might otherwise suggest.",
-   "sources": [
-    {
-     "title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich",
-     "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"
+      "name": "Milenkovi\u0107",
+      "code": "227444",
+      "club": "NFO",
+      "pos": "DEF",
+      "status": "start",
+      "verdict": "Set in Forest's back three",
+      "note": "Named in Nottingham Forest's back three (with Cunha and Murillo shielding Sels) in the predicted lineup for Saturday's home game against Tottenham; he was an ever-present for Forest last season and has no fitness issue reported.",
+      "sources": [
+        {
+          "title": "Nottingham Forest lineup vs. Tottenham: Munoz makes the XI",
+          "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+        }
+      ]
     },
     {
-     "title": "Liverpool lineup vs. Ipswich Town: Predicted XI as Andoni Iraola faces Bradley Barcola debut decision",
-     "url": "https://www.sportsmole.co.uk/football/liverpool/predicted-lineups/barcola-to-make-reds-debut-predicted-liverpool-xi-vs-ipswich_604314.html"
-    }
-   ]
-  },
-  {
-   "name": "Doku",
-   "code": "248875",
-   "club": "MCI",
-   "pos": "MID",
-   "status": "out",
-   "verdict": "Out with calf injury, not back until 13 Sept",
-   "note": "Doku aggravated a calf issue in the Community Shield and has already missed two Premier League games; manager Enzo Maresca has ruled him out for Saturday's game against Coventry too, with a return now pointing to 13 September against Manchester United rather than the 5 September date currently shown on the dashboard.",
-   "sources": [
-    {
-     "title": "Man City injury, suspension news and return dates for Coventry City clash",
-     "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
+      "name": "Bijol",
+      "code": "434752",
+      "club": "LEE",
+      "pos": "DEF",
+      "status": "start",
+      "verdict": "Locked in at centre-back after Rodon's injury",
+      "note": "Leeds centre-back rival Joe Rodon is confirmed out for 8-10 weeks with a serious hamstring injury, and new signing Nico Elvedi has moved in alongside Bijol in a back three for Saturday's away game at Brighton, cementing his starting spot.",
+      "sources": [
+        {
+          "title": "Leeds lineup vs. Brighton: Predicted XI including Rodon replacement",
+          "url": "https://www.sportsmole.co.uk/football/leeds-united/predicted-lineups/who-will-replace-injured-rodon-predicted-leeds-lineup-vs-brighton_604335.html"
+        }
+      ]
     },
     {
-     "title": "Man City injury and fitness tracker 2026/27",
-     "url": "https://readmancity.com/2026/09/02/man-city-injury-fitness-tracker-2026-27/"
-    }
-   ]
-  },
-  {
-   "name": "Garner",
-   "code": "232928",
-   "club": "EVE",
-   "pos": "MID",
-   "status": "bench",
-   "verdict": "Behind Hackney in midfield, minutes still rationed",
-   "note": "Everton's predicted XI for Sunday's home game against Manchester United has Hayden Hackney starting in central midfield with Garner on the bench; contrary to an earlier report, Garner did not start Everton's Carabao Cup win at Preston, he came on for the final 15 minutes. Moyes is managing his minutes carefully as he continues his recovery from pre-season groin surgery.",
-   "sources": [
-    {
-     "title": "Everton Predicted XI GW3: Johnson, Dibling, Beto vs Manchester United",
-     "url": "https://www.footballdream.in/lineups/everton"
+      "name": "Collins",
+      "code": "432830",
+      "club": "BRE",
+      "pos": "DEF",
+      "status": "start",
+      "verdict": "Set centre-back pairing with Ajer",
+      "note": "Predicted Brentford lineups for Saturday's home game against Sunderland have Collins in a settled centre-back pairing with Kristoffer Ajer; he is not among Brentford's reported absentees (Milambo, van den Berg, Jensen, Dasilva).",
+      "sources": [
+        {
+          "title": "Sunderland vs. Brentford lineups: Predicted starting XI, team news",
+          "url": "https://sports.yahoo.com/article/sunderland-vs-brentford-lineups-predicted-072001783.html"
+        },
+        {
+          "title": "Preview: Brentford vs Sunderland - prediction, team news, lineups",
+          "url": "https://www.sportsmole.co.uk/football/brentford/preview/brentford-vs-sunderland-prediction-team-news-lineups_604351.html"
+        }
+      ]
     },
     {
-     "title": "Moyes explains surprise Garner return as Everton injury picture improves",
-     "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+      "name": "Barcola",
+      "code": "482616",
+      "club": "LIV",
+      "pos": "MID",
+      "status": "bench",
+      "verdict": "Available but expected on the bench for his debut",
+      "note": "Manager Andoni Iraola confirmed Barcola is available for Friday's away game at Ipswich after his GBP123m move from PSG, but was noncommittal on starting him given his lack of pre-season minutes; two independent predicted lineups have him on the bench behind Gakpo, Wirtz and Isak, with an impact-sub role the more likely outcome. That matches the model's very low 0.10 availability figure for now, well below what a GBP123m marquee arrival might otherwise suggest.",
+      "sources": [
+        {
+          "title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich",
+          "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"
+        },
+        {
+          "title": "Liverpool lineup vs. Ipswich Town: Predicted XI as Andoni Iraola faces Bradley Barcola debut decision",
+          "url": "https://www.sportsmole.co.uk/football/liverpool/predicted-lineups/barcola-to-make-reds-debut-predicted-liverpool-xi-vs-ipswich_604314.html"
+        }
+      ]
     },
     {
-     "title": "Preston 0-4 Everton",
-     "url": "https://www.espn.com/soccer/match/_/gameId/401908123/everton-preston-north-end"
-    }
-   ]
-  },
-  {
-   "name": "Schade",
-   "code": "513418",
-   "club": "BRE",
-   "pos": "MID",
-   "status": "start",
-   "verdict": "In red-hot form, nailed starter",
-   "note": "Schade scored at Leeds last weekend and is on a hot streak; predicted Brentford lineups for Saturday's home game against Sunderland have him starting in the front three alongside Igor Thiago, with no fitness concerns.",
-   "sources": [
-    {
-     "title": "Preview: Brentford vs Sunderland - prediction, team news, lineups",
-     "url": "https://www.sportsmole.co.uk/football/brentford/preview/brentford-vs-sunderland-prediction-team-news-lineups_604351.html"
+      "name": "Doku",
+      "code": "248875",
+      "club": "MCI",
+      "pos": "MID",
+      "status": "out",
+      "verdict": "Out with calf injury, not back until 13 Sept",
+      "note": "Doku aggravated a calf issue in the Community Shield and has already missed two Premier League games; manager Enzo Maresca has ruled him out for Saturday's game against Coventry too, with a return now pointing to 13 September against Manchester United rather than the 5 September date currently shown on the dashboard.",
+      "sources": [
+        {
+          "title": "Man City injury, suspension news and return dates for Coventry City clash",
+          "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
+        },
+        {
+          "title": "Man City injury and fitness tracker 2026/27",
+          "url": "https://readmancity.com/2026/09/02/man-city-injury-fitness-tracker-2026-27/"
+        }
+      ]
     },
     {
-     "title": "Sunderland vs. Brentford lineups: Predicted starting XI, team news",
-     "url": "https://sports.yahoo.com/article/sunderland-vs-brentford-lineups-predicted-072001783.html"
-    }
-   ]
-  },
-  {
-   "name": "Tavernier",
-   "code": "201658",
-   "club": "BOU",
-   "pos": "MID",
-   "status": "start",
-   "verdict": "Set in Bournemouth's front three",
-   "note": "Marcus Tavernier is expected to keep his place in Bournemouth's attacking three (with Rayan and Kluivert behind Evanilson) for Saturday's away game at Newcastle; new head coach Marco Rose has kept the same XI for back-to-back games and none of Bournemouth's reported absentees affect him.",
-   "sources": [
-    {
-     "title": "Bournemouth lineup vs. Newcastle: Predicted XI for Premier League clash",
-     "url": "https://www.sportsmole.co.uk/football/bournemouth/predicted-lineups/christie-adams-rodriguez-decisions-predicted-bournemouth-lineup-vs-newcastle_604331.html"
-    }
-   ]
-  },
-  {
-   "name": "Marmoush",
-   "code": "438234",
-   "club": "TOT",
-   "pos": "FWD",
-   "status": "likely",
-   "verdict": "Predicted to start but Solanke has a case too",
-   "note": "Tottenham's predicted XI for Saturday's away game at Nottingham Forest has Marmoush leading the attack, but Sports Mole flags that Dominic Solanke 'has a case to start' instead, and new manager Roberto De Zerbi is under pressure with Spurs winless through two games - worth a final check on team news before the deadline. This is a firmer starting role than the model's 0.35 availability figure suggests, but not a certainty.",
-   "sources": [
-    {
-     "title": "Tottenham lineup vs. Nottingham Forest: Predicted XI amid Savio, James Maddison injury concerns",
-     "url": "https://www.sportsmole.co.uk/football/spurs/predicted-lineups/will-savio-maddison-make-the-cut-predicted-tottenham-xi-vs-forest_604364.html"
+      "name": "Garner",
+      "code": "232928",
+      "club": "EVE",
+      "pos": "MID",
+      "status": "start",
+      "verdict": "Now set to start vs Man Utd, ahead of a doubtful Hackney",
+      "note": "Reversing yesterday's bench read: Sky Sports reports Garner is playing well enough to be in England call-up conversations and is set to start against his former club Man United on Sunday, with Hayden Hackney a doubt after picking up a knock. Model's 0.61 avail figure understates this.",
+      "sources": [
+        {
+          "title": "James Garner: Everton midfielder showing Manchester United what they're missing",
+          "url": "https://www.skysports.com/football/news/11095/13509049/james-garner-everton-midfielder-showing-manchester-united-what-theyre-missing-and-is-now-knocking-on-the-door-for-an-england-call-up"
+        },
+        {
+          "title": "Everton vs Manchester United Prediction, Lineups & Team News",
+          "url": "https://www.rotowire.com/soccer/article/everton-vs-manchester-united-prediction-predicted-lineups-team-news-131844"
+        }
+      ]
     },
     {
-     "title": "Tottenham predicted lineup to play Nottingham Forest at City Ground",
-     "url": "https://tothelaneandback.com/2026/09/03/predicted-tottenham-hotspur-lineup-xi-nottingham-forest-2-2/"
-    }
-   ]
-  },
-  {
-   "name": "Strand Larsen",
-   "code": "247412",
-   "club": "CRY",
-   "pos": "FWD",
-   "status": "start",
-   "verdict": "Leading the line with Mateta injured",
-   "note": "Crystal Palace's first-choice striker Jean-Philippe Mateta is out injured (reports vary between hamstring and thigh, with return estimates ranging from four weeks to October), and predicted Palace lineups for Saturday's away game at Fulham have Strand Larsen leading the line again as the direct beneficiary.",
-   "sources": [
-    {
-     "title": "Crystal Palace lineup vs. Fulham: Predicted XI for Premier League clash with new signings available",
-     "url": "https://www.sportsmole.co.uk/football/crystal-palace/predicted-lineups/any-debutants-how-palace-could-line-up-against-fulham_604402.html"
-    }
-   ]
-  },
-  {
-   "name": "Haaland",
-   "code": "223094",
-   "club": "MCI",
-   "pos": "FWD",
-   "status": "start",
-   "verdict": "Undisputed starting striker",
-   "note": "Every predicted Man City lineup for Saturday's home game against Coventry has Haaland as the central striker, with no fitness or rotation risk reported.",
-   "sources": [
-    {
-     "title": "Man City XI vs Coventry: Predicted lineup, confirmed team news, injury latest",
-     "url": "https://sports.yahoo.com/articles/man-city-xi-vs-coventry-140422465.html"
+      "name": "Schade",
+      "code": "513418",
+      "club": "BRE",
+      "pos": "MID",
+      "status": "start",
+      "verdict": "In red-hot form, nailed starter",
+      "note": "Schade scored at Leeds last weekend and is on a hot streak; predicted Brentford lineups for Saturday's home game against Sunderland have him starting in the front three alongside Igor Thiago, with no fitness concerns.",
+      "sources": [
+        {
+          "title": "Preview: Brentford vs Sunderland - prediction, team news, lineups",
+          "url": "https://www.sportsmole.co.uk/football/brentford/preview/brentford-vs-sunderland-prediction-team-news-lineups_604351.html"
+        },
+        {
+          "title": "Sunderland vs. Brentford lineups: Predicted starting XI, team news",
+          "url": "https://sports.yahoo.com/article/sunderland-vs-brentford-lineups-predicted-072001783.html"
+        }
+      ]
     },
     {
-     "title": "Man City lineup vs. Coventry: Predicted XI",
-     "url": "https://www.sportsmole.co.uk/football/man-city/predicted-lineups/will-fernandez-ndiaye-make-their-debuts-predicted-man-city-lineup-vs-coventry_604325.html"
+      "name": "Tavernier",
+      "code": "201658",
+      "club": "BOU",
+      "pos": "MID",
+      "status": "start",
+      "verdict": "Set in Bournemouth's front three",
+      "note": "Marcus Tavernier is expected to keep his place in Bournemouth's attacking three (with Rayan and Kluivert behind Evanilson) for Saturday's away game at Newcastle; new head coach Marco Rose has kept the same XI for back-to-back games and none of Bournemouth's reported absentees affect him.",
+      "sources": [
+        {
+          "title": "Bournemouth lineup vs. Newcastle: Predicted XI for Premier League clash",
+          "url": "https://www.sportsmole.co.uk/football/bournemouth/predicted-lineups/christie-adams-rodriguez-decisions-predicted-bournemouth-lineup-vs-newcastle_604331.html"
+        }
+      ]
+    },
+    {
+      "name": "Marmoush",
+      "code": "438234",
+      "club": "TOT",
+      "pos": "FWD",
+      "status": "start",
+      "verdict": "Named in Tottenham's predicted XI, with rival Solanke injured",
+      "note": "Dominic Solanke has not played since early August with an ankle problem and is a major doubt this weekend, removing the competition to Marmoush's spot. Marmoush is named up front in Tottenham's predicted XI for Friday's trip to Forest.",
+      "sources": [
+        {
+          "title": "Nottingham Forest lineup vs. Tottenham: Predicted XI for Premier League clash",
+          "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+        },
+        {
+          "title": "Solanke status, Kudus latest: Spurs injury and suspension list",
+          "url": "https://www.sportsmole.co.uk/football/spurs/injury-news/injuries-and-suspensions/solanke-status-kudus-latest-spurs-injury-suspension-list-vs-brentford_603287.html"
+        }
+      ]
+    },
+    {
+      "name": "Strand Larsen",
+      "code": "247412",
+      "club": "CRY",
+      "pos": "FWD",
+      "status": "start",
+      "verdict": "Leading the line with Mateta injured",
+      "note": "Crystal Palace's first-choice striker Jean-Philippe Mateta is out injured (reports vary between hamstring and thigh, with return estimates ranging from four weeks to October), and predicted Palace lineups for Saturday's away game at Fulham have Strand Larsen leading the line again as the direct beneficiary.",
+      "sources": [
+        {
+          "title": "Crystal Palace lineup vs. Fulham: Predicted XI for Premier League clash with new signings available",
+          "url": "https://www.sportsmole.co.uk/football/crystal-palace/predicted-lineups/any-debutants-how-palace-could-line-up-against-fulham_604402.html"
+        }
+      ]
+    },
+    {
+      "name": "Haaland",
+      "code": "223094",
+      "club": "MCI",
+      "pos": "FWD",
+      "status": "start",
+      "verdict": "Undisputed starting striker",
+      "note": "Every predicted Man City lineup for Saturday's home game against Coventry has Haaland as the central striker, with no fitness or rotation risk reported.",
+      "sources": [
+        {
+          "title": "Man City XI vs Coventry: Predicted lineup, confirmed team news, injury latest",
+          "url": "https://sports.yahoo.com/articles/man-city-xi-vs-coventry-140422465.html"
+        },
+        {
+          "title": "Man City lineup vs. Coventry: Predicted XI",
+          "url": "https://www.sportsmole.co.uk/football/man-city/predicted-lineups/will-fernandez-ndiaye-make-their-debuts-predicted-man-city-lineup-vs-coventry_604325.html"
+        }
+      ]
     }
-   ]
-  }
- ],
- "runs": [
-  {
-   "ts": "2026-09-03T20:54 UTC",
-   "gw": 3,
-   "kind": "deep",
-   "note": "First deep pass for GW3 now the squad is final post-waivers. All 15 players researched club-by-club against confirmed and predicted lineups for this weekend's fixtures. Three status corrections against the model's own availability figures: Munoz and Bijol are safer starts than their low/mid figures suggest (Munoz confirmed over Aina at Forest, Bijol locked in after Rodon's 8-10 week hamstring injury), while Garner is a bench risk despite a moderate 0.61 figure - he did not actually start Everton's midweek Cup tie as earlier reported, he was a substitute, and Hackney is preferred for Sunday. Doku confirmed out until 13 September. Barcola confirmed bench for his Liverpool debut."
-  },
-  {
-   "ts": "2026-09-03T21:08 UTC",
-   "gw": 3,
-   "kind": "light",
-   "note": "no change - re-checked every squad member's club news 13 minutes after the deep pass (Forest's Munoz/Milenkovic confirmed, Rodon's hamstring 8-10 weeks, Doku's calf pegged for 13 Sept, Barcola expected off the bench at Ipswich, Marmoush vs Solanke at Forest unchanged); one lead on a fresh Solanke ankle knock did not stand up to a follow-up read (only stale pre-season articles), so all 15 verdicts stand as published this evening"
-  }
- ]
+  ],
+  "runs": [
+    {
+      "ts": "2026-09-03T20:54 UTC",
+      "gw": 3,
+      "kind": "deep",
+      "note": "First deep pass for GW3 now the squad is final post-waivers. All 15 players researched club-by-club against confirmed and predicted lineups for this weekend's fixtures. Three status corrections against the model's own availability figures: Munoz and Bijol are safer starts than their low/mid figures suggest (Munoz confirmed over Aina at Forest, Bijol locked in after Rodon's 8-10 week hamstring injury), while Garner is a bench risk despite a moderate 0.61 figure - he did not actually start Everton's midweek Cup tie as earlier reported, he was a substitute, and Hackney is preferred for Sunday. Doku confirmed out until 13 September. Barcola confirmed bench for his Liverpool debut."
+    },
+    {
+      "ts": "2026-09-03T21:08 UTC",
+      "gw": 3,
+      "kind": "light",
+      "note": "no change - re-checked every squad member's club news 13 minutes after the deep pass (Forest's Munoz/Milenkovic confirmed, Rodon's hamstring 8-10 weeks, Doku's calf pegged for 13 Sept, Barcola expected off the bench at Ipswich, Marmoush vs Solanke at Forest unchanged); one lead on a fresh Solanke ankle knock did not stand up to a follow-up read (only stale pre-season articles), so all 15 verdicts stand as published this evening"
+    },
+    {
+      "ts": "2026-09-04T08:15 UTC",
+      "gw": 3,
+      "kind": "light",
+      "note": "Garner and Marmoush upgraded to start (Garner confirmed ahead of a doubtful Hackney; Marmoush's competition from Solanke has evaporated with Solanke's ankle injury). All other 13 verdicts unchanged after a fresh club-by-club sweep - Munoz/Milenkovic/Bijol/Collins/Gvardiol/Haaland/Schade/Tavernier/Strand Larsen all reconfirmed in predicted lineups, Doku still out, Barcola still expected on the bench for tonight's Ipswich trip."
+    }
+  ]
 }

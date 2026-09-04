@@ -1,192 +1,213 @@
 {
- "items": [
-  {
-   "id": "2026-08-31-barcola-liverpool",
-   "ts": "2026-09-01T09:51",
-   "mine": false,
-   "scope": "free",
-   "text": "Liverpool sign Bradley Barcola from PSG for GBP123m, the window's biggest deal. He is NOT in the draft pool yet - FPL has not registered him (Watkins' Saudi move is five days old and still unposted). When he lands the model will underrate him for four gameweeks: no PL history means a 0.40 play prior and a 0.68 new-club discount, so expect a projection near the bottom of your board. Ignore it.",
-   "url": "https://www.clickondetroit.com/sports/2026/08/31/barcola-joins-liverpool-from-psg-in-166m-deal-for-biggest-signing-of-the-summer-transfer-window/"
-  },
-  {
-   "id": "2026-08-31-eze-benched",
-   "ts": "2026-09-01T09:51",
-   "mine": true,
-   "scope": "mine",
-   "text": "Eze benched again at Villa Park - Arsenal named Raya, White, Mosquera, Gabriel, Calafiori, Lewis-Skelly, Rice, Saka, Odegaard, Tzolis, Havertz. Third straight non-start, and your weakest midfielder at 7.97 over GW3-7. He is the second claim behind Botman.",
-   "url": "https://lastwordonsports.com/football/2026/08/31/aston-villa-vs-arsenal-31/"
-  },
-  {
-   "id": "2026-08-31-deadline-open",
-   "ts": "2026-09-01T09:51",
-   "mine": false,
-   "scope": "league",
-   "text": "Window shuts 11pm Tuesday, so squads can still move before GW3. Already done: Spurs took Tonali and Savio, Chelsea took Morgan Rogers, Arsenal took Bruno Guimaraes and Konsa, United took Baleba and Tielemans. Newcastle have sold two midfielders - watch whether that touches Botman's minutes before you claim him.",
-   "url": "https://www.aljazeera.com/sports/2026/8/31/transfer-deadline-day-2026-football-summer-signing-window-barcola-gakpo-alvarez"
-  },
-  {
-   "id": "2026-09-01-garner-surgery",
-   "ts": "2026-09-01T10:40",
-   "mine": true,
-   "scope": "mine",
-   "text": "Garner is working back from pre-season groin surgery, not out of favour - he missed the opening friendlies and was only expected back in first-team training around the start of the season. Your dashboard reads his 0.61 availability as a man who is not being picked; it is a man being reintroduced (11 mins in GW1, 61 in GW2). That trend points up, so he is a worse drop than Eze, who is simply not selected.",
-   "url": "https://www.goodisonnews.com/injuries/when-james-garner-is-expected-to-return-after-surgery-as-everton-trio-ruled-out"
-  },
-  {
-   "id": "2026-09-01-marmoush-spurs-debut",
-   "ts": "2026-09-01T21:39",
-   "mine": true,
-   "scope": "mine",
-   "text": "Marmoush left Man City for Tottenham on loan with a GBP60m obligation to buy, and started immediately - full 90 minutes on debut against Newcastle, three shots and three chances created, ahead of Richarlison and Solanke. Your dashboard has him at 0.35 availability, your worst outfield player, because the model reads a week-old transfer as a man not in the team; the real story is the opposite, he walked into the XI.",
-   "url": "https://www.rotowire.com/soccer/headlines/omar-marmoush-news-productive-in-spurs-debut-529718"
-  },
-  {
-   "id": "2026-09-01-munoz-forest-signing",
-   "ts": "2026-09-01T21:39",
-   "mine": true,
-   "scope": "mine",
-   "text": "Munoz completed a permanent GBP22m move from Crystal Palace to Nottingham Forest, a three-year deal and a direct request from Oliver Glasner, who managed him before. He was a regular starter and a key contributor at Palace, so his 0.36 availability on your board is the same new-club discount hitting Marmoush, not a form or fitness concern - treat him as a starter, not a bench risk.",
-   "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
-  },
-  {
-   "id": "2026-09-01-woltemade-juventus-loan",
-   "ts": "2026-09-01T22:00",
-   "mine": true,
-   "scope": "mine",
-   "text": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day - Juventus paid a GBP3.5m loan fee with no obligation to buy, so he plays in Serie A, not the Premier League, until at least next summer. Your dashboard already had him as your weakest forward at 0.37 availability; that reading understated the problem, since he can score you zero Premier League points for as long as the loan runs. He is now the clearest drop in your squad.",
-   "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
-  },
-  {
-   "id": "2026-09-02-munoz-aina-competition",
-   "ts": "2026-09-02T07:50",
-   "mine": true,
-   "scope": "mine",
-   "text": "Correction to yesterday's read on Munoz: he is not a guaranteed Forest starter. Reports say he is competing with Ola Aina for the right-back slot after his move from Palace, and tracker stats show him with just 1 Premier League start there so far. That lines up with the low 0.36 availability on your board rather than contradicting it - he is a real drop candidate this week, not just a discounted new arrival.",
-   "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-joins-nottingham-forest-530029"
-  },
-  {
-   "id": "2026-09-02-garner-hackney-injury",
-   "ts": "2026-09-02T07:50",
-   "mine": true,
-   "scope": "mine",
-   "text": "Garner's recovery is running ahead of schedule - he started for Everton in midweek against Preston after Hayden Hackney went off with a rolled ankle that has him touch-and-go for the weekend. Moyes still says he is not yet trusting Garner for a full 90 minutes, so it is good news for his minutes rather than a nailed-on start.",
-   "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
-  },
-  {
-   "id": "2026-09-02-palace-mateta-injury",
-   "ts": "2026-09-02T07:50",
-   "mine": false,
-   "scope": "free",
-   "text": "Crystal Palace's first-choice striker Mateta is out injured after a hamstring problem in training - reports range from four weeks to into October - which pushes free agent Jorgen Strand Larsen into the central striker role with Eddie Nketiah in support behind him. Both are more nailed on than the model's mid-table next5 figures suggest if you need a FWD option.",
-   "url": "https://www.sportsmole.co.uk/football/crystal-palace/injury-news/news/latest-mateta-strand-larsen-update-from-glasner-as-palace-receive-triple-boost_591553.html"
-  },
-  {
-   "id": "2026-09-02-bijol-leeds-rivals-injured",
-   "ts": "2026-09-02T08:13",
-   "mine": true,
-   "scope": "mine",
-   "text": "Leeds centre-back Joe Rodon was forced off with a hamstring injury in the 34th minute of Sunday's 1-1 draw with Brentford, and Ilia Gruev is separately out into mid-September with a meniscus problem - Farke's other fit centre-back options are Muharemovic, Bijol and Elvedi. Two of Bijol's rivals for the shirt are now sidelined, backing up rather than contradicting his 0.85 availability on your dashboard.",
-   "url": "https://sports.yahoo.com/articles/joe-rodon-injury-hope-shared-144449831.html"
-  },
-  {
-   "id": "2026-09-02-marmoush-strongest-xi",
-   "ts": "2026-09-02T21:11 UTC",
-   "mine": true,
-   "scope": "mine",
-   "text": "Pundits are now projecting Marmoush inside Tottenham's strongest starting XI, with a player who was a regular last season dropped to make room. Your dashboard still has him at 0.35 availability and 5.6 next5, the same discount it gave him the day he arrived - that gap looks wider now than a week ago, not smaller.",
-   "url": "https://uk.sports.yahoo.com/news/tottenhams-strongest-starting-xi-omar-171000401.html"
-  },
-  {
-   "id": "2026-09-03-munoz-starts-forest",
-   "ts": "2026-09-03T14:41 UTC",
-   "mine": true,
-   "scope": "mine",
-   "text": "Reversing yesterday's read: Forest's predicted XI for Friday's home game against Tottenham has Daniel Munoz starting at right wing-back, with Ola Aina dropping to the bench, reunited with his old Crystal Palace boss Oliver Glasner. Your dashboard's 7.0 next5 for him still reflects the 'fighting Aina for the spot' story from earlier this week, not this - do not treat him as a drop candidate today.",
-   "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
-  },
-  {
-   "id": "2026-09-03-barcola-liverpool-debut",
-   "ts": "2026-09-03T14:41 UTC",
-   "mine": false,
-   "scope": "free",
-   "text": "Barcola is now registered in the FPL Draft pool after his GBP123m move to Liverpool, and reports say he is in contention to debut Friday away at Ipswich - but likely from the bench, having not played a competitive minute in 44 days. Your dashboard rates him 1.46 next5, near the bottom of all free agents; that reflects games missed, not a verdict on him once he starts.",
-   "url": "https://uk.sports.yahoo.com/news/liverpool-decision-bradley-barcola-debut-092401728.html"
-  },
-  {
-   "id": "2026-09-03-garner-bench-not-starter",
-   "ts": "2026-09-03T20:54 UTC",
-   "mine": true,
-   "scope": "mine",
-   "text": "Correction on Garner: he did not start Everton's Carabao Cup win at Preston as reported Tuesday - he was a second-half substitute for the injured Hayden Hackney. Hackney is fit again, and Everton's predicted XI for Sunday's game against Manchester United has him starting ahead of Garner, who remains on the bench as Moyes carefully manages his return from groin surgery.",
-   "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
-  },
-  {
-   "id": "2026-09-03-doku-return-pushed-back",
-   "ts": "2026-09-03T20:54 UTC",
-   "mine": true,
-   "scope": "mine",
-   "text": "Doku's return from his calf injury has been pushed back - Man City boss Enzo Maresca has ruled him out again for Saturday's game against Coventry, with a return now pointing to 13 September against Manchester United rather than the 5 September date on the dashboard. That is City's next fixture after this one, so it lines up with the GW4 waiver window, not this week.",
-   "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
-  },
-  {
-   "id": "2026-09-03-igor-jesus-confirmed-striker",
-   "ts": "2026-09-03T20:54 UTC",
-   "mine": false,
-   "scope": "free",
-   "text": "Free agent Igor Jesus is confirmed as Nottingham Forest's first-choice striker ahead of Chris Wood under new manager Oliver Glasner, arriving in red-hot form with four goals in four preseason games. That explains why the model already rates him top of the free-agent forwards, well clear of your own Marmoush.",
-   "url": "https://www.fantasyfootballscout.co.uk/2026/08/20/fpl-2026-27-nottm-forest-best-players-set-piece-takers-predicted-xi-more"
-  }
- ],
- "runs": [
-  {
-   "ts": "2026-09-01T09:51",
-   "published": 3,
-   "note": "seeded by hand while building the pipeline"
-  },
-  {
-   "ts": "2026-09-01T10:40",
-   "published": 1,
-   "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
-  },
-  {
-   "ts": "2026-09-01T21:39",
-   "published": 2,
-   "note": "Marmoush (Man City to Spurs, started and impressed on debut) and Munoz (Palace to Forest, permanent, Glasner's man) both hit the same new-club-discount blind spot the model has for Barcola - both are mine, both look like bench risks on the dashboard and are actually starters"
-  },
-  {
-   "ts": "2026-09-01T22:00",
-   "published": 1,
-   "note": "Woltemade (mine, weakest forward) loaned out to Juventus on deadline day - he is out of the Premier League entirely, not just out of favour, which the 0.37 availability figure did not capture"
-  },
-  {
-   "ts": "2026-09-02T07:50",
-   "published": 3,
-   "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
-  },
-  {
-   "ts": "2026-09-02T08:13",
-   "published": 1,
-   "note": "Leeds' Rodon (hamstring) and Gruev (meniscus) both sidelined, thinning the competition for Bijol's centre-back spot. Checked rivals' best assets (Bruno Fernandes, Mbeumo, Guehi, Dewsbury-Hall) for league-scope news but every lead traced back to stale Dec 2025/pre-season stories, not current - nothing else published this run"
-  },
-  {
-   "ts": "2026-09-02T21:11 UTC",
-   "published": 1,
-   "note": "Ran club-by-club searches on every squad member and free-agent target (Munoz/Aina, Garner, Bijol's rivals, Woltemade, Palace strikers, Bournemouth and Brighton free agents) but every lead just re-confirmed what was already published earlier today - the one new item was a fresh (17:10 UTC) pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which the model's 0.35 availability still does not reflect"
-  },
-  {
-   "ts": "2026-09-03T14:41 UTC",
-   "published": 2,
-   "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
-  },
-  {
-   "ts": "2026-09-03T20:54 UTC",
-   "published": 3,
-   "note": "Full deep-research pass ahead of GW3's deadline (squad now final after waivers processed): corrected Tuesday's misread on Garner (he was a sub, not a starter, at Preston - he's behind Hackney for Sunday), found Doku's calf return has slipped to 13 September (GW4) not the 5 September date shown on the dashboard, and confirmed Igor Jesus as Forest's nailed-on striker ahead of Chris Wood in red-hot preseason form. Also ran a full club-by-club sweep across all 15 squad players for starters.json - see claims.json and starters.json for what changed there."
-  },
-  {
-   "ts": "2026-09-03T21:08 UTC",
-   "published": 0,
-   "note": "Re-run 13 minutes after the last deep pass ahead of GW3's deadline (17:30 UTC tomorrow). Ran a fresh sweep across every squad club (Everton, Forest, Man City, Leeds, Bournemouth, Brentford, Palace, Tottenham, Liverpool, Sunderland) plus rivals' best assets - Rodon's 8-10 week hamstring, Doku's calf, Munoz's Forest debut, Marmoush vs Solanke, and Barcola's expected bench debut are all confirmed exactly as already published this evening. One search flagged a possible Solanke ankle knock, but a follow-up read found only stale July/August articles referencing his prior surgery, not a current one, so nothing new to add or correct."
-  }
- ]
+  "items": [
+    {
+      "id": "2026-08-31-barcola-liverpool",
+      "ts": "2026-09-01T09:51",
+      "mine": false,
+      "scope": "free",
+      "text": "Liverpool sign Bradley Barcola from PSG for GBP123m, the window's biggest deal. He is NOT in the draft pool yet - FPL has not registered him (Watkins' Saudi move is five days old and still unposted). When he lands the model will underrate him for four gameweeks: no PL history means a 0.40 play prior and a 0.68 new-club discount, so expect a projection near the bottom of your board. Ignore it.",
+      "url": "https://www.clickondetroit.com/sports/2026/08/31/barcola-joins-liverpool-from-psg-in-166m-deal-for-biggest-signing-of-the-summer-transfer-window/"
+    },
+    {
+      "id": "2026-08-31-eze-benched",
+      "ts": "2026-09-01T09:51",
+      "mine": true,
+      "scope": "mine",
+      "text": "Eze benched again at Villa Park - Arsenal named Raya, White, Mosquera, Gabriel, Calafiori, Lewis-Skelly, Rice, Saka, Odegaard, Tzolis, Havertz. Third straight non-start, and your weakest midfielder at 7.97 over GW3-7. He is the second claim behind Botman.",
+      "url": "https://lastwordonsports.com/football/2026/08/31/aston-villa-vs-arsenal-31/"
+    },
+    {
+      "id": "2026-08-31-deadline-open",
+      "ts": "2026-09-01T09:51",
+      "mine": false,
+      "scope": "league",
+      "text": "Window shuts 11pm Tuesday, so squads can still move before GW3. Already done: Spurs took Tonali and Savio, Chelsea took Morgan Rogers, Arsenal took Bruno Guimaraes and Konsa, United took Baleba and Tielemans. Newcastle have sold two midfielders - watch whether that touches Botman's minutes before you claim him.",
+      "url": "https://www.aljazeera.com/sports/2026/8/31/transfer-deadline-day-2026-football-summer-signing-window-barcola-gakpo-alvarez"
+    },
+    {
+      "id": "2026-09-01-garner-surgery",
+      "ts": "2026-09-01T10:40",
+      "mine": true,
+      "scope": "mine",
+      "text": "Garner is working back from pre-season groin surgery, not out of favour - he missed the opening friendlies and was only expected back in first-team training around the start of the season. Your dashboard reads his 0.61 availability as a man who is not being picked; it is a man being reintroduced (11 mins in GW1, 61 in GW2). That trend points up, so he is a worse drop than Eze, who is simply not selected.",
+      "url": "https://www.goodisonnews.com/injuries/when-james-garner-is-expected-to-return-after-surgery-as-everton-trio-ruled-out"
+    },
+    {
+      "id": "2026-09-01-marmoush-spurs-debut",
+      "ts": "2026-09-01T21:39",
+      "mine": true,
+      "scope": "mine",
+      "text": "Marmoush left Man City for Tottenham on loan with a GBP60m obligation to buy, and started immediately - full 90 minutes on debut against Newcastle, three shots and three chances created, ahead of Richarlison and Solanke. Your dashboard has him at 0.35 availability, your worst outfield player, because the model reads a week-old transfer as a man not in the team; the real story is the opposite, he walked into the XI.",
+      "url": "https://www.rotowire.com/soccer/headlines/omar-marmoush-news-productive-in-spurs-debut-529718"
+    },
+    {
+      "id": "2026-09-01-munoz-forest-signing",
+      "ts": "2026-09-01T21:39",
+      "mine": true,
+      "scope": "mine",
+      "text": "Munoz completed a permanent GBP22m move from Crystal Palace to Nottingham Forest, a three-year deal and a direct request from Oliver Glasner, who managed him before. He was a regular starter and a key contributor at Palace, so his 0.36 availability on your board is the same new-club discount hitting Marmoush, not a form or fitness concern - treat him as a starter, not a bench risk.",
+      "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
+    },
+    {
+      "id": "2026-09-01-woltemade-juventus-loan",
+      "ts": "2026-09-01T22:00",
+      "mine": true,
+      "scope": "mine",
+      "text": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day - Juventus paid a GBP3.5m loan fee with no obligation to buy, so he plays in Serie A, not the Premier League, until at least next summer. Your dashboard already had him as your weakest forward at 0.37 availability; that reading understated the problem, since he can score you zero Premier League points for as long as the loan runs. He is now the clearest drop in your squad.",
+      "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
+    },
+    {
+      "id": "2026-09-02-munoz-aina-competition",
+      "ts": "2026-09-02T07:50",
+      "mine": true,
+      "scope": "mine",
+      "text": "Correction to yesterday's read on Munoz: he is not a guaranteed Forest starter. Reports say he is competing with Ola Aina for the right-back slot after his move from Palace, and tracker stats show him with just 1 Premier League start there so far. That lines up with the low 0.36 availability on your board rather than contradicting it - he is a real drop candidate this week, not just a discounted new arrival.",
+      "url": "https://www.rotowire.com/soccer/headlines/daniel-munoz-news-joins-nottingham-forest-530029"
+    },
+    {
+      "id": "2026-09-02-garner-hackney-injury",
+      "ts": "2026-09-02T07:50",
+      "mine": true,
+      "scope": "mine",
+      "text": "Garner's recovery is running ahead of schedule - he started for Everton in midweek against Preston after Hayden Hackney went off with a rolled ankle that has him touch-and-go for the weekend. Moyes still says he is not yet trusting Garner for a full 90 minutes, so it is good news for his minutes rather than a nailed-on start.",
+      "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+    },
+    {
+      "id": "2026-09-02-palace-mateta-injury",
+      "ts": "2026-09-02T07:50",
+      "mine": false,
+      "scope": "free",
+      "text": "Crystal Palace's first-choice striker Mateta is out injured after a hamstring problem in training - reports range from four weeks to into October - which pushes free agent Jorgen Strand Larsen into the central striker role with Eddie Nketiah in support behind him. Both are more nailed on than the model's mid-table next5 figures suggest if you need a FWD option.",
+      "url": "https://www.sportsmole.co.uk/football/crystal-palace/injury-news/news/latest-mateta-strand-larsen-update-from-glasner-as-palace-receive-triple-boost_591553.html"
+    },
+    {
+      "id": "2026-09-02-bijol-leeds-rivals-injured",
+      "ts": "2026-09-02T08:13",
+      "mine": true,
+      "scope": "mine",
+      "text": "Leeds centre-back Joe Rodon was forced off with a hamstring injury in the 34th minute of Sunday's 1-1 draw with Brentford, and Ilia Gruev is separately out into mid-September with a meniscus problem - Farke's other fit centre-back options are Muharemovic, Bijol and Elvedi. Two of Bijol's rivals for the shirt are now sidelined, backing up rather than contradicting his 0.85 availability on your dashboard.",
+      "url": "https://sports.yahoo.com/articles/joe-rodon-injury-hope-shared-144449831.html"
+    },
+    {
+      "id": "2026-09-02-marmoush-strongest-xi",
+      "ts": "2026-09-02T21:11 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Pundits are now projecting Marmoush inside Tottenham's strongest starting XI, with a player who was a regular last season dropped to make room. Your dashboard still has him at 0.35 availability and 5.6 next5, the same discount it gave him the day he arrived - that gap looks wider now than a week ago, not smaller.",
+      "url": "https://uk.sports.yahoo.com/news/tottenhams-strongest-starting-xi-omar-171000401.html"
+    },
+    {
+      "id": "2026-09-03-munoz-starts-forest",
+      "ts": "2026-09-03T14:41 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Reversing yesterday's read: Forest's predicted XI for Friday's home game against Tottenham has Daniel Munoz starting at right wing-back, with Ola Aina dropping to the bench, reunited with his old Crystal Palace boss Oliver Glasner. Your dashboard's 7.0 next5 for him still reflects the 'fighting Aina for the spot' story from earlier this week, not this - do not treat him as a drop candidate today.",
+      "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+    },
+    {
+      "id": "2026-09-03-barcola-liverpool-debut",
+      "ts": "2026-09-03T14:41 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Barcola is now registered in the FPL Draft pool after his GBP123m move to Liverpool, and reports say he is in contention to debut Friday away at Ipswich - but likely from the bench, having not played a competitive minute in 44 days. Your dashboard rates him 1.46 next5, near the bottom of all free agents; that reflects games missed, not a verdict on him once he starts.",
+      "url": "https://uk.sports.yahoo.com/news/liverpool-decision-bradley-barcola-debut-092401728.html"
+    },
+    {
+      "id": "2026-09-03-garner-bench-not-starter",
+      "ts": "2026-09-03T20:54 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Correction on Garner: he did not start Everton's Carabao Cup win at Preston as reported Tuesday - he was a second-half substitute for the injured Hayden Hackney. Hackney is fit again, and Everton's predicted XI for Sunday's game against Manchester United has him starting ahead of Garner, who remains on the bench as Moyes carefully manages his return from groin surgery.",
+      "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+    },
+    {
+      "id": "2026-09-03-doku-return-pushed-back",
+      "ts": "2026-09-03T20:54 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Doku's return from his calf injury has been pushed back - Man City boss Enzo Maresca has ruled him out again for Saturday's game against Coventry, with a return now pointing to 13 September against Manchester United rather than the 5 September date on the dashboard. That is City's next fixture after this one, so it lines up with the GW4 waiver window, not this week.",
+      "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
+    },
+    {
+      "id": "2026-09-03-igor-jesus-confirmed-striker",
+      "ts": "2026-09-03T20:54 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Free agent Igor Jesus is confirmed as Nottingham Forest's first-choice striker ahead of Chris Wood under new manager Oliver Glasner, arriving in red-hot form with four goals in four preseason games. That explains why the model already rates him top of the free-agent forwards, well clear of your own Marmoush.",
+      "url": "https://www.fantasyfootballscout.co.uk/2026/08/20/fpl-2026-27-nottm-forest-best-players-set-piece-takers-predicted-xi-more"
+    },
+    {
+      "id": "2026-09-04-garner-set-to-start-man-utd",
+      "ts": "2026-09-04T08:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Reversing the bench read published last night: multiple reports now have Garner set to start for Everton against Manchester United on Sunday, with Hackney a doubt after picking up a knock. Sky Sports says Garner is playing well enough to be linked with an England call-up.",
+      "url": "https://www.skysports.com/football/news/11095/13509049/james-garner-everton-midfielder-showing-manchester-united-what-theyre-missing-and-is-now-knocking-on-the-door-for-an-england-call-up"
+    },
+    {
+      "id": "2026-09-04-solanke-injury-lifts-marmoush",
+      "ts": "2026-09-04T08:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Tottenham's Dominic Solanke has not played since early August with an ankle problem and is a major doubt this weekend, removing the competition that was clouding Marmoush's starting spot - he is named up front in Tottenham's predicted XI for Friday's trip to Forest.",
+      "url": "https://www.sportsmole.co.uk/football/spurs/injury-news/injuries-and-suspensions/solanke-status-kudus-latest-spurs-injury-suspension-list-vs-brentford_603287.html"
+    }
+  ],
+  "runs": [
+    {
+      "ts": "2026-09-01T09:51",
+      "published": 3,
+      "note": "seeded by hand while building the pipeline"
+    },
+    {
+      "ts": "2026-09-01T10:40",
+      "published": 1,
+      "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
+    },
+    {
+      "ts": "2026-09-01T21:39",
+      "published": 2,
+      "note": "Marmoush (Man City to Spurs, started and impressed on debut) and Munoz (Palace to Forest, permanent, Glasner's man) both hit the same new-club-discount blind spot the model has for Barcola - both are mine, both look like bench risks on the dashboard and are actually starters"
+    },
+    {
+      "ts": "2026-09-01T22:00",
+      "published": 1,
+      "note": "Woltemade (mine, weakest forward) loaned out to Juventus on deadline day - he is out of the Premier League entirely, not just out of favour, which the 0.37 availability figure did not capture"
+    },
+    {
+      "ts": "2026-09-02T07:50",
+      "published": 3,
+      "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
+    },
+    {
+      "ts": "2026-09-02T08:13",
+      "published": 1,
+      "note": "Leeds' Rodon (hamstring) and Gruev (meniscus) both sidelined, thinning the competition for Bijol's centre-back spot. Checked rivals' best assets (Bruno Fernandes, Mbeumo, Guehi, Dewsbury-Hall) for league-scope news but every lead traced back to stale Dec 2025/pre-season stories, not current - nothing else published this run"
+    },
+    {
+      "ts": "2026-09-02T21:11 UTC",
+      "published": 1,
+      "note": "Ran club-by-club searches on every squad member and free-agent target (Munoz/Aina, Garner, Bijol's rivals, Woltemade, Palace strikers, Bournemouth and Brighton free agents) but every lead just re-confirmed what was already published earlier today - the one new item was a fresh (17:10 UTC) pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which the model's 0.35 availability still does not reflect"
+    },
+    {
+      "ts": "2026-09-03T14:41 UTC",
+      "published": 2,
+      "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
+    },
+    {
+      "ts": "2026-09-03T20:54 UTC",
+      "published": 3,
+      "note": "Full deep-research pass ahead of GW3's deadline (squad now final after waivers processed): corrected Tuesday's misread on Garner (he was a sub, not a starter, at Preston - he's behind Hackney for Sunday), found Doku's calf return has slipped to 13 September (GW4) not the 5 September date shown on the dashboard, and confirmed Igor Jesus as Forest's nailed-on striker ahead of Chris Wood in red-hot preseason form. Also ran a full club-by-club sweep across all 15 squad players for starters.json - see claims.json and starters.json for what changed there."
+    },
+    {
+      "ts": "2026-09-03T21:08 UTC",
+      "published": 0,
+      "note": "Re-run 13 minutes after the last deep pass ahead of GW3's deadline (17:30 UTC tomorrow). Ran a fresh sweep across every squad club (Everton, Forest, Man City, Leeds, Bournemouth, Brentford, Palace, Tottenham, Liverpool, Sunderland) plus rivals' best assets - Rodon's 8-10 week hamstring, Doku's calf, Munoz's Forest debut, Marmoush vs Solanke, and Barcola's expected bench debut are all confirmed exactly as already published this evening. One search flagged a possible Solanke ankle knock, but a follow-up read found only stale July/August articles referencing his prior surgery, not a current one, so nothing new to add or correct."
+    },
+    {
+      "ts": "2026-09-04T08:15 UTC",
+      "published": 2,
+      "note": "Full club-by-club sweep ~11 hours ahead of the GW3 deadline (17:30 UTC). Two corrections against last night's read: Garner is now set to start against Man Utd (Hackney a doubt with a knock), and Solanke's ankle injury (out since early August, major doubt) removes the competition threat to Marmoush that was cited last night, with Marmoush now in Tottenham's predicted XI. Also checked Brentford (two search hits on Schade/Collins injuries turned out to be stale articles from a prior season and were discarded), Leeds (Bijol still locked in alongside new signing Elvedi), Bournemouth (Hill, Rayan, Tavernier all in the predicted XI), Crystal Palace (Strand Larsen confirmed starting with Mateta out until October) and Liverpool (Barcola still expected on the bench for his debut at Ipswich tonight) - all unchanged from what's already published."
+    }
+  ]
 }

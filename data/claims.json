@@ -1,243 +1,218 @@
 {
- "gw": 4,
- "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-03T21:08 UTC",
- "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). The clearest calls are swapping in Igor Jesus, now confirmed as Forest's first-choice striker over Chris Wood, for Marmoush, who faces genuine competition from Solanke on a winless Spurs side, and dropping Garner - who did not actually start last midweek as earlier reported and remains behind Hackney in Everton's pecking order - for Leeds' rock-solid Ampadu. Barcola and Doku are lower-confidence calls: Barcola is a confirmed bench option for his Liverpool debut rather than the starter his fee might suggest, and Doku's injury return is pegged for right around this gameweek, so trading him for Bournemouth's breakout find Rayan is more of a hedge than a certainty. The rest of the squad - Gvardiol, Milenkovic, Bijol (boosted by Rodon's injury), Collins, Munoz (now a confirmed starter at Forest despite his low model number), Schade, Tavernier, Strand Larsen and Haaland - are all confirmed starters performing at or above their model rating, so a fifth claim is not warranted this week.",
- "claims": [
-  {
-   "rank": 1,
-   "pos": "FWD",
-   "add": {
-    "name": "Igor Jesus",
-    "code": "482973",
-    "club": "NFO"
-   },
-   "drop": {
-    "name": "Marmoush",
-    "code": "438234",
-    "club": "TOT"
-   },
-   "why": "Nottingham Forest have confirmed Igor Jesus as their first-choice striker ahead of Chris Wood under new manager Oliver Glasner, and he arrives in red-hot form with four goals in four preseason appearances. Marmoush is still predicted to start for Tottenham at Forest on Saturday, but Sports Mole flags that Dominic Solanke 'has a case to start' instead on a winless Spurs side under new boss Roberto De Zerbi, adding real risk to his minutes.",
-   "model": "The model already rates Igor Jesus top of the free-agent forwards at next5 14.5 against Marmoush's 5.6 - agreeing with the model here, not overruling it; the fresh reporting on his nailed-on striker role and Marmoush's rotation risk only reinforces the gap.",
-   "confidence": "high",
-   "sources": [
+  "gw": 4,
+  "waivers_close": "2026-09-11T12:30:00Z",
+  "ts": "2026-09-04T08:15 UTC",
+  "summary": "You sit bottom of the table on 79 points, so your GW4 claims process first if these players are still free when the window runs (waivers close 11 September). Dropping to three claims this week: Garner, last night's drop candidate, is now confirmed set to start for Everton against Man Utd (Hackney a doubt with a knock), so the Ampadu swap is off - the rest of the defense and midfield (Munoz, Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier) are all confirmed starters, and where the model still rates one of them low (Munoz next5 just 7.0) that looks like the model not yet pricing in his confirmed starting role rather than a real weakness. The three that still stand: Igor Jesus for Marmoush - Solanke's ankle injury (out since August, a major doubt) has actually lifted Marmoush's own standing, but Igor Jesus is a confirmed, in-form #1 striker for free, so the upgrade case is now about superior output rather than a bench risk. Le Fee for Barcola remains live - Barcola is still expected to start on the bench for his Liverpool debut tonight, while Le Fee is a confirmed Sunderland starter. Rayan for Doku is carried as a low-confidence hedge given Doku's calf return is edging closer.",
+  "claims": [
     {
-     "title": "FPL 2026/27 - Nott'm Forest: Best players, set-piece takers, predicted XI & more",
-     "url": "https://www.fantasyfootballscout.co.uk/2026/08/20/fpl-2026-27-nottm-forest-best-players-set-piece-takers-predicted-xi-more"
-    },
-    {
-     "title": "Tottenham lineup vs. Nottingham Forest: Predicted XI amid Savio, James Maddison injury concerns",
-     "url": "https://www.sportsmole.co.uk/football/spurs/predicted-lineups/will-savio-maddison-make-the-cut-predicted-tottenham-xi-vs-forest_604364.html"
-    }
-   ]
-  },
-  {
-   "rank": 2,
-   "pos": "MID",
-   "add": {
-    "name": "Ampadu",
-    "code": "199598",
-    "club": "LEE"
-   },
-   "drop": {
-    "name": "Garner",
-    "code": "232928",
-    "club": "EVE"
-   },
-   "why": "Garner did not actually start Everton's Carabao Cup win at Preston as earlier reported - he was a second-half substitute - and Everton's predicted XI for Sunday's game against Manchester United has Hayden Hackney starting ahead of him, with Moyes still carefully rationing his minutes as he returns from pre-season groin surgery. Ampadu is Leeds' captain and defensive-midfield lock, ever-present when fit and signed to a new deal through 2030.",
-   "model": "The model already flags Garner as the weakest midfielder in the squad (next5 10.1 against Ampadu's 16.0) with a 0.61 availability figure; the confirmed bench role removes the doubt in that number and supports the swap.",
-   "confidence": "high",
-   "sources": [
-    {
-     "title": "Moyes explains surprise Garner return as Everton injury picture improves",
-     "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
-    },
-    {
-     "title": "Ethan Ampadu - Leeds United official",
-     "url": "https://www.leedsunited.com/en/teams/mens/ethan-ampadu"
-    }
-   ]
-  },
-  {
-   "rank": 3,
-   "pos": "MID",
-   "add": {
-    "name": "E.Le F\u00e9e",
-    "code": "484420",
-    "club": "SUN"
-   },
-   "drop": {
-    "name": "Barcola",
-    "code": "482616",
-    "club": "LIV"
-   },
-   "why": "Barcola remains a bench option for Liverpool - manager Andoni Iraola was explicit that his lack of pre-season minutes counts against him, and two independent predicted lineups have him among the substitutes for Friday's game at Ipswich, not in the front line his GBP123m fee might suggest. Le Fee is carrying only a minor knock and was one of Sunderland's most productive midfielders last season (5 goals, 6 assists); reports say he is expected back in full training within days.",
-   "model": "Model gap is the biggest of the week (next5 16.3 for Le Fee against 1.5 for Barcola, who also carries the lowest availability figure in the squad at 0.10) - agreeing with the model given Barcola's confirmed bench role right now, though this is one to revisit fast if he forces his way into Liverpool's XI.",
-   "confidence": "medium",
-   "sources": [
-    {
-     "title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich",
-     "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"
-    },
-    {
-     "title": "Sunderland fans handed encouraging Enzo Le Fee injury update",
-     "url": "https://www.sunderlandecho.com/sport/football/sunderland-afc/sunderland-fans-handed-encouraging-enzo-le-fee-injury-update-after-wrexham-absence-8835381"
-    }
-   ]
-  },
-  {
-   "rank": 4,
-   "pos": "MID",
-   "add": {
-    "name": "Rayan",
-    "code": "499604",
-    "club": "BOU"
-   },
-   "drop": {
-    "name": "Doku",
-    "code": "248875",
-    "club": "MCI"
-   },
-   "why": "Doku is out with a calf injury and Man City boss Enzo Maresca has ruled him out again this week, with his return now pointing to 13 September against Manchester United - right around the target gameweek, so this is a genuine coin flip rather than an easy call. Rayan is a rare find: a January 2026 signing from Vasco da Gama with three goal involvements already and a locked spot in Bournemouth's attacking three, the exact profile of player a career-average model cannot yet price properly.",
-   "model": "Model gap is large (next5 16.2 for Rayan against 3.4 for Doku, who is rated 0.00 available right now), but that figure does not fully price in Doku's expected return timing - a lower-confidence claim than the model's own number implies, worth revisiting once City's GW4 team news firms up.",
-   "confidence": "low",
-   "sources": [
-    {
-     "title": "Man City injury, suspension news and return dates for Coventry City clash",
-     "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/doku-nunes-latest-man-city-injury-list-for-coventry-clash_604319.html"
-    },
-    {
-     "title": "Rayan marks full Bournemouth debut with stunning solo goal",
-     "url": "https://sports.yahoo.com/articles/rayan-marks-full-bournemouth-debut-163800605.html"
-    }
-   ]
-  }
- ],
- "previous": [
-  {
-   "gw": 3,
-   "ts": "2026-09-03T14:41 UTC",
-   "claims": [
-    {
-     "rank": 1,
-     "pos": "FWD",
-     "add": {
-      "name": "Igor Jesus",
-      "code": "482973",
-      "club": "NFO"
-     },
-     "drop": {
-      "name": "Woltemade",
-      "code": "470313",
-      "club": "NEW"
-     },
-     "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
-     "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
-     "confidence": "high",
-     "sources": [
-      {
-       "title": "Juventus sign Woltemade, Sarr on loan from Premier League",
-       "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
+      "rank": 1,
+      "pos": "FWD",
+      "add": {
+        "name": "Igor Jesus",
+        "code": "482973",
+        "club": "NFO"
       },
-      {
-       "title": "Nottingham Forest lineup vs. Tottenham: Predicted XI for Premier League clash as Daniel Munoz starts",
-       "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
-      }
-     ]
+      "drop": {
+        "name": "Marmoush",
+        "code": "438234",
+        "club": "TOT"
+      },
+      "why": "Igor Jesus is confirmed as Nottingham Forest's first-choice striker under new manager Oliver Glasner, ahead of Chris Wood, and Forest have started the season well. Marmoush's own case has actually improved since last night - Tottenham's Dominic Solanke has an ankle injury and hasn't played since early August, a major doubt this weekend, so the competition that clouded Marmoush's spot has eased and he is named in Tottenham's predicted XI at Forest on Friday. This is now a value upgrade (a confirmed #1 striker for free) rather than a bench-risk argument, so confidence is medium rather than high.",
+      "model": "Model has Igor Jesus at next5 14.5 (avail 0.95) versus Marmoush at 5.6 (avail 0.35) - a large model gap, but Marmoush's real avail looks higher than 0.35 now that Solanke is injured, so the true gap is smaller than the model shows; still worth the swap for Igor Jesus's superior nailed-on output.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Nottingham Forest lineup vs. Tottenham: Predicted XI for Premier League clash",
+          "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+        },
+        {
+          "title": "Solanke status, Kudus latest: Spurs injury and suspension list",
+          "url": "https://www.sportsmole.co.uk/football/spurs/injury-news/injuries-and-suspensions/solanke-status-kudus-latest-spurs-injury-suspension-list-vs-brentford_603287.html"
+        }
+      ]
     },
     {
-     "rank": 2,
-     "pos": "MID",
-     "add": {
-      "name": "Rayan",
-      "code": "499604",
-      "club": "BOU"
-     },
-     "drop": {
-      "name": "Eze",
-      "code": "232413",
-      "club": "ARS"
-     },
-     "why": "Eze is still stuck behind Arsenal's front line under Arteta with no sign of a minutes trend pointing up. Rayan is confirmed in Bournemouth's predicted attacking three alongside Kluivert and Tavernier for the Newcastle game, and is being talked up as a breakout name this season.",
-     "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
-     "confidence": "high",
-     "sources": [
-      {
-       "title": "Newcastle United vs Bournemouth: Preview and Prediction",
-       "url": "https://thehardtackle.com/round-up/2026/09/03/newcastle-united-vs-bournemouth-preview-and-prediction-5/"
+      "rank": 2,
+      "pos": "MID",
+      "add": {
+        "name": "E.Le F\u00e9e",
+        "code": "484420",
+        "club": "SUN"
       },
-      {
-       "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
-       "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
-      }
-     ]
+      "drop": {
+        "name": "Barcola",
+        "code": "482616",
+        "club": "LIV"
+      },
+      "why": "Barcola is still expected to start on the bench for his Liverpool debut against Ipswich tonight - manager Iraola has not ruled him in, and the latest predicted XI (published this morning) leaves him out of the starting eleven with Gakpo continuing on the left. Le Fee is a confirmed Sunderland starter in an attacking midfield role, so this is a straightforward swap of a bench-bound marquee name for a nailed starter while Barcola finds his feet.",
+      "model": "Model has Le Fee at next5 16.3 (avail 1.00) versus Barcola at 1.5 (avail 0.10) - the model has no career data on Barcola yet so it is essentially guessing zero, and tonight's team news supports that low number for now.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Predicted Liverpool lineup against Ipswich Town: Gakpo to start; Barcola in contention",
+          "url": "https://thehardtackle.com/news/2026/09/04/predicted-liverpool-lineup-against-ipswich-town-gakpo-to-start-barcola-in-contention/"
+        },
+        {
+          "title": "Sunderland lineup vs. Brentford: Predicted XI",
+          "url": "https://www.sportsmole.co.uk/football/sunderland/predicted-lineups/a-first-appearance-for-fofana-predicted-sunderland-xi-vs-brentford_604357.html"
+        }
+      ]
     },
     {
-     "rank": 3,
-     "pos": "MID",
-     "add": {
-      "name": "Gro\u00df",
-      "code": "60307",
-      "club": "BHA"
-     },
-     "drop": {
-      "name": "Garner",
-      "code": "232928",
-      "club": "EVE"
-     },
-     "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
-     "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
-     "confidence": "low",
-     "sources": [
-      {
-       "title": "Moyes provides James Garner injury update after Everton return",
-       "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+      "rank": 3,
+      "pos": "MID",
+      "add": {
+        "name": "Rayan",
+        "code": "499604",
+        "club": "BOU"
       },
-      {
-       "title": "Brighton lineup vs. Aston Villa: Predicted XI for opening 2026-27 season",
-       "url": "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/predicted-lineups/one-full-debut-five-absentees-predicted-brighton-lineup-vs-aston-villa_603416.html"
-      }
-     ]
+      "drop": {
+        "name": "Doku",
+        "code": "248875",
+        "club": "MCI"
+      },
+      "why": "Doku remains out with the calf injury picked up in the Community Shield, with a return pegged for around this gameweek, so this is a hedge rather than a certainty - if he returns to full training this week the claim is worth pulling. Rayan is a confirmed Bournemouth starter and this season's breakout midfield find, so he is a reasonable free-agent floor while Doku's exact return date is unclear.",
+      "model": "Model has Rayan at next5 16.2 (avail 0.95) versus Doku at 3.4 (avail 0.00) - the model already has Doku's injury priced in, so this claim is mostly about timing his eventual return rather than disputing the model.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Man City XI vs Bournemouth: Confirmed team news, predicted lineup",
+          "url": "https://www.aol.co.uk/articles/man-city-xi-vs-bournemouth-121707000.html"
+        }
+      ]
     }
-   ]
-  }
- ],
- "runs": [
-  {
-   "ts": "2026-09-02T07:50",
-   "gw": 3,
-   "claims": 4,
-   "note": "first run - four claims submitted (Munoz drop upgraded from yesterday's hold after fresh reporting on his Aina competition); a fifth was not included since the rest of the squad is either performing above its model rating (Marmoush, kept) or has no clear replacement worth the waiver priority this week"
-  },
-  {
-   "ts": "2026-09-02T08:13",
-   "gw": 3,
-   "claims": 4,
-   "note": "No material change since the last run 18 minutes ago. Refreshed sourcing - confirmed Igor Jesus as Forest's starting striker ahead of Chris Wood, and Bournemouth's Hill, Rayan and Tavernier all in the latest predicted XI - and confirmed Bijol is not a drop risk since his two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both injured. Still no fifth claim: Marmoush's real starting role beats his model rating and the rest of the squad is performing at or above its number."
-  },
-  {
-   "ts": "2026-09-02T21:11 UTC",
-   "gw": 3,
-   "claims": 4,
-   "note": "No change to the four claims after a full club-by-club refresh - the model's numbers for every add/drop pair are unchanged and every squad member's situation (Munoz vs Aina, Woltemade in Serie A, Eze benched, Garner's careful reintroduction, Bijol's injured rivals) still checks out. The one new find was a pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, reinforcing rather than changing the decision to keep him over a fifth claim."
-  },
-  {
-   "ts": "2026-09-03T14:41 UTC",
-   "gw": 3,
-   "claims": 3,
-   "note": "Dropped the Hill-for-Munoz claim: Forest's own predicted XI (published this morning) has Munoz starting at right wing-back against Spurs, not competing with Aina, so he is no longer a drop candidate and no other squad DEF clears the swap bar. Igor Jesus/Woltemade, Rayan/Eze and Gross/Garner carried forward unchanged after a full club-by-club refresh; also checked Barcola (now live in the pool, possible bench debut Friday at Ipswich) but no squad MID is weak enough to justify dropping for him."
-  },
-  {
-   "ts": "2026-09-03T20:54 UTC",
-   "gw": 4,
-   "claims": 4,
-   "note": "First run for the GW4 window (GW3 waivers have processed and the squad moved on since last week's file, which is now filed under previous). Four claims: Igor Jesus for Marmoush (Forest's confirmed #1 striker over Wood vs a Marmoush facing real competition from Solanke), Ampadu for Garner (Garner was a sub, not a starter, at Preston as earlier reported, and is behind Hackney for Sunday), Le Fee for Barcola (Barcola confirmed bench for his Liverpool debut), and a low-confidence Rayan for Doku (Doku's return is pegged for right around this gameweek, so it's a hedge). No fifth claim - the rest of the defense and attack are confirmed starters outperforming their model numbers."
-  },
-  {
-   "ts": "2026-09-03T21:08 UTC",
-   "gw": 4,
-   "claims": 4,
-   "note": "No change. Re-checked all four adds and drops (Igor Jesus/Marmoush, Ampadu/Garner, Le Fee/Barcola, Rayan/Doku) plus rivals across a fresh club-by-club sweep 13 minutes after the last update - Forest's Munoz/Milenkovic, Rodon's hamstring, Doku's calf timeline and Barcola's expected bench debut at Ipswich all check out exactly as before. Still no fifth claim; the rest of the squad remains confirmed starters above their model numbers."
-  }
- ]
+  ],
+  "previous": [
+    {
+      "gw": 3,
+      "ts": "2026-09-03T14:41 UTC",
+      "claims": [
+        {
+          "rank": 1,
+          "pos": "FWD",
+          "add": {
+            "name": "Igor Jesus",
+            "code": "482973",
+            "club": "NFO"
+          },
+          "drop": {
+            "name": "Woltemade",
+            "code": "470313",
+            "club": "NEW"
+          },
+          "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
+          "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Juventus sign Woltemade, Sarr on loan from Premier League",
+              "url": "https://www.france24.com/en/live-news/20260901-juventus-sign-woltemade-sarr-on-loan-from-premier-league"
+            },
+            {
+              "title": "Nottingham Forest lineup vs. Tottenham: Predicted XI for Premier League clash as Daniel Munoz starts",
+              "url": "https://www.sportsmole.co.uk/football/nottingham-forest/predicted-lineups/munoz-makes-the-xi-predicted-nottingham-forest-lineup-vs-tottenham_604363.html"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "pos": "MID",
+          "add": {
+            "name": "Rayan",
+            "code": "499604",
+            "club": "BOU"
+          },
+          "drop": {
+            "name": "Eze",
+            "code": "232413",
+            "club": "ARS"
+          },
+          "why": "Eze is still stuck behind Arsenal's front line under Arteta with no sign of a minutes trend pointing up. Rayan is confirmed in Bournemouth's predicted attacking three alongside Kluivert and Tavernier for the Newcastle game, and is being talked up as a breakout name this season.",
+          "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Newcastle United vs Bournemouth: Preview and Prediction",
+              "url": "https://thehardtackle.com/round-up/2026/09/03/newcastle-united-vs-bournemouth-preview-and-prediction-5/"
+            },
+            {
+              "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
+              "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "pos": "MID",
+          "add": {
+            "name": "Gro\u00df",
+            "code": "60307",
+            "club": "BHA"
+          },
+          "drop": {
+            "name": "Garner",
+            "code": "232928",
+            "club": "EVE"
+          },
+          "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
+          "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Moyes provides James Garner injury update after Everton return",
+              "url": "https://readeverton.com/david-moyes-james-garner-everton-injury-return/"
+            },
+            {
+              "title": "Brighton lineup vs. Aston Villa: Predicted XI for opening 2026-27 season",
+              "url": "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/predicted-lineups/one-full-debut-five-absentees-predicted-brighton-lineup-vs-aston-villa_603416.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "ts": "2026-09-02T07:50",
+      "gw": 3,
+      "claims": 4,
+      "note": "first run - four claims submitted (Munoz drop upgraded from yesterday's hold after fresh reporting on his Aina competition); a fifth was not included since the rest of the squad is either performing above its model rating (Marmoush, kept) or has no clear replacement worth the waiver priority this week"
+    },
+    {
+      "ts": "2026-09-02T08:13",
+      "gw": 3,
+      "claims": 4,
+      "note": "No material change since the last run 18 minutes ago. Refreshed sourcing - confirmed Igor Jesus as Forest's starting striker ahead of Chris Wood, and Bournemouth's Hill, Rayan and Tavernier all in the latest predicted XI - and confirmed Bijol is not a drop risk since his two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both injured. Still no fifth claim: Marmoush's real starting role beats his model rating and the rest of the squad is performing at or above its number."
+    },
+    {
+      "ts": "2026-09-02T21:11 UTC",
+      "gw": 3,
+      "claims": 4,
+      "note": "No change to the four claims after a full club-by-club refresh - the model's numbers for every add/drop pair are unchanged and every squad member's situation (Munoz vs Aina, Woltemade in Serie A, Eze benched, Garner's careful reintroduction, Bijol's injured rivals) still checks out. The one new find was a pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, reinforcing rather than changing the decision to keep him over a fifth claim."
+    },
+    {
+      "ts": "2026-09-03T14:41 UTC",
+      "gw": 3,
+      "claims": 3,
+      "note": "Dropped the Hill-for-Munoz claim: Forest's own predicted XI (published this morning) has Munoz starting at right wing-back against Spurs, not competing with Aina, so he is no longer a drop candidate and no other squad DEF clears the swap bar. Igor Jesus/Woltemade, Rayan/Eze and Gross/Garner carried forward unchanged after a full club-by-club refresh; also checked Barcola (now live in the pool, possible bench debut Friday at Ipswich) but no squad MID is weak enough to justify dropping for him."
+    },
+    {
+      "ts": "2026-09-03T20:54 UTC",
+      "gw": 4,
+      "claims": 4,
+      "note": "First run for the GW4 window (GW3 waivers have processed and the squad moved on since last week's file, which is now filed under previous). Four claims: Igor Jesus for Marmoush (Forest's confirmed #1 striker over Wood vs a Marmoush facing real competition from Solanke), Ampadu for Garner (Garner was a sub, not a starter, at Preston as earlier reported, and is behind Hackney for Sunday), Le Fee for Barcola (Barcola confirmed bench for his Liverpool debut), and a low-confidence Rayan for Doku (Doku's return is pegged for right around this gameweek, so it's a hedge). No fifth claim - the rest of the defense and attack are confirmed starters outperforming their model numbers."
+    },
+    {
+      "ts": "2026-09-03T21:08 UTC",
+      "gw": 4,
+      "claims": 4,
+      "note": "No change. Re-checked all four adds and drops (Igor Jesus/Marmoush, Ampadu/Garner, Le Fee/Barcola, Rayan/Doku) plus rivals across a fresh club-by-club sweep 13 minutes after the last update - Forest's Munoz/Milenkovic, Rodon's hamstring, Doku's calf timeline and Barcola's expected bench debut at Ipswich all check out exactly as before. Still no fifth claim; the rest of the squad remains confirmed starters above their model numbers."
+    },
+    {
+      "ts": "2026-09-04T08:15 UTC",
+      "gw": 4,
+      "claims": 3,
+      "note": "Dropped Ampadu for Garner: Garner is now confirmed set to start against Man Utd (Hackney a doubt with a knock), reversing last night's bench read, and no other squad midfielder or defender is weak enough once confirmed starting roles are accounted for. Kept Igor Jesus/Marmoush (reworded - Solanke's ankle injury has actually improved Marmoush's own case, so this is now a value upgrade not a bench-risk swap) and Le Fee/Barcola and Rayan/Doku unchanged. Three claims this week, down from four."
+    }
+  ]
 }
