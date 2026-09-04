@@ -86,9 +86,19 @@ async function get(url, extra) {
   return r.json();
 }
 
-/* Opta stats for the matches that are actually on. Never fatal: without
-   it the cards simply have no half-time board. One call to map the ids,
-   then one per live match, all inside the 15-second snapshot cache. */
+/* Opta stats for the matches that are actually on, and the real match
+   clock while we are there.
+
+   FPL's minute is its own derived thing and it runs behind: measured
+   against a live match it read 53 while the league's own clock read
+   57'00, which is the number on every scoreboard and in every search
+   result. So the clock comes from here too, and the phase with it, which
+   also means half time is a fact from the feed rather than a guess from
+   the wall clock.
+
+   Never fatal: without any of it the cards fall back to FPL's minute and
+   lose the board. One call to map the ids, then one per live match, all
+   inside the 15-second snapshot cache. */
 async function matchStats(fixtures) {
   const live = fixtures.filter(f => f.started);
   if (!live.length) return {};
@@ -123,7 +133,14 @@ async function matchStats(fixtures) {
         if (h[src] == null && a[src] == null) continue;
         st[key] = [+(h[src] || 0), +(a[src] || 0)];
       }
-      if (Object.keys(st).length) out[f.id] = st;
+      const en = j.entity || {};
+      const ck = en.clock || {};
+      out[f.id] = {
+        st: Object.keys(st).length ? st : null,
+        csecs: typeof ck.secs === "number" ? ck.secs : null,
+        phase: en.phase == null ? null : String(en.phase),
+        pstatus: en.status || null,
+      };
     } catch (e) { console.log(`pulse stats ${pid} failed: ${e.message}`); }
   }));
   return out;
@@ -259,8 +276,17 @@ export async function compose(cache, origin = "https://live.invalid") {
     };
   });
 
-  const stats2 = await matchStats(fx);
-  for (const f of fx) { if (stats2[f.id]) f.st = stats2[f.id]; delete f.code; }
+  const extra = await matchStats(fx);
+  for (const f of fx) {
+    const x = extra[f.id];
+    if (x) {
+      if (x.st) f.st = x.st;
+      if (x.csecs != null) f.csecs = x.csecs;
+      if (x.phase) f.phase = x.phase;
+      if (x.pstatus) f.pstatus = x.pstatus;
+    }
+    delete f.code;
+  }
 
   return {
     gw, finished: !!game.current_event_finished,

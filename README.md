@@ -437,12 +437,20 @@ together and every hauling player would read three points high.
 
 The clock reads what the feed means rather than what it says. FPL's minute
 caps at 45 and at 90, so first-half stoppage and the half-time break are the
-same number - caught one live at 45 with 54.7 minutes gone. The wall clock
-separates them: nobody plays ten minutes of first-half stoppage and the break
-is fifteen, so past fifty minutes elapsed a 45 is HALF TIME and before it is
-45+. The plus carries no number because the feed has none, and working one
-out from the clock in the second half would mean guessing the first half's
-stoppage and the length of the break as well.
+same number - caught one live at 45 with 54.7 minutes gone. The league's own
+feed settles it properly: it names the phase, "1" or "2", so half time is a
+fact rather than a guess, and it carries the clock to the second. The wall
+clock heuristic survives as the fallback for a match the stats feed has not
+got. The plus after 45 or 90 carries no number because neither feed has one.
+
+It also ticks. A snapshot is cached fifteen seconds at the worker and polled
+every fifteen at the page, so the minute in it is up to half a minute old
+before anybody reads it and then sits still until the next poll - which is
+the whole of why it ran a minute or two behind a scoreboard. The page counts
+on from the moment the snapshot was taken and repaints only the clocks, once
+a second, so it advances in real time and the next snapshot corrects it.
+Repainting the cards that often would close every breakdown somebody had
+opened.
 
 At half time the card opens a board above the players: possession, shots,
 on target, pass accuracy, tackles, fouls, corners, offsides, cards and

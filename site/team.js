@@ -1121,23 +1121,49 @@ function celebrate(who, code) {
    the second half it would be a bad guess: the elapsed time by then also
    contains the first half's stoppage and the length of the break, neither
    of which anybody tells us. */
+/* The league's own feed says which half it is ("1", "2"), so half time is
+   a fact rather than the guess from the wall clock this used to make. The
+   guess stays as the fallback for a match the stats feed has not got. */
 function matchPhase(f) {
   if (f.fin) return "ft";
   if (!f.started) return "pre";
-  const m = f.min || 0;
+  const m = liveMinute(f);
+  if (f.phase === "1" || f.phase === "2") {
+    if (f.phase === "1" && m >= 45) return "stoppage";
+    if (f.phase === "2" && m >= 90) return "stoppage";
+    return "live";
+  }
+  if (f.phase && f.pstatus === "L") return "ht";     // a named break
   const el = f.ko ? (Date.now() - Date.parse(f.ko)) / 60000 : null;
-  if (m === 45 && el != null && el >= 50) return "ht";
-  if (m === 45 || m === 90) return "stoppage";
-  return m ? "live" : "nostart";
+  if ((f.min || 0) === 45 && el != null && el >= 50) return "ht";
+  if (f.min === 45 || f.min === 90) return "stoppage";
+  return f.min ? "live" : "nostart";
+}
+/* The minute to put on screen.
+
+   The feed is a snapshot: the worker caches it for fifteen seconds and
+   the page polls every fifteen, so its minute is up to half a minute old
+   before anybody reads it, and then it sits still until the next poll.
+   Counting on from when the snapshot was taken closes both of those, and
+   is why this ticks every second rather than lurching once a quarter of a
+   minute. It is anchored on the feed, so the next snapshot corrects it. */
+function liveMinute(f) {
+  const base = f.csecs != null ? f.csecs : (f.min || 0) * 60;
+  const running = f.phase === "1" || f.phase === "2" || (!f.phase && f.started && !f.fin);
+  if (!running || !LIVE || !LIVE.fetched) return Math.floor(base / 60);
+  const age = (Date.now() - Date.parse(LIVE.fetched)) / 1000;
+  return Math.floor((base + Math.max(0, Math.min(age, 180))) / 60);
 }
 function fixtureState(f) {
   const ph = matchPhase(f);
   if (ph === "ft") return `<span class="mtmin ft">FT</span>`;
   if (ph === "pre") return `<span class="mtmin ht">${esc(koText(f.ko))}</span>`;
   if (ph === "ht") return `<span class="mtmin ht">HALF TIME</span>`;
-  if (ph === "stoppage") return `<span class="mtmin">${f.min}<sup>+</sup></span>`;
+  if (ph === "stoppage") {
+    return `<span class="mtmin">${f.phase === "2" ? 90 : 45}<sup>+</sup></span>`;
+  }
   if (ph === "nostart") return `<span class="mtmin">LIVE</span>`;
-  return `<span class="mtmin">${f.min}'</span>`;
+  return `<span class="mtmin">${liveMinute(f)}'</span>`;
 }
 // The half-time board, in the shape the old World Cup games used: the two
 // numbers either side of what they measure, and a bar behind them split
@@ -1324,7 +1350,7 @@ function matchHTML(f, L, ix) {
     <div class="mthead">
       <span class="mtside">${crest(f.h, hn)}<span class="nm">${esc(hn)}</span></span>
       <span class="mtmid"><span class="mtscore">${f.started ? `${f.hs ?? 0} - ${f.as ?? 0}` : "v"}</span>
-        <div>${fixtureState(f)}</div></span>
+        <div data-clock="${esc(f.id)}">${fixtureState(f)}</div></span>
       <span class="mtside away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
     </div>
     ${statBoard(f)}
@@ -1352,7 +1378,7 @@ function fxRow(f, name, chips) {
   return `<div class="fxi${f.started && !f.fin ? " on" : ""}">
     <div class="fxr">
       <span class="fxs"><span class="nm">${esc(hn)}</span>${crest(f.h, hn)}</span>
-      <span class="fxm"><b>${mid}</b>${fixtureState(f)}</span>
+      <span class="fxm"><b>${mid}</b><span data-clock="${esc(f.id)}">${fixtureState(f)}</span></span>
       <span class="fxs away">${crest(f.a, an)}<span class="nm">${esc(an)}</span></span>
     </div>
     <div class="fxplayers">${body}</div>
@@ -1499,6 +1525,21 @@ function renderLive() {
     .map(f => fxRow(f, name, chips)).join("")) ||
     `<div class="note">No fixtures in this gameweek.</div>`;
 }
+/* Repaint just the clocks, once a second. Re-rendering the cards that
+   often would close every breakdown somebody had opened. */
+let CLOCKTIMER = null;
+function tickClocks() {
+  clearInterval(CLOCKTIMER);
+  CLOCKTIMER = setInterval(() => {
+    if (document.hidden || !LIVE) return;
+    const fx = {};
+    for (const f of LIVE.fixtures || []) fx[f.id] = f;
+    document.querySelectorAll("[data-clock]").forEach(el => {
+      const f = fx[el.dataset.clock];
+      if (f) el.innerHTML = fixtureState(f);
+    });
+  }, 1000);
+}
 function liveDelay() {
   if (!LIVE || !LIVECTX) return 60e3;
   if (LIVECTX.inplay.length) return Math.max(15, LIVE.ttl || 30) * 1000;
@@ -1517,7 +1558,7 @@ async function pollLive() {
     if (j.error) throw new Error(j.error);
     LIVE = j; LIVEERR = null;
   } catch (e) { LIVEERR = String(e.message || e); }
-  renderLive(); renderLeague();
+  renderLive(); renderLeague(); tickClocks();
   const d = liveDelay();
   if (d != null && !document.hidden) LIVETIMER = setTimeout(pollLive, d);
 }
