@@ -468,6 +468,31 @@ players are still to come. Both append to data/news.json, which the News tab
 reads directly. Everything is diffed against the previous run's state, so an
 event fires once and re-running is a no-op.
 
+## Sources
+Everything the two research Routines cite comes off one list: BBC Sport,
+The Guardian, Sky Sports, premierleague.com, ESPN, Reuters, AP, The
+Athletic, or the club's own site. Each of the three validators - headlines,
+claims, starters - and the league news one parse the URL's host and refuse
+anything else, so an off-list citation cannot be published rather than
+merely being discouraged.
+
+It used to be a blocklist, and a blocklist loses. Sportsmole was named in
+the league news prompt and nowhere else, so the run that wrote Justin's own
+tabs used it twenty-two times, alongside rotowire, yahoo, a Detroit
+television station and a fantasy site whose predicted XI is copied off Sky
+a day late. Twenty-two of the fifty citations in the repo came from one
+outlet nobody had approved, because nothing had thought to forbid it. A
+whitelist has the opposite failure mode: a good outlet nobody listed gets
+left out, which costs a headline rather than the credibility of the page.
+
+The fifty off-list citations already published were purged when the rule
+came in - seventeen headlines whose only source was off the list, and
+twenty-three links under the starters. Twelve players had been called
+starters on that evidence alone; they are now "likely", which is what an
+unsourced opinion about a lineup actually is. A player no permitted outlet
+has written about can never read "start", which the validator enforces
+too, so the tab cannot quietly refill with the same thing.
+
 ## Claude's five claims
 The Waivers tab used to hold one opinion, the model's: rank free agents on
 next5, swap in whoever clears the weakest at his position by two points.
