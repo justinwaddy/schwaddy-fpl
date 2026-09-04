@@ -91,7 +91,23 @@ function clubLong(id) {
   const t = PUB && PUB.teams && PUB.teams[id];
   return t ? t[1] : id;
 }
+// Two Bens, so the game calls them Ben C and Ben D, which nobody in the
+// league does. Renaming here rather than in the data covers all three
+// sources - public.json, the live feed and the gameweek archive - from
+// one place, and the feed's prose gets the same treatment because the
+// news is written with the game's names in it.
+const RENAME = { 282287: "Small Ben", 363607: "Big Ben" };
+const RENAME_TEXT = [[/\bBen C\b/g, "Small Ben"], [/\bBen D\b/g, "Big Ben"]];
+function who(entry, fallback) {
+  return RENAME[entry] || fallback || null;
+}
+function reword(t) {
+  let out = String(t == null ? "" : t);
+  for (const [re, to] of RENAME_TEXT) out = out.replace(re, to);
+  return out;
+}
 function mgrName(entry) {
+  if (RENAME[entry]) return RENAME[entry];
   const m = (PUB && PUB.managers || []).find(x => x.entry === entry);
   return m ? m.name : null;
 }
@@ -196,7 +212,15 @@ function cardHTML() {
   const own = P && P.owner ? (mgrName(P.owner) || "owned") : "free agent";
   const st = (S && S.s) || {};
   const g = k => st[k] != null ? st[k] : 0;
-  let h = `<div class="pkhd"><div>
+  // The league's own headshots, keyed on the same code this file is keyed
+  // on. Plenty of players have no photo - a summer signing usually does
+  // not for a few weeks - and the request simply 404s, so the element
+  // removes itself and the header closes up rather than showing a gap.
+  const shot = code
+    ? `<img class="pkface" alt="" loading="lazy" onerror="this.remove()"
+        src="https://resources.premierleague.com/premierleague/photos/players/250x250/p${esc(code)}.png">`
+    : "";
+  let h = `<div class="pkhd">${shot}<div>
     <h2>${esc(name)} <span class="pos ${pos}">${pos}</span></h2>
     <div class="sub">${[S && S.full, clubLong(tid), own].filter(Boolean).map(esc).join(" &middot; ")}</div>
     </div><button class="x" title="Close">&#10005;</button></div>`;
@@ -455,11 +479,56 @@ function leagueLive() {
   t.mgrs.forEach((m, i) => { by[m.entry] = { ...m, gw_rank: i + 1 }; });
   return { gw: LIVE.gw, by, inplay: t.inplay.length };
 }
+// Who counts as "ours": anyone one of the six holds, plus the fifty best
+// players in the game on points, because a hamstring at the top of the
+// board is a waiver claim whoever currently owns him.
+const TOPN = 50;
+function relevant() {
+  const ps = (PUB && PUB.players) || [];
+  const by = new Map();
+  const add = p => { if (!by.has(p.code)) by.set(p.code, p); };
+  for (const p of ps) if (p.owner != null) add(p);
+  [...ps].sort((a, b) => (S(b, "total_points") || 0) - (S(a, "total_points") || 0))
+    .slice(0, TOPN).forEach(add);
+  return by;
+}
+/* The feed, cut down to items that name one of those players. */
+function playerUpdates() {
+  const rel = relevant();
+  if (!rel.size) return { hurt: [], items: [] };
+  const names = [];
+  for (const p of rel.values()) {
+    for (const nm of [p.name, p.full]) {
+      const k = String(nm || "").trim();
+      if (k.length >= 3) names.push(k.toLowerCase());
+    }
+  }
+  const hits = t => {
+    const low = String(t || "").toLowerCase();
+    return names.some(nm => low.includes(nm));
+  };
+  const items = newsFeed()
+    .filter(e => NEWSGROUP[e.kind] === "players" && hits(e.text))
+    .slice(0, 40);
+  // and the game's own availability notes, which are not in the feed at all
+  const hurt = [...rel.values()]
+    .filter(p => (p.status && p.status !== "a") || p.news)
+    .sort((a, b) => (a.owner == null) - (b.owner == null) ||
+      String(a.name).localeCompare(String(b.name)));
+  return { hurt, items };
+}
 function renderLeague() {
   const sec = $("league");
   if (!PUB) { sec.innerHTML = loading("league"); return; }
   const byId = {}; (PUB.players || []).forEach(p => { byId[p.id] = p; });
   const LV = leagueLive();
+  // On the day of the first kick-off the table stops being about last
+  // week. Nobody has scored yet, so every gameweek column reads zero and
+  // opening a manager shows the fifteen he holds rather than the eleven
+  // that played six days ago. The live feed takes over at kick-off.
+  const ko = ((PUB.fixtures || [])[0] || [])[2];
+  const soon = ko && (Date.parse(ko) - Date.now()) < 24 * 3600e3;
+  const AHEAD = !LV && soon && PUB.next_gw > PUB.gw;
   const rows = [...(PUB.managers || [])].sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
   const value = m => {
     if (!SHOW_PRICES || !PRICES) return null;
@@ -468,7 +537,8 @@ function renderLeague() {
     return n ? t : null;
   };
   const cols = 10 + (SHOW_PRICES ? 1 : 0);
-  let h = `<div class="card"><b class="h">Gameweek ${LV ? LV.gw : PUB.gw}</b>
+  let h = `<div class="card"><b class="h">Gameweek ${LV ? LV.gw : AHEAD ? PUB.next_gw : PUB.gw}</b>
+    ${AHEAD ? `<div class="lvstatus">Not started &middot; first kick-off ${esc(koText(ko))}</div>` : ""}
     ${LV && LV.inplay ? `<div class="lvstatus"><span class="livedot"></span><b>LIVE</b> &middot;
       ${LV.inplay} match${LV.inplay > 1 ? "es" : ""} in play &middot; updating as points land</div>` : ""}
     ${legend([["GW", "points this gameweek"], ["GW#", "where he finished it"],
@@ -485,7 +555,10 @@ function renderLeague() {
     const lv = LV && LV.by[m0.entry];
     // roster and prices are public.json's; everything about the gameweek
     // comes from whichever of the two is further along
-    const m = lv ? { ...m0, ...lv } : m0;
+    const m = lv ? { ...m0, ...lv }
+      : AHEAD ? { ...m0, live: 0, bench: 0, subs: 0, gw_rank: null,
+                  squad: (m0.roster || []).map(p => ({ ...p, pts: 0, mins: 0, slot: 99 })) }
+        : m0;
     const v = value(m0);
     const xi = (m.squad || []).filter(counting);
     // across all fifteen, not the eleven: after the automatic
@@ -499,7 +572,7 @@ function renderLeague() {
     const unfit = (m.roster || []).filter(p => p.status && p.status !== "a").length;
     h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-e="${m.entry}">
       <td class="tm">${i + 1}</td>
-      <td><span class="nm">${esc(m.name)}</span> <span class="tm">${esc(m.team)}</span></td>
+      <td><span class="nm">${esc(who(m.entry, m.name))}</span> <span class="tm">${esc(m.team)}</span></td>
       <td class="num">${m.live}</td>
       <td class="num"><span class="tm">${m.gw_rank ? ordinal(m.gw_rank) : "-"}</span></td>
       <td class="num">${played}</td>
@@ -511,13 +584,64 @@ function renderLeague() {
       <td class="num">${m.total ?? "-"}</td>
       ${SHOW_PRICES ? `<td class="num">${v != null ? "&pound;" + v.toFixed(1) : "-"}</td>` : ""}
       <td class="chev">${LGOPEN === m.entry ? "&#9662;" : "&#9656;"}</td></tr>`;
-    if (LGOPEN === m.entry) h += `<tr><td colspan="${cols + 2}" style="padding:0 0 6px">${squadHTML(m, byId)}</td></tr>`;
+    if (LGOPEN === m.entry) {
+      h += `<tr><td colspan="${cols + 2}" style="padding:0 0 6px">${
+        AHEAD ? rosterHTML(m0, byId) : squadHTML(m, byId)}</td></tr>`;
+    }
   });
   h += `</table></div><div class="note">Click a manager for his squad.</div></div>`;
+
+  // Everything happening to the players that matter to this league
+  const up = playerUpdates();
+  h += `<div class="card"><b class="h">Player news</b>
+    <div class="note">Everyone one of the six holds, plus the fifty best in the game on points.
+    Click a name for his card.</div>`;
+  if (up.hurt.length) {
+    h += `<div class="wrap"><table>
+      <tr>${th("player")}<th></th>${ths("owner", ["next", ""])}<th>the game says</th></tr>` +
+      up.hurt.map(p => `<tr><td>${nameTag(p)}<div class="tm">${esc(club(p))}</div></td>
+        <td><span class="pos ${p.pos}">${p.pos}</span></td>
+        <td class="tm">${esc(mgrName(p.owner) || "free agent")}</td>
+        <td class="run">${esc(p.next || "")}</td>
+        <td><span class="badge b-${p.status && p.status !== "a" ? "injury" : "news"}">${
+          esc(PKSTATUS[p.status] || "note")}</span> ${esc(p.news || "")}</td></tr>`).join("") +
+      `</table></div>`;
+  }
+  if (up.items.length) {
+    h += `<div class="feed">` + up.items.map(e =>
+      `<div class="ev"><span class="badge b-${esc(e.kind)}">${esc(String(e.kind).toUpperCase())}</span>
+        <span style="flex:1">${linkPlayers(esc(reword(e.text)))}${
+          e.source && e.source.url ? ` <a href="${esc(e.source.url)}" target="_blank" rel="noopener">${
+            esc(e.source.title || "source")}</a>` : ""}</span>
+        <span class="when">${esc(String(e.ts || "").slice(0, 16).replace("T", " "))}</span></div>`).join("") +
+      `</div>`;
+  }
+  if (!up.hurt.length && !up.items.length) {
+    h += `<div class="note">${PUB ? "Nothing to report on anybody's players." : "Loading&hellip;"}</div>`;
+  }
+  h += `</div>`;
   sec.innerHTML = h;
   sec.querySelectorAll("[data-e]").forEach(r => r.addEventListener("click", () => {
     const e = +r.dataset.e; LGOPEN = (LGOPEN === e ? null : e); renderLeague();
   }));
+}
+/* The fifteen he holds now, for the gameweek that has not started. There
+   is no eleven yet - the game only fixes one at the deadline - so this is
+   the roster in position order, not an XI and a bench. */
+function rosterHTML(m, byId) {
+  const cell = p => {
+    const f = byId[p.id] || {};
+    return `<tr>${nameCell(p)}<td><span class="pos ${p.pos}">${p.pos}</span></td>
+      <td class="run">${esc(p.next || "")}</td>
+      <td class="num">${S(f, "total_points")}</td><td class="num">${S(f, "goals_scored")}</td>
+      <td class="num">${S(f, "assists")}</td><td class="num">${S(f, "minutes")}</td>
+      ${SHOW_PRICES ? `<td class="num">${priceOf(f.code) != null ? "&pound;" + priceOf(f.code).toFixed(1) : "-"}</td>` : ""}</tr>`;
+  };
+  return `<div class="det"><div class="wrap"><table>
+    <tr><th title="${esc(TIPS.player)}">${esc(who(m.entry, m.name))}'s fifteen</th><th></th>
+    ${ths("next", ["season", "num"], ["G", "num"], ["A", "num"], ["mins", "num"])}
+    ${SHOW_PRICES ? th("value", "num") : ""}</tr>
+    ${(m.roster || []).map(cell).join("")}</table></div></div>`;
 }
 function squadHTML(m, byId) {
   const cell = p => {
@@ -531,7 +655,7 @@ function squadHTML(m, byId) {
   };
   const xi = m.squad.filter(counting), bn = m.squad.filter(p => !counting(p));
   return `<div class="det"><div class="wrap"><table>
-    <tr><th title="${esc(TIPS.player)}">${esc(m.name)}'s XI</th><th></th>
+    <tr><th title="${esc(TIPS.player)}">${esc(who(m.entry, m.name))}'s XI</th><th></th>
     ${ths("next", ["played", "num"], ["GW", "num"], ["season", "num"], ["G", "num"], ["A", "num"])}
     ${SHOW_PRICES ? th("value", "num") : ""}</tr>
     ${xi.map(cell).join("")}
@@ -628,7 +752,7 @@ document.addEventListener("DOMContentLoaded", () => {
     PUB = j;
     const m = me();
     $("title").innerHTML = m ? `${esc(m.team)}` : "27 Richmond Road Cup";
-    $("meta").textContent = `${m ? m.name + " · " : ""}GW${j.gw} · updated ${(j.generated || "").slice(0, 16).replace("T", " ")} UTC`;
+    $("meta").textContent = `${m ? who(m.entry, m.name) + " · " : ""}GW${j.gw} · updated ${(j.generated || "").slice(0, 16).replace("T", " ")} UTC`;
     draw();
   }, "pub");
   get(NEWS_URL, j => { NEWS = j; renderNews(); }, "news");
@@ -666,6 +790,56 @@ const NEWSGROUP = {
   news: "players",
 };
 let NEWSFILTER = "all";
+// Player names in the feed become links to the card. The text is escaped
+// first and the names are matched against the escaped form, so the
+// replacement can never introduce markup the feed did not have.
+//
+// The trap is a name that is also somebody's first name: a run once wrote
+// "Enzo Maresca" and the naive version linked "Enzo" to the Chelsea
+// midfielder. So a bare single-word name followed by another capitalised
+// word is left alone, unless the two words together are themselves a
+// player the game knows.
+let NAMERE = null, NAMEMAP = null;
+function nameIndex() {
+  if (NAMERE || !PUB) return;
+  // A manager's name wins over a player's. James Justin is a real
+  // Leicester defender and "Justin" in this feed is always the manager,
+  // twelve times on one screen; the same would go for a Marcus or an
+  // Edward. Those words are left as text, and the players keep their
+  // full names, which are unambiguous.
+  const mgrs = new Set();
+  for (const m of PUB.managers || []) {
+    for (const nm of [m.name, who(m.entry, m.name)]) {
+      for (const word of String(nm || "").split(/\s+/)) {
+        if (word.length >= 3) mgrs.add(word.toLowerCase());
+      }
+    }
+  }
+  NAMEMAP = {};
+  for (const p of PUB.players || []) {
+    for (const nm of [p.name, p.full]) {
+      const k = String(nm || "").trim();
+      if (k.length < 3 || mgrs.has(k.toLowerCase())) continue;
+      if (!(k.toLowerCase() in NAMEMAP)) NAMEMAP[k.toLowerCase()] = p.code;
+    }
+  }
+  const keys = Object.keys(NAMEMAP).sort((a, b) => b.length - a.length)
+    .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  NAMERE = keys.length ? new RegExp(`(^|[^\\w&;])(${keys.join("|")})(?![\\w'])`, "gi") : null;
+}
+function linkPlayers(escaped) {
+  nameIndex();
+  if (!NAMERE) return escaped;
+  return escaped.replace(NAMERE, (all, pre, nm, at) => {
+    const rest = escaped.slice(at + all.length);
+    const next = /^\s+([A-Z][\w'-]+)/.exec(rest);
+    if (next && !nm.includes(" ") && !(`${nm} ${next[1]}`.toLowerCase() in NAMEMAP)) {
+      return all;                        // "Enzo Maresca" is not our Enzo
+    }
+    const code = NAMEMAP[nm.toLowerCase()];
+    return code == null ? all : `${pre}<span class="nm pk" data-pk="${esc(code)}">${nm}</span>`;
+  });
+}
 function newsFeed() {
   const out = [];
   for (const e of (NEWS && NEWS.items) || []) {
@@ -738,7 +912,7 @@ function renderNews() {
           ? `<a class="src" href="${esc(e.source.url)}" target="_blank" rel="noopener">${esc(e.source.title || e.source.url)} &rsaquo;</a>`
           : "";
         h += `<div class="ev"><span class="badge b-${esc(e.kind)}">${esc(String(e.kind).toUpperCase())}</span>
-          <span style="flex:1">${esc(e.text)}${src}</span>
+          <span style="flex:1">${linkPlayers(esc(reword(e.text)))}${src}</span>
           <span class="when">${esc(String(e.ts || "").slice(11, 16))}</span></div>`;
       }
       h += `</div>`;
@@ -766,7 +940,7 @@ function openSuggest() {
     <label for="about">Who is it about</label>
     <select id="about">
       <option value="">The league in general</option>
-      ${others.map(m => `<option value="${m.entry}">${esc(m.name)} &middot; ${esc(m.team)}</option>`).join("")}
+      ${others.map(m => `<option value="${m.entry}">${esc(who(m.entry, m.name))} &middot; ${esc(m.team)}</option>`).join("")}
     </select>
     <label for="text">Your suggestion</label>
     <textarea id="text" maxlength="500" placeholder="Rob has one of his own strikers benched and the opposition keeper starting..."></textarea>
@@ -795,7 +969,7 @@ function submitSuggestion(close) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: ME, from_name: m ? m.name : String(ME),
+      from: ME, from_name: m ? who(m.entry, m.name) : String(ME),
       about, about_name: about ? (mgrName(about) || String(about)) : null,
       text,
     }),
@@ -1006,7 +1180,7 @@ function playerRow(id, e, f, ix) {
     body = `<div><span>${e.min ? "No scoring events yet." : "Not on the pitch yet."}</span></div>`;
   }
   const meta = [
-    `<span class="who">${esc(m ? m.name : "")}</span>`,
+    `<span class="who">${esc(m ? who(m.entry, m.name) : "")}</span>`,
     role.xi === undefined ? "" :
       `<span class="tag ${role.xi ? "xi" : "bn"}">${role.xi ? "XI" : "bench"}${
         role.sub_in ? " &uarr;" : role.sub_out ? " &darr;" : ""}</span>`,
@@ -1073,12 +1247,12 @@ function fxRow(f, name, chips) {
    one. No scores exist yet, so these rows are the schedule only. */
 function previewFixtures() {
   if (!PUB || !(PUB.fixtures || []).length) return "";
-  const who = {};
-  for (const m of PUB.managers || []) who[m.entry] = m.name;
+  const owner = {};
+  for (const m of PUB.managers || []) owner[m.entry] = who(m.entry, m.name);
   const name = tid => ((PUB.teams || {})[tid] || [])[0] || String(tid);
   const chips = f => (PUB.players || [])
     .filter(p => (p.team === f.h || p.team === f.a) && p.owner != null)
-    .map(p => ({ p, who: who[p.owner] || "", mine: p.owner === ME, pts: null, pb: 0 }))
+    .map(p => ({ p, who: owner[p.owner] || "", mine: p.owner === ME, pts: null, pb: 0 }))
     .sort((a, b) => (b.mine - a.mine) || String(a.p.name).localeCompare(String(b.p.name)));
   return PUB.fixtures
     .map(([h, a, ko]) => fxRow({ h, a, ko, started: false, fin: false }, name, chips))
@@ -1105,7 +1279,7 @@ function liveStandings(L, ix) {
 }
 function tickerText(rows) {
   return rows.map((r, i) =>
-    `<span class="${r.m.entry === ME ? "me" : ""}">${i + 1}. ${esc(r.m.name)} <b>${r.live}</b></span>`)
+    `<span class="${r.m.entry === ME ? "me" : ""}">${i + 1}. ${esc(who(r.m.entry, r.m.name))} <b>${r.live}</b></span>`)
     .join(`<em>&middot;</em>`);
 }
 function renderLive() {
@@ -1185,7 +1359,7 @@ function renderLive() {
       const e = LIVE.elements[id], m = ix.mgr[ix.owner[id]];
       const rows = ((e.ex || {})[f.id] || []);
       const pb = rows.some(r => /bonus/i.test(String(r[0]))) ? 0 : (ix.bonus[id] || 0);
-      return { p: { name: e.n, id: +id }, who: m ? m.name : "",
+      return { p: { name: e.n, id: +id }, who: m ? who(m.entry, m.name) : "",
                mine: ix.owner[id] === ME,
                pts: f.started ? (e.pts || 0) + pb : null, pb: f.started ? pb : 0 };
     })

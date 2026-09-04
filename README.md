@@ -265,6 +265,45 @@ twenty lines that name the manager and load them, so there is one copy of
 the logic. Prices are the one thing that differs: only Ed's page fetches
 data/prices.json, and only Ed's page has the value columns.
 
+### The League tab is the front page
+It opens there, and it is first in the row. The table is the thing the
+league actually argues about, so it should not be two taps away.
+
+Under the table is Player news: every fitness note the game is carrying on
+a player one of the six holds, plus the fifty best players in the game on
+points - a hamstring at the top of the board is a waiver claim whoever
+owns him - and then the feed's own player items, cut to the ones that name
+one of those players. Every name in it opens the card.
+
+The names in the News tab are links too. The text is escaped first and the
+names matched against the escaped form, so the linking can never introduce
+markup the feed did not have. Two traps were worth the trouble: a bare
+first name followed by another capitalised word is left alone unless the
+pair is itself a player the game knows, which is what stops "Enzo Maresca"
+becoming a link to Chelsea's Enzo; and a manager's name always wins over a
+player's, because James Justin is a real Leicester defender and "Justin"
+in this feed means the manager, twelve times on one screen.
+
+On the day of the first kick-off the table stops being about last week.
+Every gameweek column reads zero, the header says when the first match is,
+and opening a manager shows the fifteen he holds rather than the eleven
+that played six days ago. The live feed takes over at kick-off. The league
+plays for a pint a week, so a week that has not started is nil-nil.
+
+Ben C and Ben D are Small Ben and Big Ben, which is what the league calls
+them. The renaming is done on the page rather than in the data, so it
+covers public.json, the live feed and the gameweek archive from one place,
+and the feed's prose gets it too, since the news is written with the
+game's names in it.
+
+### The player card
+Clicking a name anywhere opens it: the league's own headshot where one
+exists - keyed on the same player code this file is keyed on, and the
+element removes itself on the 404 a recent signing usually gets - his
+fitness note, his season, where he ranks on points overall and in his
+position, what the game's draft ranking made of him, the numbers under the
+points, and every match he has played.
+
 ### Looking back at a gameweek
 The tabs only ever knew the gameweek the cron last scored, which is the
 right thing for a live table and useless for the argument a six-man league

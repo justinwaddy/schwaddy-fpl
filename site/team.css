@@ -221,3 +221,6 @@ padding:2px 8px;font-size:12px;cursor:pointer;line-height:1.4}
 .gwb:disabled{opacity:.35;cursor:default}
 .gwsel{background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:6px;
 padding:2px 6px;font:600 12px "IBM Plex Mono",ui-monospace,monospace}
+/* the league's headshot, where one exists */
+.pkface{width:54px;height:54px;border-radius:9px;object-fit:cover;object-position:top center;
+background:var(--panel2);flex:none}
