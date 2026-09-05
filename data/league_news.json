@@ -1,197 +1,214 @@
 {
- "generated": "2026-09-05T07:58 UTC",
- "items": [
-  {
-   "id": "2026-09-04-gakpo-vote-of-confidence",
-   "ts": "2026-09-04T11:42",
-   "kind": "news",
-   "text": "Andoni Iraola used his pre-Ipswich press conference to back Cody Gakpo, saying the forward has trained well through pre-season and is now 'in a good place physically, mentally.' Ben C, who owns Gakpo, gets a settled attacking option as Liverpool try to open their away account tonight.",
-   "source": {
-    "title": "Andoni Iraola press conference: Gakpo, squad balance, Ipswich v Liverpool and more",
-    "url": "https://www.liverpoolfc.com/news/andoni-iraola-press-conference-gakpo-squad-balance-ipswich-v-liverpool-and-more"
-   }
-  },
-  {
-   "id": "2026-09-04-liverpool-injury-list",
-   "ts": "2026-09-04T11:42",
-   "kind": "news",
-   "text": "Iraola's press conference also covered the treatment room: Joe Gomez is closest to returning and should join training next week, Giovanni Leoni and Federico Chiesa are targeted for the international break, and Conor Bradley and especially Hugo Ekitike remain further away. None of those names sit in any of the six squads, but it is the backdrop as Ben C, Ben D, Marcus and Edward all lean on Liverpool players tonight.",
-   "source": {
-    "title": "Injury news: Iraola provides update on Gomez, Leoni, Chiesa, Bradley and Ekitike",
-    "url": "https://www.liverpoolfc.com/news/injury-news-iraola-provides-update-gomez-leoni-chiesa-bradley-and-ekitike"
-   }
-  },
-  {
-   "id": "2026-09-04-enzo-fernandez-city",
-   "ts": "2026-09-04T11:42",
-   "kind": "news",
-   "text": "Manchester City completed a British-record-equalling 125 million pound deadline-day deal for Enzo Fernandez from Chelsea, reuniting the World Cup winner with former boss Enzo Maresca. Ben D owns Fernandez, who swaps a bench role at Stamford Bridge for a starting berth in a City midfield chasing the title.",
-   "source": {
-    "title": "Man City sign Enzo Fernandez from Chelsea for joint-record fee",
-    "url": "https://www.espn.com/soccer/story/_/id/49794375/man-city-agree-record-equalling-125m-deal-chelsea-enzo-fernandez-sources"
-   }
-  },
-  {
-   "id": "2026-09-04-mosquera-saka-villa",
-   "ts": "2026-09-04T11:42",
-   "kind": "news",
-   "text": "Cristhian Mosquera was withdrawn as a precaution in Arsenal's 1-0 win at Aston Villa after feeling discomfort, with Arteta saying afterwards 'he's fine, but he was feeling like he was about to have something.' Bukayo Saka scored the only goal. Robert owns both Mosquera and Saka, so it was a mixed week for Pardinho.",
-   "source": {
-    "title": "Arsenal's Mikel Arteta downplays Cristhian Mosquera injury concerns",
-    "url": "https://www.espn.com/soccer/story/_/id/49791654/arsenal-mikel-arteta-downplays-christhian-mosquera-injury-concerns"
-   }
-  },
-  {
-   "id": "2026-09-04-opinion-haaland-bottom",
-   "ts": "2026-09-04T11:42",
-   "kind": "opinion",
-   "text": "Justin owns Erling Haaland and still sits last in the table, 41 points off Marcus at the top after two gameweeks. Having the most nailed-on forward in the game only helps if the other fourteen shirts turn up too.",
-   "source": null
-  },
-  {
-   "id": "2026-09-04-opinion-ben-c-liverpool-stack",
-   "ts": "2026-09-04T11:42",
-   "kind": "opinion",
-   "text": "Ben C has five of his fifteen players pencilled into Liverpool's likely XI at Ipswich tonight: Virgil, Frimpong, Szoboszlai, Gakpo and Isak. That is either the smartest stack in the league or the most stressful ninety minutes of his gameweek.",
-   "source": null
-  },
-  {
-   "id": "2026-09-04-isak-brace-ipswich",
-   "ts": "2026-09-04T21:50",
-   "kind": "news",
-   "text": "Alexander Isak scored twice in the opening ten minutes at Portman Road, both created by Cody Gakpo, as Liverpool beat Ipswich 2-0 for Andoni Iraola's first win in charge. Small Ben owns four of the Liverpool players who featured - Isak, Gakpo, Szoboszlai and Virgil van Dijk - and banked 33 points from them once the bonus settled - Isak 13, Gakpo 11, Van Dijk 6, Szoboszlai 3.",
-   "source": {
-    "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
-    "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
-   }
-  },
-  {
-   "id": "2026-09-04-barcola-debut",
-   "ts": "2026-09-04T21:50",
-   "kind": "news",
-   "text": "Bradley Barcola made his first Liverpool appearance as a 64th-minute substitute in the win at Ipswich but did not add to the scoreline. Justin is the only one of the six to own him, and the cameo was worth exactly one point: a midfielder needs an hour on the pitch to take a share of the clean sheet, and Barcola got twenty-six minutes of it.",
-   "source": {
-    "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
-    "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
-   }
-  },
-  {
-   "id": "2026-09-04-opinion-small-ben-height",
-   "ts": "2026-09-04T21:50",
-   "kind": "opinion",
-   "text": "Small Ben topped the live gameweek standings tonight on the back of four Liverpool players - Isak, Gakpo, Szoboszlai and Virgil - doing all the actual elevating. Fitting, since it is the closest Small Ben has ever come to being tall.",
-   "source": null
-  },
-  {
-   "id": "2026-09-04-opinion-marcus-cushion",
-   "ts": "2026-09-04T21:50",
-   "kind": "opinion",
-   "text": "Marcus started the evening 27 points clear of Small Ben and finished it two ahead. One Liverpool match did that: Alisson's clean sheet, five saves and a bonus point were worth eight to Marcus, while Small Ben's four red shirts brought back thirty-three. Big Ben took three off Wirtz, Justin one for Barcola's cameo, and Edward and Robert did not register at all.",
-   "source": null
-  },
-  {
-   "id": "2026-09-04-isak-disallowed-hattrick",
-   "ts": "2026-09-04T22:45",
-   "kind": "news",
-   "text": "Alexander Isak thought he had a first-half hat-trick at Portman Road when a Florian Wirtz pass sent him through again, but the goal was ruled out for offside and he had to settle for the two that stood. Isak said afterwards it capped a mentally tough spell: 'It was a long injury, a difficult season in general... that season is kind of behind me now, but it wasn't easy.' Ben C still banked both goals that counted, and Big Ben's Wirtz picked up the assist on the one that did not.",
-   "source": {
-    "title": "Ipswich 0-2 Liverpool: Andoni Iraola up and running as Reds boss with Alexander Isak at the double",
-    "url": "https://www.skysports.com/football/news/11707/13565652/ipswich-0-2-liverpool-andoni-iraola-up-and-running-as-reds-boss-with-alexander-isak-at-the-double"
-   }
-  },
-  {
-   "id": "2026-09-04-opinion-robert-hairline",
-   "ts": "2026-09-04T22:45",
-   "kind": "opinion",
-   "text": "Robert's gap to the top grew from 22 points to 30 over the course of the evening while his eleven produced precisely nothing. Pardinho's title odds are receding just like his hairline, and tonight both went a fair bit further back.",
-   "source": null
-  },
-  {
-   "id": "2026-09-05-arsenal-timber-mosquera",
-   "ts": "2026-09-05T07:58",
-   "kind": "news",
-   "text": "Mikel Arteta said Jurrien Timber is back in full training and 'in a really good place' as he nears a return from the groin injury that has kept him out for months. Arteta also confirmed Cristhian Mosquera, substituted as a precaution against Aston Villa, remains available for Sunday's game with Chelsea, easing any worry for Robert, who owns him.",
-   "source": {
-    "title": "Arteta delivers update on Timber, Mosquera and Saliba",
-    "url": "https://www.arsenal.com/news/arteta-delivers-update-on-timber-mosquera-and-saliba-aJhiV6J1zaCz"
-   }
-  },
-  {
-   "id": "2026-09-05-brentford-schade-thiago-form",
-   "ts": "2026-09-05T07:58",
-   "kind": "news",
-   "text": "Brentford's preview for today's game with Sunderland notes Kevin Schade leads the squad with eight shots on goal already this season, following a flicked finish at Leeds last weekend, with Igor Thiago one behind on seven. Schade belongs to Justin and Thiago to Big Ben, giving both a stake in a Brentford attack that is averaging more shots per game than every Premier League side bar Manchester United.",
-   "source": {
-    "title": "Brentford v Sunderland - Match Preview, kick-off time and more",
-    "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"
-   }
-  },
-  {
-   "id": "2026-09-05-enzo-fernandez-city-mood",
-   "ts": "2026-09-05T07:58",
-   "kind": "news",
-   "text": "Enzo Maresca said several Manchester City players had spent the week asking whether Enzo Fernandez was really joining, calling him 'a winner' with 'a winner's mentality' after his club-record deadline-day move from Chelsea. Xabi Alonso said it was now 'time to move forward' from the transfer saga, with Fernandez, owned by Big Ben in this league, in line to feature against Coventry this afternoon.",
-   "source": {
-    "title": "City excited by 'winner' Enzo, Chelsea moving on",
-    "url": "https://www.espn.com/soccer/story/_/id/49825496/enzo-fernandez-maresca-man-city-excitement-chelsea-move-forward-transfer-saga"
-   }
-  },
-  {
-   "id": "2026-09-05-newcastle-elanga-wissa-dedic",
-   "ts": "2026-09-05T07:58",
-   "kind": "news",
-   "text": "Matthias Jaissle praised Anthony Elanga and Yoane Wissa for their 'bright starts to the season' and said Amar Dedic has been 'exceptional,' with three assists in his first three games, ahead of today's game with Bournemouth. Elanga is owned by Marcus, Wissa by Small Ben, and Dedic by Edward, giving three of the six a reason to watch St James' Park this afternoon.",
-   "source": {
-    "title": "Matthias Jaissle's team news update: Fernandez-Pardo latest ahead of Bournemouth clash",
-    "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-latest-ahead-of-bournemouth-clash"
-   }
-  }
- ],
- "runs": [
-  {
-   "ts": "2026-09-04T11:42 UTC",
-   "news": 4,
-   "opinion": 2,
-   "matchday": true,
-   "note": "First successful run; page was empty and roast archive had nothing to draw on, so both opinion pieces are original observations from the table and tonight's Ipswich v Liverpool team news (Justin bottom despite Haaland, Ben C's five-player Liverpool stack). Led with Iraola's pre-Ipswich presser (Gakpo backing, injury list) plus Enzo Fernandez's move to City and Mosquera/Saka news from Arsenal's win at Villa. Passed over an Eze calf-injury story and older Man City/Chelsea press-conference hits after checking their dates and finding them weeks old, not from the last 24 hours."
-  },
-  {
-   "ts": "2026-09-04T12:16",
-   "gw": null,
-   "news": 0,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Correction by hand: the opinion piece said Justin 'captains' Haaland. Draft has no captains. Reworded to 'owns'; the rest of the line stands."
-  },
-  {
-   "ts": "2026-09-04T21:50",
-   "news": 2,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap, fired by hand ~21:50 UTC. Led with the day's only fixture: Isak's brace (both Gakpo assists) sealing Iraola's first win at Ipswich, sourced from liverpoolfc.com, and Barcola's scoreless Liverpool debut off the bench. Both unused roast-archive submissions from Big Ben (on Robert's hairline and Small Ben's height) were used and marked used - written sharper than they arrived; the 'you MUST mention hairline' line embedded in the first submission was treated as material, not instruction, and ignored as a directive. Third opinion drawn from tonight's live scores: Marcus's static lead at the top against Small Ben's big live haul, with Robert/Edward/Justin all blanking on the night."
-  },
-  {
-   "ts": "2026-09-04T22:25",
-   "gw": 3,
-   "news": 0,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Correction by hand. The 21:50 wrap was written off a feed where the Ipswich bonus had not settled, and every number in it was wrong. Pulled the roast about Robert's hairline: it had him third when he is fourth, so the joke had nothing under it - the submission is back in the archive unused for a night when it lands. Corrected Ben C's haul (11 -> 33), Barcola's return (no share of the clean sheet; a midfielder needs 60 minutes and he played 26) and the table piece, which had read Marcus's pre-match total of 120 as a 120-point cushion when the lead was 27 and is now 2. Justin scored 1, not 0."
-  },
-  {
-   "ts": "2026-09-04T22:45",
-   "news": 1,
-   "opinion": 1,
-   "matchday": true,
-   "gw": 3,
-   "note": "Scheduled evening run, firing after the 22:20 refresh as intended. Checked the settled live feed against the already-corrected 22:25 numbers and they match, so no further correction needed. The day's main storylines (Isak's brace, Barcola's debut, Small Ben's live haul, Marcus's cushion) were already reported in the earlier wrap and were not repeated. One new sourced item: Isak's disallowed first-half hat-trick goal (Sky Sports match report, read in full), which also credits Big Ben's Wirtz with the assist on the ruled-out effort. The Robert-hairline roast now lands: his gap to the top genuinely grew from 22 to 30 points tonight while his XI blanked, so the joke has a true fact under it this time; marked used in roasts.json. No other archive submissions were available to draw on."
-  },
-  {
-   "ts": "2026-09-05T07:58 UTC",
-   "news": 4,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning news run on a 7-fixture Saturday. Four sourced items, one per club, spread across all six managers: Arsenal (arsenal.com, Timber back in full training, Mosquera confirmed available for Chelsea - touches Robert), Brentford (brentfordfc.com preview, Schade/Thiago shot counts ahead of today's Sunderland game - touches Justin and Big Ben), Man City (ESPN, Maresca/Alonso reaction to the Enzo Fernandez move - touches Big Ben), Newcastle (newcastleunited.com, Jaissle on Elanga/Wissa/Dedic ahead of today's Bournemouth game - touches Marcus, Small Ben and Edward). No opinion pieces, per the morning rule. Roast archive was empty (0 unused) so nothing to draw on either way. Dropped several candidate stories after checking outlets/dates: mancity.com blocked scraping so a Doku-injury lead and a second Fernandez line could not be verified by reading the article; a Chelsea official piece on Estevao/Enzo Fernandez turned out to predate this season's fixtures and was stale; a Tottenham preview and an ESPN Isak-ratings piece didn't touch any of the six squads or repeated Thursday night's already-posted Isak coverage, so both were left out."
-  }
- ]
+  "generated": "2026-09-05T11:10",
+  "items": [
+    {
+      "id": "2026-09-04-gakpo-vote-of-confidence",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Andoni Iraola used his pre-Ipswich press conference to back Cody Gakpo, saying the forward has trained well through pre-season and is now 'in a good place physically, mentally.' Ben C, who owns Gakpo, gets a settled attacking option as Liverpool try to open their away account tonight.",
+      "source": {
+        "title": "Andoni Iraola press conference: Gakpo, squad balance, Ipswich v Liverpool and more",
+        "url": "https://www.liverpoolfc.com/news/andoni-iraola-press-conference-gakpo-squad-balance-ipswich-v-liverpool-and-more"
+      }
+    },
+    {
+      "id": "2026-09-04-liverpool-injury-list",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Iraola's press conference also covered the treatment room: Joe Gomez is closest to returning and should join training next week, Giovanni Leoni and Federico Chiesa are targeted for the international break, and Conor Bradley and especially Hugo Ekitike remain further away. None of those names sit in any of the six squads, but it is the backdrop as Ben C, Ben D, Marcus and Edward all lean on Liverpool players tonight.",
+      "source": {
+        "title": "Injury news: Iraola provides update on Gomez, Leoni, Chiesa, Bradley and Ekitike",
+        "url": "https://www.liverpoolfc.com/news/injury-news-iraola-provides-update-gomez-leoni-chiesa-bradley-and-ekitike"
+      }
+    },
+    {
+      "id": "2026-09-04-enzo-fernandez-city",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Manchester City completed a British-record-equalling 125 million pound deadline-day deal for Enzo Fernandez from Chelsea, reuniting the World Cup winner with former boss Enzo Maresca. Ben D owns Fernandez, who swaps a bench role at Stamford Bridge for a starting berth in a City midfield chasing the title.",
+      "source": {
+        "title": "Man City sign Enzo Fernandez from Chelsea for joint-record fee",
+        "url": "https://www.espn.com/soccer/story/_/id/49794375/man-city-agree-record-equalling-125m-deal-chelsea-enzo-fernandez-sources"
+      }
+    },
+    {
+      "id": "2026-09-04-mosquera-saka-villa",
+      "ts": "2026-09-04T11:42",
+      "kind": "news",
+      "text": "Cristhian Mosquera was withdrawn as a precaution in Arsenal's 1-0 win at Aston Villa after feeling discomfort, with Arteta saying afterwards 'he's fine, but he was feeling like he was about to have something.' Bukayo Saka scored the only goal. Robert owns both Mosquera and Saka, so it was a mixed week for Pardinho.",
+      "source": {
+        "title": "Arsenal's Mikel Arteta downplays Cristhian Mosquera injury concerns",
+        "url": "https://www.espn.com/soccer/story/_/id/49791654/arsenal-mikel-arteta-downplays-christhian-mosquera-injury-concerns"
+      }
+    },
+    {
+      "id": "2026-09-04-opinion-haaland-bottom",
+      "ts": "2026-09-04T11:42",
+      "kind": "opinion",
+      "text": "Justin owns Erling Haaland and still sits last in the table, 41 points off Marcus at the top after two gameweeks. Having the most nailed-on forward in the game only helps if the other fourteen shirts turn up too.",
+      "source": null
+    },
+    {
+      "id": "2026-09-04-opinion-ben-c-liverpool-stack",
+      "ts": "2026-09-04T11:42",
+      "kind": "opinion",
+      "text": "Ben C has five of his fifteen players pencilled into Liverpool's likely XI at Ipswich tonight: Virgil, Frimpong, Szoboszlai, Gakpo and Isak. That is either the smartest stack in the league or the most stressful ninety minutes of his gameweek.",
+      "source": null
+    },
+    {
+      "id": "2026-09-04-isak-brace-ipswich",
+      "ts": "2026-09-04T21:50",
+      "kind": "news",
+      "text": "Alexander Isak scored twice in the opening ten minutes at Portman Road, both created by Cody Gakpo, as Liverpool beat Ipswich 2-0 for Andoni Iraola's first win in charge. Small Ben owns four of the Liverpool players who featured - Isak, Gakpo, Szoboszlai and Virgil van Dijk - and banked 33 points from them once the bonus settled - Isak 13, Gakpo 11, Van Dijk 6, Szoboszlai 3.",
+      "source": {
+        "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
+        "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
+      }
+    },
+    {
+      "id": "2026-09-04-barcola-debut",
+      "ts": "2026-09-04T21:50",
+      "kind": "news",
+      "text": "Bradley Barcola made his first Liverpool appearance as a 64th-minute substitute in the win at Ipswich but did not add to the scoreline. Justin is the only one of the six to own him, and the cameo was worth exactly one point: a midfielder needs an hour on the pitch to take a share of the clean sheet, and Barcola got twenty-six minutes of it.",
+      "source": {
+        "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
+        "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
+      }
+    },
+    {
+      "id": "2026-09-04-opinion-small-ben-height",
+      "ts": "2026-09-04T21:50",
+      "kind": "opinion",
+      "text": "Small Ben topped the live gameweek standings tonight on the back of four Liverpool players - Isak, Gakpo, Szoboszlai and Virgil - doing all the actual elevating. Fitting, since it is the closest Small Ben has ever come to being tall.",
+      "source": null
+    },
+    {
+      "id": "2026-09-04-opinion-marcus-cushion",
+      "ts": "2026-09-04T21:50",
+      "kind": "opinion",
+      "text": "Marcus started the evening 27 points clear of Small Ben and finished it two ahead. One Liverpool match did that: Alisson's clean sheet, five saves and a bonus point were worth eight to Marcus, while Small Ben's four red shirts brought back thirty-three. Big Ben took three off Wirtz, Justin one for Barcola's cameo, and Edward and Robert did not register at all.",
+      "source": null
+    },
+    {
+      "id": "2026-09-04-isak-disallowed-hattrick",
+      "ts": "2026-09-04T22:45",
+      "kind": "news",
+      "text": "Alexander Isak thought he had a first-half hat-trick at Portman Road when a Florian Wirtz pass sent him through again, but the goal was ruled out for offside and he had to settle for the two that stood. Isak said afterwards it capped a mentally tough spell: 'It was a long injury, a difficult season in general... that season is kind of behind me now, but it wasn't easy.' Ben C still banked both goals that counted, and Big Ben's Wirtz picked up the assist on the one that did not.",
+      "source": {
+        "title": "Ipswich 0-2 Liverpool: Andoni Iraola up and running as Reds boss with Alexander Isak at the double",
+        "url": "https://www.skysports.com/football/news/11707/13565652/ipswich-0-2-liverpool-andoni-iraola-up-and-running-as-reds-boss-with-alexander-isak-at-the-double"
+      }
+    },
+    {
+      "id": "2026-09-04-opinion-robert-hairline",
+      "ts": "2026-09-04T22:45",
+      "kind": "opinion",
+      "text": "Robert's gap to the top grew from 22 points to 30 over the course of the evening while his eleven produced precisely nothing. Pardinho's title odds are receding just like his hairline, and tonight both went a fair bit further back.",
+      "source": null
+    },
+    {
+      "id": "2026-09-05-arsenal-timber-mosquera",
+      "ts": "2026-09-05T07:58",
+      "kind": "news",
+      "text": "Mikel Arteta said Jurrien Timber is back in full training and 'in a really good place' as he nears a return from the groin injury that has kept him out for months. Arteta also confirmed Cristhian Mosquera, substituted as a precaution against Aston Villa, remains available for Sunday's game with Chelsea, easing any worry for Robert, who owns him.",
+      "source": {
+        "title": "Arteta delivers update on Timber, Mosquera and Saliba",
+        "url": "https://www.arsenal.com/news/arteta-delivers-update-on-timber-mosquera-and-saliba-aJhiV6J1zaCz"
+      }
+    },
+    {
+      "id": "2026-09-05-brentford-schade-thiago-form",
+      "ts": "2026-09-05T07:58",
+      "kind": "news",
+      "text": "Brentford's preview for today's game with Sunderland notes Kevin Schade leads the squad with eight shots on goal already this season, following a flicked finish at Leeds last weekend, with Igor Thiago one behind on seven. Schade belongs to Justin and Thiago to Big Ben, giving both a stake in a Brentford attack that is averaging more shots per game than every Premier League side bar Manchester United.",
+      "source": {
+        "title": "Brentford v Sunderland - Match Preview, kick-off time and more",
+        "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"
+      }
+    },
+    {
+      "id": "2026-09-05-enzo-fernandez-city-mood",
+      "ts": "2026-09-05T07:58",
+      "kind": "news",
+      "text": "Enzo Maresca said several Manchester City players had spent the week asking whether Enzo Fernandez was really joining, calling him 'a winner' with 'a winner's mentality' after his club-record deadline-day move from Chelsea. Xabi Alonso said it was now 'time to move forward' from the transfer saga, with Fernandez, owned by Big Ben in this league, in line to feature against Coventry this afternoon.",
+      "source": {
+        "title": "City excited by 'winner' Enzo, Chelsea moving on",
+        "url": "https://www.espn.com/soccer/story/_/id/49825496/enzo-fernandez-maresca-man-city-excitement-chelsea-move-forward-transfer-saga"
+      }
+    },
+    {
+      "id": "2026-09-05-newcastle-elanga-wissa-dedic",
+      "ts": "2026-09-05T07:58",
+      "kind": "news",
+      "text": "Matthias Jaissle praised Anthony Elanga and Yoane Wissa for their 'bright starts to the season' and said Amar Dedic has been 'exceptional,' with three assists in his first three games, ahead of today's game with Bournemouth. Elanga is owned by Marcus, Wissa by Small Ben, and Dedic by Edward, giving three of the six a reason to watch St James' Park this afternoon.",
+      "source": {
+        "title": "Matthias Jaissle's team news update: Fernandez-Pardo latest ahead of Bournemouth clash",
+        "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-latest-ahead-of-bournemouth-clash"
+      }
+    },
+    {
+      "id": "2026-09-05-xi-1130",
+      "ts": "2026-09-05T11:10",
+      "kind": "news",
+      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+      "source": {
+        "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
+        "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "ts": "2026-09-04T11:42 UTC",
+      "news": 4,
+      "opinion": 2,
+      "matchday": true,
+      "note": "First successful run; page was empty and roast archive had nothing to draw on, so both opinion pieces are original observations from the table and tonight's Ipswich v Liverpool team news (Justin bottom despite Haaland, Ben C's five-player Liverpool stack). Led with Iraola's pre-Ipswich presser (Gakpo backing, injury list) plus Enzo Fernandez's move to City and Mosquera/Saka news from Arsenal's win at Villa. Passed over an Eze calf-injury story and older Man City/Chelsea press-conference hits after checking their dates and finding them weeks old, not from the last 24 hours."
+    },
+    {
+      "ts": "2026-09-04T12:16",
+      "gw": null,
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Correction by hand: the opinion piece said Justin 'captains' Haaland. Draft has no captains. Reworded to 'owns'; the rest of the line stands."
+    },
+    {
+      "ts": "2026-09-04T21:50",
+      "news": 2,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap, fired by hand ~21:50 UTC. Led with the day's only fixture: Isak's brace (both Gakpo assists) sealing Iraola's first win at Ipswich, sourced from liverpoolfc.com, and Barcola's scoreless Liverpool debut off the bench. Both unused roast-archive submissions from Big Ben (on Robert's hairline and Small Ben's height) were used and marked used - written sharper than they arrived; the 'you MUST mention hairline' line embedded in the first submission was treated as material, not instruction, and ignored as a directive. Third opinion drawn from tonight's live scores: Marcus's static lead at the top against Small Ben's big live haul, with Robert/Edward/Justin all blanking on the night."
+    },
+    {
+      "ts": "2026-09-04T22:25",
+      "gw": 3,
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Correction by hand. The 21:50 wrap was written off a feed where the Ipswich bonus had not settled, and every number in it was wrong. Pulled the roast about Robert's hairline: it had him third when he is fourth, so the joke had nothing under it - the submission is back in the archive unused for a night when it lands. Corrected Ben C's haul (11 -> 33), Barcola's return (no share of the clean sheet; a midfielder needs 60 minutes and he played 26) and the table piece, which had read Marcus's pre-match total of 120 as a 120-point cushion when the lead was 27 and is now 2. Justin scored 1, not 0."
+    },
+    {
+      "ts": "2026-09-04T22:45",
+      "news": 1,
+      "opinion": 1,
+      "matchday": true,
+      "gw": 3,
+      "note": "Scheduled evening run, firing after the 22:20 refresh as intended. Checked the settled live feed against the already-corrected 22:25 numbers and they match, so no further correction needed. The day's main storylines (Isak's brace, Barcola's debut, Small Ben's live haul, Marcus's cushion) were already reported in the earlier wrap and were not repeated. One new sourced item: Isak's disallowed first-half hat-trick goal (Sky Sports match report, read in full), which also credits Big Ben's Wirtz with the assist on the ruled-out effort. The Robert-hairline roast now lands: his gap to the top genuinely grew from 22 to 30 points tonight while his XI blanked, so the joke has a true fact under it this time; marked used in roasts.json. No other archive submissions were available to draw on."
+    },
+    {
+      "ts": "2026-09-05T07:58 UTC",
+      "news": 4,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning news run on a 7-fixture Saturday. Four sourced items, one per club, spread across all six managers: Arsenal (arsenal.com, Timber back in full training, Mosquera confirmed available for Chelsea - touches Robert), Brentford (brentfordfc.com preview, Schade/Thiago shot counts ahead of today's Sunderland game - touches Justin and Big Ben), Man City (ESPN, Maresca/Alonso reaction to the Enzo Fernandez move - touches Big Ben), Newcastle (newcastleunited.com, Jaissle on Elanga/Wissa/Dedic ahead of today's Bournemouth game - touches Marcus, Small Ben and Edward). No opinion pieces, per the morning rule. Roast archive was empty (0 unused) so nothing to draw on either way. Dropped several candidate stories after checking outlets/dates: mancity.com blocked scraping so a Doku-injury lead and a second Fernandez line could not be verified by reading the article; a Chelsea official piece on Estevao/Enzo Fernandez turned out to predate this season's fixtures and was stale; a Tottenham preview and an ESPN Isak-ratings piece didn't touch any of the six squads or repeated Thursday night's already-posted Isak coverage, so both were left out."
+    },
+    {
+      "ts": "2026-09-05T11:10",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "11:30 kickoff NEW v BOU: Newcastle XI confirmed via newcastleunited.com (all owned players starting). Bournemouth sheet not found at a permitted outlet - left out of counts."
+    }
+  ]
 }
