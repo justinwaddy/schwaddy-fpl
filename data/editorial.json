@@ -31,6 +31,14 @@
    "scope": "mine",
    "text": "Tottenham boss Roberto De Zerbi said Marmoush is available to play, possibly from kickoff, against Forest - direct manager confirmation for a player who only just arrived on loan from Man City alongside Savio. The model's availability figure has been rising with the news but is still a step behind what the manager is actually saying.",
    "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"
+  },
+  {
+   "id": "2026-09-05-mateta-hamstring-clears-strand-larsen",
+   "ts": "2026-09-05T08:12 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Crystal Palace boss Pierre Sage confirmed at today's press conference that Jean-Philippe Mateta is injured with a hamstring problem and out for three weeks, telling reporters \"Mateta is injured, now for three weeks.\" That removes Strand Larsen's only rival for the striker spot, and he leads the line again at Fulham on Saturday - the model's 0.74 availability figure undersells how secure his role now is.",
+   "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-updates-ahead-of-fulham/"
   }
  ],
  "runs": [
@@ -103,6 +111,11 @@
    "ts": "2026-09-04T21:10 UTC",
    "published": 0,
    "note": "Full club-by-club sweep ~8 hours after the last run (Everton, Arsenal, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Tottenham, Palace, Sunderland) plus two general searches on deadline-day fallout and rivals. Everything already published held up: Garner still favoured in Everton's predicted double pivot for Sunday even with Hackney now cleared of his ankle knock, Bijol has no fresh fitness concern ahead of Brighton, Strand Larsen is confirmed leading the Palace line at Fulham, and Doku's calf timeline still points past GW4's deadline. One lead - conflicting reports that Ola Aina, not Munoz, starts at right wing-back for Forest against Tottenham - never cleared a permitted outlet (only Sports Mole, GiveMeSport and thehardtackle carried it), so it was left out rather than reversing Wednesday's Forest-sourced correction on a weak citation. Nothing else was material enough to publish."
+  },
+  {
+   "ts": "2026-09-05T08:12 UTC",
+   "published": 1,
+   "note": "Palace boss Pierre Sage confirmed on cpfc.co.uk that Mateta is out three weeks with a hamstring injury, cementing Strand Larsen as the nailed starting striker through GW3 and GW4 - the model's 0.74 availability figure undersells this now. Full club-by-club sweep (Everton, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Tottenham, Palace, Sunderland) plus free-agent targets (Brighton's Gross/Kostoulas, Leeds' Ampadu, Forest's Igor Jesus) and rivals (Bruno Fernandes, Mbeumo, Palmer, Salah) found nothing else new: Doku remains out for today's Coventry game with no fresh return-date confirmation beyond the existing two-to-three-week estimate, Barcola remains bench-bound for his Ipswich debut, Tavernier and Munoz are both confirmed starting in today's lineups with no fitness concerns, and an old Bijol hip-flexor reference traced back to a different season and was discarded rather than published."
   }
  ]
 }
