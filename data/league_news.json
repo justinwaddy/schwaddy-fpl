@@ -155,6 +155,16 @@
         "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
         "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
       }
+    },
+    {
+      "id": "2026-09-05-xi-1400",
+      "ts": "2026-09-05T13:13",
+      "kind": "news",
+      "text": "Team news, 15:00 kick-offs: Edward's Ajer, Verbruggen, Stach, Calvert-Lewin, Semenyo, N.Williams and Gibbs-White all start. Small Ben's Thiago, Donnarumma, Khusanov, Ruben Dias and Anderson all start. Justin's Collins, Schade, Gvardiol, Haaland, Milenkovic and Marmoush start; Bijol, Munoz and Strand Larsen are subs, Doku misses out. Big Ben's Kelleher, M.Sangare, Gonzalo and Delap start; Nunes and Enzo Fernandez are subs. Marcus's Mukiele, De Cuyper and Kinsky start; Foden is a sub, Richarlison out. Robert's Roefs, O'Reilly, Cherki and Ndiaye start; Wilson and Solanke are subs, Mateta injured.",
+      "source": {
+        "title": "Starting Lineups - Manchester City vs Coventry City",
+        "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
+      }
     }
   ],
   "runs": [
@@ -209,6 +219,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "11:30 kickoff NEW v BOU: Newcastle XI confirmed via newcastleunited.com (all owned players starting). Bournemouth sheet not found at a permitted outlet - left out of counts."
+    },
+    {
+      "ts": "2026-09-05T13:13",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:00 kick-offs (BRE-SUN, BHA-LEE, FUL-CRY, MCI-COV, NFO-TOT): all five confirmed via skysports.com teams pages (Leeds XI cross-checked against leedsunited.com). Every league-owned player at these five clubs is accounted for as starting, benched, or (Doku, Richarlison, Mateta) out of the squad; nobody's sheet was missing."
     }
   ]
 }
