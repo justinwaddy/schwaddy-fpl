@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-05T08:12 UTC",
- "summary": "You sit bottom of the table on 80 points, so your GW4 claims process first when the window opens (waivers close 11 September). Palace boss Pierre Sage confirmed today that Mateta is out three weeks with a hamstring injury, removing Strand Larsen's only rival for the striker spot - he was already starting, but this is worth knowing since the model's 0.74 availability figure understates how secure the role now is. The same three claims as last run survive a fresh sweep: Le Fee for Barcola (still bench-bound for his Liverpool debut this afternoon), Rayan for Doku (still out for today's Coventry game with no fresh return-date news), and Igor Jesus for Marmoush, though that last one has weakened to a pure numbers swap between two now-confirmed starters and drops to low confidence. The rest of the squad (Milenkovic, Bijol, Gvardiol, Collins, Schade, Tavernier, Garner, Munoz) are established starters clear of any fresh injury concern, so no fourth or fifth claim clears the bar this week.",
+ "ts": "2026-09-05T21:21 UTC",
+ "summary": "Justin sits bottom of the table on 80 points, so his GW4 claims process first when the window closes on 11 September. Today's full round of matches turned up three genuine surprises the model doesn't see yet - Bijol and Igor Jesus both left out of their sides' matchday squads for the first time this season, and Brentford's Collins forced off with a calf strain of unknown severity - reshaping the board to three defensive moves (Munoz, Bijol, a low-confidence Collins hedge) alongside the standing midfield claims for the still-unintegrated Barcola and the still-injured Doku. Igor Jesus itself drops out as a target rather than in, since he wasn't even in Forest's 18 today.",
  "claims": [
   {
    "rank": 1,
@@ -17,17 +17,17 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola is still expected among the substitutes for his Liverpool debut against Ipswich this afternoon, with the latest team news having him in the squad but not the starting XI. Le Fee remains a confirmed Sunderland starter in an advanced midfield role, so this is a bench-bound marquee name for a nailed-on regular starter while Barcola finds his feet.",
-   "model": "Model has Le Fee at next5 16.1 (avail 1.00) versus Barcola at 1.4 (avail 0.10) - the model has no career data on Barcola yet so it is essentially guessing zero, and today's team news still supports treating him as a bench option for now.",
-   "confidence": "medium",
+   "why": "Barcola remains unintegrated at Liverpool: manager Andoni Iraola said before naming him among the substitutes for Friday's trip to Ipswich (his actual first appearance for the club) that 'he hasn't had the minutes in the preseason games'. Le Fee, by contrast, started today's 1-1 draw at Brentford, hit the post from range in the first half and scored the equalising penalty in the 82nd minute - a first-choice starter in form.",
+   "model": "Model has Le Fee at next5 16.5 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot today's news fills in. Agree with overruling the model's placeholder rating for Barcola.",
+   "confidence": "high",
    "sources": [
     {
-     "title": "'I'm very happy' - Andoni Iraola on Bradley Barcola's arrival and availability for Ipswich",
-     "url": "https://www.liverpoolfc.com/news/im-very-happy-andoni-iraola-bradley-barcolas-arrival-and-availability-ipswich"
+     "title": "Andoni Iraola: Bradley Barcola could make Liverpool debut against Ipswich",
+     "url": "https://www.espn.com/soccer/story/_/id/49812413/andoni-iraola-bradley-barcola-make-liverpool-debut-ipswich"
     },
     {
-     "title": "Enzo Le Fée - Sunderland Midfielder, Profile & Stats",
-     "url": "https://www.premierleague.com/en/players/484420/enzo-le-fee/overview"
+     "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener but Bees' unbeaten start continues",
+     "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
     }
    ]
   },
@@ -44,44 +44,82 @@
     "code": "248875",
     "club": "MCI"
    },
-   "why": "Doku remains sidelined with the calf injury from City's Community Shield defeat to Arsenal and misses today's game against Coventry, with no permitted outlet giving a firmer return date than the original two-to-three-week estimate that has already elapsed once without him featuring. Rayan is a confirmed Bournemouth starter behind Evanilson and gives a real points floor while Doku's timeline stays unresolved.",
-   "model": "Model has Rayan at next5 15.8 (avail 0.95) versus Doku at 3.5 (avail 0.00) - the model already prices in the injury, and today's news (still out, no fresh date) does not move that number either way.",
+   "why": "Doku was not even named in Manchester City's 18 for today's 1-0 win over Coventry, still out with the calf injury picked up in the Community Shield defeat to Arsenal, with Rayan Cherki continuing in his place in the number 10 role. Return estimates point to City's 13 September fixture at the earliest - after GW4's own deadline - so he offers nothing for this window.",
+   "model": "Model has Rayan at next5 15.8 (avail 0.95) versus Doku at 4.5 (avail 0.16) - the model already prices the injury in heavily; agree with the swap, reinforced by today's confirmed absence.",
    "confidence": "medium",
    "sources": [
     {
-     "title": "Guardiola gives fitness update on Savinho and Doku",
-     "url": "https://www.mancity.com/news/mens/pep-guardiola-newcastle-injury-update-63907179"
-    },
-    {
-     "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
-     "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
+     "title": "Starting Lineups - Man City vs Coventry",
+     "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
     }
    ]
   },
   {
    "rank": 3,
-   "pos": "FWD",
+   "pos": "DEF",
    "add": {
-    "name": "Igor Jesus",
-    "code": "482973",
-    "club": "NFO"
+    "name": "Hill",
+    "code": "463981",
+    "club": "BOU"
    },
    "drop": {
-    "name": "Marmoush",
-    "code": "438234",
-    "club": "TOT"
+    "name": "Muñoz",
+    "code": "247348",
+    "club": "NFO"
    },
-   "why": "Both players are now confirmed starters - Igor Jesus is again Forest's central striker in today's lineup, and Marmoush has started every game since his loan move to Tottenham - so the bench-risk case for dropping Marmoush that existed a week ago is gone. This is now a pure model-value swap between two starters, and Marmoush is a full Egypt international with more pedigree than his small Spurs sample suggests, so it is a lower-conviction call than the other two claims.",
-   "model": "Model has Igor Jesus at next5 14.3 (avail 0.95) versus Marmoush at 8.5 (avail 0.52) - a real gap on paper, but with both players confirmed starting, part of that gap is likely the same new-signing discount that hits every mid-season arrival, so confidence is lower than a fitness-based swap.",
+   "why": "Munoz was again an impact substitute rather than a starter today - on for Ola Aina in the 59th minute of Forest's goalless draw with Tottenham - not the nailed-on right wing-back his permanent transfer suggested. Hill remains a guaranteed starter in Bournemouth's back line with no such competition.",
+   "model": "Model has Hill at next5 16.0 (avail 0.97) versus Munoz at 7.0 (avail 0.37) - a wide gap the model already prices in via low availability; agree, and today's bench role reinforces it further.",
+   "confidence": "medium",
+   "sources": [
+    {
+     "title": "Starting Lineups - N Forest vs Spurs",
+     "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+    }
+   ]
+  },
+  {
+   "rank": 4,
+   "pos": "DEF",
+   "add": {
+    "name": "Botman",
+    "code": "220237",
+    "club": "NEW"
+   },
+   "drop": {
+    "name": "Bijol",
+    "code": "434752",
+    "club": "LEE"
+   },
+   "why": "Bijol was left out of Leeds' starting XI at Brighton today for the first time this season - Nico Elvedi and Tarik Muharemovic started in central defence instead, with Bijol introduced only in the 61st minute. It is one match, but with a new arrival now preferred ahead of him his starting spot no longer looks nailed on.",
+   "model": "Model has Botman at next5 15.6 (avail 1.00) versus Bijol at 15.4 (avail 0.92) - a small numbers gap on its own, but today's team news is the real reason for this claim rather than the model's number. Medium rather than high confidence since it is only one match so far.",
+   "confidence": "medium",
+   "sources": [
+    {
+     "title": "Starting Lineups - Brighton vs Leeds",
+     "url": "https://www.skysports.com/football/leeds-united-vs-brighton-and-hove-albion/teams/559466"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "pos": "DEF",
+   "add": {
+    "name": "Richards",
+    "code": "427623",
+    "club": "CRY"
+   },
+   "drop": {
+    "name": "Collins",
+    "code": "432830",
+    "club": "BRE"
+   },
+   "why": "Speculative hedge: Brentford captain Nathan Collins was forced off with a calf strain after just 17 minutes of today's draw with Sunderland, and manager Keith Andrews said 'it's a calf strain, I don't know the extent'. If it turns out to be more than a knock, this claim covers a fit, confirmed-starting alternative; if it is minor, this is the one to skip.",
+   "model": "Model has Richards at next5 15.6 (avail 1.00) versus Collins at 16.5 (avail 1.00) - the model still rates Collins the stronger player and does not yet reflect today's injury at all, so this claim rests entirely on the news, not the numbers. Low confidence, submit last.",
    "confidence": "low",
    "sources": [
     {
-     "title": "Liverpool vs. Nottingham Forest line-ups: Premier League 2026-27 predicted XIs",
-     "url": "https://www.espn.com/soccer/story/_/id/49731820/liverpool-vs-nottingham-forest-lineups-premier-league-202627-predicted-xis"
-    },
-    {
-     "title": "Team news | Roberto on Omar Marmoush's availability",
-     "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"
+     "title": "Nathan Collins injury update after Brentford v Sunderland",
+     "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
     }
    ]
   }
@@ -213,6 +251,12 @@
    "gw": 4,
    "claims": 3,
    "note": "Reordered rather than changed: Le Fee/Barcola and Rayan/Doku swap to ranks 1-2 (Barcola still bench-bound for today's Ipswich debut, Doku still out for today's Coventry game) and Igor Jesus/Marmoush drops to rank 3 at low confidence, since Marmoush is now a confirmed Tottenham starter alongside Igor Jesus at Forest, leaving this as a pure model-number swap rather than a bench-risk case. Also confirmed via Palace's own site that Mateta is out three weeks with a hamstring injury, which secures Strand Larsen's role further but does not open a fourth claim since he is already kept, not dropped. No other squad member's situation changed."
+  },
+  {
+   "ts": "2026-09-05T21:21 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Full round of GW3 matches produced real news the model can't see: Igor Jesus was not even in Forest's 18 today (Delap started, Wood the sub), killing the Igor Jesus/Marmoush claim outright since Marmoush started and played 84 minutes for Spurs - dropped rather than replaced, since Marmoush is now clearly the stronger, more secure player of the two. In its place, two fresh DEF claims from today's confirmed lineups: Bijol was benched for the first time this season at Leeds (Elvedi/Muharemovic started), and Munoz was again only an impact sub at Forest, reinforcing his existing low model rating - both sourced directly off Sky Sports lineup pages rather than predicted-XI aggregators. A fifth, low-confidence claim was added on the back of Nathan Collins' calf strain (forced off after 17 minutes for Brentford, severity unknown) as a hedge, since the model does not yet reflect it at all. Le Fee/Barcola and Rayan/Doku carried forward with fresh sourcing (Le Fee's penalty and man-of-the-match display, Doku confirmed absent from City's 18 vs Coventry) and Le Fee/Barcola upgraded to high confidence given how comprehensively Barcola remains unintegrated."
   }
  ]
 }

@@ -39,6 +39,30 @@
    "scope": "mine",
    "text": "Crystal Palace boss Pierre Sage confirmed at today's press conference that Jean-Philippe Mateta is injured with a hamstring problem and out for three weeks, telling reporters \"Mateta is injured, now for three weeks.\" That removes Strand Larsen's only rival for the striker spot, and he leads the line again at Fulham on Saturday - the model's 0.74 availability figure undersells how secure his role now is.",
    "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-updates-ahead-of-fulham/"
+  },
+  {
+   "id": "2026-09-05-collins-calf-strain",
+   "ts": "2026-09-05T21:21 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Brentford captain Nathan Collins was forced off after just 17 minutes of today's 1-1 draw with Sunderland with a calf strain. Boss Keith Andrews said \"It's a calf strain, I don't know the extent\" - your model still rates him a nailed starter at 1.00 availability, so this is one to watch rather than act on yet.",
+   "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+  },
+  {
+   "id": "2026-09-05-bijol-benched-leeds",
+   "ts": "2026-09-05T21:21 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Bijol was left out of Leeds' starting XI against Brighton today - Nico Elvedi and Tarik Muharemovic started in central defence instead - and only came on as a 61st-minute substitute. That is his first confirmed bench appearance of the season and the model's 0.92 availability figure has not caught up with it.",
+   "url": "https://www.skysports.com/football/leeds-united-vs-brighton-and-hove-albion/teams/559466"
+  },
+  {
+   "id": "2026-09-05-igor-jesus-out-of-squad",
+   "ts": "2026-09-05T21:21 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Igor Jesus was not even named among Nottingham Forest's substitutes for today's goalless draw with Tottenham - Liam Delap started up front and it was Chris Wood, not Jesus, who came on at striker. The model still rates Jesus a 0.95-availability, near-top free agent forward; that number is now stale.",
+   "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
   }
  ],
  "runs": [
@@ -116,6 +140,11 @@
    "ts": "2026-09-05T08:12 UTC",
    "published": 1,
    "note": "Palace boss Pierre Sage confirmed on cpfc.co.uk that Mateta is out three weeks with a hamstring injury, cementing Strand Larsen as the nailed starting striker through GW3 and GW4 - the model's 0.74 availability figure undersells this now. Full club-by-club sweep (Everton, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Tottenham, Palace, Sunderland) plus free-agent targets (Brighton's Gross/Kostoulas, Leeds' Ampadu, Forest's Igor Jesus) and rivals (Bruno Fernandes, Mbeumo, Palmer, Salah) found nothing else new: Doku remains out for today's Coventry game with no fresh return-date confirmation beyond the existing two-to-three-week estimate, Barcola remains bench-bound for his Ipswich debut, Tavernier and Munoz are both confirmed starting in today's lineups with no fitness concerns, and an old Bijol hip-flexor reference traced back to a different season and was discarded rather than published."
+  },
+  {
+   "ts": "2026-09-05T21:21 UTC",
+   "published": 3,
+   "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
   }
  ]
 }
