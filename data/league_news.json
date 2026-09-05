@@ -150,7 +150,7 @@
       "id": "2026-09-05-xi-1130",
       "ts": "2026-09-05T11:10",
       "kind": "news",
-      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
       "source": {
         "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
         "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -164,6 +164,16 @@
       "source": {
         "title": "Starting Lineups - Manchester City vs Coventry City",
         "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
+      }
+    },
+    {
+      "id": "2026-09-05-xi-1630",
+      "ts": "2026-09-05T16:08",
+      "kind": "news",
+      "text": "Team news, 16:30 kick-off (Hull City v Aston Villa): Edward's Nicolas Jackson is confirmed in Aston Villa's starting eleven, named up front by Unai Emery. No other league-owned player features, with nobody in the league holding a Hull City player.",
+      "source": {
+        "title": "Hull City vs Aston Villa Starting Lineups",
+        "url": "https://www.skysports.com/football/hull-city-vs-aston-villa/teams/559469"
       }
     }
   ],
@@ -226,6 +236,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "15:00 kick-offs (BRE-SUN, BHA-LEE, FUL-CRY, MCI-COV, NFO-TOT): all five confirmed via skysports.com teams pages (Leeds XI cross-checked against leedsunited.com). Every league-owned player at these five clubs is accounted for as starting, benched, or (Doku, Richarlison, Mateta) out of the squad; nobody's sheet was missing."
+    },
+    {
+      "ts": "2026-09-05T16:08",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "16:30 kickoff Hull v Aston Villa: AVL confirmed XI found (Sky Sports), Jackson starts; HUL had no league-owned players to check"
     }
   ]
 }
