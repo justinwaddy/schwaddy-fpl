@@ -25,7 +25,7 @@
    "frm": "Edward",
    "about": "Marcus",
    "text": "The man relies on luck every week",
-   "used": false
+   "used": true
   },
   {
    "id": "2026-09-04-127b68bc58",
@@ -43,7 +43,7 @@
    "frm": "Edward",
    "about": "Ben D",
    "text": "Classic biased Arsenal fan - has 0 ball knowledge",
-   "used": false
+   "used": true
   }
  ],
  "runs": [

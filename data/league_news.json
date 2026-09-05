@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T11:10",
+  "generated": "2026-09-05T22:45",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -175,6 +175,47 @@
         "title": "Hull City vs Aston Villa Starting Lineups",
         "url": "https://www.skysports.com/football/hull-city-vs-aston-villa/teams/559469"
       }
+    },
+    {
+      "id": "2026-09-05-haaland-300-city-coventry",
+      "ts": "2026-09-05T22:45",
+      "kind": "news",
+      "text": "Erling Haaland headed in Antoine Semenyo's cross for the only goal as Manchester City beat Coventry 1-0, the 300th club goal of his career. Enzo Fernandez set up the move on his City debut, only playing because Nico O'Reilly was injured in the warm-up before kick-off. Justin owns Haaland, Big Ben owns Fernandez, and Robert owns O'Reilly, who did not end up featuring at all.",
+      "source": {
+        "title": "Man City 1-0 Coventry: Erling Haaland ensures perfect Premier League record is preserved under Enzo Maresca",
+        "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/report/559471"
+      }
+    },
+    {
+      "id": "2026-09-05-spurs-blank-record-forest",
+      "ts": "2026-09-05T22:45",
+      "kind": "news",
+      "text": "Tottenham failed to score in any of their first three league games for the first time since 1974, held goalless again in a 0-0 draw at Nottingham Forest. Neco Williams had a second-half goal ruled out by VAR for handball for the hosts. Edward owns Williams, who continues to look like Forest's likeliest source of a goal despite the disallowed effort.",
+      "source": {
+        "title": "Nottingham Forest 0-0 Spurs: Another blank for Roberto De Zerbi in goalless draw at City Ground",
+        "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/6701572898492963232"
+      }
+    },
+    {
+      "id": "2026-09-05-opinion-marcus-luck",
+      "ts": "2026-09-05T22:45",
+      "kind": "opinion",
+      "text": "Marcus is often accused of relying on luck every week, and tonight's numbers back it up: seven of his fifteen players are still on zero for the gameweek, while his joint-top scorers are his goalkeeper and a centre back living off clean-sheet bonus. Strip out Alisson and Guehi's defensive returns and there is not much of an attack left to speak of.",
+      "source": null
+    },
+    {
+      "id": "2026-09-05-opinion-ben-d-arsenal-blank",
+      "ts": "2026-09-05T22:45",
+      "kind": "opinion",
+      "text": "Big Ben's reputation as a biased Arsenal fan with zero ball knowledge gets no help from the numbers: his three Arsenal shirts, White, Havertz and Konsa, have combined for precisely nothing this gameweek. Loyalty is one thing, end product is another.",
+      "source": null
+    },
+    {
+      "id": "2026-09-05-opinion-ben-c-swing",
+      "ts": "2026-09-05T22:45",
+      "kind": "opinion",
+      "text": "Ben C went into today's fixtures 27 points behind Marcus and finished it 4 clear at the top, a 31-point weekend swing built on four Liverpool players and four Man City players all firing on the same day. Small Ben's stack finally paid for itself.",
+      "source": null
     }
   ],
   "runs": [
@@ -243,6 +284,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "16:30 kickoff Hull v Aston Villa: AVL confirmed XI found (Sky Sports), Jackson starts; HUL had no league-owned players to check"
+    },
+    {
+      "ts": "2026-09-05T22:45",
+      "news": 2,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap, all 7 fixtures done by kick-off of the check (last was Hull v Villa, 16:30). Led with Man City 1-0 Coventry (Haaland's 300th club goal, Enzo Fernandez's debut, Nico O'Reilly injured in the warm-up - touches Justin, Big Ben and Robert) and Tottenham's scoreless run plus Neco Williams' disallowed goal at Forest (touches Edward), both read in full at Sky Sports; skipped Newcastle-Bournemouth and Brighton-Leeds as their main storylines (Thiaw own goal, Tavernier haul, Bogle/Vuskovic) were already covered by the engine's own LOWLIGHT/HAUL/FREEAGENT badges. Two roast-archive submissions used and marked used: Edward's 'relies on luck every week' on Marcus, hung on seven blanking players and a keeper/centre-back doing the scoring, and Edward's 'biased Arsenal fan, zero ball knowledge' on Big Ben, hung on his three Arsenal picks (White, Havertz, Konsa) combining for zero this gameweek. Third opinion is original: Ben C's 27-point deficit to Marcus before kick-off flipping into a 4-point lead, a 31-point swing off four Liverpool and four Man City players, both figures taken straight from the live feed's before-kick-off totals and the RACE badge's stated gap. The remaining unused submission, Edward's 'Mong' on Robert, was not used and will not be: it is an ableist slur under the archive's own exclusion rule, not a joke that can be sharpened, so it stays in the archive unused rather than landing another week."
     }
   ]
 }
