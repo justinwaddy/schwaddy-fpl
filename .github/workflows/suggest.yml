@@ -46,7 +46,14 @@ jobs:
         run: |
           git config user.name schwaddy-bot
           git config user.email bot@justinwaddy.co.uk
-          git add data/roasts.json data/feedback.json
+          # feedback.json only exists once somebody files a bug or an idea,
+          # and `git add` on a missing path exits 128, which under `bash -e`
+          # killed the job *after* the roast had been appended - three of
+          # Edward's suggestions were written to the runner's disk and thrown
+          # away with it. Add whichever of the two is actually there.
+          for f in data/roasts.json data/feedback.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
           git commit -m "from the league: a suggestion or a report" || { echo "nothing new"; exit 0; }
           for i in 1 2 3 4; do
             if git pull --rebase -X theirs origin main; then

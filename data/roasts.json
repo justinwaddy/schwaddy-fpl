@@ -17,6 +17,24 @@
    "about": null,
    "text": "Ben C’s chance of winning is the same as his height: small",
    "used": true
+  },
+  {
+   "id": "2026-09-04-b2deb0fb2d",
+   "key": "b2deb0fb2d",
+   "ts": "2026-09-04T14:15",
+   "frm": "Edward",
+   "about": "Marcus",
+   "text": "The man relies on luck every week",
+   "used": false
+  },
+  {
+   "id": "2026-09-04-1594fc4a80",
+   "key": "1594fc4a80",
+   "ts": "2026-09-04T14:17",
+   "frm": "Edward",
+   "about": "Ben D",
+   "text": "Classic biased Arsenal fan - has 0 ball knowledge",
+   "used": false
   }
  ],
  "runs": [
@@ -37,6 +55,18 @@
    "frm": "Ben D",
    "about": null,
    "chars": 58
+  },
+  {
+   "ts": "2026-09-04T14:15",
+   "frm": "Edward",
+   "about": "Marcus",
+   "chars": 33
+  },
+  {
+   "ts": "2026-09-04T14:17",
+   "frm": "Edward",
+   "about": "Ben D",
+   "chars": 49
   }
  ]
 }
