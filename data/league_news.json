@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-04T22:45 UTC",
+ "generated": "2026-09-05T07:58 UTC",
  "items": [
   {
    "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -105,6 +105,46 @@
    "kind": "opinion",
    "text": "Robert's gap to the top grew from 22 points to 30 over the course of the evening while his eleven produced precisely nothing. Pardinho's title odds are receding just like his hairline, and tonight both went a fair bit further back.",
    "source": null
+  },
+  {
+   "id": "2026-09-05-arsenal-timber-mosquera",
+   "ts": "2026-09-05T07:58",
+   "kind": "news",
+   "text": "Mikel Arteta said Jurrien Timber is back in full training and 'in a really good place' as he nears a return from the groin injury that has kept him out for months. Arteta also confirmed Cristhian Mosquera, substituted as a precaution against Aston Villa, remains available for Sunday's game with Chelsea, easing any worry for Robert, who owns him.",
+   "source": {
+    "title": "Arteta delivers update on Timber, Mosquera and Saliba",
+    "url": "https://www.arsenal.com/news/arteta-delivers-update-on-timber-mosquera-and-saliba-aJhiV6J1zaCz"
+   }
+  },
+  {
+   "id": "2026-09-05-brentford-schade-thiago-form",
+   "ts": "2026-09-05T07:58",
+   "kind": "news",
+   "text": "Brentford's preview for today's game with Sunderland notes Kevin Schade leads the squad with eight shots on goal already this season, following a flicked finish at Leeds last weekend, with Igor Thiago one behind on seven. Schade belongs to Justin and Thiago to Big Ben, giving both a stake in a Brentford attack that is averaging more shots per game than every Premier League side bar Manchester United.",
+   "source": {
+    "title": "Brentford v Sunderland - Match Preview, kick-off time and more",
+    "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"
+   }
+  },
+  {
+   "id": "2026-09-05-enzo-fernandez-city-mood",
+   "ts": "2026-09-05T07:58",
+   "kind": "news",
+   "text": "Enzo Maresca said several Manchester City players had spent the week asking whether Enzo Fernandez was really joining, calling him 'a winner' with 'a winner's mentality' after his club-record deadline-day move from Chelsea. Xabi Alonso said it was now 'time to move forward' from the transfer saga, with Fernandez, owned by Big Ben in this league, in line to feature against Coventry this afternoon.",
+   "source": {
+    "title": "City excited by 'winner' Enzo, Chelsea moving on",
+    "url": "https://www.espn.com/soccer/story/_/id/49825496/enzo-fernandez-maresca-man-city-excitement-chelsea-move-forward-transfer-saga"
+   }
+  },
+  {
+   "id": "2026-09-05-newcastle-elanga-wissa-dedic",
+   "ts": "2026-09-05T07:58",
+   "kind": "news",
+   "text": "Matthias Jaissle praised Anthony Elanga and Yoane Wissa for their 'bright starts to the season' and said Amar Dedic has been 'exceptional,' with three assists in his first three games, ahead of today's game with Bournemouth. Elanga is owned by Marcus, Wissa by Small Ben, and Dedic by Edward, giving three of the six a reason to watch St James' Park this afternoon.",
+   "source": {
+    "title": "Matthias Jaissle's team news update: Fernandez-Pardo latest ahead of Bournemouth clash",
+    "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-latest-ahead-of-bournemouth-clash"
+   }
   }
  ],
  "runs": [
@@ -145,6 +185,13 @@
    "matchday": true,
    "gw": 3,
    "note": "Scheduled evening run, firing after the 22:20 refresh as intended. Checked the settled live feed against the already-corrected 22:25 numbers and they match, so no further correction needed. The day's main storylines (Isak's brace, Barcola's debut, Small Ben's live haul, Marcus's cushion) were already reported in the earlier wrap and were not repeated. One new sourced item: Isak's disallowed first-half hat-trick goal (Sky Sports match report, read in full), which also credits Big Ben's Wirtz with the assist on the ruled-out effort. The Robert-hairline roast now lands: his gap to the top genuinely grew from 22 to 30 points tonight while his XI blanked, so the joke has a true fact under it this time; marked used in roasts.json. No other archive submissions were available to draw on."
+  },
+  {
+   "ts": "2026-09-05T07:58 UTC",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning news run on a 7-fixture Saturday. Four sourced items, one per club, spread across all six managers: Arsenal (arsenal.com, Timber back in full training, Mosquera confirmed available for Chelsea - touches Robert), Brentford (brentfordfc.com preview, Schade/Thiago shot counts ahead of today's Sunderland game - touches Justin and Big Ben), Man City (ESPN, Maresca/Alonso reaction to the Enzo Fernandez move - touches Big Ben), Newcastle (newcastleunited.com, Jaissle on Elanga/Wissa/Dedic ahead of today's Bournemouth game - touches Marcus, Small Ben and Edward). No opinion pieces, per the morning rule. Roast archive was empty (0 unused) so nothing to draw on either way. Dropped several candidate stories after checking outlets/dates: mancity.com blocked scraping so a Doku-injury lead and a second Fernandez line could not be verified by reading the article; a Chelsea official piece on Estevao/Enzo Fernandez turned out to predate this season's fixtures and was stale; a Tottenham preview and an ESPN Isak-ratings piece didn't touch any of the six squads or repeated Thursday night's already-posted Isak coverage, so both were left out."
   }
  ]
 }
