@@ -473,11 +473,21 @@ function leagueLive() {
   if (!LIVE || !PUB) return null;
   if ((LIVE.gw ?? -1) < (PUB.gw ?? 0)) return null;
   if (!(LIVE.fixtures || []).some(f => f.started)) return null;
-  // when the cron has already scored the gameweek the feed is reporting
-  // and nothing is in play, public.json is the game's own word for it -
-  // including the tie-breaks in its gameweek ranking
   const t = liveTable(LIVE);
-  if (LIVE.gw === PUB.gw && !t.inplay.length) return null;
+  // Nothing in play is not the same as "the cron has scored it": a match
+  // can finish and sit there for hours before the next scheduled refresh,
+  // and in that window the feed already knows the final score while
+  // public.json is still whatever it was before kick-off. Only defer to
+  // public.json - for its tie-breaks in the gameweek ranking - once its
+  // own timestamp shows it was actually generated at or after the feed's
+  // last fetch; otherwise the feed is strictly ahead and stays in charge.
+  // public.json's timestamp carries no zone (it means UTC but Date.parse
+  // would read it as local); the feed's does. Force both to UTC so the
+  // comparison cannot flip an hour out over BST.
+  const asUTC = s => /Z|[+-]\d\d:\d\d$/.test(s) ? s : s + "Z";
+  const caughtUp = LIVE.gw === PUB.gw && LIVE.fetched && PUB.generated &&
+                   Date.parse(asUTC(PUB.generated)) >= Date.parse(asUTC(LIVE.fetched));
+  if (caughtUp && !t.inplay.length) return null;
   const by = {};
   t.mgrs.forEach((m, i) => { by[m.entry] = { ...m, gw_rank: i + 1 }; });
   return { gw: LIVE.gw, by, inplay: t.inplay.length };
