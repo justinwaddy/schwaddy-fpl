@@ -150,7 +150,7 @@
       "id": "2026-09-05-xi-1130",
       "ts": "2026-09-05T11:10",
       "kind": "news",
-      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
       "source": {
         "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
         "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -209,6 +209,16 @@
       "kind": "opinion",
       "text": "Small Ben went into Saturday 27 points behind Marcus and leads by four, a 31-point swing off four Liverpool players and four Man City players firing on the same weekend. He is not home yet: two fixtures of the gameweek are still to come and five of Marcus's eleven are in them, against one of Small Ben's.",
       "source": null
+    },
+    {
+      "id": "2026-09-06-xi-1530",
+      "ts": "2026-09-06T15:10",
+      "kind": "news",
+      "text": "Team news, 16:30 Arsenal v Chelsea kick-off: Small Ben's Rice and Lacroix both start, Justin's Raya starts, and Big Ben has Konsa, White, Havertz and Rogers all starting. Marcus has Calafiori, Tzolis and Joao Pedro in, with Palestra left out; Edward's Odegaard and Palmer start but J.Timber is left out. Robert has Gabriel, Saka, Martinez and James starting, with Mosquera and Estevao left out.",
+      "source": {
+        "title": "Arsenal vs Chelsea; Premier League - Starting Lineups",
+        "url": "https://www.skysports.com/football/arsenal-vs-chelsea/teams/559464"
+      }
     }
   ],
   "runs": [
@@ -307,6 +317,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "13:00 kick-off, Everton v Man Utd (owned: Pickford/Garner/Dewsbury-Hall/Tarkowski/Barry at EVE, Cunha/Mbeumo/Lammens/B.Fernandes/Yoro/Sesko at MUN). Checked manutd.com (403, bot-blocked), evertonfc.com (no confirmed-XI article found), premierleague.com lineups page (JS shell, no data server-side), skysports.com (only returned an old Feb 2026 fixture), espn.com (predicted lineups only, no confirmed sheet). No permitted outlet had a directly-readable confirmed XI at fire time, so no item posted per rule 2."
+    },
+    {
+      "ts": "2026-09-06T15:10",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 UTC kick-off (ARS v CHE): found confirmed XIs for both Arsenal and Chelsea via Sky Sports"
     }
   ]
 }
