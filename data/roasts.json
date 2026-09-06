@@ -53,6 +53,15 @@
    "about": null,
    "text": "Marcus is mr kneejerk central - take elanga for example. Two good games and he transfers him in",
    "used": false
+  },
+  {
+   "id": "2026-09-06-cdaf331443",
+   "key": "cdaf331443",
+   "ts": "2026-09-06T15:31",
+   "frm": "Edward",
+   "about": null,
+   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn’t haul his team is awful awful awful",
+   "used": false
   }
  ],
  "runs": [
@@ -97,6 +106,12 @@
    "frm": "Edward",
    "about": null,
    "chars": 95
+  },
+  {
+   "ts": "2026-09-06T15:31",
+   "frm": "Edward",
+   "about": null,
+   "chars": 102
   }
  ]
 }
