@@ -226,6 +226,13 @@
       "kind": "opinion",
       "text": "Big Ben's 55 points in gameweek two came almost entirely from one man: Bruno Fernandes' 23 was nearly half of it. The forward line he actually picked - Havertz, Gonzalo and Delap - managed just 5 points between three players who all took the pitch, and Konsa lasted 11 minutes before being hooked for a single point. One midfielder doing the work of a whole strike force: Quantum of Tzolis indeed.",
       "source": null
+    },
+    {
+      "id": "2026-09-06-opinion-big-ben-eve-mun-dd99654e73",
+      "ts": "2026-09-06T15:22",
+      "kind": "opinion",
+      "text": "Everton 2-2 Man Utd was a six-goal shootout, with both equalisers coming from substitutes barely a quarter of an hour into their afternoon. Big Ben's only man in it, Bruno Fernandes, played the full ninety and returned two points while Mbeumo scored, Mainoo set one up and Shaw set another - the most expensive shirt on the pitch, and the least involved in the goals.",
+      "source": null
     }
   ],
   "runs": [
@@ -338,6 +345,13 @@
       "opinion": 1,
       "matchday": true,
       "note": "Manual roast on request: Big Ben's GW2 total (55) leaned on Bruno Fernandes' 23 while Havertz/Gonzalo/Delap returned 5 combined and Konsa was hooked after 11 minutes for 1 point; all figures from gw_history.json gw 2 (finished)."
+    },
+    {
+      "ts": "2026-09-06T15:22",
+      "news": 0,
+      "opinion": 1,
+      "matchday": true,
+      "note": "Manual roast on request: Everton 2-2 Man Utd (finished_provisional, fetched live from fantasy.premierleague.com/api), Big Ben's only player in the match was B.Fernandes (90 mins, 2 pts, no goal/assist) while Mbeumo/Mainoo/Shaw did the damage."
     }
   ]
 }
