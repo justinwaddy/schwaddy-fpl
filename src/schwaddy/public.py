@@ -25,6 +25,8 @@ import json
 import os
 import re
 
+from .league import MY_ENTRY
+
 # The counting stats the game publishes. Deliberately no expected-goals or
 # ICT family: those are somebody else's model, and the point of this file
 # is that it carries no model at all.
@@ -57,6 +59,8 @@ SQUAD_KEYS = ("id", "slot", "name", "pos", "team", "pts", "mins", "played",
 # elsewhere - the GW scoreboards are "mine" too - so using it as a general
 # filter would drop half the league's results.
 PERSONAL_TYPES = ("headline", "squad", "projection")
+# the engine's word for its owner's players, wherever it falls in a line
+MINE_RE = re.compile(r"\byours\b")
 NEWS_KEEP = 400   # the whole feed comfortably; news.py trims its own file
 # Belt and braces over the scope rule: a sentence that talks about the
 # forecast does not travel, whatever event it is filed under. The editorial
@@ -192,6 +196,10 @@ def build(data_dir):
             s={k: s[k] for k in PUBLIC_STATS if k in s}))
     players.sort(key=lambda p: (-(p["s"].get("total_points") or 0), p["name"] or ""))
 
+    # whichever of the six the engine calls "yours", by the name the
+    # other five are given, so one page cannot claim another's players
+    mine_name = next((f"{m.get('name')}'s" for m in managers
+                      if m.get("entry") == MY_ENTRY), "Justin's")
     news = []
     for e in (_load(f"{data_dir}/news.json") or {}).get("events") or []:
         kind = e.get("type") or ""
@@ -203,6 +211,11 @@ def build(data_dir):
         # filed as a score. Anything written to him is written for him.
         if not text or text.lower().startswith("your "):
             continue
+        # news.py is written from Justin's chair, so it tags his own players
+        # "yours". This file is read by all six pages, where "yours" told
+        # Big Ben he owned Justin's Collins and Doku. Everyone gets the same
+        # possessive as the other five.
+        text = MINE_RE.sub(mine_name, text)
         news.append(dict(ts=e.get("ts"), type=kind, text=text[:400],
                          url=(e.get("url") or "")[:300] or None))
     news.sort(key=lambda e: e.get("ts") or "", reverse=True)
