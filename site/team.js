@@ -59,7 +59,6 @@ const TIPS = {
   bench: "Points sitting on the bench this gameweek. They do not count unless a substitution brings them on.",
   "to play": "How many of his eleven have a match still to come this gameweek.",
   "on pitch": "How many of his eleven are playing right now.",
-  "GW#": "Where he finished in this gameweek alone, whatever the season table says.",
   "played": "How many of his fifteen got on the pitch this gameweek.",
   "0 min": "How many of his fifteen never got a minute - injured, suspended, dropped or an unused substitute.",
   "subs": "Automatic substitutions the game made for him: a bench player brought on because a starter did not play.",
@@ -532,6 +531,10 @@ function comingUp() {
   return !!(ko && ko[2] && (Date.parse(ko[2]) - Date.now()) < 24 * 3600e3
             && PUB.next_gw > PUB.gw);
 }
+// which column the League tab is sorted on; this gameweek's points by
+// default, so the table reads as the week just played, and the season
+// column when somebody wants the league table
+let LSORT = { k: "live", dir: -1 };
 function renderLeague() {
   const sec = $("league");
   if (!PUB) { sec.innerHTML = loading("league"); return; }
@@ -543,8 +546,16 @@ function renderLeague() {
   // that played six days ago. The live feed takes over at kick-off.
   const ko = ((PUB.fixtures || [])[0] || [])[2];
   const AHEAD = !LV && comingUp();
-  // merge first, sort after: the season total can come from the feed, and
-  // the positions down the left have to follow the totals actually shown
+  const value = m => {
+    if (!SHOW_PRICES || !PRICES) return null;
+    let t = 0, n = 0;
+    for (const p of m.squad) { const c = byId[p.id]; const v = c && priceOf(c.code); if (v) { t += v; n++; } }
+    return n ? t : null;
+  };
+  // Merge, work every column out, then sort: the table sorts on whichever
+  // column is clicked (this gameweek by default), so every figure has to
+  // exist before the order does, and the positions down the left follow
+  // the order actually shown.
   const rows = [...(PUB.managers || [])].map(m0 => {
     const lv = LV && LV.by[m0.entry];
     // roster and prices are public.json's; everything about the gameweek
@@ -553,31 +564,6 @@ function renderLeague() {
       : AHEAD ? { ...m0, live: 0, bench: 0, subs: 0, gw_rank: null,
                   squad: (m0.roster || []).map(p => ({ ...p, pts: 0, mins: 0, slot: 99 })) }
         : m0;
-    return { m0, m };
-  }).sort((a, b) => (b.m.total ?? 0) - (a.m.total ?? 0) || (a.m.rank ?? 99) - (b.m.rank ?? 99));
-  const value = m => {
-    if (!SHOW_PRICES || !PRICES) return null;
-    let t = 0, n = 0;
-    for (const p of m.squad) { const c = byId[p.id]; const v = c && priceOf(c.code); if (v) { t += v; n++; } }
-    return n ? t : null;
-  };
-  const cols = 10 + (SHOW_PRICES ? 1 : 0);
-  let h = `<div class="card"><b class="h">Gameweek ${LV ? LV.gw : AHEAD ? PUB.next_gw : PUB.gw}</b>
-    ${AHEAD ? `<div class="lvstatus">Not started &middot; first kick-off ${esc(koText(ko))}</div>` : ""}
-    ${LV && LV.inplay ? `<div class="lvstatus"><span class="livedot"></span><b>LIVE</b> &middot;
-      ${LV.inplay} match${LV.inplay > 1 ? "es" : ""} in play &middot; updating as points land</div>` : ""}
-    ${legend([["GW", "points this gameweek"], ["GW#", "where he finished it"],
-      ["played", "of his fifteen who got minutes"], ["0 min", "who got none"],
-      ["subs", "automatic substitutions made for him"], ["top", "his best scorer"],
-      ["cost", "what the best legal eleven of his fifteen would have added"],
-      ["unfit", "injured or doubtful in his squad right now"],
-      ["season", "settled gameweeks plus this one; the game's own table catches up when it closes the week"]])}
-    <div class="wrap"><table>
-    <tr><th></th>${ths("manager", ["GW", "num"], ["GW#", "num"], ["played", "num"],
-      ["0 min", "num"], ["subs", "num"], "top", ["cost", "num"], ["unfit", "num"],
-      ["season", "num"])}${SHOW_PRICES ? th("value", "num") : ""}<th></th></tr>`;
-  rows.forEach(({ m0, m }, i) => {
-    const v = value(m0);
     const xi = (m.squad || []).filter(counting);
     // across all fifteen, not the eleven: after the automatic
     // substitutions the counting eleven has almost always all played, so
@@ -588,11 +574,51 @@ function renderLeague() {
     const best = bestEleven(m.squad || []);
     const cost = best == null ? null : Math.max(0, best - (m.live ?? 0));
     const unfit = (m.roster || []).filter(p => p.status && p.status !== "a").length;
+    return { m0, m, played, blanks, top, cost, unfit, v: value(m0) };
+  });
+  const key = r => {
+    switch (LSORT.k) {
+      case "name": return r.m.name || "";
+      case "live": return r.m.live ?? 0;
+      case "total": return r.m.total ?? 0;
+      case "subs": return r.m.subs || 0;
+      case "top": return r.top ? r.top.pts : -1;
+      case "value": return r.v ?? -1;
+      default: return r[LSORT.k] ?? 0;
+    }
+  };
+  rows.sort((a, b) => {
+    const x = key(a), y = key(b);
+    return ((typeof x === "string" ? x.localeCompare(y) : x - y) * LSORT.dir)
+      || (b.m.live ?? 0) - (a.m.live ?? 0) || (b.m.total ?? 0) - (a.m.total ?? 0)
+      || (a.m.rank ?? 99) - (b.m.rank ?? 99);
+  });
+  const cols = [
+    ["name", "manager", 0], ["live", "GW", 1], ["played", "played", 1], ["blanks", "0 min", 1],
+    ["subs", "subs", 1], ["top", "top", 0], ["cost", "cost", 1], ["unfit", "unfit", 1],
+    ["total", "season", 1],
+  ];
+  if (SHOW_PRICES) cols.push(["value", "value", 1]);
+  let h = `<div class="card"><b class="h">Gameweek ${LV ? LV.gw : AHEAD ? PUB.next_gw : PUB.gw}</b>
+    ${AHEAD ? `<div class="lvstatus">Not started &middot; first kick-off ${esc(koText(ko))}</div>` : ""}
+    ${LV && LV.inplay ? `<div class="lvstatus"><span class="livedot"></span><b>LIVE</b> &middot;
+      ${LV.inplay} match${LV.inplay > 1 ? "es" : ""} in play &middot; updating as points land</div>` : ""}
+    ${legend([["GW", "points this gameweek"],
+      ["played", "of his fifteen who got minutes"], ["0 min", "who got none"],
+      ["subs", "automatic substitutions made for him"], ["top", "his best scorer"],
+      ["cost", "what the best legal eleven of his fifteen would have added"],
+      ["unfit", "injured or doubtful in his squad right now"],
+      ["season", "settled gameweeks plus this one; the game's own table catches up when it closes the week"]])}
+    <div class="wrap"><table>
+    <tr><th></th>` +
+    cols.map(([k, lab, num]) => `<th class="s ${num ? "num" : ""}" data-k="${k}"
+      title="${esc((TIPS[lab] || "") + (TIPS[lab] ? " " : "") + "Click to sort.")}">${esc(lab)}${
+      LSORT.k === k ? (LSORT.dir < 0 ? " &darr;" : " &uarr;") : ""}</th>`).join("") + `<th></th></tr>`;
+  rows.forEach(({ m0, m, played, blanks, top, cost, unfit, v }, i) => {
     h += `<tr class="clk ${m.entry === ME ? "mine-row" : ""}" data-e="${m.entry}">
       <td class="tm">${i + 1}</td>
       <td><span class="nm">${esc(who(m.entry, m.name))}</span> <span class="tm">${esc(m.team)}</span></td>
       <td class="num">${m.live}</td>
-      <td class="num"><span class="tm">${m.gw_rank ? ordinal(m.gw_rank) : "-"}</span></td>
       <td class="num">${played}</td>
       <td class="num${blanks ? " warn" : ""}">${blanks}</td>
       <td class="num"><span class="tm">${m.subs || 0}</span></td>
@@ -603,12 +629,18 @@ function renderLeague() {
       ${SHOW_PRICES ? `<td class="num">${v != null ? "&pound;" + v.toFixed(1) : "-"}</td>` : ""}
       <td class="chev">${LGOPEN === m.entry ? "&#9662;" : "&#9656;"}</td></tr>`;
     if (LGOPEN === m.entry) {
-      h += `<tr><td colspan="${cols + 2}" style="padding:0 0 6px">${
+      h += `<tr><td colspan="${cols.length + 2}" style="padding:0 0 6px">${
         AHEAD ? rosterHTML(m0, byId) : squadHTML(m, byId)}</td></tr>`;
     }
   });
-  h += `</table></div><div class="note">Click a manager for his squad.</div></div>`;
+  h += `</table></div><div class="note">Sorted by this gameweek; click a column to sort by it,
+    the season column for the league table. Click a manager for his squad.</div></div>`;
   sec.innerHTML = h;
+  sec.querySelectorAll("th[data-k]").forEach(th => th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    LSORT = { k, dir: LSORT.k === k ? -LSORT.dir : (k === "name" ? 1 : -1) };
+    renderLeague();
+  }));
   sec.querySelectorAll("[data-e]").forEach(r => r.addEventListener("click", () => {
     const e = +r.dataset.e; LGOPEN = (LGOPEN === e ? null : e); renderLeague();
   }));
