@@ -1025,6 +1025,19 @@ function submitSuggestion(close) {
  */
 let LIVE = null, LIVEERR = null, LIVETIMER = null, LIVEOPEN = null, LIVECTX = null;
 const RULES = { play: 11, min_GKP: 1, max_GKP: 1, min_DEF: 3, max_DEF: 5, min_MID: 2, max_MID: 5, min_FWD: 1, max_FWD: 3 };
+/* Bonus the game has not awarded yet, guessed off the bps table: three to
+   the top, two to the next, one to the next, ties sharing, which is the
+   rule the game itself applies at full time.
+
+   A tier only counts if a handful of players are in it. In the first
+   minute every starter is on the same bps for turning up - twenty-two men
+   tied at the top - and the plain rule handed all of them three points,
+   so a scoreless first minute showed every player on the card at 4 with a
+   provisional +3 against his name. One goal later the same thing happens
+   one rung down: a single leader, then twenty-one still tied. A podium
+   twenty-two deep is not a podium, so a tier of more than three ends it
+   and everything below is left alone until the match has separated. */
+const BONUS_TIER_MAX = 3;
 function provBonus(f) {
   const out = {};
   if (!f.started || f.bonus_in) return out;
@@ -1032,6 +1045,7 @@ function provBonus(f) {
   let i = 0;
   while (i < s.length && i < 3) {
     const v = s[i][1], grp = s.filter(x => x[1] === v), pts = [3, 2, 1][i];
+    if (grp.length > BONUS_TIER_MAX) break;
     grp.forEach(x => out[x[0]] = pts); i += grp.length;
   }
   return out;
