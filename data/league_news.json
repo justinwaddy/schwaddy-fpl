@@ -221,13 +221,6 @@
       }
     },
     {
-      "id": "2026-09-06-opinion-big-ben-1ae9c82a31",
-      "ts": "2026-09-06T15:17",
-      "kind": "opinion",
-      "text": "Big Ben's 55 points in gameweek two came almost entirely from one man: Bruno Fernandes' 23 was nearly half of it. The forward line he actually picked - Havertz, Gonzalo and Delap - managed just 5 points between three players who all took the pitch, and Konsa lasted 11 minutes before being hooked for a single point. One midfielder doing the work of a whole strike force: Quantum of Tzolis indeed.",
-      "source": null
-    },
-    {
       "id": "2026-09-06-opinion-big-ben-eve-mun-dd99654e73",
       "ts": "2026-09-06T15:22",
       "kind": "opinion",
@@ -352,6 +345,13 @@
       "opinion": 1,
       "matchday": true,
       "note": "Manual roast on request: Everton 2-2 Man Utd (finished_provisional, fetched live from fantasy.premierleague.com/api), Big Ben's only player in the match was B.Fernandes (90 mins, 2 pts, no goal/assist) while Mbeumo/Mainoo/Shaw did the damage."
+    },
+    {
+      "ts": "2026-09-06T15:24",
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Pulled 2026-09-06-opinion-big-ben-1ae9c82a31 (Big Ben GW2 Bruno Fernandes roast) on request. The Everton v Man Utd Big Ben roast stays up."
     }
   ]
 }
