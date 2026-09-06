@@ -66,6 +66,35 @@ def _breach(counts, rules):
                for k in ("GKP", "DEF", "MID", "FWD"))
 
 
+def settled_points(entry, gw, data_dir=None):
+    """Points before this gameweek: the game's own cumulative total at the
+    last closed gameweek, from the entry's history.
+
+    FPL tallies that when it closes a week, so it is settled by definition.
+    The standings total is not: it is re-tallied only when the week closes,
+    so on a matchday evening it can sit a whole day of points behind the
+    players' scores - on 6 September 2026 it had Big Ben on 9 for a day he
+    scored 27, and put Ben C top when Marcus led by 11. Falls back to the
+    settled weeks in gw_history.json if the call fails, and to None if there
+    is nothing to fall back on, in which case the caller keeps the standings
+    figure rather than inventing one."""
+    if not gw or gw <= 1:
+        return 0
+    try:
+        rows = (api.entry_history(entry) or {}).get("history") or []
+        row = next((r for r in rows if r.get("event") == gw - 1), None)
+        if row is not None and row.get("total_points") is not None:
+            return int(row["total_points"])
+    except Exception:
+        pass
+    try:
+        gws = json.load(open(f"{data_dir}/gw_history.json"))["gws"]
+        return sum(int((gws[g]["managers"].get(str(entry)) or {}).get("live") or 0)
+                   for g in gws if int(g) < gw)
+    except Exception:
+        return None
+
+
 def apply_subs(squad, rules):
     """Provisional auto-subs. squad: slot-ordered dicts already carrying
     `pos`, `played` and `settled` (his match is over).
@@ -243,6 +272,7 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
         # manager will each week, rather than freezing one eleven
         hz5 = _horizon_xi(squad, pred, rules, horizon)
         s = standings.get(ent, {})
+        before = settled_points(ent, gw, data_dir)
         managers.append(dict(
             entry=ent, name=entry_name[ent], team=team_name[ent],
             mine=ent == MY_ENTRY, live=livepts, raw=raw,
@@ -250,13 +280,26 @@ def build(data_dir, league_id, bootstrap, owned, id_of_code):
             to_play=len(togo), played=len(counting) - len(togo),
             proj=round(proj, 1), bench=sum(p["pts"] for p in squad
                                            if p not in counting),
-            rank=s.get("rank"), total=s.get("total"),
-            event_total=s.get("event_total", livepts),
+            # season = what the game had him on after the last closed
+            # gameweek, plus this one as scored here. The standings' own
+            # total and rank lag a live gameweek by hours (see
+            # settled_points); they travel as game_* for reference and are
+            # never the table.
+            settled=before,
+            total=(before + livepts) if before is not None else s.get("total"),
+            event_total=livepts,
+            game_total=s.get("total"), game_rank=s.get("rank"),
+            game_event_total=s.get("event_total"),
             next5=hz5, squad=squad))
 
     managers.sort(key=lambda m: -m["live"])
     for i, m in enumerate(managers):
         m["gw_rank"] = i + 1
+    # the league position follows the computed total; the game's own rank
+    # only breaks ties, since it is the one thing it settles that we do not
+    ranked = sorted(managers, key=lambda m: (-(m["total"] or 0), m.get("game_rank") or 99))
+    for i, m in enumerate(ranked):
+        m["rank"] = i + 1
     return dict(generated=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"),
                 gw=gw, finished=bool(game.get("current_event_finished")),
                 all_played=not any(m["to_play"] for m in managers),

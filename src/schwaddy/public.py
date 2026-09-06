@@ -38,7 +38,10 @@ PUBLIC_STATS = (
 
 # Straight off league.json. Anything not named here does not travel.
 MGR_KEYS = ("entry", "name", "team", "live", "raw", "subs", "to_play",
-            "played", "bench", "rank", "total", "event_total", "gw_rank")
+            "played", "bench", "rank", "total", "event_total", "gw_rank",
+            # total = settled + live as weekly.py builds it; the game's own
+            # lagging standings figures ride along as game_* for reference
+            "settled", "game_total", "game_rank")
 SQUAD_KEYS = ("id", "slot", "name", "pos", "team", "pts", "mins", "played",
               "settled", "to_play", "status", "news", "subbed_in", "subbed_out")
 

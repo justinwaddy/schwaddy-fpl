@@ -467,8 +467,10 @@ function bestEleven(squad) {
 // often enough for a table, and the live worker already knows - so
 // whenever the feed has a started fixture in a gameweek at least as new as
 // the one public.json scored, the gameweek half of this table comes from
-// the feed and moves with it. The season column stays on public.json,
-// because the game only moves that when it processes the week.
+// the feed and moves with it, season total included: liveTable builds it
+// as settled-before-this-week plus the live week, because the game's own
+// standings only move when it closes the week and would otherwise show
+// Sunday's table a whole day behind.
 function leagueLive() {
   if (!LIVE || !PUB) return null;
   if ((LIVE.gw ?? -1) < (PUB.gw ?? 0)) return null;
@@ -541,7 +543,18 @@ function renderLeague() {
   // that played six days ago. The live feed takes over at kick-off.
   const ko = ((PUB.fixtures || [])[0] || [])[2];
   const AHEAD = !LV && comingUp();
-  const rows = [...(PUB.managers || [])].sort((a, b) => (b.total ?? 0) - (a.total ?? 0));
+  // merge first, sort after: the season total can come from the feed, and
+  // the positions down the left have to follow the totals actually shown
+  const rows = [...(PUB.managers || [])].map(m0 => {
+    const lv = LV && LV.by[m0.entry];
+    // roster and prices are public.json's; everything about the gameweek
+    // comes from whichever of the two is further along
+    const m = lv ? { ...m0, ...lv }
+      : AHEAD ? { ...m0, live: 0, bench: 0, subs: 0, gw_rank: null,
+                  squad: (m0.roster || []).map(p => ({ ...p, pts: 0, mins: 0, slot: 99 })) }
+        : m0;
+    return { m0, m };
+  }).sort((a, b) => (b.m.total ?? 0) - (a.m.total ?? 0) || (a.m.rank ?? 99) - (b.m.rank ?? 99));
   const value = m => {
     if (!SHOW_PRICES || !PRICES) return null;
     let t = 0, n = 0;
@@ -558,19 +571,12 @@ function renderLeague() {
       ["subs", "automatic substitutions made for him"], ["top", "his best scorer"],
       ["cost", "what the best legal eleven of his fifteen would have added"],
       ["unfit", "injured or doubtful in his squad right now"],
-      ["season", "his total, as the game has it"]])}
+      ["season", "settled gameweeks plus this one; the game's own table catches up when it closes the week"]])}
     <div class="wrap"><table>
     <tr><th></th>${ths("manager", ["GW", "num"], ["GW#", "num"], ["played", "num"],
       ["0 min", "num"], ["subs", "num"], "top", ["cost", "num"], ["unfit", "num"],
       ["season", "num"])}${SHOW_PRICES ? th("value", "num") : ""}<th></th></tr>`;
-  rows.forEach((m0, i) => {
-    const lv = LV && LV.by[m0.entry];
-    // roster and prices are public.json's; everything about the gameweek
-    // comes from whichever of the two is further along
-    const m = lv ? { ...m0, ...lv }
-      : AHEAD ? { ...m0, live: 0, bench: 0, subs: 0, gw_rank: null,
-                  squad: (m0.roster || []).map(p => ({ ...p, pts: 0, mins: 0, slot: 99 })) }
-        : m0;
+  rows.forEach(({ m0, m }, i) => {
     const v = value(m0);
     const xi = (m.squad || []).filter(counting);
     // across all fifteen, not the eleven: after the automatic
@@ -1076,6 +1082,11 @@ function applySubs(squad, R) {
     }
   }
 }
+function pubSettled(entry, gw) {
+  if (!PUB || PUB.gw !== gw) return null;
+  const m = (PUB.managers || []).find(x => x.entry === entry);
+  return m && m.settled != null ? m.settled : null;
+}
 function liveTable(L) {
   const R = { ...RULES };
   for (const k in (L.rules || {})) if (Number.isInteger(L.rules[k])) R[k] = L.rules[k];
@@ -1098,8 +1109,19 @@ function liveTable(L) {
     applySubs(squad, R);
     const c = squad.filter(p => (p.slot <= R.play && !p.subbed_out) || p.subbed_in);
     const togo = c.filter(p => p.to_play);
+    const live = c.reduce((a, p) => a + p.pts, 0);
+    // Season = points before this gameweek plus this one as scored here.
+    // The feed's `total` is the game's standings figure, which FPL
+    // re-tallies only when it closes the week - a whole day behind on a
+    // Sunday night, and it had Ben C top on 6 September when Marcus led by
+    // 11. `prior` is his cumulative at the last closed week, sent by the
+    // worker; a worker without it falls back to public.json's settled
+    // figure for the same gameweek, and failing both the standings figure
+    // stands, as it always did.
+    const prior = m.prior != null ? m.prior : pubSettled(m.entry, L.gw);
     return {
-      ...m, squad, counting: c, live: c.reduce((a, p) => a + p.pts, 0),
+      ...m, squad, counting: c, live,
+      total: prior != null ? prior + live : m.total, game_total: m.total,
       bench: squad.filter(p => !c.includes(p)).reduce((a, p) => a + p.pts, 0),
       to_play: togo.length, inplay: c.filter(p => p.playing).length,
       played: c.length - togo.length, subs: squad.filter(p => p.subbed_in).length,

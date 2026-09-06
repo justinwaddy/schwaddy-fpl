@@ -145,6 +145,31 @@ async function matchStats(fixtures) {
   }));
   return out;
 }
+/* Points before this gameweek: the game's own cumulative total at the last
+   closed gameweek, off the entry's history. FPL tallies that when it closes
+   a week, so it is settled; the standings total in `managers[].total` is
+   not - it is re-tallied only when the week closes, and on a Sunday night
+   it sits a whole day behind. The page adds its own live gameweek to this.
+   Cached an hour, keyed by gameweek: it only changes when a week closes.
+   Never fatal: without it the page falls back, see liveTable. */
+async function priorPoints(cache, origin, entryId, gw) {
+  const key = new Request(`${origin}/prior/${entryId}/${gw}`);
+  const hit = await cache.match(key);
+  if (hit) return (await hit.json()).prior;
+  let prior = null;
+  if (gw <= 1) prior = 0;
+  else {
+    try {
+      const j = await get(`${DRAFT}/entry/${entryId}/history`);
+      const row = (j.history || []).find(h => h.event === gw - 1);
+      if (row && typeof row.total_points === "number") prior = row.total_points;
+    } catch (e) { console.log(`history ${entryId} failed: ${e.message}`); }
+  }
+  if (prior != null) {
+    await cache.put(key, json({ prior }, 200, { "Cache-Control": `public, max-age=${BOOT_TTL}` }));
+  }
+  return prior;
+}
 /* bootstrap-static is ~1MB; keep only what the page names players with */
 async function bootstrap(cache, origin) {
   const key = new Request(`${origin}/boot`);
@@ -223,6 +248,7 @@ export async function compose(cache, origin = "https://live.invalid") {
   const picks = await Promise.all(entries.map(e =>
     get(`${DRAFT}/entry/${e.entry_id}/event/${gw}`)
       .then(j => (j && j.picks) || []).catch(() => [])));
+  const priors = await Promise.all(entries.map(e => priorPoints(cache, origin, e.entry_id, gw)));
 
   const owned = new Set();
   const managers = entries.map((e, i) => {
@@ -236,6 +262,7 @@ export async function compose(cache, origin = "https://live.invalid") {
     return {
       entry: e.entry_id, name, team: e.entry_name,
       rank: s.rank ?? null, total: s.total ?? null, event_total: s.event_total ?? null,
+      prior: priors[i],
       picks: ps,
     };
   });

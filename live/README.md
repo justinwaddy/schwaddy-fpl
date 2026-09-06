@@ -51,7 +51,13 @@ Or from a terminal, with Node installed:
       rules:    { play, min_GKP, max_GKP, ... },      # from FPL's own settings
       fixtures: [ { id, h, a, hs, as, started, fin, min, ko, bonus_in, bps:[[element, bps], ...] } ],
       elements: { id: { n, t, p, pts, min, bonus, bps, fx:[fixture ids] } },   # owned players only
-      managers: [ { entry, name, team, rank, total, event_total, picks:[[element, slot], ...] } ] }
+      managers: [ { entry, name, team, rank, total, event_total, prior, picks:[[element, slot], ...] } ] }
+
+`rank`, `total` and `event_total` are the game's standings, which FPL
+re-tallies only when it closes the gameweek - on a Sunday night they sit a
+whole day behind. `prior` is his cumulative total at the last closed
+gameweek, which is settled; the page shows season = prior + its own live
+gameweek, and only falls back to `total` if `prior` is missing.
 
 The page does the arithmetic. Provisional bonus is the standard 3/2/1 on
 each fixture's bps table with FPL's tie rules, applied only until the

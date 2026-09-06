@@ -82,8 +82,12 @@ def build(data_dir, bootstrap=None, gw=None, fetch=None):
         names[ent] = f
         teams[ent] = le.get("entry_name") or f
 
-    # a gameweek that has been scored never changes, so it is fetched once
-    want = [g for g in range(1, int(current) + 1) if str(g) not in out["gws"]]
+    # a gameweek that has been scored never changes, so it is fetched once.
+    # The current one is still being scored and is rebuilt every run;
+    # otherwise the file keeps whichever snapshot it took the first time it
+    # saw the week - GW3 of 2026-27 sat at its pre-kick-off zeros for days.
+    want = [g for g in range(1, int(current) + 1)
+            if str(g) not in out["gws"] or g == int(current)]
     for g in want:
         mgrs = {}
         for ent in entries:

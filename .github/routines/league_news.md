@@ -67,16 +67,20 @@ for f in sorted(todays,key=lambda f:f['kickoff_time']):
     print(f"   {teams[f['team_h']][0]} v {teams[f['team_a']][0]}  {f['kickoff_time'][11:16]} UTC")
 print('\nDATA AS OF:', pub.get('generated'), '- if that predates a final whistle above, the GW points are missing bonus')
 hist=json.load(open('data/gw_history.json'))['gws'] if os.path.exists('data/gw_history.json') else {}
-def prior(entry):
-    # settled gameweeks only. The game's own standings total is re-tallied only when
-    # FPL closes the gameweek, so on a matchday evening it runs hours behind the
-    # players' points; on 6 September it had Big Ben on 9 for a day he scored 27.
-    return sum(((hist[g]['managers'].get(str(entry)) or {}).get('live') or 0) for g in hist if int(g)<pub['gw'])
+pubset={m['entry']:m.get('settled') for m in pub['managers']}
+def prior(entry, fallback):
+    # points before this gameweek: the game's own cumulative at the last closed week, which
+    # public.json carries as 'settled'; else the settled weeks in gw_history; else the fallback.
+    # Never the standings total: FPL re-tallies that only when it closes the gameweek, and on
+    # 6 September it had Big Ben on 9 for a day he scored 27.
+    if pubset.get(entry) is not None: return pubset[entry]
+    if hist: return sum(((hist[g]['managers'].get(str(entry)) or {}).get('live') or 0) for g in hist if int(g)<pub['gw'])
+    return fallback
 print(f"\nGW{pub['gw']} · league table and who owns whom. TOTAL = settled gameweeks + this one as public.json scores it;")
 print("  the game's own standings figure is in brackets and LAGS - never quote it as a total or a lead.")
 rows=[]
 for m in pub['managers']:
-    was=prior(m['entry']) if hist else (m['total'] or 0)-(m['live'] or 0)
+    was=prior(m['entry'],(m['total'] or 0)-(m['live'] or 0))
     rows.append((was+(m['live'] or 0),was,m))
 rows.sort(key=lambda r:-r[0])
 top=rows[0][0]; topwas=max(r[1] for r in rows)
@@ -104,7 +108,7 @@ try:
     for m in lv['managers']:
         xi=[els.get(str(pid),{}) for pid,slot in m['picks'] if slot<=play]
         gw=sum((e.get('pts') or 0) for e in xi)
-        was=prior(m['entry']) if hist else (m.get('total') or 0)-gw
+        was=prior(m['entry'],(m.get('total') or 0)-gw)
         rows.append((m['name'], was+gw, gw, was,
                      ', '.join(f"{e.get('n')} {e.get('pts')}" for e in xi if e.get('pts')),
                      sum(1 for e in xi if not on.get(e.get('t'), True)),
