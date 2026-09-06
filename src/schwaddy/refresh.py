@@ -461,7 +461,6 @@ def main():
     _player_stats(args.data_dir, d)
     _history(args.data_dir, d)
     _prices(args.data_dir)
-    _public(args.data_dir)
     try:
         from . import news
         wk = _weekly(args.data_dir, args.league_id, d, owned, id_of_code)
@@ -470,6 +469,12 @@ def main():
         print(f"news feed updated: {n_new} new events")
     except Exception as ex:
         print(f"news update skipped: {ex}")
+    # last, as in the news-only path: public.json is built from league.json
+    # and news.json, so it has to follow the weekly table and the feed.
+    # It used to run before them here, which left every morning's public
+    # file carrying the previous run's table - noticed on 6 September 2026
+    # when the new settled/game_total fields did not arrive.
+    _public(args.data_dir)
 
 
 if __name__ == "__main__":

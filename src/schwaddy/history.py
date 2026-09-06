@@ -83,11 +83,14 @@ def build(data_dir, bootstrap=None, gw=None, fetch=None):
         teams[ent] = le.get("entry_name") or f
 
     # a gameweek that has been scored never changes, so it is fetched once.
-    # The current one is still being scored and is rebuilt every run;
+    # The current one is still being scored and is rebuilt every run,
     # otherwise the file keeps whichever snapshot it took the first time it
     # saw the week - GW3 of 2026-27 sat at its pre-kick-off zeros for days.
+    # The previous one is rebuilt too: the match log this reads from
+    # (gws_<season>.csv) only carries a gameweek once FPL has closed it,
+    # and the game can have moved on to the next week by then.
     want = [g for g in range(1, int(current) + 1)
-            if str(g) not in out["gws"] or g == int(current)]
+            if str(g) not in out["gws"] or g >= int(current) - 1]
     for g in want:
         mgrs = {}
         for ent in entries:
