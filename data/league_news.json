@@ -226,6 +226,37 @@
       "kind": "opinion",
       "text": "Everton 2-2 Man Utd was a six-goal shootout, with both equalisers coming from substitutes barely a quarter of an hour into their afternoon. Big Ben's only man in it, B.Fernandes, played the full ninety and returned two points while Mbeumo scored, Mainoo set one up and Shaw set another - the most expensive shirt on the pitch, and the least involved in the goals.",
       "source": null
+    },
+    {
+      "id": "2026-09-06-news-ars-che-ft",
+      "ts": "2026-09-06T17:42",
+      "kind": "news",
+      "text": "Morgan Rogers put Chelsea ahead inside two minutes at the Emirates, Kai Havertz leveled in the 25th, and Martin Odegaard put Arsenal 2-1 up in the 50th, where it finished. Rogers and Havertz are both Big Ben's; Odegaard is Edward's.",
+      "source": {
+        "title": "Arsenal vs Chelsea | Martin Odegaard fires Gunners ahead",
+        "url": "https://www.skysports.com/football/video/16429/13582473/goal-m-odegaard-50-arsenal-2-1-chelsea"
+      }
+    },
+    {
+      "id": "2026-09-06-opinion-benc-swing-cf90465d",
+      "ts": "2026-09-06T17:42",
+      "kind": "opinion",
+      "text": "Ben C went into today's fixtures 12 points behind Marcus, 90 to 102, and finishes it 4 points clear at the top, 150 to 146 - a 16-point swing in one afternoon.",
+      "source": null
+    },
+    {
+      "id": "2026-09-06-opinion-marcus-elanga-7d3c0bba",
+      "ts": "2026-09-06T17:42",
+      "kind": "opinion",
+      "text": "Edward's take on Marcus's business: kneejerk central, with Elanga held up as exhibit A. Whatever got him picked up, today's return was 1 point - hardly the case for the defence.",
+      "source": null
+    },
+    {
+      "id": "2026-09-06-opinion-bigben-bruno-54fa7b1e",
+      "ts": "2026-09-06T17:42",
+      "kind": "opinion",
+      "text": "Edward's charge against Big Ben: he leans on Bruno to bail him out, and when Bruno doesn't haul, the team is awful. Today Bruno managed 2 points and Big Ben finished the day fifth of six - the prosecution rests.",
+      "source": null
     }
   ],
   "runs": [
@@ -352,6 +383,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "Pulled 2026-09-06-opinion-big-ben-1ae9c82a31 (Big Ben GW2 Bruno Fernandes roast) on request. The Everton v Man Utd Big Ben roast stays up."
+    },
+    {
+      "ts": "2026-09-06T17:42",
+      "news": 1,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap, run early on request; GW3 fully finished (all 10 fixtures). Led with Arsenal 2-1 Chelsea (Rogers, Havertz, Odegaard - all three read at Sky Sports goal clips) touching Big Ben and Edward; skipped a separate Everton 2-2 Man Utd item since the only league angle (Big Ben's Bruno) was already covered by the 15:22 opinion piece. Used two roast-archive submissions: Edward's 'kneejerk central' on Marcus, hung on Elanga's 1-point return, and Edward's 'relies on Bruno to bail him out' on Big Ben, hung on Bruno's 2 points and Big Ben finishing the day 5th of 6. Third opinion is original: Ben C's 90-to-102 deficit on Marcus flipping into a 150-to-146 lead, a 16-point swing, both figures from the day's before/after totals. Left two submissions unused: Edward's 'biased Arsenal fan, zero ball knowledge' on Big Ben needed White/Havertz/Konsa to combine for nothing and instead Havertz was Big Ben's best player of the day (8 pts), so the joke's premise is false and it stays in the archive; Edward's 'Mong' on Robert is an ableist slur excluded under the archive's own rule and will not be used, per the user's own confirmation this session that it should stay out regardless. Also rewrote all 5 of today's flop lines (Barry, Pickford, Dewsbury-Hall, Garner, Lammens) via reflop.py."
     }
   ]
 }
