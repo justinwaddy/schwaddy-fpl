@@ -241,7 +241,7 @@
       "id": "2026-09-06-opinion-benc-swing-cf90465d",
       "ts": "2026-09-06T17:42",
       "kind": "opinion",
-      "text": "Ben C went into today's fixtures 12 points behind Marcus, 90 to 102, and finishes it 4 points clear at the top, 150 to 146 - a 16-point swing in one afternoon.",
+      "text": "Marcus went into the gameweek 27 clear of Ben C, 120 to 93. Ben C outscored him 60 to 44 across it, sixteen points of the gap gone in three days, and is still 11 short: Marcus 164, Ben C 153 once the game adds it up. FPL has not closed the gameweek yet, so its own table will keep saying 150 to 146 with Ben C on top until it does - that is the standings lagging, not the lead.",
       "source": null
     },
     {
@@ -397,6 +397,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "Correction by hand: the last wrap's two roast-derived opinion pieces named Edward as the source ('Edward's take...', 'Edward's charge...'), which breaks the archive's own rule that a suggestion's author is never published. Reworded both to drop the attribution and read as the page's own voice; the facts and numbers are unchanged."
+    },
+    {
+      "ts": "2026-09-06T18:16",
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Correction by hand: the wrap's table piece said Ben C finished 4 clear at the top, 150 to 146, copied from the game's standings. Those are re-tallied only when FPL closes the gameweek and were a day behind (they had Big Ben on 9 for a day he scored 27). Settled GW1+GW2 from gw_history, which match the game's own per-entry history exactly, plus the day's official points give Marcus 164, Ben C 153: Marcus leads by 11. Rewritten to say so and to say why the game's table still shows otherwise. Bonus recomputed 3/2/1 from bps matched the official award on all ten fixtures; the cron's auto-subs match the game's rule. STEP 1 in the routine now builds totals from gw_history and brackets the game's figure."
     }
   ]
 }

@@ -35,6 +35,7 @@ HARD RULES, in order of importance:
      AND THERE IS NO MONEY IN IT, so a squad cannot pay for itself, be value for money, be a bargain, be an investment or be worth what somebody spent: nobody spent anything. A wrap wrote that Small Ben's Liverpool stack "finally paid for itself" - there is no itself to pay for, and a draft league is exactly the audience that notices. Reporting a fee a real club actually paid is fine, because that is the outside world; pricing one of these six squads is not.
   6. THE TWO BENS. public.json calls them "Ben C" and "Ben D". The league calls them SMALL BEN (Ben C) and BIG BEN (Ben D), and so do you, every time.
   7. NUMBERS ARE QUOTED, NEVER WORKED OUT FROM MEMORY. Every figure you publish - a gameweek haul, a season total, a lead, a player's points - has to appear in the STEP 1 printout, in the words the printout uses. STEP 1 prints the gaps for you, so a lead is a number you copy, not one you infer from a total sitting next to it. On an evening run the LIVE FEED block is the one to quote and the public.json table is not: that file is written by a cron and on 4 September it was stamped 19:14, fourteen minutes into the only match of the day, so it still had every score at zero. The 4 September evening wrap got all of this wrong in one go: it called Marcus's season total of 120 a "120-point cushion" when his lead was 27, it gave Small Ben 11 points off four Liverpool players when the settled figure was 33, and it put Justin on 0 when he had 1. If the LIVE FEED block did not print, write nothing that depends on today's points.
+     THE GAME'S OWN STANDINGS TOTAL LAGS. FPL re-tallies a manager's total only when it closes the gameweek, so on a matchday evening the standings, and every total copied from them, can be a whole day of points behind. On 6 September the wrap put Ben C "4 points clear at the top, 150 to 146" off those standings; built from the settled gameweeks plus the day's actual points it was Marcus 164, Ben C 153, and the piece had to be pulled. STEP 1 now prints totals built that way and shows the game's figure in brackets; quote the built figure and never the bracketed one.
      A PLAYER ON ZERO HAS NOT NECESSARILY BLANKED. Check whether his fixture has kicked off before you write him off - STEP 1 prints, for every manager, how many of his eleven have not started yet and how many have played and returned nothing, and it says outright when fixtures are still to come. A gameweek is over when that line says so and not when the last match of the day finishes. On 5 September the wrap treated Saturday's seven fixtures as the whole gameweek while Everton v Man Utd and Arsenal v Chelsea were still a day away: it called seven of Marcus's players "still on zero" when six of the seven had not played a minute, and built an entire piece on three Arsenal players "combining for precisely nothing" the evening before Arsenal played. All three opinion pieces had to be corrected the next morning.
 
 HOW IT SHOULD READ. This page is a good football writer's notebook on six mates' teams, not a report card, and the quality of the sentences is the whole product. Every published line, reported or opinion, has to pass these:
@@ -65,14 +66,23 @@ print('TODAY:',today,'UTC | MATCHDAY:','YES' if todays else 'NO',f'({len(todays)
 for f in sorted(todays,key=lambda f:f['kickoff_time']):
     print(f"   {teams[f['team_h']][0]} v {teams[f['team_a']][0]}  {f['kickoff_time'][11:16]} UTC")
 print('\nDATA AS OF:', pub.get('generated'), '- if that predates a final whistle above, the GW points are missing bonus')
-print(f"\nGW{pub['gw']} · league table and who owns whom:")
-tab=sorted(pub['managers'],key=lambda m:-(m['total'] or 0))
-for n_,m in enumerate(tab):
-    was=(m['total'] or 0)-(m['live'] or 0)
-    print(f"  {m['name']} ({m['team']}) {m['total']} pts, GW {m['live']}, bench {m['bench']}")
-    print(f"     behind the leader by {(tab[0]['total'] or 0)-(m['total'] or 0)}"
-          f"; was on {was} before today, so the gap to the leader was "
-          f"{((tab[0]['total'] or 0)-(tab[0]['live'] or 0))-was}")
+hist=json.load(open('data/gw_history.json'))['gws'] if os.path.exists('data/gw_history.json') else {}
+def prior(entry):
+    # settled gameweeks only. The game's own standings total is re-tallied only when
+    # FPL closes the gameweek, so on a matchday evening it runs hours behind the
+    # players' points; on 6 September it had Big Ben on 9 for a day he scored 27.
+    return sum(((hist[g]['managers'].get(str(entry)) or {}).get('live') or 0) for g in hist if int(g)<pub['gw'])
+print(f"\nGW{pub['gw']} · league table and who owns whom. TOTAL = settled gameweeks + this one as public.json scores it;")
+print("  the game's own standings figure is in brackets and LAGS - never quote it as a total or a lead.")
+rows=[]
+for m in pub['managers']:
+    was=prior(m['entry']) if hist else (m['total'] or 0)-(m['live'] or 0)
+    rows.append((was+(m['live'] or 0),was,m))
+rows.sort(key=lambda r:-r[0])
+top=rows[0][0]; topwas=max(r[1] for r in rows)
+for tot,was,m in rows:
+    print(f"  {m['name']} ({m['team']}) {tot} pts [game says {m['total']}], GW {m['live']}, bench {m['bench']}")
+    print(f"     behind the leader by {top-tot}; was on {was} before this gameweek, {topwas-was} behind whoever led then")
     print('     '+', '.join(f"{p['name']}({p['team']}) {p['pts']}" for p in m['squad']))
 try:
     import subprocess
@@ -93,13 +103,16 @@ try:
     rows=[]
     for m in lv['managers']:
         xi=[els.get(str(pid),{}) for pid,slot in m['picks'] if slot<=play]
-        rows.append((m['name'], m.get('total') or 0, sum((e.get('pts') or 0) for e in xi),
+        gw=sum((e.get('pts') or 0) for e in xi)
+        was=prior(m['entry']) if hist else (m.get('total') or 0)-gw
+        rows.append((m['name'], was+gw, gw, was,
                      ', '.join(f"{e.get('n')} {e.get('pts')}" for e in xi if e.get('pts')),
                      sum(1 for e in xi if not on.get(e.get('t'), True)),
                      sum(1 for e in xi if on.get(e.get('t'), True) and not (e.get('pts') or 0))))
     rows.sort(key=lambda r:-r[1])
-    for nm,tot,gw,scorers,yet,blank in rows:
-        print(f"  {nm}: {tot} total, {gw} so far, {tot-rows[0][1]} vs the leader, was on {tot-gw} before kick-off"
+    print("  (gameweek figures are the named eleven before automatic substitutions; totals are settled gameweeks plus that, not the game's lagging standings)")
+    for nm,tot,gw,was,scorers,yet,blank in rows:
+        print(f"  {nm}: {tot} total, {gw} so far, {tot-rows[0][1]} vs the leader, was on {was} before this gameweek"
               + (f"  [{scorers}]" if scorers else "  [nobody has scored]"))
         print(f"     {yet} of his eleven have not kicked off yet; {blank} played and returned nothing")
 except Exception as e:
