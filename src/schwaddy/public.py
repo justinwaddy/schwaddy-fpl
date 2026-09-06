@@ -123,6 +123,10 @@ def build(data_dir):
                    if e.get("id") == ev.get("next")), None)
     deadline = (nxt_ev or {}).get("deadline_time")
     waivers = (nxt_ev or {}).get("waivers_time")
+    # Trades close a day before waivers process. In draft it is the first
+    # of the three clocks to go, so a page that only carries the line-up
+    # lock is showing the least urgent one.
+    trades = (nxt_ev or {}).get("trades_time")
     next_gw = (nxt_ev or {}).get("id")
     nxt = _next_fixtures(fixtures, (gw or 0) + 1)
     # The coming gameweek's fixture list. The live feed reports whichever
@@ -206,7 +210,7 @@ def build(data_dir):
     return dict(
         generated=stats.get("generated") or league.get("generated"),
         season=stats.get("season"), gw=gw,
-        next_gw=next_gw, deadline=deadline, waivers=waivers,
+        next_gw=next_gw, deadline=deadline, waivers=waivers, trades=trades,
         finished=league.get("finished"), all_played=league.get("all_played"),
         teams=teams, managers=managers, players=players,
         fixtures=nxt_fx, news=news[:NEWS_KEEP])
