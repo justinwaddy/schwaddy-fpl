@@ -185,15 +185,28 @@ export async function compose(cache, origin = "https://live.invalid") {
   // id first, then the pair of teams, so a mismatch in one numbering does
   // not silently hand a match somebody else's clock
   const clocks = {};
+  const scores = {};
   for (const f of clock || []) {
-    if (typeof f.minutes !== "number") continue;
-    clocks[`i${f.id}`] = f.minutes;
-    clocks[`t${f.team_h}v${f.team_a}`] = f.minutes;
+    if (typeof f.minutes === "number") {
+      clocks[`i${f.id}`] = f.minutes;
+      clocks[`t${f.team_h}v${f.team_a}`] = f.minutes;
+    }
+    // The draft fixtures endpoint's own score can lag the same way its
+    // minute does - checked live, it sat 0-0 for the better part of a
+    // minute after a goal that had already landed on the scorer's points
+    // in the live element feed. The classic fixture list is where the
+    // clock's own fix comes from, so the score rides along with it.
+    if (typeof f.team_h_score === "number" && typeof f.team_a_score === "number") {
+      const pair = [f.team_h_score, f.team_a_score];
+      scores[`i${f.id}`] = pair;
+      scores[`t${f.team_h}v${f.team_a}`] = pair;
+    }
   }
   const minuteOf = f => {
     const m = clocks[`i${f.id}`] ?? clocks[`t${f.team_h}v${f.team_a}`];
     return typeof m === "number" ? m : (f.minutes || 0);
   };
+  const scoreOf = f => scores[`i${f.id}`] ?? scores[`t${f.team_h}v${f.team_a}`] ?? null;
 
   // manager names the way weekly.py does it: first name, with a last
   // initial only when two managers share one (Ben C / Ben D)
@@ -267,9 +280,10 @@ export async function compose(cache, origin = "https://live.invalid") {
       for (const r of (bpsStat && bpsStat[side]) || []) bps.push([r.element, r.value]);
     }
     const bonusIn = !!bonusStat && (bonusStat.h.length + bonusStat.a.length) > 0;
+    const sc = scoreOf(f);
     return {
       id: f.id, h: f.team_h, a: f.team_a,
-      hs: f.team_h_score, as: f.team_a_score,
+      hs: sc ? sc[0] : f.team_h_score, as: sc ? sc[1] : f.team_a_score,
       started: !!f.started, fin: !!(f.finished || f.finished_provisional),
       min: minuteOf(f), ko: f.kickoff_time, bonus_in: bonusIn, bps,
       code: f.code,
