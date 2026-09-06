@@ -44,6 +44,15 @@
    "about": "Ben D",
    "text": "Classic biased Arsenal fan - has 0 ball knowledge",
    "used": false
+  },
+  {
+   "id": "2026-09-06-c592707d77",
+   "key": "c592707d77",
+   "ts": "2026-09-06T09:47",
+   "frm": "Edward",
+   "about": null,
+   "text": "Marcus is mr kneejerk central - take elanga for example. Two good games and he transfers him in",
+   "used": false
   }
  ],
  "runs": [
@@ -82,6 +91,12 @@
    "frm": "Edward",
    "about": "Robert",
    "chars": 4
+  },
+  {
+   "ts": "2026-09-06T09:47",
+   "frm": "Edward",
+   "about": null,
+   "chars": 95
   }
  ]
 }
