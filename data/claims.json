@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-05T21:21 UTC",
- "summary": "Justin sits bottom of the table on 80 points, so his GW4 claims process first when the window closes on 11 September. Today's full round of matches turned up three genuine surprises the model doesn't see yet - Bijol and Igor Jesus both left out of their sides' matchday squads for the first time this season, and Brentford's Collins forced off with a calf strain of unknown severity - reshaping the board to three defensive moves (Munoz, Bijol, a low-confidence Collins hedge) alongside the standing midfield claims for the still-unintegrated Barcola and the still-injured Doku. Igor Jesus itself drops out as a target rather than in, since he wasn't even in Forest's 18 today.",
+ "ts": "2026-09-06T08:11 UTC",
+ "summary": "Correcting a stale line from last night's file: Justin actually sits third of six on 121 points, so his claims process fourth in the six-team queue when the window closes on 11 September, not first. A full overnight sweep found nothing to change the board - no permitted source has put a firm return date on Doku or Collins yet, and Bijol, Munoz and Barcola's situations are all unchanged from last night's confirmed match evidence - so the same five claims carry forward with refreshed model numbers.",
  "claims": [
   {
    "rank": 1,
@@ -18,7 +18,7 @@
     "club": "LIV"
    },
    "why": "Barcola remains unintegrated at Liverpool: manager Andoni Iraola said before naming him among the substitutes for Friday's trip to Ipswich (his actual first appearance for the club) that 'he hasn't had the minutes in the preseason games'. Le Fee, by contrast, started today's 1-1 draw at Brentford, hit the post from range in the first half and scored the equalising penalty in the 82nd minute - a first-choice starter in form.",
-   "model": "Model has Le Fee at next5 16.5 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot today's news fills in. Agree with overruling the model's placeholder rating for Barcola.",
+   "model": "Model has Le Fee at next5 16.4 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola.",
    "confidence": "high",
    "sources": [
     {
@@ -44,8 +44,8 @@
     "code": "248875",
     "club": "MCI"
    },
-   "why": "Doku was not even named in Manchester City's 18 for today's 1-0 win over Coventry, still out with the calf injury picked up in the Community Shield defeat to Arsenal, with Rayan Cherki continuing in his place in the number 10 role. Return estimates point to City's 13 September fixture at the earliest - after GW4's own deadline - so he offers nothing for this window.",
-   "model": "Model has Rayan at next5 15.8 (avail 0.95) versus Doku at 4.5 (avail 0.16) - the model already prices the injury in heavily; agree with the swap, reinforced by today's confirmed absence.",
+   "why": "Doku was not named in Manchester City's 18 for Friday's 1-0 win over Coventry, still out with the calf injury picked up in the Community Shield defeat to Arsenal. A fresh overnight search found no permitted outlet has put a confirmed return date on him yet - only unpermitted sites speculating anywhere from City's next match to well into October - so there is still nothing concrete pointing to a return before GW4's own deadline.",
+   "model": "Model has Rayan at next5 16.1 (avail 0.97) versus Doku at 3.3 (avail 0.11) - the model has caught up further on the injury since last night; agree with the swap.",
    "confidence": "medium",
    "sources": [
     {
@@ -67,8 +67,8 @@
     "code": "247348",
     "club": "NFO"
    },
-   "why": "Munoz was again an impact substitute rather than a starter today - on for Ola Aina in the 59th minute of Forest's goalless draw with Tottenham - not the nailed-on right wing-back his permanent transfer suggested. Hill remains a guaranteed starter in Bournemouth's back line with no such competition.",
-   "model": "Model has Hill at next5 16.0 (avail 0.97) versus Munoz at 7.0 (avail 0.37) - a wide gap the model already prices in via low availability; agree, and today's bench role reinforces it further.",
+   "why": "Munoz was again an impact substitute rather than a starter in Forest's last match - on for Ola Aina in the 59th minute of the goalless draw with Tottenham - not the nailed-on right wing-back his permanent transfer suggested. Hill remains a guaranteed starter in Bournemouth's back line with no such competition.",
+   "model": "Model has Hill at next5 16.1 (avail 0.98) versus Munoz at 6.5 (avail 0.34) - a wide gap the model already prices in via low availability; agree, and the bench role from Forest's last match reinforces it further.",
    "confidence": "medium",
    "sources": [
     {
@@ -90,8 +90,8 @@
     "code": "434752",
     "club": "LEE"
    },
-   "why": "Bijol was left out of Leeds' starting XI at Brighton today for the first time this season - Nico Elvedi and Tarik Muharemovic started in central defence instead, with Bijol introduced only in the 61st minute. It is one match, but with a new arrival now preferred ahead of him his starting spot no longer looks nailed on.",
-   "model": "Model has Botman at next5 15.6 (avail 1.00) versus Bijol at 15.4 (avail 0.92) - a small numbers gap on its own, but today's team news is the real reason for this claim rather than the model's number. Medium rather than high confidence since it is only one match so far.",
+   "why": "Bijol was left out of Leeds' starting XI at Brighton for the first time this season - Nico Elvedi and Tarik Muharemovic started in central defence instead, with Bijol introduced only in the 61st minute. It is one match, but with a new arrival now preferred ahead of him his starting spot no longer looks nailed on.",
+   "model": "Model has Botman at next5 15.6 (avail 1.00) versus Bijol at 12.7 (avail 0.75) - the gap has widened since last night as the model catches up with the bench news, reinforcing the claim. Medium rather than high confidence since it is only one match so far.",
    "confidence": "medium",
    "sources": [
     {
@@ -113,8 +113,8 @@
     "code": "432830",
     "club": "BRE"
    },
-   "why": "Speculative hedge: Brentford captain Nathan Collins was forced off with a calf strain after just 17 minutes of today's draw with Sunderland, and manager Keith Andrews said 'it's a calf strain, I don't know the extent'. If it turns out to be more than a knock, this claim covers a fit, confirmed-starting alternative; if it is minor, this is the one to skip.",
-   "model": "Model has Richards at next5 15.6 (avail 1.00) versus Collins at 16.5 (avail 1.00) - the model still rates Collins the stronger player and does not yet reflect today's injury at all, so this claim rests entirely on the news, not the numbers. Low confidence, submit last.",
+   "why": "Speculative hedge: Brentford captain Nathan Collins was forced off with a calf strain after just 17 minutes of the draw with Sunderland, and manager Keith Andrews said 'it's a calf strain, I don't know the extent'. A fresh search found Brentford's own site still has not published a timeline or scan result, so the injury remains an open question. If it turns out to be more than a knock, this claim covers a fit, confirmed-starting alternative; if it is minor, this is the one to skip.",
+   "model": "Model has Richards at next5 15.6 (avail 1.00) versus Collins at 12.5 (avail 0.60) - the model has now marked Collins down since the injury, narrowing the gap from last night but still favouring the swap. Low confidence, submit last.",
    "confidence": "low",
    "sources": [
     {
@@ -257,6 +257,12 @@
    "gw": 4,
    "claims": 5,
    "note": "Full round of GW3 matches produced real news the model can't see: Igor Jesus was not even in Forest's 18 today (Delap started, Wood the sub), killing the Igor Jesus/Marmoush claim outright since Marmoush started and played 84 minutes for Spurs - dropped rather than replaced, since Marmoush is now clearly the stronger, more secure player of the two. In its place, two fresh DEF claims from today's confirmed lineups: Bijol was benched for the first time this season at Leeds (Elvedi/Muharemovic started), and Munoz was again only an impact sub at Forest, reinforcing his existing low model rating - both sourced directly off Sky Sports lineup pages rather than predicted-XI aggregators. A fifth, low-confidence claim was added on the back of Nathan Collins' calf strain (forced off after 17 minutes for Brentford, severity unknown) as a hedge, since the model does not yet reflect it at all. Le Fee/Barcola and Rayan/Doku carried forward with fresh sourcing (Le Fee's penalty and man-of-the-match display, Doku confirmed absent from City's 18 vs Coventry) and Le Fee/Barcola upgraded to high confidence given how comprehensively Barcola remains unintegrated."
+  },
+  {
+   "ts": "2026-09-06T08:11 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made after a full overnight club-by-club sweep. Corrected the summary's stale 'bottom of the table' line - Justin is actually third of six on 121 points, so his claims process fourth in the six-team priority order, not first. Refreshed every model line with the latest next5/availability numbers, which have moved further toward the news on Bijol (12.7, down from 15.4) and Collins (12.5, down from 16.5) as the model catches up. Doku's return date still cannot be pinned down on a permitted source - only Sports Mole, goal.com and bet365 speculate anywhere from City's next match to mid-October, none of them citable - so his claim stands as before. Also checked Garner (described this morning as Everton's standout performer in league play, reinforcing the decision not to add a sixth claim there) and found nothing to change Munoz, Barcola or the free-agent targets."
   }
  ]
 }

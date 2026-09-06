@@ -145,6 +145,11 @@
    "ts": "2026-09-05T21:21 UTC",
    "published": 3,
    "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
+  },
+  {
+   "ts": "2026-09-06T08:11 UTC",
+   "published": 0,
+   "note": "Full club-by-club sweep ~11 hours after last night's round (Everton, Arsenal, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Brighton, Sunderland, Newcastle) plus two general searches on injuries and deadline-day fallout. Nothing new held up to a permitted source: reports of Doku's return slipping toward an 11 October target only appeared on Sports Mole/goal.com/bet365, none of which are permitted, and a permitted mancity.com article on his fitness returned only a redirect page, so his status stays as already published (out, no confirmed date before GW4's deadline). Collins' calf scan still has no confirmed timeline per Brentford's own site. Everton's Garner was described in a fresh search as the club's standout performer in league play so far, reinforcing rather than changing his 'keep' status. Nothing on Bijol, Munoz, Barcola or the free-agent targets moved since last night's read."
   }
  ]
 }
