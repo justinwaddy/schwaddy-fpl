@@ -78,7 +78,7 @@ except Exception as e:
 r=json.load(open('data/roasts.json')) if os.path.exists('data/roasts.json') else {'items':[]}
 un=[i for i in r.get('items',[]) if not i.get('used')]
 print(f"\nROAST ARCHIVE: {len(r.get('items',[]))} total, {len(un)} unused")
-for i in un[-20:]: print(f"   [{i['id']}] {i['frm']} on {i['about'] or 'the league'}: {i['text']}")
+for i in un: print(f"   [{i['id']}] {i['frm']} on {i['about'] or 'the league'}: {i['text']}")
 auto=[x for x in (pub.get('news') or []) if str(x.get('ts',''))[:10]==str(today)]
 print(f"\nALREADY ON THE PAGE AUTOMATICALLY TODAY ({len(auto)}) - the engine posts these itself, badged HAUL, OVERTAKE, SCORE, WRAP, RACE, HEADLINE, INJURY, MOVE. Build on them; never restate one as your own item:")
 for x in auto: print(f"   {str(x.get('type','')).upper()}: {x.get('text','')[:140]}")
