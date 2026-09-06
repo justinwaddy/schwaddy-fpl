@@ -15,6 +15,7 @@ HARD RULES, in order of importance:
   5. THIS IS FPL DRAFT, NOT THE CLASSIC GAME, and getting the format wrong in front of six people who play it every week is embarrassing. There are NO CAPTAINS and no vice-captains. There are no chips, no budget, no price changes and no transfers for money. Every player is owned by exactly one of the six managers - nobody can own a player somebody else has - squads are fifteen, and players arrive through waivers or as free agents. A run once wrote "Justin captains Erling Haaland", which is not a thing that exists in this game. Never write that anyone captained anybody, bought anybody, or that two managers both own the same player.
   6. THE TWO BENS. public.json calls them "Ben C" and "Ben D". The league calls them SMALL BEN (Ben C) and BIG BEN (Ben D), and so do you, every time.
   7. NUMBERS ARE QUOTED, NEVER WORKED OUT FROM MEMORY. Every figure you publish - a gameweek haul, a season total, a lead, a player's points - has to appear in the STEP 1 printout, in the words the printout uses. STEP 1 prints the gaps for you, so a lead is a number you copy, not one you infer from a total sitting next to it. On an evening run the LIVE FEED block is the one to quote and the public.json table is not: that file is written by a cron and on 4 September it was stamped 19:14, fourteen minutes into the only match of the day, so it still had every score at zero. The 4 September evening wrap got all of this wrong in one go: it called Marcus's season total of 120 a "120-point cushion" when his lead was 27, it gave Small Ben 11 points off four Liverpool players when the settled figure was 33, and it put Justin on 0 when he had 1. If the LIVE FEED block did not print, write nothing that depends on today's points.
+     A PLAYER ON ZERO HAS NOT NECESSARILY BLANKED. Check whether his fixture has kicked off before you write him off - STEP 1 prints, for every manager, how many of his eleven have not started yet and how many have played and returned nothing, and it says outright when fixtures are still to come. A gameweek is over when that line says so and not when the last match of the day finishes. On 5 September the wrap treated Saturday's seven fixtures as the whole gameweek while Everton v Man Utd and Arsenal v Chelsea were still a day away: it called seven of Marcus's players "still on zero" when six of the seven had not played a minute, and built an entire piece on three Arsenal players "combining for precisely nothing" the evening before Arsenal played. All three opinion pieces had to be corrected the next morning.
 
 STEP 0 - prove you can publish before you spend an hour researching. Run this first:
   git rev-parse --abbrev-ref HEAD && git log --oneline -1 && ls -l data/public.json data/league_news.json data/roasts.json
@@ -49,15 +50,28 @@ try:
         'https://schwaddy-live.justinl-waddy.workers.dev/'],capture_output=True,text=True,check=True).stdout)
     els=lv['elements']; play=(lv.get('rules') or {}).get('play',11)
     print('\nLIVE FEED, fetched',lv.get('fetched'),'- THIS is tonight\'s truth; public.json above is written by a cron and can be hours stale')
+    fxs=lv.get('fixtures') or []
+    on={}
+    for f in fxs:
+        for t in (f['h'],f['a']): on[t]=bool(f.get('started'))
+    todo=[f for f in fxs if not f.get('started')]
+    print(f"  GAMEWEEK {lv.get('gw')}: {len(fxs)-len(todo)} of {len(fxs)} fixtures kicked off, "
+          f"{len(todo)} still to come"
+          + (': '+', '.join(f"{lv['teams'][str(f['h'])]} v {lv['teams'][str(f['a'])]}"
+                            f" {str(f.get('ko'))[11:16]}" for f in todo) if todo
+             else ' - the gameweek is done'))
     rows=[]
     for m in lv['managers']:
         xi=[els.get(str(pid),{}) for pid,slot in m['picks'] if slot<=play]
         rows.append((m['name'], m.get('total') or 0, sum((e.get('pts') or 0) for e in xi),
-                     ', '.join(f"{e.get('n')} {e.get('pts')}" for e in xi if e.get('pts'))))
+                     ', '.join(f"{e.get('n')} {e.get('pts')}" for e in xi if e.get('pts')),
+                     sum(1 for e in xi if not on.get(e.get('t'), True)),
+                     sum(1 for e in xi if on.get(e.get('t'), True) and not (e.get('pts') or 0))))
     rows.sort(key=lambda r:-r[1])
-    for nm,tot,gw,scorers in rows:
-        print(f"  {nm}: {tot} total, {gw} tonight, {tot-rows[0][1]} vs the leader, was on {tot-gw} before kick-off"
-              + (f"  [{scorers}]" if scorers else "  [nobody scored]"))
+    for nm,tot,gw,scorers,yet,blank in rows:
+        print(f"  {nm}: {tot} total, {gw} so far, {tot-rows[0][1]} vs the leader, was on {tot-gw} before kick-off"
+              + (f"  [{scorers}]" if scorers else "  [nobody has scored]"))
+        print(f"     {yet} of his eleven have not kicked off yet; {blank} played and returned nothing")
 except Exception as e:
     print('\nLIVE FEED unavailable:',e,'- publish nothing that depends on tonight\'s points')
 r=json.load(open('data/roasts.json')) if os.path.exists('data/roasts.json') else {'items':[]}
