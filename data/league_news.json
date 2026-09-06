@@ -248,14 +248,14 @@
       "id": "2026-09-06-opinion-marcus-elanga-7d3c0bba",
       "ts": "2026-09-06T17:42",
       "kind": "opinion",
-      "text": "Edward's take on Marcus's business: kneejerk central, with Elanga held up as exhibit A. Whatever got him picked up, today's return was 1 point - hardly the case for the defence.",
+      "text": "Marcus's waiver business gets called kneejerk central round here, and Elanga is exhibit A. Whatever the case for picking him up, today's return was 1 point - hardly a rebuttal.",
       "source": null
     },
     {
       "id": "2026-09-06-opinion-bigben-bruno-54fa7b1e",
       "ts": "2026-09-06T17:42",
       "kind": "opinion",
-      "text": "Edward's charge against Big Ben: he leans on Bruno to bail him out, and when Bruno doesn't haul, the team is awful. Today Bruno managed 2 points and Big Ben finished the day fifth of six - the prosecution rests.",
+      "text": "Big Ben leans on Bruno to bail him out, or so the theory goes, and when Bruno doesn't haul the team is awful. Today Bruno managed 2 points and Big Ben finished the day fifth of six - the theory holds up fine.",
       "source": null
     }
   ],
@@ -390,6 +390,13 @@
       "opinion": 3,
       "matchday": true,
       "note": "Evening wrap, run early on request; GW3 fully finished (all 10 fixtures). Led with Arsenal 2-1 Chelsea (Rogers, Havertz, Odegaard - all three read at Sky Sports goal clips) touching Big Ben and Edward; skipped a separate Everton 2-2 Man Utd item since the only league angle (Big Ben's Bruno) was already covered by the 15:22 opinion piece. Used two roast-archive submissions: Edward's 'kneejerk central' on Marcus, hung on Elanga's 1-point return, and Edward's 'relies on Bruno to bail him out' on Big Ben, hung on Bruno's 2 points and Big Ben finishing the day 5th of 6. Third opinion is original: Ben C's 90-to-102 deficit on Marcus flipping into a 150-to-146 lead, a 16-point swing, both figures from the day's before/after totals. Left two submissions unused: Edward's 'biased Arsenal fan, zero ball knowledge' on Big Ben needed White/Havertz/Konsa to combine for nothing and instead Havertz was Big Ben's best player of the day (8 pts), so the joke's premise is false and it stays in the archive; Edward's 'Mong' on Robert is an ableist slur excluded under the archive's own rule and will not be used, per the user's own confirmation this session that it should stay out regardless. Also rewrote all 5 of today's flop lines (Barry, Pickford, Dewsbury-Hall, Garner, Lammens) via reflop.py."
+    },
+    {
+      "ts": "2026-09-06T17:57",
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Correction by hand: the last wrap's two roast-derived opinion pieces named Edward as the source ('Edward's take...', 'Edward's charge...'), which breaks the archive's own rule that a suggestion's author is never published. Reworded both to drop the attribution and read as the page's own voice; the facts and numbers are unchanged."
     }
   ]
 }
