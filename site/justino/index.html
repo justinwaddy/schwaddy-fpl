@@ -150,6 +150,12 @@ text-transform:uppercase;letter-spacing:.05em;min-width:52px;text-align:center}
 /* sortable tables: the active column and its direction */
 th.on{color:var(--ink)}
 .mk td,.mk th{padding:6px 5px}
+/* The two wide tables - every player, and the free agent market - carry
+   more columns than a phone is wide, and used to drag the whole page
+   sideways with them. Let the table scroll inside its own box instead;
+   min-width keeps it from being squeezed back to the viewport. */
+.wrap{overflow-x:auto}
+.wrap>table{width:auto;min-width:100%}
 .up{color:var(--green)}.dn{color:var(--red)}
 </style></head>
 <body>
@@ -291,7 +297,7 @@ function renderWaivers(ps){
     <div class="note">No free agent clears your weakest player at his position by more than the +${MARGIN} switching margin over the next ${HZ()} gameweeks.</div></div>`;
   }else{
     h+=`<div class="card"><b class="h">Model: make ${plan.length} claim${plan.length>1?"s":""} this week</b>
-    <div class="note">Gains are expected points over the next ${HZ()} gameweeks, fixtures included, and each swap clears the +${MARGIN} margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><table>
+    <div class="note">Gains are expected points over the next ${HZ()} gameweeks, fixtures included, and each swap clears the +${MARGIN} margin after the earlier swaps are made. Submit in this order: waivers process by priority, so put the biggest gain first.</div><div class="wrap"><table>
     <tr><th>#</th><th>add</th><th></th><th>drop</th><th>run</th><th style="text-align:right">gain</th></tr>`;
     plan.forEach((c,i)=>{
       h+=`<tr><td class="num">${i+1}</td>
@@ -300,10 +306,10 @@ function renderWaivers(ps){
       <td>${nm(c.drop,"")} <span class="tm">${N5(c.drop).toFixed(1)}</span></td>
       <td>${runHTML(c.add)}</td>
       <td class="num"><span class="gain">+${c.gain.toFixed(1)}</span></td></tr>`;});
-    h+=`</table><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
+    h+=`</table></div><div class="note">Low n = thin history behind the projection, treat those gains with more suspicion.</div></div>`;
   }
   h+=`<div class="card"><b class="h">Full board</b>
-  <div class="note">Best free agents vs your weakest at each position over the next ${HZ()} gameweeks, before any swaps.</div><table>
+  <div class="note">Best free agents vs your weakest at each position over the next ${HZ()} gameweeks, before any swaps.</div><div class="wrap"><table>
   <tr><th>free agent</th><th></th><th style="text-align:right">£</th><th style="text-align:right">next ${HZ()}</th><th style="text-align:right">fix</th><th>run</th><th>your weakest</th><th style="text-align:right">gain</th></tr>`;
   for(const pos of ["GKP","DEF","MID","FWD"]){
     const m=mine.filter(p=>p.pos===pos).sort((a,b)=>N5(a)-N5(b));
@@ -317,7 +323,7 @@ function renderWaivers(ps){
       <td class="num"><span class="${g>0?"gain":"tm"}">${g>0?"+":""}${g.toFixed(1)}</span></td></tr>`;
     }
   }
-  h+=`</table></div>`;
+  h+=`</table></div></div>`;
   h+=marketHTML(free);
   const sec=document.getElementById("waivers");sec.innerHTML=h;
   sec.querySelectorAll("th[data-mk]").forEach(t=>t.addEventListener("click",()=>{
@@ -345,7 +351,7 @@ function marketHTML(free){
   <div class="note">Every unclaimed player with his classic-game price: the market's read on him, beside the model's. <b>Δ</b> is the price move since the season started, <b>sel</b> how many classic managers own him, <b>pts</b> and <b>min</b> his season so far. Tap a heading to sort by it, again to flip.</div>
   <div>${["ALL","GKP","DEF","MID","FWD"].map(x=>`<button class="chip ${WPOS===x?"on":""}" data-mpos="${x}">${x==="ALL"?"All":x}</button>`).join("")}</div>
   ${PRICES?"":`<div class="stale">Prices not loaded - data/prices.json is written by the refresh runs and appears after the next one.</div>`}
-  <table class="mk"><tr>${th("name","player")}<th></th>${th("price","£",1)}${th("chg","Δ",1)}${th("sel","sel %",1)}${th("pts","pts",1)}${th("min","min",1)}${th("form","form",1)}${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}${th("avail","P(play)",1)}<th>run</th></tr>`;
+  <div class="wrap"><table class="mk"><tr>${th("name","player")}<th></th>${th("price","£",1)}${th("chg","Δ",1)}${th("sel","sel %",1)}${th("pts","pts",1)}${th("min","min",1)}${th("form","form",1)}${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}${th("avail","P(play)",1)}<th>run</th></tr>`;
   for(const x of shown){
     const p=x.p,f=x.chg==null?"":x.chg>0?"up":x.chg<0?"dn":"tm";
     h+=`<tr><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
@@ -358,7 +364,7 @@ function marketHTML(free){
     <td class="num">${x.n5.toFixed(1)}</td><td class="num">${fixTag(p)}</td>
     <td class="num">${p.avail}</td><td>${runHTML(p)}</td></tr>`;
   }
-  h+=`</table>`;
+  h+=`</table></div>`;
   if(rows.length>MKT_ROWS)h+=`<div class="note"><button class="chip" data-mall="${WALL?0:1}">${WALL?`Show top ${MKT_ROWS}`:`Show all ${rows.length}`}</button></div>`;
   return h+`</div>`;
 }
@@ -384,6 +390,20 @@ fetch(PRICES_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
 const px=p=>(PRICES&&PRICES.players[String(p.code)])||null;
 const price=p=>{const r=px(p);return r?r[0]:null;};
 const gbp=p=>{const r=px(p);return r?`£${r[0].toFixed(1)}`:"";};
+// The rows are bare arrays behind a cols header, so read the newer
+// columns by name: the site and the data file deploy separately, and a
+// page that lands before the next refresh has written them gets null
+// here rather than somebody else's number.
+const pxv=(p,n)=>{const c=PRICES&&PRICES.cols,i=c?c.indexOf(n):-1,r=px(p);
+  return i<0||!r||r[i]==null?null:r[i];};
+// How many days the two move columns actually cover. chg1 is always a
+// day or nothing; chg7 reaches for a week but reports the span it found,
+// because data/price_history.json only started collecting on 2 Sep and
+// takes a week from any fresh start to earn the full label.
+const hspan=k=>(PRICES&&PRICES.hist&&PRICES.hist[k])||null;
+// A signed price move, coloured, with a dash where there is no history.
+const mv=v=>v==null?`<span class="tm">–</span>`
+  :`<span class="${v>0?"up":v<0?"dn":"tm"}">${v>0?"+":v<0?"−":""}${Math.abs(v).toFixed(1)}</span>`;
 // sum of the classic prices across a manager's squad
 function teamValue(entry){
   if(!PRICES||!DATA)return null;
@@ -812,34 +832,79 @@ function overallHTML(ps){
     of the season, plus 0.15 × the bench.</div>`;
   return h;
 }
+// The box says "player or club" and for a long time did neither: a
+// predictions.json player carries his club as a team id, not a name, so
+// `p.team.toLowerCase()` threw on the first keystroke and the table
+// stopped redrawing. Match the resolved club name instead, and the full
+// name out of player_stats.json while we are here, so "Bruno" finds
+// B.Fernandes.
+function pmatch(p,q){
+  if(!q)return true;
+  if(p.name.toLowerCase().includes(q))return true;
+  if(String(club(p,1)??"").toLowerCase().includes(q))return true;
+  if(String(club(p)??"").toLowerCase().includes(q))return true;
+  const st=STATS&&STATS.players&&STATS.players[String(p.code)];
+  return !!(st&&st.full&&st.full.toLowerCase().includes(q));
+}
 let SORT={k:"rest",d:1};
+// Who the table is showing. "mine" is the fifteen I hold, which is the
+// view you want when the question is whether my own squad gained or lost
+// value overnight rather than who moved in the game at large.
+let POWN="all";
+const PROWS=150;
 function renderPlayers(ps){
   const q=(document.getElementById("pq")?.value||"").toLowerCase();
-  let list=ps.filter(p=>!q||p.name.toLowerCase().includes(q)||(p.team||"").toLowerCase().includes(q));
-  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);p.price=price(p);});
+  let list=ps.filter(p=>(POWN==="all"||p.mine)&&pmatch(p,q));
+  list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);p.price=price(p);
+    p.d1=pxv(p,"chg1");p.d7=pxv(p,"chg7");});
   list=[...list].sort(sorter(SORT.k,SORT.d));
   const th=(k,l,r)=>`<th data-k="${k}" class="${SORT.k===k?"on":""}"${r?' style="text-align:right"':""}>${l}${SORT.k===k?(SORT.d>0?" ▾":" ▴"):""}</th>`;
+  // The week heading names the span it is really covering. It reads 7d
+  // once the history is a week deep and says so plainly until then.
+  const w=hspan("d7"),wlab=w&&w<7?`${w}d`:"7d";
+  // What my own fifteen did over each window that actually has a reading.
+  // A skipped day leaves 24h blank while the week still stands, so the two
+  // are reported independently rather than all-or-nothing.
+  const mine=ps.filter(p=>p.mine);
+  const sum=k=>Math.round(mine.reduce((a,p)=>{const v=pxv(p,k);return v==null?a:a+v;},0)*10)/10;
+  const fif=[];
+  if(hspan("d1"))fif.push(`${mv(sum("chg1"))}m in the last day`);
+  if(w)fif.push(`${mv(sum("chg7"))}m over the last ${w} days`);
   let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
+  <div>${[["all","All players"],["mine","My team"]].map(([k,l])=>
+    `<button class="chip ${POWN===k?"on":""}" data-own="${k}">${l}</button>`).join("")}</div>
   <div class="note">Tap any name, here or anywhere on the site, for that
-  player's stats, fixtures and news. Tap a heading to sort by it.</div>
-  <div class="card"><table><tr>
-  ${th("name","player")}<th></th>${th("price","£",1)}${th("gwn",`GW${NEXT+1}`,1)}
+  player's stats, fixtures and news. Tap a heading to sort by it.
+  <b>24h</b> and <b>${wlab}</b> are how far his classic-game price has moved
+  over that stretch${w&&w<7?`; the week column reaches back only ${w} days so far,
+  because the price record only began on 2 September and grows by a day each day`:""}.
+  ${fif.length?`My fifteen: ${fif.join(", ")}.`
+    :`No price history yet, so the move columns stay empty until the refresh runs have banked a day.`}</div>
+  ${PRICES?"":`<div class="stale">Prices not loaded - data/prices.json is written by the refresh runs and appears after the next one.</div>`}
+  <div class="card"><div class="wrap"><table><tr>
+  ${th("name","player")}<th></th>${th("price","£",1)}${th("d1","24h",1)}${th("d7",wlab,1)}
+  ${th("gwn",`GW${NEXT+1}`,1)}
   ${th("n5",`next ${HZ()}`,1)}${th("fix5","fix",1)}<th>run</th>
   ${th("rest","rest",1)}${th("avail","P(play)",1)}<th>owner</th></tr>`;
-  for(const p of list.slice(0,150)){
+  for(const p of list.slice(0,PROWS)){
     p.gwn=p.gw?p.gw[NEXT]:0;
     const own=p.mine?"YOU":(MGRS[p.owner]?MGRS[p.owner][1]:(p.owner?"?":"free"));
     h+=`<tr class="${p.mine?"mine-row":""}"><td>${nm(p)} <span class="tm">${club(p)} n=${p.n_career}</span>${p.news?`<span class="flag">${p.news}</span>`:""}</td>
     <td><span class="pos ${p.pos}">${p.pos}</span></td>
     <td class="num">${gbp(p)}</td>
+    <td class="num">${mv(p.d1)}</td><td class="num">${mv(p.d7)}</td>
     <td class="num">${(p.gwn||0).toFixed(1)}</td>
     <td class="num">${N5(p).toFixed(1)}</td><td class="num">${fixTag(p)}</td><td>${runHTML(p)}</td>
     <td class="num">${Math.round(p.rest)}</td>
     <td class="num">${p.avail}</td><td class="tm">${own}</td></tr>`;
   }
-  h+=`</table></div>`;
+  h+=`</table></div></div>`;
+  if(!list.length)h+=`<div class="note">No player here under this filter.</div>`;
+  else if(list.length>PROWS)h+=`<div class="note">${list.length} match, top ${PROWS} shown.</div>`;
   const sec=document.getElementById("players");sec.innerHTML=h;
   sec.querySelector("#pq").addEventListener("input",()=>renderPlayers(DATA.players));
+  sec.querySelectorAll("[data-own]").forEach(t=>t.addEventListener("click",()=>{
+    POWN=t.dataset.own;renderPlayers(DATA.players);}));
   sec.querySelectorAll("th[data-k]").forEach(t=>t.addEventListener("click",()=>{
     SORT={k:t.dataset.k,d:SORT.k===t.dataset.k?-SORT.d:1};renderPlayers(DATA.players);}));
 }

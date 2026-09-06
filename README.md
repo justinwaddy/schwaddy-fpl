@@ -24,6 +24,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/compare.py     rival points predictions, data/compare.json
 - src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
 - src/schwaddy/prices.py      classic-game prices, the market's read beside the model's; data/prices.json, the sortable market table on the Waivers tab
+- src/schwaddy/pricehist.py   daily price snapshots, data/price_history.json, behind the 24h and 7d move columns
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - cron/worker.js              Cloudflare cron that dispatches the refresh on time
@@ -697,6 +698,58 @@ than the next morning. The model is never re-scored live;
 only the scoreboard is. Deploying the worker is a one-off, five-minute
 job described in live/README.md; until its URL is pasted into LIVE_URL in
 site/index.html the tab shows the cron's last snapshot and says so.
+
+## Price moves, 24 hours and a week
+
+The draft game has no prices, but the classic game's does, and it moves
+overnight on what a million managers do. data/prices.json has always
+carried the price and how far it had come since the season started, which
+answers nothing about last night. The two questions worth asking on a
+Thursday - who moved since yesterday, who has been drifting all week -
+need yesterday's price and last week's, and the API serves neither.
+
+So we keep them. src/schwaddy/pricehist.py writes data/price_history.json:
+one column per calendar day, one row per player, the last fifteen days.
+FPL reprices once a day at about 01:30 UK and every refresh run falls
+after it, so a day is the natural grain - two runs on the same day see the
+same price, and the day's column is simply rewritten. A run landing before
+03:00 UTC reads the history but does not add to it, because in the small
+hours a UTC date has not yet settled either side of the repricing, and the
+GitHub backstop has come in hours late before.
+
+The moves land in data/prices.json as two more columns, chg1 and chg7, and
+a `hist` block saying how many days each one really covers. Both are on
+the end of the row: the site indexes these rows by position, so a column
+added in the middle would silently shift every reader. The site reads the
+new ones by name out of the `cols` header instead, which is why a page
+that loads before the next refresh has written them shows a dash rather
+than somebody else's number.
+
+chg7 reaches for seven days but reports what it found. Until the record is
+a week deep the All players heading reads 5d, or 4d, and the note says
+why; a player who did not exist a week ago gets a dash, not a move
+invented from his first price. A skipped day blanks the 24h column rather
+than labelling a two-day move as one.
+
+This is the only cumulative file under data/. Everything else is rebuilt
+from the API on every run, so if it is lost it comes straight back; this
+one can only be extended. If it ever goes missing the columns empty and
+refill over the following week, or
+
+    cd src && DATA_DIR=../data python -m schwaddy.pricehist --seed
+
+rebuilds it from the committed history of data/prices.json, which is the
+same snapshots one commit at a time. That is how it was seeded: back to
+2 September, the first refresh that wrote prices.
+
+### Filtering the All players tab
+The tab carries every player in the game, which is the wrong list when the
+question is whether my own squad gained or lost value overnight. Two chips
+above the table, All players and My team, and the note totals the fifteen
+over both windows. The search box beside them matches the club as well as
+the player now - it always claimed to, but a predictions.json player
+carries his club as a team id, so the old `p.team.toLowerCase()` threw on
+the first keystroke and the table stopped redrawing.
 
 ## Comparing predictions
 site/compare/ puts three rivals beside the model's number for the coming
