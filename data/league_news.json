@@ -86,7 +86,7 @@
    "id": "2026-09-04-opinion-marcus-cushion",
    "ts": "2026-09-04T21:50",
    "kind": "opinion",
-   "text": "Marcus started the evening 27 points clear of Small Ben and finished it two ahead. One Liverpool match did that: Alisson's clean sheet, five saves and a bonus point were worth eight to Marcus, while Small Ben's four red shirts brought back thirty-three. Big Ben took three off Wirtz, Justin one for Barcola's cameo, and Edward and Robert did not register at all.",
+   "text": "Marcus started the evening 27 points clear of Small Ben and finished it two ahead. One Liverpool match did that: Alisson's clean sheet, five saves and a bonus point were worth eight to Marcus, while Small Ben's four red shirts brought back thirty-three. Big Ben took three off Wirtz and Justin one for Barcola's cameo; Edward and Robert had nobody in the game and could only watch.",
    "source": null
   },
   {
@@ -103,7 +103,7 @@
    "id": "2026-09-04-opinion-robert-hairline",
    "ts": "2026-09-04T22:45",
    "kind": "opinion",
-   "text": "Robert's gap to the top grew from 22 points to 30 over the course of the evening while his eleven produced precisely nothing. Pardinho's title odds are receding just like his hairline, and tonight both went a fair bit further back.",
+   "text": "Robert's gap to the top went from 22 points to 30 on Friday night without a single one of his players setting foot on a pitch: he had nobody in the only game on. Pardinho's title odds are receding just like his hairline, and both managed it while he sat there doing nothing at all.",
    "source": null
   },
   {
@@ -292,6 +292,14 @@
    "opinion": 0,
    "matchday": true,
    "note": "Correction by hand. Last night's wrap treated the gameweek as finished when two of GW3's ten fixtures - Everton v Man Utd and Arsenal v Chelsea - had not kicked off, and all three opinion pieces leaned on that. The Marcus piece counted seven players 'still on zero' when six of the seven had not played a minute, only Richarlison had; rewritten around what his side has actually returned, which stands on its own. The Big Ben piece hung on White, Havertz and Konsa 'combining for precisely nothing' - all three are Arsenal, kicking off at 16:30 UK today - so it is pulled and Edward's submission is back in the archive unused for this evening's wrap, when those three will have played. The swing piece said Small Ben 'finished it 4 clear'; the four points are right, the finished is not, with five of Marcus's eleven still to play."
+  },
+  {
+   "ts": "2026-09-06T08:05",
+   "gw": 3,
+   "news": 0,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Correction by hand, the same fault as yesterday's and two pieces further back. Friday night had one fixture, Ipswich v Liverpool. The hairline piece said Robert's eleven 'produced precisely nothing' and the table piece said Edward and Robert 'did not register at all' - neither owned a player in that game, so there was nothing for either of them to produce. Both now say what actually happened: their gap grew because Marcus and Small Ben scored, not because anybody of theirs failed, which is the better line for Robert anyway. No item is left on the page calling a player or a manager a blank on a night he had nobody playing."
   }
  ]
 }
