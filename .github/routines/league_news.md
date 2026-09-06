@@ -6,7 +6,7 @@ TASK, twice a day. Which run this is decides what you write:
 Either way: always append a run record, commit and push to main. A run leaving no commit is a failed run.
 
 HARD RULES, in order of importance:
-  1. NOTHING FROM THE MODEL. Do not read, quote, paraphrase or hint at data/predictions.json, data/claims.json, data/starters.json, data/editorial.json or data/news.json. No projections, no expected points, no availability figures, no waiver rankings, no "the model rates him". This page must leave every manager exactly as informed as the others. If you catch yourself typing a number that came from this repo's engine, delete the sentence. The items step 1 prints under ALREADY ON THE PAGE AUTOMATICALLY TODAY are the exception and the only one: those are already published to all six, so you may build on them.
+  1. NOTHING FROM THE MODEL. Do not read, quote, paraphrase or hint at data/predictions.json, data/claims.json, data/starters.json, data/editorial.json or data/news.json. No projections, no expected points, no availability figures, no waiver rankings, no "the model rates him". This page must leave every manager exactly as informed as the others. If you catch yourself typing a number that came from this repo's engine, delete the sentence. The items step 1 prints under ALREADY ON THE PAGE AUTOMATICALLY TODAY are the exception and the only one: those are already published to all six, so you may build on them. You may also rewrite today's FLOP lines through the script in step 4, which is the one thing on this page you are allowed to change that you did not write; nothing else in data/news.json is yours to touch, and the script enforces that rather than trusting you.
   2. EVERY REPORTED ITEM CITES ITS SOURCE, and the source is one you actually read, off this list and no other: BBC Sport (bbc.co.uk, bbc.com), The Guardian, Sky Sports, premierleague.com, ESPN, Reuters, AP, The Athletic, or the club's own site (arsenal.com, avfc.co.uk, afcb.co.uk, brentfordfc.com, brightonandhovealbion.com, chelseafc.com, ccfc.co.uk, cpfc.co.uk, evertonfc.com, fulhamfc.com, hullcitytigers.com, itfc.co.uk, leedsunited.com, liverpoolfc.com, mancity.com, manutd.com, newcastleunited.com, nottinghamforest.com, tottenhamhotspur.com, safc.com). Step 6 checks the domain, so nothing else gets published: no fantasy sites (fantasyfootballscout and its imitators are guesses with an ad on them), no sportsmole, sportslens, givemesport, caughtoffside, tribalfootball, football365, 90min, teamtalk, HITC, talkSPORT, no tabloids, no local papers, no blogs, no aggregators reprinting somebody else's reporting, no X posts, no YouTube. A story that appears only off this list did not happen as far as this page is concerned. Fewer, better-sourced items beat filling the quota.
   3. NEVER invent a fact, a quote, a score or an injury. If you only have a search summary, do not assert a detail it did not contain.
   4. BANTER: SEND IT. These six have known each other for years, the page is read by nobody else, and the roast box is them volunteering material about each other. Appearance, height, hairlines, taste, terrible decisions, ancient grudges - all fair, and the funnier the harder you go. Do not sand the edges off a suggestion to make it polite: if one of them submitted it about a mate, write it with the timing it deserves rather than a version that would pass a press office. Four things stay out, because they land badly rather than funny: slurs, and anything aimed at race, religion, sexuality or disability; anybody outside the six, their partners, children and families included; a real illness, bereavement or genuine misfortune; and anything phrased as a statement of fact about somebody that is not one - keep it plainly a joke, never a claim. Everything else is in. A suggestion you do leave unused gets a line in the run note saying why.
@@ -107,6 +107,23 @@ STEP 4 - OPINION. Morning run: none, skip to step 5. Evening run: 2 to 3 pieces 
   - Then the day itself, from the numbers in step 1: who hauled, who blanked, whose bench outscored his eleven, who owns half of one club and watched it lose, a waiver that has aged badly, a manager top of the table who will not stop mentioning it, a team name that deserves comment.
   - Read ALREADY ON THE PAGE AUTOMATICALLY TODAY first. The engine has already posted the hauls, the overtakes, the score line and the night's wrap, each properly badged, and they sit above your items on the page. Your job is the thing a table cannot say: not "Isak hauled 13", which is already there, but what owning him did to the week. An opinion piece that only reads the automatic items back is wasted.
   - BUILD THE JOKE ON PLAYERS WHO HAVE ALREADY PLAYED. A man whose fixture has not kicked off has not blanked, has not let anybody down and cannot carry a punchline; step 1 tells you which those are. He belongs at the end as the caveat, not in the middle as the evidence - "and he still has four to come" - which is usually the better line anyway, because it is the half a reader actually wants: is this over or not.
+  - THEN REWRITE TODAY'S FLOPS, on any evening that has some - which in practice means Friday,
+    Saturday and Sunday nights. news.py picks them (an hour on the pitch for two points or fewer)
+    and dresses each in a canned line off a list of seven, so by the third "Excellent cardio" of a
+    weekend nobody is reading them. Step 1 printed them under ALREADY ON THE PAGE AUTOMATICALLY
+    TODAY, badged FLOP. Write better ones. Keep the player, the minutes and the points exactly as
+    they are and put the joke around them: go at the performance, the manager who has to look at
+    it, the club, the state of the fixture, the fact that somebody on his bench outscored him. Vary
+    the shape - not seven lines all ending in a two-word verdict. Then:
+      python3 .github/scripts/reflop.py <<'JSON'
+      [{"old": "<the line exactly as step 1 printed it>", "new": "<yours>"},
+       {"old": "...", "new": "..."}]
+      JSON
+    It refuses the whole batch if a rewrite drops the player's name or any number out of the
+    original, if an old line is not one of today's, or if anything else in either file would move,
+    so read the error and fix the line rather than working around it. Do all of today's or none of
+    them: half a list in your voice and half in the template's is worse than the template alone.
+    The rewrite goes into data/news.json and data/public.json, so both are in the commit.
   - Never say who suggested it. The archive is not published.
   - 1-3 sentences, no emoji, plain ASCII, "kind": "opinion", and no source: an opinion is yours, not an outlet's.
 
@@ -166,10 +183,10 @@ If the check rejects a source as not being on the SOURCES list, including one an
 Then publish, and treat this as the part of the job most likely to go wrong:
   git config user.name schwaddy-bot
   git config user.email bot@justinwaddy.co.uk
-  git add data/league_news.json data/roasts.json
+  git add data/league_news.json data/roasts.json data/news.json data/public.json
   git commit -m "league news: <N> reported, <M> opinion"
   git fetch origin main && git rebase origin/main
   git push origin HEAD:main
-Run those one at a time and read the output of each. If the push is rejected, fetch and rebase and push again. If ANY of them fails for another reason - no credentials, no remote, permission denied, a detached head you cannot push from - your entire final answer is that exact error text and the command that produced it. Do not summarise it, do not say the run went well, do not describe the headlines you would have posted. A silent failure here leaves the page stale and nobody any the wiser, which is the worst outcome available to you.
+Run those one at a time and read the output of each. If the push is rejected, fetch and rebase and push again. If the rebase conflicts in data/public.json, take the incoming version and carry on: the refresh job rewrites that file from data/news.json, which still holds your flop lines, so the next refresh puts them back. A conflict in data/league_news.json is yours to resolve by hand - keep both sides' items. If ANY of them fails for another reason - no credentials, no remote, permission denied, a detached head you cannot push from - your entire final answer is that exact error text and the command that produced it. Do not summarise it, do not say the run went well, do not describe the headlines you would have posted. A silent failure here leaves the page stale and nobody any the wiser, which is the worst outcome available to you.
 
 Finish by printing what you posted and the output of the push, or the exact error.

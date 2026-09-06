@@ -66,7 +66,7 @@ RUTHLESS = [
 ]
 # said of anyone else who was on the pitch an hour and brought nothing back
 FLOPS = [
-    "{p} managed {n} pts in {m} minutes ({tag}) - a full shift, no wages",
+    "{p} managed {n} pts in {m} minutes ({tag}) - a full shift, nothing on the clock",
     "{p}: {m} minutes, {n} pts ({tag}). Present, in the loosest sense",
     "{p} gave {tag} {n} pts off {m} minutes. Anonymous",
     "{p} played {m} minutes for {n} pts ({tag}) - he'll have seen it on telly",
