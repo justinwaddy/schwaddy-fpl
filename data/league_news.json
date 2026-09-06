@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-05T22:45",
+ "generated": "2026-09-06T07:48",
  "items": [
   {
    "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -150,7 +150,7 @@
    "id": "2026-09-05-xi-1130",
    "ts": "2026-09-05T11:10",
    "kind": "news",
-   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
    "source": {
     "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
     "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -209,6 +209,46 @@
    "kind": "opinion",
    "text": "Small Ben went into Saturday 27 points behind Marcus and leads by four, a 31-point swing off four Liverpool players and four Man City players firing on the same weekend. He is not home yet: two fixtures of the gameweek are still to come and five of Marcus's eleven are in them, against one of Small Ben's.",
    "source": null
+  },
+  {
+   "id": "2026-09-06-tavernier-thiaw-newcastle",
+   "ts": "2026-09-06T07:48",
+   "kind": "news",
+   "text": "Bournemouth raced into a 2-0 lead at Newcastle through Marcus Tavernier's opener and a Malick Thiaw own goal, before Harvey Barnes and an 88th-minute Jacob Ramsey strike rescued a 2-2 draw for the hosts. Justin owns Tavernier and Big Ben owns Thiaw, so Saturday's own goal took some of the shine off either man's afternoon.",
+   "source": {
+    "title": "Newcastle 2-2 Bournemouth: Jacob Ramsey strikes late as Cherries' wait for first Premier League win continues - as it happened",
+    "url": "https://www.espn.com/soccer/story/_/id/49833578/newcastle-bournemouth-premier-league-updates-commentary-score-goals-result"
+   }
+  },
+  {
+   "id": "2026-09-06-donnarumma-saves-coventry",
+   "ts": "2026-09-06T07:48",
+   "kind": "news",
+   "text": "Gianluigi Donnarumma made a string of second-half saves, denying Jack Rudoni's header and Ellis Simms late on, to preserve Manchester City's 1-0 win over Coventry after Erling Haaland's first-half header. Small Ben owns Donnarumma, whose goalkeeping did as much for the clean sheet as City's forward line.",
+   "source": {
+    "title": "Man City 1-0 Coventry: Erling Haaland ensures perfect Premier League record is preserved under Enzo Maresca",
+    "url": "https://www.skysports.com/football/news/11661/13565680/man-city-1-0-coventry-erling-haaland-ensures-perfect-premier-league-record-is-preserved-under-enzo-maresca"
+   }
+  },
+  {
+   "id": "2026-09-06-moyes-barry-only-striker",
+   "ts": "2026-09-06T07:48",
+   "kind": "news",
+   "text": "David Moyes said Everton go into today's game with Manchester United with just one recognised senior striker, Thierno Barry, after a deadline-day move for Folarin Balogun collapsed and Iliman Ndiaye left for Manchester City. 'Disappointed we didn't do more business, disappointed things didn't go our way in the end,' Moyes said, leaving Edward's Barry first-choice by default up front.",
+   "source": {
+    "title": "Everton vs Man United: TV channel, how to watch in UK, kick-off time, live stream, team news, referee, predicted line-ups",
+    "url": "https://www.espn.com/soccer/story/_/id/49823721/everton-manchester-united-tv-channel-how-watch-kick-live-stream-referee-injury-predicted-lineups-premier-league-2026-27"
+   }
+  },
+  {
+   "id": "2026-09-06-man-utd-predicted-xi-everton",
+   "ts": "2026-09-06T07:48",
+   "kind": "news",
+   "text": "Michael Carrick's predicted Manchester United line-up to face Everton today has four league-owned players in it: Edward's Senne Lammens in goal, Marcus's Bryan Mbeumo, Big Ben's Bruno Fernandes and Small Ben's Matheus Cunha in attack. Add Edward's Thierno Barry leading the Everton line and four of the six managers have a player kicking off in the same fixture.",
+   "source": {
+    "title": "Everton vs Man United: TV channel, how to watch in UK, kick-off time, live stream, team news, referee, predicted line-ups",
+    "url": "https://www.espn.com/soccer/story/_/id/49823721/everton-manchester-united-tv-channel-how-watch-kick-live-stream-referee-injury-predicted-lineups-premier-league-2026-27"
+   }
   }
  ],
  "runs": [
@@ -292,6 +332,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "Correction by hand. Last night's wrap treated the gameweek as finished when two of GW3's ten fixtures - Everton v Man Utd and Arsenal v Chelsea - had not kicked off, and all three opinion pieces leaned on that. The Marcus piece counted seven players 'still on zero' when six of the seven had not played a minute, only Richarlison had; rewritten around what his side has actually returned, which stands on its own. The Big Ben piece hung on White, Havertz and Konsa 'combining for precisely nothing' - all three are Arsenal, kicking off at 16:30 UK today - so it is pulled and Edward's submission is back in the archive unused for this evening's wrap, when those three will have played. The swing piece said Small Ben 'finished it 4 clear'; the four points are right, the finished is not, with five of Marcus's eleven still to play."
+  },
+  {
+   "ts": "2026-09-06T07:48",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning news run. Led with yesterday's Newcastle 2-2 Bournemouth (Tavernier goal/Thiaw own goal, ESPN) and a Man City 1-0 Coventry follow-up on Donnarumma's second-half saves (Sky Sports), neither previously reported since earlier items only covered the scorelines. Then today's two fixtures: Moyes on Everton's threadbare strikeforce leaving Edward's Barry as the only recognised senior striker, and Carrick's predicted Man Utd XI, which has four league-owned players in it (Lammens, Mbeumo, Fernandes, Cunha), both from ESPN's preview. Dropped several angles that turned out to be repeats of Sep 4-5 items (Timber, Mosquera, Saliba, Caicedo) or, in one case (an Isak injury claim from an unreliable search summary), directly contradicted by this morning's own live data showing him having already scored 13 points this season - discarded rather than published. No opinion pieces, per the morning rule. Roast archive untouched: Edward's submission on Big Ben stays unused for tonight's wrap; Edward's 'Mong' on Robert remains excluded as an ableist slur and will not be used."
   }
  ]
 }
