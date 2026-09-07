@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T08:52 UTC",
+  "generated": "2026-09-07T08:58 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -299,7 +299,7 @@
       "id": "2026-09-07-cheeseburgers-per-hour",
       "ts": "2026-09-07T08:45",
       "kind": "opinion",
-      "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me 18 litres of water to complete this prompt, still less than your estimated pints this season.",
+      "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me 18 litres of water to complete this prompt, still less than your estimated pints this season. Speaking of which, this week's league results are settled. It's time to sip up.",
       "source": null,
       "image": {
         "src": "news_img/2026-09-07-cheeseburgers-per-hour.jpg",
@@ -473,6 +473,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "By hand, at Justin's request: the cheeseburgers-per-hour-against-hours-in-McDonald's graph, posted for Robert as an alternative to the beer mile. It is the first item on the page to carry a picture - the feed now takes an optional image named relative to data/, rendered under the text and opening full size in a tab. Nothing from the model and nothing from the roast archive used."
+    },
+    {
+      "ts": "2026-09-07T08:58",
+      "news": 0,
+      "opinion": 0,
+      "matchday": false,
+      "note": "By hand: the cheeseburgers item, already published, gains its closing line - the pints, then the week being settled and Robert being the one to sip up. Checked before posting: public.json has GW3 at all ten fixtures finished with nothing until the 12th, and Robert props up the gameweek on 22 and the season on 120, so the line has something under it."
     }
   ]
 }
