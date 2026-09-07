@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T08:45 UTC",
+  "generated": "2026-09-07T08:52 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -299,7 +299,7 @@
       "id": "2026-09-07-cheeseburgers-per-hour",
       "ts": "2026-09-07T08:45",
       "kind": "opinion",
-      "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me an estimated 18 litres of water to complete this prompt.",
+      "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me 18 litres of water to complete this prompt, still less than your estimated pints this season.",
       "source": null,
       "image": {
         "src": "news_img/2026-09-07-cheeseburgers-per-hour.jpg",
