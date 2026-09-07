@@ -95,6 +95,22 @@
    "scope": "mine",
    "text": "Doku's calf return is now being pointed toward the Manchester derby on 13 September, per the Premier League's own injury tracker - a date that falls after GW4's own waiver deadline (12 September), not just after the GW4 waivers window. He remains unavailable for the entire GW4 window regardless of which reading of his return is correct.",
    "url": "https://www.premierleague.com/en/latest-player-injuries"
+  },
+  {
+   "id": "2026-09-07-igor-jesus-was-a-sub-correction",
+   "ts": "2026-09-07T14:49 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Correction to Saturday's item: Sky's own team sheet for Forest v Spurs lists Igor Jesus among the substitutes and shows him coming on in the 59th minute, alongside Daniel Munoz - he was not left out of the squad, and Chris Wood came on separately at 74. The real change is that he has lost his starting place: he started GW1 and GW2 and Liam Delap led the line on Saturday. The model still rates him the best free-agent forward available at 11.8 over the next five.",
+   "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+  },
+  {
+   "id": "2026-09-07-chilwell-back-at-palace",
+   "ts": "2026-09-07T14:49 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Ben Chilwell has re-signed for Crystal Palace and scored the winner at Fulham with his first touch, having come on for Tyrick Mitchell on 73 minutes. Mitchell scored both of Palace's other goals and is the pick of the free-agent defenders this week, but Chilwell plays his position and is now in the building - one to watch rather than a reason to pass.",
+   "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
   }
  ],
  "runs": [
@@ -176,7 +192,7 @@
   {
    "ts": "2026-09-05T21:21 UTC",
    "published": 3,
-   "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Gro\u00df, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
+   "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
   },
   {
    "ts": "2026-09-06T08:11 UTC",
@@ -197,6 +213,11 @@
    "ts": "2026-09-07T14:39 UTC",
    "published": 3,
    "note": "Early manual fire at Justin's request ahead of GW4 waivers. Led with Garner: Everton's own lineup page shows he was subbed off in the 77th minute against Man Utd with an injury, not the full 90 reported Saturday night - club status now 'unspecified injury, 75% chance of playing', and the model's own greedy claims list has already picked this up (Scott/Garner, +7.0). Also published Mitchell's brace at Fulham (free agent DEF target, first Palace win of the season) and Doku's calf return being pointed toward 13 September per the Premier League's own tracker - after GW4's own deadline, not just its waivers window. Checked Collins (still no timeline from Brentford's own site, unchanged), Bijol and Munoz (no fresh GW3 fixtures since Friday/Saturday's already-published results), Le Fee (no fitness concern, in form after Saturday's penalty), Barcola (still just the one substitute cameo, no new update), and the other free-agent targets (Gross, Scott, Hill, Maguire, Richards) for this week's claims - all confirmed starting in their most recent match."
+  },
+  {
+   "ts": "2026-09-07T14:49 UTC",
+   "published": 2,
+   "note": "Second manual run today, checking this morning's own reporting against the primary team sheets while re-doing the GW4 waiver board. Found one item to correct: Saturday's claim that Igor Jesus was 'not even named among Nottingham Forest's substitutes' is contradicted by Sky's own team sheet, which has him on at 59 minutes - the story is that Liam Delap has taken his starting place, not that he was left out. Also published Ben Chilwell's return to Palace, relevant because he replaced Tyrick Mitchell at Fulham and Mitchell is this week's rank 1 claim. Checked but did not publish: no fresh permitted word on Collins' scan, Doku's return beyond the 13 September date already reported, or Marmoush, whose Spurs have now gone 270 minutes without a goal - a run, not an event."
   }
  ]
 }

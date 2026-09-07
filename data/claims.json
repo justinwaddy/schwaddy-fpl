@@ -1,14 +1,45 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-07T14:39 UTC",
- "summary": "Fresh news this run reshuffles the board: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing next time out per the club's own status), so he replaces Bijol as this week's fifth claim - the model's own greedy walk now proposes exactly this swap (Scott for Garner, +7.0). Doku's calf return is now pointed toward 13 September, after GW4's own deadline, reinforcing rather than changing the Doku claim. Justin sits fifth of six on 124 points, so his claims still process second in the six-team priority order (reverse table order) when the window closes 11 September.",
+ "ts": "2026-09-07T14:48 UTC",
+ "summary": "The GW4 appearance read is what these claims are fixing. Seven of the fifteen are certain to start - Raya, Pickford, Gvardiol, Milenkovic, Haaland, Tavernier, Schade - and two are likely: Marmoush, who has started Tottenham's last two, and Garner, who started against Man Utd but came off on 77 minutes and now carries an unspecified injury at 75%. The other six are not GW4 players: Doku is out (calf, expected back 13 September, the day of the derby and a day after the deadline), Collins came off after 17 minutes with a calf strain and is at 25%, Bijol was benched at Brighton, Munoz came on at 59 minutes on his Forest debut, Barcola has 26 minutes at Liverpool, and Strand Larsen was behind Nketiah at Fulham. Nine likely starters is two short of an XI. Two changes against this morning's board. Bijol is back on it at rank 3: Leeds' own team news has him on the bench with Muharemovic and Elvedi preferred, his minutes have gone 90, 45, 29, and the model's avail 0.75 still reads him as a starter, so its +3.0 on Maguire is too small. And Doku is off it - the model's per-gameweek line for him is 0.0, 0.4, 0.6, 0.9, 0.7 across GW4-8, which never recovers him at all, so its 2.5 is a floor rather than a forecast for a player who misses one gameweek. Justin sits fifth of six on 124 points, so his claims process second in the queue when the window closes on 11 September: rank 1 is the one nearly certain to land.",
  "claims": [
   {
    "rank": 1,
+   "pos": "DEF",
+   "add": {
+    "name": "Mitchell",
+    "code": "244723",
+    "club": "CRY"
+   },
+   "drop": {
+    "name": "Muñoz",
+    "code": "247348",
+    "club": "NFO"
+   },
+   "why": "Mitchell scored twice as Palace came from behind twice to win 3-2 at Fulham, and has started all three league games. Munoz went the other way in the same window and came on at 59 minutes for Ola Aina on his Forest debut against Tottenham - Neco Williams has played every minute at wing-back and scored 6 and 7 points doing it. Watch one thing: Ben Chilwell has re-signed for Palace and scored the winner at Fulham with his first touch after replacing Mitchell on 73 minutes.",
+   "model": "Model has Mitchell at next5 16.4 (avail 0.98) against Munoz at 6.4 (avail 0.34), the widest gap on the board, and Palace have the kindest run in the league by its own fixture term (+0.5), starting at home to Ipswich. Agree - but note the model is reading Munoz off 85 minutes played while his Palace exit was negotiated, so if Glasner puts the man he signed as a right wing-back specialist straight into his back three, this one ages badly.",
+   "confidence": "high",
+   "sources": [
+    {
+     "title": "Report & Highlights: Palace hit back to stun Fulham for first win of 26/27",
+     "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+    },
+    {
+     "title": "Starting Lineups - N Forest vs Spurs",
+     "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+    },
+    {
+     "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace",
+     "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
+    }
+   ]
+  },
+  {
+   "rank": 2,
    "pos": "MID",
    "add": {
-    "name": "E.Le F\u00e9e",
+    "name": "E.Le Fée",
     "code": "484420",
     "club": "SUN"
    },
@@ -17,8 +48,8 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola remains unintegrated at Liverpool with only one substitute cameo on his record since his GBP106m move from PSG, and nothing this week points to an imminent start. Le Fee scored the equalising penalty and hit the post from range in Brentford's 1-1 draw with Sunderland, and there is no fresh fitness concern.",
-   "model": "Model has Le Fee at next5 17.0 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season marquee arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola.",
+   "why": "Barcola has 26 minutes to his name since his GBP106m move from PSG - one substitute cameo at Ipswich - and Iraola is publicly preaching patience after a disrupted pre-season, saying he is 'in a good place' rather than that he is about to start. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford. This is the stash to cash: of the two midfielders sitting idle, Doku is the one due back inside the horizon.",
+   "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.3 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree anyway: even generously assuming Barcola starts from GW6, Le Fee's five certain starts beat three.",
    "confidence": "high",
    "sources": [
     {
@@ -32,88 +63,34 @@
    ]
   },
   {
-   "rank": 2,
-   "pos": "MID",
-   "add": {
-    "name": "Gro\u00df",
-    "code": "60307",
-    "club": "BHA"
-   },
-   "drop": {
-    "name": "Doku",
-    "code": "248875",
-    "club": "MCI"
-   },
-   "why": "Doku was absent again from Man City's squad for Friday's 1-0 win over Coventry, still out with the calf injury from the Community Shield, and the Premier League's own injury tracker now points to a possible return around the Manchester derby on 13 September - after GW4's own deadline (12 September), not just the waivers window. Gross remains a fit, nailed starter for Brighton, missing a good first-half chance himself in Saturday's 1-1 draw with Leeds.",
-   "model": "Model has Gross at next5 16.7 (avail 1.00) versus Doku at 2.5 (avail 0.00) - the model has now marked Doku fully unavailable; agree with the swap, and the 13 September date (if accurate) confirms he will miss all of GW4.",
-   "confidence": "high",
-   "sources": [
-    {
-     "title": "Starting Lineups - Man City vs Coventry",
-     "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
-    },
-    {
-     "title": "Premier League Latest Injury News - Club by Club Updates",
-     "url": "https://www.premierleague.com/en/latest-player-injuries"
-    }
-   ]
-  },
-  {
    "rank": 3,
    "pos": "DEF",
    "add": {
-    "name": "Mitchell",
-    "code": "244723",
-    "club": "CRY"
+    "name": "Maguire",
+    "code": "95658",
+    "club": "MUN"
    },
    "drop": {
-    "name": "Mu\u00f1oz",
-    "code": "247348",
-    "club": "NFO"
+    "name": "Bijol",
+    "code": "434752",
+    "club": "LEE"
    },
-   "why": "Munoz remains an impact substitute rather than a starter at Forest - on for Ola Aina in the 59th minute of the goalless draw with Tottenham - while Mitchell scored twice as Palace came from behind twice to beat Fulham 3-2 for their first league win of the season, a nailed-on starter delivering well above a typical defender's output.",
-   "model": "Model has Mitchell at next5 16.4 (avail 0.98) versus Munoz at 6.4 (avail 0.34) - the widest gap among the defensive swaps this week; agree, and Mitchell's brace only reinforces it.",
+   "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. Maguire has played every minute of Manchester United's season.",
+   "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction.",
    "confidence": "medium",
    "sources": [
     {
-     "title": "Report & Highlights: Palace hit back to stun Fulham for first win of 26/27",
-     "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+     "title": "Team News: Brighton & Hove Albion vs Leeds United",
+     "url": "https://www.leedsunited.com/en/news/team-news-brighton-and-hove-albion-vs-leeds-united"
     },
     {
-     "title": "Starting Lineups - N Forest vs Spurs",
-     "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+     "title": "Starting Lineups - Everton vs Man Utd",
+     "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
     }
    ]
   },
   {
    "rank": 4,
-   "pos": "MID",
-   "add": {
-    "name": "Scott",
-    "code": "503139",
-    "club": "BOU"
-   },
-   "drop": {
-    "name": "Garner",
-    "code": "232928",
-    "club": "EVE"
-   },
-   "why": "New since this morning: Garner was substituted in the 77th minute of Sunday's draw with Man Utd after going down in visible pain, and Everton's own status now lists him with an unspecified injury and just a 75% chance of playing next time out, reversing Saturday night's 'started the full 90' read. Scott is a confirmed, in-form Bournemouth starter with no fitness concern, having scored in their draw with Everton earlier this season.",
-   "model": "Model has Scott at next5 16.6 (avail 0.96) versus Garner at 9.7 (avail 0.50) - the model's own greedy board now proposes exactly this swap (+7.0), the first time Garner has appeared as a drop candidate. Agree given the fresh injury; submit after the higher-value claims above since the injury severity is still unconfirmed.",
-   "confidence": "medium",
-   "sources": [
-    {
-     "title": "Starting Lineups - Everton vs Manchester United",
-     "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
-    },
-    {
-     "title": "Alex Scott strike cancelled out by late Tarkowski leveller | AFC Bournemouth 1-1 Everton",
-     "url": "https://www.premierleague.com/en/news/4700601/match-highlights-afc-bournemouth-1-1-everton"
-    }
-   ]
-  },
-  {
-   "rank": 5,
    "pos": "DEF",
    "add": {
     "name": "Hill",
@@ -125,13 +102,44 @@
     "code": "432830",
     "club": "BRE"
    },
-   "why": "Speculative hedge, unchanged since Friday: Brentford captain Nathan Collins was forced off with a calf strain after 17 minutes against Sunderland, and the club's own site still has not published a scan result or timeline two days on. Hill is a fit, confirmed-starting alternative in Bournemouth's back line if the injury turns out to be more than a knock.",
-   "model": "Model has Hill at next5 15.9 (avail 0.98) versus Collins at 10.9 (avail 0.20) - the model has marked Collins down sharply since the injury. Low confidence, submit last, since Brentford still has not confirmed anything beyond 'a calf strain, don't know the extent'.",
-   "confidence": "low",
+   "why": "Brentford's captain was forced off after 17 minutes against Sunderland and Keith Andrews said only 'it's a calf strain, I don't know the extent'. Two days on the club has still published no scan result and no timeline, and Brentford are away at Bournemouth in GW4. Hill has played every minute for Bournemouth and faces Brentford at home in the same fixture.",
+   "model": "Model has Hill at next5 15.9 (avail 0.98) against Collins at 10.9 (avail 0.20). The +5.0 is honest rather than injury-inflated - the model already has Collins back and scoring normally from GW5, so this is Hill being the better defender over the run, not just the fitter one this week.",
+   "confidence": "medium",
    "sources": [
     {
      "title": "Nathan Collins injury update after Brentford v Sunderland",
      "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+    },
+    {
+     "title": "Newcastle 2-2 Bournemouth - Game Analysis",
+     "url": "https://www.espn.com/soccer/report/_/gameId/401879286"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "pos": "MID",
+   "add": {
+    "name": "Scott",
+    "code": "503139",
+    "club": "BOU"
+   },
+   "drop": {
+    "name": "Garner",
+    "code": "232928",
+    "club": "EVE"
+   },
+   "why": "The one to skip if you want to skip one. Garner was substituted in the 77th minute against Man Utd and now carries an unspecified injury with a 75% chance of playing, but 75% is not an absence, and he has been building back from July groin surgery at 11, 61 and 76 minutes - the trend is upward, not downward. Scott is the safer body: every minute for Bournemouth, a goal and an assist in the last two. Submit last so it only lands if the four above have.",
+   "model": "Model has Scott at next5 16.6 (avail 0.96) against Garner at 9.7 (avail 0.50) and puts this swap on its own board at +7.0. Partly overruling it: the 0.50 is measured off the games Garner missed recovering from surgery, so if the knock passes he is worth far more than 9.7 and this becomes a downgrade.",
+   "confidence": "low",
+   "sources": [
+    {
+     "title": "Starting Lineups - Everton vs Man Utd",
+     "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
+    },
+    {
+     "title": "Alex Scott strike cancelled out by late Tarkowski leveller | AFC Bournemouth 1-1 Everton",
+     "url": "https://www.premierleague.com/en/news/4700601/match-highlights-afc-bournemouth-1-1-everton"
     }
    ]
   }
@@ -186,7 +194,7 @@
      "rank": 3,
      "pos": "MID",
      "add": {
-      "name": "Gro\u00df",
+      "name": "Groß",
       "code": "60307",
       "club": "BHA"
      },
@@ -293,6 +301,12 @@
    "gw": 4,
    "claims": 5,
    "note": "Early manual fire ahead of GW4 waivers (Justin choosing today rather than tonight's run). Swapped Botman/Bijol out and Scott/Garner in at rank 4: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing), reversing Saturday night's 'played the full 90' read, and the model's own greedy board now proposes this exact swap. Also upgraded Le Fee/Barcola and Gross/Doku to high confidence (Doku's return now pointed to 13 September, after GW4's own deadline) and switched the Munoz swap from Hill to Mitchell, who scored twice in Palace's first win of the season - Hill moves to the Collins hedge at rank 5 instead. Collins and Munoz themselves unchanged: still no Brentford timeline, still an impact sub at Forest, with no fresh GW3 fixtures for either club since Friday/Saturday's already-published results."
+  },
+  {
+   "ts": "2026-09-07T14:48 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Second manual run today, going deeper on the GW4 appearance question. Two changes against the 14:39 board. Dropped the Gross/Doku claim: the model's per-gameweek line for Doku is 0.0, 0.4, 0.6, 0.9, 0.7 over GW4-8, i.e. it never recovers him at all, so its next5 of 2.5 is a floor rather than a forecast for a player the API expects back on 13 September - he misses one gameweek. Restored the Bijol claim at rank 3 against Maguire, sourced to Leeds' own team news naming him on the bench at Brighton, with minutes going 90/45/29; the model's avail 0.75 makes its +3.0 too small. Kept Mitchell/Munoz at 1, Le Fee/Barcola at 2, moved Hill/Collins to 4 and raised it from low to medium (the model already has Collins fit from GW5, so the gap is real, not injury-inflated), and left Scott/Garner at 5 but cut it to low: 75% is not an absence and Garner's minutes have been climbing back from July groin surgery. Also added the caveat that Ben Chilwell has re-signed for Palace and replaced Mitchell on 73 minutes at Fulham."
   }
  ]
 }
