@@ -115,6 +115,11 @@
  ],
  "runs": [
   {
+   "ts": "2026-09-07T21:15 UTC",
+   "published": 0,
+   "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Groß, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
+  },
+  {
    "ts": "2026-09-01T09:51",
    "published": 3,
    "note": "seeded by hand while building the pipeline"
