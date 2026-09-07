@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T08:58 UTC",
+  "generated": "2026-09-07T22:50 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -305,6 +305,27 @@
         "src": "news_img/2026-09-07-cheeseburgers-per-hour.jpg",
         "alt": "Curve of cheeseburgers per hour against hours spent in McDonald's, falling steeply from 10 an hour at two hours to under one an hour by the twenty-fourth"
       }
+    },
+    {
+      "id": "2026-09-07-opinion-free-agents-podium",
+      "ts": "2026-09-07T22:50",
+      "kind": "opinion",
+      "text": "Six managers, a full waiver wire between them, and the week's individual podium still belonged to nobody's team: Mitchell (15), Bogle (14), Barnes (12) and Vuskovic (12) are all free agents, and the best any rostered player did was Small Ben's Isak on 13. A league this obsessed with each other's squads left the actual scouting to whoever did not claim them.",
+      "source": null
+    },
+    {
+      "id": "2026-09-07-opinion-justin-double-overtake",
+      "ts": "2026-09-07T22:50",
+      "kind": "opinion",
+      "text": "Justin still has Erling Haaland, who put in 9 today, and it did not stop two different managers going past him on the same day: Edward into third on 133 and Big Ben into fourth on 129, leaving Schwaddy fifth on 124. Some squads are just not built to be carried by one man.",
+      "source": null
+    },
+    {
+      "id": "2026-09-07-opinion-robert-warmup-act",
+      "ts": "2026-09-07T22:50",
+      "kind": "opinion",
+      "text": "Robert's total after three gameweeks is 120. Marcus had already banked that much before a ball was kicked in the third one. A whole season as somebody else's warm-up act is not a flattering stat, and Pardinho now has a week off to sit with it.",
+      "source": null
     }
   ],
   "runs": [
@@ -480,6 +501,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "By hand: the cheeseburgers item, already published, gains its closing line - the pints, then the week being settled and Robert being the one to sip up. Checked before posting: public.json has GW3 at all ten fixtures finished with nothing until the 12th, and Robert props up the gameweek on 22 and the season on 120, so the line has something under it."
+    },
+    {
+      "ts": "2026-09-07T22:50 UTC",
+      "news": 0,
+      "opinion": 3,
+      "matchday": false,
+      "note": "Scheduled evening wrap. No fixtures today (rest day, next is 12 Sept) and the live feed confirms GW3 fully settled - 10 of 10 kicked off, nobody still to come. Six to eight searches (England/Norway international-duty angles, Chelsea, Newcastle, Man Utd, Man City sites) turned up nothing usable: results were either already covered (mancity.com's Ndiaye/Haaland pieces from the 5th), unverifiable on a permitted outlet (newcastleunited.com and chelseafc.com both served JS shells with no readable dated articles), or visibly scrambled placeholder content (one Chelsea search result claimed Maresca and the club 'parted company' while he is plainly managing Man City this season, and the England/Norway searches surfaced World Cup coverage that does not belong to this September) - so no reported item was published rather than risk an invented or misdated fact. Three opinion pieces instead, all built from today's automatic HAUL/OVERTAKE/RACE badges and the table/live-feed printout: (1) the week's four biggest individual hauls bar one - Mitchell 15, Bogle 14, Barnes 12, Vuskovic 12 - all belong to free agents, with Small Ben's Isak (13) the best any rostered player managed; (2) Justin's Haaland scored 9 today and it still was not enough to stop Edward and Big Ben both overtaking him into 3rd and 4th, dropping Schwaddy to 5th; (3) Robert's season total, 120, exactly matches what Marcus had banked before today's gameweek alone. The roast archive's only unused submission, Edward's 'Mong' about Robert, remains excluded permanently as the ableist slur rule 4 rules out - not a timing issue, so it is not noted as pending. No flops to rewrite: no FLOP badges appear in today's automatic feed since no matches were played."
     }
   ]
 }
