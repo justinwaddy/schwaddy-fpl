@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-06T21:10 UTC",
- "summary": "Justin sits fifth of six on 124 points, so his claims process second in the six-team queue (reverse table order) when the window closes on 11 September. Today's final round of GW3 matches (Garner starting the full 90 for Everton, Raya starting for Arsenal) confirmed the existing picture rather than changing it, so the same five claims carry forward - the model itself has now caught up further on Collins (avail down to 0.20) and Doku (down to 0.00), reinforcing rather than softening those two swaps.",
+ "ts": "2026-09-07T08:14 UTC",
+ "summary": "Justin sits fifth of six on 124 points, so his claims process second in the six-team queue (reverse table order) when the window closes on 11 September. The same five claims carry forward unchanged: nothing overnight altered the picture on Barcola, Doku, Munoz, Bijol or Collins. One new lead was investigated and deliberately left out - Palace started Eddie Nketiah, not Strand Larsen, against Fulham, with Strand Larsen only on from the bench at half-time - but the model already rates them almost level (9.3 vs 8.8 next5) and Palace's own preview described a genuine three-way rotation with Mateta too, so this is a headline to watch rather than a claim yet. Also declined to chase the model's own top suggestion of Igor Jesus (Forest), since he was not even named among the substitutes last time out - the model's 0.82 availability figure has not caught up with him dropping out of the matchday squad entirely.",
  "claims": [
   {
    "rank": 1,
@@ -17,13 +17,13 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola remains unintegrated at Liverpool: manager Andoni Iraola said before naming him among the substitutes for Friday's trip to Ipswich (his actual first appearance for the club) that 'he hasn't had the minutes in the preseason games'. Le Fee, by contrast, started today's 1-1 draw at Brentford, hit the post from range in the first half and scored the equalising penalty in the 82nd minute - a first-choice starter in form.",
-   "model": "Model has Le Fee at next5 16.4 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola, who has now had one substitute cameo (26 minutes at Ipswich) and no more.",
+   "why": "Barcola remains unintegrated at Liverpool: after his 26-minute cameo off the bench on debut at Ipswich, manager Andoni Iraola says he is 'in a good place' but has stressed patience rather than an imminent start. Le Fee, by contrast, started the 1-1 draw at Brentford, hit the post from range and scored the equalising penalty - a first-choice starter in form.",
+   "model": "Model has Le Fee at next5 16.4 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola, who still has only that one substitute cameo to his name.",
    "confidence": "high",
    "sources": [
     {
-     "title": "Andoni Iraola: Bradley Barcola could make Liverpool debut against Ipswich",
-     "url": "https://www.espn.com/soccer/story/_/id/49812413/andoni-iraola-bradley-barcola-make-liverpool-debut-ipswich"
+     "title": "Liverpool boss Andoni Iraola says Bradley Barcola is 'in a good place' but patience will help",
+     "url": "https://www.espn.com/soccer/story/_/id/49834549/liverpool-boss-andoni-iraola-says-bradley-barcola-good-place-patience-help-premier-league"
     },
     {
      "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener but Bees' unbeaten start continues",
@@ -269,6 +269,12 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made. Corrected the league position again with this run's fresh table: Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order (reverse table order), not fourth. Today's final round of GW3 matches confirmed rather than changed the picture: Garner started the full 90 for Everton (2-2 draw with Man Utd) and Raya started Arsenal's 2-1 comeback win over Chelsea, both exactly as already priced in - no sixth claim opened there. Refreshed model numbers moved further toward the news on Doku (avail down to 0.00, was 0.11) and Collins (avail down to 0.20, was 0.60). Also checked Haaland and Gvardiol (both fit and rated well against Coventry, no concern) and found nothing new on Munoz, Bijol or the free-agent targets."
+  },
+  {
+   "ts": "2026-09-07T08:14 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made. Refreshed Le Fee/Barcola sourcing with a post-debut Iraola quote (ESPN) rather than the pre-match preview used last time. Investigated Crystal Palace confirming Eddie Nketiah, not Strand Larsen, started at Fulham (Strand Larsen on only from half-time) but did not turn it into a claim: the model already rates the two within 0.5 of each other and Palace itself describes a genuine three-way rotation with Mateta, so it is flagged in the summary and as a headline rather than acted on. Also confirmed the model is still overrating Igor Jesus (not even in Forest squad list latest, per Tuesday) and left him out despite the model itself proposing that swap."
   }
  ]
 }

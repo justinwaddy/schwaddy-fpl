@@ -63,6 +63,14 @@
    "scope": "free",
    "text": "Igor Jesus was not even named among Nottingham Forest's substitutes for today's goalless draw with Tottenham - Liam Delap started up front and it was Chris Wood, not Jesus, who came on at striker. The model still rates Jesus a 0.95-availability, near-top free agent forward; that number is now stale.",
    "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+  },
+  {
+   "id": "2026-09-07-strand-larsen-benched-nketiah-starts",
+   "ts": "2026-09-07T08:14 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Reversing Tuesday's read: Palace's own matchday report confirms Eddie Nketiah, not Strand Larsen, led the line at Fulham on Saturday, with Strand Larsen only introduced at half-time. Palace's own preview had flagged the change beforehand, calling it Sage's decision with Strand Larsen 'on the bench for this one' - the model's 0.69 availability figure still reads him as the clear first-choice striker, which is no longer true with Nketiah, Mateta and Strand Larsen genuinely rotating.",
+   "url": "https://www.cpfc.co.uk/match/2645219/men/premier-league/2026-27/fulham-vs-crystal-palace-2026-09-05/"
   }
  ],
  "runs": [
@@ -155,6 +163,11 @@
    "ts": "2026-09-06T21:10 UTC",
    "published": 0,
    "note": "Today's final round of GW3 fixtures confirmed everything already on file rather than changing it: Garner started the full 90 for Everton's 2-2 draw with Man Utd (rated 6.14, unremarkable but a nailed starter as reported Thursday) and Raya started Arsenal's 2-1 comeback win over Chelsea with a couple of good saves - neither is new information. Doku still has no permitted-source return date (only unpermitted outlets speculate 13 September); Munoz remains an impact sub rather than a starter at Forest; Bijol remains behind Elvedi/Muharemovic at Leeds; Collins' calf still has no confirmed timeline from Brentford. Also checked Man City's Haaland and Gvardiol (both played and rated well against Coventry, no fitness concern), Bournemouth, Palace, Brighton, Newcastle and rivals Bruno Fernandes/Mbeumo/Palmer - nothing material or citable to a permitted outlet. Nothing published."
+  },
+  {
+   "ts": "2026-09-07T08:14 UTC",
+   "published": 1,
+   "note": "Went back through Saturday's Fulham-Palace match report on cpfc.co.uk while re-checking Strand Larsen for this week's claims and found it reverses last Tuesday's read: Eddie Nketiah started up front with Strand Larsen only on from the bench at half-time, not the other way round. Full club-by-club sweep otherwise (Everton, Arsenal, Forest, Brentford, Man City, Leeds, Liverpool, Bournemouth, Tottenham, Brighton, Sunderland, Newcastle, Man Utd) plus general PL injury and transfer-fallout searches found nothing else new: Collins' calf still has no confirmed timeline, Doku still no permitted return date, Bijol still behind Elvedi/Muharemovic, Barcola still bench-bound (ESPN quotes Iraola calling him 'in a good place' but urging patience - reinforcing rather than changing his status), and a Premier League injury aggregator's claim that Marmoush is out with a knee injury traced back to a stale September 2025 story from his Man City days, not his current Tottenham situation, so it was discarded rather than published."
   }
  ]
 }
