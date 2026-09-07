@@ -1,14 +1,14 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-07T08:14 UTC",
- "summary": "Justin sits fifth of six on 124 points, so his claims process second in the six-team queue (reverse table order) when the window closes on 11 September. The same five claims carry forward unchanged: nothing overnight altered the picture on Barcola, Doku, Munoz, Bijol or Collins. One new lead was investigated and deliberately left out - Palace started Eddie Nketiah, not Strand Larsen, against Fulham, with Strand Larsen only on from the bench at half-time - but the model already rates them almost level (9.3 vs 8.8 next5) and Palace's own preview described a genuine three-way rotation with Mateta too, so this is a headline to watch rather than a claim yet. Also declined to chase the model's own top suggestion of Igor Jesus (Forest), since he was not even named among the substitutes last time out - the model's 0.82 availability figure has not caught up with him dropping out of the matchday squad entirely.",
+ "ts": "2026-09-07T14:39 UTC",
+ "summary": "Fresh news this run reshuffles the board: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing next time out per the club's own status), so he replaces Bijol as this week's fifth claim - the model's own greedy walk now proposes exactly this swap (Scott for Garner, +7.0). Doku's calf return is now pointed toward 13 September, after GW4's own deadline, reinforcing rather than changing the Doku claim. Justin sits fifth of six on 124 points, so his claims still process second in the six-team priority order (reverse table order) when the window closes 11 September.",
  "claims": [
   {
    "rank": 1,
    "pos": "MID",
    "add": {
-    "name": "E.Le Fée",
+    "name": "E.Le F\u00e9e",
     "code": "484420",
     "club": "SUN"
    },
@@ -17,17 +17,17 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola remains unintegrated at Liverpool: after his 26-minute cameo off the bench on debut at Ipswich, manager Andoni Iraola says he is 'in a good place' but has stressed patience rather than an imminent start. Le Fee, by contrast, started the 1-1 draw at Brentford, hit the post from range and scored the equalising penalty - a first-choice starter in form.",
-   "model": "Model has Le Fee at next5 16.4 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season GBP123m arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola, who still has only that one substitute cameo to his name.",
+   "why": "Barcola remains unintegrated at Liverpool with only one substitute cameo on his record since his GBP106m move from PSG, and nothing this week points to an imminent start. Le Fee scored the equalising penalty and hit the post from range in Brentford's 1-1 draw with Sunderland, and there is no fresh fitness concern.",
+   "model": "Model has Le Fee at next5 17.0 (avail 1.00) versus Barcola at 2.3 (avail 0.16) - most of that gap is the model having zero career data on a mid-season marquee arrival, exactly the blind spot the news fills in. Agree with overruling the model's placeholder rating for Barcola.",
    "confidence": "high",
    "sources": [
     {
-     "title": "Liverpool boss Andoni Iraola says Bradley Barcola is 'in a good place' but patience will help",
-     "url": "https://www.espn.com/soccer/story/_/id/49834549/liverpool-boss-andoni-iraola-says-bradley-barcola-good-place-patience-help-premier-league"
-    },
-    {
      "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener but Bees' unbeaten start continues",
      "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
+    },
+    {
+     "title": "Liverpool boss Andoni Iraola says Bradley Barcola is 'in a good place' but patience will help",
+     "url": "https://www.espn.com/soccer/story/_/id/49834549/liverpool-boss-andoni-iraola-says-bradley-barcola-good-place-patience-help-premier-league"
     }
    ]
   },
@@ -35,22 +35,26 @@
    "rank": 2,
    "pos": "MID",
    "add": {
-    "name": "Rayan",
-    "code": "499604",
-    "club": "BOU"
+    "name": "Gro\u00df",
+    "code": "60307",
+    "club": "BHA"
    },
    "drop": {
     "name": "Doku",
     "code": "248875",
     "club": "MCI"
    },
-   "why": "Doku was not named in Manchester City's squad for Friday's 1-0 win over Coventry (Haaland's header the only goal), still out with the calf injury picked up in the Community Shield defeat to Arsenal. No permitted outlet has put a confirmed return date on him yet - only unpermitted sites speculating anywhere from City's next match to well into October - so there is still nothing concrete pointing to a return before GW4's own deadline.",
-   "model": "Model has Rayan at next5 16.1 (avail 0.97) versus Doku at 2.6 (avail 0.00) - the model has now marked him fully unavailable; agree with the swap.",
-   "confidence": "medium",
+   "why": "Doku was absent again from Man City's squad for Friday's 1-0 win over Coventry, still out with the calf injury from the Community Shield, and the Premier League's own injury tracker now points to a possible return around the Manchester derby on 13 September - after GW4's own deadline (12 September), not just the waivers window. Gross remains a fit, nailed starter for Brighton, missing a good first-half chance himself in Saturday's 1-1 draw with Leeds.",
+   "model": "Model has Gross at next5 16.7 (avail 1.00) versus Doku at 2.5 (avail 0.00) - the model has now marked Doku fully unavailable; agree with the swap, and the 13 September date (if accurate) confirms he will miss all of GW4.",
+   "confidence": "high",
    "sources": [
     {
      "title": "Starting Lineups - Man City vs Coventry",
      "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
+    },
+    {
+     "title": "Premier League Latest Injury News - Club by Club Updates",
+     "url": "https://www.premierleague.com/en/latest-player-injuries"
     }
    ]
   },
@@ -58,19 +62,23 @@
    "rank": 3,
    "pos": "DEF",
    "add": {
-    "name": "Hill",
-    "code": "463981",
-    "club": "BOU"
+    "name": "Mitchell",
+    "code": "244723",
+    "club": "CRY"
    },
    "drop": {
-    "name": "Muñoz",
+    "name": "Mu\u00f1oz",
     "code": "247348",
     "club": "NFO"
    },
-   "why": "Munoz was again an impact substitute rather than a starter in Forest's last match - on for Ola Aina in the 59th minute of the goalless draw with Tottenham - not the nailed-on right wing-back his permanent transfer suggested. Hill remains a guaranteed starter in Bournemouth's back line with no such competition.",
-   "model": "Model has Hill at next5 16.1 (avail 0.98) versus Munoz at 6.5 (avail 0.34) - a wide gap the model already prices in via low availability; agree, and the bench role from Forest's last match reinforces it further.",
+   "why": "Munoz remains an impact substitute rather than a starter at Forest - on for Ola Aina in the 59th minute of the goalless draw with Tottenham - while Mitchell scored twice as Palace came from behind twice to beat Fulham 3-2 for their first league win of the season, a nailed-on starter delivering well above a typical defender's output.",
+   "model": "Model has Mitchell at next5 16.4 (avail 0.98) versus Munoz at 6.4 (avail 0.34) - the widest gap among the defensive swaps this week; agree, and Mitchell's brace only reinforces it.",
    "confidence": "medium",
    "sources": [
+    {
+     "title": "Report & Highlights: Palace hit back to stun Fulham for first win of 26/27",
+     "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+    },
     {
      "title": "Starting Lineups - N Forest vs Spurs",
      "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
@@ -79,24 +87,28 @@
   },
   {
    "rank": 4,
-   "pos": "DEF",
+   "pos": "MID",
    "add": {
-    "name": "Botman",
-    "code": "220237",
-    "club": "NEW"
+    "name": "Scott",
+    "code": "503139",
+    "club": "BOU"
    },
    "drop": {
-    "name": "Bijol",
-    "code": "434752",
-    "club": "LEE"
+    "name": "Garner",
+    "code": "232928",
+    "club": "EVE"
    },
-   "why": "Bijol was left out of Leeds' starting XI at Brighton for the first time this season - Nico Elvedi and Tarik Muharemovic started in central defence instead, with Bijol introduced only in the 61st minute. It is one match, but with a new arrival now preferred ahead of him his starting spot no longer looks nailed on.",
-   "model": "Model has Botman at next5 15.6 (avail 1.00) versus Bijol at 12.7 (avail 0.75) - the gap has widened since last night as the model catches up with the bench news, reinforcing the claim. Medium rather than high confidence since it is only one match so far.",
+   "why": "New since this morning: Garner was substituted in the 77th minute of Sunday's draw with Man Utd after going down in visible pain, and Everton's own status now lists him with an unspecified injury and just a 75% chance of playing next time out, reversing Saturday night's 'started the full 90' read. Scott is a confirmed, in-form Bournemouth starter with no fitness concern, having scored in their draw with Everton earlier this season.",
+   "model": "Model has Scott at next5 16.6 (avail 0.96) versus Garner at 9.7 (avail 0.50) - the model's own greedy board now proposes exactly this swap (+7.0), the first time Garner has appeared as a drop candidate. Agree given the fresh injury; submit after the higher-value claims above since the injury severity is still unconfirmed.",
    "confidence": "medium",
    "sources": [
     {
-     "title": "Starting Lineups - Brighton vs Leeds",
-     "url": "https://www.skysports.com/football/leeds-united-vs-brighton-and-hove-albion/teams/559466"
+     "title": "Starting Lineups - Everton vs Manchester United",
+     "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
+    },
+    {
+     "title": "Alex Scott strike cancelled out by late Tarkowski leveller | AFC Bournemouth 1-1 Everton",
+     "url": "https://www.premierleague.com/en/news/4700601/match-highlights-afc-bournemouth-1-1-everton"
     }
    ]
   },
@@ -104,17 +116,17 @@
    "rank": 5,
    "pos": "DEF",
    "add": {
-    "name": "Richards",
-    "code": "427623",
-    "club": "CRY"
+    "name": "Hill",
+    "code": "463981",
+    "club": "BOU"
    },
    "drop": {
     "name": "Collins",
     "code": "432830",
     "club": "BRE"
    },
-   "why": "Speculative hedge: Brentford captain Nathan Collins was forced off with a calf strain after just 17 minutes of the draw with Sunderland, and manager Keith Andrews said 'it's a calf strain, I don't know the extent'. Brentford's own site still has not published a timeline or scan result, so the injury remains an open question. If it turns out to be more than a knock, this claim covers a fit, confirmed-starting alternative; if it is minor, this is the one to skip.",
-   "model": "Model has Richards at next5 15.6 (avail 1.00) versus Collins at 11.2 (avail 0.20) - the model has now marked Collins down sharply since the injury, closer to confirming the concern. Low confidence, submit last.",
+   "why": "Speculative hedge, unchanged since Friday: Brentford captain Nathan Collins was forced off with a calf strain after 17 minutes against Sunderland, and the club's own site still has not published a scan result or timeline two days on. Hill is a fit, confirmed-starting alternative in Bournemouth's back line if the injury turns out to be more than a knock.",
+   "model": "Model has Hill at next5 15.9 (avail 0.98) versus Collins at 10.9 (avail 0.20) - the model has marked Collins down sharply since the injury. Low confidence, submit last, since Brentford still has not confirmed anything beyond 'a calf strain, don't know the extent'.",
    "confidence": "low",
    "sources": [
     {
@@ -174,7 +186,7 @@
      "rank": 3,
      "pos": "MID",
      "add": {
-      "name": "Groß",
+      "name": "Gro\u00df",
       "code": "60307",
       "club": "BHA"
      },
@@ -275,6 +287,12 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made. Refreshed Le Fee/Barcola sourcing with a post-debut Iraola quote (ESPN) rather than the pre-match preview used last time. Investigated Crystal Palace confirming Eddie Nketiah, not Strand Larsen, started at Fulham (Strand Larsen on only from half-time) but did not turn it into a claim: the model already rates the two within 0.5 of each other and Palace itself describes a genuine three-way rotation with Mateta, so it is flagged in the summary and as a headline rather than acted on. Also confirmed the model is still overrating Igor Jesus (not even in Forest squad list latest, per Tuesday) and left him out despite the model itself proposing that swap."
+  },
+  {
+   "ts": "2026-09-07T14:39 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Early manual fire ahead of GW4 waivers (Justin choosing today rather than tonight's run). Swapped Botman/Bijol out and Scott/Garner in at rank 4: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing), reversing Saturday night's 'played the full 90' read, and the model's own greedy board now proposes this exact swap. Also upgraded Le Fee/Barcola and Gross/Doku to high confidence (Doku's return now pointed to 13 September, after GW4's own deadline) and switched the Munoz swap from Hill to Mitchell, who scored twice in Palace's first win of the season - Hill moves to the Collins hedge at rank 5 instead. Collins and Munoz themselves unchanged: still no Brentford timeline, still an impact sub at Forest, with no fresh GW3 fixtures for either club since Friday/Saturday's already-published results."
   }
  ]
 }
