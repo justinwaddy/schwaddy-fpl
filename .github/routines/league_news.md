@@ -182,11 +182,18 @@ STEP 5 - write data/league_news.json:
    ],
    "runs": [...]}
 Keep the most recent 80 items and 60 runs, newest last. Carry the older items forward; you are adding to the page, not replacing it.
+An item may also carry a picture - a graph one of the six drew, a screenshot - as
+`"image": {"src": "news_img/<YYYY-MM-DD>-<slug>.jpg", "alt": "<what it shows>"}`. The file goes in
+data/news_img/ and is committed with the feed; src is that name relative to data/ and nothing else,
+because the page will not load a picture from anywhere but this repo. Alt text is not optional: it is
+what somebody reading on a slow train gets instead. You are not making these yourself - a run posts an
+image only when Justin has handed you one - but an older item that has one keeps it when you carry it
+forward, so do not drop the key.
 ALWAYS append {"ts": "<now>", "news": <count>, "opinion": <count>, "matchday": true|false, "note": "<morning or evening, what you led with, and which suggestions you used or passed over and why>"} to "runs".
 
 STEP 6 - verify, then commit and push. The check must pass; fix the file rather than skipping the check.
 python3 - <<'EOF'
-import json,datetime
+import json,datetime,os
 from urllib.parse import urlparse
 OUTLETS=('bbc.co.uk','bbc.com','theguardian.com','skysports.com','premierleague.com','espn.com','espn.co.uk','reuters.com','apnews.com','theathletic.com')
 CLUBS=('arsenal.com','avfc.co.uk','afcb.co.uk','brentfordfc.com','brightonandhovealbion.com','chelseafc.com','ccfc.co.uk','cpfc.co.uk','evertonfc.com','fulhamfc.com','hullcitytigers.com','itfc.co.uk','leedsunited.com','liverpoolfc.com','mancity.com','manutd.com','newcastleunited.com','nottinghamforest.com','tottenhamhotspur.com','safc.com')
@@ -217,6 +224,12 @@ for x in items:
         assert permitted(s['url']), f"{x['id']}: {s['url']} is not on the SOURCES list"
     else:
         assert not (x.get('source') or {}).get('url'), f"{x['id']}: an opinion is yours, not an outlet's"
+    im=x.get('image')
+    if im:
+        src=str(im.get('src',''))
+        assert src and '..' not in src and not src.startswith(('http','/')), f"{x['id']}: image src is a name relative to data/, nothing else"
+        assert os.path.exists('data/'+src), f"{x['id']}: data/{src} is not in the repo - commit the picture with the feed"
+        assert str(im.get('alt','')).strip(), f"{x['id']}: a picture needs alt text"
     if x['ts'][:10]==today:
         tn+= x['kind']=='news'; to+= x['kind']=='opinion'
 assert to<=5, f'at most 5 opinion pieces a day, got {to}'
@@ -229,7 +242,7 @@ If the check rejects a source as not being on the SOURCES list, including one an
 Then publish, and treat this as the part of the job most likely to go wrong:
   git config user.name schwaddy-bot
   git config user.email bot@justinwaddy.co.uk
-  git add data/league_news.json data/roasts.json data/news.json data/public.json
+  git add data/league_news.json data/roasts.json data/news.json data/public.json data/news_img
   git commit -m "league news: <N> reported, <M> opinion"
   git fetch origin main && git rebase origin/main
   git push origin HEAD:main

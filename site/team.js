@@ -864,11 +864,22 @@ function linkPlayers(escaped) {
     return code == null ? all : `${pre}<span class="nm pk" data-pk="${esc(code)}">${nm}</span>`;
   });
 }
+// An item can carry a picture - a graph one of the six drew, a screenshot -
+// which lives beside the feed in data/ and is named relative to it. Only a
+// plain relative name is taken, so a feed that has been tampered with can
+// point the page at a file in this repo and at nothing else.
+function newsImg(img) {
+  const src = String((img && img.src) || "");
+  if (!src || !/^[\w][\w.\/-]*$/.test(src) || src.includes("..")) return "";
+  const url = RAW + src;
+  return `<a class="evimg" href="${esc(url)}" target="_blank" rel="noopener">
+    <img src="${esc(url)}" alt="${esc((img && img.alt) || "")}" loading="lazy"></a>`;
+}
 function newsFeed() {
   const out = [];
   for (const e of (NEWS && NEWS.items) || []) {
     out.push({ ts: e.ts, kind: e.kind === "opinion" ? "opinion" : "news",
-               text: e.text, source: e.source });
+               text: e.text, source: e.source, image: e.image });
   }
   for (const e of (PUB && PUB.news) || []) {
     // editorial items carry the article they came from; the rest do not
@@ -996,7 +1007,7 @@ function renderNews() {
           ? `<a class="src" href="${esc(e.source.url)}" target="_blank" rel="noopener">${esc(e.source.title || e.source.url)} &rsaquo;</a>`
           : "";
         h += `<div class="ev"><span class="badge b-${esc(e.kind)}">${esc(String(e.kind).toUpperCase())}</span>
-          <span style="flex:1">${linkPlayers(esc(reword(e.text)))}${src}</span>
+          <span style="flex:1">${linkPlayers(esc(reword(e.text)))}${newsImg(e.image)}${src}</span>
           <span class="when">${esc(String(e.ts || "").slice(11, 16))}</span></div>`;
       }
       h += `</div>`;

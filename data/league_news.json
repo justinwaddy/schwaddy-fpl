@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T07:48 UTC",
+  "generated": "2026-09-07T08:45 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -294,6 +294,17 @@
         "title": "Transfer deadline day deals summer 2026: confirmed moves across Premier League, Championship, EFL, Europe and more",
         "url": "https://www.skysports.com/football/news/11095/13579708/transfer-deadline-day-deals-summer-2026-confirmed-moves-across-premier-league-championship-efl-europe-and-more"
       }
+    },
+    {
+      "id": "2026-09-07-cheeseburgers-per-hour",
+      "ts": "2026-09-07T08:45",
+      "kind": "opinion",
+      "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me an estimated 18 litres of water to complete this prompt.",
+      "source": null,
+      "image": {
+        "src": "news_img/2026-09-07-cheeseburgers-per-hour.jpg",
+        "alt": "Curve of cheeseburgers per hour against hours spent in McDonald's, falling steeply from 10 an hour at two hours to under one an hour by the twenty-fourth"
+      }
     }
   ],
   "runs": [
@@ -455,6 +466,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning run, GW3 finished last night and no fixtures today (next is 12 Sept). Led with Arteta's post-Chelsea press conference (arsenal.com), which had fresh, unreported lines on Havertz and Konsa (Big Ben's) and Odegaard and Mosquera (Edward's and Robert's); added Robert's Ndiaye and his deadline-day 65m move to Man City from a Sky Sports roundup, not previously covered here (only the Enzo Fernandez side of that deadline day had been reported). Passed on several other leads: Cherki's supposed quad injury and Newcastle's Elanga/injury-list mentions both traced back to Pep Guardiola and Eddie Howe quotes respectively, but Guardiola left City for Maresca before this season and Elanga was reported fit and playing well as recently as the 5th, so both looked like stale search results from elsewhere in the season rather than current news - held rather than risk another wrong-day error. mancity.com would not load for either curl or fetch (redirect/anti-bot page), so nothing from City's own site could be verified today. No unused roast-archive material used or held; this is a news-only morning run."
+    },
+    {
+      "ts": "2026-09-07T08:45",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "By hand, at Justin's request: the cheeseburgers-per-hour-against-hours-in-McDonald's graph, posted for Robert as an alternative to the beer mile. It is the first item on the page to carry a picture - the feed now takes an optional image named relative to data/, rendered under the text and opening full size in a tab. Nothing from the model and nothing from the roast archive used."
     }
   ]
 }

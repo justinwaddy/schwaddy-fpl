@@ -63,6 +63,12 @@ padding:5px 12px;font:600 12px "IBM Plex Sans",system-ui;cursor:pointer;margin:2
 .ev a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--line)}
 .ev a:hover{border-bottom-color:var(--blue)}
 .src{display:block;padding-top:3px}
+/* a picture attached to an item: a graph, a screenshot. Capped so a tall
+   one cannot take the whole screen, and it opens full size in a tab. */
+.evimg{display:block;padding-top:7px;border-bottom:none}
+.evimg img{display:block;max-width:100%;max-height:56vh;border:1px solid var(--line);
+border-radius:8px;background:#fff}
+.evimg:hover img{border-color:var(--blue)}
 .when{color:var(--dim);font:11px "IBM Plex Mono",ui-monospace,monospace;white-space:nowrap}
 .daysep{font:600 10px "IBM Plex Mono",ui-monospace,monospace;color:var(--dim);text-transform:uppercase;
 letter-spacing:.08em;padding:11px 2px 5px}
