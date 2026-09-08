@@ -57,9 +57,13 @@ def head_to_head(genome, cfg, views, specs, reference="baseline"):
     """Paired comparison of a genome against a fixed heuristic."""
     a = np.zeros((len(specs), 3))
     b = np.zeros((len(specs), 3))
+    # one Brain for every league: its encoder output is cached per season,
+    # and rebuilding it per league was costing more than the leagues did
+    pol = Brain(genome, cfg)
+    ref = Heuristic(reference, cfg, 0)
     for i, sp in enumerate(specs):
-        a[i] = _play_one(cfg, views, sp, Brain(genome, cfg))
-        b[i] = _play_one(cfg, views, sp, Heuristic(reference, cfg, sp[3]))
+        a[i] = _play_one(cfg, views, sp, pol)
+        b[i] = _play_one(cfg, views, sp, ref)
     d = a[:, 0] - b[:, 0]
     n = len(specs)
     return dict(

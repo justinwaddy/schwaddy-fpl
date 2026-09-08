@@ -111,6 +111,12 @@ class Evolver:
         seats_pop = N_MANAGERS - cfg.anchor_seats
         leagues = []
         for r in range(cfg.leagues_per_genome):
+            # one season per ROUND, not per league: every genome in a
+            # round is judged on the same season, so no genome is selected
+            # for having drawn an easy one. With leagues_per_genome a
+            # multiple of the number of training seasons, each genome
+            # plays each season the same number of times.
+            season = self.seasons[r % len(self.seasons)]
             perm = self.rng.permutation(cfg.pop_size)
             for i in range(0, cfg.pop_size - seats_pop + 1, seats_pop):
                 grp = perm[i:i + seats_pop]
@@ -129,7 +135,6 @@ class Evolver:
                 o = self.rng.permutation(N_MANAGERS)
                 seats = [seats[j] for j in o]
                 kinds = [kinds[j] for j in o]
-                season = self.seasons[(r + i) % len(self.seasons)]
                 leagues.append((season, seats, kinds,
                                 int(self.rng.integers(1 << 30))))
         return leagues

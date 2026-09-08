@@ -57,6 +57,9 @@ def train_fold(cfg, fold, out_dir, generations=None, valid_every=5,
     va = load_seasons(cfg, fold["valid"])
     vviews = {s: SeasonView(s, va[s], ev.std) for s in fold["valid"]}
     specs = paired_leagues(cfg, valid_leagues, fold["valid"], seed=99991)
+    # the same paired measurement on TRAINING seasons, so the difference
+    # between the two is a generalisation gap and not two different units
+    tspecs = paired_leagues(cfg, valid_leagues, fold["train"], seed=99992)
 
     ck = os.path.join(out_dir, "ckpt.npz")
     if resume and os.path.exists(ck):
@@ -72,20 +75,24 @@ def train_fold(cfg, fold, out_dir, generations=None, valid_every=5,
         rec = ev.step()
         if ev.gen % valid_every == 0 or ev.gen == generations:
             v = head_to_head(ev.best, cfg, vviews, specs)
-            rec = dict(rec, valid=v)
+            t = head_to_head(ev.best, cfg, ev.views, tspecs)
+            rec = dict(rec, valid=v, train_paired=t)
             curve.append(dict(gen=ev.gen, train=rec["best"],
-                              train_mean=rec["mean"], **{
-                                  f"v_{k}": val for k, val in v.items()}))
+                              train_mean=rec["mean"],
+                              t_score=t["score"], t_se=t["se_points"],
+                              gap=t["score"] - v["score"],
+                              **{f"v_{k}": val for k, val in v.items()}))
             np.savez(os.path.join(out_dir, f"gen{ev.gen:05d}.npz"),
                      best=ev.best, mean=ev.std.mean, sd=ev.std.sd)
             with open(cp, "w") as fh:
                 json.dump(curve, fh, indent=1)
             if verbose:
                 print(f"  [{fold['name']}] gen {ev.gen:4d} "
-                      f"train {rec['mean']:.3f}/{rec['best']:.3f}  "
-                      f"valid dpts {v['d_points']:+7.1f}+-{v['se_points']:.1f} "
-                      f"win {v['win']:.2f} vs {v['ref_win']:.2f} "
-                      f"rank {v['rank']:.2f} vs {v['ref_rank']:.2f}",
+                      f"fit {rec['mean']:.3f}  "
+                      f"train {t['score']:+7.1f}+-{t['se_points']:.0f}  "
+                      f"valid {v['score']:+7.1f}+-{v['se_points']:.0f}  "
+                      f"gap {t['score'] - v['score']:+7.1f}  "
+                      f"win {v['win']:.2f} vs {v['ref_win']:.2f}",
                       flush=True)
         ev.save()
     ev.close()
@@ -94,8 +101,18 @@ def train_fold(cfg, fold, out_dir, generations=None, valid_every=5,
     return curve
 
 
-def summarize(root, key="v_score"):
-    """Mean validation curve across folds and the generation it peaks at."""
+SMOOTH = 3
+
+
+def summarize(root, key="v_score", smooth=SMOOTH):
+    """Mean validation curve across folds, and the generation to stop at.
+
+    The stopping generation is read off a moving average of the curve, not
+    off its raw argmax. A draft league is noisy enough that the single
+    best checkpoint is usually the luckiest one rather than the best one,
+    and picking it is overfitting the validation seasons - the one thing
+    cross-validation exists to prevent.
+    """
     fold_curves = {}
     for name in sorted(os.listdir(root)):
         p = os.path.join(root, name, "curve.json")
@@ -105,18 +122,30 @@ def summarize(root, key="v_score"):
         return None
     gens = sorted(set.intersection(*[{r["gen"] for r in c}
                                      for c in fold_curves.values()]))
+    def col(g, name, default=float("nan")):
+        return [next((r.get(name, default) for r in c if r["gen"] == g),
+                     default) for c in fold_curves.values()]
+
     mean = []
     for g in gens:
-        vals = [next(r[key] for r in c if r["gen"] == g)
-                for c in fold_curves.values()]
-        tr = [next(r["train_mean"] for r in c if r["gen"] == g)
-              for c in fold_curves.values()]
-        mean.append(dict(gen=g, valid=float(np.mean(vals)),
-                         valid_se=float(np.std(vals, ddof=1) /
-                                        np.sqrt(len(vals)))
-                         if len(vals) > 1 else float("nan"),
-                         train=float(np.mean(tr)),
-                         gap=float(np.mean(tr) - np.mean(vals) / 100.0)))
-    best = max(mean, key=lambda r: r["valid"])
-    return dict(folds=list(fold_curves), curve=mean, best_gen=best["gen"],
-                best_valid=best["valid"])
+        vals = col(g, key)
+        se = col(g, "v_se_points")
+        mean.append(dict(
+            gen=g, valid=float(np.mean(vals)),
+            # spread across folds, and the paired noise floor within them
+            valid_se=(float(np.std(vals, ddof=1) / np.sqrt(len(vals)))
+                      if len(vals) > 1 else float("nan")),
+            paired_se=float(np.nanmean(se) / np.sqrt(len(se))),
+            train=float(np.nanmean(col(g, "t_score"))),
+            fit=float(np.mean(col(g, "train_mean")))))
+        mean[-1]["gap"] = mean[-1]["train"] - mean[-1]["valid"]
+    v = np.array([r["valid"] for r in mean])
+    k = max(1, min(smooth, len(v)))
+    ker = np.ones(k)
+    sm = np.convolve(v, ker, "same") / np.convolve(np.ones_like(v), ker, "same")
+    for r, x in zip(mean, sm):
+        r["valid_smooth"] = float(x)
+    i = int(np.argmax(sm))
+    return dict(folds=list(fold_curves), curve=mean, smooth=k,
+                best_gen=mean[i]["gen"], best_valid=float(sm[i]),
+                best_valid_raw=mean[i]["valid"])

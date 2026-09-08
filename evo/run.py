@@ -130,12 +130,22 @@ def main(argv=None):
             print("no folds with a curve under", a.out)
             return 1
         print(f"folds: {', '.join(s['folds'])}")
-        print(f"{'gen':>6} {'train fit':>10} {'valid dmargin':>14} {'se':>7}")
+        print("paired points per season against the baseline manager, "
+              "meaned over folds")
+        print(f"{'gen':>6} {'fitness':>8} {'train':>8} {'valid':>8} "
+              f"{'+-fold':>7} {'+-pair':>7} {'gap':>7} {'smoothed':>9}")
         for r in s["curve"]:
-            print(f"{r['gen']:6d} {r['train']:10.3f} {r['valid']:14.2f} "
-                  f"{r['valid_se']:7.2f}")
-        print(f"\nbest generation {s['best_gen']} "
-              f"(mean validation score {s['best_valid']:+.2f})")
+            print(f"{r['gen']:6d} {r['fit']:8.3f} {r['train']:+8.1f} "
+                  f"{r['valid']:+8.1f} {r['valid_se']:7.1f} "
+                  f"{r['paired_se']:7.1f} {r['gap']:+7.1f} "
+                  f"{r['valid_smooth']:+9.1f}")
+        print(f"\nstop at generation {s['best_gen']}: "
+              f"{s['best_valid']:+.1f} points a season over the baseline "
+              f"({s['smooth']}-point moving average; raw "
+              f"{s['best_valid_raw']:+.1f})")
+        print("train it on every season with:\n"
+              f"  python -m evo.run train --out evo/runs/final "
+              f"--all-seasons --generations {s['best_gen']}")
         with open(os.path.join(a.out, "summary.json"), "w") as fh:
             json.dump(s, fh, indent=1)
         return 0
