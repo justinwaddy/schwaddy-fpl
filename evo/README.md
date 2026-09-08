@@ -361,6 +361,38 @@ modelling one.** Eighty players are scored per draft pick and sixty free
 agents per waiver window, ranked by the shared heuristic board. A genome
 cannot claim the 200th-best free agent even if it would have wanted to.
 
+### What fixtures are worth, measured the right way
+
+A regression of realized points on features, scored per player-gameweek,
+says the fixture columns add almost nothing once the baseline - which
+already carries a fixture multiplier - is in. That was reported here
+first, and it is the wrong instrument for the question. Fixtures act on
+DECISIONS: which eleven to start, and above all which weak slot to churn
+for whoever has the good game this week. The simulator measures that.
+Paired leagues against the reference heuristic, three variants of it:
+
+```
+                      blind          stream           blend
+  2021-22        -13.1 +- 18     -43.6 +- 14      -2.5 +- 19
+  2022-23       -131.4 +- 20     -53.4 +- 19     -17.2 +- 16
+  2023-24        -58.4 +- 16     -51.9 +- 13     +17.1 +- 13
+  2024-25        -54.7 +-  9      -7.9 +- 13     +27.7 +-  9
+  2025-26        -15.6 +- 16     -12.5 +- 13     +21.5 +- 15
+  mean                -54.6           -33.9            +9.3
+```
+
+`blind` knows blanks but not difficulty: fixture knowledge is worth about
+fifty-five points a season to the decisions, every season. `stream`
+churns the weakest slot on this week's expected points alone and LOSES
+thirty-four - churn has a cost: you drop a decent player for one good
+game and lose him. `blend`, half this week and half the five-week run,
+beats the reference by nine, and by twenty-plus in the three most recent
+seasons. So the mechanism is real, the naive version of it is a trap, and
+the right horizon mix is a learnable thing - the network's waiver head
+sees this week, the run, and the slope between them. `waiver_blend` puts
+the blend into the heuristic itself; it defaults to zero so that the
+benchmark stays where these numbers were measured.
+
 ### The week, and its two clocks
 
 A gameweek asks a manager for three things at two different moments, and
