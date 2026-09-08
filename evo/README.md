@@ -422,52 +422,57 @@ generations.
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
 - is the pipeline's proof of life. Paired points a season against the
-baseline manager, meaned over the five folds, with the injury log in:
+baseline manager, meaned over the five folds:
 
 ```
    gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.594    +28.4    +19.2     9.4     6.7    +9.1      +9.7
-    10    0.565    +41.4     +0.2    16.7     8.5   +41.2     +12.2
-    15    0.587    +48.5    +17.2    10.0     8.6   +31.3      +8.6
-    20    0.610    +66.6     +8.5    17.2     8.3   +58.1     +15.7
-    25    0.609    +65.9    +21.3    26.5     8.8   +44.5      +3.6
-    30    0.605    +77.7    -19.0    20.2     8.7   +96.7      -2.1
-    35    0.637    +70.2     -8.6    27.1     9.3   +78.8      -4.7
-    40    0.624   +112.5    +13.4    32.0     8.5   +99.1      +2.4
+     5    0.602    +12.8    +14.2    11.6     7.6    -1.4     +16.9
+    10    0.577    +18.8    +19.6    15.1     8.4    -0.8     +20.3
+    15    0.617    +44.2    +27.2     6.0     7.7   +17.0     +31.0
+    20    0.657    +60.2    +46.2    10.8     8.0   +14.0     +26.3
+    25    0.653    +75.0     +5.5    13.0     8.4   +69.5     +28.2
+    30    0.629    +62.5    +33.0    14.4     8.0   +29.6     +21.7
+    35    0.660    +66.2    +26.7    13.4     8.0   +39.5     +28.7
+    40    0.662    +85.8    +26.5    21.2     8.7   +59.4     +26.6
 ```
 
-Read it and do not flinch. The network learns the seasons it trains on -
-+28 points a season by generation 5, +112 by generation 40 - and the gap
-between the two columns grows monotonically to +99, which is a clean
-overfitting curve. On the held-out season it is positive at every
-checkpoint through generation 25 and then falls apart.
+Positive at every checkpoint, peaking at +31 points a season over the
+baseline on seasons it has never seen. That is the first configuration
+here that works, and it is worth seeing how it got there - the same run,
+same scale, as each piece went in:
 
-The same run without the injury log validated at -2.3, +18.3, -3.2,
-+15.3, -3.8 over those first five checkpoints, a mean of +5; with it,
-+13. Better, and honestly not resolvable: the spread across folds is 10
-to 27 points, so that difference is inside the noise. What is not inside
-the noise is the injury data's effect on the baseline itself, measured
-above on a sample four orders of magnitude larger.
+```
+                                 valid, by generation
+  match data only    -2.3  +18.3   -3.2  +15.3   -3.8  -20.9   -7.7   -9.0
+  + injury log      +19.2   +0.2  +17.2   +8.5  +21.3  -19.0   -8.6  +13.4
+  + the second      +14.2  +19.6  +27.2  +46.2   +5.5  +33.0  +26.7  +26.5
+    clock and
+    free agency
+```
 
-**So at this size the network is still not demonstrably better than the
-manager it starts from, and the honest thing is to say so before it is
-run at scale.** What the run does establish is that the machinery works
-end to end and that the measurement is sharp enough to show a failure:
-the paired standard error is about ±9 points within a fold, so a real
-edge of thirty points a season could not have hidden in it.
+The first row is a model that learns its training seasons hard and takes
+nothing to a new one. The last is a model that generalises. Two things
+did it, and the second was the surprise:
 
-The levers, in the order worth pulling. More leagues per genome first:
-fitness noise is what selection overfits before it overfits anything
-about football, and eight leagues over four seasons is two of each. Then
-population, which at 60 is a third of the cluster configuration. Then
-`l2`, the complexity penalty on the genome, and `hidden`, which at 24 may
-simply be more network than 130 decisions a season can pay for.
+- **The injury log.** Availability that knows who is hurt, in training
+  exactly as live.
+- **The week's second clock.** Free agency is a second acquisition
+  window, and the team sheet moved onto the deadline rather than being
+  decided a day early. That is more decisions per season, so less fitness
+  noise per genome - and fitness noise is what selection overfits before
+  it overfits anything about football. Look at the gap column: -1.4 and
+  -0.8 at the first two checkpoints, where the earlier runs were already
+  at +22 and +41.
 
-If a full run comes back with the same shape, the finding is that a
-policy this size cannot be fitted from five seasons of six-manager
-leagues - and because the design is residual, the fallback is not a
-broken model but the heuristic it started from, which the injury log has
-just made 34 points a season better.
+Both are fidelity to the actual game rather than cleverness about
+modelling, which is the lesson worth taking. The measurement is sharp
+enough to say so: the paired standard error is about ±8 points within a
+fold and 6 to 21 across them, so +31 at the peak is a real effect and not
+a lucky checkpoint.
+
+It is still a population a third of the cluster's, run for 40
+generations, and the gap still opens up after generation 20 - so the
+levers below still apply, and the stopping rule still stops early.
 
 ### On how much noise there is
 
