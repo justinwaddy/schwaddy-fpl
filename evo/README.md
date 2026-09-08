@@ -327,48 +327,52 @@ generations.
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
 - is the pipeline's proof of life. Paired points a season against the
-baseline manager, meaned over the five folds:
+baseline manager, meaned over the five folds, with the injury log in:
 
 ```
    gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.571    +19.4     -2.3    11.8     8.7   +21.7      +8.0
-    10    0.538    +21.4    +18.3    12.3     7.8    +3.1      +4.3
-    15    0.565    +23.6     -3.2    23.5     8.7   +26.8     +10.2
-    20    0.595    +53.9    +15.3    10.8     8.5   +38.5      +2.8
-    25    0.601    +54.7     -3.8    21.2     8.8   +58.5      -3.1
-    30    0.596    +71.1    -20.9     9.5     9.9   +92.0     -10.8
-    35    0.626    +65.8     -7.7    27.5     9.5   +73.5     -12.5
-    40    0.604    +88.1     -9.0    15.0     9.8   +97.1      -8.3
+     5    0.594    +28.4    +19.2     9.4     6.7    +9.1      +9.7
+    10    0.565    +41.4     +0.2    16.7     8.5   +41.2     +12.2
+    15    0.587    +48.5    +17.2    10.0     8.6   +31.3      +8.6
+    20    0.610    +66.6     +8.5    17.2     8.3   +58.1     +15.7
+    25    0.609    +65.9    +21.3    26.5     8.8   +44.5      +3.6
+    30    0.605    +77.7    -19.0    20.2     8.7   +96.7      -2.1
+    35    0.637    +70.2     -8.6    27.1     9.3   +78.8      -4.7
+    40    0.624   +112.5    +13.4    32.0     8.5   +99.1      +2.4
 ```
 
-Read it and do not flinch: the network learns the seasons it trains on -
-+19 points a season by generation 5, +88 by generation 40 - and on the
-held-out season it does not beat the baseline at any generation. Win rate
-against the same six heuristics tells the same story: 0.47 against the
-baseline's 0.38 at generation 10, back to 0.38 by 15, and 0.25 by 30. The
-gap between the two columns is a clean, monotone overfitting curve, which
-is what a cross-validation harness is for.
+Read it and do not flinch. The network learns the seasons it trains on -
++28 points a season by generation 5, +112 by generation 40 - and the gap
+between the two columns grows monotonically to +99, which is a clean
+overfitting curve. On the held-out season it is positive at every
+checkpoint through generation 25 and then falls apart.
 
-**So at this size the answer is no, and the honest thing is to say so
-before it is run at scale.** What this run does establish is that the
-machinery works end to end and that the measurement is sharp enough to
-show the failure: the paired standard error is about ±9 points within a
-fold and ±12 across them, so a real edge of thirty points a season could
-not hide in it.
+The same run without the injury log validated at -2.3, +18.3, -3.2,
++15.3, -3.8 over those first five checkpoints, a mean of +5; with it,
++13. Better, and honestly not resolvable: the spread across folds is 10
+to 27 points, so that difference is inside the noise. What is not inside
+the noise is the injury data's effect on the baseline itself, measured
+above on a sample four orders of magnitude larger.
 
-The levers against overfitting, in the order worth pulling. More leagues
-per genome first: fitness noise is what selection overfits before it
-overfits anything about football, and eight leagues over four seasons is
-two seasons each. Then population, which at 60 is a third of the cluster
-configuration. Then `l2`, the complexity penalty on the genome, which is
-off by default and should be chosen by the same validation curve as
-everything else - as should `hidden`, which at 24 may simply be more
-network than 130 decisions a season can pay for.
+**So at this size the network is still not demonstrably better than the
+manager it starts from, and the honest thing is to say so before it is
+run at scale.** What the run does establish is that the machinery works
+end to end and that the measurement is sharp enough to show a failure:
+the paired standard error is about ±9 points within a fold, so a real
+edge of thirty points a season could not have hidden in it.
+
+The levers, in the order worth pulling. More leagues per genome first:
+fitness noise is what selection overfits before it overfits anything
+about football, and eight leagues over four seasons is two of each. Then
+population, which at 60 is a third of the cluster configuration. Then
+`l2`, the complexity penalty on the genome, and `hidden`, which at 24 may
+simply be more network than 130 decisions a season can pay for.
 
 If a full run comes back with the same shape, the finding is that a
-1,295-parameter policy cannot be fitted from five seasons of six-manager
-leagues, and the residual design means the fallback is not a broken model
-but the heuristic it started from.
+policy this size cannot be fitted from five seasons of six-manager
+leagues - and because the design is residual, the fallback is not a
+broken model but the heuristic it started from, which the injury log has
+just made 34 points a season better.
 
 ### On how much noise there is
 
