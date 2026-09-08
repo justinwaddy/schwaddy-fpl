@@ -127,9 +127,67 @@ replays with the same seed: every draft pick, roster and eleven before
 the cut must be unchanged, and they must diverge after it - a test that
 always passed would prove nothing.
 
+### Injury history
+
+FPL publishes a player's `status`, `chance_of_playing` and a line of
+`news` - "Hamstring injury - 25% chance of playing" - but only ever for
+right now, and the match archive carries none of it. `evo/injuries.py`
+reconstructs the history from the one place it survives: the archive
+repository commits `players_raw.csv` once a gameweek, and that file *does*
+carry all four fields, so its git log is a point-in-time injury feed.
+
+```
+python -m evo.injuries --repo /path/to/Fantasy-Premier-League
+```
+
+writes `data/injuries_{season}.csv`, a change log rather than a panel -
+about 3,500 state changes a season across 800 players, a couple of
+hundred kilobytes each.
+
+The snapshots are weekly, but the resolution is better than that, because
+FPL stamps every item with `news_added`: the moment it was published. A
+note posted at 09:30 on the Friday was visible to every manager in the
+game from 09:30 on the Friday, so dating the state from there is a fact
+about what was knowable rather than a peek forward. Three quarters of the
+rows are back-dated this way, by a median of about a week.
+
+The reverse inference is not sound and is not made. A snapshot taken
+after time t showing a player fit says nothing about whether he was fit
+at t, so a state is only ever read forward from its own start. That
+distinction is not cosmetic: the first version back-dated *clearings*
+too, using the `news_added` of the injury that had just ended, which had
+Tomiyasu fit from the day he got hurt. `selftest` truncates this log
+along with the match archive, so a violation fails a test rather than
+quietly improving a backtest.
+
+**It is worth about +34 points a season**, measured on the heuristic
+manager alone - the same policy, the same seeds, with the log and
+without:
+
+```
+   season   with injuries   without     diff
+  2021-22            1526      1464      +62
+  2022-23            1664      1652      +12
+  2023-24            1669      1632      +37
+  2024-25            1706      1691      +16
+  2025-26            1705      1661      +44
+```
+
+Positive in all five. That is a larger edge than anything the network
+found on its own in the dry run below, which is worth sitting with: the
+data was missing, not the model. `--no-use-injuries` reruns the ablation.
+
+Two honest gaps. The cadence is a gameweek, so a knock picked up and
+cleared inside one week can be missed entirely. And the harvest stops
+wherever the archive repo last committed, which during a live season is
+days behind - `python -m evo.injuries --live` appends the draft API's
+current state, and the live driver does it automatically when online, so
+one call a day keeps the log current and next season is already
+harvested rather than needing reconstruction.
+
 ### Features
 
-Forty-nine per player per gameweek, all as at the decision:
+Fifty-five per player per gameweek, all as at the decision:
 
 - trailing points per appearance, minutes share and start share over the
   club's last 3, 6, 12 and 38 matches - measured in the *club's* matches,
@@ -140,6 +198,9 @@ Forty-nine per player per gameweek, all as at the decision:
 - last season's points per appearance and appearances, with an indicator
   where there is no last season;
 - the market: price and ownership as of his last row;
+- the injury state: the advertised chance of playing, whether he is out
+  or doubtful, how long he has been in that state, and how stale our last
+  observation of him is;
 - availability, and his club's rolling scored and conceded rates shrunk
   toward last season's (a promoted club gets the tails of that
   distribution);
@@ -175,12 +236,10 @@ five archive seasons and not the live one, and a feature the live model
 cannot compute is worse than no feature at all. Turn `use_odds` on once
 `odds_2026-27.csv` exists.
 
-**Injuries are applied outside the network.** The archive holds no
-history of status flags, so a model cannot learn what it has never seen.
-The live driver reads the API's status and chance-of-playing and applies
-them as a multiplier after scoring. In simulation there are no injury
-flags at all, which makes the simulated managers slightly better than a
-real one at picking a man who is about to be ruled out.
+**Injuries are inside the model, and are harvested rather than bought.**
+See the next section. Availability at any decision carries the game's own
+status and chance-of-playing as of that moment, in training exactly as
+live.
 
 **Defensive contribution exists only from 2025/26.** Earlier seasons
 score zero there and carry an indicator, so the network can tell the
@@ -302,6 +361,7 @@ noise until it has one.
 
 ```
 evo/config.py     every knob, in one dataclass that a checkpoint stores
+evo/injuries.py   the injury history, harvested out of git and kept current
 evo/features.py   the point-in-time feature tensors and their cache
 evo/net.py        the policy: encoder, three heads, six heuristic anchors
 evo/sim.py        one simulated season: draft, waivers, line-ups, subs

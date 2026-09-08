@@ -77,7 +77,14 @@ class Brain:
     def __init__(self, genome, cfg):
         self.cfg = cfg
         self.g = np.asarray(genome, np.float32)
-        sl, _ = layout(cfg)
+        sl, n = layout(cfg)
+        if self.g.size != n:
+            raise ValueError(
+                f"this genome has {self.g.size} weights and the current "
+                f"configuration needs {n} ({N_FEATURES} features, "
+                f"{cfg.hidden} hidden). A checkpoint is tied to the feature "
+                f"set it was trained on: retrain it, or check out the "
+                f"revision it came from.")
         self.p = {k: self.g[s].reshape(sh) for k, (s, sh) in sl.items()}
         self._cache_key = None
         self._H = None

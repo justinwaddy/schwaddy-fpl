@@ -226,6 +226,7 @@ class Evolver:
         np.savez(tmp, pop=self.pop, sigma=self.sigma, hof=self.hof,
                  best=getattr(self, "best", self.pop[0]),
                  mean=self.std.mean, sd=self.std.sd, gen=self.gen,
+                 n_features=np.array(self.std.mean.shape[0]),
                  cfg=json.dumps(self.cfg.to_dict()),
                  seasons=np.array(self.seasons))
         os.replace(tmp, path)
@@ -234,6 +235,11 @@ class Evolver:
 
     def load(self, path):
         z = np.load(path, allow_pickle=False)
+        if z["pop"].shape[1] != self.glen:
+            raise ValueError(
+                f"{path} holds genomes of {z['pop'].shape[1]} weights and "
+                f"this configuration needs {self.glen}; the feature set has "
+                f"changed since it was written, so it cannot be resumed.")
         self.pop, self.sigma, self.hof = z["pop"], z["sigma"], z["hof"]
         self.best = z["best"]
         self.gen = int(z["gen"])

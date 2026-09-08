@@ -36,6 +36,11 @@ class Config:
     # published days after a typical draft; off by default so the draft
     # board is built from football alone.
     preseason_market: bool = False
+    # injury and availability history, harvested by evo/injuries.py from
+    # the archive repo's git history. Off is the ablation: it is what the
+    # model looked like before there was any, and the honest comparison
+    # for whether the data earned its place.
+    use_injuries: bool = True
     # bookmaker ratings exist for the five archive seasons but not for
     # the live one, and a feature the live model cannot compute is worse
     # than no feature at all. Turn on once odds_2026-27.csv exists.

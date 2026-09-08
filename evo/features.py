@@ -35,6 +35,7 @@ import numpy as np
 import pandas as pd
 
 from .config import (SEASONS, LIVE_SEASON, POSITIONS, ETYPE, WINDOWS, Config)
+from . import injuries
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.panel import draft_points          # noqa: E402
@@ -44,7 +45,7 @@ GOALS_CENTRE = 1.4
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 3
+CACHE_VERSION = 4
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -55,6 +56,8 @@ FEATURE_NAMES = (
     + ["prev_ppm", "prev_apps", "has_prev"]
     + ["price", "owned", "has_market"]
     + ["p_play", "team_att", "team_def"]
+    + ["inj_factor", "inj_out", "inj_doubt", "inj_days", "inj_stale",
+       "inj_known"]
     + ["n_fix1", "home1", "opp_att1", "opp_def1"]
     + ["n_fix5", "opp_att5", "opp_def5"]
     + ["base_ppm", "base_ep1", "base_next5", "bias"]
@@ -87,6 +90,7 @@ class SeasonData:
         self.season = season
         self.cfg = cfg
         self.truncate_gw = truncate_gw
+        self.cut_ts = float("inf")
         self._load(cfg.data_dir, season, prev)
         if extra_fixtures:
             self._add_fixtures(extra_fixtures)
@@ -162,6 +166,11 @@ class SeasonData:
 
         # resolution-independent seconds since epoch (pandas 2 and 3)
         ts = gws["ts"].to_numpy("datetime64[s]").astype("int64").astype(float)
+        if self.truncate_gw is not None and len(ts):
+            # an archive truncated at a gameweek is an archive truncated at
+            # a MOMENT, and the injury log has to be cut at the same one or
+            # the leakage test would not cover it
+            self.cut_ts = float(ts.max())
         gw = gws["GW"].to_numpy()
         self.max_gw = int(gw.max())
 
@@ -470,6 +479,11 @@ def build_features(sd, cfg=None):
     if sd.has_prev.any():
         prev_avail = np.clip(sd.prev_apps / 38.0, 0, 1)
 
+    # the injury log, cut at the same moment as the match archive
+    inj = injuries.load(cfg.data_dir, sd.season) if cfg.use_injuries else {}
+    if sd.cut_ts != float("inf"):
+        inj = {c: a[a[:, 0] <= sd.cut_ts] for c, a in inj.items()}
+
     # cache of club windows, one per (club, gameweek)
     club_win = {}
 
@@ -493,6 +507,7 @@ def build_features(sd, cfg=None):
         pts_ts = sd.p_ts[i]
         cum = sd.p_cum[i]
         posi = int(sd.pos[i])
+        inj_rows = inj.get(int(sd.codes[i]))
         for g in range(1, 39):
             t = sd.t_dec[g]
             k = int(np.searchsorted(pts_ts, t, "left"))
@@ -573,11 +588,26 @@ def build_features(sd, cfg=None):
                 pp = UNKNOWN_PLAYER
             else:
                 pp = PLAY_FLOOR + (1 - PLAY_FLOOR) * min(1.0, float(share))
+            # what the game itself was advertising about him at time t.
+            # This multiplies availability rather than sitting beside it,
+            # so the heuristic baseline - and therefore the residual
+            # policy's starting point - knows about injuries in training
+            # exactly as the live driver does.
+            ifac, iout, idbt, idays, istale, iknown = injuries.state_at(
+                inj_rows, t)
+            pp *= ifac
             p_play[i, col] = pp
             f[j] = pp
             ta, tc = sd.team_rate_before(club, t)
             f[j + 1], f[j + 2] = ta, tc
             j += 3
+            f[j] = ifac
+            f[j + 1] = iout
+            f[j + 2] = idbt
+            f[j + 3] = min(idays, 180.0) / 30.0
+            f[j + 4] = min(istale, 60.0) / 14.0
+            f[j + 5] = iknown
+            j += 6
 
             nf1, h1, oa1, od1 = sd._fix_terms(club, g, t)
             f[j] = nf1; f[j + 1] = h1; f[j + 2] = oa1; f[j + 3] = od1
@@ -626,7 +656,10 @@ def build_features(sd, cfg=None):
                         38 * (0.35 + 0.65 * np.minimum(1.0, sd.prev_apps / 38.0)),
                         38 * 0.20)
     prior_ppm = np.where(sd.has_prev, sd.prev_ppm, pos_mean_g[1][sd.pos])
-    base_season = (prior_ppm * exp_apps).astype(np.float32)
+    # a player carrying an injury on draft day is worth less on draft day
+    draft_fac = np.array([injuries.state_at(inj.get(int(c)), sd.t_dec[1])[0]
+                          for c in sd.codes])
+    base_season = (prior_ppm * exp_apps * draft_fac).astype(np.float32)
 
     return dict(X=X, base_ppm=base_ppm, base_ep1=base_ep1,
                 base_next5=base_next5, base_season=base_season,
@@ -639,7 +672,8 @@ def build_features(sd, cfg=None):
 # ---------------------------------------------------------------- caching
 def _key(cfg):
     return (f"v{CACHE_VERSION}_{cfg.pool_mode}_m{int(cfg.preseason_market)}"
-            f"_o{int(cfg.use_odds)}_w{cfg.waiver_lead_hours:g}")
+            f"_o{int(cfg.use_odds)}_i{int(cfg.use_injuries)}"
+            f"_w{cfg.waiver_lead_hours:g}")
 
 
 def season_arrays(season, cfg, prev_season=None, rebuild=False):

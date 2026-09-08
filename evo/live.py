@@ -13,12 +13,17 @@ Three decisions come out of it:
   board     the draft board, which only matters in August but is what the
             draft head was trained for
 
-Two things happen outside the network, deliberately. Injuries and
-suspensions come from the API's status flags and are applied as a
-multiplier AFTER scoring, because the archive holds no history of them to
-train on - a model cannot learn what it has never seen. And a player the
-league has locked (a new registration inside the 24-hour lock) is dropped
-from the claim list.
+Injuries are no longer bolted on here. evo/injuries.py harvests the
+game's own status history out of the archive repo's git log, so the
+availability inside every feature and every baseline already carries them
+- in training exactly as here - and applying the flags a second time
+after scoring would double-count them. What this module still does is
+keep that log current: the harvest stops where the archive repo last
+committed, and one call to injuries.append_bootstrap brings it to today.
+
+A player the league has locked (a new registration inside the 24-hour
+lock) is still dropped from the claim list, which is a rule rather than a
+projection.
 """
 import json
 import os
@@ -27,6 +32,7 @@ import time
 import numpy as np
 
 from .config import Config, SEASONS, LIVE_SEASON, POSITIONS, SQUAD
+from . import injuries
 from .features import SeasonData, build_features, Standardizer
 from .net import Brain
 from .sim import SeasonView, POS_ID, _waiver_ctx, _draft_ctx
@@ -34,10 +40,6 @@ from .sim import SeasonView, POS_ID, _waiver_ctx, _draft_ctx
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                       # noqa: E402
 from schwaddy.league import LEAGUE_ID, OWNER_ID, MANAGERS  # noqa: E402
-
-STATUS_FACTOR = {"a": 1.0, "d": 0.90, "i": 0.65, "s": 0.65, "u": 0.02,
-                 "n": 0.30}
-
 
 def _ts(s):
     return float(np.datetime64(s.replace("Z", ""), "s").astype("int64"))
@@ -99,6 +101,18 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     brain = Brain(genome, cfg)
 
     boot, fixtures, own = _fetch(cfg, offline, league_id)
+    # bring the injury log up to date BEFORE the features are built, so
+    # that availability reflects this morning's team news and not the
+    # archive repo's last commit
+    # only when online: appending stamps "observed just now" on the
+    # bootstrap, which is a claim a cached file cannot support
+    if cfg.use_injuries and not offline:
+        injuries.append_bootstrap(cfg.data_dir, boot)
+    if cfg.use_injuries:
+        seen = injuries.last_observation(cfg.data_dir, LIVE_SEASON)
+        if seen and time.time() - seen > 3 * 86400:
+            print(f"  WARNING: injury log last observed "
+                  f"{(time.time() - seen) / 86400:.1f} days ago")
     sd, arrays = load_live(cfg, boot, fixtures)
     sv = SeasonView(LIVE_SEASON, arrays, std)
 
@@ -124,14 +138,6 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     locked = {int(e["id"]) for e in boot["elements"]
               if e.get("status") == "u"}
 
-    def factor(i):
-        e = el.get(int(i), {})
-        f = STATUS_FACTOR.get(e.get("status", "a"), 1.0)
-        c = e.get("chance_of_playing_next_round")
-        if c is not None and e.get("status") in ("d", "i", "s"):
-            f = float(c) / 100.0
-        return f
-
     def describe(i, r, ep=None, base=None):
         e = el.get(int(i), {})
         return dict(id=int(i), name=e.get("web_name", str(i)),
@@ -154,7 +160,6 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
         base = sv.base_ep1[rows, gw - 1]
         ep = brain.score("lineup", sv.key, sv.Xn, rows, gw, base,
                          feats=sv.X[rows, gw - 1])
-        ep = np.array([e * factor(i) for e, i in zip(ep, ids)])
         sq = [dict(name=k, pos=POSITIONS[int(sv.pos[r])], ep=float(e))
               for k, (r, e) in enumerate(zip(rows, ep))]
         xi, bench, form = pick_xi(sq)
@@ -198,10 +203,7 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
                               mine_mask, cpos)
             val = brain.score("waiver", sv.key, sv.Xn, cand, gw, cbase,
                               ctx=ctx, feats=sv.X[cand, gw - 1])
-            # an injured free agent is not worth claiming and an injured
-            # squad player is not worth keeping, so the same flag applies
-            # to both sides of the swap
-            val = np.array([v * factor(i) for v, i in zip(val, cids)])
+
             unit = float(np.std(cbase)) or 1.0
             margin = max(0.0, brain.margin) * unit
             claims = []
