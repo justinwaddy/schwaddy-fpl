@@ -242,31 +242,61 @@ generations.
 ### What the dry run in this repo actually found
 
 A small run - population 60, eight leagues per genome, 40 generations,
-all five folds - is committed as the pipeline's proof of life, and it is
-worth reading for its shape rather than its numbers. The evolved genome
-beats the baseline manager on the seasons it trained on by twenty to
-seventy points a season, and on the held-out season it does not reliably
-beat it at all. That is textbook overfitting, and it is exactly what the
-gap column was added to show.
+all five leave-one-season-out folds, 30 validation leagues per checkpoint
+- is the pipeline's proof of life. Paired points a season against the
+baseline manager, meaned over the five folds:
 
-Nothing about that is a reason to trust the numbers less; it is a
-population two hundred short of the one the cluster config uses, judged
-on thirty validation leagues where the standard error is +-25. The levers
-against it, in the order worth pulling: more leagues per genome (fitness
-noise is what selection overfits first), a larger population, and `l2`,
-the complexity penalty on the genome, which is off by default and should
-be chosen by the same validation curve as everything else.
+```
+   gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
+     5    0.571    +19.4     -2.3    11.8     8.7   +21.7      +8.0
+    10    0.538    +21.4    +18.3    12.3     7.8    +3.1      +4.3
+    15    0.565    +23.6     -3.2    23.5     8.7   +26.8     +10.2
+    20    0.595    +53.9    +15.3    10.8     8.5   +38.5      +2.8
+    25    0.601    +54.7     -3.8    21.2     8.8   +58.5      -3.1
+    30    0.596    +71.1    -20.9     9.5     9.9   +92.0     -10.8
+    35    0.626    +65.8     -7.7    27.5     9.5   +73.5     -12.5
+    40    0.604    +88.1     -9.0    15.0     9.8   +97.1      -8.3
+```
+
+Read it and do not flinch: the network learns the seasons it trains on -
++19 points a season by generation 5, +88 by generation 40 - and on the
+held-out season it does not beat the baseline at any generation. Win rate
+against the same six heuristics tells the same story: 0.47 against the
+baseline's 0.38 at generation 10, back to 0.38 by 15, and 0.25 by 30. The
+gap between the two columns is a clean, monotone overfitting curve, which
+is what a cross-validation harness is for.
+
+**So at this size the answer is no, and the honest thing is to say so
+before it is run at scale.** What this run does establish is that the
+machinery works end to end and that the measurement is sharp enough to
+show the failure: the paired standard error is about ±9 points within a
+fold and ±12 across them, so a real edge of thirty points a season could
+not hide in it.
+
+The levers against overfitting, in the order worth pulling. More leagues
+per genome first: fitness noise is what selection overfits before it
+overfits anything about football, and eight leagues over four seasons is
+two seasons each. Then population, which at 60 is a third of the cluster
+configuration. Then `l2`, the complexity penalty on the genome, which is
+off by default and should be chosen by the same validation curve as
+everything else - as should `hidden`, which at 24 may simply be more
+network than 130 decisions a season can pay for.
+
+If a full run comes back with the same shape, the finding is that a
+1,295-parameter policy cannot be fitted from five seasons of six-manager
+leagues, and the residual design means the fallback is not a broken model
+but the heuristic it started from.
 
 ### On how much noise there is
 
-A draft league is a small-sample machine. Two managers with the same
-policy and different seats can finish two hundred points apart, and a
-paired difference over 30 leagues has a standard error of about ±25
-points a season - wider than most edges worth having. The cluster
-configuration uses 120 validation leagues per checkpoint, which brings
-that to about ±12, and the five folds average to about ±6. Anything
-reported here without an error bar beside it should be read as noise
-until it has one.
+A draft league is a small-sample machine: two managers with the same
+policy in different seats can finish two hundred points apart. Pairing
+removes most of that - the same season, opponents, seat and seed on both
+sides - and what is left is the draft diverging, which is real. Measured,
+30 paired leagues give about ±9 points a season within a fold and ±12
+across the five. The cluster configuration uses 120, which halves the
+first. Anything reported without an error bar beside it should be read as
+noise until it has one.
 
 ## Files
 
