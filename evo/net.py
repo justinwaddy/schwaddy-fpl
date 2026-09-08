@@ -31,7 +31,7 @@ from .config import Config
 from .features import N_FEATURES
 
 C_DRAFT = 10
-C_WAIVER = 6
+C_WAIVER = 7
 C_LINEUP = 0
 HEADS = ("draft", "waiver", "lineup")
 CONTEXT = dict(draft=C_DRAFT, waiver=C_WAIVER, lineup=C_LINEUP)
@@ -86,20 +86,20 @@ class Brain:
                 f"set it was trained on: retrain it, or check out the "
                 f"revision it came from.")
         self.p = {k: self.g[s].reshape(sh) for k, (s, sh) in sl.items()}
-        self._cache_key = None
-        self._H = None
+        self._H = {}
 
     # ------------------------------------------------------------ encoder
     def encode(self, key, Xn):
         """tanh(X W1 + b1) for a whole season, cached: a genome plays
         several leagues in the same season and the encoder does not
         change between them."""
-        if self._cache_key != key:
+        if key not in self._H:
             n, g, F = Xn.shape
             h = np.tanh(Xn.reshape(-1, F) @ self.p["W1"] + self.p["b1"])
-            self._H = h.reshape(n, g, -1).astype(np.float32)
-            self._cache_key = key
-        return self._H
+            if len(self._H) > 6:          # two clocks a season, a few seasons
+                self._H.clear()
+            self._H[key] = h.reshape(n, g, -1).astype(np.float32)
+        return self._H[key]
 
     # -------------------------------------------------------------- heads
     def raw(self, head, key, Xn, rows, gw, ctx=None):

@@ -45,7 +45,7 @@ GOALS_CENTRE = 1.4
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 4
+CACHE_VERSION = 5
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -449,9 +449,23 @@ class SeasonData:
         self.n = len(self.codes)
 
 
-def build_features(sd, cfg=None):
-    """Feature tensor and heuristic baselines for one season."""
+def build_features(sd, cfg=None, times=None, _shared=None):
+    """Feature tensor and heuristic baselines for one season, on one clock.
+
+    times is the decision time per gameweek. There are two of them in a
+    week and they are not interchangeable:
+
+      sd.t_dec     the waiver deadline, a day before the gameweek's. What
+                   a waiver claim is written on.
+      sd.deadline  the gameweek deadline itself. What the free-agency
+                   window and the team sheet are decided on - a day of
+                   team news later, and after everyone's waivers have
+                   already landed.
+
+    build_season() calls this twice and returns both.
+    """
     cfg = cfg or sd.cfg
+    times = sd.t_dec if times is None else times
     n, F = sd.n, N_FEATURES
     X = np.zeros((n, 38, F), np.float32)
     base_ppm = np.zeros((n, 38), np.float32)
@@ -509,7 +523,7 @@ def build_features(sd, cfg=None):
         posi = int(sd.pos[i])
         inj_rows = inj.get(int(sd.codes[i]))
         for g in range(1, 39):
-            t = sd.t_dec[g]
+            t = times[g]
             k = int(np.searchsorted(pts_ts, t, "left"))
             club = sd._club_at(i, k)
             col = g - 1
@@ -657,7 +671,7 @@ def build_features(sd, cfg=None):
                         38 * 0.20)
     prior_ppm = np.where(sd.has_prev, sd.prev_ppm, pos_mean_g[1][sd.pos])
     # a player carrying an injury on draft day is worth less on draft day
-    draft_fac = np.array([injuries.state_at(inj.get(int(c)), sd.t_dec[1])[0]
+    draft_fac = np.array([injuries.state_at(inj.get(int(c)), times[1])[0]
                           for c in sd.codes])
     base_season = (prior_ppm * exp_apps * draft_fac).astype(np.float32)
 
@@ -667,6 +681,29 @@ def build_features(sd, cfg=None):
                 minutes=sd.minutes.astype(np.float32),
                 pos=sd.pos.astype(np.int8), codes=sd.codes,
                 team=sd.team_of.astype(np.int16))
+
+
+def build_season(sd, cfg=None):
+    """Both of the week's clocks, in one set of arrays.
+
+    A gameweek asks a manager for three things at two different moments,
+    and the archive supports telling them apart:
+
+      waiver deadline   (deadline - 24h)  the ranked waiver claims
+      gameweek deadline                   free agency, then the team sheet
+
+    Everything suffixed _dl is the second of those. It is a day of team
+    news later than the first and it comes after every manager's waivers
+    have already been processed, which is exactly why the free-agency
+    scramble is a different decision from the waiver and not a repeat of
+    it.
+    """
+    cfg = cfg or sd.cfg
+    a = build_features(sd, cfg, times=sd.t_dec)
+    b = build_features(sd, cfg, times=sd.deadline)
+    for k in ("X", "base_ppm", "base_ep1", "base_next5", "p_play"):
+        a[k + "_dl"] = b[k]
+    return a
 
 
 # ---------------------------------------------------------------- caching
@@ -685,7 +722,7 @@ def season_arrays(season, cfg, prev_season=None, rebuild=False):
         return {k: z[k] for k in z.files}
     prev = SeasonData(prev_season, cfg) if prev_season else None
     sd = SeasonData(season, cfg, prev=prev)
-    d = build_features(sd, cfg)
+    d = build_season(sd, cfg)
     np.savez_compressed(path, **d)
     return d
 

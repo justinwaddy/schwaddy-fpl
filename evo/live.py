@@ -33,9 +33,9 @@ import numpy as np
 
 from .config import Config, SEASONS, LIVE_SEASON, POSITIONS, SQUAD
 from . import injuries
-from .features import SeasonData, build_features, Standardizer
+from .features import SeasonData, build_season, Standardizer
 from .net import Brain
-from .sim import SeasonView, POS_ID, _waiver_ctx, _draft_ctx
+from .sim import SeasonView, POS_ID, _draft_ctx, _rank_swaps
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                       # noqa: E402
@@ -63,7 +63,7 @@ def load_live(cfg, boot, fixtures, prev=None):
         dl[int(ev["id"])] = (_ts(ev["deadline_time"]),
                              _ts(w) if w else None)
     sd.set_deadlines(dl)
-    return sd, build_features(sd, cfg)
+    return sd, build_season(sd, cfg)
 
 
 def _fetch(cfg, offline, league_id):
@@ -91,6 +91,19 @@ def _fetch(cfg, offline, league_id):
             own[int(r["element"])] = ("me" if int(r["owner"]) == OWNER_ID
                                       else str(r["owner"]))
     return boot, fixtures, own
+
+
+def _standings(cfg, own, offline):
+    """Season totals per manager, for the head's league context."""
+    try:
+        lg = json.load(open(f"{cfg.data_dir}/league.json"))
+        t = sorted((float(m.get("total", 0)) for m in lg["managers"]),
+                   reverse=True)
+        mine = next(float(m.get("total", 0)) for m in lg["managers"]
+                    if m.get("mine"))
+        return [mine] + [x for x in t if x != mine][:5] or [0.0] * 6
+    except Exception:
+        return [0.0] * 6
 
 
 def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
@@ -152,14 +165,38 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
                 gw=gw, model=os.path.abspath(model_path),
                 league=league_id, offline=bool(offline))
 
+    # ---------------------------------------------------- which window
+    # A gameweek asks for three things at two moments. Until waivers
+    # process, a day before the deadline, the only way to sign anybody is
+    # a ranked claim. From then until the deadline every unowned player is
+    # a free agent, first come first served, and the team sheet is due.
+    ev = {int(e["id"]): e for e in boot["events"]["data"]}
+    now = time.time()
+    dl_ts = _ts(ev[gw]["deadline_time"]) if gw in ev else None
+    wv_ts = (_ts(ev[gw]["waivers_time"])
+             if gw in ev and ev[gw].get("waivers_time") else
+             (dl_ts - 86400 if dl_ts else None))
+    if wv_ts and now < wv_ts:
+        window = "waiver"
+    elif dl_ts and now < dl_ts:
+        window = "free_agency"
+    else:
+        window = "locked"
+    plan["window"] = window
+    plan["waivers_time"] = ev.get(gw, {}).get("waivers_time")
+    plan["deadline"] = ev.get(gw, {}).get("deadline_time")
+    is_fa = window == "free_agency"
+
     # ------------------------------------------------------------- line-up
+    # always on the deadline clock: a team sheet is submitted then, not a
+    # day earlier when the waivers were written
     squad = rows_for(mine_ids)
     if squad:
         ids = [i for i, _ in squad]
         rows = np.array([r for _, r in squad])
-        base = sv.base_ep1[rows, gw - 1]
-        ep = brain.score("lineup", sv.key, sv.Xn, rows, gw, base,
-                         feats=sv.X[rows, gw - 1])
+        base = sv.base_ep1_dl[rows, gw - 1]
+        ep = brain.score("lineup", sv.key_dl, sv.Xn_dl, rows, gw, base,
+                         feats=sv.X_dl[rows, gw - 1])
         sq = [dict(name=k, pos=POSITIONS[int(sv.pos[r])], ep=float(e))
               for k, (r, e) in enumerate(zip(rows, ep))]
         xi, bench, form = pick_xi(sq)
@@ -174,7 +211,7 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
         plan["xi"] = []
         plan["note"] = "no squad found; run online or refresh data/league.json"
 
-    # -------------------------------------------------------------- waivers
+    # ------------------------------------------- claims, or free agents
     if squad:
         free = []
         for i, e in el.items():
@@ -184,46 +221,24 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             if r is not None and sv.pool[r, gw - 1]:
                 free.append((i, r))
         if free:
-            fr = np.array([r for _, r in free])
-            fb = sv.base_next5[fr, gw - 1]
-            keep = np.argsort(-fb)[:cfg.waiver_shortlist]
-            free = [free[k] for k in keep]
-            fr = fr[keep]
-            cand = np.concatenate([fr, rows])
-            cids = [i for i, _ in free] + ids
-            mine_mask = np.concatenate([np.zeros(len(fr)), np.ones(len(rows))])
-            cpos = sv.pos[cand]
-            cbase = sv.base_next5[cand, gw - 1]
-            strength = np.zeros(4); n_at = np.zeros(4)
-            for p in range(4):
-                m = sv.pos[rows] == p
-                strength[p] = sv.base_next5[rows[m], gw - 1].sum()
-                n_at[p] = m.sum()
-            ctx = _waiver_ctx(sv, cand, strength, n_at, 39 - gw, 2.5, 0.0,
-                              mine_mask, cpos)
-            val = brain.score("waiver", sv.key, sv.Xn, cand, gw, cbase,
-                              ctx=ctx, feats=sv.X[cand, gw - 1])
-
-            unit = float(np.std(cbase)) or 1.0
-            margin = max(0.0, brain.margin) * unit
-            claims = []
-            for p in range(4):
-                fa = np.flatnonzero((cpos == p) & (mine_mask == 0))
-                ow = np.flatnonzero((cpos == p) & (mine_mask == 1))
-                if not len(fa) or not len(ow):
-                    continue
-                worst = ow[int(np.argmin(val[ow]))]
-                for a in fa[np.argsort(-val[fa])[:cfg.max_claims]]:
-                    gain = float(val[a] - val[worst])
-                    if gain > margin:
-                        claims.append(dict(
-                            pos=POSITIONS[p], gain=round(gain, 2),
-                            add=describe(cids[a], cand[a], val[a], cbase[a]),
-                            drop=describe(cids[worst], cand[worst],
-                                          val[worst], cbase[worst])))
-            claims.sort(key=lambda c: -c["gain"])
-            plan["claims"] = claims[:cfg.max_claims]
-            plan["waiver_margin"] = round(margin, 2)
+            # the league's real standings, so the head's context matches
+            # what it saw in training
+            totals = _standings(cfg, own, offline)
+            pairs = _rank_swaps(brain, sv, cfg, [int(r) for r in rows],
+                                np.array([r for _, r in free]), gw, totals,
+                                0, is_fa=is_fa)
+            id_of_row = {r: i for i, r in free}
+            id_of_row.update({int(r): i for r, i in zip(rows, ids)})
+            out = []
+            for gain, add, drop in pairs[:cfg.max_claims]:
+                out.append(dict(pos=POSITIONS[int(sv.pos[add])],
+                                gain=round(gain, 2),
+                                add=describe(id_of_row.get(add, -1), add),
+                                drop=describe(id_of_row.get(drop, -1), drop)))
+            plan["claims"] = out
+            plan["claims_are"] = ("free agents, first come first served"
+                                  if is_fa else
+                                  "waiver claims, in submission order")
 
     # ---------------------------------------------------------- draft board
     pool = np.flatnonzero(sv.pool[:, 0])
@@ -249,8 +264,12 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             print(f"    {p['pos']:3} {p['name']:<18} {p['team']:<4} "
                   f"{p['ep']:5.2f}  (base {p['base']:.2f})")
         print("  bench: " + ", ".join(p["name"] for p in plan["bench"]))
+    if plan.get("claims"):
+        print(f"  {plan['claims_are']} (window: {plan['window']}, "
+              f"waivers {plan.get('waivers_time')}, "
+              f"deadline {plan.get('deadline')})")
     for c in plan.get("claims", []):
-        print(f"  claim  +{c['add']['name']:<16} -{c['drop']['name']:<16} "
+        print(f"    +{c['add']['name']:<16} -{c['drop']['name']:<16} "
               f"{c['pos']:3} gain {c['gain']:.2f}")
     print("  board: " + ", ".join(p["name"] for p in plan["board"][:12]))
     return 0

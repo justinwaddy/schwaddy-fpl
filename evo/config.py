@@ -62,6 +62,17 @@ class Config:
 
     # --- league mechanics ---
     waiver_first_gw: int = 2
+    # The second acquisition window of the week. Once waivers process, a
+    # day before the deadline, everyone left unowned is a free agent on a
+    # first-come-first-served basis until the deadline. It is a different
+    # decision from the waiver: later news, no priority order, and the
+    # board has already been picked over.
+    free_agency: bool = True
+    fa_max_moves: int = 1
+    # first-come-first-served, modelled as a random order each week. Who
+    # actually gets there first is a fact about how often six people look
+    # at their phones, which no archive records.
+    fa_order: str = "random"
     max_claims: int = 3          # ranked claims submitted per manager
     max_success_per_gw: int = 1  # successful transactions per manager
     draft_shortlist: int = 80    # candidates scored per draft pick

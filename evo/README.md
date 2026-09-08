@@ -211,7 +211,8 @@ harvested rather than needing reconstruction.
 
 ### Features
 
-Fifty-five per player per gameweek, all as at the decision:
+Fifty-five per player per gameweek, on each of the week's two clocks,
+all as at the decision:
 
 - trailing points per appearance, minutes share and start share over the
   club's last 3, 6, 12 and 38 matches - measured in the *club's* matches,
@@ -281,17 +282,67 @@ modelling one.** Eighty players are scored per draft pick and sixty free
 agents per waiver window, ranked by the shared heuristic board. A genome
 cannot claim the 200th-best free agent even if it would have wanted to.
 
+### The week, and its two clocks
+
+A gameweek asks a manager for three things at two different moments, and
+the model keeps them apart because the game does:
+
+```
+  ... gameweek N deadline ......... waivers_time ......... gameweek N+1 deadline
+                 |                       |                        |
+                 |<--- waiver window --->|<-- free agency ------->|
+                    write ranked claims      first come, first     team
+                                             served                sheet
+```
+
+`waivers_time` is exactly 24 hours before the deadline. The league's own
+transaction log settles it - every waiver claim was submitted before it
+and processed at it, and the one free-agent signing landed at 14:14 on
+the Friday, after waivers had run and three hours before the deadline:
+
+```
+  kind  gw  submitted         result   waivers_time      deadline
+  w     3   2026-09-03T16:05  a        2026-09-03T17:30  2026-09-04T17:30
+  w     3   2026-09-03T16:05  di       2026-09-03T17:30  2026-09-04T17:30
+  f     3   2026-09-04T14:14  a        2026-09-03T17:30  2026-09-04T17:30
+```
+
+So the features are built on both clocks. Waiver claims are written on
+the earlier one; free agency and the team sheet on the later one, which
+is a day more team news - and with the injury log in, a day of team news
+is not nothing - and comes after every rival's waivers have already
+landed. `X` and `X_dl` in the cache are those two, and `selftest` proves
+non-anticipation on each of them separately.
+
+Free agency is scored by the same head as the waiver, with the window as
+a context flag, so one head learns that the two are different problems
+rather than two heads each learning half of one.
+
 ### Mechanics
 
 The game's, not a convenient approximation of it. Snake draft, 15 rounds,
 2/5/5/3 with forced fill. Waivers from gameweek 2, up to three ranked
 claims each, processed in reverse-standings order, one success per
-manager per week. Eleven starters, exactly one keeper, 3-5 at the back,
-2-5 in midfield, 1-3 up front, no captain. Automatic substitutions
-applied with realized minutes. The line-up and substitution rules are
-imported from `schwaddy.lineup` and `schwaddy.draftsim` rather than
-reimplemented, so the rules here and the rules on the dashboard cannot
-drift apart.
+manager per week. Then the free-agency window: whoever gets there first
+takes the player, modelled as a fresh random order each week, because who
+actually gets there first is a fact about how often six people look at
+their phones and no archive records it. Eleven starters, exactly one
+keeper, 3-5 at the back, 2-5 in midfield, 1-3 up front, no captain.
+Automatic substitutions applied with realized minutes. The line-up and
+substitution rules are imported from `schwaddy.lineup` and
+`schwaddy.draftsim` rather than reimplemented, so the rules here and the
+rules on the dashboard cannot drift apart.
+
+Two honest deviations. `fa_max_moves` defaults to one a week and the real
+game has no limit, which is conservative rather than generous. And the
+simulated managers use the window far more than yours do - about half a
+free-agent move per manager per week against the one your league has made
+in three gameweeks - because a heuristic with a margin rule has no
+reluctance to churn. Measured on the baseline manager the window is worth
+about +25 points a season, but that is +105, +5, +23, -8, 0 across the
+five: one season carrying it, and one slightly negative. It is in for
+fidelity to the rules; whether it is worth anything is for the network to
+find out.
 
 ## Cross-validation
 
@@ -416,7 +467,11 @@ python -m evo.run live --model evo/runs/final/ckpt.npz
 
 reads the draft API for the league's current ownership and my squad and
 writes `data/evo_plan.json`: the eleven and the bench order, up to three
-ranked waiver claims, and a draft board. `--offline` runs the same thing
+moves, and a draft board. It works out from the bootstrap which window
+the week is in and says so - before `waivers_time` the moves are ranked
+waiver claims to submit, between then and the deadline they are free
+agents to take first-come-first-served, and after the deadline the team
+sheet is locked and the claims are for next week. `--offline` runs the same thing
 from `data/league.json` and the cached bootstrap, which is what the dry
 run in this repo does.
 

@@ -20,7 +20,8 @@ Run: python -m evo.run selftest
 import numpy as np
 
 from .config import Config, SEASONS, SQUAD, SQUAD_SIZE, POSITIONS, MIN_PLAY, MAX_PLAY
-from .features import SeasonData, build_features, load_seasons, Standardizer
+from .features import (SeasonData, build_features, build_season,
+                       load_seasons, Standardizer)
 from .net import Brain, Heuristic, new_genome
 from .sim import SeasonView, simulate
 
@@ -34,11 +35,11 @@ def _report(name, ok, detail=""):
 
 
 def test_non_anticipation(cfg, season="2024-25", prev="2023-24", cut=20):
-    full = build_features(SeasonData(season, cfg,
-                                     prev=SeasonData(prev, cfg)), cfg)
-    trunc = build_features(SeasonData(season, cfg,
-                                      prev=SeasonData(prev, cfg),
-                                      truncate_gw=cut), cfg)
+    full = build_season(SeasonData(season, cfg,
+                                   prev=SeasonData(prev, cfg)), cfg)
+    trunc = build_season(SeasonData(season, cfg,
+                                    prev=SeasonData(prev, cfg),
+                                    truncate_gw=cut), cfg)
     # match players by stable code; the truncated archive has fewer of them
     fi = {c: i for i, c in enumerate(full["codes"])}
     rows_t = np.arange(len(trunc["codes"]))
@@ -53,7 +54,13 @@ def test_non_anticipation(cfg, season="2024-25", prev="2023-24", cut=20):
     d = float(np.abs(a - b).max()) if not same else 0.0
     ok = _report("features are non-anticipative", same,
                  f"gw 1-{g}, {len(rows_t)} players, max|diff| {d:g}")
-    for k in ("base_ppm", "base_ep1", "base_next5", "p_play"):
+    # the deadline clock is a day later than the waiver clock, so it gets
+    # the same treatment rather than being taken on trust
+    a = full["X_dl"][rows_f, :g]
+    b = trunc["X_dl"][rows_t, :g]
+    ok &= _report("  and on the deadline clock too", np.array_equal(a, b))
+    for k in ("base_ppm", "base_ep1", "base_next5", "p_play",
+              "base_ep1_dl", "base_next5_dl", "p_play_dl"):
         s = np.array_equal(full[k][rows_f, :g], trunc[k][rows_t, :g])
         ok &= _report(f"  baseline {k}", s)
     ok &= _report("  pool membership", np.array_equal(
@@ -132,11 +139,22 @@ def test_legality(cfg, views, season="2025-26"):
     ok &= _report("every XI is legal and drawn from the squad", good)
 
     moves = log["moves"]
-    good = all(sv.pool[add, gw - 1] for gw, m, add, drop, _ in moves)
-    ok &= _report("waiver adds were in the pool at the time", good,
-                  f"{len(moves)} moves")
-    good = all(sv.pos[add] == sv.pos[drop] for _, _, add, drop, _ in moves)
-    ok &= _report("waivers are same-position swaps", good)
+    kinds = {k: [m for m in moves if m[5] == k] for k in ("w", "f")}
+    good = all(sv.pool[add, gw - 1] for gw, m, add, drop, _, _ in moves)
+    ok &= _report("every add was in the pool at the time", good,
+                  f"{len(kinds['w'])} waiver, {len(kinds['f'])} free agent")
+    good = all(sv.pos[add] == sv.pos[drop] for _, _, add, drop, _, _ in moves)
+    ok &= _report("every move is a same-position swap", good)
+    # free agency runs after waivers, never before
+    per_gw = {}
+    for gw, m, add, drop, _, k in moves:
+        per_gw.setdefault((gw, m), []).append(k)
+    good = all("w" not in v[v.index("f"):] if "f" in v else True
+               for v in per_gw.values())
+    ok &= _report("free agency runs after the waiver, never before", good)
+    good = all(sum(1 for x in v if x == "f") <= cfg.fa_max_moves
+               for v in per_gw.values())
+    ok &= _report("free-agent moves respect the per-week cap", good)
     return ok
 
 
