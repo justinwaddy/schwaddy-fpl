@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T22:50 UTC",
+  "generated": "2026-09-08T07:47 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -326,6 +326,46 @@
       "kind": "opinion",
       "text": "Robert's total after three gameweeks is 120. Marcus had already banked that much before a ball was kicked in the third one. A whole season as somebody else's warm-up act is not a flattering stat, and Pardinho now has a week off to sit with it.",
       "source": null
+    },
+    {
+      "id": "2026-09-08-nufc-bou",
+      "ts": "2026-09-08T07:47",
+      "kind": "news",
+      "text": "Newcastle and Bournemouth shared a 2-2 draw at St James' Park on Saturday. Marcus Tavernier's early strike and a Malick Thiaw own goal put the visitors 2-0 up before Harvey Barnes and an 88th-minute Jacob Ramsey goal rescued a point for Newcastle. Justin owns the scoring Tavernier; Ben D's Thiaw was the man who put the ball in his own net.",
+      "source": {
+        "title": "Newcastle United v Bournemouth | Premier League | 5 Sept 2026",
+        "url": "https://www.newcastleunited.com/en/matches/mens-team/newcastle-united-v-bournemouth-english-premier-league-20260905"
+      }
+    },
+    {
+      "id": "2026-09-08-liv-ips",
+      "ts": "2026-09-08T07:47",
+      "kind": "news",
+      "text": "Alexander Isak scored twice in the opening ten minutes as Liverpool beat promoted Ipswich Town 2-0 at Portman Road, both goals set up by Cody Gakpo, sealing new head coach Andoni Iraola's first win in charge. Ben C owns both Isak and Gakpo, and Bradley Barcola, who sits on Justin's bench, made his Liverpool debut as a second-half substitute in the same game.",
+      "source": {
+        "title": "Alexander Isak scores twice to secure Liverpool win at Ipswich",
+        "url": "https://www.liverpoolfc.com/news/alexander-isak-scores-twice-secure-liverpool-win-ipswich"
+      }
+    },
+    {
+      "id": "2026-09-08-ars-che",
+      "ts": "2026-09-08T07:47",
+      "kind": "news",
+      "text": "Arsenal came from behind to beat Chelsea 2-1 at the Emirates on Sunday: Morgan Rogers fired the visitors ahead inside two minutes, Kai Havertz levelled before half-time and Martin Odegaard scored the winner early in the second half. Arsenal also had a Riccardo Calafiori goal chalked off by VAR for an offside by Ezri Konsa in the build-up, with Gabriel involved in the same goalmouth scramble. Ben D owns both Rogers and Havertz, Edward's Odegaard struck the winner, and Marcus's Calafiori, Ben D's Konsa and Robert's Gabriel were all part of the disallowed goal.",
+      "source": {
+        "title": "Match report: Arsenal 2-1 Chelsea",
+        "url": "https://www.chelseafc.com/en/news/article/match-report-arsenal-2-1-chelsea-26-27"
+      }
+    },
+    {
+      "id": "2026-09-08-nfo-tot",
+      "ts": "2026-09-08T07:47",
+      "kind": "news",
+      "text": "Nottingham Forest and Tottenham played out a goalless draw at the City Ground on Saturday. Antonin Kinsky produced two smart saves to deny Morgan Gibbs-White, including a one-on-one block, and Forest also had a Neco Williams effort ruled out by VAR for handball after the ball had appeared to cross the line. Marcus's Kinsky had the busiest afternoon of the six squads' goalkeepers, Justin's Omar Marmoush went closest for Spurs when sent clean through in the first half but fired just wide, and Edward's Gibbs-White was repeatedly denied at the other end.",
+      "source": {
+        "title": "Stalemate at the City Ground",
+        "url": "https://www.tottenhamhotspur.com/news/1088632/stalemate-at-the-city-ground"
+      }
     }
   ],
   "runs": [
@@ -508,6 +548,13 @@
       "opinion": 3,
       "matchday": false,
       "note": "Scheduled evening wrap. No fixtures today (rest day, next is 12 Sept) and the live feed confirms GW3 fully settled - 10 of 10 kicked off, nobody still to come. Six to eight searches (England/Norway international-duty angles, Chelsea, Newcastle, Man Utd, Man City sites) turned up nothing usable: results were either already covered (mancity.com's Ndiaye/Haaland pieces from the 5th), unverifiable on a permitted outlet (newcastleunited.com and chelseafc.com both served JS shells with no readable dated articles), or visibly scrambled placeholder content (one Chelsea search result claimed Maresca and the club 'parted company' while he is plainly managing Man City this season, and the England/Norway searches surfaced World Cup coverage that does not belong to this September) - so no reported item was published rather than risk an invented or misdated fact. Three opinion pieces instead, all built from today's automatic HAUL/OVERTAKE/RACE badges and the table/live-feed printout: (1) the week's four biggest individual hauls bar one - Mitchell 15, Bogle 14, Barnes 12, Vuskovic 12 - all belong to free agents, with Small Ben's Isak (13) the best any rostered player managed; (2) Justin's Haaland scored 9 today and it still was not enough to stop Edward and Big Ben both overtaking him into 3rd and 4th, dropping Schwaddy to 5th; (3) Robert's season total, 120, exactly matches what Marcus had banked before today's gameweek alone. The roast archive's only unused submission, Edward's 'Mong' about Robert, remains excluded permanently as the ableist slur rule 4 rules out - not a timing issue, so it is not noted as pending. No flops to rewrite: no FLOP badges appear in today's automatic feed since no matches were played."
+    },
+    {
+      "ts": "2026-09-08T07:47 UTC",
+      "news": 4,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Scheduled morning news. GW3 is fully settled (10/10 fixtures) and there is no matchday today, so this covers the most recent football rather than a literal last 24 hours. Four reported items, all fetched and read directly from club sites (newcastleunited.com, liverpoolfc.com, chelseafc.com, tottenhamhotspur.com) after mancity.com blocked every fetch attempt with a JS/Cloudflare challenge (403), so a promising Maresca-on-Ndiaye quote from Man City's Coventry win went unused rather than being cited from a search summary alone. No opinion pieces on a morning run. The one unused roast archive entry (Edward on Robert, 'Mong') stays out permanently as an ableist slur, not a timing issue."
     }
   ]
 }
