@@ -32,9 +32,12 @@ class Config:
     # players with prior-season minutes, which is stricter and drops
     # every summer signing.
     pool_mode: str = "membership"
-    # the market's pre-season read (opening price, opening ownership) is
-    # published days after a typical draft; off by default so the draft
-    # board is built from football alone.
+    # A player's OPENING price is published weeks before any draft and is
+    # the game's own pre-season expectation of him - for a summer signing
+    # with no Premier League history it is the only read anybody has, so
+    # it is on. Opening OWNERSHIP keeps moving right up to the first
+    # deadline, which is after a typical draft, so it stays off.
+    preseason_price: bool = True
     preseason_market: bool = False
     # injury and availability history, harvested by evo/injuries.py from
     # the archive repo's git history. Off is the ablation: it is what the

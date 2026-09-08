@@ -26,6 +26,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/prices.py      classic-game prices, the market's read beside the model's; data/prices.json, the sortable market table on the Waivers tab
 - src/schwaddy/pricehist.py   daily price snapshots, data/price_history.json, behind the 24h and 7d move columns
 - data/injuries_*.csv         the game's own status, chance-of-playing and news, per player per state change, back to 2021/22. Harvested by evo/injuries.py out of the git history of the archive repo, which commits players_raw.csv weekly; FPL's news_added timestamps date each state from the moment it was published. Worth +34 points a season to the existing heuristic
+- evo/features.py             the market as nine point-in-time columns, not one: price and ownership levels, price moves over one and four gameweeks and since his first week, price percentile within position, and net transfers as a share of ownership. Worth +0.011 out-of-sample R2 on realized gameweek points in all five held-out seasons
 - evo/                        an evolutionary neural network that plays the draft against itself over the five archived seasons; point-in-time features on a timestamp clock, cross-validated by leaving whole seasons out, run on SLURM. Writes data/evo_plan.json beside the model's own output rather than replacing it. See evo/README.md
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change

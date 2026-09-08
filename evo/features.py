@@ -45,7 +45,7 @@ GOALS_CENTRE = 1.4
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 5
+CACHE_VERSION = 6
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -55,6 +55,8 @@ FEATURE_NAMES = (
        "cs_38", "saves90_38", "dc90_12"]
     + ["prev_ppm", "prev_apps", "has_prev"]
     + ["price", "owned", "has_market"]
+    + ["price_chg1", "price_chg4", "price_vs_start", "price_pct_pos",
+       "own_chg4", "net_xfer1", "net_xfer4"]
     + ["p_play", "team_att", "team_def"]
     + ["inj_factor", "inj_out", "inj_doubt", "inj_days", "inj_stale",
        "inj_known"]
@@ -70,7 +72,7 @@ N_FEATURES = len(FEATURE_NAMES)
 # a player's first row dates his registration - which is public at the
 # time, and is what the pool is built from.
 STATS = ("pts", "mins", "app", "start", "xgi", "bps", "bonus", "cs",
-         "saves", "dc")
+         "saves", "dc", "xfer")
 
 
 def _num(df, col, default=0.0):
@@ -153,6 +155,7 @@ class SeasonData:
         stat = dict(
             pts=pts, mins=mins, app=(mins > 0).astype(float), start=starts, xgi=xgi,
             bps=_num(gws, "bps"), bonus=_num(gws, "bonus"),
+            xfer=_num(gws, "transfers_balance"),
             cs=_num(gws, "clean_sheets"), saves=_num(gws, "saves"),
             dc=_num(gws, "defensive_contribution"))
 
@@ -572,17 +575,44 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             f[j + 2] = 1.0 if sd.has_prev[i] else 0.0
             j += 3
 
+            # The market. There is no budget in draft, so a price is not
+            # a cost here - it is information. FPL moves a price on net
+            # transfers, so the move is a crowd forecast of a player's
+            # returns, updated nightly by a few million people, and the
+            # opening price is the game's own pre-season expectation of
+            # him. That is worth having precisely because it is not
+            # derived from the same match data as everything else.
+            vals, sels = sd.p_value[i], sd.p_sel[i]
             if k > 0:
-                f[j] = sd.p_value[i][k - 1] / 10.0
-                f[j + 1] = np.log1p(sd.p_sel[i][k - 1]) / 12.0
+                f[j] = vals[k - 1] / 10.0
+                f[j + 1] = np.log1p(sels[k - 1]) / 12.0
                 f[j + 2] = 1.0
-            elif cfg.preseason_market and len(sd.p_value[i]):
-                # the opening price is published before the season starts;
-                # opening ownership is not, so it is only ever read here
-                f[j] = sd.p_value[i][0] / 10.0
-                f[j + 1] = np.log1p(sd.p_sel[i][0]) / 12.0
-                f[j + 2] = 1.0
-            j += 3
+                f[j + 3] = (vals[k - 1] - vals[max(k - 2, 0)]) / 5.0
+                f[j + 4] = (vals[k - 1] - vals[max(k - 5, 0)]) / 5.0
+                f[j + 5] = (vals[k - 1] - vals[0]) / 10.0
+                own = max(sels[k - 1], 1.0)
+                x1 = cum[k][si["xfer"]] - cum[k - 1][si["xfer"]]
+                x4 = cum[k][si["xfer"]] - cum[max(k - 4, 0)][si["xfer"]]
+                # f[j + 6] is the within-position price percentile, which
+                # needs every player at once and is filled in below
+                f[j + 7] = (np.log1p(sels[k - 1])
+                            - np.log1p(sels[max(k - 5, 0)]))
+                f[j + 8] = float(np.clip(x1 / own, -1, 1))
+                f[j + 9] = float(np.clip(x4 / own, -2, 2))
+            elif len(vals):
+                # Before he has played, only the OPENING price is fair
+                # game: FPL publishes it weeks before any draft, and for a
+                # summer signing with no Premier League history it is the
+                # only read anybody has on him. Opening ownership is a
+                # separate switch because it keeps moving right up to the
+                # deadline.
+                if cfg.preseason_price:
+                    f[j] = vals[0] / 10.0
+                    f[j + 2] = 1.0
+                if cfg.preseason_market:
+                    f[j + 1] = np.log1p(sels[0]) / 12.0
+                    f[j + 2] = 1.0
+            j += 10
 
             # availability: club-window minutes share, blended toward last
             # season while the current one is too short to say anything
@@ -666,6 +696,21 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             pool[i, g - 1] = live and (bool(sd.has_prev[i])
                                        if cfg.pool_mode == "history" else True)
 
+    # Within-position price percentile. A raw price is not comparable
+    # across seasons - the game inflates - and "is he a premium" is a
+    # statement about his position's market, not about pounds. Ranked
+    # among the players actually in the pool that gameweek.
+    pi = FEATURE_NAMES.index("price")
+    for g in range(38):
+        live = pool[:, g]
+        for pz in range(4):
+            m = live & (sd.pos == pz)
+            if m.sum() < 3:
+                continue
+            v = X[m, g, pi]
+            r = np.argsort(np.argsort(v)) / max(len(v) - 1, 1)
+            X[m, g, pi + 3 + 3] = r.astype(np.float32)
+
     exp_apps = np.where(sd.has_prev,
                         38 * (0.35 + 0.65 * np.minimum(1.0, sd.prev_apps / 38.0)),
                         38 * 0.20)
@@ -710,6 +755,7 @@ def build_season(sd, cfg=None):
 def _key(cfg):
     return (f"v{CACHE_VERSION}_{cfg.pool_mode}_m{int(cfg.preseason_market)}"
             f"_o{int(cfg.use_odds)}_i{int(cfg.use_injuries)}"
+            f"_p{int(cfg.preseason_price)}"
             f"_w{cfg.waiver_lead_hours:g}")
 
 

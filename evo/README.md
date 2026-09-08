@@ -209,9 +209,53 @@ current state, and the live driver does it automatically when online, so
 one call a day keeps the log current and next season is already
 harvested rather than needing reconstruction.
 
+### The market
+
+There is no budget in draft, so a price is not a cost here - it is
+information, and it is the only input in the whole feature set that is
+not derived from the same match data as everything else. FPL moves a
+price on net transfers, so a price move is a crowd forecast of a player's
+returns, revised nightly by several million people. The archive carries
+`value`, `selected` and `transfers_balance` for every player in every
+gameweek, which is that forecast as a point-in-time series, and the model
+was previously reading only two levels off it.
+
+Nine columns now: the price and ownership levels; the price move over one
+and four gameweeks; the move since the player's first week of the season;
+his price percentile WITHIN HIS POSITION, because a raw price is not
+comparable across seasons - the game inflates - and "is he a premium" is
+a statement about his position's market; the change in log ownership; and
+net transfers over one and four gameweeks as a fraction of his ownership,
+which is the flow the price algorithm actually responds to.
+
+Measured as plain least squares on realized gameweek points, trained on
+four seasons and scored on the fifth, the market block adds R² in every
+one of the five:
+
+```
+   held-out   baseline only   + market      gain
+    2021-22          0.3036     0.3165    +0.0130
+    2022-23          0.3181     0.3269    +0.0088
+    2023-24          0.3050     0.3152    +0.0102
+    2024-25          0.3113     0.3212    +0.0099
+    2025-26          0.2826     0.2944    +0.0118
+```
+
+About a 3.5% relative improvement, on 138,361 player-gameweeks. Unlike
+the injury log this cannot help the heuristic baseline, which does not
+read prices - it is a pure network input, so its value shows up in
+cross-validation or not at all.
+
+One split that matters for the draft. A player's OPENING price is
+published weeks before any draft and is the game's own pre-season
+expectation of him - for a summer signing with no Premier League history
+it is the only read anybody has, so `preseason_price` is on. Opening
+OWNERSHIP keeps moving right up to the first deadline, which is after a
+typical draft, so `preseason_market` stays off.
+
 ### Features
 
-Fifty-five per player per gameweek, on each of the week's two clocks,
+Sixty-two per player per gameweek, on each of the week's two clocks,
 all as at the decision:
 
 - trailing points per appearance, minutes share and start share over the
@@ -222,7 +266,7 @@ all as at the decision:
   contribution;
 - last season's points per appearance and appearances, with an indicator
   where there is no last season;
-- the market: price and ownership as of his last row;
+- the market, in nine columns rather than one (see below);
 - the injury state: the advertised chance of playing, whether he is out
   or doubtful, how long he has been in that state, and how stale our last
   observation of him is;
