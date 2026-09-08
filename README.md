@@ -25,6 +25,7 @@ static JSON + HTML to justinwaddy.co.uk.
 - src/schwaddy/playerstats.py season stats + match log behind the player card, data/player_stats.json
 - src/schwaddy/prices.py      classic-game prices, the market's read beside the model's; data/prices.json, the sortable market table on the Waivers tab
 - src/schwaddy/pricehist.py   daily price snapshots, data/price_history.json, behind the 24h and 7d move columns
+- evo/                        an evolutionary neural network that plays the draft against itself over the five archived seasons; point-in-time features on a timestamp clock, cross-validated by leaving whole seasons out, run on SLURM. Writes data/evo_plan.json beside the model's own output rather than replacing it. See evo/README.md
 - .github/workflows/update.yml cron: 09:35 UK full refresh, three news checks; also on code pushes
 - .github/workflows/pages.yml  publishes site/ to GitHub Pages on every site change
 - cron/worker.js              Cloudflare cron that dispatches the refresh on time

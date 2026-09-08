@@ -58,7 +58,9 @@ def _play(task):
     views = _W["views"]
     out = []
     cache = {}
-    for (season, seats, kinds, seed) in leagues:
+    # season-major, so a genome's encoder output is computed once per
+    # season in this chunk rather than once per league
+    for (season, seats, kinds, seed) in sorted(leagues, key=lambda x: x[0]):
         brains = []
         for who, kind in zip(seats, kinds):
             if kind == "pop":

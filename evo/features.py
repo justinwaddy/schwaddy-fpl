@@ -79,7 +79,8 @@ def _num(df, col, default=0.0):
 class SeasonData:
     """Everything one season contributes, on a timestamp clock."""
 
-    def __init__(self, season, cfg, prev=None, truncate_gw=None):
+    def __init__(self, season, cfg, prev=None, truncate_gw=None,
+                 extra_fixtures=None, roster=None):
         """truncate_gw drops every match row after that gameweek, which is
         how selftest.py proves the build is non-anticipative: features for
         the gameweeks before the cut must come out bit-identical."""
@@ -87,6 +88,10 @@ class SeasonData:
         self.cfg = cfg
         self.truncate_gw = truncate_gw
         self._load(cfg.data_dir, season, prev)
+        if extra_fixtures:
+            self._add_fixtures(extra_fixtures)
+        if roster:
+            self._merge_roster(roster, prev)
 
     # ---------------------------------------------------------------- load
     def _load(self, data_dir, season, prev):
@@ -104,9 +109,14 @@ class SeasonData:
         id2pos = {int(i): ETYPE[int(t)]
                   for i, t in zip(raw["id"], raw["element_type"])
                   if int(t) in ETYPE}
-        team_names = list(teams["name"])
-        self.team_idx = {t: i for i, t in enumerate(team_names)}
-        self.team_names = team_names
+        # indexed by team id - 1, because that is what the archive's
+        # opponent_team column and the fixture list both use
+        tmax = int(teams["id"].max())
+        self.team_names = [""] * tmax
+        for i, nm in zip(teams["id"], teams["name"]):
+            self.team_names[int(i) - 1] = nm
+        self.team_idx = {nm: int(i) - 1 for i, nm in zip(teams["id"],
+                                                        teams["name"])}
 
         gws = gws[pd.to_numeric(gws["GW"], errors="coerce").notna()].copy()
         gws["GW"] = gws["GW"].astype(float).astype(int)
@@ -332,6 +342,102 @@ class SeasonData:
                 a, c = GOALS_CENTRE, GOALS_CENTRE
             att.append(a); dfn.append(c); hm.append(1.0 if home else 0.0)
         return len(fx), float(np.mean(hm)), float(np.mean(att)), float(np.mean(dfn))
+
+
+
+    # ------------------------------------------------------- live-season use
+    def _add_fixtures(self, rows):
+        """Merge the published fixture list (data/fixtures_*.json) so that
+        the live season knows its schedule past the last match played.
+
+        A fixture list is published before a ball is kicked, so reading it
+        for a future gameweek is not hindsight; a RESULT from it never is
+        read, only (event, teams, kick-off).
+        """
+        ko = {}
+        for r in rows:
+            g, t = r.get("event"), r.get("kickoff_time")
+            if not g or not t:
+                continue
+            g = int(g)
+            ts = float(np.datetime64(t.replace("Z", ""), "s").astype("int64"))
+            h, a = int(r["team_h"]) - 1, int(r["team_a"]) - 1
+            for me, opp, home in ((h, a, True), (a, h, False)):
+                lst = self.fixtures.setdefault((me, g), [])
+                if not any(x[0] == opp and x[1] == home for x in lst):
+                    lst.append((opp, home, ts))
+            ko.setdefault(g, []).append(ts)
+        # the published list is authoritative: it beats the archive's
+        # first-kick-off rule, and beats the week-apart interpolation
+        # used for a gameweek that has not been played yet
+        for g, v in ko.items():
+            if 1 <= g <= 38:
+                self.deadline[g] = min(v) - 90 * 60
+        self.max_gw = max(self.max_gw, max(ko) if ko else 0)
+        self.t_dec = self.deadline - self.cfg.waiver_lead_hours * 3600.0
+
+    def set_deadlines(self, deadlines):
+        """Official deadline and waiver times, straight from the draft API.
+
+        FPL sets a deadline 90 minutes before the first kick-off, but it
+        can be moved, and the waiver window is published separately - so
+        when the game tells us, we believe the game rather than the rule.
+        deadlines: gw -> (deadline_ts, waiver_ts or None)
+        """
+        for g, (dl, wv) in deadlines.items():
+            if 1 <= g <= 38:
+                self.deadline[g] = dl
+                self.t_dec[g] = (wv if wv is not None
+                                 else dl - self.cfg.waiver_lead_hours * 3600.0)
+
+    def _merge_roster(self, roster, prev):
+        """Add players who are registered in the live game but have no
+        match row yet - a mid-season signing on the day he is announced.
+
+        roster: code -> dict(pos=..., team=<team id>, reg_gw=int)
+        """
+        add = [c for c in roster if c not in self.row_of]
+        if not add:
+            return
+        k = self.n
+        self.codes = np.concatenate([self.codes, np.array(add)])
+        for j, c in enumerate(add):
+            self.row_of[int(c)] = k + j
+        z = np.zeros((len(add), 38))
+        self.real = np.vstack([self.real, z])
+        self.minutes = np.vstack([self.minutes, z])
+        self.played = self.minutes > 0
+        self.pos = np.concatenate(
+            [self.pos, [POSITIONS.index(roster[c]["pos"]) for c in add]])
+        self.team_of = np.concatenate(
+            [self.team_of, [int(roster[c]["team"]) - 1 for c in add]])
+        self.reg_gw = np.concatenate(
+            [self.reg_gw, [int(roster[c].get("reg_gw", 1)) for c in add]])
+        self.debut_gw = np.concatenate([self.debut_gw, np.full(len(add), 99)])
+        for c in add:
+            self.p_ts.append(np.zeros(0))
+            self.p_gw.append(np.zeros(0, int))
+            self.p_team.append(np.zeros(0, int))
+            self.p_cum.append(np.zeros((1, len(STATS))))
+            self.p_value.append(np.zeros(0))
+            self.p_sel.append(np.zeros(0))
+        pp = np.zeros(len(add)); pa = np.zeros(len(add))
+        hp = np.zeros(len(add), bool)
+        if prev is not None:
+            for j, c in enumerate(add):
+                i = prev.row_of.get(int(c))
+                if i is None:
+                    continue
+                pl = prev.played[i]
+                if pl.sum() == 0:
+                    continue
+                hp[j] = True
+                pa[j] = pl.sum()
+                pp[j] = prev.real[i][pl].sum() / pl.sum()
+        self.prev_ppm = np.concatenate([self.prev_ppm, pp])
+        self.prev_apps = np.concatenate([self.prev_apps, pa])
+        self.has_prev = np.concatenate([self.has_prev, hp])
+        self.n = len(self.codes)
 
 
 def build_features(sd, cfg=None):
