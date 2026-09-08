@@ -843,13 +843,22 @@ function overallHTML(ps){
 // stopped redrawing. Match the resolved club name instead, and the full
 // name out of player_stats.json while we are here, so "Bruno" finds
 // B.Fernandes.
+// Half these names carry an accent - Doucouré, Ismaïla, Milenković,
+// Højlund - and nobody reaches for the diaeresis key to find one. Fold the
+// marks off both the name and the query so plain ASCII finds the player.
+// NFD splits a letter from its accent and the range drops the accent; the
+// handful of letters that carry theirs inside the codepoint and so survive
+// that pass are mapped by hand.
+const FOLD={"ø":"o","Ø":"o","đ":"d","Đ":"d","ß":"ss","ı":"i"};
+const fold=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+  .replace(/[øØđĐßı]/g,c=>FOLD[c]).toLowerCase();
 function pmatch(p,q){
   if(!q)return true;
-  if(p.name.toLowerCase().includes(q))return true;
-  if(String(club(p,1)??"").toLowerCase().includes(q))return true;
-  if(String(club(p)??"").toLowerCase().includes(q))return true;
+  if(fold(p.name).includes(q))return true;
+  if(fold(club(p,1)).includes(q))return true;
+  if(fold(club(p)).includes(q))return true;
   const st=STATS&&STATS.players&&STATS.players[String(p.code)];
-  return !!(st&&st.full&&st.full.toLowerCase().includes(q));
+  return !!(st&&st.full&&fold(st.full).includes(q));
 }
 let SORT={k:"rest",d:1};
 // Who the table is showing. "mine" is the fifteen I hold, which is the
@@ -864,8 +873,16 @@ const POSNAMES=[["ALL","All positions"],["GKP","Goalkeepers"],["DEF","Defenders"
   ["MID","Midfielders"],["FWD","Forwards"]];
 const PROWS=150;
 function renderPlayers(ps){
-  const q=(document.getElementById("pq")?.value||"").toLowerCase();
-  let list=ps.filter(p=>(POWN==="all"||p.mine)&&(PPOS==="ALL"||p.pos===PPOS)&&pmatch(p,q));
+  // Keep what was typed for the box and fold it for the match, so the
+  // capitals in "CRY" survive the redraw rather than being lowercased back
+  // at the typist.
+  const raw=document.getElementById("pq")?.value||"",q=fold(raw);
+  // Everything the search alone found, before the chips and the dropdown
+  // cut it down: the difference between the two is what a filter is
+  // hiding, and hiding it silently is what makes a full squad look like a
+  // third of one.
+  const found=ps.filter(p=>pmatch(p,q));
+  let list=found.filter(p=>(POWN==="all"||p.mine)&&(PPOS==="ALL"||p.pos===PPOS));
   list.forEach(p=>{p.gwn=p.gw?p.gw[NEXT]:0;p.n5=N5(p);p.price=price(p);
     p.d1=pxv(p,"chg1");p.d7=pxv(p,"chg7");});
   list=[...list].sort(sorter(SORT.k,SORT.d));
@@ -881,11 +898,24 @@ function renderPlayers(ps){
   const fif=[];
   if(hspan("d1"))fif.push(`${mv(sum("chg1"))}m in the last day`);
   if(w)fif.push(`${mv(sum("chg7"))}m over the last ${w} days`);
-  let h=`<input type="search" id="pq" placeholder="Search player or club" value="${q}">
+  // What the two filters are holding back from the search, and one button
+  // to drop them.
+  // Only against a search. With the box empty the chips and the dropdown
+  // are the whole story and say it themselves; the trap is a filter left
+  // set from earlier quietly eating a search typed later.
+  const held=raw?found.length-list.length:0,narrowing=[];
+  if(PPOS!=="ALL")narrowing.push(POSNAMES.find(x=>x[0]===PPOS)[1].toLowerCase());
+  if(POWN==="mine")narrowing.push("my team");
+  const hid=held>0?`<div class="note">Showing ${list.length} of the ${found.length}
+    that match "${esc(raw)}" - the other ${held} ${held===1?"is":"are"}
+    filtered out by ${narrowing.join(" and ")}.
+    <button class="chip" data-clearf="1">Show all ${found.length}</button></div>`:"";
+  let h=`<input type="search" id="pq" placeholder="Search player or club" value="${esc(raw)}">
   <div>${[["all","All players"],["mine","My team"]].map(([k,l])=>
     `<button class="chip ${POWN===k?"on":""}" data-own="${k}">${l}</button>`).join("")}
   <select class="filt" id="ppos" aria-label="Filter by position">${POSNAMES.map(([k,l])=>
     `<option value="${k}"${PPOS===k?" selected":""}>${l}</option>`).join("")}</select></div>
+  ${hid}
   <div class="note">Tap any name, here or anywhere on the site, for that
   player's stats, fixtures and news. Tap a heading to sort by it.
   <b>24h</b> and <b>${wlab}</b> are how far his classic-game price has moved
@@ -925,6 +955,8 @@ function renderPlayers(ps){
   box.addEventListener("input",()=>renderPlayers(DATA.players));
   sec.querySelector("#ppos").addEventListener("change",e=>{
     PPOS=e.target.value;renderPlayers(DATA.players);});
+  sec.querySelector("[data-clearf]")?.addEventListener("click",()=>{
+    PPOS="ALL";POWN="all";renderPlayers(DATA.players);});
   sec.querySelectorAll("[data-own]").forEach(t=>t.addEventListener("click",()=>{
     POWN=t.dataset.own;renderPlayers(DATA.players);}));
   sec.querySelectorAll("th[data-k]").forEach(t=>t.addEventListener("click",()=>{
