@@ -255,7 +255,7 @@ typical draft, so `preseason_market` stays off.
 
 ### Features
 
-Sixty-two per player per gameweek, on each of the week's two clocks,
+Eighty-two per player per gameweek, on each of the week's two clocks,
 all as at the decision:
 
 - trailing points per appearance, minutes share and start share over the
@@ -274,7 +274,20 @@ all as at the decision:
   toward last season's (a promoted club gets the tails of that
   distribution);
 - the coming fixture and the next five: how many, home share, and the
-  opponents' rolling rates;
+  opponents' rolling rates - venue-split, since home advantage is a tenth
+  of a goal each way and a pooled rate hides it;
+- the clean-sheet mechanics: Poisson expected clean sheets, expected 2+
+  conceded and expected 2+ scored, this week and over five. A defender is
+  paid on a step function of goals conceded, so the probability is the
+  feature and not the rate behind it;
+- the shape of the run: the position-aware fixture multiplier over one,
+  two and five gameweeks, and near minus far;
+- congestion, from kick-off times alone: rest before the next match and
+  matches in the fortnight ahead;
+- eight position x opponent columns, zeroed unless `pos_interact` is on.
+  `panel.py` records that this exact idea lost realized points for the
+  matrix model in every season tested, so it is a flag and a
+  cross-validation question, not a default;
 - the three heuristic baselines themselves.
 
 Player identity is never a feature, so the network cannot memorise who
@@ -291,8 +304,19 @@ registered, not before. Nothing about how he does that season, that
 season's final totals, or the end-of-season snapshot files ever reaches a
 feature.
 
-**The fixture list is known in advance**, because it is. Results from it
-never are: only the gameweek, the two clubs and the kick-off time.
+**The fixture list is known in advance - in two halves, at two times.**
+Who a club plays and where is published in June. Which gameweek a match
+lands in is settled a few weeks out, once cups and television have had
+their say, and a blank or a double IS a rescheduling. The first version
+here read blanks and doubles off the archive, i.e. off where the match
+finally went, which had the model knowing in August that a club would
+double in February - 61 blank and 61 double club-gameweeks in 2021/22
+alone. `fixture_horizon` (three gameweeks) fixes it: inside the horizon
+the schedule as played, beyond it the schedule as published, one fixture
+a gameweek. `selftest` asserts both halves. Measured on the heuristic the
+leak had been worth nothing - closing it scored five points a season
+BETTER, a greedy five-week horizon over-reacting to a distant blank - so
+this is a correctness change, not a number change.
 
 **The pre-season market is not used by default.** A player's opening
 price is published before a ball is kicked, but opening ownership is not
@@ -300,10 +324,11 @@ published before a typical draft, so `preseason_market` is off and the
 draft board is built from football alone. Turn it on to trade a little
 honesty for a lot of signal.
 
-**Bookmaker odds are implemented but off.** `data/odds_*.csv` covers the
-five archive seasons and not the live one, and a feature the live model
-cannot compute is worse than no feature at all. Turn `use_odds` on once
-`odds_2026-27.csv` exists.
+**Bookmaker odds are not used.** `data/odds_*.csv` covers the five
+archive seasons and not the live one, and a feature the live model cannot
+compute is worse than no feature at all. An earlier draft of this file
+said they were "implemented but off"; they were not implemented, and the
+flag has been removed rather than left as a promise.
 
 **Injuries are inside the model, and are harvested rather than bought.**
 See the next section. Availability at any decision carries the game's own
@@ -320,6 +345,16 @@ that too. It is the weakest fold.
 
 **Trades are out of scope.** Waivers are same-position swaps, which keeps
 the 2/5/5/3 quota valid by construction.
+
+**A player dropped during free agency is treated as immediately available
+to the next manager in the same window.** The game may instead put him on
+waivers; the API exposes no status that says either way. Small, and
+unverified.
+
+**The injury log can be optimistic about recoveries.** FPL can raise a
+chance-of-playing without touching `news_added`, so a recovery first seen
+at 75% may be dated from when it was posted at 25%. Undetectable from the
+data, rare, and in the direction of overstating availability.
 
 **The candidate shortlist is a computational restriction, not a
 modelling one.** Eighty players are scored per draft pick and sixty free

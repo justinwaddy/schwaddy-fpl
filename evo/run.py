@@ -15,7 +15,6 @@ import argparse
 import json
 import os
 import sys
-import numpy as np
 
 from .config import Config, SEASONS
 from . import cv as cvmod
@@ -139,7 +138,10 @@ def main(argv=None):
                   f"{r['valid']:+8.1f} {r['valid_se']:7.1f} "
                   f"{r['paired_se']:7.1f} {r['gap']:+7.1f} "
                   f"{r['valid_smooth']:+9.1f}")
-        print(f"\nstop at generation {s['best_gen']}: "
+        print(f"\nmean over all checkpoints {s['mean_valid']:+.1f} "
+              f"+- {s['mean_valid_se']:.1f} - the number to believe; the "
+              f"peak below is a max over noisy checkpoints")
+        print(f"stop at generation {s['best_gen']}: "
               f"{s['best_valid']:+.1f} points a season over the baseline "
               f"({s['smooth']}-point moving average; raw "
               f"{s['best_valid_raw']:+.1f})")

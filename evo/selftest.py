@@ -20,7 +20,7 @@ Run: python -m evo.run selftest
 import numpy as np
 
 from .config import Config, SEASONS, SQUAD, SQUAD_SIZE, POSITIONS, MIN_PLAY, MAX_PLAY
-from .features import (SeasonData, build_features, build_season,
+from .features import (SeasonData, build_season,
                        load_seasons, Standardizer)
 from .net import Brain, Heuristic, new_genome
 from .sim import SeasonView, simulate
@@ -65,6 +65,31 @@ def test_non_anticipation(cfg, season="2024-25", prev="2023-24", cut=20):
         ok &= _report(f"  baseline {k}", s)
     ok &= _report("  pool membership", np.array_equal(
         full["pool"][rows_f, :g], trunc["pool"][rows_t, :g]))
+    return ok
+
+
+def test_fixture_horizon(cfg, season="2021-22"):
+    """Beyond the horizon the schedule is one fixture a gameweek - the
+    published shape - and inside it the archive's blanks and doubles are
+    visible. 2021/22 is the season with the most of them."""
+    from .features import FEATURE_NAMES, build_features
+    from .config import Config
+    ix = {n: i for i, n in enumerate(FEATURE_NAMES)}
+    sd = SeasonData(season, cfg)
+    c0 = Config(**{**cfg.to_dict(), "fixture_horizon": 0})
+    d0 = build_features(sd, c0)
+    pool = d0["pool"][:, :34]
+    beyond = (d0["X"][:, :34, ix["n_fix5"]] * 5
+              - d0["X"][:, :34, ix["n_fix1"]])[pool]
+    ok = _report("beyond the horizon, one fixture a gameweek",
+                 np.allclose(beyond, 4.0), "horizon 0: gameweeks +1..+4")
+    d3 = build_features(sd, cfg)
+    inside = (d3["X"][:, :34, ix["n_fix5"]] * 5
+              - d3["X"][:, :34, ix["n_fix1"]])[pool]
+    ok &= _report("and inside it the reschedulings are visible",
+                  not np.allclose(inside, 4.0),
+                  f"horizon {cfg.fixture_horizon}: "
+                  f"{int((np.abs(inside - 4) > 1e-6).sum())} cells differ")
     return ok
 
 
@@ -184,6 +209,7 @@ def run_all(cfg=None):
     views = {s: SeasonView(s, arrays[s], std) for s in SEASONS}
     ok = True
     ok &= test_non_anticipation(cfg)
+    ok &= test_fixture_horizon(cfg)
     ok &= test_no_lookahead(cfg, views)
     ok &= test_legality(cfg, views)
     ok &= test_determinism(cfg, views)

@@ -31,15 +31,15 @@ import sys
 import time
 import numpy as np
 
-from .config import Config, SEASONS, LIVE_SEASON, POSITIONS, SQUAD
+from .config import SEASONS, LIVE_SEASON, POSITIONS, SQUAD
 from . import injuries
 from .features import SeasonData, build_season, Standardizer
 from .net import Brain
-from .sim import SeasonView, POS_ID, _draft_ctx, _rank_swaps
+from .sim import SeasonView, _draft_ctx, _rank_swaps
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                       # noqa: E402
-from schwaddy.league import LEAGUE_ID, OWNER_ID, MANAGERS  # noqa: E402
+from schwaddy.league import LEAGUE_ID, OWNER_ID  # noqa: E402
 
 def _ts(s):
     return float(np.datetime64(s.replace("Z", ""), "s").astype("int64"))
@@ -54,7 +54,9 @@ def load_live(cfg, boot, fixtures, prev=None):
         pos = ptype.get(e["element_type"])
         if pos not in POSITIONS:
             continue
-        roster[int(e["code"])] = dict(pos=pos, team=int(e["team"]), reg_gw=1)
+        roster[int(e["code"])] = dict(pos=pos, team=int(e["team"]),
+                                       added_ts=_ts(e["added"])
+                                       if e.get("added") else None)
     sd = SeasonData(LIVE_SEASON, cfg, prev=prev, extra_fixtures=fixtures,
                     roster=roster)
     dl = {}

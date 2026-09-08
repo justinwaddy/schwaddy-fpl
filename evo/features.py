@@ -34,7 +34,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from .config import (SEASONS, LIVE_SEASON, POSITIONS, ETYPE, WINDOWS, Config)
+from .config import SEASONS, POSITIONS, ETYPE, WINDOWS
 from . import injuries
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
@@ -42,10 +42,11 @@ from schwaddy.panel import draft_points          # noqa: E402
 from schwaddy.lineup import PLAY_FLOOR, UNKNOWN_PLAYER   # noqa: E402
 
 GOALS_CENTRE = 1.4
+HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 6
+CACHE_VERSION = 7
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -62,6 +63,9 @@ FEATURE_NAMES = (
        "inj_known"]
     + ["n_fix1", "home1", "opp_att1", "opp_def1"]
     + ["n_fix5", "opp_att5", "opp_def5"]
+    + ["exp_cs1", "exp_c2_1", "exp_t2_1", "exp_cs5", "exp_c2_5", "exp_t2_5"]
+    + ["fm1", "fm2", "fm5", "fm_slope", "rest_days", "matches_14d"]
+    + [f"x_{p}_{k}" for k in ("att", "def") for p in POSITIONS]
     + ["base_ppm", "base_ep1", "base_next5", "bias"]
 )
 N_FEATURES = len(FEATURE_NAMES)
@@ -199,7 +203,7 @@ class SeasonData:
             if rec not in lst:
                 lst.append(rec)
             gf, ga = (hs[k], as_[k]) if home[k] else (as_[k], hs[k])
-            tmatch.setdefault(t, {})[ts[k]] = (gf, ga)
+            tmatch.setdefault(t, {})[ts[k]] = (gf, ga, 1.0 if home[k] else 0.0)
         self.fixtures = fixtures
         self.team_matches = {t: np.array(sorted(v.items()), dtype=object)
                              for t, v in tmatch.items()}
@@ -288,6 +292,8 @@ class SeasonData:
                 self.prev_ppm[i] = prev.real[j][pl].sum() / pl.sum()
         self.prev_team_rate = (prev.final_team_rates() if prev is not None
                                else None)
+        self.prev_team_rate_v = (prev.final_team_rates_venue()
+                                 if prev is not None else None)
 
     # ------------------------------------------------------------ team form
     def final_team_rates(self):
@@ -298,9 +304,44 @@ class SeasonData:
                                            float(gfa[:, 1].mean()))
         return out
 
-    def team_rate_before(self, t, tcut):
+    def final_team_rates_venue(self):
+        out = {}
+        for t, (tss, gfa) in self._team_series.items():
+            for v in (1.0, 0.0):
+                m = gfa[:, 2] == v
+                if m.sum() >= 3:
+                    out[(self.team_names[t], v)] = (float(gfa[m, 0].mean()),
+                                                    float(gfa[m, 1].mean()))
+        return out
+
+    def team_rate_before(self, t, tcut, venue=None):
         """(scored, conceded) per match for club t, matches before tcut,
-        shrunk toward last season's rate (a promoted-club prior if new)."""
+        shrunk toward last season's rate (a promoted-club prior if new).
+
+        venue 1.0 / 0.0 gives the club's HOME or AWAY rates: home
+        advantage is about a tenth of a goal each way and a pooled rate
+        hides it. The venue prior is last season's venue rate where the
+        club has one, else the pooled rate lifted or lowered by the
+        league's average home advantage.
+        """
+        if venue is not None:
+            pooled = self.team_rate_before(t, tcut)
+            prior = None
+            if self.prev_team_rate_v is not None:
+                prior = self.prev_team_rate_v.get((self.team_names[t], venue))
+            if prior is None:
+                adj = 1 + HOME_ADV if venue == 1.0 else 1 - HOME_ADV
+                prior = (pooled[0] * adj, pooled[1] / adj)
+            ser = self._team_series.get(t)
+            if ser is None:
+                return prior
+            tss, gfa = ser
+            k = int(np.searchsorted(tss, tcut, "left"))
+            sel = gfa[:k][gfa[:k, 2] == venue] if k else gfa[:0]
+            n = len(sel)
+            w = TEAM_PRIOR_W
+            return ((sel[:, 0].sum() + w * prior[0]) / (n + w),
+                    (sel[:, 1].sum() + w * prior[1]) / (n + w))
         prior = None
         if self.prev_team_rate is not None:
             prior = self.prev_team_rate.get(self.team_names[t])
@@ -341,19 +382,50 @@ class SeasonData:
         m = {0: a, 1: a, 2: np.sqrt(a * d), 3: d}[pos]
         return float(np.clip(m, 0.75, 1.35))
 
-    def _fix_terms(self, club, g, t):
-        """(n_fixtures, home share, mean opp attack, mean opp defence)."""
+    def _fix_terms(self, club, g, t, known=True):
+        """One gameweek's fixtures for a club, as at time t.
+
+        Returns (n_fixtures, home share, mean opp attack, mean opp
+        defence, expected clean sheets, expected 2+ conceded, expected 2+
+        scored, kick-offs). The three expectations are Poisson, from the
+        club's and the opponent's VENUE-SPLIT rates - a clean sheet is a
+        step function of goals conceded, and a defender's points with it,
+        so the probability is the feature and not the rate behind it.
+
+        known=False is the schedule as published rather than as played:
+        one fixture. If the archive has exactly one it is that one; if it
+        has two, the first (the other belonged to another gameweek); if
+        none, a neutral opponent at a neutral venue. That is what a
+        manager beyond the fixture horizon actually knew.
+        """
         fx = self.fixtures.get((club, g), [])
+        if not known:
+            fx = fx[:1] if fx else [(-1, None, np.nan)]
         if not fx:
-            return 0, 0.0, GOALS_CENTRE, GOALS_CENTRE
-        att, dfn, hm = [], [], []
-        for o, home, _ in fx:
-            if 0 <= o < len(self.team_names):
-                a, c = self.team_rate_before(o, t)
+            return (0, 0.0, GOALS_CENTRE, GOALS_CENTRE, 0.0, 0.0, 0.0, [])
+        att, dfn, hm, kos = [], [], [], []
+        cs = c2 = t2 = 0.0
+        for o, home, ko in fx:
+            if home is None:
+                oa, od = GOALS_CENTRE, GOALS_CENTRE
+                my_a, my_d = self.team_rate_before(club, t)
+                hv = 0.5
             else:
-                a, c = GOALS_CENTRE, GOALS_CENTRE
-            att.append(a); dfn.append(c); hm.append(1.0 if home else 0.0)
-        return len(fx), float(np.mean(hm)), float(np.mean(att)), float(np.mean(dfn))
+                v_me, v_op = (1.0, 0.0) if home else (0.0, 1.0)
+                if 0 <= o < len(self.team_names):
+                    oa, od = self.team_rate_before(o, t, v_op)
+                else:
+                    oa, od = GOALS_CENTRE, GOALS_CENTRE
+                my_a, my_d = self.team_rate_before(club, t, v_me)
+                hv = 1.0 if home else 0.0
+            la = max(my_d * oa / GOALS_CENTRE, 0.05)
+            lf = max(my_a * od / GOALS_CENTRE, 0.05)
+            cs += np.exp(-la)
+            c2 += 1.0 - np.exp(-la) * (1.0 + la)
+            t2 += 1.0 - np.exp(-lf) * (1.0 + lf)
+            att.append(oa); dfn.append(od); hm.append(hv); kos.append(ko)
+        return (len(fx), float(np.mean(hm)), float(np.mean(att)),
+                float(np.mean(dfn)), float(cs), float(c2), float(t2), kos)
 
 
 
@@ -423,8 +495,15 @@ class SeasonData:
             [self.pos, [POSITIONS.index(roster[c]["pos"]) for c in add]])
         self.team_of = np.concatenate(
             [self.team_of, [int(roster[c]["team"]) - 1 for c in add]])
-        self.reg_gw = np.concatenate(
-            [self.reg_gw, [int(roster[c].get("reg_gw", 1)) for c in add]])
+        def reg(c):
+            r = roster[c]
+            if r.get("added_ts") is not None:
+                # registered from the first deadline after the game added him
+                g = int(np.searchsorted(self.deadline[1:39], r["added_ts"],
+                                        "right")) + 1
+                return min(g, 38)
+            return int(r.get("reg_gw", 1))
+        self.reg_gw = np.concatenate([self.reg_gw, [reg(c) for c in add]])
         self.debut_gw = np.concatenate([self.debut_gw, np.full(len(add), 99)])
         for c in add:
             self.p_ts.append(np.zeros(0))
@@ -653,23 +732,58 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             f[j + 5] = iknown
             j += 6
 
-            nf1, h1, oa1, od1 = sd._fix_terms(club, g, t)
+            # the next five gameweeks, known as far as the horizon and as
+            # published beyond it
+            H = cfg.fixture_horizon
+            terms = [sd._fix_terms(club, g + h, t, known=(h <= H))
+                     if g + h <= 38 else None for h in range(5)]
+            nf1, h1, oa1, od1, cs1, c21, t21, kos1 = terms[0]
             f[j] = nf1; f[j + 1] = h1; f[j + 2] = oa1; f[j + 3] = od1
             j += 4
-
-            nf5, oa5, od5 = 0, [], []
-            for h in range(5):
-                gg = g + h
-                if gg > 38:
-                    break
-                a, _, x, y = sd._fix_terms(club, gg, t)
-                nf5 += a
-                if a:
-                    oa5.append(x); od5.append(y)
-            f[j] = nf5 / 5.0
-            f[j + 1] = float(np.mean(oa5)) if oa5 else GOALS_CENTRE
-            f[j + 2] = float(np.mean(od5)) if od5 else GOALS_CENTRE
+            live5 = [x for x in terms if x and x[0]]
+            f[j] = sum(x[0] for x in terms if x) / 5.0
+            f[j + 1] = float(np.mean([x[2] for x in live5])) if live5 else GOALS_CENTRE
+            f[j + 2] = float(np.mean([x[3] for x in live5])) if live5 else GOALS_CENTRE
             j += 3
+            # clean-sheet mechanics: the step functions a defender and a
+            # forward are actually paid on, this week and over five
+            f[j] = cs1; f[j + 1] = c21; f[j + 2] = t21
+            f[j + 3] = sum(x[4] for x in terms if x) / 5.0
+            f[j + 4] = sum(x[5] for x in terms if x) / 5.0
+            f[j + 5] = sum(x[6] for x in terms if x) / 5.0
+            j += 6
+            # the shape of the run: the position-aware multiplier over
+            # one, two and five, and near minus far - a waiver is a
+            # decision about a horizon you can revisit next week
+            fm = [(x[0] * sd._fmult(posi, x[2], x[3])) if x else 0.0
+                  for x in terms]
+            f[j] = fm[0]
+            f[j + 1] = float(np.mean(fm[:2]))
+            f[j + 2] = float(np.mean(fm))
+            f[j + 3] = float(np.mean(fm[:2]) - np.mean(fm[2:]))
+            j += 4
+            # congestion, from kick-off times alone: rest before the next
+            # match, and matches in the fortnight ahead
+            ser = sd._team_series.get(club)
+            last_ts = np.nan
+            if ser is not None:
+                kc = int(np.searchsorted(ser[0], t, "left"))
+                if kc:
+                    last_ts = float(ser[0][kc - 1])
+            nxt = [ko for ko in kos1 if not np.isnan(ko)]
+            if nxt and not np.isnan(last_ts):
+                f[j] = min((min(nxt) - last_ts) / 86400.0, 14.0) / 7.0
+            else:
+                f[j] = 1.0
+            soon = [ko for x in terms[:H + 1] if x for ko in x[7]
+                    if not np.isnan(ko) and t <= ko <= t + 14 * 86400]
+            f[j + 1] = len(soon) / 3.0
+            j += 2
+            # position x opponent, zeroed unless switched on
+            if cfg.pos_interact:
+                f[j + posi] = oa1 - GOALS_CENTRE
+                f[j + 4 + posi] = od1 - GOALS_CENTRE
+            j += 8
 
             # ---- heuristic baselines, the residual policy's starting point
             prior = (sd.prev_ppm[i] if sd.has_prev[i]
@@ -678,13 +792,8 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             base_ppm[i, col] = bp
             ep1 = bp * pp * nf1 * sd._fmult(posi, oa1, od1)
             base_ep1[i, col] = ep1
-            tot5 = 0.0
-            for h in range(5):
-                gg = g + h
-                if gg > 38:
-                    break
-                a, _, x, y = sd._fix_terms(club, gg, t)
-                tot5 += bp * pp * a * sd._fmult(posi, x, y)
+            tot5 = sum(bp * pp * x[0] * sd._fmult(posi, x[2], x[3])
+                       for x in terms if x)
             base_next5[i, col] = tot5
             f[j] = bp; f[j + 1] = ep1; f[j + 2] = tot5 / 5.0; f[j + 3] = 1.0
             X[i, col] = f
@@ -754,8 +863,9 @@ def build_season(sd, cfg=None):
 # ---------------------------------------------------------------- caching
 def _key(cfg):
     return (f"v{CACHE_VERSION}_{cfg.pool_mode}_m{int(cfg.preseason_market)}"
-            f"_o{int(cfg.use_odds)}_i{int(cfg.use_injuries)}"
+            f"_i{int(cfg.use_injuries)}"
             f"_p{int(cfg.preseason_price)}"
+            f"_h{cfg.fixture_horizon}_x{int(cfg.pos_interact)}"
             f"_w{cfg.waiver_lead_hours:g}")
 
 

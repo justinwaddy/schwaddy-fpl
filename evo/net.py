@@ -27,11 +27,10 @@ the cluster beyond what this repo already needs.
 """
 import numpy as np
 
-from .config import Config
 from .features import N_FEATURES
 
-C_DRAFT = 10
-C_WAIVER = 7
+C_DRAFT = 11
+C_WAIVER = 10
 C_LINEUP = 0
 HEADS = ("draft", "waiver", "lineup")
 CONTEXT = dict(draft=C_DRAFT, waiver=C_WAIVER, lineup=C_LINEUP)
@@ -67,7 +66,7 @@ def new_genome(cfg, rng):
         s, _ = sl[f"w_{k}"]
         g[s] = rng.normal(0, 1.0 / np.sqrt(H + CONTEXT[k]), s.stop - s.start)
     g[sl["scale"][0]] = cfg.init_scale
-    g[sl["margin"][0]] = 0.25
+    g[sl["margin"][0]] = cfg.margin0
     return g
 
 
@@ -96,7 +95,7 @@ class Brain:
         if key not in self._H:
             n, g, F = Xn.shape
             h = np.tanh(Xn.reshape(-1, F) @ self.p["W1"] + self.p["b1"])
-            if len(self._H) > 6:          # two clocks a season, a few seasons
+            if len(self._H) > 12:         # two clocks a season, five seasons
                 self._H.clear()
             self._H[key] = h.reshape(n, g, -1).astype(np.float32)
         return self._H[key]
@@ -152,7 +151,7 @@ class Heuristic:
         self.kind = kind
         self.cfg = cfg
         self.rng = np.random.default_rng(seed)
-        self.margin = 0.35 * 5
+        self.margin = cfg.margin0
 
     def encode(self, key, Xn):
         return None

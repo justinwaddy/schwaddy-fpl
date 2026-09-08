@@ -39,15 +39,23 @@ class Config:
     # deadline, which is after a typical draft, so it stays off.
     preseason_price: bool = True
     preseason_market: bool = False
+    # How far ahead the SCHEDULE is known, in gameweeks. Who a club plays
+    # and where is published in June; which gameweek a match lands in is
+    # settled a few weeks out, once cups and television have had their
+    # say. A blank or a double IS a rescheduling. Beyond this horizon the
+    # model sees the published shape - one fixture a gameweek - and not
+    # the archive's record of where the match finally went.
+    fixture_horizon: int = 3
+    # Position x opponent interaction columns. panel.py records that this
+    # exact idea was measured for the matrix model and lost realized XI
+    # points in every season tested. The columns are zeroed unless this
+    # is on, and then cross-validation decides, not the argument.
+    pos_interact: bool = False
     # injury and availability history, harvested by evo/injuries.py from
     # the archive repo's git history. Off is the ablation: it is what the
     # model looked like before there was any, and the honest comparison
     # for whether the data earned its place.
     use_injuries: bool = True
-    # bookmaker ratings exist for the five archive seasons but not for
-    # the live one, and a feature the live model cannot compute is worse
-    # than no feature at all. Turn on once odds_2026-27.csv exists.
-    use_odds: bool = False
     # waivers are decided this many hours before the deadline; the same
     # information set is used for the line-up, which is conservative for
     # the line-up rather than optimistic for the waiver.
@@ -62,6 +70,13 @@ class Config:
     # alone, which is the harder, purer experiment.
     residual: bool = True
     init_scale: float = 0.05
+    # The waiver switching margin every genome starts from, in units of
+    # the candidates' spread - and the margin the reference heuristic uses
+    # in the paired benchmark. They MUST be the same number: the first
+    # review found that a fresh genome at 0.25 against a reference at 1.75
+    # was worth +18 points a season before evolution had done anything,
+    # which had been reported as learning.
+    margin0: float = 0.25
 
     # --- league mechanics ---
     waiver_first_gw: int = 2
@@ -72,10 +87,6 @@ class Config:
     # board has already been picked over.
     free_agency: bool = True
     fa_max_moves: int = 1
-    # first-come-first-served, modelled as a random order each week. Who
-    # actually gets there first is a fact about how often six people look
-    # at their phones, which no archive records.
-    fa_order: str = "random"
     max_claims: int = 3          # ranked claims submitted per manager
     max_success_per_gw: int = 1  # successful transactions per manager
     draft_shortlist: int = 80    # candidates scored per draft pick

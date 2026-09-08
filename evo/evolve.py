@@ -27,7 +27,7 @@ import os
 import time
 import numpy as np
 
-from .config import Config, N_MANAGERS
+from .config import N_MANAGERS
 from .features import Standardizer, load_seasons
 from .net import Brain, Heuristic, new_genome, layout
 from .sim import SeasonView, simulate

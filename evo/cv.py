@@ -27,7 +27,7 @@ import os
 import numpy as np
 
 from .config import Config, SEASONS
-from .features import load_seasons, Standardizer
+from .features import load_seasons
 from .sim import SeasonView
 from .evaluate import paired_leagues, head_to_head
 from .evolve import Evolver
@@ -146,6 +146,11 @@ def summarize(root, key="v_score", smooth=SMOOTH):
     for r, x in zip(mean, sm):
         r["valid_smooth"] = float(x)
     i = int(np.argmax(sm))
+    # the peak is a max over noisy checkpoints and is biased upward by
+    # exactly that; the mean over checkpoints is the number to believe
     return dict(folds=list(fold_curves), curve=mean, smooth=k,
+                mean_valid=float(np.mean(v)),
+                mean_valid_se=float(np.std(v, ddof=1) / np.sqrt(len(v)))
+                if len(v) > 1 else float("nan"),
                 best_gen=mean[i]["gen"], best_valid=float(sm[i]),
                 best_valid_raw=mean[i]["valid"])

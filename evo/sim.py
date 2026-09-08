@@ -36,6 +36,8 @@ import numpy as np
 
 from .config import SQUAD, SQUAD_SIZE, POSITIONS, N_MANAGERS
 from .net import CONTEXT
+from .features import FEATURE_NAMES
+NFIX = FEATURE_NAMES.index("n_fix1")
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                # noqa: E402
@@ -58,6 +60,10 @@ class SeasonView:
         self.X_dl = arrays["X_dl"]
         self.base_ep1_dl = arrays["base_ep1_dl"]
         self.base_next5_dl = arrays["base_next5_dl"]
+        # for the squad-level context: who blanks, who doubles, who shares
+        self.nfix = arrays["X"][:, :, NFIX]
+        self.nfix_dl = arrays["X_dl"][:, :, NFIX]
+        self.team = arrays["team"].astype(int)
         self.pos = arrays["pos"].astype(int)
         self.n = self.X.shape[0]
         self.real = arrays["real"]
@@ -150,14 +156,27 @@ def _draft_ctx(sv, cand, squad, need, rnd, gap, owned, avail0):
         scar[p] = (v[0] - v[min(gap, len(v) - 1)]) / 50.0
     ctx[:, 8] = scar[cpos]
     ctx[:, 9] = (15 - sum(need.values())) / 15.0
+    # club stacking: squad-mates at the candidate's club share his blanks
+    # and his clean sheets - variance, wanted when behind, not when ahead
+    if squad:
+        st = sv.team[np.array(squad)]
+        ctx[:, 10] = np.array([(st == sv.team[c]).sum() for c in cand]) / 5.0
     return ctx
 
 
 def _waiver_ctx(sv, cand, squad_pos_strength, n_at_pos, gws_left, rank,
-                gap, mine_mask, cpos, is_fa=0.0):
+                gap, mine_mask, cpos, is_fa=0.0, blank_share=0.0,
+                double_share=0.0, stack=None):
     k = len(cand)
     ctx = np.zeros((k, CONTEXT["waiver"]), np.float32)
     ctx[:, 6] = is_fa
+    # the draft-specific mechanism: you own fifteen and cannot buy a
+    # sixteenth, so how many of them blank this week is what a playing
+    # free agent is actually worth
+    ctx[:, 7] = blank_share
+    ctx[:, 8] = double_share
+    if stack is not None:
+        ctx[:, 9] = stack
     ctx[:, 0] = gws_left / 38.0
     ctx[:, 1] = squad_pos_strength[cpos] / 20.0
     ctx[:, 2] = n_at_pos[cpos] / 5.0
@@ -199,8 +218,13 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
     mine = np.concatenate([np.zeros(len(pick)), np.ones(len(sq))])
     cpos = sv.pos[cand]
     base = base_all[cand, gw - 1]
+    nfix = (sv.nfix_dl if is_fa else sv.nfix)[sq, gw - 1]
+    stack = (np.array([(sv.team[sq] == sv.team[c]).sum() for c in cand])
+             - mine) / 5.0
     ctx = _waiver_ctx(sv, cand, strength, n_at, 39 - gw, rank, gap, mine,
-                      cpos, is_fa=1.0 if is_fa else 0.0)
+                      cpos, is_fa=1.0 if is_fa else 0.0,
+                      blank_share=float((nfix == 0).mean()),
+                      double_share=float((nfix >= 2).mean()), stack=stack)
     val = brain.score("waiver", key, Xn, cand, gw, base, ctx=ctx,
                       feats=Xr[cand, gw - 1])
     unit = float(np.std(base)) or 1.0
@@ -250,7 +274,6 @@ def run_free_agency(brains, sv, cfg, squads, owned, gw, totals, rng):
 
 def run_waivers(brains, sv, cfg, squads, owned, gw, totals, priority):
     """One waiver window. Mutates squads/owned; returns the moves made."""
-    n = sv.n
     free = sv.pool[:, gw - 1] & ~owned
     free_rows = np.flatnonzero(free)
     if len(free_rows) == 0:
