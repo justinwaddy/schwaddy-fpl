@@ -160,6 +160,30 @@ Tomiyasu fit from the day he got hurt. `selftest` truncates this log
 along with the match archive, so a violation fails a test rather than
 quietly improving a backtest.
 
+Does the flag mean anything? On 138,361 player-gameweeks, taking each
+player's state as at that gameweek's decision:
+
+```
+   season   flagged out   P(play | out)   P(play | ok)   P(play | doubtful)
+  2021-22         23.2%           0.022          0.512                0.311
+  2022-23         25.9%           0.018          0.565                0.314
+  2023-24         32.3%           0.022          0.557                0.352
+  2024-25         26.9%           0.021          0.580                0.384
+  2025-26         30.6%           0.056          0.530                0.448
+```
+
+A player the game had flagged plays about two per cent of the time; one
+it had not, better than half; a doubtful, a third. The ordering holds in
+every season. As a probability of playing, multiplying the trailing
+minutes share by the advertised chance cuts the Brier score by 8%
+(0.1398 to 0.1286).
+
+2025/26 is the weak season - twelve snapshots rather than forty, so
+states go stale and a fifth of its "out" flags are wrong. It is the
+newest season and the one the live model leans on most, which is another
+reason to keep the log current daily from here rather than harvesting it
+after the fact.
+
 **It is worth about +34 points a season**, measured on the heuristic
 manager alone - the same policy, the same seeds, with the log and
 without:
