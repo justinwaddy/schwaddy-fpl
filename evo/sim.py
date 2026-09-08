@@ -196,6 +196,10 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
     Xn, Xr = (sv.Xn_dl, sv.X_dl) if is_fa else (sv.Xn, sv.X)
     key = sv.key_dl if is_fa else sv.key
     base_all = sv.base_next5_dl if is_fa else sv.base_next5
+    if cfg.waiver_blend > 0:
+        ep1 = sv.base_ep1_dl if is_fa else sv.base_ep1
+        base_all = ((1 - cfg.waiver_blend) * base_all
+                    + cfg.waiver_blend * 5.0 * ep1)
     sq = np.array(squad)
     spos = sv.pos[sq]
     strength = np.zeros(4)

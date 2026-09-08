@@ -87,6 +87,13 @@ class Config:
     # board has already been picked over.
     free_agency: bool = True
     fa_max_moves: int = 1
+    # The heuristic's acquisition criterion is a five-gameweek total. A
+    # blend with THIS week's expected points lets it stream - churn the
+    # weakest slot for one good fixture - which measured +9 points a
+    # season at 0.5 (pure this-week streaming measured -34: churn has a
+    # cost). Zero keeps the benchmark where every number in the README
+    # was measured; flipping it moves the reference for everything after.
+    waiver_blend: float = 0.0
     max_claims: int = 3          # ranked claims submitted per manager
     max_success_per_gw: int = 1  # successful transactions per manager
     draft_shortlist: int = 80    # candidates scored per draft pick
