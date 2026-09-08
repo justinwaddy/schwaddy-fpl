@@ -35,10 +35,13 @@ from .sim import SeasonView, simulate
 TAU = 0.25          # log-normal step-size self-adaptation
 
 
-def fitness(totals, seat):
+def fitness(totals, seat, genome=None, l2=0.0):
     r = int(np.sum(totals > totals[seat]))
     margin = totals[seat] - totals.mean()
-    return 1.0 * (r == 0) + 0.5 * (5 - r) / 5.0 + 0.5 * np.tanh(margin / 100.0)
+    f = 1.0 * (r == 0) + 0.5 * (5 - r) / 5.0 + 0.5 * np.tanh(margin / 100.0)
+    if l2 and genome is not None:
+        f -= l2 * float(np.mean(np.square(genome)))
+    return f
 
 
 # ------------------------------------------------------------------ workers
@@ -75,7 +78,7 @@ def _play(task):
         totals, _ = simulate(brains, views[season], cfg, rng)
         for m, (who, kind) in enumerate(zip(seats, kinds)):
             if kind == "pop":
-                out.append((who, fitness(totals, m)))
+                out.append((who, fitness(totals, m, pop[who], cfg.l2)))
     return out
 
 

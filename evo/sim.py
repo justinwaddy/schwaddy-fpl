@@ -52,11 +52,14 @@ class SeasonView:
         self.base_ep1 = arrays["base_ep1"]
 
 
-def _need_positions(need, left):
-    """Positions a manager may still take, with forced fill."""
-    tot = sum(need.values())
-    if tot == left:                       # every remaining pick is spoken for
-        return {p for p, v in need.items() if v > 0}
+def _need_positions(need):
+    """Positions a manager may still take.
+
+    Forced fill needs no special case: the quota sums to fifteen and one
+    unit of it is spent per pick, so the remaining needs always sum to
+    the remaining picks. A position with need left is therefore always
+    legal, and one without never is.
+    """
     return {p for p, v in need.items() if v > 0}
 
 
@@ -76,14 +79,16 @@ def run_draft(brains, sv, cfg, rng, order):
     # this manager's next pick, on the shared heuristic board
     for pick_no, m in enumerate(seq):
         rnd = pick_no // N_MANAGERS
-        left = SQUAD_SIZE - len(squads[m])
-        allowed = _need_positions(need[m], left)
+        allowed = _need_positions(need[m])
         cand = np.flatnonzero(avail0 & ~owned)
-        if len(cand) == 0:
-            break
         cand = cand[np.isin(sv.pos[cand], [POS_ID[p] for p in allowed])]
         if len(cand) == 0:
-            cand = np.flatnonzero(avail0 & ~owned)
+            # ninety picks out of six hundred registered players; if this
+            # ever fires the pool is wrong, and quietly drafting an
+            # illegal squad instead would be far worse
+            raise RuntimeError(
+                f"draft pick {pick_no}: no eligible player at {allowed} "
+                f"in {sv.key}")
         base = sv.base_season[cand]
         if len(cand) > cfg.draft_shortlist:
             top = np.argpartition(-base, cfg.draft_shortlist)[:cfg.draft_shortlist]

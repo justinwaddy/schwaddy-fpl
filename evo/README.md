@@ -239,6 +239,24 @@ folds is the only thing the held-out seasons are allowed to decide; the
 live model is then trained on every season for exactly that many
 generations.
 
+### What the dry run in this repo actually found
+
+A small run - population 60, eight leagues per genome, 40 generations,
+all five folds - is committed as the pipeline's proof of life, and it is
+worth reading for its shape rather than its numbers. The evolved genome
+beats the baseline manager on the seasons it trained on by twenty to
+seventy points a season, and on the held-out season it does not reliably
+beat it at all. That is textbook overfitting, and it is exactly what the
+gap column was added to show.
+
+Nothing about that is a reason to trust the numbers less; it is a
+population two hundred short of the one the cluster config uses, judged
+on thirty validation leagues where the standard error is +-25. The levers
+against it, in the order worth pulling: more leagues per genome (fitness
+noise is what selection overfits first), a larger population, and `l2`,
+the complexity penalty on the genome, which is off by default and should
+be chosen by the same validation curve as everything else.
+
 ### On how much noise there is
 
 A draft league is a small-sample machine. Two managers with the same

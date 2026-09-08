@@ -69,6 +69,14 @@ class Config:
     truncation: float = 0.25
     p_crossover: float = 0.3
     sigma0: float = 0.08
+    # complexity penalty subtracted from fitness, l2 * mean(genome^2).
+    # Off by default. It is the lever to reach for when the cross-
+    # validation curve shows a large gap between the paired score on the
+    # training seasons and the one on the held-out season, which is the
+    # failure mode a population this size actually has. Choose it the
+    # same way as everything else here - by the validation curve, never
+    # by eye on the training one.
+    l2: float = 0.0
     leagues_per_genome: int = 8
     hof_size: int = 24
     hof_every: int = 5
