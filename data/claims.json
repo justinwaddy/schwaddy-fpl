@@ -1,7 +1,7 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-08T08:10 UTC",
+ "ts": "2026-09-08T21:12 UTC",
  "summary": "The GW4 appearance read is what these claims are fixing. Seven of the fifteen are certain to start - Raya, Pickford, Gvardiol, Milenkovic, Haaland, Tavernier, Schade - and two are likely: Marmoush, who has started Tottenham's last two, and Garner, who started against Man Utd but came off on 77 minutes and now carries an unspecified injury at 75%. The other six are not GW4 players: Doku is out (calf, expected back 13 September, the day of the derby and a day after the deadline), Collins came off after 17 minutes with a calf strain and is at 25%, Bijol was benched at Brighton, Munoz came on at 59 minutes on his Forest debut, Barcola has 26 minutes at Liverpool, and Strand Larsen was behind Nketiah at Fulham. Nine likely starters is two short of an XI. Two changes against this morning's board. Bijol is back on it at rank 3: Leeds' own team news has him on the bench with Muharemovic and Elvedi preferred, his minutes have gone 90, 45, 29, and the model's avail 0.75 still reads him as a starter, so its +3.0 on Maguire is too small. And Doku is off it - the model's per-gameweek line for him is 0.0, 0.4, 0.6, 0.9, 0.7 across GW4-8, which never recovers him at all, so its 2.5 is a floor rather than a forecast for a player who misses one gameweek. Justin sits fifth of six on 124 points, so his claims process second in the queue when the window closes on 11 September: rank 1 is the one nearly certain to land.",
  "claims": [
   {
@@ -76,7 +76,7 @@
     "club": "LEE"
    },
    "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. Maguire has played every minute of Manchester United's season.",
-   "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction.",
+   "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction. Note Elvedi, the man now preferred over Bijol, is himself a new-to-pool signing the model rates at just 6.5 next5 off two games (avail 0.46) - too thin a sample to claim ahead of Bijol, so Maguire's proven full-season 15.5 is the safer target, not Elvedi.",
    "confidence": "medium",
    "sources": [
     {
@@ -319,6 +319,12 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made, ~11 hours after last night's sweep. Fresh club-by-club round (Palace, Sunderland, Man Utd, Bournemouth, Brentford, Leeds, Man City among them) confirmed rather than moved anything: Mitchell has no fresh fitness concern beyond an unpermitted preview mentioning an EFL Cup doubt (discarded, wrong competition and not sourced to a permitted outlet), Le Fee remains first-choice at Sunderland with no injury news, Bijol is still behind Elvedi at Leeds with no new Leeds team news since Brighton, Collins' calf still has no confirmed Brentford timeline, and Garner has had no fresh update on his 75% figure. Doku still projected for the 13 September derby, a day after GW4's own deadline, unchanged from last night."
+  },
+  {
+   "ts": "2026-09-08T21:12 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~13 hours after this morning's run. Strengthened the Maguire/Bijol reasoning: Elvedi, the man Leeds are now picking ahead of Bijol, is himself only a two-game sample the model rates at 6.5 next5 (avail 0.46) - the model's new-signing blind spot cuts both ways here, and it argues for Maguire's proven number over chasing Elvedi, not against the swap. Investigated but could not confirm on a permitted source: reports that Bijol was seen with Leeds medical staff in the Brighton warm-up (only Yahoo/aggregator reprints of BBC Radio Leeds commentary), and reports that Sage now has Nketiah sidelined with Strand Larsen the clear leader for Ipswich (only Sports Mole/Yahoo/lastwordonsports previews for the Middlesbrough League Cup tie) - neither changes a claim since Bijol is dropped regardless and Strand Larsen is already kept, not added. Everything else (Mitchell/Munoz, Le Fee/Barcola, Hill/Collins, Scott/Garner) reconfirmed exactly as this morning."
   }
  ]
 }
