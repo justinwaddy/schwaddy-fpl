@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T07:47 UTC",
+  "generated": "2026-09-08T22:47 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -366,6 +366,33 @@
         "title": "Stalemate at the City Ground",
         "url": "https://www.tottenhamhotspur.com/news/1088632/stalemate-at-the-city-ground"
       }
+    },
+    {
+      "id": "2026-09-08-porto-mci-haaland",
+      "ts": "2026-09-08T22:41",
+      "kind": "news",
+      "text": "Erling Haaland scored twice as Manchester City beat Porto 2-0 in Enzo Maresca's first Champions League match in charge, a second-half header from Enzo Fernandez's cross followed by a stoppage-time finish that took him level with Sergio Aguero's club record of 36 Champions League goals for City. Justin owns Haaland in this league.",
+      "source": {
+        "title": "FC Porto 0-2 Manchester City: Erling Haaland earns Enzo Maresca a first Champions League win as City head coach but English side fail to impress",
+        "url": "https://www.skysports.com/football/porto-vs-manchester-city/8132093249271632232"
+      }
+    },
+    {
+      "id": "2026-09-08-mci-porto-doku-oreilly",
+      "ts": "2026-09-08T22:41",
+      "kind": "news",
+      "text": "Neither Jeremy Doku nor Nico O'Reilly were part of Manchester City's matchday squad for the trip to Porto, with Iliman Ndiaye limited to a place among the substitutes rather than a start. Justin owns Doku; Robert owns both O'Reilly and Ndiaye.",
+      "source": {
+        "title": "Starting Lineups - FC Porto vs Man City | 08.09.2026",
+        "url": "https://www.skysports.com/football/fc-porto-vs-manchester-city/teams/577600"
+      }
+    },
+    {
+      "id": "2026-09-08-opinion-robert-city-cameo",
+      "ts": "2026-09-08T22:41",
+      "kind": "opinion",
+      "text": "Robert has three Manchester City players on the books - Cherki, Ndiaye and O'Reilly - and Tuesday's trip to Porto was a decent snapshot of his season with them: Cherki started, Ndiaye got as far as the bench, and O'Reilly did not even make the squad. None of it moves a point in this league, but neither has owning them so far this season.",
+      "source": null
     }
   ],
   "runs": [
@@ -555,6 +582,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Scheduled morning news. GW3 is fully settled (10/10 fixtures) and there is no matchday today, so this covers the most recent football rather than a literal last 24 hours. Four reported items, all fetched and read directly from club sites (newcastleunited.com, liverpoolfc.com, chelseafc.com, tottenhamhotspur.com) after mancity.com blocked every fetch attempt with a JS/Cloudflare challenge (403), so a promising Maresca-on-Ndiaye quote from Man City's Coventry win went unused rather than being cited from a search summary alone. No opinion pieces on a morning run. The one unused roast archive entry (Edward on Robert, 'Mong') stays out permanently as an ableist slur, not a timing issue."
+    },
+    {
+      "ts": "2026-09-08T22:47 UTC",
+      "news": 2,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Scheduled evening wrap. No Premier League fixtures today (rest day after GW3 finished Sunday) and the live feed confirms GW3 is still fully settled at the same totals this morning's run reported, so no fresh table angle to add and nothing to repeat. The evening's real action was Manchester City's Champions League opener at Porto: led with Haaland's brace (2-0 win, level with Aguero's club Champions League scoring record) and a second item on the squad news around it, Doku and O'Reilly both missing from the matchday squad and Ndiaye limited to the bench - both read in full at Sky Sports (match report and the lineup page) after mancity.com again returned a 403 and a Sky Sports live-blog/preview page loaded with no usable content. One opinion piece off the back of that squad news: Robert's three City players (Cherki started, Ndiaye benched, O'Reilly not in the squad) summing up a season where owning them has done little for him, worded to avoid repeating the 'warm-up act' framing used two nights ago. The only unused roast-archive submission, Edward's 'Mong' about Robert, stays out permanently - the ableist slur rule 4 excludes, not a timing issue, so nothing is pending from it. No FLOP badges in today's automatic feed (no matches played), so nothing to rewrite via reflop.py."
     }
   ]
 }
