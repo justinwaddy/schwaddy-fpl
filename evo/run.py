@@ -72,6 +72,10 @@ def main(argv=None):
     p = sub.add_parser("report")
     p.add_argument("--out", required=True)
 
+    p = add_config_args(sub.add_parser("explain"))
+    p.add_argument("--model", required=True)
+    p.add_argument("--season", default=None)
+
     p = add_config_args(sub.add_parser("live"))
     p.add_argument("--model", required=True)
     p.add_argument("--offline", action="store_true")
@@ -151,6 +155,10 @@ def main(argv=None):
         with open(os.path.join(a.out, "summary.json"), "w") as fh:
             json.dump(s, fh, indent=1)
         return 0
+
+    if a.cmd == "explain":
+        from .explain import explain
+        return explain(a.model, cfg_from_args(a), season=a.season)
 
     if a.cmd == "live":
         from .live import main as live_main
