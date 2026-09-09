@@ -58,12 +58,41 @@ def _explain_values(entry):
     return out
 
 
-def gw_rows(gw, elements, fixtures, players, team_name):
+MARKET = ("value", "selected", "transfers_balance", "transfers_in",
+          "transfers_out")
+
+
+def market_from_bootstrap(boot):
+    """element id -> the archive's five market columns, from the classic
+    game's bootstrap. The live per-gameweek endpoint carries none of them,
+    which is why every row after gameweek 1 used to leave them blank.
+    selected is a count in the archive and a percentage in the bootstrap;
+    total_players turns one into the other."""
+    total = float(boot.get("total_players") or 0)
+    out = {}
+    for e in boot.get("elements", []):
+        try:
+            pct = float(e.get("selected_by_percent") or 0)
+            ti = int(e.get("transfers_in_event") or 0)
+            to = int(e.get("transfers_out_event") or 0)
+            out[int(e["id"])] = dict(
+                value=int(e.get("now_cost") or 0),
+                selected=int(round(pct / 100.0 * total)) if total else "",
+                transfers_balance=ti - to, transfers_in=ti, transfers_out=to)
+        except (TypeError, ValueError, KeyError):
+            continue
+    return out
+
+
+def gw_rows(gw, elements, fixtures, players, team_name, market=None):
     """Archive-shaped rows for one gameweek.
 
     gw is 1-based. elements is the live payload's element map. players maps
-    element id -> (name, element_type, team id).
+    element id -> (name, element_type, team id). market, if given, maps
+    element id -> the five market columns as of now; a row written without
+    it leaves them blank, which downstream reads as "no change".
     """
+    market = market or {}
     by_team = {}
     for f in fixtures:
         if f.get("event") != gw or not f.get("finished"):
@@ -103,6 +132,7 @@ def gw_rows(gw, elements, fixtures, players, team_name):
                        kickoff_time=f.get("kickoff_time", ""))
             for k in STATS:
                 row[k] = src.get(k, 0)
+            row.update(market.get(eid, {}))
             rows.append(row)
         if len(played) > 1 and not per_fixture:
             f = played[0]                 # no breakdown: one row, aggregate
@@ -118,6 +148,7 @@ def gw_rows(gw, elements, fixtures, players, team_name):
                        kickoff_time=f.get("kickoff_time", ""))
             for k in STATS:
                 row[k] = stats.get(k, 0)
+            row.update(market.get(eid, {}))
             rows.append(row)
     return rows
 
@@ -145,13 +176,21 @@ def load_team_names(data_dir, season=LIVE):
     return {int(r["id"]): r["name"] for r in csv.DictReader(open(path))}
 
 
-def build_rows(data_dir, fixtures, season=LIVE, fetch=None, want=None):
+def build_rows(data_dir, fixtures, season=LIVE, fetch=None, want=None,
+               market=None):
     """Archive-shaped rows for the finished gameweeks in `want`."""
     players = load_players(data_dir, season)
     names = load_team_names(data_dir, season)
     if not players or not names:
         return []
     fetch = fetch or api.classic_live
+    if market is None:
+        # the market as of now, for the rows written now. A failure here
+        # must never cost the rows themselves.
+        try:
+            market = market_from_bootstrap(api.classic_bootstrap())
+        except Exception:
+            market = {}
     gws = sorted({f["event"] for f in fixtures
                   if f.get("event") and f.get("finished")})
     if want is not None:
@@ -167,7 +206,7 @@ def build_rows(data_dir, fixtures, season=LIVE, fetch=None, want=None):
             elements = {e.get("id"): e for e in elements if e.get("id")}
         if not elements:
             continue
-        rows.extend(gw_rows(gw, elements, fixtures, players, names))
+        rows.extend(gw_rows(gw, elements, fixtures, players, names, market))
     return rows
 
 

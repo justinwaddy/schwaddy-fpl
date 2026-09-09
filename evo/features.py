@@ -46,7 +46,7 @@ HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 9
+CACHE_VERSION = 10
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -270,11 +270,23 @@ class SeasonData:
         # market, point-in-time: the value/ownership on the last row before t
         self.p_value = [None] * n
         self.p_sel = [None] * n
-        val, sel = _num(gws, "value", 45.0), _num(gws, "selected")
+        # A row can lack the market columns - the live season's weekly
+        # rebuild writes none after gameweek 1 - and a missing price is
+        # not 4.5, nor a missing ownership zero: each is "no news since
+        # the last one". Carry a player's last known values forward, and
+        # where there was never one, his first known value backward, so
+        # that a gap reads as no change rather than as a crash.
+        val = pd.to_numeric(gws["value"], errors="coerce").to_numpy(float) \
+            if "value" in gws.columns else np.full(len(gws), np.nan)
+        sel = pd.to_numeric(gws["selected"], errors="coerce").to_numpy(float) \
+            if "selected" in gws.columns else np.full(len(gws), np.nan)
         for i in range(n):
             sl = order[starts_at[i]:starts_at[i + 1]]
-            self.p_value[i] = val[sl]
-            self.p_sel[i] = sel[sl]
+            # forward only: a later price must never reach an earlier row
+            v = np.array(pd.Series(val[sl]).ffill().fillna(45.0), dtype=float)
+            se = np.array(pd.Series(sel[sl]).ffill().fillna(0.0), dtype=float)
+            self.p_value[i] = v
+            self.p_sel[i] = se
 
         # ---- previous season, for priors ----
         self.prev_ppm = np.zeros(n)

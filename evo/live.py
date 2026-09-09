@@ -45,6 +45,43 @@ def _ts(s):
     return float(np.datetime64(s.replace("Z", ""), "s").astype("int64"))
 
 
+def _overlay_market(sd, cfg):
+    """Today's classic price onto each player's latest row.
+
+    The weekly archive rebuild only started carrying prices after this
+    was found, so the rows the live features read from can be weeks
+    stale. data/prices.json is written by every refresh from the classic
+    game and is the price as of this morning; put it where the features
+    will read it. Ownership and transfers are left as the last known
+    value - stale but real - rather than invented.
+    """
+    try:
+        pj = json.load(open(f"{cfg.data_dir}/prices.json"))
+    except Exception:
+        return
+    cols = pj.get("cols") or []
+    if "price" not in cols:
+        return
+    k = cols.index("price")
+    n = 0
+    for code, row in pj.get("players", {}).items():
+        i = sd.row_of.get(int(code))
+        if i is None or row[k] is None:
+            continue
+        if len(sd.p_value[i]):
+            v = np.array(sd.p_value[i], dtype=float)
+            v[-1] = float(row[k]) * 10.0
+        else:
+            # a signing with no archive row yet: his only price is today's,
+            # and it is read as his opening one
+            v = np.array([float(row[k]) * 10.0])
+            sd.p_sel[i] = np.array([0.0])
+        sd.p_value[i] = v
+        n += 1
+    if n:
+        print(f"  market: today's price overlaid for {n} players")
+
+
 def load_live(cfg, boot, fixtures, prev=None):
     """SeasonData + features for the live season, on the live clock."""
     prev = prev or SeasonData(SEASONS[-1], cfg)
@@ -59,6 +96,7 @@ def load_live(cfg, boot, fixtures, prev=None):
                                        if e.get("added") else None)
     sd = SeasonData(LIVE_SEASON, cfg, prev=prev, extra_fixtures=fixtures,
                     roster=roster)
+    _overlay_market(sd, cfg)
     dl = {}
     for ev in boot["events"]["data"]:
         w = ev.get("waivers_time")
