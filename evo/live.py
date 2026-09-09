@@ -232,12 +232,16 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             id_of_row = {r: i for i, r in free}
             id_of_row.update({int(r): i for r, i in zip(rows, ids)})
             out = []
-            for gain, add, drop in pairs[:cfg.max_claims]:
+            for gain, add, drop in (pairs[:cfg.max_claims] if cfg.max_claims
+                                    else pairs[:10]):
                 out.append(dict(pos=POSITIONS[int(sv.pos[add])],
                                 gain=round(gain, 2),
                                 add=describe(id_of_row.get(add, -1), add),
                                 drop=describe(id_of_row.get(drop, -1), drop)))
             plan["claims"] = out
+            plan["claims_note"] = ("waivers are unlimited; these are the "
+                                   "ranked claims above the margin, and "
+                                   "the game processes them in this order")
             plan["claims_are"] = ("free agents, first come first served"
                                   if is_fa else
                                   "waiver claims, in submission order")

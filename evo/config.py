@@ -94,12 +94,13 @@ class Config:
     # cost). Zero keeps the benchmark where every number in the README
     # was measured; flipping it moves the reference for everything after.
     waiver_blend: float = 0.0
-    max_claims: int = 3          # ranked claims submitted per manager
-    # A successful claimant moves to the END of the queue and processing
-    # continues, so a manager can win again once everyone ahead has had a
-    # turn - the game's rule, per the Premier League's own guide. This
-    # caps it; max_claims is the natural ceiling.
-    max_success_per_gw: int = 3
+    # Waivers are unlimited in the game: "any number of waiver requests
+    # can be made", and a successful claimant goes to the END of the
+    # queue and processing goes round again. Zero means no limit on
+    # either the claims a manager submits or the ones he wins in a week;
+    # the switching margin is what stops him churning the whole squad.
+    max_claims: int = 0
+    max_success_per_gw: int = 0
     draft_shortlist: int = 80    # candidates scored per draft pick
     waiver_shortlist: int = 60   # free agents scored per waiver window
 

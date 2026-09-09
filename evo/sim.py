@@ -242,18 +242,23 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
                       feats=Xr[cand, gw - 1])
     unit = float(np.std(base)) or 1.0
     margin = max(0.0, brain.margin) * unit
+    # every free agent against every squad player at his position, not
+    # just the weakest: with unlimited waivers a second success has to be
+    # able to drop the second-weakest, and a third the third
     pairs = []
     for p in range(4):
         fa = np.flatnonzero((cpos == p) & (mine == 0))
         ow = np.flatnonzero((cpos == p) & (mine == 1))
         if len(fa) == 0 or len(ow) == 0:
             continue
-        worst = ow[int(np.argmin(val[ow]))]
-        for a in fa[np.argsort(-val[fa])[:cfg.max_claims]]:
-            gain = float(val[a] - val[worst])
-            if gain > margin:
-                pairs.append((gain, int(cand[a]), int(cand[worst])))
+        for d in ow:
+            for a in fa:
+                gain = float(val[a] - val[d])
+                if gain > margin:
+                    pairs.append((gain, int(cand[a]), int(cand[d])))
     pairs.sort(key=lambda x: -x[0])
+    if cfg.max_claims:
+        pairs = pairs[:cfg.max_claims]
     return pairs
 
 
@@ -297,8 +302,8 @@ def run_waivers(brains, sv, cfg, squads, owned, gw, totals, priority):
     if len(free_rows) == 0:
         return []
     claims = {m: _rank_swaps(brains[m], sv, cfg, squads[m], free_rows, gw,
-                             list(totals), m, is_fa=False)[:cfg.max_claims]
-               for m in range(N_MANAGERS)}
+                             list(totals), m, is_fa=False)
+              for m in range(N_MANAGERS)}
 
     # The queue. Highest priority tries his claims in order; on a success
     # he goes to the back and the next manager is up; on no success he is
@@ -323,8 +328,12 @@ def run_waivers(brains, sv, cfg, squads, owned, gw, totals, priority):
             wins[m] += 1
             won = (add, drop)
             break
-        if won is not None and wins[m] < cfg.max_success_per_gw:
-            claims[m] = [c for c in claims[m] if c[1] != won[0]]
+        if won is not None and (not cfg.max_success_per_gw
+                                or wins[m] < cfg.max_success_per_gw):
+            # the claims that can still go through: not the player just
+            # signed, and not another claim dropping the one just dropped
+            claims[m] = [c for c in claims[m]
+                         if c[1] != won[0] and c[2] != won[1]]
             queue.append(m)
     return moves, released
 

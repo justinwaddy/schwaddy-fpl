@@ -440,9 +440,11 @@ rather than two heads each learning half of one.
 ### Mechanics
 
 The game's, not a convenient approximation of it. Snake draft, 15 rounds,
-2/5/5/3 with forced fill. Waivers from gameweek 2, up to three ranked
-claims each, processed in reverse-standings order with a successful
-claimant moving to the back of the queue. Then the free-agency window: whoever gets there first
+2/5/5/3 with forced fill. Waivers from gameweek 2, unlimited - any
+number of ranked claims, any number of successes, processed in
+reverse-standings order with a successful claimant moving to the back of
+the queue and the queue going round again; the switching margin is what
+stops a manager churning his whole squad. Then the free-agency window: whoever gets there first
 takes the player, modelled as a fresh random order each week, because who
 actually gets there first is a fact about how often six people look at
 their phones and no archive records it. Eleven starters, exactly one

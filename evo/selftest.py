@@ -193,9 +193,22 @@ def test_legality(cfg, views, season="2025-26"):
                 good = False
             dropped.add(drop)
     ok &= _report("no free-agent add is a player released that week", good)
-    good = all(sum(1 for x in v if x == "w") <= cfg.max_success_per_gw
-               for v in per_gw.values())
-    ok &= _report("waiver wins respect the cap", good)
+    if cfg.max_success_per_gw:
+        good = all(sum(1 for x in v if x == "w") <= cfg.max_success_per_gw
+                   for v in per_gw.values())
+        ok &= _report("waiver wins respect the cap", good)
+    else:
+        most = max((sum(1 for x in v if x == "w") for v in per_gw.values()),
+                   default=0)
+        ok &= _report("waivers are unlimited", True,
+                      f"most wins by one manager in a week: {most}")
+    # a manager never drops the same player twice in a week
+    good = all(len([d for _, _, d, _ in
+                    [(m, a, dr, k) for m, a, dr, k in seq if m == mm]])
+               == len({d for _, _, d, _ in
+                       [(m, a, dr, k) for m, a, dr, k in seq if m == mm]})
+               for gw, seq in by_gw.items() for mm in range(6))
+    ok &= _report("no player is dropped twice in a week", good)
     return ok
 
 
