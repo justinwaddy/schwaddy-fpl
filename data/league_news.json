@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T22:47 UTC",
+  "generated": "2026-09-09T07:52 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -393,6 +393,16 @@
       "kind": "opinion",
       "text": "Robert has three Manchester City players on the books - Cherki, Ndiaye and O'Reilly - and Tuesday's trip to Porto was a decent snapshot of his season with them: Cherki started, Ndiaye got as far as the bench, and O'Reilly did not even make the squad. None of it moves a point in this league, but neither has owning them so far this season.",
       "source": null
+    },
+    {
+      "id": "2026-09-09-mci-porto-anderson-khusanov",
+      "ts": "2026-09-09T07:52",
+      "kind": "news",
+      "text": "Elliot Anderson and Abdukodir Khusanov were both left out of Manchester City's starting eleven for Tuesday's trip to Porto, with Matheus Nunes and new signing Ayyoub Bouaddi preferred instead as Enzo Maresca rotated his midfield and defence. Ben C owns both Anderson and Khusanov, though Gianluigi Donnarumma and Ruben Dias, also his, did keep their places in the 2-0 win.",
+      "source": {
+        "title": "Starting Lineups - FC Porto vs Man City | 08.09.2026",
+        "url": "https://www.skysports.com/football/fc-porto-vs-manchester-city/teams/577600"
+      }
     }
   ],
   "runs": [
@@ -589,6 +599,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Scheduled evening wrap. No Premier League fixtures today (rest day after GW3 finished Sunday) and the live feed confirms GW3 is still fully settled at the same totals this morning's run reported, so no fresh table angle to add and nothing to repeat. The evening's real action was Manchester City's Champions League opener at Porto: led with Haaland's brace (2-0 win, level with Aguero's club Champions League scoring record) and a second item on the squad news around it, Doku and O'Reilly both missing from the matchday squad and Ndiaye limited to the bench - both read in full at Sky Sports (match report and the lineup page) after mancity.com again returned a 403 and a Sky Sports live-blog/preview page loaded with no usable content. One opinion piece off the back of that squad news: Robert's three City players (Cherki started, Ndiaye benched, O'Reilly not in the squad) summing up a season where owning them has done little for him, worded to avoid repeating the 'warm-up act' framing used two nights ago. The only unused roast-archive submission, Edward's 'Mong' about Robert, stays out permanently - the ableist slur rule 4 excludes, not a timing issue, so nothing is pending from it. No FLOP badges in today's automatic feed (no matches played), so nothing to rewrite via reflop.py."
+    },
+    {
+      "ts": "2026-09-09T07:52 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news run, no Premier League fixtures today (next PL action is the 12th; Arsenal host Napoli and Liverpool host Atletico Madrid tonight in the Champions League, which does not score in this league). Ran a dozen-plus searches across Man City, Arsenal, Liverpool, Newcastle, Man Utd, Chelsea, Leeds, Crystal Palace, Bournemouth, Fulham, Aston Villa and Brentford and found almost nothing usable: search summaries kept surfacing stale or outright wrong material - an Arsenal.com URL titled 'Arsenal 2-0 Napoli match report' turned out to be an Ozil/Giroud report from over a decade ago, a Crystal Palace search invented a manager ('Pierre Sage') who does not exist there, a Chelsea 'Newcastle team news' piece referenced an Aston Villa fixture on '27 December' and a Brentford Thiago injury update referenced a Tottenham match on 'New Year's Day' - both many months out of step with today. The Arsenal Timber/Mosquera fitness lines that did check out against a live arsenal.com page were already published on 5 and 7 September, so re-running them would have repeated the page. One item survived verification: Ben C's Anderson and Khusanov were both left out of Manchester City's XI for Tuesday's Porto trip (Sky Sports lineup page, read directly), a fact not covered by Sunday night's Doku/O'Reilly/Ndiaye item on the same match. No opinion pieces on a morning run. Roast archive's only unused entry, Edward's 'Mong' about Robert, remains permanently excluded as the ableist slur rule 4 rules out."
     }
   ]
 }
