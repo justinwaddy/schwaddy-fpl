@@ -488,58 +488,43 @@ generations.
 
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
-- is the pipeline's proof of life. Paired points a season against the
-baseline manager, meaned over the five folds:
+- with the reference heuristic at the genome's own starting margin, the
+fixture horizon closed, and the full 82-feature set. Paired points a
+season against the reference, meaned over the five folds:
 
 ```
    gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.602    +12.8    +14.2    11.6     7.6    -1.4     +16.9
-    10    0.577    +18.8    +19.6    15.1     8.4    -0.8     +20.3
-    15    0.617    +44.2    +27.2     6.0     7.7   +17.0     +31.0
-    20    0.657    +60.2    +46.2    10.8     8.0   +14.0     +26.3
-    25    0.653    +75.0     +5.5    13.0     8.4   +69.5     +28.2
-    30    0.629    +62.5    +33.0    14.4     8.0   +29.6     +21.7
-    35    0.660    +66.2    +26.7    13.4     8.0   +39.5     +28.7
-    40    0.662    +85.8    +26.5    21.2     8.7   +59.4     +26.6
+     5    0.528    +11.4    -11.6     6.0     6.7   +23.0      +3.7
+    10    0.564    +36.9    +18.9     9.7     8.3   +18.0     +12.7
+    15    0.555    +64.6    +30.7    28.6     9.1   +33.9     +24.5
+    20    0.625    +68.5    +23.9    22.3     9.1   +44.6     +38.9
+    25    0.608    +97.8    +62.1    12.4     8.2   +35.6     +35.7
+    30    0.622   +119.6    +21.2    24.2     8.8   +98.5     +39.3
+    35    0.652   +116.3    +34.5    13.0     9.3   +81.8     +23.1
+    40    0.626   +112.7    +13.5     8.3     8.8   +99.2     +24.0
+
+   mean over all checkpoints  +24.2 +- 7.3
 ```
 
-Positive at every checkpoint, peaking at +31 points a season over the
-baseline on seasons it has never seen. That is the first configuration
-here that works, and it is worth seeing how it got there - the same run,
-same scale, as each piece went in:
+**The number to believe is +24 points a season over the manager it
+starts from, on seasons it has never seen**, with a standard error of 7
+across the eight checkpoints. Positive at every checkpoint after the
+first; the single peak of +62 is a max over noisy checkpoints and should
+be read as such, which is why the report prints the mean beside it.
 
-```
-                                 valid, by generation
-  match data only    -2.3  +18.3   -3.2  +15.3   -3.8  -20.9   -7.7   -9.0
-  + injury log      +19.2   +0.2  +17.2   +8.5  +21.3  -19.0   -8.6  +13.4
-  + the second      +14.2  +19.6  +27.2  +46.2   +5.5  +33.0  +26.7  +26.5
-    clock and
-    free agency
-```
+That number has been through a review. An earlier version of this
+section reported +31 and called it the first configuration that worked.
++18 of that was a benchmark artefact - the reference heuristic churned
+at a margin of 1.75 units while every genome started at 0.25 - and the
+fixture-rescheduling leak was open in both arms. The number above is
+measured with both fixed, and it is the honest one.
 
-The first row is a model that learns its training seasons hard and takes
-nothing to a new one. The last is a model that generalises. Two things
-did it, and the second was the surprise:
-
-- **The injury log.** Availability that knows who is hurt, in training
-  exactly as live.
-- **The week's second clock.** Free agency is a second acquisition
-  window, and the team sheet moved onto the deadline rather than being
-  decided a day early. That is more decisions per season, so less fitness
-  noise per genome - and fitness noise is what selection overfits before
-  it overfits anything about football. Look at the gap column: -1.4 and
-  -0.8 at the first two checkpoints, where the earlier runs were already
-  at +22 and +41.
-
-Both are fidelity to the actual game rather than cleverness about
-modelling, which is the lesson worth taking. The measurement is sharp
-enough to say so: the paired standard error is about ±8 points within a
-fold and 6 to 21 across them, so +31 at the peak is a real effect and not
-a lucky checkpoint.
-
-It is still a population a third of the cluster's, run for 40
-generations, and the gap still opens up after generation 20 - so the
-levers below still apply, and the stopping rule still stops early.
+What it is measuring is a policy that learned a better use of fixtures
+than a 50/50 horizon blend gets by hand (+9, above), on top of the
+injury log (+34 to the heuristic itself) and the market columns. It is
+still a population a third of the cluster's, and the gap still opens
+after generation 25, so the stopping rule stops at 30 and the levers
+below still apply.
 
 ### On how much noise there is
 
