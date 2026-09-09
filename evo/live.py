@@ -270,13 +270,22 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
                                 0, is_fa=is_fa)
             id_of_row = {r: i for i, r in free}
             id_of_row.update({int(r): i for r, i in zip(rows, ids)})
-            out = []
+            # the whole list, each row marked as a change or a fallback
+            # for the change above it: with waivers unlimited the list is
+            # long, and ten changes is a different thing from four changes
+            # with two fallbacks each
+            out, step, last = [], 0, None
             for gain, add, drop in (pairs[:cfg.max_claims] if cfg.max_claims
-                                    else pairs[:10]):
+                                    else pairs):
+                if drop != last:
+                    step, last = step + 1, drop
                 out.append(dict(pos=POSITIONS[int(sv.pos[add])],
-                                gain=round(gain, 2),
+                                gain=round(gain, 2), change=step,
+                                fallback=(drop == last and
+                                          any(o["change"] == step for o in out)),
                                 add=describe(id_of_row.get(add, -1), add),
                                 drop=describe(id_of_row.get(drop, -1), drop)))
+            plan["changes"] = step
             plan["claims"] = out
             plan["claims_note"] = ("waivers are unlimited; these are the "
                                    "ranked claims above the margin, and "
@@ -314,7 +323,8 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
               f"waivers {plan.get('waivers_time')}, "
               f"deadline {plan.get('deadline')})")
     for c in plan.get("claims", []):
-        print(f"    +{c['add']['name']:<16} -{c['drop']['name']:<16} "
+        tag = "  fallback" if c.get("fallback") else f"change {c.get('change', '')}"
+        print(f"    {tag:10} +{c['add']['name']:<16} -{c['drop']['name']:<16} "
               f"{c['pos']:3} gain {c['gain']:.2f}")
     print("  board: " + ", ".join(p["name"] for p in plan["board"][:12]))
     return 0

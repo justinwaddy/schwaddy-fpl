@@ -130,6 +130,7 @@ background:rgba(217,87,87,.13);border:1px solid var(--red)}
 .clcard{border-color:var(--amber)}
 .evocard{border-color:var(--blue,#5b9dd9)}
 .evocard .clno{color:var(--blue,#5b9dd9)}
+.evocard .clfb{padding-left:22px;opacity:.8}
 .clsub{color:var(--dim);font:500 12px "IBM Plex Mono";padding:3px 0 2px}
 .clsum{font-size:14px;padding:5px 0 6px;border-bottom:1px solid var(--line)}
 .cl{padding:9px 0;border-bottom:1px solid var(--line)}.cl:last-child{border-bottom:none}
@@ -454,6 +455,8 @@ function evoClaimsHTML(ps,plan){
   h+=`<div class="clsub">GW${gw||"?"} · ${E.window==="waiver"?`waiver window, claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency until the deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC</div>`;
   if(gw&&gw<cur)h+=`<div class="stale">This plan was written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
   if(!cl.length)h+=`<div class="note">Nothing clears the policy's own switching margin this week.</div>`;
+  const nchg=E.changes||cl.filter(c=>!c.fallback).length;
+  if(cl.length>nchg)h+=`<div class="clsub">${nchg} change${nchg>1?"s":""}, ${cl.length-nchg} fallback${cl.length-nchg>1?"s":""} - a fallback only fires if the row above it is refused</div>`;
   cl.forEach((c,i)=>{
     const A=c.add||{},D=c.drop||{};
     const a=A.code?by[String(A.code)]:null,d=D.code?by[String(D.code)]:null;
@@ -469,7 +472,8 @@ function evoClaimsHTML(ps,plan){
     if(a&&a.owner)flags.push(`${esc(a.name)} is no longer a free agent`);
     if(d&&!d.mine)flags.push(`${esc(d.name)} is no longer in your squad`);
     if(A.status&&A.status!=="a")flags.push(`${esc(A.name)}: ${esc(A.news||A.status)}`);
-    h+=`<div class="cl"><div class="clhd"><span class="clno">${i+1}</span>
+    const lab=c.fallback?`<span class="tm" title="only if the row above is refused">or</span>`:`<span class="clno">${c.change||i+1}</span>`;
+    h+=`<div class="cl${c.fallback?" clfb":""}"><div class="clhd">${lab}
       ${c.pos?`<span class="pos ${esc(c.pos)}">${esc(c.pos)}</span>`:""}
       <span class="clarr">add</span> ${nm(pa)} <span class="tm">${esc(A.team||(a?club(a):""))}</span>
       <span class="clarr">drop</span> ${nm(pd)} <span class="tm">${esc(D.team||(d?club(d):""))}</span>
