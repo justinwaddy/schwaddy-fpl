@@ -24,6 +24,8 @@ on:
     branches: [main]
     paths:
       - "src/**"
+      - "evo/**"
+      - "data/evo_model.npz"
       - "requirements.txt"
       - ".github/workflows/**"
   workflow_dispatch:
