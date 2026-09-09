@@ -456,10 +456,14 @@ rules on the dashboard cannot drift apart.
 
 Two honest deviations. `fa_max_moves` defaults to one a week and the real
 game has no limit, which is conservative rather than generous. And the
-simulated managers use the window far more than yours do - about half a
-free-agent move per manager per week against the one your league has made
-in three gameweeks - because a heuristic with a margin rule has no
-reluctance to churn. Measured on the baseline manager the window is worth
+simulated managers churn far more than yours do. With waivers unlimited,
+the heuristic manager makes 1.3 to 2.5 waiver moves per manager per week
+across the five seasons, and up to eleven in a single week, against the
+0.56 your league has averaged - a margin rule has no reluctance, and no
+Saturday job. The network's margin gene is its own to set. Whether a
+policy that churns three times a week is one you would actually run is a
+question about you rather than about the model; `margin0` and
+`max_success_per_gw` are the two knobs if the answer is no. Measured on the baseline manager the window is worth
 about +25 points a season, but that is +105, +5, +23, -8, 0 across the
 five: one season carrying it, and one slightly negative. It is in for
 fidelity to the rules; whether it is worth anything is for the network to
