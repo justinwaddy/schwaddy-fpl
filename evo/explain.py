@@ -96,8 +96,15 @@ def explain(model_path, cfg, season=None, top=14):
         ctx = np.zeros((len(Xn), nctx), np.float32) if nctx else None
         base = _head_raw(brain, head, Xn, ctx)
         names = list(FEATURE_NAMES)
+        # a column that never varies on these cells - ownership change at
+        # the draft, the interaction columns when they are off - carries a
+        # weight that was never trained on anything; its "sensitivity" is
+        # noise and is not reported
+        live_col = Xn.std(0) > 1e-6
         sens = []
         for i in range(Xn.shape[1]):
+            if not live_col[i]:
+                continue
             Xp = Xn.copy(); Xp[:, i] += 1.0
             d = (_head_raw(brain, head, Xp, ctx) - base) * pts
             sens.append((names[i], float(d.mean()), float(np.abs(d).mean())))
@@ -111,6 +118,8 @@ def explain(model_path, cfg, season=None, top=14):
         rng = np.random.default_rng(0)
         imp = []
         for i in range(Xn.shape[1]):
+            if not live_col[i]:
+                continue
             Xp = Xn.copy(); Xp[:, i] = rng.permutation(Xp[:, i])
             r = _head_raw(brain, head, Xp, ctx)
             rho = np.corrcoef(base, r)[0, 1] if base.std() > 0 else 1.0
