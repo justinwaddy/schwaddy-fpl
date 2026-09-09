@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T07:52 UTC",
+  "generated": "2026-09-09T22:48 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -403,6 +403,40 @@
         "title": "Starting Lineups - FC Porto vs Man City | 08.09.2026",
         "url": "https://www.skysports.com/football/fc-porto-vs-manchester-city/teams/577600"
       }
+    },
+    {
+      "id": "2026-09-09-odegaard-napoli-winner",
+      "ts": "2026-09-09T22:45",
+      "kind": "news",
+      "text": "Arsenal won 1-0 away at Napoli in their Champions League opener on Wednesday: Martin Odegaard, who Edward owns, scored the only goal with 15 minutes left, firing in off a post from the edge of the area. Robert's Bukayo Saka spurned the game's clearest chance just before half-time, skying over an open goal after Odegaard picked him out.",
+      "source": {
+        "title": "Martin Odegaard nets late winner as Arsenal beat Napoli",
+        "url": "https://www.espn.com/soccer/report/_/gameId/401915423"
+      }
+    },
+    {
+      "id": "2026-09-09-gakpo-missed-atletico",
+      "ts": "2026-09-09T22:45",
+      "kind": "news",
+      "text": "Cody Gakpo, one of Ben C's, was left out of Liverpool's Champions League squad for Wednesday's home game with Atletico Madrid. Head coach Andoni Iraola said Gakpo picked up adductor issues in both legs against Ipswich, called it not a proper injury, and expects him back this weekend or the one after.",
+      "source": {
+        "title": "Cody Gakpo injury update",
+        "url": "https://www.liverpoolfc.com/news/cody-gakpo-injury-update"
+      }
+    },
+    {
+      "id": "2026-09-09-robert-saka-sky",
+      "ts": "2026-09-09T22:46",
+      "kind": "opinion",
+      "text": "Robert sits last of the six, 44 points off the leader, and his Bukayo Saka spent Wednesday night in Naples proving the misfortune travels: clean through with the goal gaping, Saka put the finish into the top tier rather than the net. Odegaard did the hard part, picking him out; Saka did the rest.",
+      "source": null
+    },
+    {
+      "id": "2026-09-09-delap-tzolis-irony",
+      "ts": "2026-09-09T22:47",
+      "kind": "opinion",
+      "text": "Ben C called his squad Delap Dance without ever owning Liam Delap - Delap plays his football on Ben D's roster, not his. Ben D, for his part, christened his own team Quantum of Tzolis despite never picking Christos Tzolis, who belongs to Marcus: two grown men naming their squads after players in someone else's shed.",
+      "source": null
     }
   ],
   "runs": [
@@ -606,6 +640,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news run, no Premier League fixtures today (next PL action is the 12th; Arsenal host Napoli and Liverpool host Atletico Madrid tonight in the Champions League, which does not score in this league). Ran a dozen-plus searches across Man City, Arsenal, Liverpool, Newcastle, Man Utd, Chelsea, Leeds, Crystal Palace, Bournemouth, Fulham, Aston Villa and Brentford and found almost nothing usable: search summaries kept surfacing stale or outright wrong material - an Arsenal.com URL titled 'Arsenal 2-0 Napoli match report' turned out to be an Ozil/Giroud report from over a decade ago, a Crystal Palace search invented a manager ('Pierre Sage') who does not exist there, a Chelsea 'Newcastle team news' piece referenced an Aston Villa fixture on '27 December' and a Brentford Thiago injury update referenced a Tottenham match on 'New Year's Day' - both many months out of step with today. The Arsenal Timber/Mosquera fitness lines that did check out against a live arsenal.com page were already published on 5 and 7 September, so re-running them would have repeated the page. One item survived verification: Ben C's Anderson and Khusanov were both left out of Manchester City's XI for Tuesday's Porto trip (Sky Sports lineup page, read directly), a fact not covered by Sunday night's Doku/O'Reilly/Ndiaye item on the same match. No opinion pieces on a morning run. Roast archive's only unused entry, Edward's 'Mong' about Robert, remains permanently excluded as the ableist slur rule 4 rules out."
+    },
+    {
+      "ts": "2026-09-09T22:48 UTC",
+      "news": 2,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap. No Premier League fixtures today - GW3 is fully settled and the table has been static since the weekend, so no HAUL/OVERTAKE/FLOP badges posted automatically today, nothing to rewrite there. Champions League did play tonight though, and it touched four of the six squads: led with Arsenal's 1-0 win at Napoli (Edward's Odegaard scored the winner, Robert's Saka missed a sitter) and Ben C's Gakpo being left out of the Atletico Madrid tie with a minor adductor issue (Liverpool's own site, direct Iraola quote). Two opinion pieces off the back of that plus the day-to-day: Robert's last-place table position paired with Saka's miss, and the irony that Ben C's 'Delap Dance' doesn't own Delap (Ben D does) while Ben D's 'Quantum of Tzolis' doesn't own Tzolis (Marcus does). Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded - it's a disablist slur and rule 4 rules it out permanently, not just for tonight."
     }
   ]
 }
