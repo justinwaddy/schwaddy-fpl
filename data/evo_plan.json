@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T00:30",
+ "generated": "2026-09-09T09:29",
  "gw": 4,
  "model": "/home/user/schwaddy-fpl/evo/runs/final/ckpt.npz",
  "league": 9450,
@@ -18,29 +18,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 4.77,
-   "ep": 4.66
-  },
-  {
-   "id": 327,
-   "name": "Bijol",
-   "pos": "DEF",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.671,
-   "base": 3.23,
-   "ep": 3.41
-  },
-  {
-   "id": 471,
-   "name": "Milenkovi\u0107",
-   "pos": "DEF",
-   "team": "NFO",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 3.22,
-   "ep": 3.4
+   "ep": 4.8
   },
   {
    "id": 391,
@@ -51,7 +29,29 @@
    "news": "",
    "p_play": 0.85,
    "base": 3.31,
-   "ep": 3.35
+   "ep": 3.49
+  },
+  {
+   "id": 471,
+   "name": "Milenkovi\u0107",
+   "pos": "DEF",
+   "team": "NFO",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 3.22,
+   "ep": 3.39
+  },
+  {
+   "id": 327,
+   "name": "Bijol",
+   "pos": "DEF",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.671,
+   "base": 3.23,
+   "ep": 3.2
   },
   {
    "id": 201,
@@ -62,7 +62,7 @@
    "news": "",
    "p_play": 0.507,
    "base": 2.27,
-   "ep": 2.31
+   "ep": 2.47
   },
   {
    "id": 68,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.967,
    "base": 5.03,
-   "ep": 5.12
+   "ep": 5.04
   },
   {
    "id": 94,
@@ -84,7 +84,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.5,
-   "ep": 3.71
+   "ep": 3.64
   },
   {
    "id": 239,
@@ -95,7 +95,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.534,
    "base": 2.13,
-   "ep": 2.09
+   "ep": 2.26
   },
   {
    "id": 411,
@@ -106,18 +106,7 @@
    "news": "",
    "p_play": 0.978,
    "base": 6.95,
-   "ep": 6.87
-  },
-  {
-   "id": 222,
-   "name": "Strand Larsen",
-   "pos": "FWD",
-   "team": "CRY",
-   "status": "a",
-   "news": "",
-   "p_play": 0.662,
-   "base": 1.68,
-   "ep": 2.02
+   "ep": 6.89
   },
   {
    "id": 401,
@@ -128,7 +117,18 @@
    "news": "",
    "p_play": 0.67,
    "base": 1.75,
-   "ep": 1.74
+   "ep": 2.01
+  },
+  {
+   "id": 222,
+   "name": "Strand Larsen",
+   "pos": "FWD",
+   "team": "CRY",
+   "status": "a",
+   "news": "",
+   "p_play": 0.662,
+   "base": 1.68,
+   "ep": 1.86
   }
  ],
  "bench": [
@@ -141,7 +141,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.17,
-   "ep": 4.17
+   "ep": 4.33
   },
   {
    "id": 84,
@@ -152,7 +152,7 @@
    "news": "Calf injury - 25% chance of playing",
    "p_play": 0.202,
    "base": 0.71,
-   "ep": 1.0
+   "ep": 0.7
   },
   {
    "id": 628,
@@ -163,7 +163,7 @@
    "news": "",
    "p_play": 0.15,
    "base": 0.5,
-   "ep": 0.92
+   "ep": 0.39
   },
   {
    "id": 400,
@@ -174,22 +174,22 @@
    "news": "Calf injury - Expected back 13 Sep",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.41
+   "ep": -0.06
   }
  ],
- "xi_ep": 38.7,
+ "xi_ep": 39.0,
  "claims": [
   {
    "pos": "DEF",
-   "gain": 18.36,
+   "gain": 21.75,
    "add": {
-    "id": 277,
-    "name": "Egan",
+    "id": 204,
+    "name": "Mitchell",
     "pos": "DEF",
-    "team": "HUL",
+    "team": "CRY",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.954,
     "base": null,
     "ep": null
    },
@@ -206,53 +206,53 @@
    }
   },
   {
-   "pos": "MID",
-   "gain": 17.88,
+   "pos": "DEF",
+   "gain": 20.25,
    "add": {
-    "id": 69,
-    "name": "Scott",
-    "pos": "MID",
-    "team": "BOU",
+    "id": 114,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.979,
+    "p_play": 0.849,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
+    "id": 84,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "d",
+    "news": "Calf injury - 25% chance of playing",
+    "p_play": 0.202,
     "base": null,
     "ep": null
    }
   },
   {
-   "pos": "MID",
-   "gain": 16.92,
+   "pos": "DEF",
+   "gain": 20.06,
    "add": {
-    "id": 544,
-    "name": "Xhaka",
-    "pos": "MID",
-    "team": "SUN",
+    "id": 112,
+    "name": "Van Hecke",
+    "pos": "DEF",
+    "team": "TOT",
     "status": "a",
     "news": "",
-    "p_play": 0.978,
+    "p_play": 0.983,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
+    "id": 84,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "d",
+    "news": "Calf injury - 25% chance of playing",
+    "p_play": 0.202,
     "base": null,
     "ep": null
    }
@@ -260,17 +260,6 @@
  ],
  "claims_are": "waiver claims, in submission order",
  "board": [
-  {
-   "id": 426,
-   "name": "B.Fernandes",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.983,
-   "base": 242.05,
-   "ep": 242.66
-  },
   {
    "id": 411,
    "name": "Haaland",
@@ -280,7 +269,18 @@
    "news": "",
    "p_play": 0.978,
    "base": 248.84,
-   "ep": 240.95
+   "ep": 236.86
+  },
+  {
+   "id": 426,
+   "name": "B.Fernandes",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.983,
+   "base": 242.05,
+   "ep": 226.84
   },
   {
    "id": 4,
@@ -291,7 +291,7 @@
    "news": "",
    "p_play": 0.961,
    "base": 225.52,
-   "ep": 204.31
+   "ep": 201.16
   },
   {
    "id": 397,
@@ -302,29 +302,7 @@
    "news": "",
    "p_play": 0.983,
    "base": 208.06,
-   "ep": 193.46
-  },
-  {
-   "id": 480,
-   "name": "Gibbs-White",
-   "pos": "MID",
-   "team": "NFO",
-   "status": "a",
-   "news": "",
-   "p_play": 0.994,
-   "base": 189.78,
-   "ep": 190.61
-  },
-  {
-   "id": 165,
-   "name": "Jo\u00e3o Pedro",
-   "pos": "FWD",
-   "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.983,
-   "base": 182.31,
-   "ep": 182.48
+   "ep": 186.6
   },
   {
    "id": 13,
@@ -335,128 +313,18 @@
    "news": "",
    "p_play": 0.915,
    "base": 189.52,
-   "ep": 181.83
+   "ep": 179.47
   },
   {
-   "id": 260,
-   "name": "Wilson",
+   "id": 480,
+   "name": "Gibbs-White",
    "pos": "MID",
-   "team": "LEE",
+   "team": "NFO",
    "status": "a",
    "news": "",
-   "p_play": 0.651,
-   "base": 171.27,
-   "ep": 181.43
-  },
-  {
-   "id": 40,
-   "name": "Rogers",
-   "pos": "MID",
-   "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.964,
-   "base": 170.6,
-   "ep": 178.85
-  },
-  {
-   "id": 155,
-   "name": "Enzo",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.582,
-   "base": 161.71,
-   "ep": 170.09
-  },
-  {
-   "id": 106,
-   "name": "Thiago",
-   "pos": "FWD",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.981,
-   "base": 181.0,
-   "ep": 169.89
-  },
-  {
-   "id": 542,
-   "name": "E.Le F\u00e9e",
-   "pos": "MID",
-   "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.96,
-   "base": 149.86,
-   "ep": 168.5
-  },
-  {
-   "id": 481,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.913,
-   "base": 180.0,
-   "ep": 165.7
-  },
-  {
-   "id": 236,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.961,
-   "base": 162.93,
-   "ep": 164.16
-  },
-  {
-   "id": 335,
-   "name": "Stach",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.95,
-   "base": 151.88,
-   "ep": 163.22
-  },
-  {
-   "id": 55,
-   "name": "Watkins",
-   "pos": "FWD",
-   "team": "AVL",
-   "status": "u",
-   "news": "Has joined Al Hilal permanently",
-   "p_play": 0.007,
-   "base": 168.58,
-   "ep": 162.6
-  },
-  {
-   "id": 498,
-   "name": "Senesi",
-   "pos": "DEF",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 0.564,
-   "base": 178.4,
-   "ep": 162.15
-  },
-  {
-   "id": 1,
-   "name": "Raya",
-   "pos": "GKP",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.989,
-   "base": 165.15,
-   "ep": 162.12
+   "p_play": 0.994,
+   "base": 189.78,
+   "ep": 178.95
   },
   {
    "id": 12,
@@ -467,40 +335,18 @@
    "news": "",
    "p_play": 0.899,
    "base": 171.65,
-   "ep": 161.58
+   "ep": 153.9
   },
   {
-   "id": 338,
-   "name": "Ampadu",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.978,
-   "base": 139.52,
-   "ep": 156.4
-  },
-  {
-   "id": 368,
-   "name": "Szoboszlai",
-   "pos": "MID",
-   "team": "LIV",
+   "id": 1,
+   "name": "Raya",
+   "pos": "GKP",
+   "team": "ARS",
    "status": "a",
    "news": "",
    "p_play": 0.989,
-   "base": 163.11,
-   "ep": 155.44
-  },
-  {
-   "id": 533,
-   "name": "Mukiele",
-   "pos": "DEF",
-   "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.754,
-   "base": 160.91,
-   "ep": 155.2
+   "base": 165.15,
+   "ep": 150.4
   },
   {
    "id": 388,
@@ -511,84 +357,51 @@
    "news": "",
    "p_play": 0.972,
    "base": 188.49,
-   "ep": 154.66
+   "ep": 149.45
   },
   {
-   "id": 427,
-   "name": "Mbeumo",
+   "id": 481,
+   "name": "Anderson",
    "pos": "MID",
-   "team": "MUN",
+   "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.972,
-   "base": 155.85,
-   "ep": 154.32
+   "p_play": 0.913,
+   "base": 180.0,
+   "ep": 148.37
   },
   {
-   "id": 208,
-   "name": "Sarr",
+   "id": 260,
+   "name": "Wilson",
    "pos": "MID",
-   "team": "CRY",
-   "status": "i",
-   "news": "Groin injury - Unknown return date",
-   "p_play": 0.0,
-   "base": 133.68,
-   "ep": 151.12
-  },
-  {
-   "id": 346,
-   "name": "Calvert-Lewin",
-   "pos": "FWD",
    "team": "LEE",
    "status": "a",
    "news": "",
-   "p_play": 0.935,
-   "base": 147.85,
-   "ep": 151.03
+   "p_play": 0.651,
+   "base": 171.27,
+   "ep": 147.44
   },
   {
-   "id": 529,
-   "name": "Roefs",
-   "pos": "GKP",
-   "team": "SUN",
+   "id": 165,
+   "name": "Jo\u00e3o Pedro",
+   "pos": "FWD",
+   "team": "CHE",
    "status": "a",
    "news": "",
    "p_play": 0.983,
-   "base": 140.08,
-   "ep": 150.81
+   "base": 182.31,
+   "ep": 144.68
   },
   {
-   "id": 428,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
+   "id": 106,
+   "name": "Thiago",
+   "pos": "FWD",
+   "team": "BRE",
    "status": "a",
    "news": "",
-   "p_play": 0.871,
-   "base": 150.58,
-   "ep": 149.39
-  },
-  {
-   "id": 229,
-   "name": "Tarkowski",
-   "pos": "DEF",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.994,
-   "base": 171.61,
-   "ep": 148.9
-  },
-  {
-   "id": 525,
-   "name": "Fernandes",
-   "pos": "MID",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 0.687,
-   "base": 137.62,
-   "ep": 148.0
+   "p_play": 0.981,
+   "base": 181.0,
+   "ep": 141.74
   },
   {
    "id": 356,
@@ -599,62 +412,194 @@
    "news": "",
    "p_play": 1.0,
    "base": 175.0,
-   "ep": 147.84
+   "ep": 138.89
   },
   {
-   "id": 95,
-   "name": "O.Dango",
+   "id": 368,
+   "name": "Szoboszlai",
    "pos": "MID",
-   "team": "BRE",
+   "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.66,
-   "base": 144.93,
-   "ep": 147.05
+   "p_play": 0.989,
+   "base": 163.11,
+   "ep": 138.46
   },
   {
-   "id": 61,
-   "name": "Truffert",
-   "pos": "DEF",
-   "team": "BOU",
+   "id": 40,
+   "name": "Rogers",
+   "pos": "MID",
+   "team": "CHE",
    "status": "a",
    "news": "",
-   "p_play": 0.994,
-   "base": 166.56,
-   "ep": 146.43
+   "p_play": 0.964,
+   "base": 170.6,
+   "ep": 134.56
   },
   {
-   "id": 544,
-   "name": "Xhaka",
-   "pos": "MID",
+   "id": 346,
+   "name": "Calvert-Lewin",
+   "pos": "FWD",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.935,
+   "base": 147.85,
+   "ep": 134.46
+  },
+  {
+   "id": 529,
+   "name": "Roefs",
+   "pos": "GKP",
    "team": "SUN",
    "status": "a",
    "news": "",
-   "p_play": 0.978,
-   "base": 129.11,
-   "ep": 145.99
+   "p_play": 0.983,
+   "base": 140.08,
+   "ep": 134.4
   },
   {
-   "id": 112,
-   "name": "Van Hecke",
+   "id": 19,
+   "name": "Zubimendi",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.475,
+   "base": 134.26,
+   "ep": 133.64
+  },
+  {
+   "id": 498,
+   "name": "Senesi",
    "pos": "DEF",
    "team": "TOT",
    "status": "a",
    "news": "",
-   "p_play": 0.983,
-   "base": 152.44,
-   "ep": 144.87
+   "p_play": 0.564,
+   "base": 178.4,
+   "ep": 131.65
   },
   {
-   "id": 82,
-   "name": "Kelleher",
-   "pos": "GKP",
-   "team": "BRE",
+   "id": 387,
+   "name": "O'Reilly",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "d",
+   "news": "Back injury - 75% chance of playing",
+   "p_play": 0.517,
+   "base": 168.48,
+   "ep": 131.31
+  },
+  {
+   "id": 25,
+   "name": "Gy\u00f6keres",
+   "pos": "FWD",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.374,
+   "base": 131.84,
+   "ep": 130.86
+  },
+  {
+   "id": 55,
+   "name": "Watkins",
+   "pos": "FWD",
+   "team": "AVL",
+   "status": "u",
+   "news": "Has joined Al Hilal permanently",
+   "p_play": 0.007,
+   "base": 168.58,
+   "ep": 130.54
+  },
+  {
+   "id": 229,
+   "name": "Tarkowski",
+   "pos": "DEF",
+   "team": "EVE",
    "status": "a",
    "news": "",
    "p_play": 0.994,
-   "base": 144.35,
-   "ep": 143.19
+   "base": 171.61,
+   "ep": 129.83
+  },
+  {
+   "id": 533,
+   "name": "Mukiele",
+   "pos": "DEF",
+   "team": "SUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.754,
+   "base": 160.91,
+   "ep": 129.44
+  },
+  {
+   "id": 236,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.961,
+   "base": 162.93,
+   "ep": 129.04
+  },
+  {
+   "id": 335,
+   "name": "Stach",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.95,
+   "base": 151.88,
+   "ep": 127.98
+  },
+  {
+   "id": 542,
+   "name": "E.Le F\u00e9e",
+   "pos": "MID",
+   "team": "SUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.96,
+   "base": 149.86,
+   "ep": 126.33
+  },
+  {
+   "id": 155,
+   "name": "Enzo",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.582,
+   "base": 161.71,
+   "ep": 124.36
+  },
+  {
+   "id": 427,
+   "name": "Mbeumo",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.972,
+   "base": 155.85,
+   "ep": 123.9
+  },
+  {
+   "id": 338,
+   "name": "Ampadu",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.978,
+   "base": 139.52,
+   "ep": 122.58
   },
   {
    "id": 371,
@@ -665,18 +610,40 @@
    "news": "",
    "p_play": 0.639,
    "base": 146.8,
-   "ep": 143.0
+   "ep": 121.3
   },
   {
-   "id": 237,
-   "name": "Ndiaye",
-   "pos": "MID",
-   "team": "MCI",
+   "id": 201,
+   "name": "Mu\u00f1oz",
+   "pos": "DEF",
+   "team": "NFO",
    "status": "a",
    "news": "",
-   "p_play": 0.957,
-   "base": 136.4,
-   "ep": 142.58
+   "p_play": 0.507,
+   "base": 153.0,
+   "ep": 119.54
+  },
+  {
+   "id": 61,
+   "name": "Truffert",
+   "pos": "DEF",
+   "team": "BOU",
+   "status": "a",
+   "news": "",
+   "p_play": 0.994,
+   "base": 166.56,
+   "ep": 119.12
+  },
+  {
+   "id": 428,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.871,
+   "base": 150.58,
+   "ep": 118.37
   },
   {
    "id": 200,
@@ -687,18 +654,51 @@
    "news": "",
    "p_play": 0.978,
    "base": 160.34,
-   "ep": 142.52
+   "ep": 117.86
   },
   {
-   "id": 337,
-   "name": "Aaronson",
+   "id": 14,
+   "name": "Eze",
    "pos": "MID",
-   "team": "LEE",
+   "team": "ARS",
    "status": "a",
    "news": "",
-   "p_play": 0.715,
-   "base": 128.45,
-   "ep": 142.03
+   "p_play": 0.468,
+   "base": 120.42,
+   "ep": 117.17
+  },
+  {
+   "id": 384,
+   "name": "Donnarumma",
+   "pos": "GKP",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.966,
+   "base": 143.86,
+   "ep": 116.5
+  },
+  {
+   "id": 226,
+   "name": "Pickford",
+   "pos": "GKP",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 135.0,
+   "ep": 115.47
+  },
+  {
+   "id": 399,
+   "name": "Cherki",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.732,
+   "base": 145.67,
+   "ep": 115.14
   }
  ]
 }
