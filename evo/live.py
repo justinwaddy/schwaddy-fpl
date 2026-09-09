@@ -155,7 +155,8 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
 
     def describe(i, r, ep=None, base=None):
         e = el.get(int(i), {})
-        return dict(id=int(i), name=e.get("web_name", str(i)),
+        return dict(id=int(i), code=int(e.get("code", 0)),
+                    name=e.get("web_name", str(i)),
                     pos=POSITIONS[int(sv.pos[r])],
                     team=team_name.get(int(e.get("team", 0)), ""),
                     status=e.get("status", "a"), news=e.get("news", ""),

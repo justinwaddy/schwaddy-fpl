@@ -57,6 +57,17 @@ jobs:
         run: python -m schwaddy.refresh --league-id 9450
         working-directory: src
 
+      # the evolved policy's plan for the week, off the same morning pull.
+      # Guarded: a failure here must never cost the refresh. The model file
+      # is the checkpoint the cluster trained; the injury log it appends
+      # to is under data/ and goes out with the commit below.
+      - name: neural network plan
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
+        run: python -m evo.run live --model data/evo_model.npz --json data/evo_plan.json || echo "neural network plan skipped"
+
       # the other crons: the day's matches have wrapped up, so post the
       # matchday recap against the morning run's forecasts without refitting
       - name: matchday news
