@@ -1,7 +1,7 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-08T21:12 UTC",
+ "ts": "2026-09-09T08:15 UTC",
  "summary": "The GW4 appearance read is what these claims are fixing. Seven of the fifteen are certain to start - Raya, Pickford, Gvardiol, Milenkovic, Haaland, Tavernier, Schade - and two are likely: Marmoush, who has started Tottenham's last two, and Garner, who started against Man Utd but came off on 77 minutes and now carries an unspecified injury at 75%. The other six are not GW4 players: Doku is out (calf, expected back 13 September, the day of the derby and a day after the deadline), Collins came off after 17 minutes with a calf strain and is at 25%, Bijol was benched at Brighton, Munoz came on at 59 minutes on his Forest debut, Barcola has 26 minutes at Liverpool, and Strand Larsen was behind Nketiah at Fulham. Nine likely starters is two short of an XI. Two changes against this morning's board. Bijol is back on it at rank 3: Leeds' own team news has him on the bench with Muharemovic and Elvedi preferred, his minutes have gone 90, 45, 29, and the model's avail 0.75 still reads him as a starter, so its +3.0 on Maguire is too small. And Doku is off it - the model's per-gameweek line for him is 0.0, 0.4, 0.6, 0.9, 0.7 across GW4-8, which never recovers him at all, so its 2.5 is a floor rather than a forecast for a player who misses one gameweek. Justin sits fifth of six on 124 points, so his claims process second in the queue when the window closes on 11 September: rank 1 is the one nearly certain to land.",
  "claims": [
   {
@@ -212,6 +212,12 @@
   }
  ],
  "runs": [
+  {
+   "ts": "2026-09-09T08:15 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~11 hours after last night's board. Full club-by-club sweep re-confirmed all five: Mitchell/Munoz, Le Fee/Barcola, Maguire/Bijol, Hill/Collins and Scott/Garner all have exactly the model numbers already on file. Checked Maguire's new Man Utd contract (real, but signed 2 August, so not fresh evidence for the swap) and Liam Delap's Forest transfer (completed 27 August, already the reason Igor Jesus lost his place, so it changes nothing here). Doku via premierleague.com's own update - Maresca still says only 'we need to wait' on the derby, and Doku was left out of the Champions League squad for Porto - restates rather than changes his exclusion. No fresh Leeds team news on Bijol since last week's Brighton bench call, and no confirmed Brentford timeline yet on Collins' calf. Chelsea vs Leeds (Carabao Cup) and Liverpool vs Atletico Madrid (Champions League) both kick off later today and could move Bijol and Barcola - worth a follow-up once they've been played, though neither result feeds this file directly since both are cup competitions."
+  },
   {
    "ts": "2026-09-02T07:50",
    "gw": 3,
