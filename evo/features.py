@@ -46,7 +46,7 @@ HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 8
+CACHE_VERSION = 9
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -65,6 +65,7 @@ FEATURE_NAMES = (
     + ["n_fix5", "opp_att5", "opp_def5"]
     + ["exp_cs1", "exp_c2_1", "exp_t2_1", "exp_cs5", "exp_c2_5", "exp_t2_5"]
     + ["fm1", "fm2", "fm5", "fm_slope", "rest_days", "matches_14d"]
+    + ["fm10", "fm_rest", "fm_late", "base_rest"]
     + [f"x_{p}_{k}" for k in ("att", "def") for p in POSITIONS]
     + ["base_ppm", "base_ep1", "base_next5", "bias"]
 )
@@ -553,6 +554,7 @@ def build_features(sd, cfg=None, times=None, _shared=None):
     base_ppm = np.zeros((n, 38), np.float32)
     base_ep1 = np.zeros((n, 38), np.float32)
     base_next5 = np.zeros((n, 38), np.float32)
+    base_rest = np.zeros((n, 38), np.float32)
     p_play = np.zeros((n, 38), np.float32)
     pool = np.zeros((n, 38), bool)
 
@@ -582,6 +584,18 @@ def build_features(sd, cfg=None, times=None, _shared=None):
 
     # cache of club windows, one per (club, gameweek)
     club_win = {}
+    # and of fixture terms: the decision time is the same for every player
+    # at a gameweek, so a club's fixture in a given future gameweek is one
+    # computation per decision rather than one per player
+    fix_memo = {}
+
+    def fix_terms(club, gg, t, known):
+        key = (club, gg, known, t)
+        v = fix_memo.get(key)
+        if v is None:
+            v = sd._fix_terms(club, gg, t, known=known)
+            fix_memo[key] = v
+        return v
 
     def club_window(c, g, W):
         key = (c, g, W)
@@ -747,8 +761,14 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             # the next five gameweeks, known as far as the horizon and as
             # published beyond it
             H = cfg.fixture_horizon
-            terms = [sd._fix_terms(club, g + h, t, known=(h <= H))
-                     if g + h <= 38 else None for h in range(5)]
+            # every remaining gameweek of the season: who, where, and
+            # (inside the horizon) whether it is a blank or a double.
+            # The opponents are known from June; only the reschedulings
+            # are limited to the horizon.
+            allterms = [fix_terms(club, g + h, t, h <= H)
+                        for h in range(39 - g)]
+            terms = [allterms[h] if h < len(allterms) else None
+                     for h in range(5)]
             nf1, h1, oa1, od1, cs1, c21, t21, kos1 = terms[0]
             f[j] = nf1; f[j + 1] = h1; f[j + 2] = oa1; f[j + 3] = od1
             j += 4
@@ -767,8 +787,8 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             # the shape of the run: the position-aware multiplier over
             # one, two and five, and near minus far - a waiver is a
             # decision about a horizon you can revisit next week
-            fm = [(x[0] * sd._fmult(posi, x[2], x[3])) if x else 0.0
-                  for x in terms]
+            fm_all = [x[0] * sd._fmult(posi, x[2], x[3]) for x in allterms]
+            fm = fm_all[:5] + [0.0] * (5 - len(fm_all[:5]))
             f[j] = fm[0]
             f[j + 1] = float(np.mean(fm[:2]))
             f[j + 2] = float(np.mean(fm))
@@ -791,6 +811,16 @@ def build_features(sd, cfg=None, times=None, _shared=None):
                     if not np.isnan(ko) and t <= ko <= t + 14 * 86400]
             f[j + 1] = len(soon) / 3.0
             j += 2
+            # the rest of the season's run: the next ten, the whole of what
+            # is left, and whether the run gets easier or harder after the
+            # next five - a waiver made to maximise SEASON points has to
+            # see past the week it is made in
+            f[j] = float(np.mean(fm_all[:10]))
+            f[j + 1] = float(np.mean(fm_all))
+            f[j + 2] = (float(np.mean(fm_all[5:]) - np.mean(fm_all[:5]))
+                        if len(fm_all) > 5 else 0.0)
+            j_rest = j + 3    # base_rest, filled with the baselines below
+            j += 4
             # position x opponent, zeroed unless switched on
             if cfg.pos_interact:
                 f[j + posi] = oa1 - GOALS_CENTRE
@@ -808,6 +838,16 @@ def build_features(sd, cfg=None, times=None, _shared=None):
                        * sd._fmult(posi, x[2], x[3])
                        for h, x in enumerate(terms) if x)
             base_next5[i, col] = tot5
+            # rest of the season on the same terms, the injury horizon
+            # included: this is what "maximise season points" is a claim
+            # about
+            fac_all = [injuries.factor_at(istate, sd.deadline[g + h], t)
+                       for h in range(len(allterms))]
+            rest = sum(bp * pp_raw * fac_all[h] * x[0]
+                       * sd._fmult(posi, x[2], x[3])
+                       for h, x in enumerate(allterms))
+            base_rest[i, col] = rest
+            f[j_rest] = rest / 38.0
             f[j] = bp; f[j + 1] = ep1; f[j + 2] = tot5 / 5.0; f[j + 3] = 1.0
             X[i, col] = f
 
@@ -843,7 +883,8 @@ def build_features(sd, cfg=None, times=None, _shared=None):
     base_season = (prior_ppm * exp_apps * draft_fac).astype(np.float32)
 
     return dict(X=X, base_ppm=base_ppm, base_ep1=base_ep1,
-                base_next5=base_next5, base_season=base_season,
+                base_next5=base_next5, base_rest=base_rest,
+                base_season=base_season,
                 p_play=p_play, pool=pool, real=sd.real.astype(np.float32),
                 minutes=sd.minutes.astype(np.float32),
                 pos=sd.pos.astype(np.int8), codes=sd.codes,
@@ -868,7 +909,8 @@ def build_season(sd, cfg=None):
     cfg = cfg or sd.cfg
     a = build_features(sd, cfg, times=sd.t_dec)
     b = build_features(sd, cfg, times=sd.deadline)
-    for k in ("X", "base_ppm", "base_ep1", "base_next5", "p_play"):
+    for k in ("X", "base_ppm", "base_ep1", "base_next5", "base_rest",
+              "p_play"):
         a[k + "_dl"] = b[k]
     return a
 

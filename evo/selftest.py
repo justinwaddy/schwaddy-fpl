@@ -35,19 +35,25 @@ def _report(name, ok, detail=""):
 
 
 def test_non_anticipation(cfg, season="2024-25", prev="2023-24", cut=20):
-    full = build_season(SeasonData(season, cfg,
-                                   prev=SeasonData(prev, cfg)), cfg)
-    trunc = build_season(SeasonData(season, cfg,
-                                    prev=SeasonData(prev, cfg),
-                                    truncate_gw=cut), cfg)
+    fsd = SeasonData(season, cfg, prev=SeasonData(prev, cfg))
+    tsd = SeasonData(season, cfg, prev=SeasonData(prev, cfg),
+                     truncate_gw=cut)
+    # the truncated archive has no RESULTS after the cut, and that is the
+    # test. It must still have the SCHEDULE - who plays whom, where, and
+    # when - because that was published in June; without it the rest-of-
+    # season columns differ for the dull reason that the fixture list is
+    # missing, not because anything read a result it should not have.
+    tsd.fixtures = fsd.fixtures
+    tsd.deadline = fsd.deadline.copy()
+    tsd.t_dec = fsd.t_dec.copy()
+    full = build_season(fsd, cfg)
+    trunc = build_season(tsd, cfg)
     # match players by stable code; the truncated archive has fewer of them
     fi = {c: i for i, c in enumerate(full["codes"])}
     rows_t = np.arange(len(trunc["codes"]))
     rows_f = np.array([fi[c] for c in trunc["codes"]])
-    # the fixture list is published in advance, so the last five gameweeks
-    # before the cut are excluded: the truncated build simply has no
-    # schedule beyond it, which is a missing input, not a leak
-    g = cut - 5
+    # every gameweek before the cut, now that the schedule is supplied
+    g = cut - 1
     a = full["X"][rows_f, :g]
     b = trunc["X"][rows_t, :g]
     same = np.array_equal(a, b)

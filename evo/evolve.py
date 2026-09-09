@@ -15,12 +15,16 @@ the heuristics a population can drift into beating only itself; without
 the hall of fame it can cycle, rediscovering a strategy that beats this
 generation and loses to the last one.
 
-Fitness is shaped rather than winner-take-all, because one season in a
-six-team league is far too noisy to rank two hundred genomes on titles:
-
-    1.0 * won  +  0.5 * (5 - rank)/5  +  0.5 * tanh(margin / 100)
-
-margin being the manager's season total less the league's mean.
+Fitness is SEASON POINTS. That is the thing to maximise in an
+aggregate-scoring league, and it is what every paired measurement here
+reports, so the objective and the measurement are the same number. To
+make it comparable across genomes, a genome's total is taken relative
+to the mean total of every genome that played the same season in the
+same round - every genome in a round plays the same season, so this
+removes the season's level and nothing else - and divided by a hundred
+so the number is order one. An earlier version shaped it with a win
+bonus and a rank term; that rewarded a policy for the seat it drew as
+much as for the points it scored.
 """
 import json
 import os
@@ -35,10 +39,10 @@ from .sim import SeasonView, simulate
 TAU = 0.25          # log-normal step-size self-adaptation
 
 
-def fitness(totals, seat, genome=None, l2=0.0):
-    r = int(np.sum(totals > totals[seat]))
-    margin = totals[seat] - totals.mean()
-    f = 1.0 * (r == 0) + 0.5 * (5 - r) / 5.0 + 0.5 * np.tanh(margin / 100.0)
+def fitness(total, peer_mean, genome=None, l2=0.0):
+    """Season points relative to the genomes that played the same season
+    in the same round, in hundreds."""
+    f = (total - peer_mean) / 100.0
     if l2 and genome is not None:
         f -= l2 * float(np.mean(np.square(genome)))
     return f
@@ -56,14 +60,16 @@ def _init_worker(cfg, seasons, mean, sd):
 
 
 def _play(task):
-    """One chunk of leagues. Returns (genome index, seat fitness) pairs."""
+    """One chunk of leagues. Returns (genome index, season total, round,
+    season) per population seat; fitness is computed once every league
+    of the round is in."""
     cfg, leagues, pop, hof = task
     views = _W["views"]
     out = []
     cache = {}
     # season-major, so a genome's encoder output is computed once per
     # season in this chunk rather than once per league
-    for (season, seats, kinds, seed) in sorted(leagues, key=lambda x: x[0]):
+    for (season, seats, kinds, seed, rnd) in sorted(leagues, key=lambda x: x[0]):
         brains = []
         for who, kind in zip(seats, kinds):
             if kind == "pop":
@@ -78,7 +84,7 @@ def _play(task):
         totals, _ = simulate(brains, views[season], cfg, rng)
         for m, (who, kind) in enumerate(zip(seats, kinds)):
             if kind == "pop":
-                out.append((who, fitness(totals, m, pop[who], cfg.l2)))
+                out.append((who, float(totals[m]), rnd, season))
     return out
 
 
@@ -139,7 +145,7 @@ class Evolver:
                 seats = [seats[j] for j in o]
                 kinds = [kinds[j] for j in o]
                 leagues.append((season, seats, kinds,
-                                int(self.rng.integers(1 << 30))))
+                                int(self.rng.integers(1 << 30)), r))
         return leagues
 
     # ------------------------------------------------------------ evaluate
@@ -169,10 +175,18 @@ class Evolver:
             tasks = [(self.cfg, ch, self.pop, self.hof)
                      for ch in _chunks(leagues, self.nw * 2)]
             res = pool.map(_play, tasks)
-        for chunk in res:
-            for who, f in chunk:
-                fits[who] += f
-                cnt[who] += 1
+        rows = [x for chunk in res for x in chunk]
+        # the peer mean per (round, season): every genome in a round
+        # played that season, so this is the season's level and nothing
+        # about the genome
+        peer = {}
+        for who, tot, rnd, season in rows:
+            peer.setdefault((rnd, season), []).append(tot)
+        peer = {k: float(np.mean(v)) for k, v in peer.items()}
+        for who, tot, rnd, season in rows:
+            fits[who] += fitness(tot, peer[(rnd, season)], self.pop[who],
+                                 self.cfg.l2)
+            cnt[who] += 1
         return fits / np.maximum(cnt, 1)
 
     # --------------------------------------------------------------- breed
