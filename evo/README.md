@@ -571,7 +571,7 @@ evo/cv.py         folds, the validation curve, early stopping
 evo/selftest.py   the leakage and legality checks
 evo/live.py       the live season: reads the draft API, writes evo_plan.json
 evo/run.py        the command line
-evo/slurm/        job scripts; edit env.sh and nothing else
+evo/slurm/        job scripts and RUNBOOK.md; edit env.sh and nothing else
 ```
 
 Checkpoints are written every generation and `--resume` picks them up, so
