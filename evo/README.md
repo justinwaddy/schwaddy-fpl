@@ -571,6 +571,62 @@ evo/slurm/        job scripts; edit env.sh and nothing else
 Checkpoints are written every generation and `--resume` picks them up, so
 a pre-empted or timed-out array task can simply be requeued.
 
+## From the cluster to Saturday
+
+The point of training on the cluster is to use the result here, on the
+live league, before a deadline. The round trip is three files and a
+rule.
+
+**The rule: a checkpoint is tied to the commit that made it.** It holds
+1,300-odd weights laid out against a particular feature set and context
+size, and `Brain` refuses to load one that does not match (it says so
+rather than reshaping). So run `live` from the same commit the cluster
+trained on. `git rev-parse HEAD` on the cluster before you submit; check
+out that revision here before you run.
+
+**On the cluster:**
+
+```
+sbatch evo/slurm/features.sbatch                 # cache + selftest, once
+sbatch --dependency=afterok:<id> evo/slurm/cv.sbatch    # five folds
+python -m evo.run report --out evo/runs/cv       # when all five are in
+GENS=<the generation it prints> sbatch evo/slurm/train.sbatch
+```
+
+`train.sbatch` writes `evo/runs/final/ckpt.npz`. That one file - about
+100 KB - is the model: the best genome, plus the feature standardizer it
+was trained with. `evo/runs/` is gitignored, so bring it back by hand:
+
+```
+scp cluster:path/to/schwaddy-fpl/evo/runs/final/ckpt.npz evo/runs/final/
+```
+
+**Here, before the deadline:**
+
+```
+python -m evo.run live --model evo/runs/final/ckpt.npz
+```
+
+Online, it pulls the draft API for the league's current ownership and
+your squad, brings the injury log up to today from the bootstrap, works
+out which window the week is in, and writes `data/evo_plan.json`: the
+eleven and the bench order, up to three moves - waiver claims to submit
+before `waivers_time`, or free agents to take first-come-first-served
+after it - and a draft board. It prints the same. `--offline` runs from
+the repo's committed data files instead, which are refreshed by the cron
+each morning; it will warn if the injury log is more than three days
+old. `--gw N` overrides which gameweek.
+
+The plan is written beside the existing model's output, not in place of
+it. Commit it if you want it on the site; nothing reads it otherwise.
+
+**Two things to keep current.** The injury log is appended every time
+`live` runs online, and `python -m evo.injuries --live` does the same on
+its own; once a day is enough, and it means next season is already
+harvested. And when the archive repo publishes a season's final files,
+`python -m evo.run features --rebuild` rebuilds the cache; the cluster's
+`features.sbatch` does that too.
+
 ## Using it this season
 
 The draft happened on 21 August and three gameweeks are gone, so what is
