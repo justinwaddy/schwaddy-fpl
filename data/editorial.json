@@ -105,6 +105,14 @@
    "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
   },
   {
+   "id": "2026-09-09-barcola-first-start-then-injured",
+   "ts": "2026-09-09T21:09 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Barcola finally got his first Liverpool start tonight, in the Champions League against Atletico Madrid, then went down clutching his calf in the 58th minute and had to be replaced - ESPN's live commentary called it a spell that 'doesn't look great' for him. After three weeks of single-cameo minutes, this is a fresh fitness question rather than the pure selection one this week's claim was built on, and it pushes his path into the Premier League XI further away, not closer.",
+   "url": "https://www.espn.com/soccer/match/_/gameId/401915446"
+  },
+  {
    "id": "2026-09-07-chilwell-back-at-palace",
    "ts": "2026-09-07T14:49 UTC",
    "mine": false,
@@ -114,6 +122,11 @@
   }
  ],
  "runs": [
+  {
+   "ts": "2026-09-09T21:09 UTC",
+   "published": 1,
+   "note": "Second run today, ~13 hours after the 08:15 sweep. Full club-by-club pass (Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland) plus general PL injury/transfer searches. Led with Barcola: he started tonight's Champions League tie with Atletico Madrid, his first start for the club, and went off in the 58th minute holding his calf (ESPN live commentary) - a genuine new fitness question, not just a minutes one. Also checked Leeds: BBC Radio Leeds pundit Adam Pope reportedly said Bijol's Brighton bench call was a reward for Elvedi's training form rather than injury-related, but that only reached a permitted outlet via Yahoo/aggregator reprints of the podcast, not bbc.co.uk itself, so it stays unpublished - does not change the Bijol drop either way. Doku confirmed still pointed at the 13 September derby (after GW4's deadline) with no fresher permitted-source date. Collins' calf still has no confirmed Brentford timeline - the only 'return date' found (RotoWire, 12 September) is an algorithmic estimate, not a club statement, and RotoWire is not a permitted source. Nketiah, Mitchell, Le Fee, Maguire, Hill, Scott and the rest of the squad and free-agent shortlist checked and unchanged from this morning."
+  },
   {
    "ts": "2026-09-09T08:15 UTC",
    "published": 0,
