@@ -503,48 +503,52 @@ generations.
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
 - with the reference heuristic at the genome's own starting margin, the
-fixture horizon closed, the release rule as the game plays it, and the
-full 82-feature set. Paired points a season against the reference,
-meaned over the five folds:
+fixture horizon closed, the release rule as the game plays it, waivers
+unlimited as the game plays them, and the full 82-feature set. Paired
+points a season against the reference, meaned over the five folds:
 
 ```
    gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.513    +10.1    +14.1    15.8     7.1    -3.9     +17.8
-    10    0.566    +28.5    +21.6    11.1     6.8    +7.0     +14.4
-    15    0.543    +29.2     +7.5    15.1     7.5   +21.7     +19.6
-    20    0.585    +51.8    +29.6    13.8     8.2   +22.2     +31.7
-    25    0.584    +56.8    +58.0    15.1     7.7    -1.2     +47.9
-    30    0.574    +79.6    +56.2    10.8     7.8   +23.4     +48.0
-    35    0.649    +91.3    +29.7    26.8     8.5   +61.6     +44.9
-    40    0.617    +86.9    +48.7    31.1     8.0   +38.2     +39.2
+     5    0.523    +30.1     +9.6     6.3     7.1   +20.5     +13.1
+    10    0.560    +32.1    +16.6    23.5     7.5   +15.5     +14.1
+    15    0.580    +42.2    +16.0    14.0     7.7   +26.2     +13.4
+    20    0.613    +51.9     +7.7    28.7     6.8   +44.2      +5.8
+    25    0.570    +55.6     -6.3    32.6     7.6   +61.9      +2.8
+    30    0.586    +66.7     +7.0    19.0     7.5   +59.7      +5.1
+    35    0.653    +75.1    +14.7    20.5     7.0   +60.3      +5.6
+    40    0.605   +103.5     -4.9    19.4     7.3  +108.4      +4.9
 
-   mean over all checkpoints  +33.2 +- 6.8
+   mean over all checkpoints  +7.5 +- 3.2
 ```
 
-**The number to believe is +33 points a season over the manager it
-starts from, on seasons it has never seen**, with a standard error of 7
-across the eight checkpoints. Positive at every checkpoint. The gap
-between the training-season score and the held-out one stays near zero
-through generation 25 and only opens after, which is why the stopping
-rule stops at 30. The single peak of +58 is a max over noisy checkpoints
-and should be read as such; the report prints the mean beside it.
+**The number to believe is +7.5 points a season over the manager it
+starts from, on seasons it has never seen.** Small, and real at about
+two standard errors. The stopping rule stops at generation 10; after 20
+the gap runs away and the held-out score goes to zero.
 
-That number has been through a review and two corrections. An earlier
-version of this section reported +31 and called it the first
-configuration that worked; +18 of that was a benchmark artefact - the
-reference churned at a margin of 1.75 units while every genome started
-at 0.25 - and the fixture-rescheduling leak was open in both arms. Fixed,
-the fair number was +24. Then the release rule was verified against the
-game (a dropped player goes on waivers, not to the next manager the same
-afternoon), which makes churn cheaper than the simulator had it, and
-re-measured under the real rule the number is +33. Each step is in the
-commit log with what moved it.
+That is a long way down from the +33 measured one rule earlier, with
+waivers capped at three successes a week, and the reason is worth
+having. Lifting the cap did not change what the network can do; it
+changed what the REFERENCE can do. With unlimited moves, a plain
+shrunk-mean manager with a margin rule already churns his way to most of
+the value that fixtures and injuries put on the table - 1.3 to 2.5
+moves a manager-week - and what is left over for a learned policy is a
+few points. Under the cap, the heuristic could not take that value and
+the network could, and the difference was reported as learning. So +33
+was partly "the reference was tied", and +7.5 is the honest residual
+once it is not.
 
-What it is measuring is a policy that learned a better use of fixtures
-than a 50/50 horizon blend gets by hand (+13, above), on top of the
-injury log (+34 to the heuristic itself) and the market columns. It is
-still a population a third of the cluster's, and the gap still opens
-after generation 25, so the levers below still apply.
+Two readings follow. If your rivals churned like the reference does,
++7.5 is your edge. They do not - your league averages 0.56 waiver moves
+a manager-week against the reference's 1.3 to 2.5 - so against the
+field you actually play, the model's edge is closer to what a diligent
+churner has over a Saturday manager, which the cap-of-three number was
+nearer to measuring. Neither number is wrong; they answer different
+questions, and the second is the one you are asking.
+
+The history, each step a commit: +31 reported; +18 of it a benchmark
+artefact; +24 fair; +33 under the game's release rule; +7.5 under
+unlimited waivers against a reference that can use them.
 
 ### On how much noise there is
 
