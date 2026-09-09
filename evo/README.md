@@ -380,21 +380,22 @@ Paired leagues against the reference heuristic, three variants of it:
 
 ```
                       blind          stream           blend
-  2021-22        -13.1 +- 18     -43.6 +- 14      -2.5 +- 19
-  2022-23       -131.4 +- 20     -53.4 +- 19     -17.2 +- 16
-  2023-24        -58.4 +- 16     -51.9 +- 13     +17.1 +- 13
-  2024-25        -54.7 +-  9      -7.9 +- 13     +27.7 +-  9
-  2025-26        -15.6 +- 16     -12.5 +- 13     +21.5 +- 15
-  mean                -54.6           -33.9            +9.3
+  2021-22        -36.8 +- 19      +4.2 +- 19     +18.2 +- 19
+  2022-23       -115.4 +- 18     -20.1 +- 18     +21.2 +- 17
+  2023-24        -88.4 +- 14     -38.1 +- 19      -3.9 +- 16
+  2024-25        -44.8 +- 11     +11.0 +- 11     +23.0 +- 12
+  2025-26        -32.5 +- 13     -10.3 +- 15      +7.4 +- 13
+  mean                -63.6           -10.7           +13.2
 ```
 
 `blind` knows blanks but not difficulty: fixture knowledge is worth about
-fifty-five points a season to the decisions, every season. `stream`
-churns the weakest slot on this week's expected points alone and LOSES
-thirty-four - churn has a cost: you drop a decent player for one good
-game and lose him. `blend`, half this week and half the five-week run,
-beats the reference by nine, and by twenty-plus in the three most recent
-seasons. So the mechanism is real, the naive version of it is a trap, and
+sixty points a season to the decisions, every season. `stream` churns
+the weakest slot on this week's expected points alone and loses eleven -
+churn still has a cost, though less than the thirty-four measured before
+the release rule was corrected, when every discard could be snapped up
+the same afternoon; under the real rule a discard is safe for a week.
+`blend`, half this week and half the five-week run, beats the reference
+by thirteen, and by twenty in three of the five seasons. So the mechanism is real, the naive version of it is a trap, and
 the right horizon mix is a learnable thing - the network's waiver head
 sees this week, the run, and the slope between them. `waiver_blend` puts
 the blend into the heuristic itself; it defaults to zero so that the
