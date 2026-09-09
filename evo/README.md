@@ -497,42 +497,48 @@ generations.
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
 - with the reference heuristic at the genome's own starting margin, the
-fixture horizon closed, and the full 82-feature set. Paired points a
-season against the reference, meaned over the five folds:
+fixture horizon closed, the release rule as the game plays it, and the
+full 82-feature set. Paired points a season against the reference,
+meaned over the five folds:
 
 ```
    gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.528    +11.4    -11.6     6.0     6.7   +23.0      +3.7
-    10    0.564    +36.9    +18.9     9.7     8.3   +18.0     +12.7
-    15    0.555    +64.6    +30.7    28.6     9.1   +33.9     +24.5
-    20    0.625    +68.5    +23.9    22.3     9.1   +44.6     +38.9
-    25    0.608    +97.8    +62.1    12.4     8.2   +35.6     +35.7
-    30    0.622   +119.6    +21.2    24.2     8.8   +98.5     +39.3
-    35    0.652   +116.3    +34.5    13.0     9.3   +81.8     +23.1
-    40    0.626   +112.7    +13.5     8.3     8.8   +99.2     +24.0
+     5    0.513    +10.1    +14.1    15.8     7.1    -3.9     +17.8
+    10    0.566    +28.5    +21.6    11.1     6.8    +7.0     +14.4
+    15    0.543    +29.2     +7.5    15.1     7.5   +21.7     +19.6
+    20    0.585    +51.8    +29.6    13.8     8.2   +22.2     +31.7
+    25    0.584    +56.8    +58.0    15.1     7.7    -1.2     +47.9
+    30    0.574    +79.6    +56.2    10.8     7.8   +23.4     +48.0
+    35    0.649    +91.3    +29.7    26.8     8.5   +61.6     +44.9
+    40    0.617    +86.9    +48.7    31.1     8.0   +38.2     +39.2
 
-   mean over all checkpoints  +24.2 +- 7.3
+   mean over all checkpoints  +33.2 +- 6.8
 ```
 
-**The number to believe is +24 points a season over the manager it
+**The number to believe is +33 points a season over the manager it
 starts from, on seasons it has never seen**, with a standard error of 7
-across the eight checkpoints. Positive at every checkpoint after the
-first; the single peak of +62 is a max over noisy checkpoints and should
-be read as such, which is why the report prints the mean beside it.
+across the eight checkpoints. Positive at every checkpoint. The gap
+between the training-season score and the held-out one stays near zero
+through generation 25 and only opens after, which is why the stopping
+rule stops at 30. The single peak of +58 is a max over noisy checkpoints
+and should be read as such; the report prints the mean beside it.
 
-That number has been through a review. An earlier version of this
-section reported +31 and called it the first configuration that worked.
-+18 of that was a benchmark artefact - the reference heuristic churned
-at a margin of 1.75 units while every genome started at 0.25 - and the
-fixture-rescheduling leak was open in both arms. The number above is
-measured with both fixed, and it is the honest one.
+That number has been through a review and two corrections. An earlier
+version of this section reported +31 and called it the first
+configuration that worked; +18 of that was a benchmark artefact - the
+reference churned at a margin of 1.75 units while every genome started
+at 0.25 - and the fixture-rescheduling leak was open in both arms. Fixed,
+the fair number was +24. Then the release rule was verified against the
+game (a dropped player goes on waivers, not to the next manager the same
+afternoon), which makes churn cheaper than the simulator had it, and
+re-measured under the real rule the number is +33. Each step is in the
+commit log with what moved it.
 
 What it is measuring is a policy that learned a better use of fixtures
-than a 50/50 horizon blend gets by hand (+9, above), on top of the
+than a 50/50 horizon blend gets by hand (+13, above), on top of the
 injury log (+34 to the heuristic itself) and the market columns. It is
 still a population a third of the cluster's, and the gap still opens
-after generation 25, so the stopping rule stops at 30 and the levers
-below still apply.
+after generation 25, so the levers below still apply.
 
 ### On how much noise there is
 
