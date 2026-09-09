@@ -11,7 +11,7 @@
    "pos": "GKP",
    "status": "likely",
    "verdict": "Ever-present number one, no fitness or rotation signal",
-   "note": "Started and finished all three league games, the last of them Sunday's 2-2 with Man Utd, where Sky's line-up page and match report have him in goal throughout. No permitted outlet has reported an injury, and there is no international break before GW4 (premierleague.com: the September and October windows are merged into 21 Sept to 6 Oct). Everton's game at Spurs is Saturday 12 Sept; no fixture-specific XI or Moyes press conference exists yet, so this stays likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started and finished all three league games, the last of them Sunday's 2-2 with Man Utd, where Sky's line-up page and match report have him in goal throughout. No permitted outlet has reported an injury, and there is no international break before GW4 (premierleague.com: the September and October windows are merged into 21 Sept to 6 Oct). Everton's game at Spurs is Saturday 12 Sept; no fixture-specific XI or Moyes press conference exists yet, so this stays likely rather than start.",
    "sources": [
     {
      "title": "Starting Lineups - Everton vs Man Utd | 06.09.2026",
@@ -30,7 +30,7 @@
    "pos": "GKP",
    "status": "likely",
    "verdict": "Undisputed number one, Kepa on the bench",
-   "note": "Started all three league games and played to the end of Sunday's 2-1 win over Chelsea, making an 89th-minute save from Estevao; Sky's line-up page lists Kepa Arrizabalaga among the substitutes and Arsenal's submitted squad list has Raya, Kepa and Meslier as the three keepers. Arsenal are at Napoli in the Champions League on Wednesday before Sunderland away on Saturday night, but Arteta has never rotated Raya for a league game. No Sunderland-specific XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started all three league games and played to the end of Sunday's 2-1 win over Chelsea, making an 89th-minute save from Estevao; Sky's line-up page lists Kepa Arrizabalaga among the substitutes and Arsenal's submitted squad list has Raya, Kepa and Meslier as the three keepers. Arsenal are at Napoli in the Champions League on Wednesday before Sunderland away on Saturday night, but Arteta has never rotated Raya for a league game. No Sunderland-specific XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Starting Lineups - Arsenal vs Chelsea | 06.09.2026",
@@ -49,7 +49,7 @@
    "pos": "DEF",
    "status": "doubt",
    "verdict": "Fit but dropped at Brighton after a half-time hook v Brentford",
-   "note": "The GW3 read was wrong. Farke withdrew Bijol at half-time against Brentford (30 Aug) when he switched to a 4-3-3, then left him out of the XI at Brighton on 5 Sept - Leeds' own team news lists a back line of Bogle, Justin, Muharemovic, Elvedi and Gudmundsson, with Bijol coming on for Bogle on 61 minutes. Rodon's eight-to-ten-week hamstring injury still removes one rival, and Bijol is fit, but the new signing Elvedi has taken the spot for now and Farke has not explained the choice. Leeds host Newcastle on Monday 14 Sept, the last game of the gameweek, so the pre-match press conference is a week away. Genuinely could go either way. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "The GW3 read was wrong. Farke withdrew Bijol at half-time against Brentford (30 Aug) when he switched to a 4-3-3, then left him out of the XI at Brighton on 5 Sept - Leeds' own team news lists a back line of Bogle, Justin, Muharemovic, Elvedi and Gudmundsson, with Bijol coming on for Bogle on 61 minutes. Rodon's hamstring injury still removes one rival, and Bijol is fit, but new signing Elvedi has the spot for now and Farke has not explained the choice. Leeds host Newcastle on 14 Sept, so the press conference is a week away.",
    "sources": [
     {
      "title": "Team News: Brighton & Hove Albion vs Leeds United",
@@ -72,7 +72,7 @@
    "pos": "DEF",
    "status": "out",
    "verdict": "Calf strain, forced off after 16 minutes, API says 25%",
-   "note": "Went off in the 17th minute of Saturday's 1-1 with Sunderland with Jannik Schuster on for his debut; Brentford's own injury update quotes Keith Andrews: \"It's a calf strain, I don't know the extent.\" Nothing newer has been published as of Monday evening and the FPL API has cut him to a 25% chance of playing. A calf strain that ends a game inside 20 minutes rarely clears in a week, so he is marked out; a positive Andrews update on Thursday or Friday would move him to doubt, and this is the verdict most worth re-checking before the deadline. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Went off in the 17th minute of Saturday's 1-1 with Sunderland with Jannik Schuster on for his debut; Brentford's own injury update quotes Keith Andrews: \"It's a calf strain, I don't know the extent.\" Nothing newer has been published as of Monday evening and the FPL API has cut him to a 25% chance of playing. A calf strain that ends a game inside 20 minutes rarely clears in a week, so he is marked out; a positive Andrews update on Thursday or Friday would move him to doubt, and this is the verdict most worth re-checking before the deadline.",
    "sources": [
     {
      "title": "Nathan Collins injury update after Brentford v Sunderland",
@@ -91,7 +91,7 @@
    "pos": "DEF",
    "status": "likely",
    "verdict": "Ever-present at left-back, Porto midweek the only rotation risk",
-   "note": "Started all three league games and played the full 90 against Coventry on Saturday in a side Maresca changed only once; his 75th-minute withdrawal at Palace was Kovacic coming on to see out a 3-1 lead, and ESPN rated him 8 with an assist. ESPN's predicted City XI for Tuesday's Champions League trip to Porto names him, which is the one thing that could cost him minutes before Sunday's derby at Old Trafford. No derby-specific XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started all three league games and played the full 90 against Coventry on Saturday in a side Maresca changed only once; his 75th-minute withdrawal at Palace was Kovacic coming on to see out a 3-1 lead, and ESPN rated him 8 with an assist. ESPN's predicted City XI for Tuesday's Champions League trip to Porto names him, which is the one thing that could cost him minutes before Sunday's derby at Old Trafford. No derby-specific XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Ndiaye and Fernandez set for City debuts against Coventry",
@@ -104,13 +104,13 @@
    ]
   },
   {
-   "name": "Milenković",
+   "name": "Milenkovi\u0107",
    "code": "227444",
    "club": "NFO",
    "pos": "DEF",
    "status": "likely",
    "verdict": "Ever-present in Glasner's back three, no injury news",
-   "note": "Started and finished all three league games, 90 minutes each, including Saturday's 0-0 with Spurs; Sky's line-up pages have him alongside Murillo and Diomande in every game and no permitted outlet has mentioned a fitness concern. Forest are at Aston Villa on Saturday; no predicted XI or Glasner press conference exists yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started and finished all three league games, 90 minutes each, including Saturday's 0-0 with Spurs; Sky's line-up pages have him alongside Murillo and Diomande in every game and no permitted outlet has mentioned a fitness concern. Forest are at Aston Villa on Saturday; no predicted XI or Glasner press conference exists yet, so likely rather than start.",
    "sources": [
     {
      "title": "Starting Lineups - Liverpool vs N Forest | 29.08.2026",
@@ -123,20 +123,20 @@
    ]
   },
   {
-   "name": "Muñoz",
+   "name": "Mu\u00f1oz",
    "code": "247348",
    "club": "NFO",
    "pos": "DEF",
    "status": "doubt",
    "verdict": "Still being built up to full fitness, Aina holds the spot",
-   "note": "The GW3 read was too generous. Glasner said before the Spurs game that Munoz could debut but was still working towards full fitness after a late return from the World Cup, and that a start would come at Ola Aina's expense; in the event Aina started and Munoz got a 31-minute cameo. He had not been in the matchday 18 at Liverpool the week before. The model's 0.34 is a new-club discount but the fitness story points the same way for now. A second week of training should help and Villa away on Saturday is a plausible first start, but nothing published says so yet. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "The GW3 read was too generous. Glasner said before the Spurs game that Munoz could debut but was still working towards full fitness after a late return from the World Cup, and that a start would come at Ola Aina's expense; in the event Aina started and Munoz got a 31-minute cameo. He had not been in the matchday 18 at Liverpool the week before. The model's 0.34 is a new-club discount but the fitness story points the same way for now. A second week of training should help and Villa away on Saturday is a plausible first start, but nothing published says so yet.",
    "sources": [
     {
      "title": "Predicted line-ups for every Premier League team in Matchweek 3",
      "url": "https://www.premierleague.com/en/news/4706313/predicted-line-ups-for-premier-league-teams-in-matchweek-3"
     },
     {
-     "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace in transfer deal worth up to £22m",
+     "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace in transfer deal worth up to \u00a322m",
      "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
     }
    ]
@@ -148,7 +148,7 @@
    "pos": "MID",
    "status": "bench",
    "verdict": "Being eased in: 26-minute debut off the bench, Iraola asks for patience",
-   "note": "Came on in the 64th minute at Ipswich on Friday for his debut, which Iraola said was \"good for his fitness, for his build-up\" while asking for patience because he has not played regularly since July. ESPN's predicted Liverpool XI for Wednesday's Champions League opener against Atletico still has Victor Munoz, Wirtz and Gakpo behind Isak, with Barcola among the subs. If he starts against Atletico this flips to doubt for Fulham at home on Saturday; until then the bench is the honest read and matches the model's 0.16. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Came on in the 64th minute at Ipswich on Friday for his debut, which Iraola said was \"good for his fitness, for his build-up\" while asking for patience because he has not played regularly since July. ESPN's predicted Liverpool XI for Wednesday's Champions League opener against Atletico still has Victor Munoz, Wirtz and Gakpo behind Isak, with Barcola among the subs. If he starts against Atletico this flips to doubt for Fulham at home on Saturday; until then the bench is the honest read and matches the model's 0.16.",
    "sources": [
     {
      "title": "Andoni Iraola press conference: Ipswich 0-2 Liverpool, Isak, Gakpo, Barcola debut and more",
@@ -171,7 +171,7 @@
    "pos": "MID",
    "status": "out",
    "verdict": "Calf injury, no training return reported, derby is the earliest date",
-   "note": "Has not played since the Community Shield. Maresca said before the Coventry game that Doku \"will not be ready\", and the two-to-three-week timeline he gave in August has passed without a return. The FPL API's expected-back date is 13 Sept, which is derby day itself, and no permitted outlet has reported him back in training or in the travelling squad for Porto. Even if he makes the bench at Old Trafford, a first start after five weeks out is very unlikely. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Has not played since the Community Shield. Maresca said before the Coventry game that Doku \"will not be ready\", and the two-to-three-week timeline he gave in August has passed without a return. The FPL API's expected-back date is 13 Sept, which is derby day itself, and no permitted outlet has reported him back in training or in the travelling squad for Porto. Even if he makes the bench at Old Trafford, a first start after five weeks out is very unlikely.",
    "sources": [
     {
      "title": "Fernandez is ready to face Coventry, says Maresca",
@@ -190,7 +190,7 @@
    "pos": "MID",
    "status": "doubt",
    "verdict": "Withdrawn on 77 minutes v Man Utd, now flagged, Hackney waiting",
-   "note": "Started the last two league games but came off in the 77th minute on Sunday for Hayden Hackney, and the FPL API has since flagged him with an unspecified injury at 75%. He and Hackney are competing for one spot (Hackney started GW1, Garner GW2 and GW3), and Garner is only a month back from pre-season groin surgery, so even a clean bill of health is not a guaranteed start at Spurs on Saturday. No permitted outlet has given the reason for the substitution; Moyes' press conference on Thursday or Friday settles this. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started the last two league games but came off in the 77th minute on Sunday for Hayden Hackney, and the FPL API has since flagged him with an unspecified injury at 75%. He and Hackney are competing for one spot (Hackney started GW1, Garner GW2 and GW3), and Garner is only a month back from pre-season groin surgery, so even a clean bill of health is not a guaranteed start at Spurs on Saturday. No permitted outlet has given the reason for the substitution; Moyes' press conference on Thursday or Friday settles this.",
    "sources": [
     {
      "title": "Everton 2-2 Man United (Sep 6, 2026) Final Score - ESPN",
@@ -213,7 +213,7 @@
    "pos": "MID",
    "status": "likely",
    "verdict": "Started all three, Brentford's leading shot-taker, no concerns",
-   "note": "Kept his place in the one-change side against Sunderland on Saturday and was not among the three half-time substitutions; Brentford's preview called him their most productive attacker with eight shots and he was not on the club's absentee list. Bournemouth away on Saturday; no predicted XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Kept his place in the one-change side against Sunderland on Saturday and was not among the three half-time substitutions; Brentford's preview called him their most productive attacker with eight shots and he was not on the club's absentee list. Bournemouth away on Saturday; no predicted XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Brentford v Sunderland confirmed team news: Keith Andrews makes one change",
@@ -232,7 +232,7 @@
    "pos": "MID",
    "status": "likely",
    "verdict": "Started and scored at Newcastle, no knock reported",
-   "note": "Scored the ninth-minute opener in Saturday's 2-2 at Newcastle and neither Sky nor ESPN mentioned an early withdrawal or injury; he started the previous two as well. Bournemouth's known absentees are Kroupi and Semenyo. Brentford at home on Saturday; no Rose press conference or predicted XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Scored the ninth-minute opener in Saturday's 2-2 at Newcastle and neither Sky nor ESPN mentioned an early withdrawal or injury; he started the previous two as well. Bournemouth's known absentees are Kroupi and Semenyo. Brentford at home on Saturday; no Rose press conference or predicted XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Newcastle 2-2 Bournemouth: Jacob Ramsey scores late equaliser as Cherries blow another lead",
@@ -251,7 +251,7 @@
    "pos": "FWD",
    "status": "likely",
    "verdict": "Scored in all three, in the leadership group, no injury",
-   "note": "Started every league game and scored the winner against Coventry on Saturday, his 300th club goal; Maresca named him in City's four-man leadership group and ESPN's predicted XI for Porto on Tuesday has him starting, with the derby at Old Trafford on Sunday. Nothing suggests rest or rotation. No derby-specific XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Started every league game and scored the winner against Coventry on Saturday, his 300th club goal; Maresca named him in City's four-man leadership group and ESPN's predicted XI for Porto on Tuesday has him starting, with the derby at Old Trafford on Sunday. Nothing suggests rest or rotation. No derby-specific XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Man City 1-0 Coventry: Erling Haaland ensures perfect Premier League record is preserved under Enzo Maresca",
@@ -269,8 +269,8 @@
    "club": "TOT",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Spurs' first-choice striker with Solanke 'not ready' and Richarlison out of the squad",
-   "note": "Started both league games since arriving on loan, 90 minutes against Newcastle and 83 against Forest before Solanke replaced him. De Zerbi said afterwards \"if we want to score, I think Marmoush has 15 goals\" and that Solanke \"is not ready yet\" and needs time and work; ESPN reports Richarlison was left out of Tottenham's Premier League squad. Everton at home on Saturday. The model's 0.59 is still catching up with the minutes. No fixture-specific XI yet, so likely rather than start. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "verdict": "Spurs' first-choice striker, Solanke 'not ready', Richarlison out of squad",
+   "note": "Started both league games since arriving on loan, 90 minutes against Newcastle and 83 against Forest before Solanke replaced him. De Zerbi said afterwards \"if we want to score, I think Marmoush has 15 goals\" and that Solanke \"is not ready yet\" and needs time and work; ESPN reports Richarlison was left out of Tottenham's Premier League squad. Everton at home on Saturday. The model's 0.59 is still catching up with the minutes. No fixture-specific XI yet, so likely rather than start.",
    "sources": [
     {
      "title": "Confirmed line-ups | Forest vs Spurs",
@@ -293,7 +293,7 @@
    "pos": "FWD",
    "status": "doubt",
    "verdict": "Benched for Nketiah at Fulham despite Mateta's injury, on at half-time",
-   "note": "Mateta's three-week hamstring absence did not hand him the shirt: Palace's own team news for Fulham on Saturday lists Nketiah as the lone striker with Strand Larsen on the bench, and he came on at half-time for Nketiah as Palace turned 2-1 down into a 3-2 win. Sage said the first-half \"mindset of the team was low\" and that the second-half changes fixed it, which argues for a recall against Ipswich at home on Saturday, but Nketiah assisted the first goal and Sage has said nothing about the pair. Fifty-fifty until Friday's press conference. Evidence is search-result snippets from the permitted outlets: this environment could not open the articles themselves, so quotes and dates are as the snippets showed them.",
+   "note": "Mateta's three-week hamstring absence did not hand him the shirt: Palace's own team news for Fulham on Saturday lists Nketiah as the lone striker with Strand Larsen on the bench, and he came on at half-time for Nketiah as Palace turned 2-1 down into a 3-2 win. Sage said the first-half \"mindset of the team was low\" and that the second-half changes fixed it, which argues for a recall against Ipswich at home on Saturday, but Nketiah assisted the first goal and Sage has said nothing about the pair. Fifty-fifty until Friday's press conference.",
    "sources": [
     {
      "title": "Team News: Double change for Palace against Fulham",
@@ -311,6 +311,12 @@
   }
  ],
  "runs": [
+  {
+   "ts": "2026-09-09T21:09 UTC",
+   "gw": 4,
+   "kind": "light",
+   "note": "Not in the post-waivers window this run (GW4 waivers have not processed), so no new research went into this file. Mechanical fix only: trimmed the boilerplate closing sentence from nine notes and shortened Bijol's note and Marmoush's verdict, which had drifted over the length limits added since this file was first written - no status, verdict meaning or sourcing changed."
+  },
   {
    "ts": "2026-09-07T20:27 UTC",
    "gw": 4,
@@ -346,7 +352,7 @@
      }
     },
     {
-     "name": "Muñoz",
+     "name": "Mu\u00f1oz",
      "code": "247348",
      "status": "likely",
      "verdict": "Permanent Forest signing, minutes not yet nailed on",
@@ -366,7 +372,7 @@
      }
     },
     {
-     "name": "Milenković",
+     "name": "Milenkovi\u0107",
      "code": "227444",
      "status": "likely",
      "verdict": "Set in Forest's back three",

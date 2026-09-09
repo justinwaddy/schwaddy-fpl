@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-09T08:15 UTC",
- "summary": "The GW4 appearance read is what these claims are fixing. Seven of the fifteen are certain to start - Raya, Pickford, Gvardiol, Milenkovic, Haaland, Tavernier, Schade - and two are likely: Marmoush, who has started Tottenham's last two, and Garner, who started against Man Utd but came off on 77 minutes and now carries an unspecified injury at 75%. The other six are not GW4 players: Doku is out (calf, expected back 13 September, the day of the derby and a day after the deadline), Collins came off after 17 minutes with a calf strain and is at 25%, Bijol was benched at Brighton, Munoz came on at 59 minutes on his Forest debut, Barcola has 26 minutes at Liverpool, and Strand Larsen was behind Nketiah at Fulham. Nine likely starters is two short of an XI. Two changes against this morning's board. Bijol is back on it at rank 3: Leeds' own team news has him on the bench with Muharemovic and Elvedi preferred, his minutes have gone 90, 45, 29, and the model's avail 0.75 still reads him as a starter, so its +3.0 on Maguire is too small. And Doku is off it - the model's per-gameweek line for him is 0.0, 0.4, 0.6, 0.9, 0.7 across GW4-8, which never recovers him at all, so its 2.5 is a floor rather than a forecast for a player who misses one gameweek. Justin sits fifth of six on 124 points, so his claims process second in the queue when the window closes on 11 September: rank 1 is the one nearly certain to land.",
+ "ts": "2026-09-09T21:09 UTC",
+ "summary": "The board holds from this morning with one real update: Barcola finally started tonight (Champions League vs Atletico Madrid), his first start for the club, then went off in the 58th minute holding his calf - a fresh fitness question on top of the minutes question the Le Fee claim was already built on, so that swap gets stronger rather than weaker. Bijol's Brighton bench call was reportedly a straight selection decision (Elvedi impressing in training) rather than injury, but that detail never cleared a permitted source, so it changes nothing about the Maguire claim itself. The other three claims (Mitchell/Munoz, Hill/Collins, Scott/Garner) are unchanged after a fresh club-by-club sweep. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes on 11 September.",
  "claims": [
   {
    "rank": 1,
@@ -48,8 +48,8 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola has 26 minutes to his name since his GBP106m move from PSG - one substitute cameo at Ipswich - and Iraola is publicly preaching patience after a disrupted pre-season, saying he is 'in a good place' rather than that he is about to start. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford. This is the stash to cash: of the two midfielders sitting idle, Doku is the one due back inside the horizon.",
-   "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.3 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree anyway: even generously assuming Barcola starts from GW6, Le Fee's five certain starts beat three.",
+   "why": "Barcola finally got his first start for the club tonight in the Champions League against Atletico Madrid, then went down clutching his calf in the 58th minute and had to be replaced - ESPN's live commentary said it 'doesn't look great' for him. That is a genuine fitness doubt stacked on top of three weeks of single-cameo Premier League minutes, not just a patience question anymore. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford. This is the stash to cash: of the two midfielders sitting idle, Doku is the one due back inside the horizon.",
+   "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.3 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree anyway, and more so tonight: a fresh calf injury pushes Barcola's first Premier League minutes further out, not closer.",
    "confidence": "high",
    "sources": [
     {
@@ -57,8 +57,8 @@
      "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
     },
     {
-     "title": "Liverpool boss Andoni Iraola says Bradley Barcola is 'in a good place' but patience will help",
-     "url": "https://www.espn.com/soccer/story/_/id/49834549/liverpool-boss-andoni-iraola-says-bradley-barcola-good-place-patience-help-premier-league"
+     "title": "Liverpool vs. Atletico Madrid - Live Commentary",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401915446"
     }
    ]
   },
@@ -212,6 +212,12 @@
   }
  ],
  "runs": [
+  {
+   "ts": "2026-09-09T21:09 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~13 hours after this morning's board. Updated the Le Fee/Barcola case with tonight's news: Barcola made his first Liverpool start (Champions League vs Atletico Madrid) and went off in the 58th minute with an apparent calf injury (ESPN live commentary), which strengthens rather than weakens the case to move on from him. Checked but could not use: a BBC Radio Leeds pundit's claim that Bijol's Brighton bench call was pure selection (Elvedi's training form) rather than injury-related, since it only reached a permitted outlet via Yahoo/aggregator reprints of the podcast, not bbc.co.uk itself - changes nothing about the Maguire/Bijol claim either way. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Bournemouth, Palace, Tottenham, Man Utd and Sunderland."
+  },
   {
    "ts": "2026-09-09T08:15 UTC",
    "gw": 4,
