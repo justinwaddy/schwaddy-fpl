@@ -575,53 +575,56 @@ generations.
 
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
-- with the reference heuristic at the genome's own starting margin, the
-fixture horizon closed, the release rule as the game plays it, waivers
-unlimited as the game plays them, and the full 82-feature set. Paired
-points a season against the reference, meaned over the five folds:
+- on the full build: season points as the objective, the whole season's
+fixtures, return dates and the bench-aware waiver head, a situational
+margin and sequential claim lists, waivers unlimited, the release rule
+as the game plays it, and the reference re-chosen at its best margin.
+Paired points a season against that reference, meaned over the five
+folds:
 
 ```
-   gen  fitness    train    valid  +-fold  +-pair     gap  smoothed
-     5    0.523    +30.1     +9.6     6.3     7.1   +20.5     +13.1
-    10    0.560    +32.1    +16.6    23.5     7.5   +15.5     +14.1
-    15    0.580    +42.2    +16.0    14.0     7.7   +26.2     +13.4
-    20    0.613    +51.9     +7.7    28.7     6.8   +44.2      +5.8
-    25    0.570    +55.6     -6.3    32.6     7.6   +61.9      +2.8
-    30    0.586    +66.7     +7.0    19.0     7.5   +59.7      +5.1
-    35    0.653    +75.1    +14.7    20.5     7.0   +60.3      +5.6
-    40    0.605   +103.5     -4.9    19.4     7.3  +108.4      +4.9
+   gen    train    valid  +-fold  +-pair     gap  smoothed
+     5    +14.4    +18.6    11.9     6.6    -4.2      +7.0
+    10    +54.8     -4.5    14.5     6.9   +59.3     +12.8
+    15    +64.0    +24.4    27.4     7.5   +39.5     +25.5
+    20    +80.4    +56.7    26.7     8.0   +23.7     +38.9
+    25   +102.2    +35.6    17.1     7.9   +66.5     +54.0
+    30   +129.1    +69.7    41.7     7.6   +59.4     +61.1
+    35   +143.2    +78.0    34.5     8.6   +65.2     +89.2
+    40   +152.0   +119.9    37.4     8.9   +32.0     +99.0
 
-   mean over all checkpoints  +7.5 +- 3.2
+   mean over all checkpoints  +49.8 +- 14.0
 ```
 
-**The number to believe is +7.5 points a season over the manager it
-starts from, on seasons it has never seen.** Small, and real at about
-two standard errors. The stopping rule stops at generation 10; after 20
-the gap runs away and the held-out score goes to zero.
+**The number to believe is +50 points a season over the manager it
+starts from, on seasons it has never seen** - and, for the first time,
+the curve had not turned when the run ran out. From generation 15 the
+held-out score rises through +24, +57, +36, +70, +78, +120, and the
+stopping rule picked the last checkpoint because there was no later one.
+Where it actually peaks is a question for the cluster's 200 generations.
 
-That is a long way down from the +33 measured one rule earlier, with
-waivers capped at three successes a week, and the reason is worth
-having. Lifting the cap did not change what the network can do; it
-changed what the REFERENCE can do. With unlimited moves, a plain
-shrunk-mean manager with a margin rule already churns his way to most of
-the value that fixtures and injuries put on the table - 1.3 to 2.5
-moves a manager-week - and what is left over for a learned policy is a
-few points. Under the cap, the heuristic could not take that value and
-the network could, and the difference was reported as learning. So +33
-was partly "the reference was tied", and +7.5 is the honest residual
-once it is not.
+Two things to hold against it. The spread across folds is wide - 12 to
+42 points - so the season matters a great deal and a single season's
+edge could be half or double the mean. And this is measured against a
+reference that was STRENGTHENED before the run (the margin sweep above),
+not weakened; the earlier lesson was that a weak reference flatters the
+network, and this is the opposite direction.
 
-Two readings follow. If your rivals churned like the reference does,
-+7.5 is your edge. They do not - your league averages 0.56 waiver moves
-a manager-week against the reference's 1.3 to 2.5 - so against the
-field you actually play, the model's edge is closer to what a diligent
-churner has over a Saturday manager, which the cap-of-three number was
-nearer to measuring. Neither number is wrong; they answer different
-questions, and the second is the one you are asking.
+Why it moved from +7.5. The previous run had unlimited waivers and a
+reference that could use them, and the network had nothing the reference
+did not: the same five-week baseline, a fixed margin, one-shot claim
+lists, no return dates, no view past the week. Every piece since is
+something the reference cannot do - price a two-week injury as two weeks,
+see whether a swap changes the eleven or the bench, set its margin by the
+situation, build a claim list against the squad the earlier claims leave,
+see the run to May - or something that made the objective the right one.
+Season points, not a shaped win score, is what it now maximises, and
+season points is what this table counts.
 
 The history, each step a commit: +31 reported; +18 of it a benchmark
 artefact; +24 fair; +33 under the game's release rule; +7.5 under
-unlimited waivers against a reference that can use them.
+unlimited waivers against a reference that could use them; +50 with the
+objective and the horizon fixed.
 
 ### On how much noise there is
 
