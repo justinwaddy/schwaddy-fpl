@@ -50,6 +50,7 @@ import argparse
 import csv
 import io
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -252,12 +253,48 @@ def last_observation(data_dir, season):
     return max(t) if t else None
 
 
-def load(data_dir, season):
-    """{code: (starts, factors, out_flags, doubt_flags)} sorted by start.
+MONTHS = {m: i + 1 for i, m in enumerate(
+    ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
+     "nov", "dec"))}
+_BACK = re.compile(r"(?:expected back|suspended until|back)\s+(\d{1,2})\s+([A-Za-z]{3})",
+                   re.I)
+# how long a state lasts when the news gives no date: a knock is this
+# round's question, an injury without a date is a long one, a suspension
+# is a match or three, a loan is the season
+DEFAULT_DAYS = {"d": 4.0, "i": 42.0, "s": 10.0, "n": 60.0, "u": 400.0}
 
-    factors is the availability the game itself was advertising: the
+
+def expected_return(status, news, start):
+    """(return_at epoch, known) from the news line, as at its start.
+
+    "Calf injury - Expected back 13 Sep" is FPL's own estimate, published
+    with the item, and it is the one thing that separates a player worth
+    carrying on the bench from one worth dropping. The year is the one
+    that puts the date after the item was posted.
+    """
+    if status == "a":
+        return float("nan"), 0.0
+    m = _BACK.search(news or "")
+    if m and m.group(2).lower() in MONTHS:
+        d, mo = int(m.group(1)), MONTHS[m.group(2).lower()]
+        y = datetime.fromtimestamp(start, timezone.utc).year
+        for yy in (y, y + 1):
+            try:
+                cand = datetime(yy, mo, d, 12, tzinfo=timezone.utc).timestamp()
+            except ValueError:
+                continue
+            if cand >= start - 7 * 86400:
+                return cand, 1.0
+    return start + DEFAULT_DAYS.get(status, 42.0) * 86400.0, 0.0
+
+
+def load(data_dir, season):
+    """{code: array of (start, factor, out, doubt, observed, return_at,
+    return_known)} sorted by start.
+
+    factor is the availability the game itself was advertising: the
     published chance of playing where there is one, and the status
-    default where there is not.
+    default where there is not. return_at is when he is expected back.
     """
     path = os.path.join(data_dir, f"injuries_{season}.csv")
     if not os.path.exists(path):
@@ -270,9 +307,11 @@ def load(data_dir, season):
         f = STATUS_FACTOR.get(st, 1.0)
         if ch is not None and st in ("d", "i", "s"):
             f = ch / 100.0
+        start = float(r["start_at"])
+        ret, known = expected_return(st, r.get("news", ""), start)
         by.setdefault(code, []).append(
-            (float(r["start_at"]), f, 1.0 if st in OUT_STATUS else 0.0,
-             1.0 if st == "d" else 0.0, float(r["observed_at"])))
+            (start, f, 1.0 if st in OUT_STATUS else 0.0,
+             1.0 if st == "d" else 0.0, float(r["observed_at"]), ret, known))
     out = {}
     for code, rows in by.items():
         rows.sort()
@@ -281,21 +320,37 @@ def load(data_dir, season):
     return out
 
 
+FIT = (1.0, 0.0, 0.0, 0.0, 0.0, 0.0, float("nan"), 0.0)
+
+
 def state_at(rows, t):
-    """(factor, out, doubt, days_in_state, days_stale, known) at time t.
+    """(factor, out, doubt, days_in_state, days_stale, known, return_at,
+    return_known) at time t.
 
     Only intervals that had already STARTED by t are eligible: a state is
     read forward from its own start and never backward from a later
     observation.
     """
     if rows is None or len(rows) == 0:
-        return 1.0, 0.0, 0.0, 0.0, 0.0, 0.0
+        return FIT
     k = int(np.searchsorted(rows[:, 0], t, "right")) - 1
     if k < 0:
-        return 1.0, 0.0, 0.0, 0.0, 0.0, 0.0
-    start, f, out, doubt, obs = rows[k]
+        return FIT
+    start, f, out, doubt, obs, ret, known = rows[k]
     return (float(f), float(out), float(doubt), (t - start) / 86400.0,
-            (t - min(obs, t)) / 86400.0, 1.0)
+            (t - min(obs, t)) / 86400.0, 1.0, float(ret), float(known))
+
+
+def factor_at(state, t_fixture, t_now):
+    """The availability multiplier for a fixture at t_fixture, given the
+    state as at t_now. This round is whatever the game advertises; a
+    later round is fit once the expected return has passed."""
+    f, out, doubt, _, _, known, ret, _ = state
+    if t_fixture <= t_now + 6 * 86400 or f >= 1.0:
+        return f
+    if not np.isnan(ret) and t_fixture >= ret:
+        return 1.0
+    return f
 
 
 def main(argv=None):

@@ -201,6 +201,18 @@ Positive in all five. That is a larger edge than anything the network
 found on its own in the dry run below, which is worth sitting with: the
 data was missing, not the model. `--no-use-injuries` reruns the ablation.
 
+**The return date is read.** "Calf injury - Expected back 13 Sep" is
+FPL's own estimate, published with the item, and it is the one thing that
+separates a player worth carrying on the bench from one worth dropping.
+It is parsed (with "Suspended until", and a status-typical default where
+no date is given - a knock is this round's question, an undated injury
+is a long one, a loan is the season) and it changes the five-week
+baseline: this round is whatever the game advertises, later rounds are
+fit once the expected return has passed. A two-week injury is no longer
+priced as a five-week one. Measured on 2024/25, a doubtful player's
+five-week value is 1.3 times five-times-this-week rather than exactly
+that, and a player who has left the club still values at nothing.
+
 Two honest gaps. The cadence is a gameweek, so a knock picked up and
 cleared inside one week can be missed entirely. And the harvest stops
 wherever the archive repo last committed, which during a live season is
@@ -268,8 +280,10 @@ all as at the decision:
   where there is no last season;
 - the market, in nine columns rather than one (see below);
 - the injury state: the advertised chance of playing, whether he is out
-  or doubtful, how long he has been in that state, and how stale our last
-  observation of him is;
+  or doubtful, how long he has been in that state, how stale our last
+  observation of him is, when he is expected back and whether that date
+  was published or defaulted, and how many of the next five gameweeks he
+  is expected to miss;
 - availability, and his club's rolling scored and conceded rates shrunk
   toward last season's (a promoted club gets the tails of that
   distribution);
@@ -436,6 +450,40 @@ non-anticipation on each of them separately.
 Free agency is scored by the same head as the waiver, with the window as
 a context flag, so one head learns that the two are different problems
 rather than two heads each learning half of one.
+
+### Choosing how many, and what to carry
+
+Two things the first version could not do, and the reason each matters.
+
+**How many moves this week.** A claim used to be any pair that cleared a
+fixed margin - one evolved number, the same every week - so the count of
+claims was whatever happened to clear a bar, not a decision. Now the
+margin is scaled by the squad's situation, `exp(w . context)`: gameweeks
+left, league position, gap to the leader, how many of the fifteen blank
+or double, and what the bench is carrying. "Hold when leading, churn when
+chasing, wait when the bench is already full of passengers" are all
+things a genome can express. The reference heuristic has one number and
+no situation, which is the point of it.
+
+And the list is built the way a careful manager builds one. Take the best
+swap; add a couple of alternatives for the same drop in case a rival gets
+there first; ASSUME it goes through; re-score the squad that results; go
+again until nothing clears the bar. Every claim after the first is judged
+against the squad the earlier ones leave. This is legal - claims are
+submitted in advance and the game processes them in order, exactly as
+written - and it is what turns "one change is enough this week" into
+something the policy can say. `sequential_claims` switches it off, for
+the flat single-scoring list.
+
+**What to carry on the bench.** Four bench slots can carry passengers
+for nothing this week; the question is who. The waiver head now sees, for
+every candidate, whether the swap would change the ELEVEN or only the
+bench - is the player it would drop a starter, would the player it would
+add displace one - and how many expected points the bench is currently
+carrying. With the return date in the features and the recovery in the
+baseline, holding a good player through a short absence on a spare bench
+slot is a visible, learnable choice rather than something the baseline
+argues against every week.
 
 ### Mechanics
 

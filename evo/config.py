@@ -101,6 +101,10 @@ class Config:
     # the switching margin is what stops him churning the whole squad.
     max_claims: int = 0
     max_success_per_gw: int = 0
+    # A waiver list built the way a careful manager builds one: best swap,
+    # a couple of fallbacks for the same drop, assume it goes through,
+    # re-score, go again. Off submits one flat list from a single scoring.
+    sequential_claims: bool = True
     draft_shortlist: int = 80    # candidates scored per draft pick
     waiver_shortlist: int = 60   # free agents scored per waiver window
 

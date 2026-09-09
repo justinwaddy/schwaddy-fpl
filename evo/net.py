@@ -30,7 +30,8 @@ import numpy as np
 from .features import N_FEATURES
 
 C_DRAFT = 11
-C_WAIVER = 10
+C_SQUAD = 6         # gws_left, rank, gap, blank_share, double_share, bench_ep
+C_WAIVER = 13
 C_LINEUP = 0
 HEADS = ("draft", "waiver", "lineup")
 CONTEXT = dict(draft=C_DRAFT, waiver=C_WAIVER, lineup=C_LINEUP)
@@ -53,6 +54,11 @@ def layout(cfg):
         take(f"b_{k}", 1, (1,))
     take("scale", len(HEADS), (len(HEADS),))
     take("margin", 1, (1,))          # waiver switching margin, in units
+    # how selective to be THIS week, from the squad's situation: the
+    # margin is scaled by exp(w . squad context), so "hold when leading,
+    # churn when chasing, wait when the bench is already full of
+    # passengers" are all things a genome can express
+    take("w_margin", C_SQUAD, (C_SQUAD,))
     return sl, o
 
 
@@ -130,6 +136,12 @@ class Brain:
     def margin(self):
         return float(self.p["margin"][0])
 
+    def margin_at(self, squad_ctx):
+        """This week's switching margin, in units of the candidates'
+        spread, given the squad's situation."""
+        z = float(np.clip(np.dot(self.p["w_margin"], squad_ctx), -2.0, 2.0))
+        return max(0.0, self.margin) * float(np.exp(z))
+
 
 # --------------------------------------------------------------- heuristics
 class Heuristic:
@@ -155,6 +167,10 @@ class Heuristic:
 
     def encode(self, key, Xn):
         return None
+
+    def margin_at(self, squad_ctx):
+        # a rule has one number and no situation
+        return self.margin
 
     def score(self, head, key, Xn, rows, gw, baseline, ctx=None, feats=None):
         f = feats

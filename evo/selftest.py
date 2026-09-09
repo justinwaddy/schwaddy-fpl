@@ -68,6 +68,48 @@ def test_non_anticipation(cfg, season="2024-25", prev="2023-24", cut=20):
     return ok
 
 
+def test_return_dates(cfg):
+    """The news line's return date is read, and a short absence is not
+    priced as a long one."""
+    from .injuries import expected_return
+    from .features import FEATURE_NAMES
+    import datetime as dt
+    t0 = dt.datetime(2024, 8, 12, 14, 30, tzinfo=dt.timezone.utc).timestamp()
+    r, k = expected_return("i", "Knee injury - Expected back 07 Oct", t0)
+    ok = _report("'Expected back 07 Oct' parses",
+                 k == 1.0 and abs(r - dt.datetime(2024, 10, 7, 12,
+                 tzinfo=dt.timezone.utc).timestamp()) < 1, "")
+    r, k = expected_return("i", "Hamstring injury - Expected back 15 Jan", t0)
+    ok &= _report("  and a date past new year lands in the next year",
+                  k == 1.0 and r > t0 + 100 * 86400)
+    r, k = expected_return("i", "Knee injury - Unknown return date", t0)
+    ok &= _report("  and no date means a long default, not a fit player",
+                  k == 0.0 and r > t0 + 30 * 86400)
+    r, k = expected_return("d", "Knock - 75% chance of playing", t0)
+    ok &= _report("  and a knock is this round's question only",
+                  k == 0.0 and r < t0 + 7 * 86400)
+    # in the features: a doubtful player's five-week baseline recovers
+    ix = {n: i for i, n in enumerate(FEATURE_NAMES)}
+    d = load_seasons(cfg, ["2024-25"])["2024-25"]
+    X, pool = d["X"], d["pool"]
+    dbt = (X[:, :, ix["inj_doubt"]] > 0.5) & pool & (d["base_ep1"] > 0.5)
+    ratio = d["base_next5"][dbt] / np.maximum(5 * d["base_ep1"][dbt], 1e-6)
+    ok &= _report("a doubtful player's five-week value recovers after this "
+                  "round", bool(dbt.sum()) and float(np.median(ratio)) > 1.05,
+                  f"median next5 / (5 x this week) = {np.median(ratio):.2f} "
+                  f"over {int(dbt.sum())} cells")
+    # departed or on loan: out, no return date published, and the default
+    # horizon sits at the cap - as opposed to an injured player with a
+    # date, who is SUPPOSED to recover
+    gone = ((X[:, :, ix["inj_out"]] > 0.5) & (X[:, :, ix["inj_factor"]] < 0.05)
+            & (X[:, :, ix["inj_return_known"]] < 0.5)
+            & (X[:, :, ix["inj_return_days"]] > 2.9) & pool)
+    ok &= _report("  and a player who has left the club does not",
+                  bool(gone.sum()) and bool(np.all(d["base_next5"][gone] < 0.5)),
+                  f"{int(gone.sum())} cells")
+    return ok
+
+
 def test_fixture_horizon(cfg, season="2021-22"):
     """Beyond the horizon the schedule is one fixture a gameweek - the
     published shape - and inside it the archive's blanks and doubles are
@@ -239,6 +281,7 @@ def run_all(cfg=None):
     ok = True
     ok &= test_non_anticipation(cfg)
     ok &= test_fixture_horizon(cfg)
+    ok &= test_return_dates(cfg)
     ok &= test_no_lookahead(cfg, views)
     ok &= test_legality(cfg, views)
     ok &= test_determinism(cfg, views)

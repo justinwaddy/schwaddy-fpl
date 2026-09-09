@@ -46,7 +46,7 @@ HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 7
+CACHE_VERSION = 8
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -60,7 +60,7 @@ FEATURE_NAMES = (
        "own_chg4", "net_xfer1", "net_xfer4"]
     + ["p_play", "team_att", "team_def"]
     + ["inj_factor", "inj_out", "inj_doubt", "inj_days", "inj_stale",
-       "inj_known"]
+       "inj_known", "inj_return_days", "inj_return_known", "inj_weeks_lost5"]
     + ["n_fix1", "home1", "opp_att1", "opp_def1"]
     + ["n_fix5", "opp_att5", "opp_def5"]
     + ["exp_cs1", "exp_c2_1", "exp_t2_1", "exp_cs5", "exp_c2_5", "exp_t2_5"]
@@ -716,21 +716,33 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             # so the heuristic baseline - and therefore the residual
             # policy's starting point - knows about injuries in training
             # exactly as the live driver does.
-            ifac, iout, idbt, idays, istale, iknown = injuries.state_at(
-                inj_rows, t)
+            istate = injuries.state_at(inj_rows, t)
+            ifac, iout, idbt, idays, istale, iknown, iret, iretk = istate
+            pp_raw = pp
             pp *= ifac
             p_play[i, col] = pp
             f[j] = pp
             ta, tc = sd.team_rate_before(club, t)
             f[j + 1], f[j + 2] = ta, tc
             j += 3
+            # the availability of each of the next five fixtures: this
+            # round as advertised, later rounds fit once he is expected
+            # back. A two-week injury is not a five-week one, and the
+            # bench exists to carry the difference.
+            fac_h = [injuries.factor_at(istate, sd.deadline[g + h], t)
+                     if g + h <= 38 else 1.0 for h in range(5)]
+            ret_days = (0.0 if np.isnan(iret) or ifac >= 1.0
+                        else max(0.0, (iret - t) / 86400.0))
             f[j] = ifac
             f[j + 1] = iout
             f[j + 2] = idbt
             f[j + 3] = min(idays, 180.0) / 30.0
             f[j + 4] = min(istale, 60.0) / 14.0
             f[j + 5] = iknown
-            j += 6
+            f[j + 6] = min(ret_days, 90.0) / 30.0
+            f[j + 7] = iretk
+            f[j + 8] = sum(1 for x in fac_h if x < 1.0) / 5.0
+            j += 9
 
             # the next five gameweeks, known as far as the horizon and as
             # published beyond it
@@ -792,8 +804,9 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             base_ppm[i, col] = bp
             ep1 = bp * pp * nf1 * sd._fmult(posi, oa1, od1)
             base_ep1[i, col] = ep1
-            tot5 = sum(bp * pp * x[0] * sd._fmult(posi, x[2], x[3])
-                       for x in terms if x)
+            tot5 = sum(bp * pp_raw * fac_h[h] * x[0]
+                       * sd._fmult(posi, x[2], x[3])
+                       for h, x in enumerate(terms) if x)
             base_next5[i, col] = tot5
             f[j] = bp; f[j + 1] = ep1; f[j + 2] = tot5 / 5.0; f[j + 3] = 1.0
             X[i, col] = f

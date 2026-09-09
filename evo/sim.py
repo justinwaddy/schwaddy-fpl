@@ -175,10 +175,19 @@ def _draft_ctx(sv, cand, squad, need, rnd, gap, owned, avail0):
 
 def _waiver_ctx(sv, cand, squad_pos_strength, n_at_pos, gws_left, rank,
                 gap, mine_mask, cpos, is_fa=0.0, blank_share=0.0,
-                double_share=0.0, stack=None):
+                double_share=0.0, stack=None, drop_in_xi=None,
+                add_beats_xi=None, bench_ep=0.0):
     k = len(cand)
     ctx = np.zeros((k, CONTEXT["waiver"]), np.float32)
     ctx[:, 6] = is_fa
+    # does this swap change my eleven this week, or only the bench? A
+    # bench slot can carry a passenger for nothing; the head has to be
+    # able to see that to learn to hold a player through an absence
+    if drop_in_xi is not None:
+        ctx[:, 10] = drop_in_xi
+    if add_beats_xi is not None:
+        ctx[:, 11] = add_beats_xi
+    ctx[:, 12] = bench_ep / 10.0
     # the draft-specific mechanism: you own fifteen and cannot buy a
     # sixteenth, so how many of them blank this week is what a playing
     # free agent is actually worth
@@ -195,13 +204,22 @@ def _waiver_ctx(sv, cand, squad_pos_strength, n_at_pos, gws_left, rank,
     return ctx
 
 
-def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
-    """Best (gain, add, drop) pairs for one manager in one window.
+def _xi_split(sv, squad, ep):
+    """(set of rows in the heuristic eleven, bench expected points,
+    weakest starter's ep per position) for a squad on ep this week."""
+    sq = [dict(name=int(r), pos=POSITIONS[sv.pos[r]], ep=float(ep[r]))
+          for r in squad]
+    xi, bench, _ = pick_xi(sq)
+    xi_rows = {p["name"] for p in xi}
+    floor = {}
+    for p in xi:
+        floor[p["pos"]] = min(floor.get(p["pos"], 1e9), p["ep"])
+    return xi_rows, float(sum(p["ep"] for p in bench)), floor
 
-    Free agency reads the deadline clock and the waiver reads the one a
-    day earlier, which is the whole reason the two are separate decisions
-    rather than the same one asked twice.
-    """
+
+def _score_pairs(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
+    """One head evaluation: every (free agent, squad player) pair at each
+    position with its gain, ranked, above this week's margin."""
     Xn, Xr = (sv.Xn_dl, sv.X_dl) if is_fa else (sv.Xn, sv.X)
     key = sv.key_dl if is_fa else sv.key
     base_all = sv.base_next5_dl if is_fa else sv.base_next5
@@ -234,14 +252,25 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
     nfix = (sv.nfix_dl if is_fa else sv.nfix)[sq, gw - 1]
     stack = (np.array([(sv.team[sq] == sv.team[c]).sum() for c in cand])
              - mine) / 5.0
+    ep1 = (sv.base_ep1_dl if is_fa else sv.base_ep1)[:, gw - 1]
+    xi_rows, bench_ep, floor = _xi_split(sv, squad, ep1)
+    drop_in_xi = np.array([1.0 if (mm and int(c) in xi_rows) else 0.0
+                           for c, mm in zip(cand, mine)])
+    add_beats = np.array([1.0 if (not mm and ep1[c] > floor.get(
+        POSITIONS[sv.pos[c]], 1e9)) else 0.0 for c, mm in zip(cand, mine)])
+    blank_share = float((nfix == 0).mean())
+    double_share = float((nfix >= 2).mean())
     ctx = _waiver_ctx(sv, cand, strength, n_at, 39 - gw, rank, gap, mine,
                       cpos, is_fa=1.0 if is_fa else 0.0,
-                      blank_share=float((nfix == 0).mean()),
-                      double_share=float((nfix >= 2).mean()), stack=stack)
+                      blank_share=blank_share, double_share=double_share,
+                      stack=stack, drop_in_xi=drop_in_xi,
+                      add_beats_xi=add_beats, bench_ep=bench_ep)
     val = brain.score("waiver", key, Xn, cand, gw, base, ctx=ctx,
                       feats=Xr[cand, gw - 1])
     unit = float(np.std(base)) or 1.0
-    margin = max(0.0, brain.margin) * unit
+    squad_ctx = np.array([(39 - gw) / 38.0, rank / 5.0, np.tanh(gap / 100.0),
+                          blank_share, double_share, bench_ep / 10.0])
+    margin = brain.margin_at(squad_ctx) * unit
     # every free agent against every squad player at his position, not
     # just the weakest: with unlimited waivers a second success has to be
     # able to drop the second-weakest, and a third the third
@@ -257,9 +286,52 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
                 if gain > margin:
                     pairs.append((gain, int(cand[a]), int(cand[d])))
     pairs.sort(key=lambda x: -x[0])
-    if cfg.max_claims:
-        pairs = pairs[:cfg.max_claims]
     return pairs
+
+
+def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
+    """The ranked list a manager submits for one window.
+
+    Free agency is one move at a time and the caller re-scores after each,
+    so it takes the single best pair. A waiver list is written in advance
+    and processed in order, so it is built the way a careful manager
+    builds one: take the best swap, add a couple of alternatives for the
+    same drop in case a rival gets there first, ASSUME it goes through,
+    re-score the squad that results, and go again. Every claim after the
+    first is judged against the squad the earlier ones leave - which is
+    what lets "one change is enough this week" be a thing the policy can
+    decide, rather than an accident of how many pairs cleared a fixed
+    bar.
+    """
+    if is_fa or not cfg.sequential_claims:
+        pairs = _score_pairs(brain, sv, cfg, squad, free_rows, gw, totals,
+                             m, is_fa)
+        return pairs[:cfg.max_claims] if cfg.max_claims else pairs
+    squad = list(squad)
+    taken = set()
+    out = []
+    for _ in range(15):
+        free = np.array([r for r in free_rows if r not in taken])
+        if len(free) == 0:
+            break
+        pairs = _score_pairs(brain, sv, cfg, squad, free, gw, totals, m, False)
+        if not pairs:
+            break
+        g, a, d = pairs[0]
+        out.append((g, a, d))
+        nfb = 0
+        for g2, a2, d2 in pairs[1:]:
+            if d2 == d and a2 not in taken and a2 != a:
+                out.append((g2, a2, d2))
+                nfb += 1
+                if nfb >= 2:
+                    break
+        squad.remove(d)
+        squad.append(a)
+        taken.add(a)
+    if cfg.max_claims:
+        out = out[:cfg.max_claims]
+    return out
 
 
 def run_free_agency(brains, sv, cfg, squads, owned, gw, totals, rng,
