@@ -180,6 +180,22 @@ def test_legality(cfg, views, season="2025-26"):
     good = all(sum(1 for x in v if x == "f") <= cfg.fa_max_moves
                for v in per_gw.values())
     ok &= _report("free-agent moves respect the per-week cap", good)
+    # a player released this week is on waivers: no free-agent add may be
+    # anyone dropped earlier the same gameweek, by anybody
+    good = True
+    by_gw = {}
+    for gw, m, add, drop, _, k in moves:
+        by_gw.setdefault(gw, []).append((m, add, drop, k))
+    for gw, seq in by_gw.items():
+        dropped = set()
+        for m, add, drop, k in seq:
+            if k == "f" and add in dropped:
+                good = False
+            dropped.add(drop)
+    ok &= _report("no free-agent add is a player released that week", good)
+    good = all(sum(1 for x in v if x == "w") <= cfg.max_success_per_gw
+               for v in per_gw.values())
+    ok &= _report("waiver wins respect the cap", good)
     return ok
 
 

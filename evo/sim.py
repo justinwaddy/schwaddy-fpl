@@ -8,8 +8,17 @@ The mechanics are the game's, not a convenient approximation of it:
             day before the gameweek deadline), same-position swaps only
             so the quota always holds. Each manager submits up to
             cfg.max_claims ranked claims; they are processed in reverse
-            standings order and a manager may win cfg.max_success_per_gw
-            of them.
+            standings order, a successful claimant moves to the END of
+            the queue, and processing goes round again until nobody has
+            a claim left that can succeed.
+  Released  a player dropped by anyone - in waivers or in free agency -
+            goes ON WAIVERS: nobody can sign him until next week's
+            processing. "Players released by other managers do not
+            immediately become free agents. Initially, they can only be
+            signed through a waiver request." (premierleague.com, FPL
+            Draft: what you need to know). The first version here had
+            him available to the next manager the same afternoon, which
+            made every discard a gift and churn dearer than it is.
   Free
   agency    once waivers have processed, everyone still unowned is a free
             agent until the deadline, first come first served. Modelled
@@ -248,19 +257,23 @@ def _rank_swaps(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
     return pairs
 
 
-def run_free_agency(brains, sv, cfg, squads, owned, gw, totals, rng):
+def run_free_agency(brains, sv, cfg, squads, owned, gw, totals, rng,
+                    released):
     """The window between waivers processing and the deadline.
 
     No priority order: whoever gets there first takes the player, so the
     order is drawn fresh each week. A manager acts on what he can see
     AFTER everyone's waivers have landed, which is why this runs on the
-    post-waiver ownership rather than a snapshot of it.
+    post-waiver ownership rather than a snapshot of it - minus everyone
+    released this week, who is on waivers until next week's processing.
     """
     moves = []
     order = list(rng.permutation(N_MANAGERS))
     for m in order:
         for _ in range(cfg.fa_max_moves):
-            free_rows = np.flatnonzero(sv.pool[:, gw - 1] & ~owned)
+            avail = sv.pool[:, gw - 1] & ~owned
+            avail[list(released)] = False
+            free_rows = np.flatnonzero(avail)
             if len(free_rows) == 0:
                 break
             pairs = _rank_swaps(brains[m], sv, cfg, squads[m], free_rows, gw,
@@ -272,6 +285,7 @@ def run_free_agency(brains, sv, cfg, squads, owned, gw, totals, rng):
             squads[m].append(add)
             owned[add] = True
             owned[drop] = False
+            released.add(drop)
             moves.append((gw, m, add, drop, gain, "f"))
     return moves
 
@@ -286,21 +300,33 @@ def run_waivers(brains, sv, cfg, squads, owned, gw, totals, priority):
                              list(totals), m, is_fa=False)[:cfg.max_claims]
                for m in range(N_MANAGERS)}
 
+    # The queue. Highest priority tries his claims in order; on a success
+    # he goes to the back and the next manager is up; on no success he is
+    # out for the week. Round and round until the queue is empty. A
+    # player released in this processing is on waivers, not available.
     moves = []
-    for m in priority:
-        wins = 0
+    released = set()
+    wins = {m: 0 for m in priority}
+    queue = list(priority)
+    while queue:
+        m = queue.pop(0)
+        won = None
         for gain, add, drop in claims[m]:
-            if wins >= cfg.max_success_per_gw:
-                break
-            if owned[add] or drop not in squads[m]:
+            if owned[add] or add in released or drop not in squads[m]:
                 continue
             squads[m].remove(drop)
             squads[m].append(add)
             owned[add] = True
             owned[drop] = False
+            released.add(drop)
             moves.append((gw, m, add, drop, gain, "w"))
-            wins += 1
-    return moves
+            wins[m] += 1
+            won = (add, drop)
+            break
+        if won is not None and wins[m] < cfg.max_success_per_gw:
+            claims[m] = [c for c in claims[m] if c[1] != won[0]]
+            queue.append(m)
+    return moves, released
 
 
 def run_gameweek(brains, sv, cfg, squads, gw):
@@ -338,11 +364,11 @@ def simulate(brains, sv, cfg, rng, order=None, trace=False):
         if gw >= cfg.waiver_first_gw:
             priority = sorted(range(N_MANAGERS),
                               key=lambda m: (totals[m], tie[m]))
-            mv = run_waivers(brains, sv, cfg, squads, owned, gw,
-                             list(totals), priority)
+            mv, released = run_waivers(brains, sv, cfg, squads, owned, gw,
+                                       list(totals), priority)
             if cfg.free_agency:
                 mv += run_free_agency(brains, sv, cfg, squads, owned, gw,
-                                      list(totals), rng)
+                                      list(totals), rng, released)
             if trace:
                 log["moves"] += mv
         pts, bench, xis = run_gameweek(brains, sv, cfg, squads, gw)

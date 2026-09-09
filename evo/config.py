@@ -95,7 +95,11 @@ class Config:
     # was measured; flipping it moves the reference for everything after.
     waiver_blend: float = 0.0
     max_claims: int = 3          # ranked claims submitted per manager
-    max_success_per_gw: int = 1  # successful transactions per manager
+    # A successful claimant moves to the END of the queue and processing
+    # continues, so a manager can win again once everyone ahead has had a
+    # turn - the game's rule, per the Premier League's own guide. This
+    # caps it; max_claims is the natural ceiling.
+    max_success_per_gw: int = 3
     draft_shortlist: int = 80    # candidates scored per draft pick
     waiver_shortlist: int = 60   # free agents scored per waiver window
 

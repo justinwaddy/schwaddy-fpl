@@ -346,10 +346,17 @@ that too. It is the weakest fold.
 **Trades are out of scope.** Waivers are same-position swaps, which keeps
 the 2/5/5/3 quota valid by construction.
 
-**A player dropped during free agency is treated as immediately available
-to the next manager in the same window.** The game may instead put him on
-waivers; the API exposes no status that says either way. Small, and
-unverified.
+**A released player goes on waivers, not into free agency.** "Players
+released by other managers do not immediately become free agents.
+Initially, they can only be signed through a waiver request" - the
+Premier League's own guide. So a player dropped in waiver processing is
+not in that afternoon's free-agent pool, and one dropped in free agency
+is safe from everybody until next week's processing. The first version
+here had every discard available to the next manager the same afternoon,
+which made churn dearer than it is; it was flagged as unverified and
+then verified, and the simulator now follows the rule. The same guide
+says a successful claimant moves to the END of the waiver queue rather
+than being done for the week, which the simulator also now does.
 
 **The injury log can be optimistic about recoveries.** FPL can raise a
 chance-of-playing without touching `news_added`, so a recovery first seen
@@ -433,8 +440,8 @@ rather than two heads each learning half of one.
 
 The game's, not a convenient approximation of it. Snake draft, 15 rounds,
 2/5/5/3 with forced fill. Waivers from gameweek 2, up to three ranked
-claims each, processed in reverse-standings order, one success per
-manager per week. Then the free-agency window: whoever gets there first
+claims each, processed in reverse-standings order with a successful
+claimant moving to the back of the queue. Then the free-agency window: whoever gets there first
 takes the player, modelled as a fresh random order each week, because who
 actually gets there first is a fact about how often six people look at
 their phones and no archive records it. Eleven starters, exactly one
