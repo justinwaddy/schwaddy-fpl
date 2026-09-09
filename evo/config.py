@@ -76,7 +76,7 @@ class Config:
     # review found that a fresh genome at 0.25 against a reference at 1.75
     # was worth +18 points a season before evolution had done anything,
     # which had been reported as learning.
-    margin0: float = 0.25
+    margin0: float = 1.5
 
     # --- league mechanics ---
     waiver_first_gw: int = 2

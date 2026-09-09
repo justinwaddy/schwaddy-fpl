@@ -92,12 +92,14 @@ form chaser, the points-per-game manager, the baseline, and a noisy
 version of the baseline. None of them is ever in the population, so
 validation against them is a genuine out-of-sample test of the policy.
 
-Fitness is shaped rather than winner-take-all, because one season in a
-six-team league is far too noisy to rank two hundred genomes on titles:
-
-```
-1.0 * won  +  0.5 * (5 - rank)/5  +  0.5 * tanh(margin / 100)
-```
+Fitness is **season points**. That is what an aggregate-scoring league
+is won on, and it is what every paired measurement here reports, so the
+objective and the measurement are the same number. A genome's total is
+taken relative to the mean of every genome that played the same season
+in the same round - every genome in a round plays the same season, so
+that removes the season's level and nothing else. An earlier version
+shaped it with a win bonus and a rank term; that rewarded the seat a
+genome drew as much as the points it scored.
 
 ## The data, and the rule the whole thing rests on
 
@@ -464,6 +466,29 @@ or double, and what the bench is carrying. "Hold when leading, churn when
 chasing, wait when the bench is already full of passengers" are all
 things a genome can express. The reference heuristic has one number and
 no situation, which is the point of it.
+
+That one number was re-chosen under the new mechanics before anything
+was measured against it, because a reference that is allowed to chain
+claims at the old margin of 0.25 over-churns - fifteen wins in a week -
+and a weakened reference flatters the network for the wrong reason, the
+trap the first review caught. The heuristic against itself, paired,
+points a season over 0.25 with chaining:
+
+```
+              seq 0.5  seq 1.0  seq 1.5  seq 2.0  flat 0.25  flat 0.5  flat 1.0  flat 1.5  flat 2.0
+  2021-22       -18.5    +15.5    +26.3    +18.2      +17.9     +19.5      +5.3     +48.2     +47.0
+  2022-23        +3.4    -12.4    +18.1     +2.6       +5.0     -34.0      +4.4     -26.5     -12.3
+  2023-24        -7.8     -7.1     -0.3    -14.4      -12.2      -2.0      +0.7     -12.5     -22.5
+  2024-25       -10.3     +5.2     +8.2     +8.9       -1.4      -6.6      +3.8      -2.8      -6.0
+  2025-26       -11.8    -14.5    -16.9    -11.8      -17.0      -3.6      +7.2      +5.6      -9.1
+  mean           -9.0     -2.7     +7.1     +0.7       -1.5      -5.3      +4.3      +2.4      -0.6
+```
+
+`margin0` is 1.5 with chaining on: the best fixed-margin manager the
+mechanics allow, which is what the genome starts from and what it is
+scored against. The spread across seasons is wide - the most recent
+season prefers a flat list at 1.0 - so this is a defensible choice, not
+a sharp one.
 
 And the list is built the way a careful manager builds one. Take the best
 swap; add a couple of alternatives for the same drop in case a rival gets
