@@ -46,12 +46,12 @@ HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 10
+CACHE_VERSION = 11
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
     + ["gw_frac", "dc_avail", "xg_avail", "played_frac", "log_matches"]
-    + [f"{k}_{w}" for w in WINDOWS for k in ("ppm", "avail", "mins")]
+    + [f"{k}_{w}" for w in WINDOWS for k in ("ppm", "avail", "mins", "apps")]
     + ["xgi90_6", "xgi90_38", "bps90_6", "bps90_38", "bonus_38",
        "cs_38", "saves90_38", "dc90_12"]
     + ["prev_ppm", "prev_apps", "has_prev"]
@@ -656,7 +656,12 @@ def build_features(sd, cfg=None, times=None, _shared=None):
                 f[j] = (s[si["pts"]] / na) if na else 0.0
                 f[j + 1] = (s[si["mins"]] / (90.0 * ncl)) if ncl else 0.0
                 f[j + 2] = (s[si["mins"]] / (90.0 * na)) if na else 0.0
-                j += 3
+                # how many appearances the rate above rests on, so the
+                # head can weigh an 8.0 over three matches differently
+                # from an 8.0 over thirty - and, early in a season when
+                # every window is the same three matches, know it
+                f[j + 3] = na / float(W)
+                j += 4
 
             t6, ncl6 = club_window(club, g, 6)
             k6 = int(np.searchsorted(pts_ts, t6, "left"))

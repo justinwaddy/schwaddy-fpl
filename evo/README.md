@@ -269,13 +269,18 @@ typical draft, so `preseason_market` stays off.
 
 ### Features
 
-Eighty-two per player per gameweek, on each of the week's two clocks,
+Ninety-three per player per gameweek, on each of the week's two clocks,
 all as at the decision:
 
-- trailing points per appearance, minutes share and start share over the
-  club's last 3, 6, 12 and 38 matches - measured in the *club's* matches,
-  so a player who has lost his place is charged for the games he missed
-  rather than flattered by the last one he started;
+- trailing points per appearance, minutes share, minutes per appearance
+  and the NUMBER of appearances over the club's last 3, 6, 12 and 38
+  matches - measured in the *club's* matches, so a player who has lost
+  his place is charged for the games he missed rather than flattered by
+  the last one he started. The count sits beside the rate so the network
+  can weigh an 8.0 over three matches differently from an 8.0 over
+  thirty, and can tell - three gameweeks into a season, when every window
+  is the same three matches - that it is looking at one piece of
+  evidence four times;
 - xG and xA per 90, BPS, bonus, clean sheets, saves, defensive
   contribution;
 - last season's points per appearance and appearances, with an indicator
