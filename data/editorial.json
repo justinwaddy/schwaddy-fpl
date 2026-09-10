@@ -119,6 +119,14 @@
    "scope": "free",
    "text": "Ben Chilwell has re-signed for Crystal Palace and scored the winner at Fulham with his first touch, having come on for Tyrick Mitchell on 73 minutes. Mitchell scored both of Palace's other goals and is the pick of the free-agent defenders this week, but Chilwell plays his position and is now in the building - one to watch rather than a reason to pass.",
    "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+  },
+  {
+   "id": "2026-09-10-barcola-cramp-not-injury",
+   "ts": "2026-09-10T08:35 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Liverpool boss Andoni Iraola confirmed Barcola's exit at the hour mark against Atletico Madrid was cramp, not an injury, saying he is 'very happy' with the forward's first start and two clear second-half chances on goal. That corrects last night's 'doesn't look great' read, though it changes nothing about the underlying case: Barcola still has zero Premier League minutes started this season and faces Gakpo, Isak and Ngumoha for a place at Fulham on Saturday.",
+   "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
   }
  ],
  "runs": [
@@ -140,7 +148,7 @@
   {
    "ts": "2026-09-07T21:15 UTC",
    "published": 0,
-   "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Gro\u00df, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
+   "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Groß, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
   },
   {
    "ts": "2026-09-01T09:51",
@@ -220,7 +228,7 @@
   {
    "ts": "2026-09-05T21:21 UTC",
    "published": 3,
-   "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Gro\u00df, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
+   "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
   },
   {
    "ts": "2026-09-06T08:11 UTC",
@@ -251,6 +259,11 @@
    "ts": "2026-09-08T08:10 UTC",
    "published": 0,
    "note": "Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Palace, Tottenham, Man Utd, Sunderland, Bournemouth) plus general PL injury/transfer and rival-player searches, first run of the day, ~11 hours after last night's 21:15 claims refresh. Nothing moved: Collins' calf still has no confirmed Brentford timeline, Doku still pointed to the 13 September derby (after GW4's own deadline), Bijol still behind Elvedi at Leeds, Munoz still an impact sub at Forest, Barcola still just the one substitute cameo, Raya and the rest of the certain starters unchanged. One search (a general injury-news query) briefly surfaced what looked like a fresh Raya knee injury, but cross-checking arsenal.com and Sky Sports confirmed it was a stale search-index result from a past season (referencing Leicester City and Bolton Wanderers fixtures that do not apply to this Premier League season) - discarded rather than published. Nothing else new or citable to a permitted outlet."
+  },
+  {
+   "ts": "2026-09-10T08:35 UTC",
+   "published": 1,
+   "note": "Full club-by-club sweep ~11 hours after last night's 21:09 run (Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus general PL injury/transfer searches. Led with a correction: liverpoolfc.com quotes Iraola confirming last night's Barcola calf scare was cramp, not injury - he called the France forward's first start 'very happy'-making, with two clear chances on goal. Investigated but did not publish: Leeds recalled Bijol for Wednesday's Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts) - he's clearly fit but a heavily rotated cup side doesn't tell us anything about his Premier League standing behind Elvedi, so it changes nothing about the existing Bijol read and isn't news on its own. A search for Marmoush injury news returned two ESPN pieces headlined 'Marmoush ruled out of Manchester derby after Egypt injury' - both dated 9-10 September 2025, a full year stale, from before his move from City to Spurs; discarded rather than published. Collins' calf still has no confirmed Brentford timeline, Doku still stuck on Maresca's 'we need to wait' for the 13 September derby (after GW4's own deadline regardless), Munoz still an impact sub rather than confirmed starter at Forest, and Garner unchanged at 75% with no fresh update since Sunday's substitution. Maguire, Mitchell, Le Fee, Hill, Scott and the rest of the squad and free-agent shortlist checked and unchanged."
   }
  ]
 }
