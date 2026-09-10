@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-10T08:35 UTC",
- "summary": "The five claims hold from last night with one correction: Liverpool boss Iraola confirmed on liverpoolfc.com that Barcola's exit against Atletico Madrid was cramp, not an injury, so the Le Fee swap now rests purely on Barcola still having zero Premier League minutes started this season, not a fresh fitness scare. Bijol was recalled for Leeds' heavily-rotated Carabao Cup defeat at Chelsea (6-3, eight changes including two debuts) - he is clearly fit, but a rotated cup XI doesn't resolve his Premier League pecking order behind Elvedi and Muharemovic, so the Maguire claim stands. Mitchell/Munoz, Hill/Collins and Scott/Garner all reconfirmed unchanged after a fresh club-by-club sweep. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes on 11 September.",
+ "ts": "2026-09-10T21:16 UTC",
+ "summary": "The five claims hold from this morning, reconfirmed by a fresh club-by-club sweep: Mitchell/Munoz, Le Fee/Barcola, Maguire/Bijol, Hill/Collins and Scott/Garner are all unchanged, with Sky Sports' own report on the Munoz-to-Forest transfer and Leeds' own Brighton team news resurfacing as corroboration rather than new information. One thing checked and set aside: Arsenal's Saliba has a back injury with no return date, but he is a free agent nobody in this league can plausibly use and the model already prices him at avail 0.01, so he is not a claim target. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes on 11 September.",
  "claims": [
   {
    "rank": 1,
@@ -13,7 +13,7 @@
     "club": "CRY"
    },
    "drop": {
-    "name": "Muñoz",
+    "name": "Mu\u00f1oz",
     "code": "247348",
     "club": "NFO"
    },
@@ -39,7 +39,7 @@
    "rank": 2,
    "pos": "MID",
    "add": {
-    "name": "E.Le Fée",
+    "name": "E.Le F\u00e9e",
     "code": "484420",
     "club": "SUN"
    },
@@ -194,7 +194,7 @@
      "rank": 3,
      "pos": "MID",
      "add": {
-      "name": "Groß",
+      "name": "Gro\u00df",
       "code": "60307",
       "club": "BHA"
      },
@@ -343,6 +343,12 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made, ~11 hours after last night's board. Corrected the Le Fee/Barcola case: liverpoolfc.com quotes Iraola confirming last night's calf scare was cramp, not injury - the swap now rests on Barcola's lack of Premier League minutes alone. Also noted Bijol was recalled for Leeds' heavily-rotated Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts), which shows he's fit but does not resolve his league pecking order behind Elvedi. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland and Brighton. Checked and discarded: a search-index result claiming Marmoush suffered a Man City-era knee injury 'ahead of the Manchester derby' traced back to a stale ESPN pair from 9-10 September 2025, a full year old, from before his move to Spurs - not current, not published."
+  },
+  {
+   "ts": "2026-09-10T21:16 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~12.5 hours after this morning's board. Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) found nothing that moves any of the five. Confirmed unchanged: Bijol still behind Elvedi in Leeds' own team news, Collins' calf still has no scan result or timeline from Brentford's own site, Doku still stuck on Maresca's 'we're not sure yet' for the 13 September derby (after GW4's own deadline regardless), Barcola's cramp-not-injury already reflected from this morning, and Le Fee, Maguire, Hill and Scott all reconfirmed fit and starting. Investigated but not a claim target: Saliba's back injury (already priced into the model at avail 0.01, and he is a free agent, not on any squad in the league)."
   }
  ]
 }
