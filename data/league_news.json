@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T08:05 UTC",
+  "generated": "2026-09-10T22:46 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -467,6 +467,13 @@
         "title": "Napoli 0-1 Arsenal: Martin Odegaard goal clinches win for dominant Gunners in Champions League opener",
         "url": "https://www.skysports.com/football/news/11945/13582864/napoli-0-1-arsenal-martin-odegaard-goal-clinches-win-for-dominant-gunners-in-champions-league-opener"
       }
+    },
+    {
+      "id": "2026-09-10-benc-bench-depth",
+      "ts": "2026-09-10T22:46",
+      "kind": "opinion",
+      "text": "Ben C already posted the best gameweek three in the league, 60 points from his starting eleven, and still had the division's biggest bench sitting behind it doing nothing - 13 points that will never count. Everyone else is still trying to build one strong XI; he is quietly running two.",
+      "source": null
     }
   ],
   "runs": [
@@ -684,6 +691,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news run, no Premier League fixtures today (next is the 12th). Search results were unusually unreliable this run - old stories surfaced dated as current (a Ruben Amorim sacking from last January, a Cole Palmer toe injury from last November, Guardiola still named as Man City's manager when Maresca has had the job since June) - so nothing here was taken from a search summary alone; every fact was checked against the actual dated article. Three sourced items, all read in full from Wednesday's cup and Champions League ties: Chelsea's 6-3 Carabao Cup comeback over Leeds after trailing 2-0 (Sky Sports), where half-time substitutes Cole Palmer and Morgan Rogers did the damage - touches Edward, Big Ben and Robert (James also introduced at the break); Liverpool's 2-1 comeback win over Atletico Madrid (ESPN), Szoboszlai's equaliser for Small Ben and Justin's Barcola going off with cramp rather than an injury on his full debut; and a fresh angle on Wednesday's already-reported Arsenal win at Napoli - Marcus's Tzolis teed up Odegaard's winner from the bench, a detail last night's item on the same match did not carry. No opinion pieces, per the morning rule. Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded permanently as the ableist slur rule 4 rules out."
+    },
+    {
+      "ts": "2026-09-10T22:46 UTC",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, next is the 12th) and the live feed confirms GW3 is fully settled, 10 of 10 kicked off, nothing still to come, unchanged since this morning. Ten-plus searches across Man City, Arsenal, Liverpool, Newcastle, Chelsea and Brentford found nothing genuinely new: every promising lead traced back either to a stale article (Doku's calf from the Community Shield before the season started, Saka's hamstring and Gabriel's Brazil injury both a season out of date once the actual publish dates were checked, Guardiola still quoted as Man City manager) or to a story already on this page - a Liverpool fitness piece on Gakpo's adductor niggles and his doubt for Saturday's Fulham game turned out to be the same Wednesday Atletico absence last night's wrap already reported, so it was dropped rather than re-run with an extra sentence bolted on. No reported items published as a result. One opinion piece instead, built from tonight's table/live-feed printout and not touching anything used in a previous piece: Ben C posted the best gameweek three in the league (60 from his XI) while also carrying the biggest bench return (13), a fresh angle distinct from Tuesday's 'Delap Dance' joke about the same manager. The roast archive's only unused submission, Edward's 'Mong' about Robert, stays excluded permanently under the ableist-slur rule, not as a timing hold. No FLOP badges in today's automatic feed since no matches were played, so nothing to rewrite via reflop.py."
     }
   ]
 }
