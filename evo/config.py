@@ -63,6 +63,12 @@ class Config:
 
     # --- policy ---
     hidden: int = 24
+    # depth of the shared encoder. One is the default on purpose: the
+    # weights are found by mutation, a second layer roughens the search,
+    # and every gap column so far says capacity is in surplus, not short.
+    # It is a knob rather than an assertion: --layers 2 on the same
+    # cross-validation settles it.
+    layers: int = 1
     # residual policy: score = baseline + scale * net(features). The
     # heuristic baseline is the starting point, so a fresh genome plays
     # about as well as the repo's shrunk-mean manager and evolution only

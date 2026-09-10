@@ -49,6 +49,9 @@ def layout(cfg):
 
     take("W1", F * H, (F, H))
     take("b1", H, (H,))
+    if cfg.layers >= 2:
+        take("W2", H * H, (H, H))
+        take("b2", H, (H,))
     for k in HEADS:
         take(f"w_{k}", H + CONTEXT[k], (H + CONTEXT[k],))
         take(f"b_{k}", 1, (1,))
@@ -68,6 +71,9 @@ def new_genome(cfg, rng):
     F, H = N_FEATURES, cfg.hidden
     s, _ = sl["W1"]
     g[s] = rng.normal(0, 1.0 / np.sqrt(F), F * H)
+    if cfg.layers >= 2:
+        s, _ = sl["W2"]
+        g[s] = rng.normal(0, 1.0 / np.sqrt(H), H * H)
     for k in HEADS:
         s, _ = sl[f"w_{k}"]
         g[s] = rng.normal(0, 1.0 / np.sqrt(H + CONTEXT[k]), s.stop - s.start)
@@ -87,7 +93,8 @@ class Brain:
             raise ValueError(
                 f"this genome has {self.g.size} weights and the current "
                 f"configuration needs {n} ({N_FEATURES} features, "
-                f"{cfg.hidden} hidden). A checkpoint is tied to the feature "
+                f"{cfg.hidden} hidden, {cfg.layers} layer(s)). A checkpoint "
+                f"is tied to the feature "
                 f"set it was trained on: retrain it, or check out the "
                 f"revision it came from.")
         self.p = {k: self.g[s].reshape(sh) for k, (s, sh) in sl.items()}
@@ -100,11 +107,18 @@ class Brain:
         change between them."""
         if key not in self._H:
             n, g, F = Xn.shape
-            h = np.tanh(Xn.reshape(-1, F) @ self.p["W1"] + self.p["b1"])
+            h = self.hidden(Xn.reshape(-1, F))
             if len(self._H) > 12:         # two clocks a season, five seasons
                 self._H.clear()
             self._H[key] = h.reshape(n, g, -1).astype(np.float32)
         return self._H[key]
+
+    def hidden(self, X2d):
+        """The encoder on a (rows, F) matrix: one tanh layer, or two."""
+        h = np.tanh(X2d @ self.p["W1"] + self.p["b1"])
+        if "W2" in self.p:
+            h = np.tanh(h @ self.p["W2"] + self.p["b2"])
+        return h
 
     # -------------------------------------------------------------- heads
     def raw(self, head, key, Xn, rows, gw, ctx=None):

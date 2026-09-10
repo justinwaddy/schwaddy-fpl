@@ -48,7 +48,7 @@ def _cells(arrays, std, clock):
 
 
 def _head_raw(brain, head, Xn, ctx):
-    H = np.tanh(Xn @ brain.p["W1"] + brain.p["b1"])
+    H = brain.hidden(Xn)
     w = brain.p[f"w_{head}"]
     out = H @ w[:H.shape[1]] + brain.p[f"b_{head}"][0]
     if ctx is not None:
