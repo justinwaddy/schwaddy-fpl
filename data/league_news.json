@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T22:48 UTC",
+  "generated": "2026-09-10T08:05 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -437,6 +437,36 @@
       "kind": "opinion",
       "text": "Ben C called his squad Delap Dance without ever owning Liam Delap - Delap plays his football on Ben D's roster, not his. Ben D, for his part, christened his own team Quantum of Tzolis despite never picking Christos Tzolis, who belongs to Marcus: two grown men naming their squads after players in someone else's shed.",
       "source": null
+    },
+    {
+      "id": "2026-09-10-chelsea-leeds-carabao",
+      "ts": "2026-09-10T07:58",
+      "kind": "news",
+      "text": "Chelsea trailed 2-0 at half-time to Leeds in the Carabao Cup third round on Wednesday, then scored six without reply to win 6-3 at Stamford Bridge. Xabi Alonso's half-time substitutes did the damage: Cole Palmer scored a penalty and a second goal, Morgan Rogers set up four of the six, and Reece James also came on. Edward owns Palmer, Big Ben owns Rogers, and Robert owns James.",
+      "source": {
+        "title": "Chelsea 6-3 Leeds: Morgan Rogers-inspired Blues net SIX second-half goals in breathless comeback win",
+        "url": "https://www.skysports.com/football/chelsea-vs-leeds-united/7393748246969633232"
+      }
+    },
+    {
+      "id": "2026-09-10-liverpool-atletico-barcola-cramp",
+      "ts": "2026-09-10T08:00",
+      "kind": "news",
+      "text": "Liverpool came from behind to beat Atletico Madrid 2-1 in their Champions League opener at Anfield on Wednesday, Dominik Szoboszlai's equaliser and an Alexis Mac Allister strike turning the game around; Small Ben owns Szoboszlai. Justin's Bradley Barcola went off holding his calf just before the hour on his full Liverpool debut, after missing two clear first-half chances; head coach Andoni Iraola said afterwards it was cramp rather than an injury, pointing to Barcola having had no pre-season minutes.",
+      "source": {
+        "title": "Bradley Barcola limps out of Liverpool home debut against Atlético",
+        "url": "https://www.espn.com/soccer/story/_/id/49884201/bradley-barcola-liverpool-injury-atletico-madrid-champions-league"
+      }
+    },
+    {
+      "id": "2026-09-10-tzolis-odegaard-napoli",
+      "ts": "2026-09-10T08:02",
+      "kind": "news",
+      "text": "There was more to Wednesday's 1-0 Arsenal win at Napoli than Martin Odegaard's goal: the decisive move came from a one-two with substitute Christos Tzolis, whose own follow-up effort was then cleared off the line. Marcus owns Tzolis.",
+      "source": {
+        "title": "Napoli 0-1 Arsenal: Martin Odegaard goal clinches win for dominant Gunners in Champions League opener",
+        "url": "https://www.skysports.com/football/news/11945/13582864/napoli-0-1-arsenal-martin-odegaard-goal-clinches-win-for-dominant-gunners-in-champions-league-opener"
+      }
     }
   ],
   "runs": [
@@ -647,6 +677,13 @@
       "opinion": 2,
       "matchday": false,
       "note": "Evening wrap. No Premier League fixtures today - GW3 is fully settled and the table has been static since the weekend, so no HAUL/OVERTAKE/FLOP badges posted automatically today, nothing to rewrite there. Champions League did play tonight though, and it touched four of the six squads: led with Arsenal's 1-0 win at Napoli (Edward's Odegaard scored the winner, Robert's Saka missed a sitter) and Ben C's Gakpo being left out of the Atletico Madrid tie with a minor adductor issue (Liverpool's own site, direct Iraola quote). Two opinion pieces off the back of that plus the day-to-day: Robert's last-place table position paired with Saka's miss, and the irony that Ben C's 'Delap Dance' doesn't own Delap (Ben D does) while Ben D's 'Quantum of Tzolis' doesn't own Tzolis (Marcus does). Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded - it's a disablist slur and rule 4 rules it out permanently, not just for tonight."
+    },
+    {
+      "ts": "2026-09-10T08:05 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news run, no Premier League fixtures today (next is the 12th). Search results were unusually unreliable this run - old stories surfaced dated as current (a Ruben Amorim sacking from last January, a Cole Palmer toe injury from last November, Guardiola still named as Man City's manager when Maresca has had the job since June) - so nothing here was taken from a search summary alone; every fact was checked against the actual dated article. Three sourced items, all read in full from Wednesday's cup and Champions League ties: Chelsea's 6-3 Carabao Cup comeback over Leeds after trailing 2-0 (Sky Sports), where half-time substitutes Cole Palmer and Morgan Rogers did the damage - touches Edward, Big Ben and Robert (James also introduced at the break); Liverpool's 2-1 comeback win over Atletico Madrid (ESPN), Szoboszlai's equaliser for Small Ben and Justin's Barcola going off with cramp rather than an injury on his full debut; and a fresh angle on Wednesday's already-reported Arsenal win at Napoli - Marcus's Tzolis teed up Odegaard's winner from the bench, a detail last night's item on the same match did not carry. No opinion pieces, per the morning rule. Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded permanently as the ableist slur rule 4 rules out."
     }
   ]
 }
