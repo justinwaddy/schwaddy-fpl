@@ -127,6 +127,30 @@
    "scope": "mine",
    "text": "Liverpool boss Andoni Iraola confirmed Barcola's exit at the hour mark against Atletico Madrid was cramp, not an injury, saying he is 'very happy' with the forward's first start and two clear second-half chances on goal. That corrects last night's 'doesn't look great' read, though it changes nothing about the underlying case: Barcola still has zero Premier League minutes started this season and faces Gakpo, Isak and Ngumoha for a place at Fulham on Saturday.",
    "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
+  },
+  {
+   "id": "2026-09-11-barcola-available-fulham",
+   "ts": "2026-09-11T21:17 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Iraola told Friday's press conference that Barcola's cramp is not an injury and he 'should be available' for Saturday's Fulham game if training goes to plan - a likely second Liverpool start. The model still has him at just 0.16 availability and 2.4 next5, the same blind spot every marquee mid-season arrival runs into: it cannot see a player easing into a new team, only a name with no minutes.",
+   "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike"
+  },
+  {
+   "id": "2026-09-11-marmoush-tottenham-forward-competition",
+   "ts": "2026-09-11T21:17 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Tottenham's own site confirms James Maddison is back in Roberto De Zerbi's plans and Mohammed Kudus - who can play 'as a winger, as a number 10, as a striker up front' - is 'very close to being ready to start', while Mykhailo Mudryk has been ruled out six to eight weeks with an ankle injury from his Forest debut. One rival for Marmoush's central role has gone, but two more are converging on the same weekend.",
+   "url": "https://www.tottenhamhotspur.com/news/1089551/team-news-maddison-available-kudus-edging-closer-to-a-start"
+  },
+  {
+   "id": "2026-09-11-schuster-brentford-debut",
+   "ts": "2026-09-11T21:17 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Free agent Jannik Schuster made his Premier League debut replacing the injured Nathan Collins on Saturday, and Brentford's own site quotes Keith Andrews saying part of the decision to let Ethan Pinnock leave was confidence in Schuster's ability - he 'was thrown into it today and he produced.' The model has him at just 0.31 availability off a single appearance, the same blind spot that undersells every new arrival.",
+   "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
   }
  ],
  "runs": [
@@ -274,6 +298,11 @@
    "ts": "2026-09-11T09:05 UTC",
    "published": 0,
    "note": "Final pre-deadline sweep ~3.4 hours before GW4 waivers close (12:30 UTC). Covered every club touching the five live claims plus general PL injury/team news. Nothing new to publish: Forest's back three (Milenkovic/Murillo/Cunha) still doesn't include Munoz, matching what is already up; Collins' calf still has no scan result from Brentford's own site; Bijol is still behind Elvedi in Leeds' defence and Rodon's 8-10 week hamstring injury that opened that door was already published on 4 September; Barcola's cramp-not-injury correction is already up from yesterday; Mitchell is still starting and scoring for Palace with Chilwell's permanent move already covered; Le Fee is still starting and scoring for Sunderland; Alex Scott is confirmed a first-team regular at Bournemouth (an England call-up, not selection news). Checked and set aside as not material: Maguire has had a contract option triggered at Man Utd (premierleague-permitted source, manutd.com) - a confidence signal, not a change to his already-nailed status, so not worth a slot. Doku's status is unchanged since Maresca's 7 September 'I'm not sure yet' on the derby - now confirmed via premierleague.com itself - with nothing fresher from any permitted outlet this morning."
+  },
+  {
+   "ts": "2026-09-11T21:17 UTC",
+   "published": 3,
+   "note": "Full club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland) plus general PL injury news, in the light post-waivers window for GW4 (deadline tomorrow 12:30 UTC) and building the GW5 claims board. Led with three: liverpoolfc.com confirms Barcola should be available against Fulham after Friday's cramp scare (still just 0.16 avail in the model); tottenhamhotspur.com has Maddison back and Kudus close to starting as a striker option just as Mudryk goes down for 6-8 weeks, tightening the competition around Marmoush; and free agent Jannik Schuster's Brentford debut deputising for the injured Collins, with Andrews saying it factored into letting Pinnock leave (0.31 avail off one game). One false alarm chased down and discarded: a search summary claimed Gvardiol had missed City's whole season and was doubtful for Sunday's derby, but every fixture-consistent source (this week's predicted lineups, matching the real Man Utd v Man City fixture on 13 September) has him nailed at left-back - the scary version traced back to stale reporting on his January 2026 tibia fracture, resolved by May. Also discarded: a Brentford preview describing Collins back on the bench after a training-ground cut ahead of a Villa Park game - the real fixture list has Brentford's Villa trip in GW6, in October, not this week, so that article does not describe the current state; Collins' calf strain and unknown timeline stand as already reported. Checked and unchanged: Sunderland's Diarra still out (thigh), Xhaka/Le Fee/Sadiki still the midfield pivot; Forest's Igor Jesus/Delap pecking order for Saturday's trip to Villa could not be pinned to a permitted source, so no claim rests on it; Vuskovic and Bogle both still look first-choice with nothing new against either."
   }
  ]
 }

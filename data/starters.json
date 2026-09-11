@@ -1,7 +1,7 @@
 {
  "gw": 4,
  "deadline": "2026-09-12T12:30:00Z",
- "ts": "2026-09-11T14:19 UTC",
+ "ts": "2026-09-11T21:17 UTC",
  "summary": "Post-waivers deep pass on the final GW4 fifteen, run Friday afternoon after the claims for Scott, Bogle, Vuskovic and Ampadu landed and Bijol, Munoz, Garner and Doku left. Thirteen are likely: every one of them started all three league games (Barcola's three were for PSG and a debut, but he started midweek and Iraola says the cramp is nothing), and no permitted outlet reports an injury or a change. Collins is out with the calf strain that ended his Saturday after 16 minutes and a 25% API flag. Strand Larsen is the one doubt: benched for Nketiah at Fulham and on at half-time, with Mateta not in the squad. None is start because no fixture-specific confirmed XI or manager confirmation was published on a permitted outlet by Friday afternoon; Sky's line-up pages for last week and the club sites' Friday fitness updates (Arsenal, Leeds, Liverpool) are the evidence. Kick-offs: seven of the fifteen play at 3pm Saturday, Pickford and Marmoush at 5.30pm, Raya at 8pm, Vuskovic Sunday 2pm, the City pair Sunday 4.30pm, Bogle and Ampadu Monday 8pm.",
  "players": [
   {
@@ -153,7 +153,7 @@
    ]
   },
   {
-   "name": "Milenković",
+   "name": "Milenkovi\u0107",
    "code": "227444",
    "club": "NFO",
    "pos": "DEF",
@@ -254,15 +254,15 @@
    "pos": "FWD",
    "status": "likely",
    "verdict": "Started both games since joining, De Zerbi talking up goals",
-   "note": "Started the 0-0 at Forest on Saturday and went 83 minutes before Solanke replaced him, a week after 90 on debut against Newcastle. De Zerbi afterwards: 'he has all the qualities' to score 12 to 15. De Zerbi's minute limits are on Savio and Udogie, not him. Everton at home, 5.30pm Saturday; the pre-match press conference had not been published when checked.",
+   "note": "Started the 0-0 at Forest on Saturday and went 83 minutes before Solanke replaced him, a week after 90 on debut against Newcastle. De Zerbi afterwards: 'he has all the qualities' to score 12 to 15. Friday's pre-match press conference, not yet published when this file was last checked, is now up: Maddison is back in the frame and Kudus is 'very close to being ready to start' and can play as a striker, while Mudryk is ruled out 6-8 weeks with an ankle injury from his own Forest debut. No change to Marmoush's own status, but the competition for his central role is real and growing.",
    "sources": [
     {
      "title": "Confirmed line-ups | Forest vs Spurs",
      "url": "https://www.tottenhamhotspur.com/news/1088547/confirmed-line-ups-forest-vs-spurs"
     },
     {
-     "title": "Forest 0-0 Spurs | Every word of Roberto De Zerbi's post-match press conference",
-     "url": "https://www.tottenhamhotspur.com/news/1088666/forest-0-0-spurs-every-word-of-roberto-de-zerbis-post-match-press-conference"
+     "title": "Team news | Maddison available, Kudus edging closer to a start",
+     "url": "https://www.tottenhamhotspur.com/news/1089551/team-news-maddison-available-kudus-edging-closer-to-a-start"
     }
    ]
   },
@@ -300,6 +300,12 @@
    "gw": 4,
    "kind": "deep",
    "note": "Post-waivers deep pass on the final fifteen. Sky line-up pages for all ten GW3 matches read directly (the draft API's minutes and starts agree); Friday fitness updates read from arsenal.com, leedsunited.com and liverpoolfc.com; Brentford, Spurs and Brighton club pages for Collins, Marmoush and Vuskovic. Not obtainable on a permitted text page: Moyes, Rose, Andrews, Pereira, Glasner and De Zerbi's Friday press conferences (video only or not yet written up), and mancity.com refused the fetch, so City rests on Sky and premierleague.com. Verdicts: 13 likely, 1 doubt (Strand Larsen), 1 out (Collins). Changes from the early pass: Barcola bench to likely after his first start; the four departed players dropped and the four claims added."
+  },
+  {
+   "ts": "2026-09-11T21:17 UTC",
+   "gw": 4,
+   "kind": "light",
+   "note": "Light update in the same GW4 window, ~7 hours before the 12:30 UTC deadline. One change: Marmoush's note updated now that Friday's De Zerbi press conference is published on tottenhamhotspur.com - Maddison back, Kudus close to starting and able to play centrally, Mudryk out 6-8 weeks - status stays likely, no verdict change, but the note now reflects the real competition around his role rather than flagging the presser as unpublished. Everyone else unchanged: nothing found this run on Collins, Strand Larsen, Vuskovic, Bogle or the rest of the fifteen that overturns Friday afternoon's deep pass. One item investigated and deliberately NOT used: a search summary claiming Gvardiol had missed all of City's league season traced back to stale reporting on his resolved January 2026 leg fracture and is contradicted by every fixture-matched source for Sunday's derby, so his 'likely' stands unchanged and uncorrected because it was never wrong."
   }
  ],
  "previous": [
@@ -330,7 +336,7 @@
      }
     },
     {
-     "name": "Muñoz",
+     "name": "Mu\u00f1oz",
      "code": "247348",
      "status": "likely",
      "verdict": "Permanent Forest signing, minutes not yet nailed on",
@@ -350,7 +356,7 @@
      }
     },
     {
-     "name": "Milenković",
+     "name": "Milenkovi\u0107",
      "code": "227444",
      "status": "likely",
      "verdict": "Set in Forest's back three",
