@@ -195,7 +195,15 @@ async function bootstrap(cache, origin) {
 
 export async function compose(cache, origin = "https://live.invalid") {
   const game = await get(`${DRAFT}/game`);
-  const gw = game.current_event;
+  let gw = game.current_event;
+  // Between the last whistle of one gameweek and the deadline of the next,
+  // FPL still calls the finished one "current". The tab wants the one
+  // coming - its fixtures and who has players in each - from the moment
+  // the old one closes, not from Saturday's deadline. So roll forward as
+  // soon as the current gameweek is finished; nothing has kicked off, so
+  // every score below is null and every points line is zero.
+  const ahead = !!(game.current_event_finished && game.next_event && game.next_event > gw);
+  if (ahead) gw = game.next_event;
   if (!gw) throw new Error("no current gameweek");
 
   const [boot, det, fixtures, live, clock] = await Promise.all([
@@ -248,6 +256,32 @@ export async function compose(cache, origin = "https://live.invalid") {
   const picks = await Promise.all(entries.map(e =>
     get(`${DRAFT}/entry/${e.entry_id}/event/${gw}`)
       .then(j => (j && j.picks) || []).catch(() => [])));
+  // Before the deadline the picks endpoint for the coming gameweek is a
+  // 404 - line-ups are not set yet. The rosters are known though: the
+  // league's ownership list is current, waivers included. Slot order is
+  // last week's line-up for anyone who was in it, the newcomers after, so
+  // the page can still say who has players in each fixture. Points are
+  // zero either way until kick-off, when the real picks take over.
+  if (ahead && picks.every(p => !p.length)) {
+    const [status, prev] = await Promise.all([
+      get(`${DRAFT}/league/${LEAGUE}/element-status`).catch(() => null),
+      Promise.all(entries.map(e =>
+        get(`${DRAFT}/entry/${e.entry_id}/event/${game.current_event}`)
+          .then(j => (j && j.picks) || []).catch(() => []))),
+    ]);
+    const own = {};
+    for (const r of (status && status.element_status) || []) {
+      if (r.owner != null) (own[r.owner] = own[r.owner] || []).push(r.element);
+    }
+    entries.forEach((e, i) => {
+      const mine = new Set(own[e.entry_id] || []);
+      if (!mine.size) return;
+      const kept = prev[i].filter(p => mine.has(p.element))
+        .sort((a, b) => a.position - b.position).map(p => p.element);
+      const fresh = [...mine].filter(id => !kept.includes(id));
+      picks[i] = [...kept, ...fresh].map((element, k) => ({ element, position: k + 1 }));
+    });
+  }
   const priors = await Promise.all(entries.map(e => priorPoints(cache, origin, e.entry_id, gw)));
 
   const owned = new Set();
@@ -273,7 +307,7 @@ export async function compose(cache, origin = "https://live.invalid") {
   // player has the points he has rather than just the total.
   const elements = {};
   for (const id of owned) {
-    const l = live.elements[id] || live.elements[String(id)] || {};
+    const l = ((live && live.elements) || {})[id] || ((live && live.elements) || {})[String(id)] || {};
     const st = l.stats || {};
     const meta = boot.elements[id] || ["?", null, "MID"];
     const ex = {};
@@ -330,7 +364,7 @@ export async function compose(cache, origin = "https://live.invalid") {
   }
 
   return {
-    gw, finished: !!game.current_event_finished,
+    gw, finished: ahead ? false : !!game.current_event_finished,
     fetched: new Date().toISOString().slice(0, 19) + "Z",
     ttl: SNAP_TTL,
     teams: boot.teams, rules: boot.rules,

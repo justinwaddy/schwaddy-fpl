@@ -53,6 +53,13 @@ Or from a terminal, with Node installed:
       elements: { id: { n, t, p, pts, min, bonus, bps, fx:[fixture ids] } },   # owned players only
       managers: [ { entry, name, team, rank, total, event_total, prior, picks:[[element, slot], ...] } ] }
 
+`gw` is the gameweek in play, or the one coming: once FPL closes a
+gameweek the worker rolls to the next one straight away, so on a Friday
+the tab shows Saturday's fixtures and who has players in each. Until the
+deadline the picks endpoint is closed, so rosters come from the league's
+ownership list (waivers included) in last week's slot order, with
+newcomers on the end; the real line-ups take over at the deadline.
+
 `rank`, `total` and `event_total` are the game's standings, which FPL
 re-tallies only when it closes the gameweek - on a Sunday night they sit a
 whole day behind. `prior` is his cumulative total at the last closed
