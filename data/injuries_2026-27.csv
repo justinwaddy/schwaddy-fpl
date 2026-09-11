@@ -11,6 +11,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 54469,1785832691,1785832691,a,,,
 56979,1785832691,1784808083,u,,0.0,has departed the club as a free agent.
 56979,1787270210,1786267807,d,,75.0,Wrist injury - 75% chance of playing
+56979,1789134473,1786267807,i,75.0,0.0,Wrist injury - Unknown return date
 59735,1785832691,1784808084,d,,75.0,Unspecified injury - 75% chance of playing
 59735,1787910473,1787910473,a,75.0,100.0,
 60307,1785832691,1785832691,a,,,
@@ -50,6 +51,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 105717,1787270210,1786543683,u,,0.0,Has joined Konyaspor permanently
 106611,1785832691,1785832691,a,,,
 106760,1785832691,1785832691,a,,,
+106760,1789134473,1789131609,d,,75.0,Unspecified injury - 75% chance of playing
 106921,1787270210,1787270210,a,,,
 108413,1785832691,1785832691,a,,,
 108416,1785832691,1785832691,a,,,
@@ -390,6 +392,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 432720,1785832691,1785832691,a,,,
 432830,1785832691,1785832691,a,,,
 432830,1788894459,1788631206,d,,25.0,Calf injury - 25% chance of playing
+432830,1789134473,1788631206,i,,0.0,Calf injury - Unknown return date
 432987,1785832691,1785348010,i,,0.0,Knee injury - Unknown return date
 433036,1785832691,1785832691,a,,,
 433036,1787270210,1787234578,u,,0.0,Has joined Al Qadsiah permanently
@@ -585,6 +588,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 486672,1785832691,1785832691,a,,,
 486672,1787910473,1787596207,d,,75.0,Unspecified injury - 75% chance of playing
 486672,1788989362,1788105608,d,75.0,75.0,Calf injury - 75% chance of playing
+486672,1789134473,1788105608,i,75.0,0.0,Calf injury - Expected back 18 Sep
 487053,1785832691,1785832691,a,,,
 487117,1785832691,1784808083,i,,0.0,Ankle injury - Expected back 10 Oct
 487676,1785832691,1785832691,a,,,
