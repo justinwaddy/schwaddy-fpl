@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "deadline": "2026-09-12T12:30:00Z",
- "ts": "2026-09-07T20:27 UTC",
- "summary": "First GW4 pass, run on Monday evening at Justin's request, five days before the deadline and ahead of Friday's waivers, so it is the fixtures-and-form read rather than the press-conference read - every club's pre-match briefing is still to come. Two things frame the week: there is no international break (the September and October windows are merged into 21 Sept to 6 Oct), and City, Arsenal and Liverpool all play Champions League matchday one midweek. Eight of the fifteen look safe (Pickford, Raya, Gvardiol, Milenkovic, Schade, Tavernier, Marmoush, Haaland), all likely rather than start only because no fixture-specific XI exists yet. Four are genuine doubts, three of them corrections to last week's read: Bijol was dropped at Brighton behind new signing Elvedi, Munoz is still being built up to fitness behind Aina, Strand Larsen was benched for Nketiah at Fulham despite Mateta's injury, and Garner came off hurt on 77 minutes and is now flagged at 75%. Collins is out with the calf strain that ended his Saturday after 16 minutes, Doku is out with no training return reported, and Barcola stays bench after a 26-minute debut with Iraola asking for patience. Last week's verdicts, for the record: 11 of 15 right, wrong on Bijol, Munoz and Strand Larsen (all likely, all benched) and unlucky on Collins. This environment could not open the cited articles, so everything rests on search-result snippets from the permitted outlets; the scheduled research should redo the pass properly once the squad is final after Friday's waivers.",
+ "ts": "2026-09-11T14:19 UTC",
+ "summary": "Post-waivers deep pass on the final GW4 fifteen, run Friday afternoon after the claims for Scott, Bogle, Vuskovic and Ampadu landed and Bijol, Munoz, Garner and Doku left. Thirteen are likely: every one of them started all three league games (Barcola's three were for PSG and a debut, but he started midweek and Iraola says the cramp is nothing), and no permitted outlet reports an injury or a change. Collins is out with the calf strain that ended his Saturday after 16 minutes and a 25% API flag. Strand Larsen is the one doubt: benched for Nketiah at Fulham and on at half-time, with Mateta not in the squad. None is start because no fixture-specific confirmed XI or manager confirmation was published on a permitted outlet by Friday afternoon; Sky's line-up pages for last week and the club sites' Friday fitness updates (Arsenal, Leeds, Liverpool) are the evidence. Kick-offs: seven of the fifteen play at 3pm Saturday, Pickford and Marmoush at 5.30pm, Raya at 8pm, Vuskovic Sunday 2pm, the City pair Sunday 4.30pm, Bogle and Ampadu Monday 8pm.",
  "players": [
   {
    "name": "Pickford",
@@ -10,16 +10,12 @@
    "club": "EVE",
    "pos": "GKP",
    "status": "likely",
-   "verdict": "Ever-present number one, no fitness or rotation signal",
-   "note": "Started and finished all three league games, the last of them Sunday's 2-2 with Man Utd, where Sky's line-up page and match report have him in goal throughout. No permitted outlet has reported an injury, and there is no international break before GW4 (premierleague.com: the September and October windows are merged into 21 Sept to 6 Oct). Everton's game at Spurs is Saturday 12 Sept; no fixture-specific XI or Moyes press conference exists yet, so this stays likely rather than start.",
+   "verdict": "Ever-present number one, nothing reported against him",
+   "note": "Started and finished all three league games, the last of them Sunday's 2-2 with Man Utd, where Sky's line-up page has him in goal from the first minute. No permitted outlet has reported an injury or a change in goal. Everton go to Spurs at 5.30pm Saturday; Moyes' Friday press conference had not been written up on a permitted outlet when this was checked, so this stays likely rather than start.",
    "sources": [
     {
      "title": "Starting Lineups - Everton vs Man Utd | 06.09.2026",
      "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
-    },
-    {
-     "title": "When are the international breaks in 2026/27 Premier League season?",
-     "url": "https://www.premierleague.com/en/news/4689113/when-are-the-international-breaks-for-202627"
     }
    ]
   },
@@ -29,39 +25,54 @@
    "club": "ARS",
    "pos": "GKP",
    "status": "likely",
-   "verdict": "Undisputed number one, Kepa on the bench",
-   "note": "Started all three league games and played to the end of Sunday's 2-1 win over Chelsea, making an 89th-minute save from Estevao; Sky's line-up page lists Kepa Arrizabalaga among the substitutes and Arsenal's submitted squad list has Raya, Kepa and Meslier as the three keepers. Arsenal are at Napoli in the Champions League on Wednesday before Sunderland away on Saturday night, but Arteta has never rotated Raya for a league game. No Sunderland-specific XI yet, so likely rather than start.",
+   "verdict": "Started every game; Arteta's team news names no keeper issue",
+   "note": "Started all three league games, 90 minutes each, most recently Sunday's 2-1 win over Chelsea where Sky's line-up page lists him first. Arteta's pre-Sunderland update covers Ben White (fine), Timber (training for days) and Mosquera (close) and says nothing about the goalkeeper, which is the news. Arsenal play at the Stadium of Light at 8pm Saturday.",
    "sources": [
     {
      "title": "Starting Lineups - Arsenal vs Chelsea | 06.09.2026",
      "url": "https://www.skysports.com/football/arsenal-vs-chelsea/teams/559464"
     },
     {
-     "title": "Team news: Konsa handed first start against Chelsea",
-     "url": "https://www.arsenal.com/news/team-news-konsa-handed-first-start-against-chelsea-as5cb1S716B5"
+     "title": "Arteta's update on White, Mosquera and Timber",
+     "url": "https://www.arsenal.com/news/artetas-update-on-white-mosquera-and-timber-axoYv8N7qYHf"
     }
    ]
   },
   {
-   "name": "Bijol",
-   "code": "434752",
+   "name": "Bogle",
+   "code": "226182",
    "club": "LEE",
    "pos": "DEF",
-   "status": "doubt",
-   "verdict": "Fit but dropped at Brighton after a half-time hook v Brentford",
-   "note": "The GW3 read was wrong. Farke withdrew Bijol at half-time against Brentford (30 Aug) when he switched to a 4-3-3, then left him out of the XI at Brighton on 5 Sept - Leeds' own team news lists a back line of Bogle, Justin, Muharemovic, Elvedi and Gudmundsson, with Bijol coming on for Bogle on 61 minutes. Rodon's hamstring injury still removes one rival, and Bijol is fit, but new signing Elvedi has the spot for now and Farke has not explained the choice. Leeds host Newcastle on 14 Sept, so the press conference is a week away.",
+   "status": "likely",
+   "verdict": "Started all three, scored at Brighton; no injury flagged",
+   "note": "Started the three league games and scored Leeds' opener at Brighton on Saturday before coming off in the 61st minute, with no injury reported in Sky's match coverage. Farke's 10 September update says Rodon is still out and 'apart from this, no new injury concerns so far'. Leeds host Newcastle on Monday night, so the press conference nearest the game is still to come.",
    "sources": [
     {
-     "title": "Team News: Brighton & Hove Albion vs Leeds United",
-     "url": "https://www.leedsunited.com/en/news/team-news-brighton-and-hove-albion-vs-leeds-united"
+     "title": "Starting Lineups - Brighton vs Leeds | 05.09.2026",
+     "url": "https://www.skysports.com/football/brighton-and-hove-albion-vs-leeds-united/teams/559466"
     },
     {
-     "title": "Leeds 1-1 Brentford: Dominic Calvert-Lewin earns point for hosts with late tap-in",
-     "url": "https://www.skysports.com/football/news/11748/13571897/leeds-1-1-brentford-dominic-calvert-lewin-earns-point-for-hosts-with-late-tap-in-after-kevin-schades-brilliant-opener"
+     "title": "Daniel Farke provides update on duo's fitness ahead of Newcastle",
+     "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-update-on-duos-fitness-ahead-of-newcastle"
+    }
+   ]
+  },
+  {
+   "name": "Ampadu",
+   "code": "199598",
+   "club": "LEE",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Captain, 90 minutes in all three; no injury concerns",
+   "note": "Captained Leeds and played the full 90 in each of the three league games, most recently at Brighton on Saturday where Sky's line-up page has him starting with the armband. Farke's 10 September update names Rodon as the only absentee and no new concerns. Monday night at home to Newcastle.",
+   "sources": [
+    {
+     "title": "Starting Lineups - Brighton vs Leeds | 05.09.2026",
+     "url": "https://www.skysports.com/football/brighton-and-hove-albion-vs-leeds-united/teams/559466"
     },
     {
-     "title": "Daniel Farke provides fitness update ahead of Brighton clash",
-     "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-fitness-update-ahead-of-brighton-clash-a"
+     "title": "Daniel Farke provides update on duo's fitness ahead of Newcastle",
+     "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-update-on-duos-fitness-ahead-of-newcastle"
     }
    ]
   },
@@ -71,138 +82,16 @@
    "club": "BRE",
    "pos": "DEF",
    "status": "out",
-   "verdict": "Calf strain, forced off after 16 minutes, API says 25%",
-   "note": "Went off in the 17th minute of Saturday's 1-1 with Sunderland with Jannik Schuster on for his debut; Brentford's own injury update quotes Keith Andrews: \"It's a calf strain, I don't know the extent.\" Nothing newer has been published as of Monday evening and the FPL API has cut him to a 25% chance of playing. A calf strain that ends a game inside 20 minutes rarely clears in a week, so he is marked out; a positive Andrews update on Thursday or Friday would move him to doubt, and this is the verdict most worth re-checking before the deadline.",
+   "verdict": "Calf strain after 17 minutes; API has him at 25%",
+   "note": "Went off in the 17th minute of Saturday's 1-1 with Sunderland with Jannik Schuster on for his debut. Keith Andrews afterwards: 'It's a calf strain. I don't know the extent.' The draft API flags him at a 25% chance of playing. No later update from a permitted outlet before Saturday's trip to Bournemouth, and a week-old calf strain with no timeline is a miss.",
    "sources": [
     {
-     "title": "Nathan Collins injury update after Brentford v Sunderland",
+     "title": "Nathan Collins injury update",
      "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
     },
     {
-     "title": "Brentford 1 Sunderland 1: Vitaly Janelt nets in hard-fought draw at the Gtech",
-     "url": "https://www.brentfordfc.com/en/news/article/match-reports-brentford-1-sunderland-1-premier-league-vitaly-janelt-05-09-2026"
-    }
-   ]
-  },
-  {
-   "name": "Gvardiol",
-   "code": "477424",
-   "club": "MCI",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Ever-present at left-back, Porto midweek the only rotation risk",
-   "note": "Started all three league games and played the full 90 against Coventry on Saturday in a side Maresca changed only once; his 75th-minute withdrawal at Palace was Kovacic coming on to see out a 3-1 lead, and ESPN rated him 8 with an assist. ESPN's predicted City XI for Tuesday's Champions League trip to Porto names him, which is the one thing that could cost him minutes before Sunday's derby at Old Trafford. No derby-specific XI yet, so likely rather than start.",
-   "sources": [
-    {
-     "title": "Ndiaye and Fernandez set for City debuts against Coventry",
-     "url": "https://www.mancity.com/news/mens/manchester-city-v-coventry-city-team-news-63924206"
-    },
-    {
-     "title": "FC Porto vs. Manchester City: TV channel, team news, predicted line-ups",
-     "url": "https://www.espn.com/soccer/story/_/id/49847078/fc-porto-vs-manchester-city-2026-27-uefa-champions-league-ucl-tv-channel-how-watch-kickoff-live-stream-referee-injury-predicted-lineups"
-    }
-   ]
-  },
-  {
-   "name": "Milenkovi\u0107",
-   "code": "227444",
-   "club": "NFO",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Ever-present in Glasner's back three, no injury news",
-   "note": "Started and finished all three league games, 90 minutes each, including Saturday's 0-0 with Spurs; Sky's line-up pages have him alongside Murillo and Diomande in every game and no permitted outlet has mentioned a fitness concern. Forest are at Aston Villa on Saturday; no predicted XI or Glasner press conference exists yet, so likely rather than start.",
-   "sources": [
-    {
-     "title": "Starting Lineups - Liverpool vs N Forest | 29.08.2026",
-     "url": "https://www.skysports.com/football/liverpool-vs-nottingham-forest/teams/559460"
-    },
-    {
-     "title": "Nottingham Forest 0-0 Spurs: Another blank for Roberto De Zerbi in goalless draw at City Ground",
-     "url": "https://www.skysports.com/football/news/11675/13571936/nottingham-forest-0-0-spurs-another-blank-for-roberto-de-zerbi-in-goalless-draw-at-city-ground"
-    }
-   ]
-  },
-  {
-   "name": "Mu\u00f1oz",
-   "code": "247348",
-   "club": "NFO",
-   "pos": "DEF",
-   "status": "doubt",
-   "verdict": "Still being built up to full fitness, Aina holds the spot",
-   "note": "The GW3 read was too generous. Glasner said before the Spurs game that Munoz could debut but was still working towards full fitness after a late return from the World Cup, and that a start would come at Ola Aina's expense; in the event Aina started and Munoz got a 31-minute cameo. He had not been in the matchday 18 at Liverpool the week before. The model's 0.34 is a new-club discount but the fitness story points the same way for now. A second week of training should help and Villa away on Saturday is a plausible first start, but nothing published says so yet.",
-   "sources": [
-    {
-     "title": "Predicted line-ups for every Premier League team in Matchweek 3",
-     "url": "https://www.premierleague.com/en/news/4706313/predicted-line-ups-for-premier-league-teams-in-matchweek-3"
-    },
-    {
-     "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace in transfer deal worth up to \u00a322m",
-     "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
-    }
-   ]
-  },
-  {
-   "name": "Barcola",
-   "code": "482616",
-   "club": "LIV",
-   "pos": "MID",
-   "status": "bench",
-   "verdict": "Being eased in: 26-minute debut off the bench, Iraola asks for patience",
-   "note": "Came on in the 64th minute at Ipswich on Friday for his debut, which Iraola said was \"good for his fitness, for his build-up\" while asking for patience because he has not played regularly since July. ESPN's predicted Liverpool XI for Wednesday's Champions League opener against Atletico still has Victor Munoz, Wirtz and Gakpo behind Isak, with Barcola among the subs. If he starts against Atletico this flips to doubt for Fulham at home on Saturday; until then the bench is the honest read and matches the model's 0.16.",
-   "sources": [
-    {
-     "title": "Andoni Iraola press conference: Ipswich 0-2 Liverpool, Isak, Gakpo, Barcola debut and more",
-     "url": "https://www.liverpoolfc.com/news/andoni-iraola-press-conference-ipswich-0-2-liverpool-isak-gakpo-barcola-debut-and-more"
-    },
-    {
-     "title": "Liverpool boss Andoni Iraola says Bradley Barcola is 'in a good place' but patience will help",
-     "url": "https://www.espn.com/soccer/story/_/id/49834549/liverpool-boss-andoni-iraola-says-bradley-barcola-good-place-patience-help-premier-league"
-    },
-    {
-     "title": "Liverpool vs. Atletico Madrid: TV channel, team news, predicted line-ups",
-     "url": "https://www.espn.com/soccer/story/_/id/49857948/liverpool-vs-atletico-madrid-2026-27-uefa-champions-leaguetv-channel-how-watch-kick-live-stream-referee-injury-predicted-lineups"
-    }
-   ]
-  },
-  {
-   "name": "Doku",
-   "code": "248875",
-   "club": "MCI",
-   "pos": "MID",
-   "status": "out",
-   "verdict": "Calf injury, no training return reported, derby is the earliest date",
-   "note": "Has not played since the Community Shield. Maresca said before the Coventry game that Doku \"will not be ready\", and the two-to-three-week timeline he gave in August has passed without a return. The FPL API's expected-back date is 13 Sept, which is derby day itself, and no permitted outlet has reported him back in training or in the travelling squad for Porto. Even if he makes the bench at Old Trafford, a first start after five weeks out is very unlikely.",
-   "sources": [
-    {
-     "title": "Fernandez is ready to face Coventry, says Maresca",
-     "url": "https://www.mancity.com/news/mens/enzo-maresca-coventry-team-news-63924115"
-    },
-    {
-     "title": "Man City have given Maresca everything he needs to challenge this season",
-     "url": "https://www.espn.com/soccer/story/_/id/49837672/manchester-city-given-enzo-maresca-everything-needs-challenge-season"
-    }
-   ]
-  },
-  {
-   "name": "Garner",
-   "code": "232928",
-   "club": "EVE",
-   "pos": "MID",
-   "status": "doubt",
-   "verdict": "Withdrawn on 77 minutes v Man Utd, now flagged, Hackney waiting",
-   "note": "Started the last two league games but came off in the 77th minute on Sunday for Hayden Hackney, and the FPL API has since flagged him with an unspecified injury at 75%. He and Hackney are competing for one spot (Hackney started GW1, Garner GW2 and GW3), and Garner is only a month back from pre-season groin surgery, so even a clean bill of health is not a guaranteed start at Spurs on Saturday. No permitted outlet has given the reason for the substitution; Moyes' press conference on Thursday or Friday settles this.",
-   "sources": [
-    {
-     "title": "Everton 2-2 Man United (Sep 6, 2026) Final Score - ESPN",
-     "url": "https://www.espn.com/soccer/match/_/gameId/401879291/manchester-united-everton"
-    },
-    {
-     "title": "Bournemouth 1-1 Everton (Aug 29, 2026) Game Analysis - ESPN",
-     "url": "https://www.espn.com/soccer/report/_/gameId/401879296"
-    },
-    {
-     "title": "Fitness Updates: Garner, Dibling & Hackney",
-     "url": "https://www.evertonfc.com/news/2026/july/25/fitness-updates--garner--dibling---hackney/"
+     "title": "Starting Lineups - Brentford vs Sunderland | 05.09.2026",
+     "url": "https://www.skysports.com/football/brentford-vs-sunderland/teams/559465"
     }
    ]
   },
@@ -212,35 +101,35 @@
    "club": "BRE",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Started all three, Brentford's leading shot-taker, no concerns",
-   "note": "Kept his place in the one-change side against Sunderland on Saturday and was not among the three half-time substitutions; Brentford's preview called him their most productive attacker with eight shots and he was not on the club's absentee list. Bournemouth away on Saturday; no predicted XI yet, so likely rather than start.",
+   "verdict": "Started all three, full 90 against Sunderland",
+   "note": "Started every league game and played the whole of Saturday's draw with Sunderland, where Sky's line-up page has him at number 7 and the match report has him involved to the end. No injury or rotation reported by a permitted outlet. Brentford go to Bournemouth at 3pm Saturday; Andrews' pre-match press conference had not been written up on the club site when checked.",
    "sources": [
     {
-     "title": "Brentford v Sunderland confirmed team news: Keith Andrews makes one change",
-     "url": "https://www.brentfordfc.com/en/news/article/first-team-brentford-v-sunderland-confirmed-team-news-premier-league-dango-ouattara"
+     "title": "Starting Lineups - Brentford vs Sunderland | 05.09.2026",
+     "url": "https://www.skysports.com/football/brentford-vs-sunderland/teams/559465"
     },
     {
-     "title": "Match preview: Brentford v Sunderland",
-     "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-sunderland-premier-league-05-09-2026"
+     "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener",
+     "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
     }
    ]
   },
   {
-   "name": "Tavernier",
-   "code": "201658",
-   "club": "BOU",
-   "pos": "MID",
+   "name": "Gvardiol",
+   "code": "477424",
+   "club": "MCI",
+   "pos": "DEF",
    "status": "likely",
-   "verdict": "Started and scored at Newcastle, no knock reported",
-   "note": "Scored the ninth-minute opener in Saturday's 2-2 at Newcastle and neither Sky nor ESPN mentioned an early withdrawal or injury; he started the previous two as well. Bournemouth's known absentees are Kroupi and Semenyo. Brentford at home on Saturday; no Rose press conference or predicted XI yet, so likely rather than start.",
+   "verdict": "Started all three; derby injury news is O'Reilly and Doku",
+   "note": "Started all three league games, the full 90 in the 1-0 over Coventry on Saturday where Sky's line-up page lists him at 24. Maresca's injury talk before the derby is about Nico O'Reilly (back, 'probably yes') and Doku (calf, unsure), not the back four. Old Trafford, 4.30pm Sunday, three days after the Champions League trip to Porto.",
    "sources": [
     {
-     "title": "Newcastle 2-2 Bournemouth: Jacob Ramsey scores late equaliser as Cherries blow another lead",
-     "url": "https://www.skysports.com/football/news/11661/13565658/newcastle-2-2-bournemouth-jacob-ramsey-scores-late-equaliser-as-cherries-blow-another-lead"
+     "title": "Starting Lineups - Man City vs Coventry | 05.09.2026",
+     "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
     },
     {
-     "title": "Newcastle 2-2 Bournemouth (Sep 5, 2026) Game Analysis - ESPN",
-     "url": "https://www.espn.com/soccer/report/_/gameId/401879286"
+     "title": "Maresca provides latest injury update on O'Reilly and Doku",
+     "url": "https://www.premierleague.com/en/news/4712847/maresca-provides-latest-injury-update-on-oreilly"
     }
    ]
   },
@@ -250,16 +139,111 @@
    "club": "MCI",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Scored in all three, in the leadership group, no injury",
-   "note": "Started every league game and scored the winner against Coventry on Saturday, his 300th club goal; Maresca named him in City's four-man leadership group and ESPN's predicted XI for Porto on Tuesday has him starting, with the derby at Old Trafford on Sunday. Nothing suggests rest or rotation. No derby-specific XI yet, so likely rather than start.",
+   "verdict": "Scored in all three; nothing reported against him",
+   "note": "Started every league game and scored the winner against Coventry on Saturday, then a brace at Porto in midweek. Maresca's pre-derby injury news does not touch him. Manchester derby at Old Trafford, 4.30pm Sunday. Likely rather than start only because no permitted outlet has published a confirmed or two-source XI for this fixture.",
    "sources": [
     {
      "title": "Man City 1-0 Coventry: Erling Haaland ensures perfect Premier League record is preserved under Enzo Maresca",
-     "url": "https://www.skysports.com/football/news/11661/13565680/man-city-1-0-coventry-erling-haaland-ensures-perfect-premier-league-record-is-preserved-under-enzo-maresca"
+     "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/report/559471"
     },
     {
-     "title": "Maresca confirms City's four-strong captain's leadership group",
-     "url": "https://www.mancity.com/news/mens/manchester-city-v-coventry-enzo-maresca-written-preview-63924116"
+     "title": "Maresca provides latest injury update on O'Reilly and Doku",
+     "url": "https://www.premierleague.com/en/news/4712847/maresca-provides-latest-injury-update-on-oreilly"
+    }
+   ]
+  },
+  {
+   "name": "Milenković",
+   "code": "227444",
+   "club": "NFO",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "90 minutes in all three, in Forest's confirmed XI last week",
+   "note": "Started and finished all three league games; Spurs' confirmed line-ups page for Saturday's 0-0 at the City Ground has him in Forest's back line. No injury reported by a permitted outlet. Forest go to Villa Park at 3pm Saturday; no Forest press conference write-up was available on a permitted outlet when checked.",
+   "sources": [
+    {
+     "title": "Confirmed line-ups | Forest vs Spurs",
+     "url": "https://www.tottenhamhotspur.com/news/1088547/confirmed-line-ups-forest-vs-spurs"
+    }
+   ]
+  },
+  {
+   "name": "Vuskovic",
+   "code": "610799",
+   "club": "BHA",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Started all three, scored v Leeds, Hurzeler backing him",
+   "note": "Started every league game at centre-back and headed the equaliser against Leeds on Saturday. Hurzeler afterwards: he 'has the physicality to adapt quickly to the Premier League' and plays maturely for his age, with a caveat that he can switch off. Brighton go to Coventry at 2pm Sunday; the pre-match press conference is video only on the club site.",
+   "sources": [
+    {
+     "title": "Starting Lineups - Brighton vs Leeds | 05.09.2026",
+     "url": "https://www.skysports.com/football/brighton-and-hove-albion-vs-leeds-united/teams/559466"
+    },
+    {
+     "title": "Reaction: Fabian Hurzeler on draw against Leeds",
+     "url": "https://www.brightonandhovealbion.com/media-article/reaction-fabian-hurzeler-on-draw-against-leeds"
+    }
+   ]
+  },
+  {
+   "name": "Barcola",
+   "code": "482616",
+   "club": "LIV",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "First start midweek, cramp only, Gakpo doubtful beside him",
+   "note": "Made his first Liverpool start against Atletico on Wednesday, from the right, and went off in the second half with cramp. Iraola on Friday: 'Barcola was just cramps, there's no injury. He should be available if everything goes normal.' Gakpo missed midweek with an adductor problem and had not trained, which opens a wing. Fulham at Anfield, 3pm Saturday. Up from bench.",
+   "sources": [
+    {
+     "title": "LFC fitness update: Iraola provides latest on Gakpo, Barcola and Ekitike",
+     "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike"
+    },
+    {
+     "title": "Liverpool 2-1 A Madrid - Match Report",
+     "url": "https://www.skysports.com/football/liverpool-vs-atletico-madrid/report/577604"
+    },
+    {
+     "title": "Liverpool's injury list, suspensions and availability",
+     "url": "https://www.liverpoolfc.com/news/liverpools-injury-list-suspensions-and-availability"
+    }
+   ]
+  },
+  {
+   "name": "Scott",
+   "code": "503139",
+   "club": "BOU",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Started all three under Rose; ten-point weeks back to back",
+   "note": "Started every league game, 90 minutes at Newcastle on Saturday per Sky's line-up page, and has scored in the last two. Bournemouth's new head coach Marco Rose has injuries elsewhere (Kroupi long term, Adams and Brooks monitored, Christie suspended) that make his place safer. Brentford at home, 3pm Saturday; Rose's pre-match press conference is video only on the club site.",
+   "sources": [
+    {
+     "title": "Starting Lineups - Newcastle vs B'mouth | 05.09.2026",
+     "url": "https://www.skysports.com/football/newcastle-united-vs-bournemouth/teams/559472"
+    },
+    {
+     "title": "Newcastle 2-2 Bournemouth: Jacob Ramsey scores late equaliser as Cherries blow another lead",
+     "url": "https://www.skysports.com/football/news/11661/13565658/newcastle-2-2-bournemouth-jacob-ramsey-scores-late-equaliser-as-cherries-blow-another-lead"
+    }
+   ]
+  },
+  {
+   "name": "Tavernier",
+   "code": "201658",
+   "club": "BOU",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Started all three, scored at Newcastle, no injury reported",
+   "note": "Started every league game and scored Bournemouth's first at Newcastle on Saturday before coming off in the 88th minute. No injury reported by a permitted outlet; Rose's known absentees are Kroupi, Christie (suspended) and possibly Adams and Brooks. Brentford at home, 3pm Saturday.",
+   "sources": [
+    {
+     "title": "Starting Lineups - Newcastle vs B'mouth | 05.09.2026",
+     "url": "https://www.skysports.com/football/newcastle-united-vs-bournemouth/teams/559472"
+    },
+    {
+     "title": "Newcastle 2-2 Bournemouth: Jacob Ramsey scores late equaliser as Cherries blow another lead",
+     "url": "https://www.skysports.com/football/news/11661/13565658/newcastle-2-2-bournemouth-jacob-ramsey-scores-late-equaliser-as-cherries-blow-another-lead"
     }
    ]
   },
@@ -269,8 +253,8 @@
    "club": "TOT",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Spurs' first-choice striker, Solanke 'not ready', Richarlison out of squad",
-   "note": "Started both league games since arriving on loan, 90 minutes against Newcastle and 83 against Forest before Solanke replaced him. De Zerbi said afterwards \"if we want to score, I think Marmoush has 15 goals\" and that Solanke \"is not ready yet\" and needs time and work; ESPN reports Richarlison was left out of Tottenham's Premier League squad. Everton at home on Saturday. The model's 0.59 is still catching up with the minutes. No fixture-specific XI yet, so likely rather than start.",
+   "verdict": "Started both games since joining, De Zerbi talking up goals",
+   "note": "Started the 0-0 at Forest on Saturday and went 83 minutes before Solanke replaced him, a week after 90 on debut against Newcastle. De Zerbi afterwards: 'he has all the qualities' to score 12 to 15. De Zerbi's minute limits are on Savio and Udogie, not him. Everton at home, 5.30pm Saturday; the pre-match press conference had not been published when checked.",
    "sources": [
     {
      "title": "Confirmed line-ups | Forest vs Spurs",
@@ -279,10 +263,6 @@
     {
      "title": "Forest 0-0 Spurs | Every word of Roberto De Zerbi's post-match press conference",
      "url": "https://www.tottenhamhotspur.com/news/1088666/forest-0-0-spurs-every-word-of-roberto-de-zerbis-post-match-press-conference"
-    },
-    {
-     "title": "Tottenham leave Richarlison out of Premier League squad amid exit talk",
-     "url": "https://www.espn.com/soccer/story/_/id/49815813/tottenham-leave-richarlison-premier-league-squad-amid-exit-talk"
     }
    ]
   },
@@ -292,20 +272,12 @@
    "club": "CRY",
    "pos": "FWD",
    "status": "doubt",
-   "verdict": "Benched for Nketiah at Fulham despite Mateta's injury, on at half-time",
-   "note": "Mateta's three-week hamstring absence did not hand him the shirt: Palace's own team news for Fulham on Saturday lists Nketiah as the lone striker with Strand Larsen on the bench, and he came on at half-time for Nketiah as Palace turned 2-1 down into a 3-2 win. Sage said the first-half \"mindset of the team was low\" and that the second-half changes fixed it, which argues for a recall against Ipswich at home on Saturday, but Nketiah assisted the first goal and Sage has said nothing about the pair. Fifty-fifty until Friday's press conference.",
+   "verdict": "Benched for Nketiah at Fulham, on at half-time",
+   "note": "Nketiah started at Fulham on Saturday with Strand Larsen among the substitutes; he came on at the break. That is one start in three (62 minutes against Newcastle) with 27 and 45 off the bench either side. Mateta was not in the squad at Fulham, so the competition is Nketiah alone. Ipswich at home, 3pm Saturday; Glasner's pre-match press conference had not been written up on a permitted outlet when checked.",
    "sources": [
     {
-     "title": "Team News: Double change for Palace against Fulham",
-     "url": "https://www.cpfc.co.uk/news/first-team/team-news-double-change-for-palace-against-fulham/"
-    },
-    {
-     "title": "Sage reaction after Eagles see off Fulham",
-     "url": "https://www.cpfc.co.uk/news/first-team/sage-reaction-after-eagles-see-off-fulham/"
-    },
-    {
-     "title": "Team News: Sage updates on Sarr ahead of Fulham",
-     "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-updates-ahead-of-fulham/"
+     "title": "Starting Lineups - Fulham vs C Palace | 05.09.2026",
+     "url": "https://www.skysports.com/football/fulham-vs-c-palace/teams/8797992523615154232"
     }
    ]
   }
@@ -322,6 +294,12 @@
    "gw": 4,
    "kind": "deep",
    "note": "Early deep pass for GW4 at Justin's request, before the waiver window (waivers 11 Sept 12:30 UTC, deadline 12 Sept 12:30 UTC). Ten clubs researched via permitted-outlet search results only - article fetches are blocked from this environment, so nothing was page-verified. Verdicts: 8 likely, 4 doubt (Bijol, Munoz, Garner, Strand Larsen), 1 bench (Barcola), 2 out (Collins, Doku). Three GW3 'likely' calls that turned out to be benchings (Bijol, Munoz, Strand Larsen) are downgraded to doubt; Collins goes out on the calf strain and the API's 25% flag. The pre-match press conferences on 10-11 Sept (Moyes on Garner, Andrews on Collins, Sage on Strand Larsen, Glasner on Munoz) and Liverpool v Atletico on 9 Sept (does Barcola start) are the checks that would move a verdict. A fresh deep pass after waivers is still warranted."
+  },
+  {
+   "ts": "2026-09-11T14:19 UTC",
+   "gw": 4,
+   "kind": "deep",
+   "note": "Post-waivers deep pass on the final fifteen. Sky line-up pages for all ten GW3 matches read directly (the draft API's minutes and starts agree); Friday fitness updates read from arsenal.com, leedsunited.com and liverpoolfc.com; Brentford, Spurs and Brighton club pages for Collins, Marmoush and Vuskovic. Not obtainable on a permitted text page: Moyes, Rose, Andrews, Pereira, Glasner and De Zerbi's Friday press conferences (video only or not yet written up), and mancity.com refused the fetch, so City rests on Sky and premierleague.com. Verdicts: 13 likely, 1 doubt (Strand Larsen), 1 out (Collins). Changes from the early pass: Barcola bench to likely after his first start; the four departed players dropped and the four claims added."
   }
  ],
  "previous": [
@@ -352,7 +330,7 @@
      }
     },
     {
-     "name": "Mu\u00f1oz",
+     "name": "Muñoz",
      "code": "247348",
      "status": "likely",
      "verdict": "Permanent Forest signing, minutes not yet nailed on",
@@ -372,7 +350,7 @@
      }
     },
     {
-     "name": "Milenkovi\u0107",
+     "name": "Milenković",
      "code": "227444",
      "status": "likely",
      "verdict": "Set in Forest's back three",
