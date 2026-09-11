@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T22:46 UTC",
+  "generated": "2026-09-11T07:59 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -474,6 +474,36 @@
       "kind": "opinion",
       "text": "Ben C already posted the best gameweek three in the league, 60 points from his starting eleven, and still had the division's biggest bench sitting behind it doing nothing - 13 points that will never count. Everyone else is still trying to build one strong XI; he is quietly running two.",
       "source": null
+    },
+    {
+      "id": "2026-09-11-sesko-derby-case",
+      "ts": "2026-09-11T07:55",
+      "kind": "news",
+      "text": "Benjamin Sesko followed up his Premier League goal at Everton with another in Manchester United's 4-0 Champions League win over Sabah FK on Thursday, putting pressure on Michael Carrick to start him in Sunday's Manchester derby. Robert owns Sesko, who already has 5 points on the board for the gameweek.",
+      "source": {
+        "title": "Sesko makes his case for Man United ahead of Manchester derby",
+        "url": "https://www.espn.com/soccer/story/_/id/49897449/benjamin-sesko-makes-case-manchester-united-ahead-manchester-derby"
+      }
+    },
+    {
+      "id": "2026-09-11-chelsea-injury-list",
+      "ts": "2026-09-11T07:56",
+      "kind": "news",
+      "text": "Chelsea head coach Xabi Alonso said this week that Marco Palestra, Moises Caicedo, Emmanuel Emegha and Jordan Henderson all remain sidelined, with only Levi Colwill back available, as the club prepares to host Hull City on Saturday. Marcus owns Palestra, who has yet to make his Chelsea debut this season.",
+      "source": {
+        "title": "Xabi Alonso confirms Chelsea team news for Leeds visit",
+        "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-leeds-visit"
+      }
+    },
+    {
+      "id": "2026-09-11-newcastle-hall-hornicek",
+      "ts": "2026-09-11T07:57",
+      "kind": "news",
+      "text": "Newcastle head coach Matthias Jaissle praised Lewis Hall, who set up the only goal in Tuesday's Carabao Cup win over Millwall, and goalkeeper Lukas Hornicek, who has kept clean sheets in his last two away matches, ahead of Monday's trip to Leeds. Ben C owns both.",
+      "source": {
+        "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
+        "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+      }
     }
   ],
   "runs": [
@@ -698,6 +728,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, next is the 12th) and the live feed confirms GW3 is fully settled, 10 of 10 kicked off, nothing still to come, unchanged since this morning. Ten-plus searches across Man City, Arsenal, Liverpool, Newcastle, Chelsea and Brentford found nothing genuinely new: every promising lead traced back either to a stale article (Doku's calf from the Community Shield before the season started, Saka's hamstring and Gabriel's Brazil injury both a season out of date once the actual publish dates were checked, Guardiola still quoted as Man City manager) or to a story already on this page - a Liverpool fitness piece on Gakpo's adductor niggles and his doubt for Saturday's Fulham game turned out to be the same Wednesday Atletico absence last night's wrap already reported, so it was dropped rather than re-run with an extra sentence bolted on. No reported items published as a result. One opinion piece instead, built from tonight's table/live-feed printout and not touching anything used in a previous piece: Ben C posted the best gameweek three in the league (60 from his XI) while also carrying the biggest bench return (13), a fresh angle distinct from Tuesday's 'Delap Dance' joke about the same manager. The roast archive's only unused submission, Edward's 'Mong' about Robert, stays excluded permanently under the ableist-slur rule, not as a timing hold. No FLOP badges in today's automatic feed since no matches were played, so nothing to rewrite via reflop.py."
+    },
+    {
+      "ts": "2026-09-11T07:59 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. No PL fixtures today (rest day before Saturday's GW4 slate) so focused searches on the clubs most represented across the six squads plus press conferences ahead of the weekend. Three items published, all verified against permitted-source articles with confirmed recent publish dates: Sesko's derby case (ESPN, published today), Chelsea's four-man injury list ahead of Hull (chelseafc.com, published Monday), and Jaissle's praise for Hall and Hornicek ahead of the Leeds trip (newcastleunited.com, published last night). Dropped several leads after checking actual publish dates rather than search summaries: a Cherki quadriceps tear and Marmoush knee injury both traced back to September 2025 articles despite reading as current in search snippets (the 'Manchester derby' and 'a few weeks before the next international break' framing matched last year, not this weekend's fixture), an Arsenal pre-Sunderland presser dated February 2026 referencing a different Sunderland meeting entirely, and a Cole Palmer groin update stamped February 2026. No opinion pieces, as instructed for a morning run. Roast archive checked: the one unused submission (Edward's one-word line about Robert) is a slur and stays excluded permanently under rule 4, not held for timing - morning runs skip opinion pieces anyway."
     }
   ]
 }
