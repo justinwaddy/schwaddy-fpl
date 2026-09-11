@@ -1,7 +1,7 @@
 {
- "generated": "2026-09-11T13:48",
+ "generated": "2026-09-11T13:55",
  "gw": 4,
- "model": "/home/user/schwaddy-fpl/data/evo_model.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
  "offline": false,
  "window": "free_agency",
@@ -43,7 +43,7 @@
    "news": "",
    "p_play": 0.847,
    "base": 3.9,
-   "ep": 3.41
+   "ep": 3.4
   },
   {
    "id": 471,
@@ -91,7 +91,7 @@
    "news": "",
    "p_play": 0.979,
    "base": 5.03,
-   "ep": 4.99
+   "ep": 4.98
   },
   {
    "id": 338,
@@ -189,7 +189,7 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.202,
    "base": 0.71,
-   "ep": 0.2
+   "ep": 0.21
   }
  ],
  "xi_ep": 43.3,
@@ -197,7 +197,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 20.58,
+   "gain": 20.57,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 19.49,
+   "gain": 19.43,
    "change": 2,
    "fallback": false,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.08,
+   "gain": 12.1,
    "change": 3,
    "fallback": false,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.89,
+   "gain": 10.91,
    "change": 3,
    "fallback": true,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.7,
+   "gain": 10.66,
    "change": 3,
    "fallback": true,
    "add": {
@@ -347,7 +347,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.6,
+   "gain": 10.59,
    "change": 3,
    "fallback": true,
    "add": {
@@ -377,7 +377,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.03,
+   "gain": 10.02,
    "change": 3,
    "fallback": true,
    "add": {
@@ -407,7 +407,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.83,
+   "gain": 9.82,
    "change": 4,
    "fallback": false,
    "add": {
@@ -437,7 +437,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.14,
+   "gain": 9.15,
    "change": 5,
    "fallback": false,
    "add": {
@@ -467,7 +467,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.83,
+   "gain": 7.99,
    "change": 6,
    "fallback": false,
    "add": {
@@ -527,37 +527,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.78,
-   "change": 7,
-   "fallback": true,
-   "add": {
-    "id": 481,
-    "code": 215379,
-    "name": "Anderson",
-    "pos": "MID",
-    "team": "MCI",
-    "status": "a",
-    "news": "",
-    "p_play": 0.913,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 6.75,
+   "gain": 6.81,
    "change": 7,
    "fallback": true,
    "add": {
@@ -586,8 +556,38 @@
    }
   },
   {
+   "pos": "MID",
+   "gain": 6.79,
+   "change": 7,
+   "fallback": true,
+   "add": {
+    "id": 481,
+    "code": 215379,
+    "name": "Anderson",
+    "pos": "MID",
+    "team": "MCI",
+    "status": "a",
+    "news": "",
+    "p_play": 0.913,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.15,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
    "pos": "DEF",
-   "gain": 5.96,
+   "gain": 5.97,
    "change": 8,
    "fallback": false,
    "add": {
@@ -617,7 +617,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.21,
+   "gain": 5.2,
    "change": 8,
    "fallback": true,
    "add": {
@@ -647,7 +647,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.08,
+   "gain": 5.12,
    "change": 8,
    "fallback": true,
    "add": {
@@ -677,7 +677,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 4.47,
+   "gain": 4.48,
    "change": 9,
    "fallback": false,
    "add": {
@@ -767,7 +767,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.78,
+   "gain": 3.77,
    "change": 10,
    "fallback": true,
    "add": {
@@ -797,7 +797,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.54,
+   "gain": 3.53,
    "change": 10,
    "fallback": true,
    "add": {
@@ -827,7 +827,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 3.43,
+   "gain": 3.41,
    "change": 11,
    "fallback": false,
    "add": {
@@ -917,7 +917,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.12,
+   "gain": 3.03,
    "change": 13,
    "fallback": true,
    "add": {
@@ -947,7 +947,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.73,
+   "gain": 2.87,
    "change": 14,
    "fallback": false,
    "add": {
@@ -1007,7 +1007,7 @@
   },
   {
    "pos": "MID",
-   "gain": 2.64,
+   "gain": 2.65,
    "change": 15,
    "fallback": true,
    "add": {
@@ -1037,7 +1037,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 1.98,
+   "gain": 2.09,
    "change": 16,
    "fallback": false,
    "add": {
@@ -1067,7 +1067,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 1.85,
+   "gain": 2.02,
    "change": 16,
    "fallback": true,
    "add": {
