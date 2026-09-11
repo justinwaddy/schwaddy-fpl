@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T07:59 UTC",
+  "generated": "2026-09-11T22:44 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -504,6 +504,23 @@
         "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
         "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
       }
+    },
+    {
+      "id": "2026-09-11-arteta-mosquera-timber",
+      "ts": "2026-09-11T22:43",
+      "kind": "news",
+      "text": "Mikel Arteta's press conference ahead of Saturday's trip to Sunderland touched two Arsenal defenders held in this league: he said Cristhian Mosquera is 'doing really well' and could be back 'for this game or the next one,' and that Jurrien Timber 'looks in good shape' after training with the squad for a few days. Robert owns Mosquera, Edward owns Timber.",
+      "source": {
+        "title": "Every word from Arteta's pre-Sunderland presser",
+        "url": "https://www.arsenal.com/news/every-word-from-artetas-pre-sunderland-presser-akCWE6B1yPR2"
+      }
+    },
+    {
+      "id": "2026-09-11-waiver-callback",
+      "ts": "2026-09-11T22:44",
+      "kind": "opinion",
+      "text": "This page needled the league on 7 September for a gameweek podium that belonged entirely to free agents - Mitchell, Bogle, Barnes and Vuskovic, all outscoring anything on a roster. Justin evidently took it personally: today's waiver sheet has him grabbing both Bogle and Vuskovic in one afternoon, along with Scott and Ampadu, four moves from a manager who has sat fifth since Monday.",
+      "source": null
     }
   ],
   "runs": [
@@ -735,6 +752,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news. No PL fixtures today (rest day before Saturday's GW4 slate) so focused searches on the clubs most represented across the six squads plus press conferences ahead of the weekend. Three items published, all verified against permitted-source articles with confirmed recent publish dates: Sesko's derby case (ESPN, published today), Chelsea's four-man injury list ahead of Hull (chelseafc.com, published Monday), and Jaissle's praise for Hall and Hornicek ahead of the Leeds trip (newcastleunited.com, published last night). Dropped several leads after checking actual publish dates rather than search summaries: a Cherki quadriceps tear and Marmoush knee injury both traced back to September 2025 articles despite reading as current in search snippets (the 'Manchester derby' and 'a few weeks before the next international break' framing matched last year, not this weekend's fixture), an Arsenal pre-Sunderland presser dated February 2026 referencing a different Sunderland meeting entirely, and a Cole Palmer groin update stamped February 2026. No opinion pieces, as instructed for a morning run. Roast archive checked: the one unused submission (Edward's one-word line about Robert) is a slur and stays excluded permanently under rule 4, not held for timing - morning runs skip opinion pieces anyway."
+    },
+    {
+      "ts": "2026-09-11T22:44 UTC",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, GW4 starts tomorrow) and the live feed confirms GW3 is still fully settled at the same totals as this morning, so no fresh table angle and no FLOP badges to rewrite. One reported item: Arteta's pre-Sunderland presser (arsenal.com, published today, checked for the correct 2026 datePublished after an identically-titled November 2025 URL surfaced first and was discarded) gave direct quotes on Robert's Mosquera ('doing really well', could return this game or the next) and Edward's Timber ('looks in good shape' after training). One opinion piece: today's automatic MOVE badges show Justin claiming both Bogle and Vuskovic off waivers, two of the four free agents this page singled out on 7 September for outscoring every rostered player in the league - a fresh angle building on an automatic feed item rather than restating it. The roast archive's only unused submission, Edward's one-word line about Robert ('Mong'), stays excluded permanently as the ableist-slur rule 4 rules out, not a timing hold."
     }
   ]
 }
