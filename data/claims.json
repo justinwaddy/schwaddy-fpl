@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-10T21:16 UTC",
- "summary": "The five claims hold from this morning, reconfirmed by a fresh club-by-club sweep: Mitchell/Munoz, Le Fee/Barcola, Maguire/Bijol, Hill/Collins and Scott/Garner are all unchanged, with Sky Sports' own report on the Munoz-to-Forest transfer and Leeds' own Brighton team news resurfacing as corroboration rather than new information. One thing checked and set aside: Arsenal's Saliba has a back injury with no return date, but he is a free agent nobody in this league can plausibly use and the model already prices him at avail 0.01, so he is not a claim target. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes on 11 September.",
+ "ts": "2026-09-11T09:05 UTC",
+ "summary": "Final check before GW4 waivers close at 12:30 UTC today: a fresh club-by-club sweep of every side involved (Forest, Brentford, Leeds, Man City, Liverpool, Everton, Palace, Sunderland, Man Utd, Bournemouth) confirms all five claims unchanged - Mitchell, Le Fee and Maguire all look stronger than this morning (Mitchell and Le Fee both scored again, Maguire has just had a contract option triggered as a vote of confidence), while Munoz and Bijol remain out of their sides' first-choice back lines. Bournemouth's Scott is confirmed by name as Alex Scott, a first-team regular with an England call-up, not a fringe option. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes.",
  "claims": [
   {
    "rank": 1,
@@ -349,6 +349,12 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made, ~12.5 hours after this morning's board. Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) found nothing that moves any of the five. Confirmed unchanged: Bijol still behind Elvedi in Leeds' own team news, Collins' calf still has no scan result or timeline from Brentford's own site, Doku still stuck on Maresca's 'we're not sure yet' for the 13 September derby (after GW4's own deadline regardless), Barcola's cramp-not-injury already reflected from this morning, and Le Fee, Maguire, Hill and Scott all reconfirmed fit and starting. Investigated but not a claim target: Saliba's back injury (already priced into the model at avail 0.01, and he is a free agent, not on any squad in the league)."
+  },
+  {
+   "ts": "2026-09-11T09:05 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to the five claims, final sweep before the 12:30 UTC deadline. Corroborating detail only: Alex Scott's full name and regular-starter status confirmed (premierleague.com, ESPN, Sky Sports, afcb.co.uk); Chilwell's move to Palace reconfirmed as a permanent transfer, still not yet a threat to Mitchell; Maguire handed a contract extension at Man Utd (manutd.com), a confidence signal on top of his already-nailed status; Doku's 7 September 'not sure yet' on the derby is now sourced directly to premierleague.com with nothing fresher published since."
   }
  ]
 }
