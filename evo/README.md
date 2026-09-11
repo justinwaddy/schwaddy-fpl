@@ -576,7 +576,67 @@ folds is the only thing the held-out seasons are allowed to decide; the
 live model is then trained on every season for exactly that many
 generations.
 
-### What the dry run in this repo actually found
+### What the cluster found
+
+Population 200, eight leagues per genome, 200 generations, all five
+leave-one-season-out folds, 120 validation leagues per checkpoint, on
+the ninety-three-feature build (the appearance count beside every
+trailing rate). Paired points a season against the reference, meaned
+over the five folds; every fifth generation shown:
+
+```
+   gen    train    valid  +-fold  +-pair     gap  smoothed
+     5    +35.4     +4.5     5.7     4.0   +30.8     +14.3
+    15    +65.3    +31.4    26.4     4.4   +34.0     +24.6
+    25   +103.7    +45.9    26.1     4.2   +57.8     +42.1
+    35   +128.6    +82.3    30.3     4.3   +46.4     +77.9
+    45   +144.5    +54.5    27.4     4.3   +90.0     +70.0
+    55   +159.5    +63.7    18.6     4.4   +95.8     +63.9
+    65   +167.3    +63.1    18.9     4.2  +104.2     +74.3
+    75   +165.0    +78.8     8.3     4.5   +86.2     +83.9
+    85   +169.8    +71.6    15.7     4.2   +98.1     +78.1
+   100   +181.3    +77.5     8.5     4.3  +103.7     +72.6
+   125   +191.4    +83.8    11.2     4.5  +107.6     +71.7
+   150   +203.7    +68.9     9.9     4.6  +134.8     +69.8
+   175   +205.1    +83.2    13.2     4.5  +121.9     +80.4
+   200   +208.2    +62.6    13.3     4.6  +145.6     +70.3
+
+   mean over all checkpoints  +66.9 +- 3.0
+   stop at generation 75      +83.9 smoothed, +78.8 raw
+```
+
+**The number to believe is +67 points a season over the manager it
+starts from, on seasons it has never seen, give or take 3.** The
+held-out curve climbs to generation 35, then holds between +63 and +98
+for the remaining 165 generations while the training score goes on
+rising to +208: by the end the population is 145 points better on the
+seasons it has seen than on the one it has not, which is memorisation,
+but memorisation that never made the held-out season worse. The
+stopping rule picked generation 75, where the fold spread is at its
+narrowest (±8); the live model is the population trained on all five
+seasons for exactly that many, and its best genome is
+`data/evo_model.npz`.
+
+The fold spread tells the rest: ±26 to ±40 points before generation 50,
+±8 to ±16 after. Early on the network is good on some seasons and not
+others; later it is good on all of them by a similar amount. The pairing
+noise is ±4.3 with 120 leagues, so the checkpoint-to-checkpoint wobble
+in the valid column is mostly real variation between checkpoints, not
+measurement.
+
+One thing found after the run. Two of the ninety-three columns, BPS per
+90 over the last 6 and 38 matches, were dead in this model. A substitute
+cameo of a couple of minutes carrying a bonus point gave a per-90 rate
+in the millions, and one such cell put the standardizer's spread for the
+column at 5.8e5, which mapped every honest value onto the same constant.
+The denominator is now floored at ninety minutes (`MIN90` in
+`features.py`, cache version 12). The deployed checkpoint was fitted
+before the floor, and because those two columns were a constant to it in
+training they are a constant to it now; the fix changes what it sees
+only for the cameo cells themselves. The next retrain is the first that
+can use them.
+
+### What the dry run before it found
 
 A small run - population 60, eight leagues per genome, 40 generations,
 all five leave-one-season-out folds, 30 validation leagues per checkpoint
@@ -629,7 +689,8 @@ season points is what this table counts.
 The history, each step a commit: +31 reported; +18 of it a benchmark
 artefact; +24 fair; +33 under the game's release rule; +7.5 under
 unlimited waivers against a reference that could use them; +50 with the
-objective and the horizon fixed.
+objective and the horizon fixed; +67 on the cluster at full size, with
+appearance counts.
 
 ### On how much noise there is
 
@@ -655,6 +716,7 @@ evo/evaluate.py   paired comparison against managers never trained against
 evo/cv.py         folds, the validation curve, early stopping
 evo/selftest.py   the leakage and legality checks
 evo/live.py       the live season: reads the draft API, writes evo_plan.json
+evo/explain.py    what the trained policy weighs: sensitivity, permutation, genes
 evo/run.py        the command line
 evo/slurm/        job scripts and RUNBOOK.md; edit env.sh and nothing else
 ```
@@ -697,6 +759,14 @@ scp cluster:path/to/schwaddy-fpl/evo/runs/final/ckpt.npz evo/runs/final/
 ```
 python -m evo.run live --model evo/runs/final/ckpt.npz
 ```
+
+The committed copy of the model is `data/evo_model.npz`: the best genome
+and the standardizer only, eleven kilobytes, the population and hall of
+fame stripped out. The cron runs `live` against it every morning and
+writes `data/evo_plan.json`; `python -m evo.run explain --model
+data/evo_model.npz` says what it weighs. Merge a new model and the
+commit that trained it together, so the cron never sees one without the
+other.
 
 Online, it pulls the draft API for the league's current ownership and
 your squad, brings the injury log up to today from the bootstrap, works

@@ -46,7 +46,15 @@ HOME_ADV = 0.11          # league-average home lift on goals, either way
 SHRINK_K = 10.0          # matches of prior weight in the shrunk mean
 TEAM_PRIOR_W = 8.0       # matches of prior weight in a club's goal rates
 PLAY_WINDOW = 8          # club matches in the availability window
-CACHE_VERSION = 11
+# Floor on the minutes denominator of every per-90 rate. A player can
+# carry bonus points or a defensive contribution from a substitute
+# cameo, and dividing those by a couple of minutes gave rates in the
+# millions: one such cell moved the standardizer's sd for bps90_6 to
+# 5.8e5, which mapped every honest value onto a constant. 90 minutes is
+# one match, so a player with less than that in the window has his rate
+# shrunk toward zero rather than exploded.
+MIN90 = 90.0
+CACHE_VERSION = 12
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -667,9 +675,9 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             k6 = int(np.searchsorted(pts_ts, t6, "left"))
             t12, _ = club_window(club, g, 12)
             k12 = int(np.searchsorted(pts_ts, t12, "left"))
-            m6 = max(cum[k][si["mins"]] - cum[k6][si["mins"]], 1e-6)
-            m38 = max(cum[k][si["mins"]], 1e-6)
-            m12 = max(cum[k][si["mins"]] - cum[k12][si["mins"]], 1e-6)
+            m6 = max(cum[k][si["mins"]] - cum[k6][si["mins"]], MIN90)
+            m38 = max(cum[k][si["mins"]], MIN90)
+            m12 = max(cum[k][si["mins"]] - cum[k12][si["mins"]], MIN90)
             f[j] = 90 * (cum[k][si["xgi"]] - cum[k6][si["xgi"]]) / m6
             f[j + 1] = 90 * cum[k][si["xgi"]] / m38
             f[j + 2] = 90 * (cum[k][si["bps"]] - cum[k6][si["bps"]]) / m6 / 10
