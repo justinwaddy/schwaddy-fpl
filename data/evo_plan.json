@@ -1,7 +1,7 @@
 {
- "generated": "2026-09-11T10:27",
+ "generated": "2026-09-11T10:28",
  "gw": 4,
- "model": "/home/user/schwaddy-fpl/data/evo_model.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
  "offline": false,
  "window": "waiver",
@@ -91,7 +91,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.5,
-   "ep": 3.39
+   "ep": 3.38
   },
   {
    "id": 239,
@@ -197,7 +197,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 22.44,
+   "gain": 22.51,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "MID",
-   "gain": 20.1,
+   "gain": 20.17,
    "change": 1,
    "fallback": true,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 19.95,
+   "gain": 19.96,
    "change": 1,
    "fallback": true,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 21.5,
+   "gain": 21.58,
    "change": 2,
    "fallback": false,
    "add": {
@@ -377,7 +377,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 21.14,
+   "gain": 21.02,
    "change": 3,
    "fallback": false,
    "add": {
@@ -437,7 +437,7 @@
   },
   {
    "pos": "MID",
-   "gain": 17.22,
+   "gain": 17.28,
    "change": 4,
    "fallback": true,
    "add": {
@@ -467,7 +467,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.21,
+   "gain": 12.19,
    "change": 4,
    "fallback": true,
    "add": {
@@ -497,7 +497,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.8,
+   "gain": 12.85,
    "change": 5,
    "fallback": false,
    "add": {
@@ -527,7 +527,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.11,
+   "gain": 8.1,
    "change": 5,
    "fallback": true,
    "add": {
@@ -557,7 +557,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.85,
+   "gain": 7.84,
    "change": 5,
    "fallback": true,
    "add": {
@@ -617,7 +617,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.49,
+   "gain": 5.51,
    "change": 6,
    "fallback": true,
    "add": {
@@ -647,7 +647,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.44,
+   "gain": 4.49,
    "change": 6,
    "fallback": true,
    "add": {
@@ -677,7 +677,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.92,
+   "gain": 4.96,
    "change": 7,
    "fallback": false,
    "add": {
@@ -707,7 +707,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.86,
+   "gain": 3.94,
    "change": 7,
    "fallback": true,
    "add": {
@@ -737,7 +737,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.47,
+   "gain": 3.49,
    "change": 7,
    "fallback": true,
    "add": {
@@ -767,7 +767,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 4.55,
+   "gain": 4.57,
    "change": 8,
    "fallback": false,
    "add": {
@@ -797,7 +797,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.02,
+   "gain": 2.23,
    "change": 9,
    "fallback": false,
    "add": {
@@ -827,7 +827,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 1.61,
+   "gain": 1.77,
    "change": 9,
    "fallback": true,
    "add": {
@@ -839,6 +839,36 @@
     "status": "a",
     "news": "",
     "p_play": 0.959,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "d",
+    "news": "Calf injury - 25% chance of playing",
+    "p_play": 0.202,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 1.16,
+   "change": 9,
+   "fallback": true,
+   "add": {
+    "id": 112,
+    "code": 469142,
+    "name": "Van Hecke",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 0.983,
     "base": null,
     "ep": null
    },
@@ -1049,7 +1079,7 @@
    "news": "",
    "p_play": 0.915,
    "base": 189.52,
-   "ep": 200.92
+   "ep": 200.95
   },
   {
    "id": 481,
@@ -1061,7 +1091,7 @@
    "news": "",
    "p_play": 0.913,
    "base": 180.0,
-   "ep": 194.6
+   "ep": 194.7
   },
   {
    "id": 229,
@@ -1085,7 +1115,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 163.11,
-   "ep": 192.72
+   "ep": 192.63
   },
   {
    "id": 79,
@@ -1121,7 +1151,7 @@
    "news": "",
    "p_play": 0.651,
    "base": 171.27,
-   "ep": 190.1
+   "ep": 190.08
   },
   {
    "id": 154,
@@ -1145,7 +1175,7 @@
    "news": "",
    "p_play": 0.582,
    "base": 161.71,
-   "ep": 188.87
+   "ep": 189.31
   },
   {
    "id": 200,
@@ -1229,7 +1259,19 @@
    "news": "",
    "p_play": 0.906,
    "base": 131.63,
-   "ep": 176.14
+   "ep": 176.06
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.961,
+   "base": 162.93,
+   "ep": 175.55
   },
   {
    "id": 533,
@@ -1242,18 +1284,6 @@
    "p_play": 0.754,
    "base": 160.91,
    "ep": 174.97
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.961,
-   "base": 162.93,
-   "ep": 173.98
   },
   {
    "id": 112,
@@ -1277,7 +1307,7 @@
    "news": "",
    "p_play": 0.95,
    "base": 151.88,
-   "ep": 172.68
+   "ep": 172.62
   },
   {
    "id": 25,
@@ -1301,7 +1331,7 @@
    "news": "",
    "p_play": 0.732,
    "base": 145.67,
-   "ep": 169.94
+   "ep": 169.98
   },
   {
    "id": 367,
@@ -1313,7 +1343,7 @@
    "news": "Thigh injury - 75% chance of playing",
    "p_play": 0.706,
    "base": 133.55,
-   "ep": 169.29
+   "ep": 169.21
   },
   {
    "id": 463,
