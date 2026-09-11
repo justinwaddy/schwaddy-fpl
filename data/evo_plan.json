@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-09T23:24",
+ "generated": "2026-09-11T08:36",
  "gw": 4,
- "model": "/home/user/schwaddy-fpl/data/evo_model.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
- "offline": true,
+ "offline": false,
  "window": "waiver",
  "waivers_time": "2026-09-11T12:30:00Z",
  "deadline": "2026-09-12T12:30:00Z",
@@ -31,7 +31,7 @@
    "news": "",
    "p_play": 0.671,
    "base": 3.23,
-   "ep": 3.49
+   "ep": 3.41
   },
   {
    "id": 471,
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.85,
    "base": 3.31,
-   "ep": 2.99
+   "ep": 3.19
   },
   {
    "id": 201,
@@ -67,7 +67,7 @@
    "news": "",
    "p_play": 0.507,
    "base": 2.27,
-   "ep": 2.47
+   "ep": 2.43
   },
   {
    "id": 68,
@@ -79,7 +79,7 @@
    "news": "",
    "p_play": 0.967,
    "base": 5.03,
-   "ep": 5.18
+   "ep": 5.17
   },
   {
    "id": 94,
@@ -91,7 +91,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.5,
-   "ep": 3.79
+   "ep": 3.8
   },
   {
    "id": 239,
@@ -103,7 +103,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.534,
    "base": 2.13,
-   "ep": 1.98
+   "ep": 1.96
   },
   {
    "id": 411,
@@ -139,7 +139,7 @@
    "news": "",
    "p_play": 0.662,
    "base": 1.68,
-   "ep": 1.75
+   "ep": 1.76
   }
  ],
  "bench": [
@@ -153,7 +153,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.17,
-   "ep": 4.09
+   "ep": 4.08
   },
   {
    "id": 84,
@@ -165,7 +165,7 @@
    "news": "Calf injury - 25% chance of playing",
    "p_play": 0.202,
    "base": 0.71,
-   "ep": 0.68
+   "ep": 0.49
   },
   {
    "id": 628,
@@ -197,7 +197,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.59,
+   "gain": 20.69,
    "change": 1,
    "fallback": false,
    "add": {
@@ -213,21 +213,21 @@
     "ep": null
    },
    "drop": {
-    "id": 400,
-    "code": 248875,
-    "name": "Doku",
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
     "pos": "MID",
-    "team": "MCI",
-    "status": "i",
-    "news": "Calf injury - Expected back 13 Sep",
-    "p_play": 0.0,
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.15,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 17.84,
+   "gain": 17.42,
    "change": 1,
    "fallback": true,
    "add": {
@@ -243,21 +243,21 @@
     "ep": null
    },
    "drop": {
-    "id": 400,
-    "code": 248875,
-    "name": "Doku",
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
     "pos": "MID",
-    "team": "MCI",
-    "status": "i",
-    "news": "Calf injury - Expected back 13 Sep",
-    "p_play": 0.0,
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.15,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 14.09,
+   "gain": 16.4,
    "change": 1,
    "fallback": true,
    "add": {
@@ -273,21 +273,21 @@
     "ep": null
    },
    "drop": {
-    "id": 400,
-    "code": 248875,
-    "name": "Doku",
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
     "pos": "MID",
-    "team": "MCI",
-    "status": "i",
-    "news": "Calf injury - Expected back 13 Sep",
-    "p_play": 0.0,
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.15,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 17.82,
+   "gain": 17.17,
    "change": 2,
    "fallback": false,
    "add": {
@@ -303,21 +303,21 @@
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
+    "id": 400,
+    "code": 248875,
+    "name": "Doku",
     "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
+    "team": "MCI",
+    "status": "i",
+    "news": "Calf injury - Expected back 13 Sep",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 14.18,
+   "gain": 16.15,
    "change": 2,
    "fallback": true,
    "add": {
@@ -333,21 +333,21 @@
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
+    "id": 400,
+    "code": 248875,
+    "name": "Doku",
     "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
+    "team": "MCI",
+    "status": "i",
+    "news": "Calf injury - Expected back 13 Sep",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 13.93,
+   "gain": 14.07,
    "change": 2,
    "fallback": true,
    "add": {
@@ -363,23 +363,53 @@
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
+    "id": 400,
+    "code": 248875,
+    "name": "Doku",
     "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.15,
+    "team": "MCI",
+    "status": "i",
+    "news": "Calf injury - Expected back 13 Sep",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 14.43,
+   "gain": 14.96,
    "change": 3,
    "fallback": false,
+   "add": {
+    "id": 204,
+    "code": 244723,
+    "name": "Mitchell",
+    "pos": "DEF",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.954,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "d",
+    "news": "Calf injury - 25% chance of playing",
+    "p_play": 0.202,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 12.96,
+   "change": 3,
+   "fallback": true,
    "add": {
     "id": 279,
     "code": 146426,
@@ -407,7 +437,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 13.73,
+   "gain": 12.94,
    "change": 3,
    "fallback": true,
    "add": {
@@ -436,38 +466,8 @@
    }
   },
   {
-   "pos": "DEF",
-   "gain": 13.58,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 204,
-    "code": 244723,
-    "name": "Mitchell",
-    "pos": "DEF",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.954,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "d",
-    "news": "Calf injury - 25% chance of playing",
-    "p_play": 0.202,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "FWD",
-   "gain": 12.28,
+   "gain": 12.09,
    "change": 4,
    "fallback": false,
    "add": {
@@ -497,7 +497,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.9,
+   "gain": 11.41,
    "change": 5,
    "fallback": false,
    "add": {
@@ -527,18 +527,18 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.4,
+   "gain": 11.37,
    "change": 5,
    "fallback": true,
    "add": {
-    "id": 204,
-    "code": 244723,
-    "name": "Mitchell",
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
     "pos": "DEF",
-    "team": "CRY",
+    "team": "HUL",
     "status": "a",
     "news": "",
-    "p_play": 0.954,
+    "p_play": 0.915,
     "base": null,
     "ep": null
    },
@@ -557,18 +557,18 @@
   },
   {
    "pos": "DEF",
-   "gain": 8.82,
+   "gain": 9.84,
    "change": 5,
    "fallback": true,
    "add": {
-    "id": 472,
-    "code": 575476,
-    "name": "Murillo",
+    "id": 112,
+    "code": 469142,
+    "name": "Van Hecke",
     "pos": "DEF",
-    "team": "NFO",
+    "team": "TOT",
     "status": "a",
     "news": "",
-    "p_play": 0.925,
+    "p_play": 0.983,
     "base": null,
     "ep": null
    },
@@ -587,39 +587,9 @@
   },
   {
    "pos": "MID",
-   "gain": 7.63,
+   "gain": 9.6,
    "change": 6,
    "fallback": false,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.856,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 239,
-    "code": 232928,
-    "name": "Garner",
-    "pos": "MID",
-    "team": "EVE",
-    "status": "d",
-    "news": "Unspecified injury - 75% chance of playing",
-    "p_play": 0.534,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.12,
-   "change": 6,
-   "fallback": true,
    "add": {
     "id": 453,
     "code": 201666,
@@ -647,18 +617,48 @@
   },
   {
    "pos": "MID",
-   "gain": 6.13,
+   "gain": 8.48,
    "change": 6,
    "fallback": true,
    "add": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
     "pos": "MID",
-    "team": "SUN",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.96,
+    "p_play": 0.856,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 239,
+    "code": 232928,
+    "name": "Garner",
+    "pos": "MID",
+    "team": "EVE",
+    "status": "d",
+    "news": "Unspecified injury - 75% chance of playing",
+    "p_play": 0.534,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 5.46,
+   "change": 6,
+   "fallback": true,
+   "add": {
+    "id": 86,
+    "code": 249231,
+    "name": "Lewis-Potter",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.982,
     "base": null,
     "ep": null
    },
@@ -677,18 +677,18 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.99,
+   "gain": 8.05,
    "change": 7,
    "fallback": false,
    "add": {
-    "id": 204,
-    "code": 244723,
-    "name": "Mitchell",
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
     "pos": "DEF",
-    "team": "CRY",
+    "team": "HUL",
     "status": "a",
     "news": "",
-    "p_play": 0.954,
+    "p_play": 0.915,
     "base": null,
     "ep": null
    },
@@ -707,7 +707,37 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.41,
+   "gain": 6.45,
+   "change": 7,
+   "fallback": true,
+   "add": {
+    "id": 112,
+    "code": 469142,
+    "name": "Van Hecke",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 0.983,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 201,
+    "code": 247348,
+    "name": "Mu\u00f1oz",
+    "pos": "DEF",
+    "team": "NFO",
+    "status": "a",
+    "news": "",
+    "p_play": 0.507,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 6.2,
    "change": 7,
    "fallback": true,
    "add": {
@@ -736,38 +766,8 @@
    }
   },
   {
-   "pos": "DEF",
-   "gain": 4.79,
-   "change": 7,
-   "fallback": true,
-   "add": {
-    "id": 230,
-    "code": 480455,
-    "name": "Branthwaite",
-    "pos": "DEF",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.843,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 201,
-    "code": 247348,
-    "name": "Mu\u00f1oz",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "a",
-    "news": "",
-    "p_play": 0.507,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "GKP",
-   "gain": 6.03,
+   "gain": 5.06,
    "change": 8,
    "fallback": false,
    "add": {
@@ -796,49 +796,19 @@
    }
   },
   {
-   "pos": "GKP",
-   "gain": 3.35,
-   "change": 8,
-   "fallback": true,
-   "add": {
-    "id": 467,
-    "code": 85633,
-    "name": "Sels",
-    "pos": "GKP",
-    "team": "NFO",
-    "status": "a",
-    "news": "",
-    "p_play": 0.961,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "MID",
-   "gain": 3.75,
+   "gain": 4.94,
    "change": 9,
    "fallback": false,
    "add": {
-    "id": 453,
-    "code": 201666,
-    "name": "Barnes",
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
     "pos": "MID",
-    "team": "NEW",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.994,
+    "p_play": 0.856,
     "base": null,
     "ep": null
    },

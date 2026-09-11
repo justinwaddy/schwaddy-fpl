@@ -119,6 +119,14 @@
    "scope": "free",
    "text": "Ben Chilwell has re-signed for Crystal Palace and scored the winner at Fulham with his first touch, having come on for Tyrick Mitchell on 73 minutes. Mitchell scored both of Palace's other goals and is the pick of the free-agent defenders this week, but Chilwell plays his position and is now in the building - one to watch rather than a reason to pass.",
    "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+  },
+  {
+   "id": "2026-09-10-barcola-cramp-not-injury",
+   "ts": "2026-09-10T08:35 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Liverpool boss Andoni Iraola confirmed Barcola's exit at the hour mark against Atletico Madrid was cramp, not an injury, saying he is 'very happy' with the forward's first start and two clear second-half chances on goal. That corrects last night's 'doesn't look great' read, though it changes nothing about the underlying case: Barcola still has zero Premier League minutes started this season and faces Gakpo, Isak and Ngumoha for a place at Fulham on Saturday.",
+   "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
   }
  ],
  "runs": [
@@ -251,6 +259,21 @@
    "ts": "2026-09-08T08:10 UTC",
    "published": 0,
    "note": "Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Palace, Tottenham, Man Utd, Sunderland, Bournemouth) plus general PL injury/transfer and rival-player searches, first run of the day, ~11 hours after last night's 21:15 claims refresh. Nothing moved: Collins' calf still has no confirmed Brentford timeline, Doku still pointed to the 13 September derby (after GW4's own deadline), Bijol still behind Elvedi at Leeds, Munoz still an impact sub at Forest, Barcola still just the one substitute cameo, Raya and the rest of the certain starters unchanged. One search (a general injury-news query) briefly surfaced what looked like a fresh Raya knee injury, but cross-checking arsenal.com and Sky Sports confirmed it was a stale search-index result from a past season (referencing Leicester City and Bolton Wanderers fixtures that do not apply to this Premier League season) - discarded rather than published. Nothing else new or citable to a permitted outlet."
+  },
+  {
+   "ts": "2026-09-10T08:35 UTC",
+   "published": 1,
+   "note": "Full club-by-club sweep ~11 hours after last night's 21:09 run (Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus general PL injury/transfer searches. Led with a correction: liverpoolfc.com quotes Iraola confirming last night's Barcola calf scare was cramp, not injury - he called the France forward's first start 'very happy'-making, with two clear chances on goal. Investigated but did not publish: Leeds recalled Bijol for Wednesday's Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts) - he's clearly fit but a heavily rotated cup side doesn't tell us anything about his Premier League standing behind Elvedi, so it changes nothing about the existing Bijol read and isn't news on its own. A search for Marmoush injury news returned two ESPN pieces headlined 'Marmoush ruled out of Manchester derby after Egypt injury' - both dated 9-10 September 2025, a full year stale, from before his move from City to Spurs; discarded rather than published. Collins' calf still has no confirmed Brentford timeline, Doku still stuck on Maresca's 'we need to wait' for the 13 September derby (after GW4's own deadline regardless), Munoz still an impact sub rather than confirmed starter at Forest, and Garner unchanged at 75% with no fresh update since Sunday's substitution. Maguire, Mitchell, Le Fee, Hill, Scott and the rest of the squad and free-agent shortlist checked and unchanged."
+  },
+  {
+   "ts": "2026-09-10T21:16 UTC",
+   "published": 0,
+   "note": "Full club-by-club sweep ~12.5 hours after this morning's 08:35 run (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) plus general PL injury/transfer searches. Nothing new to publish: Barcola's cramp-not-injury is already up from this morning, the Munoz-to-Forest move was published on 1 September and Sky Sports' own report on it just resurfaced as a source, and Bijol is still behind Elvedi in Leeds' own team news with no fresh sheet since Brighton. Checked and found nothing to publish: Arsenal's Saliba has a back injury with no return date, but the API already carries this (avail 0.01) so it is not news the model is missing, and he is a free agent nobody in this league can plausibly use. Le Fee's penalty at Brentford (5 Sept) is five days old and already priced into his form. Collins still has no scan result or timeline from Brentford's own site. Maguire signed a United contract extension back in April, not injury or team-news. Also confirmed Man City's dugout is now Enzo Maresca's, not Guardiola's, and Bournemouth's is Marco Rose's - useful for not misattributing quotes, not a headline on its own. Nothing else new or citable to a permitted outlet."
+  },
+  {
+   "ts": "2026-09-11T09:05 UTC",
+   "published": 0,
+   "note": "Final pre-deadline sweep ~3.4 hours before GW4 waivers close (12:30 UTC). Covered every club touching the five live claims plus general PL injury/team news. Nothing new to publish: Forest's back three (Milenkovic/Murillo/Cunha) still doesn't include Munoz, matching what is already up; Collins' calf still has no scan result from Brentford's own site; Bijol is still behind Elvedi in Leeds' defence and Rodon's 8-10 week hamstring injury that opened that door was already published on 4 September; Barcola's cramp-not-injury correction is already up from yesterday; Mitchell is still starting and scoring for Palace with Chilwell's permanent move already covered; Le Fee is still starting and scoring for Sunderland; Alex Scott is confirmed a first-team regular at Bournemouth (an England call-up, not selection news). Checked and set aside as not material: Maguire has had a contract option triggered at Man Utd (premierleague-permitted source, manutd.com) - a confidence signal, not a change to his already-nailed status, so not worth a slot. Doku's status is unchanged since Maresca's 7 September 'I'm not sure yet' on the derby - now confirmed via premierleague.com itself - with nothing fresher from any permitted outlet this morning."
   }
  ]
 }

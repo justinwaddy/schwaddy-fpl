@@ -1,8 +1,8 @@
 {
  "gw": 4,
  "waivers_close": "2026-09-11T12:30:00Z",
- "ts": "2026-09-09T21:09 UTC",
- "summary": "The board holds from this morning with one real update: Barcola finally started tonight (Champions League vs Atletico Madrid), his first start for the club, then went off in the 58th minute holding his calf - a fresh fitness question on top of the minutes question the Le Fee claim was already built on, so that swap gets stronger rather than weaker. Bijol's Brighton bench call was reportedly a straight selection decision (Elvedi impressing in training) rather than injury, but that detail never cleared a permitted source, so it changes nothing about the Maguire claim itself. The other three claims (Mitchell/Munoz, Hill/Collins, Scott/Garner) are unchanged after a fresh club-by-club sweep. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes on 11 September.",
+ "ts": "2026-09-11T09:05 UTC",
+ "summary": "Final check before GW4 waivers close at 12:30 UTC today: a fresh club-by-club sweep of every side involved (Forest, Brentford, Leeds, Man City, Liverpool, Everton, Palace, Sunderland, Man Utd, Bournemouth) confirms all five claims unchanged - Mitchell, Le Fee and Maguire all look stronger than this morning (Mitchell and Le Fee both scored again, Maguire has just had a contract option triggered as a vote of confidence), while Munoz and Bijol remain out of their sides' first-choice back lines. Bournemouth's Scott is confirmed by name as Alex Scott, a first-team regular with an England call-up, not a fringe option. Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order when the window closes.",
  "claims": [
   {
    "rank": 1,
@@ -48,8 +48,8 @@
     "code": "482616",
     "club": "LIV"
    },
-   "why": "Barcola finally got his first start for the club tonight in the Champions League against Atletico Madrid, then went down clutching his calf in the 58th minute and had to be replaced - ESPN's live commentary said it 'doesn't look great' for him. That is a genuine fitness doubt stacked on top of three weeks of single-cameo Premier League minutes, not just a patience question anymore. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford. This is the stash to cash: of the two midfielders sitting idle, Doku is the one due back inside the horizon.",
-   "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.3 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree anyway, and more so tonight: a fresh calf injury pushes Barcola's first Premier League minutes further out, not closer.",
+   "why": "Barcola made his first Liverpool start tonight, in the Champions League against Atletico Madrid, and went off holding his calf in the 58th minute - but Iraola confirmed post-match it was cramp, not an injury, and said he was 'very happy' with two clear second-half chances. That removes last night's fresh fitness scare, but the underlying case is unchanged: he still has zero Premier League minutes started this season and goes into Saturday against Fulham fighting Gakpo, Isak and Ngumoha for a place. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford.",
+   "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.4 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree regardless of tonight's cramp/injury correction: Barcola's problem is minutes, not fitness, and that hasn't changed.",
    "confidence": "high",
    "sources": [
     {
@@ -57,8 +57,8 @@
      "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
     },
     {
-     "title": "Liverpool vs. Atletico Madrid - Live Commentary",
-     "url": "https://www.espn.com/soccer/match/_/gameId/401915446"
+     "title": "Bradley Barcola, Cody Gakpo and Milos Kerkez fitness update",
+     "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
     }
    ]
   },
@@ -75,7 +75,7 @@
     "code": "434752",
     "club": "LEE"
    },
-   "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. Maguire has played every minute of Manchester United's season.",
+   "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. He was recalled for Wednesday's Carabao Cup tie at Chelsea (a 6-3 defeat with eight changes and two debuts), which shows he is fully fit but is a heavily rotated cup side, not evidence he is back ahead of Elvedi in the league XI. Maguire has played every minute of Manchester United's season.",
    "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction. Note Elvedi, the man now preferred over Bijol, is himself a new-to-pool signing the model rates at just 6.5 next5 off two games (avail 0.46) - too thin a sample to claim ahead of Bijol, so Maguire's proven full-season 15.5 is the safer target, not Elvedi.",
    "confidence": "medium",
    "sources": [
@@ -337,6 +337,24 @@
    "gw": 4,
    "claims": 5,
    "note": "No change to which five claims are made, ~13 hours after this morning's run. Strengthened the Maguire/Bijol reasoning: Elvedi, the man Leeds are now picking ahead of Bijol, is himself only a two-game sample the model rates at 6.5 next5 (avail 0.46) - the model's new-signing blind spot cuts both ways here, and it argues for Maguire's proven number over chasing Elvedi, not against the swap. Investigated but could not confirm on a permitted source: reports that Bijol was seen with Leeds medical staff in the Brighton warm-up (only Yahoo/aggregator reprints of BBC Radio Leeds commentary), and reports that Sage now has Nketiah sidelined with Strand Larsen the clear leader for Ipswich (only Sports Mole/Yahoo/lastwordonsports previews for the Middlesbrough League Cup tie) - neither changes a claim since Bijol is dropped regardless and Strand Larsen is already kept, not added. Everything else (Mitchell/Munoz, Le Fee/Barcola, Hill/Collins, Scott/Garner) reconfirmed exactly as this morning."
+  },
+  {
+   "ts": "2026-09-10T08:35 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~11 hours after last night's board. Corrected the Le Fee/Barcola case: liverpoolfc.com quotes Iraola confirming last night's calf scare was cramp, not injury - the swap now rests on Barcola's lack of Premier League minutes alone. Also noted Bijol was recalled for Leeds' heavily-rotated Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts), which shows he's fit but does not resolve his league pecking order behind Elvedi. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland and Brighton. Checked and discarded: a search-index result claiming Marmoush suffered a Man City-era knee injury 'ahead of the Manchester derby' traced back to a stale ESPN pair from 9-10 September 2025, a full year old, from before his move to Spurs - not current, not published."
+  },
+  {
+   "ts": "2026-09-10T21:16 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~12.5 hours after this morning's board. Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) found nothing that moves any of the five. Confirmed unchanged: Bijol still behind Elvedi in Leeds' own team news, Collins' calf still has no scan result or timeline from Brentford's own site, Doku still stuck on Maresca's 'we're not sure yet' for the 13 September derby (after GW4's own deadline regardless), Barcola's cramp-not-injury already reflected from this morning, and Le Fee, Maguire, Hill and Scott all reconfirmed fit and starting. Investigated but not a claim target: Saliba's back injury (already priced into the model at avail 0.01, and he is a free agent, not on any squad in the league)."
+  },
+  {
+   "ts": "2026-09-11T09:05 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to the five claims, final sweep before the 12:30 UTC deadline. Corroborating detail only: Alex Scott's full name and regular-starter status confirmed (premierleague.com, ESPN, Sky Sports, afcb.co.uk); Chilwell's move to Palace reconfirmed as a permanent transfer, still not yet a threat to Mitchell; Maguire handed a contract extension at Man Utd (manutd.com), a confidence signal on top of his already-nailed status; Doku's 7 September 'not sure yet' on the derby is now sourced directly to premierleague.com with nothing fresher published since."
   }
  ]
 }
