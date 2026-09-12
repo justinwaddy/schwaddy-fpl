@@ -1097,9 +1097,13 @@ const RULES = { play: 11, min_GKP: 1, max_GKP: 1, min_DEF: 3, max_DEF: 5, min_MI
    twenty-two deep is not a podium, so a tier of more than three ends it
    and everything below is left alone until the match has separated. */
 const BONUS_TIER_MAX = 3;
+// Five minutes in, the BPS leader is whoever completed a pass, and a
+// provisional +3 against him is noise rather than news. Nothing is
+// guessed until the match has had twenty minutes to separate.
+const BONUS_MIN_MINUTE = 20;
 function provBonus(f) {
   const out = {};
-  if (!f.started || f.bonus_in) return out;
+  if (!f.started || f.bonus_in || (f.min || 0) < BONUS_MIN_MINUTE) return out;
   const s = f.bps.filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]);
   let i = 0;
   while (i < s.length && i < 3) {

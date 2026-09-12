@@ -1247,9 +1247,10 @@ let LIVE=null,LIVEERR=null,LIVEOPEN=null,LIVETIMER=null,LIVEAUTO=false,LIVECTX=n
 const DEFRULES={play:11,min_GKP:1,max_GKP:1,min_DEF:3,max_DEF:5,min_MID:2,max_MID:5,min_FWD:1,max_FWD:3};
 // FPL bonus: 3/2/1 on bps; a tie shares the higher award and swallows the
 // places below it. Only counts until the official bonus is in the feed.
+const BONUS_MIN_MINUTE=20; // no provisional bonus until the match has separated
 function provBonus(f){
   const out={};
-  if(!f.started||f.bonus_in)return out;
+  if(!f.started||f.bonus_in||(f.min||0)<BONUS_MIN_MINUTE)return out;
   const s=f.bps.filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
   let i=0;
   while(i<s.length&&i<3){
