@@ -98,6 +98,15 @@
    "about": "Robert",
    "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
    "used": false
+  },
+  {
+   "id": "2026-09-12-d9048f2afb",
+   "key": "d9048f2afb",
+   "ts": "2026-09-12T18:54",
+   "frm": "Ben D",
+   "about": "Justin",
+   "text": "South African apartheid connoisseur",
+   "used": false
   }
  ],
  "runs": [
@@ -172,6 +181,12 @@
    "frm": "Ben D",
    "about": "Robert",
    "chars": 69
+  },
+  {
+   "ts": "2026-09-12T18:54",
+   "frm": "Ben D",
+   "about": "Justin",
+   "chars": 35
   }
  ]
 }
