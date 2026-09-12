@@ -100,8 +100,17 @@ def apply_subs(squad, rules):
     `pos`, `played` and `settled` (his match is over).
 
     A starter who is settled with no minutes is replaced by the first
-    bench player who did play and leaves the formation legal - a
-    goalkeeper only ever by the reserve goalkeeper, as the game does.
+    bench player who leaves the formation legal - a goalkeeper only ever
+    by the reserve goalkeeper, as the game does.
+
+    One who has already played is the substitution the game has
+    effectively made. Where nobody on the bench has played yet the
+    replacement is the first still to play, marked `pending`: the game
+    processes that swap only when the gameweek closes, but a Saturday
+    refresh then reports the eleven that will count rather than one
+    carrying a hole where a man who was never in the squad stands. A
+    bench player who has played is always preferred, and a pending pick
+    who also fails to appear stops qualifying on the next refresh.
     """
     start = [p for p in squad if p["slot"] <= rules["play"]]
     bench = [p for p in squad if p["slot"] > rules["play"]]
@@ -110,22 +119,31 @@ def apply_subs(squad, rules):
     for p in start:
         counts[p["pos"]] = counts.get(p["pos"], 0) + 1
     used = set()
+
+    def _after(gone, cand):
+        trial = dict(counts)
+        trial[gone["pos"]] = trial.get(gone["pos"], 0) - 1
+        trial[cand["pos"]] = trial.get(cand["pos"], 0) + 1
+        return trial
+
     for gone in out:
-        for cand in bench:
-            if cand["id"] in used or not cand["played"]:
-                continue
+        def legal(cand, gone=gone):
+            if cand["id"] in used:
+                return False
             if (gone["pos"] == "GKP") != (cand["pos"] == "GKP"):
-                continue                      # keepers swap only for keepers
-            trial = dict(counts)
-            trial[gone["pos"]] = trial.get(gone["pos"], 0) - 1
-            trial[cand["pos"]] = trial.get(cand["pos"], 0) + 1
-            if _breach(trial, rules) > _breach(counts, rules):
-                continue
-            gone["subbed_out"] = True
-            cand["subbed_in"] = True
-            used.add(cand["id"])
-            counts = trial
-            break
+                return False                   # keepers swap only for keepers
+            return _breach(_after(gone, cand), rules) <= _breach(counts, rules)
+
+        pick = next((c for c in bench if c["played"] and legal(c)), None)
+        if pick is None:
+            pick = next((c for c in bench if not c["settled"] and legal(c)), None)
+        if pick is None:
+            continue
+        gone["subbed_out"] = True
+        pick["subbed_in"] = True
+        pick["pending"] = not pick["played"]
+        used.add(pick["id"])
+        counts = _after(gone, pick)
     return squad
 
 

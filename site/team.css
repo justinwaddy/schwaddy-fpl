@@ -34,6 +34,9 @@ letter-spacing:.08em;border-bottom:none;padding-top:10px}
 .togo{color:var(--amber);font:11px "IBM Plex Mono",ui-monospace,monospace}
 .subin{color:var(--green);font:600 10px "IBM Plex Mono",ui-monospace,monospace}
 .subout{color:var(--red);font:600 10px "IBM Plex Mono",ui-monospace,monospace;text-decoration:line-through}
+/* a substitution that is certain in shape but waits on the replacement's
+   own match: the same badge, without the green that means settled */
+.subpend{color:var(--dim);font:600 10px "IBM Plex Mono",ui-monospace,monospace}
 input[type=search]{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;
 color:var(--ink);padding:9px 11px;font:14px "IBM Plex Sans",system-ui;margin:6px 0}
 .ev{display:flex;gap:9px;padding:9px 2px;border-bottom:1px solid var(--line);align-items:baseline}

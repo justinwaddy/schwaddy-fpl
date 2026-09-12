@@ -375,7 +375,10 @@ function renderSquad() {
     ${SHOW_PRICES ? th("value", "num") : ""}</tr>`;
   const cell = p => {
     const full = byCode[p.id] || {};
-    const mark = p.subbed_in ? `<span class="subin">IN</span> ` :
+    const mark = p.subbed_in
+      ? `<span class="${p.pending ? "subpend" : "subin"}" title="${p.pending
+          ? "Comes in for a man who did not play, once his own match is done."
+          : "Automatic substitution."}">IN${p.pending ? "?" : ""}</span> ` :
       p.subbed_out ? `<span class="subout">OUT</span> ` : "";
     const st = p.to_play ? `<span class="togo">to play</span>` :
       (p.mins ? `${p.mins}'` : `<span class="tm">did not play</span>`);
@@ -605,7 +608,7 @@ function renderLeague() {
       ${LV.inplay} match${LV.inplay > 1 ? "es" : ""} in play &middot; updating as points land</div>` : ""}
     ${legend([["GW", "points this gameweek"],
       ["played", "of his fifteen who got minutes"], ["0 min", "who got none"],
-      ["subs", "automatic substitutions made for him"], ["top", "his best scorer"],
+      ["subs", "automatic substitutions, the ones still waiting on a bench player's own match included"], ["top", "his best scorer"],
       ["cost", "what the best legal eleven of his fifteen would have added"],
       ["unfit", "injured or doubtful in his squad right now"],
       ["season", "settled gameweeks plus this one; the game's own table catches up when it closes the week"]])}
@@ -1113,20 +1116,38 @@ function provBonus(f) {
   }
   return out;
 }
+/* A starter who is settled with no minutes is replaced by the first
+   bench player who leaves the formation legal, a goalkeeper only ever by
+   the reserve goalkeeper.
+
+   One who has already played is the substitution the game has
+   effectively made. Where nobody on the bench has played yet the
+   replacement is the first who is still to play: the game will not
+   process that swap until the gameweek closes, but the eleven on screen
+   is then the eleven that will count rather than one carrying a hole,
+   and his points join the total the minute he is on the pitch instead of
+   a day later. That pick is marked `pending`. It costs nothing to be
+   wrong about: a man who has played is always preferred, and if the
+   pending one also fails to appear he stops qualifying on the next poll
+   and the next candidate takes his place. */
 function applySubs(squad, R) {
   const start = squad.filter(p => p.slot <= R.play), bench = squad.filter(p => p.slot > R.play);
   let counts = {}; start.forEach(p => counts[p.pos] = (counts[p.pos] || 0) + 1);
   const breach = c => ["GKP", "DEF", "MID", "FWD"].reduce((a, k) =>
     a + Math.max(0, R["min_" + k] - (c[k] || 0)) + Math.max(0, (c[k] || 0) - R["max_" + k]), 0);
+  const after = (gone, c) => {
+    const t = { ...counts }; t[gone.pos] = (t[gone.pos] || 0) - 1; t[c.pos] = (t[c.pos] || 0) + 1;
+    return t;
+  };
   const used = new Set();
   for (const gone of start.filter(p => p.settled && !p.played)) {
-    for (const c of bench) {
-      if (used.has(c.id) || !c.played) continue;
-      if ((gone.pos === "GKP") !== (c.pos === "GKP")) continue;
-      const t = { ...counts }; t[gone.pos] = (t[gone.pos] || 0) - 1; t[c.pos] = (t[c.pos] || 0) + 1;
-      if (breach(t) > breach(counts)) continue;
-      gone.subbed_out = true; c.subbed_in = true; used.add(c.id); counts = t; break;
-    }
+    const legal = c => !used.has(c.id) && (gone.pos === "GKP") === (c.pos === "GKP")
+      && breach(after(gone, c)) <= breach(counts);
+    const pick = bench.find(c => c.played && legal(c))
+      || bench.find(c => !c.settled && legal(c));
+    if (!pick) continue;
+    gone.subbed_out = true; pick.subbed_in = true; pick.pending = !pick.played;
+    used.add(pick.id); counts = after(gone, pick);
   }
 }
 function pubSettled(entry, gw) {
@@ -1433,7 +1454,8 @@ function liveRoles(L) {
     applySubs(squad, R);
     for (const p of squad) {
       roles[p.id] = { xi: (p.slot <= R.play && !p.subbed_out) || p.subbed_in,
-                      slot: p.slot, sub_in: p.subbed_in, sub_out: p.subbed_out };
+                      slot: p.slot, sub_in: p.subbed_in, sub_out: p.subbed_out,
+                      pending: !!p.pending };
     }
   }
   return roles;
@@ -1482,7 +1504,7 @@ function playerRow(id, e, f, ix) {
     `<span class="who">${esc(m ? who(m.entry, m.name) : "")}</span>`,
     role.xi === undefined ? "" :
       `<span class="tag ${role.xi ? "xi" : "bn"}">${role.xi ? "XI" : "bench"}${
-        role.sub_in ? " &uarr;" : role.sub_out ? " &darr;" : ""}</span>`,
+        role.sub_in ? (role.pending ? " &uarr;?" : " &uarr;") : role.sub_out ? " &darr;" : ""}</span>`,
     mr.t ? `<span class="tag ${mr.c}">${mr.t}</span>` : "",
     e.min ? `<span class="mins">${e.min}'</span>` : "",
     eventChips(rows, pb),
