@@ -1,7 +1,7 @@
 {
- "generated": "2026-09-12T13:31",
+ "generated": "2026-09-12T16:24",
  "gw": 5,
- "model": "/home/user/schwaddy-fpl/data/evo_model.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
  "offline": false,
  "window": "waiver",
@@ -31,31 +31,7 @@
    "news": "",
    "p_play": 0.85,
    "base": 5.33,
-   "ep": 5.25
-  },
-  {
-   "id": 471,
-   "code": 227444,
-   "name": "Milenkovi\u0107",
-   "pos": "DEF",
-   "team": "NFO",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 4.5,
-   "ep": 4.26
-  },
-  {
-   "id": 504,
-   "code": 610799,
-   "name": "Vuskovic",
-   "pos": "DEF",
-   "team": "BHA",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 3.67,
-   "ep": 3.24
+   "ep": 5.26
   },
   {
    "id": 330,
@@ -67,19 +43,31 @@
    "news": "",
    "p_play": 0.847,
    "base": 3.56,
-   "ep": 3.17
+   "ep": 3.44
   },
   {
-   "id": 69,
-   "code": 503139,
-   "name": "Scott",
-   "pos": "MID",
-   "team": "BOU",
+   "id": 504,
+   "code": 610799,
+   "name": "Vuskovic",
+   "pos": "DEF",
+   "team": "BHA",
    "status": "a",
    "news": "",
-   "p_play": 0.979,
-   "base": 4.63,
-   "ep": 4.54
+   "p_play": 1.0,
+   "base": 3.67,
+   "ep": 3.28
+  },
+  {
+   "id": 471,
+   "code": 227444,
+   "name": "Milenkovi\u0107",
+   "pos": "DEF",
+   "team": "NFO",
+   "status": "d",
+   "news": "Hamstring injury - 75% chance of playing",
+   "p_play": 0.75,
+   "base": 3.37,
+   "ep": 3.24
   },
   {
    "id": 68,
@@ -91,7 +79,19 @@
    "news": "",
    "p_play": 0.967,
    "base": 4.63,
-   "ep": 4.54
+   "ep": 4.61
+  },
+  {
+   "id": 69,
+   "code": 503139,
+   "name": "Scott",
+   "pos": "MID",
+   "team": "BOU",
+   "status": "a",
+   "news": "",
+   "p_play": 0.979,
+   "base": 4.63,
+   "ep": 4.6
   },
   {
    "id": 338,
@@ -103,7 +103,7 @@
    "news": "",
    "p_play": 0.978,
    "base": 3.88,
-   "ep": 3.66
+   "ep": 3.73
   },
   {
    "id": 94,
@@ -115,7 +115,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.69,
-   "ep": 3.6
+   "ep": 3.57
   },
   {
    "id": 411,
@@ -139,7 +139,7 @@
    "news": "",
    "p_play": 0.67,
    "base": 1.84,
-   "ep": 1.35
+   "ep": 1.37
   }
  ],
  "bench": [
@@ -153,7 +153,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 4.07,
-   "ep": 3.42
+   "ep": 3.43
   },
   {
    "id": 222,
@@ -165,7 +165,7 @@
    "news": "",
    "p_play": 0.662,
    "base": 1.14,
-   "ep": 0.75
+   "ep": 0.81
   },
   {
    "id": 628,
@@ -189,15 +189,15 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.202,
    "base": 0.65,
-   "ep": 0.55
+   "ep": 0.5
   }
  ],
- "xi_ep": 45.0,
- "changes": 9,
+ "xi_ep": 44.5,
+ "changes": 8,
  "claims": [
   {
    "pos": "MID",
-   "gain": 19.42,
+   "gain": 21.71,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "MID",
-   "gain": 16.89,
+   "gain": 18.06,
    "change": 1,
    "fallback": true,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 15.36,
+   "gain": 15.69,
    "change": 1,
    "fallback": true,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 14.48,
+   "gain": 17.13,
    "change": 2,
    "fallback": false,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.6,
+   "gain": 11.87,
    "change": 3,
    "fallback": false,
    "add": {
@@ -347,7 +347,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.43,
+   "gain": 8.98,
    "change": 3,
    "fallback": true,
    "add": {
@@ -377,7 +377,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.26,
+   "gain": 6.47,
    "change": 3,
    "fallback": true,
    "add": {
@@ -406,99 +406,9 @@
    }
   },
   {
-   "pos": "DEF",
-   "gain": 8.24,
-   "change": 4,
-   "fallback": false,
-   "add": {
-    "id": 277,
-    "code": 108416,
-    "name": "Egan",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 471,
-    "code": 227444,
-    "name": "Milenkovi\u0107",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 5.74,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 173,
-    "code": 461102,
-    "name": "Thomas",
-    "pos": "DEF",
-    "team": "COV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.959,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 471,
-    "code": 227444,
-    "name": "Milenkovi\u0107",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 5.51,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 282,
-    "code": 232351,
-    "name": "Giles",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.981,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 471,
-    "code": 227444,
-    "name": "Milenkovi\u0107",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "GKP",
-   "gain": 7.3,
-   "change": 5,
+   "gain": 6.45,
+   "change": 4,
    "fallback": false,
    "add": {
     "id": 571,
@@ -527,8 +437,8 @@
   },
   {
    "pos": "GKP",
-   "gain": 2.34,
-   "change": 5,
+   "gain": 1.51,
+   "change": 4,
    "fallback": true,
    "add": {
     "id": 566,
@@ -557,8 +467,8 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.37,
-   "change": 6,
+   "gain": 4.23,
+   "change": 5,
    "fallback": false,
    "add": {
     "id": 173,
@@ -573,32 +483,92 @@
     "ep": null
    },
    "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
     "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.202,
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.847,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 5.22,
-   "change": 6,
+   "gain": 3.5,
+   "change": 5,
    "fallback": true,
    "add": {
-    "id": 282,
-    "code": 232351,
-    "name": "Giles",
+    "id": 277,
+    "code": 108416,
+    "name": "Egan",
     "pos": "DEF",
     "team": "HUL",
     "status": "a",
     "news": "",
-    "p_play": 0.981,
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.847,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 2.72,
+   "change": 5,
+   "fallback": true,
+   "add": {
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.915,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.847,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 3.45,
+   "change": 6,
+   "fallback": false,
+   "add": {
+    "id": 277,
+    "code": 108416,
+    "name": "Egan",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
     "base": null,
     "ep": null
    },
@@ -617,7 +587,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.54,
+   "gain": 2.67,
    "change": 6,
    "fallback": true,
    "add": {
@@ -647,18 +617,48 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.36,
+   "gain": 1.9,
+   "change": 6,
+   "fallback": true,
+   "add": {
+    "id": 61,
+    "code": 494521,
+    "name": "Truffert",
+    "pos": "DEF",
+    "team": "BOU",
+    "status": "a",
+    "news": "",
+    "p_play": 0.994,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.202,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 1.17,
    "change": 7,
    "fallback": false,
    "add": {
-    "id": 282,
-    "code": 232351,
-    "name": "Giles",
+    "id": 595,
+    "code": 463726,
+    "name": "Dedi\u0107",
     "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.981,
+    "team": "NEW",
+    "status": "d",
+    "news": "Hamstring injury - 75% chance of playing",
+    "p_play": 0.75,
     "base": null,
     "ep": null
    },
@@ -676,39 +676,9 @@
    }
   },
   {
-   "pos": "MID",
-   "gain": 2.27,
-   "change": 8,
-   "fallback": false,
-   "add": {
-    "id": 286,
-    "code": 540324,
-    "name": "Belloumi",
-    "pos": "MID",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.946,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 94,
-    "code": 513418,
-    "name": "Schade",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "DEF",
-   "gain": 1.35,
-   "change": 9,
+   "gain": 2.18,
+   "change": 8,
    "fallback": false,
    "add": {
     "id": 279,
@@ -723,14 +693,44 @@
     "ep": null
    },
    "drop": {
-    "id": 173,
-    "code": 461102,
-    "name": "Thomas",
+    "id": 471,
+    "code": 227444,
+    "name": "Milenkovi\u0107",
     "pos": "DEF",
-    "team": "COV",
+    "team": "NFO",
+    "status": "d",
+    "news": "Hamstring injury - 75% chance of playing",
+    "p_play": 0.75,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 1.38,
+   "change": 8,
+   "fallback": true,
+   "add": {
+    "id": 61,
+    "code": 494521,
+    "name": "Truffert",
+    "pos": "DEF",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.959,
+    "p_play": 0.994,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 471,
+    "code": 227444,
+    "name": "Milenkovi\u0107",
+    "pos": "DEF",
+    "team": "NFO",
+    "status": "d",
+    "news": "Hamstring injury - 75% chance of playing",
+    "p_play": 0.75,
     "base": null,
     "ep": null
    }
@@ -929,7 +929,7 @@
    "news": "",
    "p_play": 0.915,
    "base": 189.52,
-   "ep": 200.92
+   "ep": 200.95
   },
   {
    "id": 481,
@@ -941,7 +941,7 @@
    "news": "",
    "p_play": 0.913,
    "base": 180.0,
-   "ep": 194.6
+   "ep": 194.7
   },
   {
    "id": 229,
@@ -965,7 +965,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 163.11,
-   "ep": 192.72
+   "ep": 192.63
   },
   {
    "id": 79,
@@ -1001,7 +1001,7 @@
    "news": "",
    "p_play": 0.651,
    "base": 171.27,
-   "ep": 190.1
+   "ep": 190.08
   },
   {
    "id": 154,
@@ -1025,7 +1025,7 @@
    "news": "",
    "p_play": 0.582,
    "base": 161.71,
-   "ep": 188.87
+   "ep": 189.31
   },
   {
    "id": 200,
@@ -1109,7 +1109,19 @@
    "news": "",
    "p_play": 0.906,
    "base": 131.63,
-   "ep": 176.14
+   "ep": 176.06
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.961,
+   "base": 162.93,
+   "ep": 175.55
   },
   {
    "id": 533,
@@ -1122,18 +1134,6 @@
    "p_play": 0.754,
    "base": 160.91,
    "ep": 174.97
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.961,
-   "base": 162.93,
-   "ep": 173.98
   },
   {
    "id": 112,
@@ -1157,7 +1157,7 @@
    "news": "",
    "p_play": 0.95,
    "base": 151.88,
-   "ep": 172.68
+   "ep": 172.62
   },
   {
    "id": 25,
@@ -1181,7 +1181,7 @@
    "news": "",
    "p_play": 0.732,
    "base": 145.67,
-   "ep": 169.94
+   "ep": 169.98
   },
   {
    "id": 367,
@@ -1189,11 +1189,11 @@
    "name": "Gakpo",
    "pos": "MID",
    "team": "LIV",
-   "status": "d",
-   "news": "Thigh injury - 75% chance of playing",
-   "p_play": 0.706,
+   "status": "a",
+   "news": "",
+   "p_play": 0.942,
    "base": 133.55,
-   "ep": 169.29
+   "ep": 169.21
   },
   {
    "id": 463,
