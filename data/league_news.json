@@ -551,6 +551,16 @@
         "title": "Liverpool v Fulham: Team news",
         "url": "https://www.liverpoolfc.com/news/liverpool-v-fulham-team-news-3"
       }
+    },
+    {
+      "id": "2026-09-12-xi-1400",
+      "ts": "2026-09-12T13:11",
+      "kind": "news",
+      "text": "Team news, 14:00 kick-offs: Liverpool's XI is out - Small Ben starts Jacquet, Virgil, Szoboszlai and Isak, with Gakpo among the subs; Big Ben starts Wirtz; Justin starts Barcola; Marcus starts A.Becker. Sheets are not out yet for Aston Villa, Nottingham Forest, Bournemouth, Brentford, Chelsea, Crystal Palace or Fulham, so Edward and Robert plus the rest of Small Ben, Big Ben, Justin and Marcus squads at those clubs remain unconfirmed.",
+      "source": {
+        "title": "Confirmed Liverpool line-up v Fulham",
+        "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-v-fulham-9"
+      }
     }
   ],
   "runs": [
@@ -796,6 +806,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "Scheduled morning news. Today is a full GW4 matchday (7 fixtures from 14:00 UTC), so this run previewed team news for the clubs most represented across the six squads rather than reporting on games not yet played. Three sourced items: Strand Larsen's Carabao Cup brace for Crystal Palace on Tuesday (Justin), Alonso's comments on the Palmer-Rogers-Joao Pedro front three ahead of the Hull game (Edward, Big Ben, Marcus), and Liverpool's Gakpo/Barcola fitness calls ahead of Fulham (Small Ben, Justin). Passed over several leads that only turned up on unpermitted aggregator sites (Yahoo, football365, sportsmole, thehardtackle) with no matching permitted-outlet source, including Arsenal's Timber/Mosquera update (already covered on 11 September anyway) and a Man City derby team-news line on O'Reilly/Doku that turned out to already be covered from 8 September once checked against the archive. No opinion pieces, per the morning rule. The roast archive's one unused submission (Edward's one-word line about Robert) stays excluded as it falls foul of rule 4."
+    },
+    {
+      "ts": "2026-09-12T13:11 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "14:00 kick-off slot (AVL-NFO, BOU-BRE, CHE-HUL, CRY-IPS, LIV-FUL). Only Liverpool's XI was confirmed at a permitted outlet (liverpoolfc.com, published ~25 min before kickoff). Checked avfc.co.uk, nottinghamforest.com, afcb.co.uk, brentfordfc.com, chelseafc.com, cpfc.co.uk and fulhamfc.com plus skysports.com/premierleague.com for the other seven clubs the league owns players at - none had a confirmed sheet out yet (site fetches kept returning stale/contradictory cached articles from other dates, or no lineup posted), so those clubs were left out of the counts per the no-guessing rule rather than reported."
     }
   ]
 }
