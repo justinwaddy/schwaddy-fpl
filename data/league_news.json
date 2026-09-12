@@ -830,6 +830,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "Follow-up for the 14:00 UTC slot covering the seven clubs the first item could not: Sky Sports line-up pages read for AVL-NFO (559474), BOU-BRE (559475), CHE-HUL (559476), CRY-IPS (559478) and LIV-FUL (559480, for Fulham's Gonzalo). Milenkovic, Collins, Palestra and Mateta absent from their squads; Lacroix and Estevao on the bench; everyone else the league owns at those clubs starts."
+  },
+  {
+   "ts": "2026-09-12T16:11 UTC",
+   "news": 0,
+   "opinion": 0,
+   "matchday": true,
+   "note": "16:30 kickoff Tottenham v Everton. Checked tottenhamhotspur.com match centre (JS shell, no lineup data server-side), evertonfc.com (same, plus a Sept 11 Moyes preview piece which predates any teamsheet), premierleague.com fixture/lineups page (JS shell, no data), skysports.com and espn.com (no readable confirmed-XI content returned), and searched for bbc.co.uk/theguardian.com/theathletic.com coverage of this fixture with none surfacing. No permitted outlet had a directly-readable confirmed XI for either club at fire time, so no item posted per rule 2 (owned players affected: TOT - Kinsky, Richarlison, Marmoush, Solanke; EVE - Tarkowski, Barry, Dewsbury-Hall, Branthwaite, Grealish, Pickford)."
   }
  ]
 }
