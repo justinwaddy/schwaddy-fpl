@@ -6,7 +6,7 @@
    "ts": "2026-09-04T13:35",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Rob’s chances of first place receding more than his hairline. You MUST mention hairline",
+   "text": "Rob\u2019s chances of first place receding more than his hairline. You MUST mention hairline",
    "used": true
   },
   {
@@ -15,7 +15,7 @@
    "ts": "2026-09-04T13:36",
    "frm": "Ben D",
    "about": null,
-   "text": "Ben C’s chance of winning is the same as his height: small",
+   "text": "Ben C\u2019s chance of winning is the same as his height: small",
    "used": true
   },
   {
@@ -60,7 +60,7 @@
    "ts": "2026-09-06T15:31",
    "frm": "Edward",
    "about": null,
-   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn’t haul his team is awful awful awful",
+   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn\u2019t haul his team is awful awful awful",
    "used": true
   },
   {
@@ -78,8 +78,8 @@
    "ts": "2026-09-12T18:52",
    "frm": "Edward",
    "about": "Robert",
-   "text": "Rob doesn’t respond to anyone and doesn’t make any transfers - explains why his team and hairline is so dreadful",
-   "used": false
+   "text": "Rob doesn\u2019t respond to anyone and doesn\u2019t make any transfers - explains why his team and hairline is so dreadful",
+   "used": true
   },
   {
    "id": "2026-09-12-ca1422e269",
@@ -96,7 +96,7 @@
    "ts": "2026-09-12T18:53",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
+   "text": "Ignoring FPL bc he\u2019s depressed again (like when he failed his degree)",
    "used": false
   },
   {
@@ -114,7 +114,7 @@
    "ts": "2026-09-12T18:54",
    "frm": "Edward",
    "about": "Ben C",
-   "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
+   "text": "The only man that could be mistaken for Harvey price. He\u2019s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
    "used": false
   }
  ],

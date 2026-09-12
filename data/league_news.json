@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12T16:14",
+ "generated": "2026-09-12T22:51 UTC",
  "items": [
   {
    "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -150,7 +150,7 @@
    "id": "2026-09-05-xi-1130",
    "ts": "2026-09-05T11:10",
    "kind": "news",
-   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
    "source": {
     "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
     "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -454,7 +454,7 @@
    "kind": "news",
    "text": "Liverpool came from behind to beat Atletico Madrid 2-1 in their Champions League opener at Anfield on Wednesday, Dominik Szoboszlai's equaliser and an Alexis Mac Allister strike turning the game around; Small Ben owns Szoboszlai. Justin's Bradley Barcola went off holding his calf just before the hour on his full Liverpool debut, after missing two clear first-half chances; head coach Andoni Iraola said afterwards it was cramp rather than an injury, pointing to Barcola having had no pre-season minutes.",
    "source": {
-    "title": "Bradley Barcola limps out of Liverpool home debut against Atlético",
+    "title": "Bradley Barcola limps out of Liverpool home debut against Atl\u00e9tico",
     "url": "https://www.espn.com/soccer/story/_/id/49884201/bradley-barcola-liverpool-injury-atletico-madrid-champions-league"
    }
   },
@@ -591,6 +591,47 @@
     "title": "Sunderland vs. Arsenal (Sep 12, 2026) Lineups - ESPN",
     "url": "https://www.espn.com/soccer/lineups/_/gameId/401878779"
    }
+  },
+  {
+   "id": "2026-09-12-sun-ars-raya-saka",
+   "ts": "2026-09-12T22:41",
+   "kind": "news",
+   "text": "David Raya saved a first-half penalty from Sunderland's Enzo Le Fee, then made a stoppage-time save from Nordi Mukiele, as Arsenal won 2-0 at the Stadium of Light to move above Manchester City at the top of the Premier League. Bukayo Saka scored the second from the penalty spot in added time after Reinildo Mandava was sent off for fouling him - a clean sheet for Justin's goalkeeper and a goal for Robert's forward on the same night.",
+   "source": {
+    "title": "Sunderland 0 - 2 Arsenal - Match Report & Highlights",
+    "url": "https://www.skysports.com/football/sunderland-vs-arsenal/8685166056824498232"
+   }
+  },
+  {
+   "id": "2026-09-12-che-hul-rogers-palmer-jp",
+   "ts": "2026-09-12T22:41",
+   "kind": "news",
+   "text": "Morgan Rogers scored inside seven minutes as Chelsea took an early lead over Hull City, but a defensive mix-up let Mohamed Belloumi score twice and turn the game around before Cole Palmer's pass sent Joao Pedro through to equalise just after the hour in a 2-2 draw at Stamford Bridge. The goal chain touched three of the six squads at once: Rogers is Ben D's, Palmer is Edward's, and Joao Pedro is Marcus's.",
+   "source": {
+    "title": "Chelsea 2 - 2 Hull City - Match Report & Highlights",
+    "url": "https://www.skysports.com/football/chelsea-vs-hull-city/report/559476"
+   }
+  },
+  {
+   "id": "2026-09-12-opinion-robert-archive",
+   "ts": "2026-09-12T22:42",
+   "kind": "opinion",
+   "text": "The read on Robert around here has been consistent all week: dreadful team, dreadfuller hairline, and radio silence whenever the group chat needs a signing. Tonight did nothing to argue with it - last in the table before a ball was kicked, and still last on the night's card by some distance. If going quiet is the tactic, it is working exactly as badly as advertised.",
+   "source": null
+  },
+  {
+   "id": "2026-09-12-opinion-justin-bench",
+   "ts": "2026-09-12T22:42",
+   "kind": "opinion",
+   "text": "Justin's night summed up his month: David Raya's penalty save set the tone for the best score of anyone in the league tonight, and he still goes to bed 38 points off Marcus at the top. The stranger line is his bench, where 21 points did precisely nothing for him - more than the other five benches put together.",
+   "source": null
+  },
+  {
+   "id": "2026-09-12-opinion-palace-heartbreak",
+   "ts": "2026-09-12T22:43",
+   "kind": "opinion",
+   "text": "Crystal Palace played more than an hour with ten men after Axel Disasi's 34th-minute red card, and still contrived to lose 3-2 at home - but not before Edward's Khalaili had put them ahead in the 14th minute and Justin's Strand Larsen dragged them level with 20 minutes left. Ipswich's Zian Flemming won it in the 90th, leaving two different owners with nothing from an afternoon that had briefly promised both of them something.",
+   "source": null
   }
  ],
  "runs": [
@@ -871,6 +912,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "19:00 kickoff Sunderland v Arsenal: no permitted outlet had a readable confirmed XI yet (arsenal.com, safc.com, premierleague.com and skysports.com all served JS shells or a live blog error, and BBC Sport is not reachable by this session's fetch tool at all), so fell back to ESPN's official lineups feed (espn.com, permitted), which had both confirmed sheets in. Mukiele, Calafiori, Tzolis, Roefs, Gabriel, Saka, Konsa, White, Havertz, Odegaard and Rice all start; Raya starts in goal; J.Timber is among the Arsenal substitutes; Mosquera is not in Arsenal's 20-man squad at all."
+  },
+  {
+   "ts": "2026-09-12T22:51",
+   "news": 2,
+   "opinion": 3,
+   "matchday": true,
+   "note": "Evening wrap, 22:41 UTC. GW4 is not finished - Man Utd v Man City, Leeds v Newcastle and Coventry v Brighton still to come, so wrote up today's 7 completed fixtures rather than treating the gameweek as over. Led with Raya's penalty save and Saka's late spot-kick in Arsenal's win at Sunderland, and the Rogers-Palmer-Joao Pedro goal chain in Chelsea 2-2 Hull (all Sky Sports, verified by reading the reports directly). Opinion: used the archive's unused Edward-on-Robert line (hairline/team/no-transfers) since Robert is genuinely last tonight as well as in the table - marked used. Also wrote up Justin's bench (21, more than the other five combined) and the Palace 2-3 Ipswich collapse that cost both Edward's Khalaili goal and Justin's Strand Larsen equaliser. Passed over the rest of the unused archive: Edward's 'Mong' line and the Harvey Price comparison target a real disability, Ben D's self-directed line targets sexuality, his Robert-depression line hits a real illness, and his apartheid line on Justin trades on a real racial atrocity - all four stay unused, not held for later, since none of them clears the banned categories regardless of timing. Also rewrote all 12 of today's canned FLOP lines via reflop.py, using verified match-report detail (Dewsbury-Hall's saved one-on-one, Barry's saved header, Martinez's stop on McBurnie) where it was available."
   }
  ]
 }
