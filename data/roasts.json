@@ -107,6 +107,15 @@
    "about": "Justin",
    "text": "South African apartheid connoisseur",
    "used": false
+  },
+  {
+   "id": "2026-09-12-a252465cd7",
+   "key": "a252465cd7",
+   "ts": "2026-09-12T18:54",
+   "frm": "Ben D",
+   "about": "Marcus",
+   "text": "Gay bc he has a Swedish girlfriend and she pegs him",
+   "used": false
   }
  ],
  "runs": [
@@ -187,6 +196,12 @@
    "frm": "Ben D",
    "about": "Justin",
    "chars": 35
+  },
+  {
+   "ts": "2026-09-12T18:54",
+   "frm": "Ben D",
+   "about": "Marcus",
+   "chars": 51
   }
  ]
 }
