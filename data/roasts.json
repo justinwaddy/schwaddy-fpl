@@ -89,6 +89,15 @@
    "about": "Ben D",
    "text": "Gay pussy bender",
    "used": false
+  },
+  {
+   "id": "2026-09-12-eb6560d51d",
+   "key": "eb6560d51d",
+   "ts": "2026-09-12T18:53",
+   "frm": "Edward",
+   "about": "Marcus",
+   "text": "The man is accused of noncing - unsurprising when you look at his track record and negative football iq",
+   "used": false
   }
  ],
  "runs": [
@@ -157,6 +166,12 @@
    "frm": "Ben D",
    "about": "Ben D",
    "chars": 16
+  },
+  {
+   "ts": "2026-09-12T18:53",
+   "frm": "Edward",
+   "about": "Marcus",
+   "chars": 103
   }
  ]
 }
