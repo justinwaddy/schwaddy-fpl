@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T22:44 UTC",
+  "generated": "2026-09-12T07:58 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -521,6 +521,36 @@
       "kind": "opinion",
       "text": "This page needled the league on 7 September for a gameweek podium that belonged entirely to free agents - Mitchell, Bogle, Barnes and Vuskovic, all outscoring anything on a roster. Justin evidently took it personally: today's waiver sheet has him grabbing both Bogle and Vuskovic in one afternoon, along with Scott and Ampadu, four moves from a manager who has sat fifth since Monday.",
       "source": null
+    },
+    {
+      "id": "2026-09-12-palace-strand-larsen-brace",
+      "ts": "2026-09-12T07:55",
+      "kind": "news",
+      "text": "Jorgen Strand Larsen scored twice as Crystal Palace beat Middlesbrough 3-0 in the Carabao Cup third round on Tuesday, heading in a first-half cross from Oscar Mingueza before adding a second from a Ben Chilwell delivery; Daichi Kamada completed the scoring. Justin owns Strand Larsen.",
+      "source": {
+        "title": "Crystal Palace 3-0 Middlesbrough: Jorden Strand Larsen nets twice as Eagles cruise into fourth round",
+        "url": "https://www.skysports.com/football/news/11938/13582701/crystal-palace-3-0-middlesbrough-jorden-strand-larsen-nets-twice-as-eagles-cruise-into-fourth-round"
+      }
+    },
+    {
+      "id": "2026-09-12-chelsea-front-three",
+      "ts": "2026-09-12T07:56",
+      "kind": "news",
+      "text": "Xabi Alonso says his front three of Cole Palmer, Morgan Rogers and Joao Pedro have already produced 11 goal involvements between them this season, calling it early days for a partnership he is delighted to see click, ahead of Saturday's visit from a Hull side yet to concede in the league. Edward owns Palmer, Big Ben owns Rogers and Marcus owns Joao Pedro.",
+      "source": {
+        "title": "Alonso on Palmer and Rogers enjoying themselves and Hull respect",
+        "url": "https://www.chelseafc.com/en/news/article/alonso-on-palmer-and-rogers-enjoying-themselves-and-hull-respect"
+      }
+    },
+    {
+      "id": "2026-09-12-liverpool-gakpo-barcola",
+      "ts": "2026-09-12T07:57",
+      "kind": "news",
+      "text": "Liverpool head coach Andoni Iraola says Bradley Barcola, forced off with cramp during Wednesday's Champions League win over Atletico Madrid, should be available to face Fulham on Saturday, while Cody Gakpo remains doubtful after missing Friday's training. Justin owns Barcola and Small Ben owns Gakpo.",
+      "source": {
+        "title": "Liverpool v Fulham: Team news",
+        "url": "https://www.liverpoolfc.com/news/liverpool-v-fulham-team-news-3"
+      }
     }
   ],
   "runs": [
@@ -759,6 +789,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, GW4 starts tomorrow) and the live feed confirms GW3 is still fully settled at the same totals as this morning, so no fresh table angle and no FLOP badges to rewrite. One reported item: Arteta's pre-Sunderland presser (arsenal.com, published today, checked for the correct 2026 datePublished after an identically-titled November 2025 URL surfaced first and was discarded) gave direct quotes on Robert's Mosquera ('doing really well', could return this game or the next) and Edward's Timber ('looks in good shape' after training). One opinion piece: today's automatic MOVE badges show Justin claiming both Bogle and Vuskovic off waivers, two of the four free agents this page singled out on 7 September for outscoring every rostered player in the league - a fresh angle building on an automatic feed item rather than restating it. The roast archive's only unused submission, Edward's one-word line about Robert ('Mong'), stays excluded permanently as the ableist-slur rule 4 rules out, not a timing hold."
+    },
+    {
+      "ts": "2026-09-12T07:58 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Scheduled morning news. Today is a full GW4 matchday (7 fixtures from 14:00 UTC), so this run previewed team news for the clubs most represented across the six squads rather than reporting on games not yet played. Three sourced items: Strand Larsen's Carabao Cup brace for Crystal Palace on Tuesday (Justin), Alonso's comments on the Palmer-Rogers-Joao Pedro front three ahead of the Hull game (Edward, Big Ben, Marcus), and Liverpool's Gakpo/Barcola fitness calls ahead of Fulham (Small Ben, Justin). Passed over several leads that only turned up on unpermitted aggregator sites (Yahoo, football365, sportsmole, thehardtackle) with no matching permitted-outlet source, including Arsenal's Timber/Mosquera update (already covered on 11 September anyway) and a Man City derby team-news line on O'Reilly/Doku that turned out to already be covered from 8 September once checked against the archive. No opinion pieces, per the morning rule. The roast archive's one unused submission (Edward's one-word line about Robert) stays excluded as it falls foul of rule 4."
     }
   ]
 }
