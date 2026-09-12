@@ -1,8 +1,8 @@
 {
  "gw": 5,
  "waivers_close": "2026-09-17T17:30:00Z",
- "ts": "2026-09-11T21:17 UTC",
- "summary": "Collins is a confirmed drop - Brentford's own site has Andrews with no timeline on his calf strain - and Truffert is the clean, high-conviction reply. Everything else this week is the model finding modest fixture-driven edges in defence (Mitchell over Vuskovic, Hill over Bogle) with nothing wrong found on either incumbent, plus one speculative forward punt (Igor Jesus) that this week's research could not confirm from a permitted source, so it rests on the numbers alone - four claims rather than five, because midfield has nothing worth touching: Barcola is trending toward a second Liverpool start (Iraola: 'should be available' for Fulham) and is kept rather than sold into Stach despite the model still rating him near the bottom of the board. Justin sits fifth of six on 124 points, with only Robert below him on 120, so his claims process second-to-last in the six-team priority order for the GW5 window.",
+ "ts": "2026-09-12T08:20 UTC",
+ "summary": "Three claims this week, not five: Collins is still a confirmed drop with no timeline from Brentford at all, and Mitchell-for-Vuskovic and Hill-for-Bogle are the same modest, fixture-driven defensive upgrades as last week with nothing new against either incumbent. Dropped last week's speculative Igor Jesus-for-Strand Larsen punt: cpfc.co.uk's own match report has Strand Larsen scoring twice in Tuesday's Carabao Cup win over Middlesbrough, which strengthens rather than weakens his claim on the striker's shirt at Ipswich this afternoon with Mateta still out, while Forest's pecking order for Igor Jesus still cannot be pinned to a permitted source. Barcola stays kept over the model's suggested Stach swap for the same reason as last week - Liverpool are trending him toward a second Premier League start, not a sale. Justin sits fifth of six on 124 points, with only Robert below him, so his claims process second in the six-team priority order for the GW5 window.",
  "claims": [
   {
    "rank": 1,
@@ -17,8 +17,8 @@
     "code": "432830",
     "club": "BRE"
    },
-   "why": "Brentford's own site has head coach Keith Andrews confirming captain Nathan Collins limped off after 17 minutes of Saturday's draw with Sunderland with a calf strain, with no return timeline given - he is not an option for GW5. Truffert has started every game at wing-back in a Bournemouth defence that keeps taking clean sheets.",
-   "model": "Model already had Truffert's next5 of 17.8 well clear of Collins' 4.0 even before the fresh injury news; with no return date at all, the gap is really much bigger than that number shows.",
+   "why": "Brentford have still given no return timeline for Nathan Collins' calf strain - a week on from Keith Andrews' 'I don't know the extent', their own site has published nothing newer, and he misses a fourth game running. Truffert has started every game at wing-back in a Bournemouth defence that keeps taking clean sheets.",
+   "model": "Model has Truffert's next5 at 17.8 (avail 0.98) against Collins at 4.0 (avail 0.04) - the model has now caught up almost completely with the injury; with no return date given at all, treat Collins as an out, not a discount.",
    "confidence": "high",
    "sources": [
     {
@@ -40,8 +40,8 @@
     "code": "610799",
     "club": "BHA"
    },
-   "why": "No fresh worry on Vuskovic himself - he is still just three senior Premier League games into his career, which is all the model has to judge him on. This one rests on the fixture swing rather than any news: Brighton's next five includes Arsenal and Liverpool away, while Mitchell has been an ever-present in a settled Palace back line.",
-   "model": "Model has Mitchell's next5 at 16.4 against Vuskovic's 11.6, purely down to fixtures and sample size - agreeing with the model here rather than overruling it, since nothing this week's research turned up changes the picture on either player.",
+   "why": "No fresh news on Vuskovic either way - he is still just three senior Premier League games into his career, which is all the model has to judge him on, and nothing found this week changes that picture. This rests on the model's own fixture-adjusted numbers alone: Brighton's next five includes Arsenal and Liverpool away, while Mitchell has been an ever-present in a settled Palace back line.",
+   "model": "Model has Mitchell's next5 at 16.4 (avail 0.98) against Vuskovic's 11.6 (avail 0.68), purely down to fixtures and Vuskovic's still-tiny sample size - agreeing with the model here since nothing this week's research turned up changes the picture on either player.",
    "confidence": "medium",
    "sources": []
   },
@@ -58,26 +58,8 @@
     "code": "226182",
     "club": "LEE"
    },
-   "why": "Bogle has started and scored for Leeds this season and nothing found this week changes that read - this is the smallest and least urgent of the three defensive claims. Hill sits in the same in-form Bournemouth defence as Truffert, and Leeds' run (a trip to Newcastle, then Monday night at Old Trafford) is tougher than Bournemouth's.",
-   "model": "Model has Hill's next5 at 15.9 against Bogle's 13.0, a smaller gap than the Mitchell claim above and purely numbers-driven - no fresh team news either way, so treat this as the lower-conviction of the two marginal defensive upgrades.",
-   "confidence": "low",
-   "sources": []
-  },
-  {
-   "rank": 4,
-   "pos": "FWD",
-   "add": {
-    "name": "Igor Jesus",
-    "code": "482973",
-    "club": "NFO"
-   },
-   "drop": {
-    "name": "Strand Larsen",
-    "code": "247412",
-    "club": "CRY"
-   },
-   "why": "Speculative. Forest's attack is still settling after several summer forward signings and this week's research could not establish a clean pecking order between them from a source on the approved list, so nothing here is being asserted as confirmed team news - this claim rests on the model's numbers alone. Rank it last and only chase it if the three defensive claims above fail.",
-   "model": "Model has Igor Jesus's next5 at 11.8 against Strand Larsen's 9.2, the smallest gap of the week's claims and, unlike the defensive claims, with no fresh news to sharpen it either way - the most speculative of the four.",
+   "why": "Bogle has started and scored for Leeds this season and nothing found this week changes that read - this rests on the model's numbers alone rather than any news against him. Hill sits in the same in-form Bournemouth defence as Truffert, and Leeds' run (away at Newcastle, then Monday night at Old Trafford) is tougher than Bournemouth's home game with Brentford.",
+   "model": "Model has Hill's next5 at 15.9 (avail 0.98) against Bogle's 13.0 (avail 0.86), the smallest gap of the week's claims and purely numbers-driven - no fresh team news either way, so treat this as the lowest-conviction of the three defensive upgrades.",
    "confidence": "low",
    "sources": []
   }
@@ -444,6 +426,12 @@
    "gw": 5,
    "claims": 4,
    "note": "First GW5 board, built the morning after GW4 waivers processed. Four claims rather than five: Collins (confirmed calf strain, no Brentford timeline) is the one clear need, Mitchell/Vuskovic and Hill/Bogle are modest fixture-driven upgrades with no news against either incumbent, and Igor Jesus/Strand Larsen is a low-confidence numbers-only punt after this week's research could not pin down Forest's forward pecking order to a permitted source. Explicitly did not follow the model's own greedy suggestion to swap Barcola for Stach - Liverpool's own site has Iraola saying Barcola 'should be available' for Saturday's Fulham game after Friday's cramp scare, and he is trending toward a second start, not a sale, even though the model still rates him near the bottom of the board."
+  },
+  {
+   "ts": "2026-09-12T08:20 UTC",
+   "gw": 5,
+   "claims": 3,
+   "note": "Dropped the Igor Jesus/Strand Larsen speculative punt, four claims down to three - cpfc.co.uk's own Carabao Cup report has Strand Larsen scoring twice against Middlesbrough, strengthening rather than weakening his case to start over Nketiah at Ipswich this afternoon, while Forest's pecking order for Igor Jesus still can't be pinned to a permitted source. Truffert/Collins, Mitchell/Vuskovic and Hill/Bogle carried forward unchanged after today's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham) found nothing that moves any of the three. Discarded a stale 2024 arsenal.com article wrongly resurfacing as fresh 'Raya injury' news, a Schade suspension and a Collins-vs-Newcastle preview that both matched a future fixture rather than this week's, and the recurring stale claim that Gvardiol has missed City's whole season, already refuted by Sky Sports' own lineup pages."
   }
  ]
 }

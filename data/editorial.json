@@ -151,6 +151,14 @@
    "scope": "free",
    "text": "Free agent Jannik Schuster made his Premier League debut replacing the injured Nathan Collins on Saturday, and Brentford's own site quotes Keith Andrews saying part of the decision to let Ethan Pinnock leave was confidence in Schuster's ability - he 'was thrown into it today and he produced.' The model has him at just 0.31 availability off a single appearance, the same blind spot that undersells every new arrival.",
    "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+  },
+  {
+   "id": "2026-09-12-strand-larsen-carabao-cup-brace",
+   "ts": "2026-09-12T08:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Strand Larsen scored twice in Tuesday's Carabao Cup win over Middlesbrough, per Crystal Palace's own match report, strengthening his case to lead the line at home to Ipswich today with Mateta still out - a firmer position than last week's bench role behind Nketiah, though no permitted outlet has published today's confirmed XI yet.",
+   "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-crystal-palace-middlesbrough-september-2026/"
   }
  ],
  "runs": [
@@ -303,6 +311,11 @@
    "ts": "2026-09-11T21:17 UTC",
    "published": 3,
    "note": "Full club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland) plus general PL injury news, in the light post-waivers window for GW4 (deadline tomorrow 12:30 UTC) and building the GW5 claims board. Led with three: liverpoolfc.com confirms Barcola should be available against Fulham after Friday's cramp scare (still just 0.16 avail in the model); tottenhamhotspur.com has Maddison back and Kudus close to starting as a striker option just as Mudryk goes down for 6-8 weeks, tightening the competition around Marmoush; and free agent Jannik Schuster's Brentford debut deputising for the injured Collins, with Andrews saying it factored into letting Pinnock leave (0.31 avail off one game). One false alarm chased down and discarded: a search summary claimed Gvardiol had missed City's whole season and was doubtful for Sunday's derby, but every fixture-consistent source (this week's predicted lineups, matching the real Man Utd v Man City fixture on 13 September) has him nailed at left-back - the scary version traced back to stale reporting on his January 2026 tibia fracture, resolved by May. Also discarded: a Brentford preview describing Collins back on the bench after a training-ground cut ahead of a Villa Park game - the real fixture list has Brentford's Villa trip in GW6, in October, not this week, so that article does not describe the current state; Collins' calf strain and unknown timeline stand as already reported. Checked and unchanged: Sunderland's Diarra still out (thigh), Xhaka/Le Fee/Sadiki still the midfield pivot; Forest's Igor Jesus/Delap pecking order for Saturday's trip to Villa could not be pinned to a permitted source, so no claim rests on it; Vuskovic and Bogle both still look first-choice with nothing new against either."
+  },
+  {
+   "ts": "2026-09-12T08:20 UTC",
+   "published": 1,
+   "note": "Full club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham) plus general PL injury/transfer searches ahead of today's GW4 deadline (12:30 UTC) and building the GW5 claims board. Led with Strand Larsen's Carabao Cup brace against Middlesbrough (cpfc.co.uk), which strengthens rather than weakens his case to start over Nketiah at home to Ipswich this afternoon. Chased down several leads that did not survive: a 'Raya out with a thigh injury until 25 September' story traced back to a stale arsenal.com article from 2024, not this season; a Kevin Schade suspension and a Collins-benched preview ahead of a Newcastle away game both describe a fixture that isn't this week's for Brentford (their actual next five is Bournemouth, Chelsea, Villa, Liverpool, Hull - Newcastle away is not on it); and a recurring claim that Gvardiol has missed City's entire season is the same stale story already discarded on 11 September, contradicted by Sky Sports' own lineup pages for the games he's actually started. Quinten Timber's move to Palace and Malick Fofana's to Sunderland are both real (cpfc.co.uk, safc.com) but are more than a week old and neither has a permitted-source line on playing today, so left unpublished. Nothing else new or citable to a permitted outlet on Collins, Vuskovic, Bogle, Marmoush or the rest of the squad and free-agent shortlist."
   }
  ]
 }

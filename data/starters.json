@@ -1,7 +1,7 @@
 {
  "gw": 4,
  "deadline": "2026-09-12T12:30:00Z",
- "ts": "2026-09-11T21:17 UTC",
+ "ts": "2026-09-12T08:20 UTC",
  "summary": "Post-waivers deep pass on the final GW4 fifteen, run Friday afternoon after the claims for Scott, Bogle, Vuskovic and Ampadu landed and Bijol, Munoz, Garner and Doku left. Thirteen are likely: every one of them started all three league games (Barcola's three were for PSG and a debut, but he started midweek and Iraola says the cramp is nothing), and no permitted outlet reports an injury or a change. Collins is out with the calf strain that ended his Saturday after 16 minutes and a 25% API flag. Strand Larsen is the one doubt: benched for Nketiah at Fulham and on at half-time, with Mateta not in the squad. None is start because no fixture-specific confirmed XI or manager confirmation was published on a permitted outlet by Friday afternoon; Sky's line-up pages for last week and the club sites' Friday fitness updates (Arsenal, Leeds, Liverpool) are the evidence. Kick-offs: seven of the fifteen play at 3pm Saturday, Pickford and Marmoush at 5.30pm, Raya at 8pm, Vuskovic Sunday 2pm, the City pair Sunday 4.30pm, Bogle and Ampadu Monday 8pm.",
  "players": [
   {
@@ -272,12 +272,16 @@
    "club": "CRY",
    "pos": "FWD",
    "status": "doubt",
-   "verdict": "Benched for Nketiah at Fulham, on at half-time",
-   "note": "Nketiah started at Fulham on Saturday with Strand Larsen among the substitutes; he came on at the break. That is one start in three (62 minutes against Newcastle) with 27 and 45 off the bench either side. Mateta was not in the squad at Fulham, so the competition is Nketiah alone. Ipswich at home, 3pm Saturday; Glasner's pre-match press conference had not been written up on a permitted outlet when checked.",
+   "verdict": "Two Carabao Cup goals boost his case over Nketiah",
+   "note": "Nketiah started at Fulham last Saturday with Strand Larsen among the substitutes, coming on at the break - one league start in three. But he then scored twice, a brace of headers per cpfc.co.uk's own match report, in Tuesday's 3-0 Carabao Cup win over Middlesbrough. Mateta remains unavailable per Sage's Thursday press conference. Ipswich at home, 3pm Saturday; no permitted outlet has published a confirmed or two-source XI for this exact fixture yet.",
    "sources": [
     {
      "title": "Starting Lineups - Fulham vs C Palace | 05.09.2026",
      "url": "https://www.skysports.com/football/fulham-vs-c-palace/teams/8797992523615154232"
+    },
+    {
+     "title": "Palace seal progress in style vs Middlesbrough",
+     "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-crystal-palace-middlesbrough-september-2026/"
     }
    ]
   }
@@ -306,6 +310,12 @@
    "gw": 4,
    "kind": "light",
    "note": "Light update in the same GW4 window, ~7 hours before the 12:30 UTC deadline. One change: Marmoush's note updated now that Friday's De Zerbi press conference is published on tottenhamhotspur.com - Maddison back, Kudus close to starting and able to play centrally, Mudryk out 6-8 weeks - status stays likely, no verdict change, but the note now reflects the real competition around his role rather than flagging the presser as unpublished. Everyone else unchanged: nothing found this run on Collins, Strand Larsen, Vuskovic, Bogle or the rest of the fifteen that overturns Friday afternoon's deep pass. One item investigated and deliberately NOT used: a search summary claiming Gvardiol had missed all of City's league season traced back to stale reporting on his resolved January 2026 leg fracture and is contradicted by every fixture-matched source for Sunday's derby, so his 'likely' stands unchanged and uncorrected because it was never wrong."
+  },
+  {
+   "ts": "2026-09-12T08:20 UTC",
+   "gw": 4,
+   "kind": "light",
+   "note": "One change: Strand Larsen scored twice in Tuesday's Carabao Cup win over Middlesbrough (cpfc.co.uk match report) - a fresh, permitted-sourced case for him over Nketiah at home to Ipswich this afternoon, though no outlet has published a confirmed XI for this exact fixture yet, so status stays doubt rather than likely. Also corrected a wrong manager name in his note (Sage, not Glasner - Palace's own site; Glasner manages Forest). Full club-by-club sweep otherwise (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Tottenham) found nothing else that changes a verdict: a 'Raya out with a thigh injury until 25 September' story traced back to a stale 2024 arsenal.com article; a Schade suspension and a Collins-benched-for-Newcastle preview both matched a future fixture (Brentford's actual next five is Bournemouth, Chelsea, Villa, Liverpool, Hull, not Newcastle); and the recurring claim that Gvardiol has missed City's whole season is the same stale story already discarded on 11 September, contradicted by Sky Sports' own lineup pages for every game he's actually played."
   }
  ],
  "previous": [
