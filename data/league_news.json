@@ -581,6 +581,16 @@
     "title": "Confirmed Line-ups: Spurs vs Everton",
     "url": "https://www.tottenhamhotspur.com/news/1089725/confirmed-line-ups-spurs-vs-everton"
    }
+  },
+  {
+   "id": "2026-09-12-xi-1900",
+   "ts": "2026-09-12T18:09",
+   "kind": "news",
+   "text": "Team news, 19:00 kick-off, Sunderland v Arsenal (ESPN): Marcus's Mukiele, Calafiori and Tzolis all start. Robert's Roefs, Gabriel and Saka start, but Mosquera is not in the 20-man squad. Big Ben's Konsa, White and Havertz all start. Edward's Odegaard starts, with J.Timber among the substitutes. Small Ben's Rice starts, and Justin's Raya starts.",
+   "source": {
+    "title": "Sunderland vs. Arsenal (Sep 12, 2026) Lineups - ESPN",
+    "url": "https://www.espn.com/soccer/lineups/_/gameId/401878779"
+   }
   }
  ],
  "runs": [
@@ -854,6 +864,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "Follow-up for the 16:30 KO TOT v EVE: confirmed line-ups appeared on tottenhamhotspur.com (read in full) a few minutes after the prior check found nothing readable at any permitted outlet. Single article covers both clubs. Richarlison not in Tottenham's squad; Grealish is an Everton substitute; Kinsky, Dewsbury-Hall, Marmoush, Pickford, Solanke, Tarkowski, Barry and Branthwaite all start."
+  },
+  {
+   "ts": "2026-09-12T18:09 UTC",
+   "news": 1,
+   "opinion": 0,
+   "matchday": true,
+   "note": "19:00 kickoff Sunderland v Arsenal: no permitted outlet had a readable confirmed XI yet (arsenal.com, safc.com, premierleague.com and skysports.com all served JS shells or a live blog error, and BBC Sport is not reachable by this session's fetch tool at all), so fell back to ESPN's official lineups feed (espn.com, permitted), which had both confirmed sheets in. Mukiele, Calafiori, Tzolis, Roefs, Gabriel, Saka, Konsa, White, Havertz, Odegaard and Rice all start; Raya starts in goal; J.Timber is among the Arsenal substitutes; Mosquera is not in Arsenal's 20-man squad at all."
   }
  ]
 }
