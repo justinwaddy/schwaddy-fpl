@@ -71,6 +71,15 @@
    "about": "Robert",
    "text": "Roast rob for not downing his pint last week",
    "used": false
+  },
+  {
+   "id": "2026-09-12-7526d15fa8",
+   "key": "7526d15fa8",
+   "ts": "2026-09-12T18:52",
+   "frm": "Edward",
+   "about": "Robert",
+   "text": "Rob doesn’t respond to anyone and doesn’t make any transfers - explains why his team and hairline is so dreadful",
+   "used": false
   }
  ],
  "runs": [
@@ -127,6 +136,12 @@
    "frm": "Justin",
    "about": "Robert",
    "chars": 44
+  },
+  {
+   "ts": "2026-09-12T18:52",
+   "frm": "Edward",
+   "about": "Robert",
+   "chars": 112
   }
  ]
 }
