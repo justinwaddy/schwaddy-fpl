@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12T13:35",
+ "generated": "2026-09-12T16:14",
  "items": [
   {
    "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -571,6 +571,16 @@
     "title": "Starting Lineups - Aston Villa vs N Forest | 12.09.2026",
     "url": "https://www.skysports.com/football/aston-villa-vs-nottingham-forest/teams/559474"
    }
+  },
+  {
+   "id": "2026-09-12-xi-1630",
+   "ts": "2026-09-12T16:14",
+   "kind": "news",
+   "text": "Team news, 16:30 kick-off: Tottenham v Everton - Marcus starts Kinsky and Dewsbury-Hall but Richarlison is left out of Tottenham's squad; Justin starts Marmoush and Pickford; Robert starts Solanke, in for his first league start of the season; Edward starts Tarkowski and Barry; Big Ben starts Branthwaite, with Grealish among the substitutes.",
+   "source": {
+    "title": "Confirmed Line-ups: Spurs vs Everton",
+    "url": "https://www.tottenhamhotspur.com/news/1089725/confirmed-line-ups-spurs-vs-everton"
+   }
   }
  ],
  "runs": [
@@ -837,6 +847,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "16:30 kickoff Tottenham v Everton. Checked tottenhamhotspur.com match centre (JS shell, no lineup data server-side), evertonfc.com (same, plus a Sept 11 Moyes preview piece which predates any teamsheet), premierleague.com fixture/lineups page (JS shell, no data), skysports.com and espn.com (no readable confirmed-XI content returned), and searched for bbc.co.uk/theguardian.com/theathletic.com coverage of this fixture with none surfacing. No permitted outlet had a directly-readable confirmed XI for either club at fire time, so no item posted per rule 2 (owned players affected: TOT - Kinsky, Richarlison, Marmoush, Solanke; EVE - Tarkowski, Barry, Dewsbury-Hall, Branthwaite, Grealish, Pickford)."
+  },
+  {
+   "ts": "2026-09-12T16:14 UTC",
+   "news": 1,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Follow-up for the 16:30 KO TOT v EVE: confirmed line-ups appeared on tottenhamhotspur.com (read in full) a few minutes after the prior check found nothing readable at any permitted outlet. Single article covers both clubs. Richarlison not in Tottenham's squad; Grealish is an Everton substitute; Kinsky, Dewsbury-Hall, Marmoush, Pickford, Solanke, Tarkowski, Barry and Branthwaite all start."
   }
  ]
 }
