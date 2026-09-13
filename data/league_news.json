@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T15:01 UTC",
+  "generated": "2026-09-13T22:49 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -654,6 +654,37 @@
         "url": "https://www.skysports.com/football/manchester-united-vs-manchester-city/teams/559481"
       },
       "ts": "2026-09-13T15:01"
+    },
+    {
+      "id": "2026-09-13-derby-haaland-var",
+      "ts": "2026-09-13T22:45",
+      "kind": "news",
+      "text": "Erling Haaland scored the only goal as ten-man Manchester City won 1-0 at Old Trafford, turning in Josko Gvardiol's ball at the back post - both start for Justin. Referees' body Pro Ref later admitted the goal should not have stood, since Enzo Fernandez was in an offside position in Haaland's eyeline when the semi-automated technology cleared it. City had gone down to ten men in the 23rd minute, when Phil Foden was sent off for kicking out at Bruno Fernandes.",
+      "source": {
+        "title": "Man Utd 0-1 Man City: Erling Haaland's controversial winner follows Phil Foden's contentious red card in dramatic Manchester derby",
+        "url": "https://www.skysports.com/football/news/11095/13583589/man-utd-0-1-man-city-erling-haalands-controversial-winner-follows-phil-fodens-contentious-red-card-in-dramatic-manchester-derby"
+      }
+    },
+    {
+      "id": "2026-09-13-wrap-robert-pint",
+      "ts": "2026-09-13T22:46",
+      "kind": "opinion",
+      "text": "Robert closes the night exactly where he opened it: bottom of the table, 74 points off Marcus at the top. Gabriel's 9 and Saka's 8 were the whole show; the rest of the eleven mustered 1s, 2s and nothing at all. Somewhere in that graph is a man who couldn't finish his own pint last week - some things are just consistent.",
+      "source": null
+    },
+    {
+      "id": "2026-09-13-wrap-benc-boxing",
+      "ts": "2026-09-13T22:47",
+      "kind": "opinion",
+      "text": "Ben C's 35 today was the second-quietest shift in the league, propped up by Jacquet's 9 and Virgil's 8 while Cunha and the rest mostly stood still. He's got a boxing exhibition coming up, and on this evidence the preparation is going about how you'd expect - though at 188 for the season he can afford the odd quiet night more than most.",
+      "source": null
+    },
+    {
+      "id": "2026-09-13-wrap-gross-brighton",
+      "ts": "2026-09-13T22:48",
+      "kind": "opinion",
+      "text": "Groß's 17 - the best number anyone posted all night - came from a penalty in Brighton's fifth of the afternoon against a Coventry side going nowhere. Easy pickings dressed up as a big night, and it still put Edward second overall. He'll take it either way.",
+      "source": null
     }
   ],
   "runs": [
@@ -976,6 +1007,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "15:30 UTC kick-off Manchester United v Manchester City, second pass ~30 minutes out after the network policy was relaxed. Read Sky Sports' teams page for the match in full (curl; the fetch tool still reported the host blocked) and took both elevens and benches from it: United Lammens; Dalot, Maguire, Martinez, Dorgu; Tielemans, Mainoo; Mbeumo, Fernandes, Rashford; Cunha, subs Darlow, Mazraoui, Mount, Zirkzee, Yoro, Nascimento dos Santos, Heaven, Sesko, Lacey. City Donnarumma; Nunes, Dias, Guehi, Gvardiol; Fernandez, Anderson; Foden, Cherki, Semenyo; Haaland, subs Rulli, Ndiaye, Kovacic, Reis, Bouaddi, O'Reilly, Andrade Elias, Husanov, Lewis. All eighteen league-owned players named once in the item. premierleague.com's line-ups page also returned 200 but renders client-side with no names in the HTML; mancity.com 403'd; espn.com's lineups page returned empty."
+    },
+    {
+      "ts": "2026-09-13T22:49 UTC",
+      "news": 1,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Groß's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
     }
   ]
 }

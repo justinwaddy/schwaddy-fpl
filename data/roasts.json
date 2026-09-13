@@ -71,7 +71,7 @@
    "frm": "Justin",
    "about": "Robert",
    "text": "Roast rob for not downing his pint last week",
-   "used": false
+   "used": true
   },
   {
    "id": "2026-09-12-7526d15fa8",
@@ -89,7 +89,8 @@
    "frm": "Ben D",
    "about": "Ben D",
    "text": "Gay pussy bender",
-   "used": false
+   "used": true,
+   "retired": "aimed at sexuality; rule 4 forbids it regardless of who it's about"
   },
   {
    "id": "2026-09-12-bf20ec8856",
@@ -108,7 +109,8 @@
    "frm": "Ben D",
    "about": "Justin",
    "text": "South African apartheid connoisseur",
-   "used": false
+   "used": true,
+   "retired": "aimed at race; rule 4 forbids it"
   },
   {
    "id": "2026-09-12-211e2a0b5e",
@@ -117,7 +119,8 @@
    "frm": "Edward",
    "about": "Ben C",
    "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
-   "used": false
+   "used": true,
+   "note": "used the boxing/preparation line; dropped the Harvey Price comparison as disability-adjacent"
   },
   {
    "id": "2026-09-13-f263c0fa06",
@@ -126,7 +129,8 @@
    "frm": "Justin",
    "about": "Marcus",
    "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork",
-   "used": false
+   "used": true,
+   "retired": "all three options excluded: religion, a partner outside the six, and a claim stated as fact rather than a joke"
   }
  ],
  "runs": [
