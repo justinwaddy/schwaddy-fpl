@@ -89,8 +89,7 @@
    "frm": "Ben D",
    "about": "Ben D",
    "text": "Gay pussy bender",
-   "used": true,
-   "retired": "aimed at sexuality; rule 4 forbids it regardless of who it's about"
+   "used": false
   },
   {
    "id": "2026-09-12-bf20ec8856",
@@ -109,8 +108,7 @@
    "frm": "Ben D",
    "about": "Justin",
    "text": "South African apartheid connoisseur",
-   "used": true,
-   "retired": "aimed at race; rule 4 forbids it"
+   "used": false
   },
   {
    "id": "2026-09-12-211e2a0b5e",
@@ -129,8 +127,7 @@
    "frm": "Justin",
    "about": "Marcus",
    "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork",
-   "used": true,
-   "retired": "all three options excluded: religion, a partner outside the six, and a claim stated as fact rather than a joke"
+   "used": false
   }
  ],
  "runs": [
@@ -237,6 +234,13 @@
    "about": null,
    "chars": 0,
    "note": "Hand edit: Justin reinstated four I had retired on my own initiative - his own pint line about Robert, Ben D's about himself, Ben D's about Justin, and Edward's about Ben C. The two left retired are the ones about Robert: the slur and the one about his health. Rule 4 still governs what actually gets published."
+  },
+  {
+   "ts": "2026-09-13T23:33",
+   "frm": null,
+   "about": null,
+   "chars": 0,
+   "note": "Hand edit at Justin's request: put back the three the 13 September wrap retired on its own - Ben D's about himself, Ben D's about Justin, and Justin's about Marcus. The routine no longer retires anything; that key is Justin's alone. The two about Robert (the slur, the one about his health) stay retired."
   }
  ]
 }

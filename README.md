@@ -597,11 +597,14 @@ the schedule - the committing is done by the runner with its own
 credentials, and everything arriving from that public endpoint is capped,
 scrubbed and matched against the six managers before it is written.
 
-The opinions are football only, about squads, results, transfers and the
-standings, and never about anything a person did not put into the league.
-Suggestions are marked used once they run, so a line does not come round
-twice, and the archive is never published - the pages show the opinion,
-not who asked for it.
+The opinions go at whatever the six put in the box - the archive is the
+managers' own material about each other - with three things kept out: a
+real illness or misfortune, a slur at a disability, and children. Robert,
+bottom since week one, gets a lighter touch than the rest; Marcus, top,
+gets none. Suggestions are marked used once they run, so a line does not
+come round twice; retiring one is done by hand in data/roasts.json and
+never by the routine; and the archive is never published - the pages show
+the opinion, not who asked for it.
 
 ## Confirmed line-ups, an hour before kick-off
 Teamsheets are published one hour before a match and neither FPL API carries
