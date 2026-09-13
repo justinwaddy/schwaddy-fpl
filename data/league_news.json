@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12T22:51 UTC",
+ "generated": "2026-09-12T23:59",
  "items": [
   {
    "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -100,13 +100,6 @@
    }
   },
   {
-   "id": "2026-09-04-opinion-robert-hairline",
-   "ts": "2026-09-04T22:45",
-   "kind": "opinion",
-   "text": "Robert's gap to the top went from 22 points to 30 on Friday night without a single one of his players setting foot on a pitch: he had nobody in the only game on. Pardinho's title odds are receding just like his hairline, and both managed it while he sat there doing nothing at all.",
-   "source": null
-  },
-  {
    "id": "2026-09-05-arsenal-timber-mosquera",
    "ts": "2026-09-05T07:58",
    "kind": "news",
@@ -150,7 +143,7 @@
    "id": "2026-09-05-xi-1130",
    "ts": "2026-09-05T11:10",
    "kind": "news",
-   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+   "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
    "source": {
     "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
     "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -296,17 +289,6 @@
    }
   },
   {
-   "id": "2026-09-07-cheeseburgers-per-hour",
-   "ts": "2026-09-07T08:45",
-   "kind": "opinion",
-   "text": "Rob, a little birdy told me you don't like beer miles so I've derived a cheeseburgers per hour to hours spent in McDonald's graph for you to help you plan ahead. It took me 18 litres of water to complete this prompt, still less than your estimated pints this season. Speaking of which, this week's league results are settled. It's time to sip up.",
-   "source": null,
-   "image": {
-    "src": "news_img/2026-09-07-cheeseburgers-per-hour.jpg",
-    "alt": "Curve of cheeseburgers per hour against hours spent in McDonald's, falling steeply from 10 an hour at two hours to under one an hour by the twenty-fourth"
-   }
-  },
-  {
    "id": "2026-09-07-opinion-free-agents-podium",
    "ts": "2026-09-07T22:50",
    "kind": "opinion",
@@ -324,7 +306,7 @@
    "id": "2026-09-07-opinion-robert-warmup-act",
    "ts": "2026-09-07T22:50",
    "kind": "opinion",
-   "text": "Robert's total after three gameweeks is 120. Marcus had already banked that much before a ball was kicked in the third one. A whole season as somebody else's warm-up act is not a flattering stat, and Pardinho now has a week off to sit with it.",
+   "text": "Robert's total after three gameweeks is 120, which Marcus had already banked before a ball was kicked in the third one. Pardinho sits last of the six, and on that evidence it is not a position anybody is about to take off him.",
    "source": null
   },
   {
@@ -454,7 +436,7 @@
    "kind": "news",
    "text": "Liverpool came from behind to beat Atletico Madrid 2-1 in their Champions League opener at Anfield on Wednesday, Dominik Szoboszlai's equaliser and an Alexis Mac Allister strike turning the game around; Small Ben owns Szoboszlai. Justin's Bradley Barcola went off holding his calf just before the hour on his full Liverpool debut, after missing two clear first-half chances; head coach Andoni Iraola said afterwards it was cramp rather than an injury, pointing to Barcola having had no pre-season minutes.",
    "source": {
-    "title": "Bradley Barcola limps out of Liverpool home debut against Atl\u00e9tico",
+    "title": "Bradley Barcola limps out of Liverpool home debut against Atlético",
     "url": "https://www.espn.com/soccer/story/_/id/49884201/bradley-barcola-liverpool-injury-atletico-madrid-champions-league"
    }
   },
@@ -616,7 +598,7 @@
    "id": "2026-09-12-opinion-robert-archive",
    "ts": "2026-09-12T22:42",
    "kind": "opinion",
-   "text": "The read on Robert around here has been consistent all week: dreadful team, dreadfuller hairline, and radio silence whenever the group chat needs a signing. Tonight did nothing to argue with it - last in the table before a ball was kicked, and still last on the night's card by some distance. If going quiet is the tactic, it is working exactly as badly as advertised.",
+   "text": "Robert went into Saturday last of the six and came out of it last of the six, and the afternoon hardly involved him: his Mateta was not in Palace's eighteen at all, so the one fixture he had a live interest in turned into an hour of watching Edward's Khalaili and Justin's Strand Larsen score the goals instead.",
    "source": null
   },
   {
@@ -919,6 +901,13 @@
    "opinion": 3,
    "matchday": true,
    "note": "Evening wrap, 22:41 UTC. GW4 is not finished - Man Utd v Man City, Leeds v Newcastle and Coventry v Brighton still to come, so wrote up today's 7 completed fixtures rather than treating the gameweek as over. Led with Raya's penalty save and Saka's late spot-kick in Arsenal's win at Sunderland, and the Rogers-Palmer-Joao Pedro goal chain in Chelsea 2-2 Hull (all Sky Sports, verified by reading the reports directly). Opinion: used the archive's unused Edward-on-Robert line (hairline/team/no-transfers) since Robert is genuinely last tonight as well as in the table - marked used. Also wrote up Justin's bench (21, more than the other five combined) and the Palace 2-3 Ipswich collapse that cost both Edward's Khalaili goal and Justin's Strand Larsen equaliser. Passed over the rest of the unused archive: Edward's 'Mong' line and the Harvey Price comparison target a real disability, Ben D's self-directed line targets sexuality, his Robert-depression line hits a real illness, and his apartheid line on Justin trades on a real racial atrocity - all four stay unused, not held for later, since none of them clears the banned categories regardless of timing. Also rewrote all 12 of today's canned FLOP lines via reflop.py, using verified match-report detail (Dewsbury-Hall's saved one-on-one, Barry's saved header, Martinez's stop on McBurnie) where it was available."
+  },
+  {
+   "ts": "2026-09-12T23:59 UTC",
+   "news": 0,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Hand edit at Justin's request, not a scheduled run: the page had put six of its twenty-four opinion pieces at Robert, the man bottom of the table, and three of those went at his hairline, his weight and his drinking rather than his football. Dropped the 4 Sept hairline piece and the 7 Sept cheeseburgers piece outright, and rewrote the 7 Sept and 12 Sept ones onto what actually happened in the fixtures. Left the three that are about his squad - the City cameos, Saka in Naples, and his passing mention in the Marcus cushion piece. Also retired the unused archive suggestions that rule 4 forbids anyway so no future run has to decide about them."
   }
  ]
 }
