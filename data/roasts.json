@@ -71,8 +71,7 @@
    "frm": "Justin",
    "about": "Robert",
    "text": "Roast rob for not downing his pint last week",
-   "used": true,
-   "retired": "retired with the rest of the Robert material at Justin's request"
+   "used": false
   },
   {
    "id": "2026-09-12-7526d15fa8",
@@ -90,8 +89,7 @@
    "frm": "Ben D",
    "about": "Ben D",
    "text": "Gay pussy bender",
-   "used": true,
-   "retired": "sexuality slur; rule 4 forbids it"
+   "used": false
   },
   {
    "id": "2026-09-12-bf20ec8856",
@@ -110,8 +108,7 @@
    "frm": "Ben D",
    "about": "Justin",
    "text": "South African apartheid connoisseur",
-   "used": true,
-   "retired": "race; rule 4 forbids it"
+   "used": false
   },
   {
    "id": "2026-09-12-211e2a0b5e",
@@ -120,8 +117,7 @@
    "frm": "Edward",
    "about": "Ben C",
    "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
-   "used": true,
-   "retired": "leans on a disabled person outside the six; rule 4 forbids it"
+   "used": false
   },
   {
    "id": "2026-09-13-f263c0fa06",
@@ -230,6 +226,13 @@
    "about": null,
    "chars": 0,
    "note": "Hand edit: re-retired 2 suggestions a merge had restored."
+  },
+  {
+   "ts": "2026-09-13T00:06",
+   "frm": null,
+   "about": null,
+   "chars": 0,
+   "note": "Hand edit: Justin reinstated four I had retired on my own initiative - his own pint line about Robert, Ben D's about himself, Ben D's about Justin, and Edward's about Ben C. The two left retired are the ones about Robert: the slur and the one about his health. Rule 4 still governs what actually gets published."
   }
  ]
 }
