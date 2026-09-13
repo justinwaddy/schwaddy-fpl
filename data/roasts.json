@@ -100,7 +100,8 @@
    "frm": "Ben D",
    "about": "Robert",
    "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
-   "used": false
+   "used": true,
+   "retired": "a real illness and a private failure; rule 4 forbids it"
   },
   {
    "id": "2026-09-12-d9048f2afb",
@@ -119,7 +120,8 @@
    "frm": "Edward",
    "about": "Ben C",
    "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
-   "used": false
+   "used": true,
+   "retired": "leans on a disabled person outside the six; rule 4 forbids it"
   },
   {
    "id": "2026-09-13-f263c0fa06",
@@ -221,6 +223,13 @@
    "frm": "Justin",
    "about": "Marcus",
    "chars": 218
+  },
+  {
+   "ts": "2026-09-13T00:02",
+   "frm": null,
+   "about": null,
+   "chars": 0,
+   "note": "Hand edit: re-retired 2 suggestions a merge had restored."
   }
  ]
 }
