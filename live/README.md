@@ -39,32 +39,27 @@ that way the worker falls back to the Cache API, which is one copy per
 Cloudflare data centre, so you see the others on your data centre and not
 the rest. Deploy with wrangler (below) for the real thing.
 
-## Deploy, once (about five minutes)
+## Deploy
 
-1. Make a free Cloudflare account at https://dash.cloudflare.com/sign-up
-   (no card needed for Workers).
-2. Workers & Pages -> Create -> Create Worker. Name it `schwaddy-live`
-   (the name becomes the URL), press Deploy to accept the hello-world.
-3. Edit code -> replace everything with the contents of `worker.js` ->
-   Deploy.
-4. Copy the worker's URL, e.g. `https://schwaddy-live.<you>.workers.dev`,
-   and open it in a browser: you should see JSON starting `{"gw":`.
-5. Paste that URL into `LIVE_URL` near the top of the script in
-   `site/index.html`, commit, push. The pages workflow redeploys the site.
+The worker deploys itself. It is connected to this repository in the
+Cloudflare dashboard (Workers & Pages -> schwaddy-live -> Settings ->
+Builds): every push to `main` that touches `live/` runs
+`npx wrangler deploy` on Cloudflare's side, with `live` as the root
+directory, so `wrangler.toml` is read and the Durable Object binding
+comes with it. Nothing to install and nothing to paste. Progress shows
+under the worker's Deployments tab; a deploy takes about a minute.
 
-To update a deployed worker after `worker.js` changes: Workers & Pages ->
-schwaddy-live -> Edit code -> paste the new file -> Deploy. The page picks
-up a changed cache length on its next poll; nothing else to do.
+The worker's URL is `https://schwaddy-live.<you>.workers.dev`, and it is
+pasted into `LIVE_URL` near the top of `site/team.js`. Opening it in a
+browser should show JSON starting `{"gw":`.
 
-Or from a terminal, with Node installed, which is also the only way to
-get the who-is-watching binding deployed:
+If the connection is ever lost, the fallback is the dashboard editor:
+Edit code -> paste `worker.js` -> Deploy. That updates the code but not
+the binding, so who-is-watching drops to the per-data-centre version
+until a git deploy runs again. Or, with Node installed:
 
     npx wrangler login
     cd live && npx wrangler deploy
-
-`wrangler.toml` carries the name, the compatibility date and the Durable
-Object binding, so nothing else needs passing. The first deploy creates
-the object class (the `v1` migration); later ones just update the code.
 
 ## What it returns
 
