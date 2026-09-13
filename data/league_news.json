@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T07:58 UTC",
+  "generated": "2026-09-13T12:11 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -945,6 +945,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "morning: led with today's Man Utd-Man City derby team news (ESPN) touching Marcus, Small Ben, Big Ben and Robert, plus Arteta's fury at the Konsa penalty call against Sunderland and Iraola's reaction to Liverpool's Fulham draw, both ESPN. Skipped Coventry v Brighton team news - couldn't verify facts against a permitted source after several tries, so left it out rather than force a bad citation. No opinion pieces on a morning run."
+    },
+    {
+      "ts": "2026-09-13T12:11 UTC",
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Groß), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
     }
   ]
 }
