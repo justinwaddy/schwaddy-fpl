@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-12T21:20 UTC",
-  "summary": "Four claims again, not five: the Truffert-for-Collins, Mitchell-for-Vuskovic and Maguire-for-Bogle cases are unchanged or strengthened (cpfc.co.uk's own team news today has Mitchell confirmed at wing-back), while last week's Hill-for-Bogle punt has been redirected to Hill-for-Milenkovic, following the model's own re-ranked board rather than any confirmed news - a Milenkovic hamstring story doing the rounds this week never traced to a permitted outlet so is not relied on here. Kept Barcola over the model's suggested Stach swap for a third week - Liverpool's own site confirms he started again today, his second start in four days, and the model still has not caught up. Justin sits fourth of six on 149 points but picks third in the reversed GW5 waiver order, behind only Robert and Ben D.",
+  "ts": "2026-09-13T09:15 UTC",
+  "summary": "Five claims this week, up from four: the top three defensive swaps (Truffert for Collins, Mitchell for Vuskovic, Hill for Milenkovic) and the Maguire-for-Bogle fixture punt all carry forward unchanged after today's sweep found nothing that moves them, and a fifth speculative claim has been added at the bottom - Newcastle's 51m deadline-day signing Matias Fernandez-Pardo for Marmoush, on the same theory that undersold Barcola for weeks: the model cannot judge a player with zero Premier League games. Justin sits fourth of six on 163 points but picks third in the reversed GW5 waiver order, behind only Robert and Ben D.",
   "claims": [
     {
       "rank": 1,
@@ -17,8 +17,8 @@
         "code": "432830",
         "club": "BRE"
       },
-      "why": "Collins is out until after the international break with his calf strain, ruling him out of Bournemouth away, the Reading Carabao Cup tie and the Chelsea game on the 18th - a real return date at last, but not until well past this waiver window. Truffert has started every game at wing-back for a Bournemouth defence that keeps taking clean sheets.",
-      "model": "Model has Truffert's next5 at 18.1 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the news just confirms there is no quick return to price in.",
+      "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
+      "model": "Model has Truffert's next5 at 18.1 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
       "confidence": "high",
       "sources": [
         {
@@ -40,12 +40,12 @@
         "code": "610799",
         "club": "BHA"
       },
-      "why": "Palace's own team news for today's Ipswich game confirms Tyrick Mitchell at wing-back again - he has not missed a minute in Sage's back line. Vuskovic is fit and nothing found this week counts against him personally, but he is still only three senior Premier League games into his career with Arsenal and Liverpool both away in his next five.",
-      "model": "Model has Mitchell's next5 at 16.1 (avail 1.00) against Vuskovic's 10.9 (avail 0.68) - agreeing with the model here, mostly down to fixtures and Vuskovic's tiny sample size rather than any news against him.",
+      "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
+      "model": "Model has Mitchell's next5 at 16.1 (avail 1.00) against Vuskovic's 10.9 (avail 0.68) - agreeing with the model here, mostly down to fixtures with both players fit.",
       "confidence": "high",
       "sources": [
         {
-          "title": "Team news: Three changes from Fulham win for Ipswich visit",
+          "title": "Team news: Palace, three changes, Ipswich",
           "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
         }
       ]
@@ -59,12 +59,12 @@
         "club": "BOU"
       },
       "drop": {
-        "name": "Milenković",
+        "name": "Milenkovi\u0107",
         "code": "227444",
         "club": "NFO"
       },
-      "why": "This one rests on the model's own numbers rather than a research finding - a search trail this week threw up conflicting and contradictory reports about a possible Milenkovic hamstring knock around today's Aston Villa game, none of them tracing to a permitted outlet, so nothing is asserted here about his fitness either way. Hill sits in the same in-form Bournemouth defence as Truffert.",
-      "model": "Model has Hill's next5 at 16.1 (avail 1.00) against Milenković's 11.7 (avail 0.60) - the model's own avail number has already marked him down this week; this claim just follows that number without an independent news source behind it.",
+      "why": "This one still rests on the model's own numbers rather than a research finding. This week's sweep again turned up reports that Milenkovic and Jair Cunha were left out of Saturday's win at Aston Villa with fitness concerns, but exactly as with last week's version of this story, it traces only to OneFootball and Sports Mole copy with no outlet on the permitted list carrying it, so it is not relied on here. Hill remains a nailed full-back in Bournemouth's settled back line.",
+      "model": "Model has Hill's next5 at 16.1 (avail 1.00) against Milenkovi\u0107's 11.7 (avail 0.60) - the model's own availability figure has already marked him down; treat this as the numbers-only case it was last week.",
       "confidence": "medium",
       "sources": []
     },
@@ -81,10 +81,33 @@
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Bogle was rested for Wednesday's Carabao Cup defeat but nothing found this week changes his standing as a nailed Leeds starter, projected back in for Monday night's trip to Newcastle - this is the model's own numbers rather than a case against him, and the smallest gap of the week's claims.",
-      "model": "Model has Maguire's next5 at 15.5 (avail 1.00) against Bogle's 12.6 (avail 0.86), purely fixture and squad-depth driven - treat as the lowest-conviction claim this week.",
+      "why": "Bogle was rested for Wednesday's Carabao Cup defeat but nothing found this week changes his standing as a nailed Leeds starter; this claim rests on the model's own fixture-and-depth numbers rather than any news against either player, so it stays the lowest-conviction of the defensive swaps.",
+      "model": "Model has Maguire's next5 at 15.5 (avail 1.00) against Bogle's 12.6 (avail 0.86), purely fixture and squad-depth driven - treat as the weakest of the four defensive claims.",
       "confidence": "low",
       "sources": []
+    },
+    {
+      "rank": 5,
+      "pos": "FWD",
+      "add": {
+        "name": "Fernandez-Pardo",
+        "code": "613221",
+        "club": "NEW"
+      },
+      "drop": {
+        "name": "Marmoush",
+        "code": "438234",
+        "club": "TOT"
+      },
+      "why": "Newcastle's deadline-day 51m signing from Lille is, in boss Matthias Jaissle's own words, 'getting closer to starting' after a bench debut against Bournemouth - exactly the kind of arrival the model cannot yet judge with zero Premier League games behind him. Marmoush is the drop purely because he is the weakest forward in the squad by the model's own board; there is no fitness concern against him, so treat this as a speculative depth punt rather than a like-for-like swap.",
+      "model": "Model rates Fernandez-Pardo at just 2.7 next5 (avail 0.19, n=0 games) against Marmoush's 9.5 (avail 0.59) - overruling the model entirely here, on the theory that it is scoring an uncapped 51m signing the same way it scores a fringe player, the exact blind spot that undersold Barcola for weeks.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
+          "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+        }
+      ]
     }
   ],
   "previous": [
@@ -101,7 +124,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Muñoz",
+            "name": "Mu\u00f1oz",
             "code": "247348",
             "club": "NFO"
           },
@@ -127,7 +150,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le Fée",
+            "name": "E.Le F\u00e9e",
             "code": "484420",
             "club": "SUN"
           },
@@ -282,7 +305,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Groß",
+            "name": "Gro\u00df",
             "code": "60307",
             "club": "BHA"
           },
@@ -461,6 +484,12 @@
       "gw": 5,
       "claims": 4,
       "note": "Redirected the weakest defensive claim from Hill-for-Bogle to Hill-for-Milenkovic after today's model re-ranking (Milenkovic's own avail figure dropped to 0.60); could not confirm the underlying story to any permitted source (a widely-repeated Milenkovic/Cunha hamstring tale traced back to Yahoo Sports/hayters.com aggregator copy that also wrongly credited Milenkovic with a goal actually scored in a real December 2024 match), so the claim rests on the model's numbers alone rather than the injury story. Upgraded the Mitchell-for-Vuskovic claim with a fresh cpfc.co.uk citation confirming Mitchell nailed at wing-back for today's Ipswich game. Confirmed Truffert/Collins and Maguire/Bogle unchanged. Kept Barcola over Stach for a third straight week - liverpoolfc.com confirms his second start in four days (Tuesday's Champions League tie plus today's Fulham game) while the model still rates him near the bottom of the board."
+    },
+    {
+      "ts": "2026-09-13T09:15 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "Added a fifth, speculative claim - Fernandez-Pardo for Marmoush - after Newcastle's own site quoted Jaissle saying the 51m deadline-day signing is 'getting closer to starting'; the model still has him bottom of the forward pool off zero games, the same blind spot flagged on Barcola for weeks. The four defensive claims (Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle) carry forward unchanged - today's sweep reconfirmed Collins' timeline, Mitchell's start, and Bournemouth's back line, and again failed to find a permitted source for the recurring Milenkovic-omitted-at-Villa story, so that claim stays numbers-only as it was last week."
     }
   ]
 }
