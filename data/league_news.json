@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T12:11 UTC",
+  "generated": "2026-09-13T14:40 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -952,6 +952,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Groß), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
+    },
+    {
+      "ts": "2026-09-13T14:40 UTC",
+      "news": 0,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 UTC kick-off Manchester United v Manchester City, checked from 80 minutes out to 40, i.e. across the hour the teamsheets are published. Eighteen league-owned players involved: United - Mbeumo (Marcus), Lammens (Edward), Cunha (Small Ben), B.Fernandes (Big Ben), Yoro and Sesko (Robert); City - Gvardiol and Haaland (Justin), Guehi and Foden (Marcus), Semenyo (Edward), Donnarumma and Ruben Dias (Small Ben), Matheus Nunes and Enzo Fernandez (Big Ben), O'Reilly, Cherki and Ndiaye (Robert). No item posted per rule 2: this session's network policy rejects every permitted outlet outright (manutd.com, mancity.com, skysports.com, premierleague.com, espn.com, bbc.co.uk, theguardian.com, theathletic.com, reuters.com all blocked at the proxy), so no page could be read, and searches restricted to Sky Sports, ESPN and premierleague.com returned only the morning's predicted XIs and the Sky live blog with no eleven in the snippet. The only pages calling an XI 'confirmed' were Yahoo, Heavy and Flashscore, unpermitted aggregators that contradicted each other (Cunha v Sesko up front, Foden v Ndiaye wide, Shaw v Dorgu at left-back) and one of which still named Guardiola and the injured Amad, so none was used. The 07:55 derby item on the page already carries the injury picture from ESPN. Confirmed elevens should be posted from a session that can reach the club sites or Sky."
     }
   ]
 }
