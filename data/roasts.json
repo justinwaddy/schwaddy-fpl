@@ -6,7 +6,7 @@
    "ts": "2026-09-04T13:35",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Rob\u2019s chances of first place receding more than his hairline. You MUST mention hairline",
+   "text": "Rob’s chances of first place receding more than his hairline. You MUST mention hairline",
    "used": true
   },
   {
@@ -15,7 +15,7 @@
    "ts": "2026-09-04T13:36",
    "frm": "Ben D",
    "about": null,
-   "text": "Ben C\u2019s chance of winning is the same as his height: small",
+   "text": "Ben C’s chance of winning is the same as his height: small",
    "used": true
   },
   {
@@ -60,7 +60,7 @@
    "ts": "2026-09-06T15:31",
    "frm": "Edward",
    "about": null,
-   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn\u2019t haul his team is awful awful awful",
+   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn’t haul his team is awful awful awful",
    "used": true
   },
   {
@@ -78,7 +78,7 @@
    "ts": "2026-09-12T18:52",
    "frm": "Edward",
    "about": "Robert",
-   "text": "Rob doesn\u2019t respond to anyone and doesn\u2019t make any transfers - explains why his team and hairline is so dreadful",
+   "text": "Rob doesn’t respond to anyone and doesn’t make any transfers - explains why his team and hairline is so dreadful",
    "used": true
   },
   {
@@ -96,7 +96,7 @@
    "ts": "2026-09-12T18:53",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Ignoring FPL bc he\u2019s depressed again (like when he failed his degree)",
+   "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
    "used": false
   },
   {
@@ -114,7 +114,16 @@
    "ts": "2026-09-12T18:54",
    "frm": "Edward",
    "about": "Ben C",
-   "text": "The only man that could be mistaken for Harvey price. He\u2019s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
+   "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
+   "used": false
+  },
+  {
+   "id": "2026-09-13-f263c0fa06",
+   "key": "f263c0fa06",
+   "ts": "2026-09-13T00:00",
+   "frm": "Justin",
+   "about": "Marcus",
+   "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork",
    "used": false
   }
  ],
@@ -202,6 +211,12 @@
    "frm": "Edward",
    "about": "Ben C",
    "chars": 205
+  },
+  {
+   "ts": "2026-09-13T00:00",
+   "frm": "Justin",
+   "about": "Marcus",
+   "chars": 218
   }
  ]
 }
