@@ -183,6 +183,14 @@
       "scope": "free",
       "text": "Newcastle's deadline-day arrival Matias Fernandez-Pardo, a reported 51m signing from Lille, is \"getting closer to starting\" according to boss Matthias Jaissle ahead of the Leeds trip, having so far only appeared from the bench against Bournemouth. The model still rates him bottom of the free-agent forward board at 0.19 availability and a 2.7-point next5 off zero Premier League games - the same blind spot that undersold Barcola for weeks.",
       "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+    },
+    {
+      "id": "2026-09-13-milenkovic-cunha-started-villa-win",
+      "ts": "2026-09-13T21:10 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Milenkovic and Cunha both started Forest's full 90 minutes in Saturday's 2-1 win at Aston Villa, Igor Jesus scoring an 88th-minute winner - this week's recurring hamstring doubt did not materialize. The model's 0.60 availability for Milenkovic looks conservative; the Hill-for-Milenkovic waiver claim now rests on fixture value alone, not fitness.",
+      "url": "https://www.espn.com/soccer/report/_/gameId/401879284"
     }
   ],
   "runs": [
@@ -350,6 +358,11 @@
       "ts": "2026-09-13T09:15 UTC",
       "published": 1,
       "note": "Club-by-club sweep (Brentford, Nottingham Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Everton, Arsenal, Man Utd) plus general PL injury/transfer searches, first run of the GW5 window. Led with Newcastle's Matias Fernandez-Pardo (nufc's own site: Jaissle says the 51m Lille signing is 'getting closer to starting' after his bench debut), a marquee arrival the model still has bottom of the forward pool off zero games - flagged per the standing brief on new signings the model cannot judge. Chased down and discarded three leads: Milenkovic and Cunha again reported missing Saturday's Aston Villa win with fitness concerns, but as last week this traces only to OneFootball/Sports Mole copy with no permitted outlet carrying it, so the Hill/Milenkovic claim stays numbers-only; a Kevin Schade 'suspended' story turned out to be stale coverage of a straight red served back in February 2026, not current; and a Sky Sports headline naming Ruben Amorim as commenting on a Bruno Fernandes injury contradicts this week's own derby preview coverage naming Michael Carrick as United's manager - too inconsistent to stand up, so left unpublished rather than guess which is right. Everything else reconfirmed unchanged: Collins still out until the international break, Barcola's back-to-back starts already up from yesterday, Mitchell and Strand Larsen still nailed at Palace, Maddison/Kudus at Tottenham unchanged since last week, Truffert and Hill both still in Bournemouth's XI."
+    },
+    {
+      "ts": "2026-09-13T21:10 UTC",
+      "published": 1,
+      "note": "Club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle) plus general PL injury/team-news searches. Led with ESPN's confirmed match report for Forest 2-1 at Villa Park: Milenkovic and Cunha both started the full 90, resolving the recurring hamstring-doubt story in his favour. Chased down and discarded two stories that looked material but traced to stale dates: a Raya 'knee injury, out until 25 September vs Bolton' story traces to an arsenal.com article dated 27 September 2024, not this season (Bolton is not even a Premier League side); and a Kevin Schade red-card suspension story traces to a straight red shown against Aston Villa on 1 February 2026, already served and resolved by 21 February. Also discarded a Bogle/Ampadu-suspended-vs-Man-Utd story that does not match Leeds' actual fixture list (next opponent is Crystal Palace, not Man Utd) and a Jean-Philippe Mateta return-to-training story with no clear September 2026 date on cpfc.co.uk. Newcastle's Fernandez-Pardo update (bench debut vs Bournemouth confirmed, 'getting closer to starting' for Monday's Leeds trip) is incremental on this morning's already-published item, so left unpublished. Everything else reconfirmed unchanged: Collins still out until after the international break, Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth, Mitchell and Strand Larsen still nailed at Palace, Maddison/Kudus at Tottenham unchanged."
     }
   ]
 }
