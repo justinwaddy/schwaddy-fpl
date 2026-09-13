@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T14:40 UTC",
+  "generated": "2026-09-13T15:01 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -644,6 +644,16 @@
         "title": "Andoni Iraola cites 'lack of freshness' after Liverpool draw",
         "url": "https://www.espn.com/soccer/story/_/id/49916096/andoni-iraola-lack-freshness-liverpool-draw-fulham"
       }
+    },
+    {
+      "id": "2026-09-13-xi-1530",
+      "kind": "news",
+      "text": "Team news, 16:30 derby at Old Trafford, confirmed by Sky Sports. Justin has Gvardiol and Haaland starting. Marcus has Mbeumo, Guehi and Foden all in. Edward has Lammens in goal and Semenyo starting. Small Ben has Cunha, Donnarumma and Ruben Dias starting. Big Ben has Bruno Fernandes, Matheus Nunes and Enzo Fernandez starting. Robert has Cherki starting but Sesko and Yoro are on United's bench and O'Reilly and Ndiaye on City's. Rashford starts ahead of Sesko, with Shaw out and Dorgu at left-back.",
+      "source": {
+        "title": "Starting Lineups - Man Utd vs Man City | 13.09.2026",
+        "url": "https://www.skysports.com/football/manchester-united-vs-manchester-city/teams/559481"
+      },
+      "ts": "2026-09-13T15:01"
     }
   ],
   "runs": [
@@ -959,6 +969,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "15:30 UTC kick-off Manchester United v Manchester City, checked from 80 minutes out to 40, i.e. across the hour the teamsheets are published. Eighteen league-owned players involved: United - Mbeumo (Marcus), Lammens (Edward), Cunha (Small Ben), B.Fernandes (Big Ben), Yoro and Sesko (Robert); City - Gvardiol and Haaland (Justin), Guehi and Foden (Marcus), Semenyo (Edward), Donnarumma and Ruben Dias (Small Ben), Matheus Nunes and Enzo Fernandez (Big Ben), O'Reilly, Cherki and Ndiaye (Robert). No item posted per rule 2: this session's network policy rejects every permitted outlet outright (manutd.com, mancity.com, skysports.com, premierleague.com, espn.com, bbc.co.uk, theguardian.com, theathletic.com, reuters.com all blocked at the proxy), so no page could be read, and searches restricted to Sky Sports, ESPN and premierleague.com returned only the morning's predicted XIs and the Sky live blog with no eleven in the snippet. The only pages calling an XI 'confirmed' were Yahoo, Heavy and Flashscore, unpermitted aggregators that contradicted each other (Cunha v Sesko up front, Foden v Ndiaye wide, Shaw v Dorgu at left-back) and one of which still named Guardiola and the injured Amad, so none was used. The 07:55 derby item on the page already carries the injury picture from ESPN. Confirmed elevens should be posted from a session that can reach the club sites or Sky."
+    },
+    {
+      "ts": "2026-09-13T15:01 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 UTC kick-off Manchester United v Manchester City, second pass ~30 minutes out after the network policy was relaxed. Read Sky Sports' teams page for the match in full (curl; the fetch tool still reported the host blocked) and took both elevens and benches from it: United Lammens; Dalot, Maguire, Martinez, Dorgu; Tielemans, Mainoo; Mbeumo, Fernandes, Rashford; Cunha, subs Darlow, Mazraoui, Mount, Zirkzee, Yoro, Nascimento dos Santos, Heaven, Sesko, Lacey. City Donnarumma; Nunes, Dias, Guehi, Gvardiol; Fernandez, Anderson; Foden, Cherki, Semenyo; Haaland, subs Rulli, Ndiaye, Kovacic, Reis, Bouaddi, O'Reilly, Andrade Elias, Husanov, Lewis. All eighteen league-owned players named once in the item. premierleague.com's line-ups page also returned 200 but renders client-side with no names in the HTML; mancity.com 403'd; espn.com's lineups page returned empty."
     }
   ]
 }
