@@ -1485,7 +1485,8 @@ async function pollLive(){
   if(!LIVE)renderLive();                                   // "connecting" until the first answer
   try{
     const ab=new AbortController();const to=setTimeout(()=>ab.abort(new Error("no answer in 10s")),10000);
-    const r=await fetch(LIVE_URL,{cache:"no-store",signal:ab.signal}).finally(()=>clearTimeout(to));
+    // says whose page this is, so the manager sites show him as watching
+    const r=await fetch(LIVE_URL+"?me=372099",{cache:"no-store",signal:ab.signal}).finally(()=>clearTimeout(to));
     if(!r.ok)throw new Error("HTTP "+r.status);
     const j=await r.json();
     if(j.error)throw new Error(j.error);

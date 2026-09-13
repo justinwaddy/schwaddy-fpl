@@ -84,6 +84,16 @@ padding:9px 14px;font:600 13px "IBM Plex Sans",system-ui;cursor:pointer}
 .det{background:var(--panel2);border-radius:8px;padding:2px 10px 8px;margin:2px 0 8px}
 .det table{margin:0}.det td{font-size:13px}
 .scorecard{border-color:var(--blue)}
+/* who is watching: one badge of initials per manager whose page is polling */
+.lvwho{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:2px 0 8px}
+.lvwho:empty{display:none}
+.lvon{position:relative;display:inline-flex;align-items:center;justify-content:center;
+min-width:28px;height:28px;padding:0 7px;border-radius:14px;background:var(--panel2);
+border:1px solid var(--line);color:var(--ink);font:600 11px "IBM Plex Mono",ui-monospace,monospace;
+letter-spacing:.04em;cursor:default}
+.lvon.me{border-color:var(--blue);color:var(--blue)}
+.lvon::after{content:"";position:absolute;top:-2px;right:-2px;width:8px;height:8px;border-radius:50%;
+background:var(--green);border:2px solid var(--bg)}
 .lvstatus{font:600 12px "IBM Plex Mono",ui-monospace,monospace;color:var(--dim);padding:2px 0 6px}
 .livedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);
 margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite}

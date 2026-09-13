@@ -39,12 +39,15 @@ const LEAGUE = 9450;
 const SNAP_TTL = 15;      // seconds a composed snapshot is served from cache;
                           // the page polls at this rate while a match is on
 const BOOT_TTL = 3600;    // names and clubs change rarely; cache for an hour
+const ONLINE_TTL = 90;    // seconds since a page last polled before its manager
+                          // is no longer shown as watching; six polls at 15s
 const ETYPE = { 1: "GKP", 2: "DEF", 3: "MID", 4: "FWD" };
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Expose-Headers": "X-Online",
 };
 
 export default {
@@ -54,15 +57,22 @@ export default {
     if (url.pathname !== "/" && url.pathname !== "/snapshot") {
       return json({ error: "not found" }, 404);
     }
+    // Who is watching. A manager's page says whose it is on every poll
+    // (?me=<entry>); the reply carries everyone seen in the last
+    // ONLINE_TTL seconds in a header, so the cached body is untouched
+    // and the query string never splits the cache. Nothing else is
+    // recorded: no address, no page, no time beyond "lately".
+    const me = url.searchParams.get("me");
+    const online = presence(env, ctx, /^\d{1,9}$/.test(me || "") ? me : null);
     const cache = caches.default;
     const key = new Request(`${url.origin}/snapshot`);
     const hit = await cache.match(key);
-    if (hit) return hit;
+    if (hit) return withOnline(hit, await online);
     try {
       const snap = await compose(cache);
       const res = json(snap, 200, { "Cache-Control": `public, max-age=${SNAP_TTL}` });
       ctx.waitUntil(cache.put(key, res.clone()));
-      return res;
+      return withOnline(res, await online);
     } catch (e) {
       // never cache a failure: the next poll should retry upstream
       return json({ error: String(e && e.message || e) }, 502,
@@ -76,6 +86,67 @@ function json(body, status = 200, extra = {}) {
     status,
     headers: { "Content-Type": "application/json; charset=utf-8", ...CORS, ...extra },
   });
+}
+
+/* The snapshot with the watching list on it. A response out of the cache
+   has frozen headers, so it is rewrapped rather than edited. */
+function withOnline(res, online) {
+  const out = new Response(res.body, res);
+  out.headers.set("X-Online", online.join(","));
+  out.headers.set("Access-Control-Expose-Headers", "X-Online");
+  return out;
+}
+
+/* Everyone whose page has polled lately, this one's manager included.
+
+   The real thing is a Durable Object: one instance for the league, so a
+   viewer in London and one in Manchester see the same list. Deployed
+   from the dashboard editor without the binding, it falls back to the
+   Cache API, which is one copy per Cloudflare data centre, so a viewer
+   sees the others on the same one and not the rest. Never fatal: if
+   either fails the scores still come, with nobody shown as watching. */
+async function presence(env, ctx, me) {
+  try {
+    if (env && env.PRESENCE) {
+      const stub = env.PRESENCE.get(env.PRESENCE.idFromName("league"));
+      const r = await stub.fetch("https://presence/" + (me ? `?me=${me}` : ""));
+      return await r.json();
+    }
+    return await presenceCached(ctx, me);
+  } catch (e) {
+    return [];
+  }
+}
+
+export class Presence {
+  constructor(state) { this.state = state; this.seen = null; }
+  async fetch(req) {
+    if (!this.seen) {
+      this.seen = new Map(Object.entries(await this.state.storage.get("seen") || {}));
+    }
+    const me = new URL(req.url).searchParams.get("me");
+    const now = Date.now();
+    if (me) this.seen.set(me, now);
+    for (const [k, t] of this.seen) if (now - t > ONLINE_TTL * 1000) this.seen.delete(k);
+    // one row, rewritten on each ping, so the list survives the object
+    // being put to sleep between polls
+    if (me) await this.state.storage.put("seen", Object.fromEntries(this.seen));
+    return json([...this.seen.keys()]);
+  }
+}
+
+async function presenceCached(ctx, me) {
+  const cache = caches.default;
+  const key = new Request("https://live.invalid/online");
+  const hit = await cache.match(key);
+  const seen = hit ? await hit.json() : {};
+  const now = Date.now();
+  if (me) seen[me] = now;
+  for (const k in seen) if (now - seen[k] > ONLINE_TTL * 1000) delete seen[k];
+  if (me) {
+    ctx.waitUntil(cache.put(key, json(seen, 200, { "Cache-Control": `public, max-age=${ONLINE_TTL}` })));
+  }
+  return Object.keys(seen);
 }
 
 async function get(url, extra) {

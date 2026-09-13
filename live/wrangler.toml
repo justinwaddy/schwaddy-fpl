@@ -1,0 +1,14 @@
+# Live-score proxy plus who-is-watching. See live/README.md.
+name = "schwaddy-live"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# One Durable Object for the league holds who has polled lately. SQLite-
+# backed, which is the kind the free plan allows.
+[[durable_objects.bindings]]
+name = "PRESENCE"
+class_name = "Presence"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Presence"]

@@ -1218,6 +1218,27 @@ function koText(iso) {
 // provisional until the official award lands, the same arithmetic the
 // League tab uses, so the two never disagree.
 let LVOPEN = new Set(), TICK = "";
+// managers whose pages have polled the worker in the last minute or so,
+// by entry id, this one's included. Drawn as initials at the top of the
+// tab: E, SB, BB, J, M, R.
+let ONLINE = [];
+function initials(entry) {
+  const m = (LIVE && LIVE.managers || []).find(x => x.entry === entry);
+  const name = mgrName(entry) || (m ? m.name : null);
+  return name ? name.split(/\s+/).map(w => w[0]).join("").toUpperCase() : "?";
+}
+function renderOnline() {
+  const box = $("lvwho");
+  if (!box) return;
+  const order = (PUB && PUB.managers || LIVE && LIVE.managers || []).map(m => m.entry);
+  const on = [...new Set(ONLINE)].filter(e => order.includes(e) || !order.length)
+    .sort((a, b) => order.indexOf(a) - order.indexOf(b));
+  box.innerHTML = on.map(e => {
+    const m = (LIVE && LIVE.managers || []).find(x => x.entry === e);
+    const name = mgrName(e) || (m ? m.name : "") || initials(e);
+    return `<span class="lvon${e === ME ? " me" : ""}" title="${esc(name)}${e === ME ? " (you)" : ""} is watching">${esc(initials(e))}</span>`;
+  }).join("");
+}
 /* One of yours has just done something. The poll before is the baseline,
    so the first poll after a page load never celebrates - otherwise
    opening the page on a Saturday evening would fire off everything that
@@ -1668,7 +1689,8 @@ function renderLive() {
   // the ticker is left alone unless its text changes, so the scroll does
   // not jump back to the start every fifteen seconds
   if (!sec.querySelector("#lvticker")) {
-    sec.innerHTML = `<div class="ticker"><div class="tickrow" id="lvticker"></div></div>
+    sec.innerHTML = `<div class="lvwho" id="lvwho"></div>
+      <div class="ticker"><div class="tickrow" id="lvticker"></div></div>
       <div class="lvstatus" id="lvstat"></div><div id="lvbody"></div>
       <div class="card"><b class="h" id="lvfxh"></b><div class="fxl" id="lvfxb"></div></div>`;
   }
@@ -1688,6 +1710,7 @@ function renderLive() {
     : liveStandings(LIVE, ix);
   const t = tickerText(rows);
   if (t !== TICK) { TICK = t; $("lvticker").innerHTML = t + `<em>&middot;</em>` + t; }
+  renderOnline();
 
   // the header leads with what the reader came for: his own points this
   // gameweek, and where that puts him
@@ -1778,11 +1801,16 @@ async function pollLive() {
   try {
     const ab = new AbortController();
     const to = setTimeout(() => ab.abort(new Error("no answer in 10s")), 10000);
-    const r = await fetch(LIVE_URL, { cache: "no-store", signal: ab.signal }).finally(() => clearTimeout(to));
+    // the poll says whose page this is, so the worker can tell everyone
+    // else he is watching; the answer comes back on a header
+    const u = new URL(LIVE_URL);
+    if (ME) u.searchParams.set("me", ME);
+    const r = await fetch(u, { cache: "no-store", signal: ab.signal }).finally(() => clearTimeout(to));
     if (!r.ok) throw new Error("HTTP " + r.status);
     const j = await r.json();
     if (j.error) throw new Error(j.error);
     LIVE = j; LIVEERR = null;
+    ONLINE = (r.headers.get("X-Online") || "").split(",").filter(Boolean).map(Number);
   } catch (e) { LIVEERR = String(e.message || e); }
   renderLive(); renderLeague(); tickClocks();
   const d = liveDelay();
