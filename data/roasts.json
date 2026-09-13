@@ -100,8 +100,7 @@
    "frm": "Ben D",
    "about": "Robert",
    "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
-   "used": true,
-   "retired": "a real illness and a private failure; rule 4 forbids it"
+   "used": false
   },
   {
    "id": "2026-09-12-d9048f2afb",
@@ -120,8 +119,16 @@
    "frm": "Edward",
    "about": "Ben C",
    "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
-   "used": true,
-   "retired": "leans on a disabled person outside the six; rule 4 forbids it"
+   "used": false
+  },
+  {
+   "id": "2026-09-13-f263c0fa06",
+   "key": "f263c0fa06",
+   "ts": "2026-09-13T00:00",
+   "frm": "Justin",
+   "about": "Marcus",
+   "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork",
+   "used": false
   }
  ],
  "runs": [
@@ -210,11 +217,10 @@
    "chars": 205
   },
   {
-   "ts": "2026-09-12T23:59",
-   "frm": null,
-   "about": null,
-   "chars": 0,
-   "note": "Hand edit: retired 6 unused suggestions so no run publishes them."
+   "ts": "2026-09-13T00:00",
+   "frm": "Justin",
+   "about": "Marcus",
+   "chars": 218
   }
  ]
 }
