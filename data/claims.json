@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-14T08:11 UTC",
-  "summary": "Same five claims as last night's board, but claim 3 needed a correction: last night's report that Milenkovic and Cunha played the full 90 against Villa was wrong - ESPN's own commentary shows both actually missed the game with hamstring tightness, and Glasner expects Milenkovic to sit out the Coventry game too, so confidence on Hill-for-Milenkovic goes back up from low to medium. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after this morning's club-by-club sweep found nothing new against any of them. Justin sits third of six on 189 points and picks fourth in the reversed GW5 waiver order, behind Robert, Ben D and Ben C.",
+  "ts": "2026-09-14T21:45 UTC",
+  "summary": "Same five claims as this morning, with two updated on hard evidence from Monday night's Leeds 4-1 Newcastle game (confirmed off newcastleunited.com's own match centre): Bogle scored, which cuts against dropping him for Maguire, and Fernandez-Pardo finally got his full debut but struggled and was hooked at 3-0, giving the model its first real data point on him. Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic all carry forward unchanged - Milenkovic is confirmed out for Saturday's Coventry game too. Justin has moved up to second in the table on 210 points after a strong week, which pushes him back to fifth of six in the reversed GW5 waiver order (Robert, Ben D, Ben C and Edward all pick ahead of him now), so the higher-conviction claims at the top of this board are the ones most at risk of a rival taking the same man first.",
   "claims": [
     {
       "rank": 1,
@@ -59,7 +59,7 @@
         "club": "BOU"
       },
       "drop": {
-        "name": "Milenkovi\u0107",
+        "name": "Milenković",
         "code": "227444",
         "club": "NFO"
       },
@@ -86,10 +86,15 @@
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Bogle was rested for Wednesday's Carabao Cup defeat but nothing found this week changes his standing as a nailed Leeds starter; this claim rests on the model's own fixture-and-depth numbers rather than any news against either player, so it stays the lowest-conviction of the defensive swaps.",
-      "model": "Model has Maguire's next5 at 15.5 (avail 1.00) against Bogle's 12.6 (avail 0.86), purely fixture and squad-depth driven - treat as the weakest of the four defensive claims.",
+      "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
+      "model": "Model has Maguire's next5 at 15.5 (avail 1.00) against Bogle's 12.6 (avail 0.86), purely fixture-and-depth driven - and tonight's goal is a reminder that next5 does not capture the kind of explosive return Bogle just delivered. Treat this as the claim most likely to look wrong in hindsight.",
       "confidence": "low",
-      "sources": []
+      "sources": [
+        {
+          "title": "Leeds United v Newcastle United match centre",
+          "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+        }
+      ]
     },
     {
       "rank": 5,
@@ -104,13 +109,17 @@
         "code": "438234",
         "club": "TOT"
       },
-      "why": "Newcastle's deadline-day 51m signing from Lille is, in boss Matthias Jaissle's own words, 'getting closer to starting' after a bench debut against Bournemouth - exactly the kind of arrival the model cannot yet judge with zero Premier League games behind him. Marmoush is the drop purely because he is the weakest forward in the squad by the model's own board; there is no fitness concern against him, so treat this as a speculative depth punt rather than a like-for-like swap.",
-      "model": "Model rates Fernandez-Pardo at just 2.7 next5 (avail 0.19, n=0 games) against Marmoush's 9.5 (avail 0.59) - overruling the model entirely here, on the theory that it is scoring an uncapped 51m signing the same way it scores a fringe player, the exact blind spot that undersold Barcola for weeks.",
+      "why": "Confirmed: Fernandez-Pardo got his full Newcastle debut in Monday's 4-1 defeat at Leeds, but it did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0. That is a genuine data point for a player the model has otherwise never seen (n=0 games before tonight), but one bad full debut does not settle whether he starts again at home to Bournemouth; that Jaissle trusted him with 57 minutes at all, on the back of a 51m fee, is still the more instructive signal. Marmoush remains the drop purely on the model's own board, with no fitness concern against him.",
+      "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 2.7, avail 0.19) against Marmoush's 9.4, now off one real game rather than zero. Overruling the model on the strength of the transfer fee and the manager's willingness to start him is more speculative after tonight's performance than it looked this morning, so this stays the lowest-conviction claim on the board alongside Maguire/Bogle.",
       "confidence": "low",
       "sources": [
         {
           "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
           "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+        },
+        {
+          "title": "Leeds United v Newcastle United match centre",
+          "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
         }
       ]
     }
@@ -129,7 +138,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Mu\u00f1oz",
+            "name": "Muñoz",
             "code": "247348",
             "club": "NFO"
           },
@@ -155,7 +164,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le F\u00e9e",
+            "name": "E.Le Fée",
             "code": "484420",
             "club": "SUN"
           },
@@ -310,7 +319,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Gro\u00df",
+            "name": "Groß",
             "code": "60307",
             "club": "BHA"
           },
@@ -507,6 +516,12 @@
       "gw": 5,
       "claims": 5,
       "note": "Corrected claim 3: last night's claim that Milenkovic/Cunha started the full 90 traced to a citation (espn.com/soccer/report/_/gameId/401879284) that on closer reading does not even mention either player - the actual ESPN match page's live commentary states both dropped out of the squad with hamstring tightness. Re-sourced to the correct ESPN URL and raised confidence from low back to medium given the confirmed, ongoing absence (also set to miss Coventry). The other four claims (Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle, Fernandez-Pardo/Marmoush) carry forward unchanged."
+    },
+    {
+      "ts": "2026-09-14T21:45 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "Updated claims 4 and 5 on hard evidence from tonight's Leeds 4-1 Newcastle game: Bogle scored (weakens the case for dropping him for Maguire, now the shakiest claim on the board) and Fernandez-Pardo got his full debut but struggled, hooked at 3-0 (a real data point at last, tempering but not killing the case for picking him up). Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic carry forward unchanged - Milenkovic confirmed out for Coventry too. Also noted: Justin's win this week moved him up to 2nd in the table, which paradoxically drops him to 5th of 6 in the reversed GW5 waiver order, worse than this morning's 4th."
     }
   ]
 }
