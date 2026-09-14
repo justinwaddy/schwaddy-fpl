@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T15:14",
+ "generated": "2026-09-14T23:17",
  "gw": 5,
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
@@ -7,7 +7,7 @@
  "window": "waiver",
  "waivers_time": "2026-09-17T17:30:00Z",
  "deadline": "2026-09-18T17:30:00Z",
- "formation": "4-4-2",
+ "formation": "3-4-3",
  "xi": [
   {
    "id": 226,
@@ -19,7 +19,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.87,
-   "ep": 4.13
+   "ep": 4.15
   },
   {
    "id": 391,
@@ -31,7 +31,7 @@
    "news": "",
    "p_play": 0.85,
    "base": 5.5,
-   "ep": 5.39
+   "ep": 5.38
   },
   {
    "id": 330,
@@ -43,7 +43,7 @@
    "news": "",
    "p_play": 0.847,
    "base": 3.85,
-   "ep": 3.68
+   "ep": 3.66
   },
   {
    "id": 504,
@@ -55,19 +55,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.19
-  },
-  {
-   "id": 471,
-   "code": 227444,
-   "name": "Milenkovi\u0107",
-   "pos": "DEF",
-   "team": "NFO",
-   "status": "d",
-   "news": "Hamstring injury - 75% chance of playing",
-   "p_play": 0.75,
-   "base": 2.95,
-   "ep": 2.83
+   "ep": 3.15
   },
   {
    "id": 68,
@@ -79,7 +67,7 @@
    "news": "",
    "p_play": 0.967,
    "base": 4.7,
-   "ep": 4.66
+   "ep": 4.64
   },
   {
    "id": 69,
@@ -91,7 +79,7 @@
    "news": "",
    "p_play": 0.979,
    "base": 4.06,
-   "ep": 4.02
+   "ep": 4.01
   },
   {
    "id": 94,
@@ -115,7 +103,7 @@
    "news": "",
    "p_play": 0.978,
    "base": 3.05,
-   "ep": 2.96
+   "ep": 2.95
   },
   {
    "id": 411,
@@ -139,7 +127,19 @@
    "news": "",
    "p_play": 0.67,
    "base": 1.85,
-   "ep": 1.48
+   "ep": 1.45
+  },
+  {
+   "id": 222,
+   "code": 247412,
+   "name": "Strand Larsen",
+   "pos": "FWD",
+   "team": "CRY",
+   "status": "a",
+   "news": "",
+   "p_play": 0.662,
+   "base": 1.15,
+   "ep": 0.93
   }
  ],
  "bench": [
@@ -153,19 +153,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 4.07,
-   "ep": 3.57
-  },
-  {
-   "id": 222,
-   "code": 247412,
-   "name": "Strand Larsen",
-   "pos": "FWD",
-   "team": "CRY",
-   "status": "a",
-   "news": "",
-   "p_play": 0.662,
-   "base": 1.15,
-   "ep": 0.95
+   "ep": 3.52
   },
   {
    "id": 628,
@@ -177,7 +165,7 @@
    "news": "",
    "p_play": 0.15,
    "base": 0.39,
-   "ep": 0.62
+   "ep": 0.64
   },
   {
    "id": 84,
@@ -189,15 +177,27 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.24
+   "ep": -0.28
+  },
+  {
+   "id": 471,
+   "code": 227444,
+   "name": "Milenkovi\u0107",
+   "pos": "DEF",
+   "team": "NFO",
+   "status": "i",
+   "news": "Hamstring injury - Expected back 11 Oct",
+   "p_play": 0.0,
+   "base": 0.0,
+   "ep": -0.33
   }
  ],
- "xi_ep": 43.4,
+ "xi_ep": 41.4,
  "changes": 8,
  "claims": [
   {
    "pos": "FWD",
-   "gain": 21.89,
+   "gain": 22.89,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "MID",
-   "gain": 18.18,
+   "gain": 18.47,
    "change": 2,
    "fallback": false,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 16.33,
+   "gain": 16.65,
    "change": 2,
    "fallback": true,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.68,
+   "gain": 14.77,
    "change": 2,
    "fallback": true,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 13.92,
+   "gain": 13.67,
    "change": 3,
    "fallback": false,
    "add": {
@@ -347,7 +347,7 @@
   },
   {
    "pos": "MID",
-   "gain": 13.54,
+   "gain": 13.48,
    "change": 3,
    "fallback": true,
    "add": {
@@ -377,7 +377,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.05,
+   "gain": 10.9,
    "change": 3,
    "fallback": true,
    "add": {
@@ -406,99 +406,9 @@
    }
   },
   {
-   "pos": "DEF",
-   "gain": 10.48,
-   "change": 4,
-   "fallback": false,
-   "add": {
-    "id": 595,
-    "code": 463726,
-    "name": "Dedi\u0107",
-    "pos": "DEF",
-    "team": "NEW",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.75,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 9.86,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 279,
-    "code": 146426,
-    "name": "Ajayi",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.915,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 9.85,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 277,
-    "code": 108416,
-    "name": "Egan",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "GKP",
-   "gain": 9.41,
-   "change": 5,
+   "gain": 9.74,
+   "change": 4,
    "fallback": false,
    "add": {
     "id": 571,
@@ -527,8 +437,8 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.9,
-   "change": 5,
+   "gain": 4.34,
+   "change": 4,
    "fallback": true,
    "add": {
     "id": 467,
@@ -557,8 +467,8 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.35,
-   "change": 5,
+   "gain": 3.28,
+   "change": 4,
    "fallback": true,
    "add": {
     "id": 566,
@@ -587,9 +497,129 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.8,
+   "gain": 8.62,
+   "change": 5,
+   "fallback": false,
+   "add": {
+    "id": 595,
+    "code": 463726,
+    "name": "Dedi\u0107",
+    "pos": "DEF",
+    "team": "NEW",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 7.88,
+   "change": 5,
+   "fallback": true,
+   "add": {
+    "id": 277,
+    "code": 108416,
+    "name": "Egan",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 7.84,
+   "change": 5,
+   "fallback": true,
+   "add": {
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.915,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 5.6,
    "change": 6,
    "fallback": false,
+   "add": {
+    "id": 277,
+    "code": 108416,
+    "name": "Egan",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 471,
+    "code": 227444,
+    "name": "Milenkovi\u0107",
+    "pos": "DEF",
+    "team": "NFO",
+    "status": "i",
+    "news": "Hamstring injury - Expected back 11 Oct",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 5.58,
+   "change": 6,
+   "fallback": true,
    "add": {
     "id": 279,
     "code": 146426,
@@ -608,46 +638,16 @@
     "name": "Milenkovi\u0107",
     "pos": "DEF",
     "team": "NFO",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.75,
+    "status": "i",
+    "news": "Hamstring injury - Expected back 11 Oct",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 4.77,
-   "change": 6,
-   "fallback": true,
-   "add": {
-    "id": 277,
-    "code": 108416,
-    "name": "Egan",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 471,
-    "code": 227444,
-    "name": "Milenkovi\u0107",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.75,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 4.63,
+   "gain": 5.45,
    "change": 6,
    "fallback": true,
    "add": {
@@ -668,27 +668,27 @@
     "name": "Milenkovi\u0107",
     "pos": "DEF",
     "team": "NFO",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.75,
+    "status": "i",
+    "news": "Hamstring injury - Expected back 11 Oct",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 4.42,
+   "gain": 4.5,
    "change": 7,
    "fallback": false,
    "add": {
-    "id": 277,
-    "code": 108416,
-    "name": "Egan",
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
     "pos": "DEF",
     "team": "HUL",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.915,
     "base": null,
     "ep": null
    },
@@ -707,7 +707,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.28,
+   "gain": 4.36,
    "change": 7,
    "fallback": true,
    "add": {
@@ -737,7 +737,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.01,
+   "gain": 3.1,
    "change": 7,
    "fallback": true,
    "add": {
@@ -767,7 +767,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.51,
+   "gain": 2.26,
    "change": 8,
    "fallback": false,
    "add": {
@@ -783,21 +783,21 @@
     "ep": null
    },
    "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
+    "id": 595,
+    "code": 463726,
+    "name": "Dedi\u0107",
     "pos": "DEF",
-    "team": "LEE",
+    "team": "NEW",
     "status": "a",
     "news": "",
-    "p_play": 0.847,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 1.25,
+   "gain": 1.0,
    "change": 8,
    "fallback": true,
    "add": {
@@ -813,14 +813,14 @@
     "ep": null
    },
    "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
+    "id": 595,
+    "code": 463726,
+    "name": "Dedi\u0107",
     "pos": "DEF",
-    "team": "LEE",
+    "team": "NEW",
     "status": "a",
     "news": "",
-    "p_play": 0.847,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    }
