@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T00:52",
+ "generated": "2026-09-14T08:36",
  "gw": 5,
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
@@ -103,7 +103,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.89,
-   "ep": 3.76
+   "ep": 3.77
   },
   {
    "id": 338,
@@ -197,7 +197,7 @@
  "claims": [
   {
    "pos": "FWD",
-   "gain": 21.81,
+   "gain": 21.84,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "MID",
-   "gain": 18.23,
+   "gain": 18.2,
    "change": 2,
    "fallback": false,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 16.35,
+   "gain": 16.34,
    "change": 2,
    "fallback": true,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.8,
+   "gain": 14.74,
    "change": 2,
    "fallback": true,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.05,
+   "gain": 13.99,
    "change": 3,
    "fallback": false,
    "add": {
@@ -407,7 +407,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.47,
+   "gain": 10.45,
    "change": 4,
    "fallback": false,
    "add": {
@@ -437,7 +437,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.77,
+   "gain": 9.81,
    "change": 4,
    "fallback": true,
    "add": {
@@ -467,7 +467,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.72,
+   "gain": 9.78,
    "change": 4,
    "fallback": true,
    "add": {
@@ -527,7 +527,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.81,
+   "gain": 3.84,
    "change": 5,
    "fallback": true,
    "add": {
@@ -557,7 +557,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.31,
+   "gain": 3.32,
    "change": 5,
    "fallback": true,
    "add": {
@@ -587,7 +587,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.78,
+   "gain": 4.8,
    "change": 6,
    "fallback": false,
    "add": {
@@ -617,7 +617,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.71,
+   "gain": 4.75,
    "change": 6,
    "fallback": true,
    "add": {
@@ -677,7 +677,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.33,
+   "gain": 4.37,
    "change": 7,
    "fallback": false,
    "add": {
@@ -767,7 +767,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.46,
+   "gain": 2.45,
    "change": 8,
    "fallback": false,
    "add": {
@@ -797,7 +797,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 1.28,
+   "gain": 1.27,
    "change": 8,
    "fallback": true,
    "add": {
