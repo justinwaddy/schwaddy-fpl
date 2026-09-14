@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T00:40",
+ "generated": "2026-09-14T00:52",
  "gw": 5,
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_model.npz",
  "league": 9450,
@@ -19,7 +19,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.87,
-   "ep": 4.12
+   "ep": 4.13
   },
   {
    "id": 391,
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.21
+   "ep": 3.19
   },
   {
    "id": 471,
@@ -103,7 +103,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.89,
-   "ep": 3.77
+   "ep": 3.76
   },
   {
    "id": 338,
@@ -139,7 +139,7 @@
    "news": "",
    "p_play": 0.67,
    "base": 1.85,
-   "ep": 1.49
+   "ep": 1.47
   }
  ],
  "bench": [
@@ -153,7 +153,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 4.07,
-   "ep": 3.59
+   "ep": 3.57
   },
   {
    "id": 222,
@@ -187,9 +187,9 @@
    "team": "BRE",
    "status": "i",
    "news": "Calf injury - Unknown return date",
-   "p_play": 0.202,
-   "base": 0.57,
-   "ep": 0.41
+   "p_play": 0.0,
+   "base": 0.0,
+   "ep": -0.24
   }
  ],
  "xi_ep": 43.4,
@@ -197,7 +197,7 @@
  "claims": [
   {
    "pos": "FWD",
-   "gain": 21.36,
+   "gain": 21.81,
    "change": 1,
    "fallback": false,
    "add": {
@@ -227,7 +227,7 @@
   },
   {
    "pos": "MID",
-   "gain": 17.85,
+   "gain": 18.23,
    "change": 2,
    "fallback": false,
    "add": {
@@ -257,7 +257,7 @@
   },
   {
    "pos": "MID",
-   "gain": 15.8,
+   "gain": 16.35,
    "change": 2,
    "fallback": true,
    "add": {
@@ -287,7 +287,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.47,
+   "gain": 14.8,
    "change": 2,
    "fallback": true,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.15,
+   "gain": 14.05,
    "change": 3,
    "fallback": false,
    "add": {
@@ -347,7 +347,7 @@
   },
   {
    "pos": "MID",
-   "gain": 13.52,
+   "gain": 13.57,
    "change": 3,
    "fallback": true,
    "add": {
@@ -377,7 +377,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.11,
+   "gain": 11.07,
    "change": 3,
    "fallback": true,
    "add": {
@@ -406,9 +406,99 @@
    }
   },
   {
-   "pos": "GKP",
-   "gain": 9.4,
+   "pos": "DEF",
+   "gain": 10.47,
    "change": 4,
+   "fallback": false,
+   "add": {
+    "id": 595,
+    "code": 463726,
+    "name": "Dedi\u0107",
+    "pos": "DEF",
+    "team": "NEW",
+    "status": "d",
+    "news": "Hamstring injury - 75% chance of playing",
+    "p_play": 0.75,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 9.77,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.915,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 9.72,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 277,
+    "code": 108416,
+    "name": "Egan",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 84,
+    "code": 432830,
+    "name": "Collins",
+    "pos": "DEF",
+    "team": "BRE",
+    "status": "i",
+    "news": "Calf injury - Unknown return date",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "GKP",
+   "gain": 9.36,
+   "change": 5,
    "fallback": false,
    "add": {
     "id": 571,
@@ -437,8 +527,8 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.86,
-   "change": 4,
+   "gain": 3.81,
+   "change": 5,
    "fallback": true,
    "add": {
     "id": 467,
@@ -467,8 +557,8 @@
   },
   {
    "pos": "GKP",
-   "gain": 3.28,
-   "change": 4,
+   "gain": 3.31,
+   "change": 5,
    "fallback": true,
    "add": {
     "id": 566,
@@ -491,96 +581,6 @@
     "status": "a",
     "news": "",
     "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 8.13,
-   "change": 5,
-   "fallback": false,
-   "add": {
-    "id": 595,
-    "code": 463726,
-    "name": "Dedi\u0107",
-    "pos": "DEF",
-    "team": "NEW",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.75,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.202,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 7.51,
-   "change": 5,
-   "fallback": true,
-   "add": {
-    "id": 279,
-    "code": 146426,
-    "name": "Ajayi",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.915,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.202,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 7.45,
-   "change": 5,
-   "fallback": true,
-   "add": {
-    "id": 277,
-    "code": 108416,
-    "name": "Egan",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 84,
-    "code": 432830,
-    "name": "Collins",
-    "pos": "DEF",
-    "team": "BRE",
-    "status": "i",
-    "news": "Calf injury - Unknown return date",
-    "p_play": 0.202,
     "base": null,
     "ep": null
    }
@@ -707,7 +707,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.18,
+   "gain": 4.19,
    "change": 7,
    "fallback": true,
    "add": {
@@ -767,7 +767,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 2.45,
+   "gain": 2.46,
    "change": 8,
    "fallback": false,
    "add": {
@@ -935,7 +935,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 195.74,
-   "ep": 220.81
+   "ep": 220.5
   },
   {
    "id": 527,
@@ -959,7 +959,7 @@
    "news": "",
    "p_play": 0.964,
    "base": 176.56,
-   "ep": 207.04
+   "ep": 206.77
   },
   {
    "id": 387,
@@ -1019,7 +1019,7 @@
    "news": "",
    "p_play": 0.651,
    "base": 177.07,
-   "ep": 194.19
+   "ep": 193.84
   },
   {
    "id": 155,
@@ -1031,7 +1031,7 @@
    "news": "",
    "p_play": 0.582,
    "base": 165.29,
-   "ep": 191.73
+   "ep": 191.96
   },
   {
    "id": 427,
@@ -1079,7 +1079,7 @@
    "news": "",
    "p_play": 0.871,
    "base": 155.9,
-   "ep": 185.46
+   "ep": 185.58
   },
   {
    "id": 368,
@@ -1091,7 +1091,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 150.56,
-   "ep": 181.81
+   "ep": 181.88
   },
   {
    "id": 13,
@@ -1103,7 +1103,7 @@
    "news": "",
    "p_play": 0.915,
    "base": 168.38,
-   "ep": 181.03
+   "ep": 181.07
   },
   {
    "id": 12,
@@ -1127,7 +1127,7 @@
    "news": "",
    "p_play": 0.906,
    "base": 136.94,
-   "ep": 178.52
+   "ep": 178.57
   },
   {
    "id": 201,
@@ -1151,7 +1151,7 @@
    "news": "",
    "p_play": 0.942,
    "base": 139.35,
-   "ep": 172.98
+   "ep": 172.88
   },
   {
    "id": 61,
@@ -1166,6 +1166,18 @@
    "ep": 172.55
   },
   {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.961,
+   "base": 159.29,
+   "ep": 171.48
+  },
+  {
    "id": 399,
    "code": 466052,
    "name": "Cherki",
@@ -1175,7 +1187,7 @@
    "news": "",
    "p_play": 0.732,
    "base": 148.5,
-   "ep": 171.34
+   "ep": 171.31
   },
   {
    "id": 25,
@@ -1188,18 +1200,6 @@
    "p_play": 0.374,
    "base": 132.26,
    "ep": 170.46
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.961,
-   "base": 159.29,
-   "ep": 170.26
   },
   {
    "id": 1,
@@ -1234,7 +1234,7 @@
    "status": "u",
    "news": "Has joined Juventus on loan for the rest of the season",
    "p_play": 0.008,
-   "base": 114.13,
+   "base": 114.14,
    "ep": 167.02
   },
   {
@@ -1283,7 +1283,7 @@
    "news": "",
    "p_play": 0.715,
    "base": 139.05,
-   "ep": 161.57
+   "ep": 161.63
   },
   {
    "id": 142,
@@ -1307,7 +1307,7 @@
    "news": "",
    "p_play": 0.983,
    "base": 140.6,
-   "ep": 160.85
+   "ep": 160.86
   }
  ]
 }
