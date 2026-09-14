@@ -169,12 +169,51 @@ def _check_target(z, cfg, model_path):
               f"Retrain (python -m evo.run cv / train) before trusting it.")
 
 
+def _load_models(paths, cfg):
+    """One (Brain, Standardizer) per checkpoint, each checked against the
+    configuration's target. A checkpoint is the best genome plus the
+    standardizer it was trained with, so each model reads the season
+    through its own scaling."""
+    out = []
+    for p in paths:
+        z = np.load(p, allow_pickle=False)
+        _check_target(z, cfg, p)
+        out.append((z["best"], Standardizer(z["mean"], z["sd"])))
+    return out
+
+
+def _borda(lists, min_votes):
+    """Combine ranked lists from several models into one.
+
+    Each list is [(key, gain), ...] in that model's own order. A key
+    scores L - rank in every list it appears in, L being the longest
+    list, so a candidate every model puts first beats one that a single
+    model puts first and the rest leave out - which is the point: the
+    failure seen in cross-validation was per-seed, and a vote across
+    seeds is what removes the odd lineage. Keys listed by fewer than
+    min_votes models are dropped. Returns [(key, mean gain, votes, borda)]
+    in vote order, ties broken by mean gain.
+    """
+    L = max((len(l) for l in lists), default=0)
+    score, gains = {}, {}
+    for l in lists:
+        for k, (key, g) in enumerate(l):
+            score[key] = score.get(key, 0) + (L - k)
+            gains.setdefault(key, []).append(float(g))
+    out = [(key, float(np.mean(gains[key])), len(gains[key]), score[key])
+           for key in score if len(gains[key]) >= min_votes]
+    out.sort(key=lambda t: (-t[3], -t[1]))
+    return out
+
+
 def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
          league_id=LEAGUE_ID, board_n=40):
-    z = np.load(model_path, allow_pickle=False)
-    std = Standardizer(z["mean"], z["sd"])
-    genome = z["best"]
-    _check_target(z, cfg, model_path)
+    # one checkpoint or several. With several, every decision is taken by
+    # a vote: the eleven on the median expected points across models, the
+    # claims and the board by Borda count over each model's own ranking.
+    paths = [model_path] if isinstance(model_path, str) else list(model_path)
+    models = _load_models(paths, cfg)
+    n_models = len(models)
     if not cfg.dc_target and not cfg.dc_bonus:
         # the league scores WITH the rule. The target was scored without
         # it so that the folds are comparable; at pick time the rule's
@@ -186,7 +225,7 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
         ppa = dc_bonus_ppa(cfg.data_dir)
         print("  DC bonus at pick time, points per appearance: "
               + ", ".join(f"{p} {v:+.2f}" for p, v in zip(POSITIONS, ppa)))
-    brain = Brain(genome, cfg)
+    brains = [Brain(g, cfg) for g, _ in models]
 
     boot, fixtures, own = _fetch(cfg, offline, league_id)
     # bring the injury log up to date BEFORE the features are built, so
@@ -202,7 +241,18 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             print(f"  WARNING: injury log last observed "
                   f"{(time.time() - seen) / 86400:.1f} days ago")
     sd, arrays = load_live(cfg, boot, fixtures)
-    sv = SeasonView(LIVE_SEASON, arrays, std)
+    # a view per distinct standardizer: models trained on the same seasons
+    # share one, and the transform is the only thing that differs
+    views, seen_std = [], {}
+    for _, std in models:
+        k = (std.mean.tobytes(), std.sd.tobytes())
+        if k not in seen_std:
+            seen_std[k] = SeasonView(LIVE_SEASON, arrays, std)
+        views.append(seen_std[k])
+    sv = views[0]
+    if n_models > 1:
+        print(f"  ensemble of {n_models} models, "
+              f"{len(seen_std)} distinct standardizer(s)")
 
     if gw is None:
         gw = int(boot["events"].get("next") or boot["events"]["current"] or 1)
@@ -226,19 +276,27 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     locked = {int(e["id"]) for e in boot["elements"]
               if e.get("status") == "u"}
 
-    def describe(i, r, ep=None, base=None):
+    def describe(i, r, ep=None, base=None, votes=None):
         e = el.get(int(i), {})
-        return dict(id=int(i), code=int(e.get("code", 0)),
-                    name=e.get("web_name", str(i)),
-                    pos=POSITIONS[int(sv.pos[r])],
-                    team=team_name.get(int(e.get("team", 0)), ""),
-                    status=e.get("status", "a"), news=e.get("news", ""),
-                    p_play=round(float(arrays["p_play"][r, gw - 1]), 3),
-                    base=None if base is None else round(float(base), 2),
-                    ep=None if ep is None else round(float(ep), 2))
+        d = dict(id=int(i), code=int(e.get("code", 0)),
+                 name=e.get("web_name", str(i)),
+                 pos=POSITIONS[int(sv.pos[r])],
+                 team=team_name.get(int(e.get("team", 0)), ""),
+                 status=e.get("status", "a"), news=e.get("news", ""),
+                 p_play=round(float(arrays["p_play"][r, gw - 1]), 3),
+                 base=None if base is None else round(float(base), 2),
+                 ep=None if ep is None else round(float(ep), 2))
+        if votes is not None:
+            d["votes"] = int(votes)
+        return d
 
     plan = dict(generated=time.strftime("%Y-%m-%dT%H:%M", time.gmtime()),
-                gw=gw, model=os.path.abspath(model_path),
+                gw=gw, model=os.path.abspath(paths[0]),
+                models=[os.path.abspath(p) for p in paths],
+                n_models=n_models,
+                vote=("median expected points for the eleven, Borda count "
+                      "over each model's ranking for claims and the board"
+                      if n_models > 1 else None),
                 league=league_id, offline=bool(offline))
 
     # ---------------------------------------------------- which window
@@ -271,16 +329,31 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
         ids = [i for i, _ in squad]
         rows = np.array([r for _, r in squad])
         base = sv.base_ep1_dl[rows, gw - 1]
-        ep = brain.score("lineup", sv.key_dl, sv.Xn_dl, rows, gw, base,
-                         feats=sv.X_dl[rows, gw - 1])
+        eps = np.array([b.score("lineup", v.key_dl, v.Xn_dl, rows, gw, base,
+                                feats=v.X_dl[rows, gw - 1])
+                        for b, v in zip(brains, views)])
+        # the median, not the mean: one lineage with an odd scale on its
+        # line-up head would otherwise move every man's number
+        ep = np.median(eps, axis=0)
+        # how many models would start each man in their own eleven
+        starts = np.zeros(len(rows), int)
+        for e_k in eps:
+            sq_k = [dict(name=k, pos=POSITIONS[int(sv.pos[r])], ep=float(e))
+                    for k, (r, e) in enumerate(zip(rows, e_k))]
+            xi_k, _, _ = pick_xi(sq_k)
+            for p in xi_k:
+                starts[p["name"]] += 1
         sq = [dict(name=k, pos=POSITIONS[int(sv.pos[r])], ep=float(e))
               for k, (r, e) in enumerate(zip(rows, ep))]
         xi, bench, form = pick_xi(sq)
         plan["formation"] = "-".join(str(x) for x in form)
+        vote = (lambda k: starts[k]) if n_models > 1 else (lambda k: None)
         plan["xi"] = [describe(ids[p["name"]], rows[p["name"]],
-                               ep[p["name"]], base[p["name"]]) for p in xi]
+                               ep[p["name"]], base[p["name"]],
+                               vote(p["name"])) for p in xi]
         plan["bench"] = [describe(ids[p["name"]], rows[p["name"]],
-                                  ep[p["name"]], base[p["name"]])
+                                  ep[p["name"]], base[p["name"]],
+                                  vote(p["name"]))
                          for p in bench]
         plan["xi_ep"] = round(float(sum(p["ep"] for p in xi)), 1)
     else:
@@ -300,31 +373,72 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             # the league's real standings, so the head's context matches
             # what it saw in training
             totals = _standings(cfg, own, offline)
-            pairs = _rank_swaps(brain, sv, cfg, [int(r) for r in rows],
-                                np.array([r for _, r in free]), gw, totals,
-                                0, is_fa=is_fa)
+            free_rows = np.array([r for _, r in free])
+            squad_rows = [int(r) for r in rows]
+            lists = [_rank_swaps(b, v, cfg, squad_rows, free_rows, gw,
+                                 totals, 0, is_fa=is_fa)
+                     for b, v in zip(brains, views)]
             id_of_row = {r: i for i, r in free}
             id_of_row.update({int(r): i for r, i in zip(rows, ids)})
-            # the whole list, each row marked as a change or a fallback
-            # for the change above it: with waivers unlimited the list is
-            # long, and ten changes is a different thing from four changes
-            # with two fallbacks each
-            out, step, last = [], 0, None
-            for gain, add, drop in (pairs[:cfg.max_claims] if cfg.max_claims
-                                    else pairs):
-                if drop != last:
-                    step, last = step + 1, drop
-                out.append(dict(pos=POSITIONS[int(sv.pos[add])],
-                                gain=round(gain, 2), change=step,
-                                fallback=(drop == last and
-                                          any(o["change"] == step for o in out)),
-                                add=describe(id_of_row.get(add, -1), add),
-                                drop=describe(id_of_row.get(drop, -1), drop)))
+            if n_models == 1:
+                merged = [((a, d), g, 1, 0) for g, a, d in lists[0]]
+                # the whole list, each row marked as a change or a
+                # fallback for the change above it: with waivers unlimited
+                # the list is long, and ten changes is a different thing
+                # from four changes with two fallbacks each
+                out, step, last = [], 0, None
+                for (add, drop), gain, votes, _ in merged:
+                    if drop != last:
+                        step, last = step + 1, drop
+                    out.append(dict(pos=POSITIONS[int(sv.pos[add])],
+                                    gain=round(gain, 2), change=step,
+                                    fallback=(drop == last and
+                                              any(o["change"] == step
+                                                  for o in out)),
+                                    add=describe(id_of_row.get(add, -1), add),
+                                    drop=describe(id_of_row.get(drop, -1),
+                                                  drop)))
+            else:
+                # a pair one model alone lists is the tail the vote is
+                # there to remove; with three or more models it takes two
+                min_votes = 2 if n_models >= 3 else 1
+                merged = _borda([[((a, d), g) for g, a, d in l]
+                                 for l in lists], min_votes)
+                # group by the man dropped, drops in the order the vote
+                # first reaches them, so that the alternatives for one
+                # drop sit under it as fallbacks as they do in a single
+                # model's sequential list
+                by_drop, order = {}, []
+                for (add, drop), gain, votes, borda in merged:
+                    if drop not in by_drop:
+                        by_drop[drop] = []
+                        order.append(drop)
+                    by_drop[drop].append((add, gain, votes, borda))
+                out = []
+                for step, drop in enumerate(order, 1):
+                    for k, (add, gain, votes, borda) in enumerate(by_drop[drop]):
+                        out.append(dict(pos=POSITIONS[int(sv.pos[add])],
+                                        gain=round(gain, 2), change=step,
+                                        fallback=k > 0, votes=votes,
+                                        borda=int(borda),
+                                        add=describe(id_of_row.get(add, -1),
+                                                     add),
+                                        drop=describe(id_of_row.get(drop, -1),
+                                                      drop)))
+                step = len(order)
+            if cfg.max_claims:
+                out = out[:cfg.max_claims]
+                step = max((o["change"] for o in out), default=0)
             plan["changes"] = step
             plan["claims"] = out
             plan["claims_note"] = ("waivers are unlimited; these are the "
                                    "ranked claims above the margin, and "
                                    "the game processes them in this order")
+            if n_models > 1:
+                plan["claims_note"] += (
+                    f"; voted across {n_models} models by Borda count, a "
+                    f"pair needing {min_votes} models to be listed at all, "
+                    f"and gain is the mean over the models that list it")
             plan["claims_are"] = ("free agents, first come first served"
                                   if is_fa else
                                   "waiver claims, in submission order")
@@ -335,10 +449,15 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     top = pool[np.argsort(-base)[:max(board_n * 3, cfg.draft_shortlist)]]
     ctx = _draft_ctx(sv, top, [], dict(SQUAD), 0, 6,
                      np.zeros(sv.n, bool), sv.pool[:, 0])
-    s = brain.score("draft", sv.key, sv.Xn, top, 1, sv.base_season[top],
-                    ctx=ctx, feats=sv.X[top, 0])
+    S = np.array([b.score("draft", v.key, v.Xn, top, 1, sv.base_season[top],
+                          ctx=ctx, feats=v.X[top, 0])
+                  for b, v in zip(brains, views)])
+    s = S.mean(axis=0)
+    # rank within each model, then the mean rank: one model's outlier
+    # score cannot carry a name onto the board on its own
+    ranks = np.argsort(np.argsort(-S, axis=1), axis=1).mean(axis=0)
     id_of = {int(e["code"]): int(e["id"]) for e in boot["elements"]}
-    order = np.argsort(-s)[:board_n]
+    order = np.lexsort((-s, ranks))[:board_n]
     plan["board"] = [describe(id_of.get(int(sd.codes[top[k]]), -1), top[k],
                               s[k], sv.base_season[top[k]])
                      for k in order]
@@ -350,16 +469,21 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     if plan.get("xi"):
         print(f"  XI ({plan['formation']}, {plan['xi_ep']} projected)")
         for p in plan["xi"]:
+            v = (f"  {p['votes']}/{n_models} start him"
+                 if n_models > 1 else "")
             print(f"    {p['pos']:3} {p['name']:<18} {p['team']:<4} "
-                  f"{p['ep']:5.2f}  (base {p['base']:.2f})")
-        print("  bench: " + ", ".join(p["name"] for p in plan["bench"]))
+                  f"{p['ep']:5.2f}  (base {p['base']:.2f}){v}")
+        print("  bench: " + ", ".join(
+            p["name"] + (f" ({p['votes']}/{n_models})" if n_models > 1 else "")
+            for p in plan["bench"]))
     if plan.get("claims"):
         print(f"  {plan['claims_are']} (window: {plan['window']}, "
               f"waivers {plan.get('waivers_time')}, "
               f"deadline {plan.get('deadline')})")
     for c in plan.get("claims", []):
         tag = "  fallback" if c.get("fallback") else f"change {c.get('change', '')}"
+        v = f"  {c['votes']}/{n_models} models" if n_models > 1 else ""
         print(f"    {tag:10} +{c['add']['name']:<16} -{c['drop']['name']:<16} "
-              f"{c['pos']:3} gain {c['gain']:.2f}")
+              f"{c['pos']:3} gain {c['gain']:.2f}{v}")
     print("  board: " + ", ".join(p["name"] for p in plan["board"][:12]))
     return 0

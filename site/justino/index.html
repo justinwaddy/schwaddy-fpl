@@ -478,16 +478,19 @@ function evoClaimsHTML(ps,plan){
       ${c.pos?`<span class="pos ${esc(c.pos)}">${esc(c.pos)}</span>`:""}
       <span class="clarr">add</span> ${nm(pa)} <span class="tm">${esc(A.team||(a?club(a):""))}</span>
       <span class="clarr">drop</span> ${nm(pd)} <span class="tm">${esc(D.team||(d?club(d):""))}</span>
-      ${a?runHTML(a):""} <span class="gain" title="the policy's own score for the swap, in expected points over five gameweeks">policy +${Number(c.gain||0).toFixed(1)}</span> ${mdl}</div>`;
+      ${a?runHTML(a):""} <span class="gain" title="the policy's own score for the swap, in expected points over five gameweeks${E.n_models>1?", the mean over the models that list it":""}">policy +${Number(c.gain||0).toFixed(1)}</span> ${mdl}${E.n_models>1&&c.votes?` <span class="pill${c.votes*2<E.n_models?" warn":""}" title="how many of the ${E.n_models} models list this swap at all">${c.votes}/${E.n_models} models</span>`:""}</div>`;
     if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
     h+=`</div>`;
   });
   if(Array.isArray(E.xi)&&E.xi.length){
-    const xi=E.xi.map(p=>{const q=p.code?by[String(p.code)]:null;return q?nm(q):esc(p.name);}).join(", ");
-    const bn=(E.bench||[]).map(p=>{const q=p.code?by[String(p.code)]:null;return q?nm(q):esc(p.name);}).join(", ");
+    // with several models voting, a man fewer than half of them would start
+    // gets his count shown, so a marginal pick reads as marginal
+    const vt=p=>(E.n_models>1&&p.votes!=null&&p.votes*2<E.n_models)?` <span class="tm">(${p.votes}/${E.n_models})</span>`:"";
+    const xi=E.xi.map(p=>{const q=p.code?by[String(p.code)]:null;return (q?nm(q):esc(p.name))+vt(p);}).join(", ");
+    const bn=(E.bench||[]).map(p=>{const q=p.code?by[String(p.code)]:null;return (q?nm(q):esc(p.name))+vt(p);}).join(", ");
     h+=`<div class="clwhy"><b>Its eleven</b> (${esc(E.formation||"")}, ${Number(E.xi_ep||0).toFixed(1)} projected): ${xi}<br><b>Bench, in order:</b> ${bn}</div>`;
   }
-  h+=`<div class="note">${fa?"Free agents are first come, first served: take the first one that is still free.":"Ranked in submission order; waivers are unlimited, so submit them all and the game's queue works down the list, later rows being the fallbacks if an earlier one is refused."} The policy was evolved against itself over five seasons and scored against the heuristic it starts from - evo/README.md has the numbers and every caveat.</div></div>`;
+  h+=`<div class="note">${fa?"Free agents are first come, first served: take the first one that is still free.":"Ranked in submission order; waivers are unlimited, so submit them all and the game's queue works down the list, later rows being the fallbacks if an earlier one is refused."}${E.n_models>1?` This plan is a vote across ${E.n_models} independently trained models: the eleven on their median expected points, the claims by Borda count over each model's own ranking, and a swap only one of them lists is left out.`:""} The policy was evolved against itself over five seasons and scored against the heuristic it starts from - evo/README.md has the numbers and every caveat.</div></div>`;
   return h;
 }
 function claudeClaimsHTML(ps,plan){

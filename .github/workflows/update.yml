@@ -26,6 +26,7 @@ on:
       - "src/**"
       - "evo/**"
       - "data/evo_model.npz"
+      - "data/evo_models/**"
       - "requirements.txt"
       - ".github/workflows/**"
   workflow_dispatch:
@@ -60,15 +61,27 @@ jobs:
         working-directory: src
 
       # the evolved policy's plan for the week, off the same morning pull.
-      # Guarded: a failure here must never cost the refresh. The model file
-      # is the checkpoint the cluster trained; the injury log it appends
-      # to is under data/ and goes out with the commit below.
+      # Guarded: a failure here must never cost the refresh. The model
+      # files are the five seeds the cluster trained on every season
+      # (ISCA array 2393201, 40 generations each; evo/README.md has the
+      # cross-validation behind the count) and the plan is a vote across
+      # them, since the one failure cross-validation showed was per-seed.
+      # The injury log it appends to is under data/ and goes out with the
+      # commit below.
       - name: neural network plan
         if: >-
           github.event_name == 'push' ||
           (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
           (github.event_name == 'workflow_dispatch' && !inputs.news_only)
-        run: python -m evo.run live --model data/evo_model.npz --json data/evo_plan.json || echo "neural network plan skipped"
+        run: >-
+          python -m evo.run live
+          --model data/evo_models/seed1.npz
+          --model data/evo_models/seed2.npz
+          --model data/evo_models/seed3.npz
+          --model data/evo_models/seed4.npz
+          --model data/evo_models/seed5.npz
+          --json data/evo_plan.json
+          || echo "neural network plan skipped"
 
       # the other crons: the day's matches have wrapped up, so post the
       # matchday recap against the morning run's forecasts without refitting

@@ -5,7 +5,7 @@
     python -m evo.run train  --out runs/final [--generations N] [--all-seasons]
     python -m evo.run cv     --out runs/cv [--kind loso|forward] [--fold i]
     python -m evo.run report --out runs/cv
-    python -m evo.run live   --model runs/final/ckpt.npz [--offline]
+    python -m evo.run live   --model runs/final/ckpt.npz [--model ...] [--offline]
 
 Every subcommand takes the Config fields as --flags (pop-size,
 generations, workers, ...), so a SLURM script can sweep without editing
@@ -83,7 +83,9 @@ def main(argv=None):
     p.add_argument("--season", default=None)
 
     p = add_config_args(sub.add_parser("live"))
-    p.add_argument("--model", required=True)
+    p.add_argument("--model", required=True, action="append",
+                   help="checkpoint to run; give it several times to vote "
+                        "across models at every decision")
     p.add_argument("--offline", action="store_true")
     p.add_argument("--gw", type=int, default=None)
     p.add_argument("--json", default="data/evo_plan.json")
