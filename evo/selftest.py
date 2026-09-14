@@ -15,11 +15,27 @@ Three of these are the reason the module exists at all:
   legality          squads, formations, substitutions and waivers obey the
                     game's rules in every gameweek of a simulated season.
 
+Two more are about the archive rather than the model, because the last
+audit found the archive's shape changing under the model without a test
+noticing:
+
+  columns           every statistic the features carry, and every
+                    statistic the TARGET's scoring rules pay, is a column
+                    in every season's archive or is explicitly flagged
+                    as absent. A new scoring element next season fails
+                    here rather than surfacing as a puzzling fold.
+  injury coverage   no season's injury feed has a hole longer than the
+                    gaps a weekly collector leaves. 2025/26 had two of
+                    three months each.
+
 Run: python -m evo.run selftest
 """
+import os
+import re
 import numpy as np
 
-from .config import Config, SEASONS, SQUAD, SQUAD_SIZE, POSITIONS, MIN_PLAY, MAX_PLAY
+from .config import (Config, SEASONS, LIVE_SEASON, SQUAD, SQUAD_SIZE,
+                     POSITIONS, MIN_PLAY, MAX_PLAY)
 from .features import (SeasonData, build_season,
                        load_seasons, Standardizer)
 from .net import Brain, Heuristic, new_genome
@@ -271,6 +287,98 @@ def test_determinism(cfg, views, season="2024-25"):
                    f"{a.round(0)}")
 
 
+# the archive columns each carried statistic is computed from
+STAT_COLUMNS = {
+    "pts": ("minutes", "goals_scored", "assists", "clean_sheets",
+            "goals_conceded", "saves", "bonus", "yellow_cards", "red_cards",
+            "own_goals", "penalties_saved", "penalties_missed"),
+    "mins": ("minutes",), "app": ("minutes",), "start": ("starts",),
+    "xgi": ("expected_goals", "expected_assists"), "bps": ("bps",),
+    "bonus": ("bonus",), "cs": ("clean_sheets",), "saves": ("saves",),
+    "dc": ("defensive_contribution",), "xfer": ("transfers_balance",),
+}
+# what each scoring rule is paid on; the *_limit keys are thresholds
+RULE_COLUMN = {
+    "long_play": "minutes", "short_play": "minutes",
+    "goals_scored": "goals_scored", "assists": "assists",
+    "clean_sheets": "clean_sheets", "goals_conceded": "goals_conceded",
+    "saves": "saves", "penalties_saved": "penalties_saved",
+    "penalties_missed": "penalties_missed", "yellow_cards": "yellow_cards",
+    "red_cards": "red_cards", "own_goals": "own_goals", "bonus": "bonus",
+    "defensive_contribution": "defensive_contribution",
+}
+# columns a season is allowed to lack, and how the model is told
+FLAGGED = {"expected_goals": "xg_avail", "expected_assists": "xg_avail",
+           "defensive_contribution": "dc_avail",
+           "starts": "reconstructed as minutes >= 60"}
+
+
+def test_columns(cfg):
+    """Every statistic the features read is a column in every season, or
+    is flagged; and every statistic the target's scoring rules PAY is a
+    column in every season - flagged is not good enough for the target,
+    since a rule that pays on a column one season has and four have not
+    is exactly the inconsistency the audit found."""
+    import pandas as pd
+    from .features import STATS, scoring_rules
+    S = scoring_rules(cfg.data_dir, cfg.dc_target)
+    ok = True
+    for s in list(SEASONS) + [LIVE_SEASON]:
+        path = f"{cfg.data_dir}/gws_{s}.csv"
+        if not os.path.exists(path):
+            ok &= _report(f"{s}: archive present", False, path)
+            continue
+        cols = set(pd.read_csv(path, nrows=0).columns)
+        unknown = [k for k in STATS if k not in STAT_COLUMNS]
+        missing = sorted({c for k in STATS for c in STAT_COLUMNS.get(k, ())
+                          if c not in cols and c not in FLAGGED})
+        absent = sorted(c for c in FLAGGED if c not in cols)
+        ok &= _report(f"{s}: the features' columns are present or flagged",
+                      not missing and not unknown,
+                      (f"missing {missing}" if missing else "")
+                      + (f" no column map for {unknown}" if unknown else "")
+                      + (f"absent but flagged: "
+                         + ", ".join(f"{c} ({FLAGGED[c]})" for c in absent)
+                         if absent else "all present"))
+        bad, unk = [], []
+        for k, v in S.items():
+            base = re.sub(r"_(GKP|DEF|MID|FWD)$", "", k)
+            if base.endswith("_limit") or not v:
+                continue
+            col = RULE_COLUMN.get(base)
+            if col is None:
+                unk.append(k)
+            elif col not in cols:
+                bad.append(f"{k} -> {col}")
+        ok &= _report(f"{s}: every scoring rule the target pays has its "
+                      f"column", not bad and not unk,
+                      (f"absent {bad}" if bad else "")
+                      + (f" unmapped rule {unk}" if unk else ""))
+    return ok
+
+
+def test_injury_coverage(cfg, max_gap_days=40, min_snapshots=30):
+    """No season's feed has a hole longer than a weekly collector leaves
+    (the worst honest one is the 36-day World Cup break in 2022/23).
+    Through a hole the model reads a status that may be months old."""
+    from .injuries import snapshot_times, worst_gap, _day
+    ok = True
+    for s in list(SEASONS) + [LIVE_SEASON]:
+        t = snapshot_times(cfg.data_dir, s)
+        if len(t) == 0:
+            ok &= _report(f"{s}: injury log present", False)
+            continue
+        gap, a, b = worst_gap(t)
+        live = s == LIVE_SEASON
+        good = gap <= max_gap_days and (live or len(t) >= min_snapshots)
+        ok &= _report(f"{s}: injury feed has no hole over {max_gap_days} "
+                      f"days", good,
+                      f"{len(t)} snapshots {_day(t.min())} to "
+                      f"{_day(t.max())}, worst gap {gap:.0f} days"
+                      + (f" ({_day(a)} to {_day(b)})" if a else ""))
+    return ok
+
+
 def test_standardizer(cfg, arrays):
     tr = SEASONS[:-1]
     a = Standardizer().fit([arrays[s] for s in tr])
@@ -285,6 +393,8 @@ def run_all(cfg=None):
     std = Standardizer().fit([arrays[s] for s in SEASONS[:-1]])
     views = {s: SeasonView(s, arrays[s], std) for s in SEASONS}
     ok = True
+    ok &= test_columns(cfg)
+    ok &= test_injury_coverage(cfg)
     ok &= test_non_anticipation(cfg)
     ok &= test_fixture_horizon(cfg)
     ok &= test_return_dates(cfg)

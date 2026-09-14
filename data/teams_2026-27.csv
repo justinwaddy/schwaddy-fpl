@@ -1,21 +1,21 @@
-code,draw,form,id,loss,name,played,points,position,short_name,strength,team_division,unavailable,win,link_url,strength_overall_home,strength_overall_away,strength_attack_home,strength_attack_away,strength_defence_home,strength_defence_away,pulse_id
-3,0,,1,0,Arsenal,0,0,2,ARS,,,False,0,,4,5,0,0,0,0,1
-7,0,,2,0,Aston Villa,0,0,20,AVL,,,False,0,,3,4,0,0,0,0,2
-91,0,,3,0,Bournemouth,0,0,13,BOU,,,False,0,,3,3,0,0,0,0,127
-94,0,,4,0,Brentford,0,0,3,BRE,,,False,0,,3,3,0,0,0,0,130
-36,0,,5,0,Brighton,0,0,1,BHA,,,False,0,,2,3,0,0,0,0,131
-8,0,,6,0,Chelsea,0,0,6,CHE,,,False,0,,4,4,0,0,0,0,4
-9,0,,7,0,Coventry City,0,0,18,COV,,,False,0,,2,2,0,0,0,0,5
-31,0,,8,0,Crystal Palace,0,0,16,CRY,,,False,0,,3,3,0,0,0,0,6
-11,0,,9,0,Everton,0,0,4,EVE,,,False,0,,3,3,0,0,0,0,7
-54,0,,10,0,Fulham,0,0,12,FUL,,,False,0,,2,3,0,0,0,0,34
-88,0,,11,0,Hull City,0,0,5,HUL,,,False,0,,2,2,0,0,0,0,41
-40,0,,12,0,Ipswich Town,0,0,7,IPS,,,False,0,,2,2,0,0,0,0,8
-2,0,,13,0,Leeds,0,0,9,LEE,,,False,0,,2,3,0,0,0,0,9
-14,0,,14,0,Liverpool,0,0,10,LIV,,,False,0,,4,4,0,0,0,0,10
-43,0,,15,0,Man City,0,0,8,MCI,,,False,0,,4,5,0,0,0,0,11
-1,0,,16,0,Man Utd,0,0,17,MUN,,,False,0,,4,4,0,0,0,0,12
-4,0,,17,0,Newcastle,0,0,11,NEW,,,False,0,,2,3,0,0,0,0,23
-17,0,,18,0,Nott'm Forest,0,0,15,NFO,,,False,0,,3,3,0,0,0,0,15
-6,0,,19,0,Spurs,0,0,19,TOT,,,False,0,,3,3,0,0,0,0,21
-56,0,,20,0,Sunderland,0,0,14,SUN,,,False,0,,2,3,0,0,0,0,29
+code,draw,form,id,loss,name,played,points,position,short_name,strength,team_division,unavailable,win,link_url,strength_overall_home,strength_overall_away,strength_attack_home,strength_attack_away,strength_defence_home,strength_defence_away,pulse_id,strength_source
+3,0,,1,0,Arsenal,0,0,2,ARS,5,,False,0,,1305,1355,1340,1390,1270,1320,1,carried_2025-26
+7,0,,2,0,Aston Villa,0,0,20,AVL,3,,False,0,,1135,1230,1120,1210,1150,1250,2,carried_2025-26
+91,0,,3,0,Bournemouth,0,0,13,BOU,3,,False,0,,1150,1235,1060,1230,1240,1240,127,carried_2025-26
+94,0,,4,0,Brentford,0,0,3,BRE,3,,False,0,,1135,1215,1120,1160,1150,1270,130,carried_2025-26
+36,0,,5,0,Brighton,0,0,1,BHA,4,,False,0,,1170,1250,1140,1220,1200,1280,131,carried_2025-26
+8,0,,6,0,Chelsea,0,0,6,CHE,3,,False,0,,1190,1195,1130,1140,1250,1250,4,carried_2025-26
+9,0,,7,0,Coventry City,0,0,18,COV,2,,False,0,,975,1045,910,1050,1000,1040,5,promoted_prior
+31,0,,8,0,Crystal Palace,0,0,16,CRY,3,,False,0,,1160,1185,1150,1200,1170,1170,6,carried_2025-26
+11,0,,9,0,Everton,0,0,4,EVE,3,,False,0,,1135,1160,1130,1150,1140,1170,7,carried_2025-26
+54,0,,10,0,Fulham,0,0,12,FUL,3,,False,0,,1105,1200,1090,1170,1120,1230,34,carried_2025-26
+88,0,,11,0,Hull City,0,0,5,HUL,2,,False,0,,975,1045,910,1050,1000,1040,41,promoted_prior
+40,0,,12,0,Ipswich Town,0,0,7,IPS,2,,False,0,,975,1045,910,1050,1000,1040,8,promoted_prior
+2,0,,13,0,Leeds,0,0,9,LEE,3,,False,0,,1100,1205,1050,1160,1150,1250,9,carried_2025-26
+14,0,,14,0,Liverpool,0,0,10,LIV,4,,False,0,,1180,1250,1120,1200,1240,1300,10,carried_2025-26
+43,0,,15,0,Man City,0,0,8,MCI,4,,False,0,,1265,1355,1220,1310,1310,1400,11,carried_2025-26
+1,0,,16,0,Man Utd,0,0,17,MUN,4,,False,0,,1180,1250,1120,1190,1240,1310,12,carried_2025-26
+4,0,,17,0,Newcastle,0,0,11,NEW,3,,False,0,,1120,1205,1130,1120,1110,1290,23,carried_2025-26
+17,0,,18,0,Nott'm Forest,0,0,15,NFO,3,,False,0,,1125,1165,1130,1160,1120,1170,15,carried_2025-26
+6,0,,19,0,Spurs,0,0,19,TOT,3,,False,0,,1120,1120,1090,1090,1150,1150,21,carried_2025-26
+56,0,,20,0,Sunderland,0,0,14,SUN,3,,False,0,,1055,1150,1070,1170,1040,1130,29,carried_2025-26

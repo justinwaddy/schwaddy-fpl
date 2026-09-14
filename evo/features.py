@@ -34,7 +34,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from .config import SEASONS, POSITIONS, ETYPE, WINDOWS
+from .config import SEASONS, LIVE_SEASON, POSITIONS, ETYPE, WINDOWS
 from . import injuries
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
@@ -54,7 +54,75 @@ PLAY_WINDOW = 8          # club matches in the availability window
 # one match, so a player with less than that in the window has his rate
 # shrunk toward zero rather than exploded.
 MIN90 = 90.0
-CACHE_VERSION = 12
+CACHE_VERSION = 13
+
+# the scoring keys that pay the defensive-contribution rule (the *_limit
+# keys beside them are thresholds, and stay: a threshold with nothing
+# behind it awards nothing)
+DC_KEYS = tuple(f"defensive_contribution_{p}" for p in POSITIONS)
+
+
+def scoring_rules(data_dir, dc_target):
+    """The draft scoring, as the TARGET is computed under it.
+
+    The archive carries defensive_contribution from 2025/26 only. Scoring
+    every season under the live rules therefore gave four seasons whose
+    defenders' totals excluded the rule and one whose included it - about
+    0.4 points a defender appearance, 16 a season, 80 across a back five,
+    all of it landing on the one forward fold. With dc_target off the
+    rule's awards are zeroed so that every season is scored on the same
+    rule and a defender is worth the same thing in every fold; the live
+    driver prices the rule back in at pick time (see dc_bonus_ppa).
+    """
+    S = dict(json.load(open(f"{data_dir}/draft_bootstrap.json"))
+             ["settings"]["scoring"])
+    if not dc_target:
+        for k in DC_KEYS:
+            S[k] = 0
+    return S
+
+
+_DC_PPA = {}
+
+
+def dc_bonus_ppa(data_dir):
+    """Points per appearance the defensive-contribution rule pays, by
+    position, measured on every archive season that carries the
+    statistic (2025/26 and the live season so far). About 0.42 a
+    defender and 0.22 a midfielder; a forward almost never reaches the
+    threshold and a keeper is not eligible.
+
+    This is what dc_bonus adds to a player's baseline in a DC-era season
+    when the target itself was scored without the rule: the league pays
+    it, the model has not seen enough of it to learn it, and pricing a
+    back five 80 points a season under their worth is not neutral.
+    """
+    if data_dir in _DC_PPA:
+        return _DC_PPA[data_dir]
+    S = scoring_rules(data_dir, dc_target=True)
+    fires = np.zeros(4)
+    apps = np.zeros(4)
+    for s in list(SEASONS) + [LIVE_SEASON]:
+        gp, rp = f"{data_dir}/gws_{s}.csv", f"{data_dir}/players_raw_{s}.csv"
+        if not (os.path.exists(gp) and os.path.exists(rp)):
+            continue
+        g = pd.read_csv(gp, low_memory=False)
+        if "defensive_contribution" not in g.columns:
+            continue
+        raw = pd.read_csv(rp, low_memory=False)
+        et = dict(zip(raw["id"].astype(int), raw["element_type"].astype(int)))
+        pos = g["element"].astype(int).map(et)
+        mins = _num(g, "minutes")
+        dc = _num(g, "defensive_contribution")
+        for p, name in enumerate(POSITIONS):
+            m = (pos.to_numpy() == p + 1) & (mins > 0)
+            lim = S[f"defensive_contribution_limit_{name}"]
+            apps[p] += m.sum()
+            if lim:
+                fires[p] += ((dc >= lim) & m).sum() * S[f"defensive_contribution_{name}"]
+    out = np.where(apps > 0, fires / np.maximum(apps, 1), 0.0)
+    _DC_PPA[data_dir] = out
+    return out
 
 FEATURE_NAMES = (
     ["pos_" + p for p in POSITIONS]
@@ -118,7 +186,8 @@ class SeasonData:
         raw = pd.read_csv(f"{data_dir}/players_raw_{season}.csv",
                           low_memory=False)
         teams = pd.read_csv(f"{data_dir}/teams_{season}.csv", low_memory=False)
-        S = json.load(open(f"{data_dir}/draft_bootstrap.json"))["settings"]["scoring"]
+        # the target's rule: the same one in every season (see scoring_rules)
+        S = scoring_rules(data_dir, self.cfg.dc_target)
 
         # stable player code, and position, from the season's element list.
         # players_raw is an end-of-season snapshot, so ONLY the identity
@@ -174,6 +243,12 @@ class SeasonData:
 
         self.has_xg = "expected_goals" in gws.columns
         self.has_dc = "defensive_contribution" in gws.columns
+        # what the rule the target leaves out is worth here, per
+        # appearance and position: zero unless this is a DC-era season,
+        # the target excludes the rule, and the caller asked for it
+        self.dc_ppa = np.zeros(4)
+        if self.cfg.dc_bonus and self.has_dc and not self.cfg.dc_target:
+            self.dc_ppa = dc_bonus_ppa(data_dir)
 
         # position of each player row (mode over his matches)
         self.pos = np.zeros(n, int)
@@ -597,10 +672,17 @@ def build_features(sd, cfg=None, times=None, _shared=None):
     if sd.has_prev.any():
         prev_avail = np.clip(sd.prev_apps / 38.0, 0, 1)
 
-    # the injury log, cut at the same moment as the match archive
+    # the injury log, cut at the same moment as the match archive, and
+    # the times the feed was actually read - so that "stale" measures
+    # how long since the feed last confirmed a state, not how long since
+    # the state began, and a hole in the feed reads as one
     inj = injuries.load(cfg.data_dir, sd.season) if cfg.use_injuries else {}
+    snaps = (injuries.snapshot_times(cfg.data_dir, sd.season)
+             if cfg.use_injuries else None)
     if sd.cut_ts != float("inf"):
         inj = {c: a[a[:, 0] <= sd.cut_ts] for c, a in inj.items()}
+        if snaps is not None:
+            snaps = snaps[snaps <= sd.cut_ts]
 
     # cache of club windows, one per (club, gameweek)
     club_win = {}
@@ -755,7 +837,7 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             # so the heuristic baseline - and therefore the residual
             # policy's starting point - knows about injuries in training
             # exactly as the live driver does.
-            istate = injuries.state_at(inj_rows, t)
+            istate = injuries.state_at(inj_rows, t, snaps)
             ifac, iout, idbt, idays, istale, iknown, iret, iretk = istate
             pp_raw = pp
             pp *= ifac
@@ -855,7 +937,10 @@ def build_features(sd, cfg=None, times=None, _shared=None):
             # ---- heuristic baselines, the residual policy's starting point
             prior = (sd.prev_ppm[i] if sd.has_prev[i]
                      else pos_mean_g[g, posi])
-            bp = (cum[k][si["pts"]] + SHRINK_K * prior) / (napp + SHRINK_K)
+            # plus what the rule the target leaves out pays him here
+            # (zero unless cfg.dc_bonus, in a DC-era season)
+            bp = ((cum[k][si["pts"]] + SHRINK_K * prior) / (napp + SHRINK_K)
+                  + sd.dc_ppa[posi])
             base_ppm[i, col] = bp
             ep1 = bp * pp * nf1 * sd._fmult(posi, oa1, od1)
             base_ep1[i, col] = ep1
@@ -901,9 +986,11 @@ def build_features(sd, cfg=None, times=None, _shared=None):
     exp_apps = np.where(sd.has_prev,
                         38 * (0.35 + 0.65 * np.minimum(1.0, sd.prev_apps / 38.0)),
                         38 * 0.20)
-    prior_ppm = np.where(sd.has_prev, sd.prev_ppm, pos_mean_g[1][sd.pos])
+    prior_ppm = (np.where(sd.has_prev, sd.prev_ppm, pos_mean_g[1][sd.pos])
+                 + sd.dc_ppa[sd.pos])
     # a player carrying an injury on draft day is worth less on draft day
-    draft_fac = np.array([injuries.state_at(inj.get(int(c)), times[1])[0]
+    draft_fac = np.array([injuries.state_at(inj.get(int(c)), times[1],
+                                            snaps)[0]
                           for c in sd.codes])
     base_season = (prior_ppm * exp_apps * draft_fac).astype(np.float32)
 
@@ -944,6 +1031,7 @@ def build_season(sd, cfg=None):
 def _key(cfg):
     return (f"v{CACHE_VERSION}_{cfg.pool_mode}_m{int(cfg.preseason_market)}"
             f"_i{int(cfg.use_injuries)}"
+            f"_t{int(cfg.dc_target)}_b{int(cfg.dc_bonus)}"
             f"_p{int(cfg.preseason_price)}"
             f"_h{cfg.fixture_horizon}_x{int(cfg.pos_interact)}"
             f"_w{cfg.waiver_lead_hours:g}")

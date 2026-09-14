@@ -13,18 +13,27 @@ season before either is trusted with the squad.
 
 ```
 python -m evo.run features      # build the point-in-time feature cache
-python -m evo.run selftest      # the leakage and legality checks
-python -m evo.run cv    --out evo/runs/cv --kind loso
+python -m evo.run selftest      # the leakage, legality and archive-shape checks
+python -m evo.run cv    --out evo/runs/cv            # three forward folds
 python -m evo.run report --out evo/runs/cv
 python -m evo.run train --out evo/runs/final --all-seasons --generations <best>
 python -m evo.run live  --model evo/runs/final/ckpt.npz
 ```
 
-On a cluster: `evo/slurm/features.sbatch`, then `cv.sbatch` (a five-task
-array, one fold each), then `train.sbatch`. Edit `evo/slurm/env.sh` for
-your site; nothing else should need touching. Only numpy, pandas and
-scipy are needed - the three `requirements.txt` already pins. There is no
-GPU path and nothing to compile.
+On a cluster: `evo/slurm/features.sbatch`, then `cv.sbatch` (a nine-task
+array: three forward folds at three seeds each), then `train.sbatch`.
+Edit `evo/slurm/env.sh` for your site; nothing else should need
+touching. Only numpy, pandas and scipy are needed - the three
+`requirements.txt` already pins. There is no GPU path and nothing to
+compile.
+
+> **Read this first if you are reading the numbers below.** A data audit
+> on 14 September 2026 found four things wrong with the archive as this
+> model consumed it, and they are fixed in the code but not yet in the
+> numbers: every result table in this file was measured before the fixes
+> and is superseded until the cluster has been run again. The section
+> [What the audit changed](#what-the-audit-changed) says what moved and
+> why; nothing in the tables should be quoted without it.
 
 ## The policy
 
@@ -180,11 +189,26 @@ every season. As a probability of playing, multiplying the trailing
 minutes share by the advertised chance cuts the Brier score by 8%
 (0.1398 to 0.1286).
 
-2025/26 is the weak season - twelve snapshots rather than forty, so
-states go stale and a fifth of its "out" flags are wrong. It is the
-newest season and the one the live model leans on most, which is another
-reason to keep the log current daily from here rather than harvesting it
-after the fact.
+2025/26 was the weak season when that table was made - the archive repo
+committed twelve times rather than forty, and not at all from 1 November
+to 5 February or from 13 March to 17 June, so for a third of the season
+the model read a status that could be three months old. It has since
+been rebuilt from a second source: olbauday/FPL-Elo-Insights commits the
+same five fields once or twice a day, keyed by element id, and
+`evo/injuries.py` now merges every source's snapshots in time order
+(`--elo-repo`; `--wayback FROM TO` adds the Wayback Machine's captures of
+FPL's own endpoint for any stretch nothing else covers). The rebuilt
+2025/26 log is daily from August to June with no gap over a week,
+and it agrees with FPL's own archived payload on the days checked
+inside the former holes. `python -m evo.injuries --report` prints every
+season's snapshot count and worst gap, and `selftest` fails on a hole
+over forty days. The live season is appended daily by the refresh, so
+2026/27 is on the same footing.
+
+One consequence worth knowing: `inj_stale` now measures how long since
+the FEED last confirmed a state (the log's distinct observation times
+are the feed's read times), not how long since the state began. Through
+a hole it grows; in a daily season it sits near zero.
 
 **It is worth about +34 points a season**, measured on the heuristic
 manager alone - the same policy, the same seeds, with the log and
@@ -356,13 +380,29 @@ See the next section. Availability at any decision carries the game's own
 status and chance-of-playing as of that moment, in training exactly as
 live.
 
-**Defensive contribution exists only from 2025/26.** Earlier seasons
-score zero there and carry an indicator, so the network can tell the
-difference. It is scored under the live season's rules throughout, which
-is the same choice `panel.py` makes.
+**Defensive contribution exists only from 2025/26, and the target is
+scored without it.** The feature side was always handled - `dc90_12`
+reads as zero in earlier seasons and `dc_avail` says so. The target
+side was not: realized draft points were recomputed under the live
+rules, which pay two points for a defensive-contribution count over the
+threshold, and that fired on a fifth of defender appearances in the one
+season with the column and never in the four without. So the model was
+trained on defenders' totals that excluded the rule and validated on
+totals that included it, about 16 points a defender a season and 80
+across a back five, all on the forward fold. `dc_target` is now off by
+default: the rule's awards are zeroed so that a point means the same
+thing in every season. The league still scores WITH it, so the live
+driver adds the rule's measured per-appearance value (`dc_bonus`, about
++0.41 a defender and +0.21 a midfielder, measured on the DC-era
+archive) to the baseline at pick time until enough DC-era seasons exist
+to learn it. `panel.py` still scores under the live rules; that is the
+matrix model's choice to revisit.
 
-**2021/22 has no xG or xA** in the archive, and carries an indicator for
-that too. It is the weakest fold.
+**2021/22 has no xG or xA, no starts and no prior season** in the
+archive, and carries indicators for what it can. Five of its features
+are constants there and its baseline manager wins 0.11 of six-manager
+leagues (chance is 0.167), so it is trained on but never scored against
+(`train_only_seasons`).
 
 **Trades are out of scope.** Waivers are same-position swaps, which keeps
 the 2/5/5/3 quota valid by construction.
@@ -554,11 +594,21 @@ generalise: within one season the same players, clubs and scoring quirks
 recur every week, so a random split of gameweeks would leak almost
 everything.
 
-- `loso` - five folds, each trained on four seasons and validated on the
-  fifth.
-- `forward` - trained on the four earliest, validated on the most recent.
-  The honest forward test, and the only one whose direction of time
-  matches how the model will be used.
+- `forward` (the default) - an expanding window: each scored season is
+  validated by a model trained on every season before it. The honest
+  forward test, and the only one whose direction of time matches how the
+  model will be used. With 2021/22 training-only that is three folds:
+  2023/24, 2024/25 and 2025/26.
+- `loso` - leave-one-season-out: each scored season validated by a model
+  trained on all the others, later ones included.
+
+Neither scores 2021/22 (see the assumptions above); it is training data
+wherever it precedes the validation season. `cv.sbatch` runs every fold
+at three seeds and `report` averages the seeds within a fold before it
+averages the folds, so the spread it prints is between seasons rather
+than between draws; and every genome plays 24 leagues a generation
+rather than 8, since at 8 a genome's fitness was mostly the seats and
+seasons it drew.
 
 In every fold the feature standardizer is fitted on the training seasons
 alone, and the population and hall of fame never see the held-out season.
@@ -576,7 +626,47 @@ folds is the only thing the held-out seasons are allowed to decide; the
 live model is then trained on every season for exactly that many
 generations.
 
-### What the cluster found
+### What the audit changed
+
+The 14 September 2026 data audit read every file under `data/` against
+how `features.py` consumes it. Its findings, and what was done:
+
+1. **The target included defensive contribution in one season only.**
+   Fixed: `dc_target=False` scores every season on the same rule;
+   `dc_bonus` prices the rule back in at pick time. `selftest` now fails
+   if any scoring rule with an award names a column a season lacks, so
+   the next scoring change surfaces as a failed test.
+2. **The 2025/26 injury feed had two three-month holes.** Fixed:
+   rebuilt daily from FPL-Elo-Insights merged with the archive repo;
+   `inj_stale` now measures feed staleness; `selftest` fails on a hole
+   over forty days.
+3. **2021/22 had five dead features and no prior season, and carried
+   the reported mean.** Fixed: training-only, never scored.
+4. **2022/23 has no gameweek 7** (postponed after the Queen's death).
+   Not a bug - the builder sees no matches and no points, and the
+   windows are on a timestamp clock - and left as is.
+5. **The live teams file had blank and zero strengths.** The API
+   publishes none this season. Nothing here reads those columns, but
+   `src/schwaddy/teams.py` now fills them from last season's ratings
+   (a promoted club gets the weakest) with a `strength_source` column
+   saying so, on every refresh.
+6. **Estimator noise.** `leagues_per_genome` 8 to 24; three seeds a
+   fold; forward folds by default.
+
+Every number in the tables that follow was measured before these
+changes: under the old target, with 2021/22 in the mean, on
+leave-one-season-out folds, at 8 leagues and one seed, and with the
+2025/26 injury holes. The audit's own reading was that the +66.9 and
++43.3 means were within seed-to-seed noise of each other; that the edge
+out of sample is real in the three middle seasons (roughly +40 to +100
+depending on seed); and that it is untested in the direction the model
+is used, because the one forward fold had a mis-specified target and a
+degraded injury feed. Dropping 2021/22 alone was expected to take 30 to
+40 points off the reported mean. Rerun `cv.sbatch` and `train.sbatch`
+before quoting anything below, and retrain `data/evo_model.npz`, which
+was trained on the old target - `live` warns when it loads it.
+
+### What the cluster found (before the audit)
 
 Population 200, eight leagues per genome, 200 generations, all five
 leave-one-season-out folds, 120 validation leagues per checkpoint, on
@@ -741,8 +831,8 @@ out that revision here before you run.
 
 ```
 sbatch evo/slurm/features.sbatch                 # cache + selftest, once
-sbatch --dependency=afterok:<id> evo/slurm/cv.sbatch    # five folds
-python -m evo.run report --out evo/runs/cv       # when all five are in
+sbatch --dependency=afterok:<id> evo/slurm/cv.sbatch    # 3 folds x 3 seeds
+python -m evo.run report --out evo/runs/cv       # when all nine are in
 GENS=<the generation it prints> sbatch evo/slurm/train.sbatch
 ```
 

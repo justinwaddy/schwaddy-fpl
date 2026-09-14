@@ -13,7 +13,7 @@ import numpy as np
 import requests
 
 from . import (api, compare, depth, history, liveform, livegws, overrides, public,
-               playerstats, prices, weekly)
+               playerstats, prices, teams, weekly)
 from .panel import build, SEASONS, LIVE, POS_GROUPS
 from .mc import TropForecast
 from .lineup import p_plays, pick_xi, waiver_claims
@@ -44,6 +44,14 @@ def pull(data_dir):
                     continue                   # archive not started yet
                 r.raise_for_status()
             open(out, "w").write(r.text)
+
+    # The API publishes no team strengths this season and the file just
+    # downloaded carries its zeros; fill them from last season's (see
+    # teams.py) so nothing downstream reads a league of equals.
+    try:
+        teams.fill_strengths(data_dir)
+    except Exception as ex:
+        print(f"team strengths not filled: {ex}")
 
     # The archive lags the live season, so the reconstruction fills in
     # whatever it has not published yet.

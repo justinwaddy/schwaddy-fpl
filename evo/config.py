@@ -60,6 +60,30 @@ class Config:
     # information set is used for the line-up, which is conservative for
     # the line-up rather than optimistic for the waiver.
     waiver_lead_hours: float = 24.0
+    # Whether the TARGET - realized draft points, the reward - includes
+    # the defensive-contribution rule. The archive carries the statistic
+    # from 2025/26 only, so scoring every season under the live rules
+    # gave four seasons of defenders' totals without it and one with it:
+    # about 0.4 points a defender appearance, 16 a season, 80 across a
+    # back five, all landing on the one forward fold. Off scores every
+    # season on the same rule, so folds are comparable and the forward
+    # test is a fair one. The league itself scores WITH it; see dc_bonus.
+    dc_target: bool = False
+    # Add the DC-era per-appearance value of the rule (measured on the
+    # seasons that carry the statistic: about +0.4 a defender, +0.2 a
+    # midfielder) to the baseline of players in a season that has it.
+    # Off in training and validation, where the target excludes it; the
+    # live driver turns it on so that picks are priced under the rules
+    # the league actually scores, until enough DC-era data exists to
+    # learn the rule rather than assume it.
+    dc_bonus: bool = False
+    # Seasons that may be trained on but are never scored against.
+    # 2021/22 has no xG, no starts, no defensive contribution and no
+    # prior season, so five of its features are constants and its
+    # baseline manager wins 0.11 of six-manager leagues (chance is
+    # 0.167): a different experiment from the other folds, and the one
+    # that was carrying the reported mean.
+    train_only_seasons: tuple = ("2021-22",)
 
     # --- policy ---
     hidden: int = 24
@@ -129,7 +153,13 @@ class Config:
     # same way as everything else here - by the validation curve, never
     # by eye on the training one.
     l2: float = 0.0
-    leagues_per_genome: int = 8
+    # leagues each genome plays per generation. At 8 the fitness of a
+    # genome was mostly the seasons and seats it drew: selection was
+    # close to random and no ablation finer than "market, fixtures,
+    # injuries and momentum carry the model" was resolvable. 24 triples
+    # the sample behind every selection decision; run each arm at three
+    # or more seeds on top (see evo/slurm/cv.sbatch).
+    leagues_per_genome: int = 24
     hof_size: int = 24
     hof_every: int = 5
     anchor_seats: int = 2        # seats per league given to heuristics/HOF
@@ -143,4 +173,5 @@ class Config:
         d = asdict(self)
         d["train_seasons"] = list(self.train_seasons)
         d["valid_seasons"] = list(self.valid_seasons)
+        d["train_only_seasons"] = list(self.train_only_seasons)
         return d

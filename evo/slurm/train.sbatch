@@ -19,7 +19,7 @@ python -m evo.run train \
   --all-seasons \
   --generations "$GENS" \
   --pop-size 200 \
-  --leagues-per-genome 10 \
+  --leagues-per-genome 24 \
   --workers "${SLURM_CPUS_PER_TASK}" \
   --resume
 

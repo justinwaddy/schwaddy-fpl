@@ -146,11 +146,46 @@ def _standings(cfg, own, offline):
         return [0.0] * 6
 
 
+def _check_target(z, cfg, model_path):
+    """The checkpoint and this configuration must agree on what a point
+    IS. A model trained on a target that included the defensive-
+    contribution rule where the archive had it (every checkpoint before
+    dc_target existed) has learnt defenders' values from four seasons
+    without the rule and one with; run under a configuration that scores
+    without it, its baselines and its residuals no longer describe the
+    same quantity. Loud rather than fatal: the plan is still written, and
+    the warning says to retrain."""
+    try:
+        mcfg = json.loads(str(z["cfg"])) if "cfg" in z.files else {}
+    except Exception:
+        mcfg = {}
+    # before the flag existed the target carried the rule wherever the
+    # column was present, which is dc_target=True in today's terms
+    trained = bool(mcfg.get("dc_target", True))
+    if trained != bool(cfg.dc_target):
+        print(f"  WARNING: {model_path} was trained with dc_target="
+              f"{trained} and this run scores with dc_target="
+              f"{cfg.dc_target}; its values are on a different target. "
+              f"Retrain (python -m evo.run cv / train) before trusting it.")
+
+
 def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
          league_id=LEAGUE_ID, board_n=40):
     z = np.load(model_path, allow_pickle=False)
     std = Standardizer(z["mean"], z["sd"])
     genome = z["best"]
+    _check_target(z, cfg, model_path)
+    if not cfg.dc_target and not cfg.dc_bonus:
+        # the league scores WITH the rule. The target was scored without
+        # it so that the folds are comparable; at pick time the rule's
+        # measured per-appearance value goes back onto every defender
+        # and midfielder in a DC-era season (see features.dc_bonus_ppa)
+        from .config import Config
+        cfg = Config(**{**cfg.to_dict(), "dc_bonus": True})
+        from .features import dc_bonus_ppa
+        ppa = dc_bonus_ppa(cfg.data_dir)
+        print("  DC bonus at pick time, points per appearance: "
+              + ", ".join(f"{p} {v:+.2f}" for p, v in zip(POSITIONS, ppa)))
     brain = Brain(genome, cfg)
 
     boot, fixtures, own = _fetch(cfg, offline, league_id)

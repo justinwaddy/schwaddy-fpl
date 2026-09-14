@@ -5,11 +5,22 @@ generalise is a season: within one season the same players, clubs and
 scoring quirks recur every week, so a random split of gameweeks would
 leak almost everything.
 
-  loso     leave-one-season-out. Five folds; each trains on the other
-           four and is validated on the held-out one.
-  forward  train on the four earliest seasons, validate on the most
-           recent. The honest forward test, and the only one whose
-           direction of time matches how the model will actually be used.
+  forward  the default. Expanding window: each scored season is
+           validated by a model trained on every season BEFORE it, so
+           the direction of time matches how the model will actually be
+           used. With 2021/22 training-only that is three folds -
+           2023/24, 2024/25 and 2025/26 - fewer than five, and the right
+           ones.
+  loso     leave-one-season-out. Each scored season is validated by a
+           model trained on all the others, later ones included. More
+           data per fold, but it is not the forward test.
+
+Neither scores a season in cfg.train_only_seasons. 2021/22 has no xG,
+no starts, no defensive contribution and no prior season - five of its
+features are constants - and its baseline manager wins 0.11 of
+six-manager leagues, so scoring against it is a different experiment
+from the others and it was the one carrying the reported mean. It is
+still trained on wherever it precedes the validation season.
 
 In every fold the feature standardizer is fitted on the training seasons
 alone, the hall of fame and the population never see the held-out season,
@@ -20,10 +31,14 @@ learning the quirks of this generation's opponents.
 The validation curve is recorded every cfg.valid_every generations. The
 generation count that maximises MEAN validation score across folds is the
 one the final model - trained on every season - is then run for. That is
-the only thing the held-out seasons are allowed to decide.
+the only thing the held-out seasons are allowed to decide. Run each fold
+at several seeds (evo/slurm/cv.sbatch does) and summarize() averages the
+seeds within a fold before it averages the folds, so the spread it
+reports is between seasons and not between lucky draws.
 """
 import json
 import os
+import re
 import numpy as np
 
 from .config import Config, SEASONS
@@ -33,12 +48,25 @@ from .evaluate import paired_leagues, head_to_head
 from .evolve import Evolver
 
 
-def folds(kind="loso", seasons=None):
+def folds(kind="forward", seasons=None, train_only=None):
+    """The folds of a protocol: dicts of name, train seasons, valid season.
+
+    train_only defaults to Config().train_only_seasons. A forward fold
+    needs at least two seasons before it, so that the standardizer and
+    the priors are fitted on more than one.
+    """
     seasons = list(seasons or SEASONS)
-    if kind == "forward":
-        return [dict(name="forward", train=seasons[:-1], valid=[seasons[-1]])]
+    if train_only is None:
+        train_only = Config().train_only_seasons
+    scored = [s for s in seasons if s not in set(train_only)]
     out = []
-    for i, s in enumerate(seasons):
+    if kind == "forward":
+        for s in scored:
+            tr = seasons[:seasons.index(s)]
+            if len(tr) >= 2:
+                out.append(dict(name=f"forward_{s}", train=tr, valid=[s]))
+        return out
+    for s in scored:
         tr = [x for x in seasons if x != s]
         out.append(dict(name=f"loso_{s}", train=tr, valid=[s]))
     return out
@@ -104,8 +132,21 @@ def train_fold(cfg, fold, out_dir, generations=None, valid_every=5,
 SMOOTH = 3
 
 
+def _fold_of(rel):
+    """The fold a run directory belongs to, with the seed stripped: both
+    `seed1001/forward_2025-26` and `forward_2025-26_s1001` are runs of the
+    fold `forward_2025-26`."""
+    parts = [p for p in rel.split(os.sep) if not re.fullmatch(r"seed\d+", p)]
+    name = parts[-1] if parts else rel
+    return re.sub(r"_s\d+$", "", name)
+
+
 def summarize(root, key="v_score", smooth=SMOOTH):
     """Mean validation curve across folds, and the generation to stop at.
+
+    Every curve.json under root is a run; runs of the same fold at
+    different seeds are averaged first, so that a fold with three seeds
+    counts once and the spread reported is between seasons.
 
     The stopping generation is read off a moving average of the curve, not
     off its raw argmax. A draft league is noisy enough that the single
@@ -113,18 +154,27 @@ def summarize(root, key="v_score", smooth=SMOOTH):
     and picking it is overfitting the validation seasons - the one thing
     cross-validation exists to prevent.
     """
-    fold_curves = {}
-    for name in sorted(os.listdir(root)):
-        p = os.path.join(root, name, "curve.json")
-        if os.path.exists(p):
-            fold_curves[name] = json.load(open(p))
-    if not fold_curves:
+    runs = {}
+    for dp, _, fn in os.walk(root):
+        if "curve.json" in fn:
+            rel = os.path.relpath(dp, root)
+            runs.setdefault(_fold_of(rel), []).append(
+                json.load(open(os.path.join(dp, "curve.json"))))
+    if not runs:
         return None
+    fold_curves = dict(sorted(runs.items()))
     gens = sorted(set.intersection(*[{r["gen"] for r in c}
-                                     for c in fold_curves.values()]))
+                                     for cs in fold_curves.values()
+                                     for c in cs]))
+
     def col(g, name, default=float("nan")):
-        return [next((r.get(name, default) for r in c if r["gen"] == g),
-                     default) for c in fold_curves.values()]
+        # one number per fold: the mean over that fold's seeds
+        out = []
+        for cs in fold_curves.values():
+            v = [next((r.get(name, default) for r in c if r["gen"] == g),
+                      default) for c in cs]
+            out.append(float(np.nanmean(v)) if len(v) else default)
+        return out
 
     mean = []
     for g in gens:
@@ -148,7 +198,9 @@ def summarize(root, key="v_score", smooth=SMOOTH):
     i = int(np.argmax(sm))
     # the peak is a max over noisy checkpoints and is biased upward by
     # exactly that; the mean over checkpoints is the number to believe
-    return dict(folds=list(fold_curves), curve=mean, smooth=k,
+    return dict(folds=list(fold_curves),
+                seeds={f: len(cs) for f, cs in fold_curves.items()},
+                curve=mean, smooth=k,
                 mean_valid=float(np.mean(v)),
                 mean_valid_se=float(np.std(v, ddof=1) / np.sqrt(len(v)))
                 if len(v) > 1 else float("nan"),

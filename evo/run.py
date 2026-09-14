@@ -23,7 +23,7 @@ from . import cv as cvmod
 def add_config_args(ap):
     d = Config()
     for k, v in d.to_dict().items():
-        if k in ("train_seasons", "valid_seasons"):
+        if k in ("train_seasons", "valid_seasons", "train_only_seasons"):
             ap.add_argument("--" + k.replace("_", "-"), nargs="+", default=None)
         elif isinstance(v, bool):
             ap.add_argument("--" + k.replace("_", "-"),
@@ -42,6 +42,7 @@ def cfg_from_args(a):
             base[k] = tuple(v) if k.endswith("_seasons") else v
     base["train_seasons"] = tuple(base["train_seasons"])
     base["valid_seasons"] = tuple(base["valid_seasons"])
+    base["train_only_seasons"] = tuple(base["train_only_seasons"])
     return Config(**base)
 
 
@@ -62,9 +63,14 @@ def main(argv=None):
 
     p = add_config_args(sub.add_parser("cv"))
     p.add_argument("--out", required=True)
-    p.add_argument("--kind", default="loso", choices=("loso", "forward"))
+    p.add_argument("--kind", default="forward", choices=("forward", "loso"),
+                   help="forward (default): each scored season validated "
+                        "by a model trained on the seasons before it; "
+                        "loso: leave-one-season-out")
     p.add_argument("--fold", type=int, default=-1,
                    help="fold index for a SLURM array; -1 runs them all")
+    p.add_argument("--list-folds", action="store_true",
+                   help="print the folds of --kind and exit")
     p.add_argument("--valid-every", type=int, default=5)
     p.add_argument("--valid-leagues", type=int, default=40)
     p.add_argument("--resume", action="store_true")
@@ -114,7 +120,11 @@ def main(argv=None):
 
     if a.cmd == "cv":
         cfg = cfg_from_args(a)
-        fs = cvmod.folds(a.kind)
+        fs = cvmod.folds(a.kind, train_only=cfg.train_only_seasons)
+        if a.list_folds:
+            for i, f in enumerate(fs):
+                print(f"{i}: {f['name']}  train={f['train']} valid={f['valid']}")
+            return 0
         idx = range(len(fs)) if a.fold < 0 else [a.fold]
         for i in idx:
             f = fs[i]
@@ -132,9 +142,10 @@ def main(argv=None):
         if not s:
             print("no folds with a curve under", a.out)
             return 1
-        print(f"folds: {', '.join(s['folds'])}")
+        print("folds: " + ", ".join(f"{f} ({n} seed{'s' if n != 1 else ''})"
+                                    for f, n in s["seeds"].items()))
         print("paired points per season against the baseline manager, "
-              "meaned over folds")
+              "meaned over seeds within a fold and then over folds")
         print(f"{'gen':>6} {'fitness':>8} {'train':>8} {'valid':>8} "
               f"{'+-fold':>7} {'+-pair':>7} {'gap':>7} {'smoothed':>9}")
         for r in s["curve"]:

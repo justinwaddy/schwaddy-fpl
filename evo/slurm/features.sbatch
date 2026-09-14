@@ -1,6 +1,6 @@
 #!/bin/bash
 # Build the point-in-time feature cache once, so that the training array
-# does not have five tasks racing to write the same npz files.
+# does not have nine tasks racing to write the same npz files.
 #SBATCH --job-name=fpl-features
 #SBATCH --output=logs/features-%j.out
 #SBATCH --cpus-per-task=2

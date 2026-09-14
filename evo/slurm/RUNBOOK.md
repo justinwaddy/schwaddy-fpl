@@ -39,23 +39,25 @@ sbatch evo/slurm/features.sbatch
 Note the job id it prints. `logs/features-<id>.out` should end with
 `all checks passed`. If it does not, stop and send me the log.
 
-## 3. Cross-validation (five array tasks, up to 8 hours each)
+## 3. Cross-validation (nine array tasks, up to 12 hours each)
 
 ```
 sbatch --dependency=afterok:<features job id> evo/slurm/cv.sbatch
 ```
 
-Watch with `squeue -u $USER`. Each task is one held-out season and
-checkpoints every generation; a task that is pre-empted or times out is
+Watch with `squeue -u $USER`. Each task is one forward fold (2023/24,
+2024/25 or 2025/26, trained on every season before it; 2021/22 is
+training-only) at one of three seeds, and checkpoints every generation; a task that is pre-empted or times out is
 requeued with `scontrol requeue <jobid>_<task>` and carries on where it
-stopped. When all five have finished:
+stopped. When all nine have finished:
 
 ```
 python -m evo.run report --out evo/runs/cv
 ```
 
 Read two things off it: `mean over all checkpoints` (the number to
-believe) and `stop at generation N`.
+believe) and `stop at generation N`. Seeds are averaged within a fold
+first, so `+-fold` is the spread between seasons.
 
 ## 4. The final model (one job, ~1 hour)
 
