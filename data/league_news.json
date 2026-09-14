@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T22:49 UTC",
+  "generated": "2026-09-14T07:56 UTC",
   "items": [
     {
       "id": "2026-09-04-gakpo-vote-of-confidence",
@@ -685,6 +685,36 @@
       "kind": "opinion",
       "text": "Groß's 17 - the best number anyone posted all night - came from a penalty in Brighton's fifth of the afternoon against a Coventry side going nowhere. Easy pickings dressed up as a big night, and it still put Edward second overall. He'll take it either way.",
       "source": null
+    },
+    {
+      "id": "2026-09-14-derby-var-error",
+      "ts": "2026-09-14T07:50",
+      "kind": "news",
+      "text": "Pro Ref, the Premier League's referees' body, has apologised to Manchester United after admitting VAR erred in letting Erling Haaland's derby winner stand: Enzo Fernandez was ruled not to be interfering with play despite standing offside as Josko Gvardiol's cross came in for Haaland to score. The result is not being overturned, so Justin keeps the goal from his Haaland and Gvardiol, while Ben D is left with his Fernandez as the reason it should not have counted.",
+      "source": {
+        "title": "Premier League referees' body apologizes to Man United after derby offside controversy",
+        "url": "https://www.espn.com/soccer/story/_/id/49932067/premier-league-referees-body-apologises-man-united-derby-offside-controversy"
+      }
+    },
+    {
+      "id": "2026-09-14-foden-red-fallout",
+      "ts": "2026-09-14T07:52",
+      "kind": "news",
+      "text": "Man City boss Enzo Maresca said Phil Foden's straight red for kicking out at Bruno Fernandes was correct but that Fernandes should have walked too, telling reporters: \"it's a clear red card for Phil, because it's a reaction, but it's also a red card for Bruno.\" Micah Richards agreed on Sky Sports that \"it's Fernandes who started it\" - Foden, who plays for Marcus, was the one dismissed, and closed the derby on -2.",
+      "source": {
+        "title": "Phil Foden sent off in Manchester derby: Bruno Fernandes role criticised by Roy Keane and Micah Richards",
+        "url": "https://www.skysports.com/football/news/11095/13585509/phil-foden-sent-off-in-manchester-derby-bruno-fernandes-role-criticised-by-roy-keane-and-micah-richards"
+      }
+    },
+    {
+      "id": "2026-09-14-leeds-newcastle-preview",
+      "ts": "2026-09-14T07:54",
+      "kind": "news",
+      "text": "Leeds host Newcastle at Elland Road tonight (8pm kick-off), with Ilia Gruev and Mateo Joseph ruled out for the hosts and Joe Rodon a doubt. ESPN's expected lineups have Justin's Bogle and Ampadu, Edward's Calvert-Lewin, Ben D's Trafford and Robert's Wilson all in the Leeds side, against a Newcastle XI including Marcus's Elanga, Ben D's Thiaw, and Ben C's Wissa, Barnes and Hall.",
+      "source": {
+        "title": "Leeds United vs. Newcastle United: TV channel, how to watch in UK, kick-off time, live stream, team news, referee, predicted line-ups",
+        "url": "https://www.espn.com/soccer/story/_/id/49916515/leeds-united-newcastle-united-2026-27-premier-league-tv-channel-how-watch-kick-live-stream-referee-injury-predicted-lineups"
+      }
     }
   ],
   "runs": [
@@ -1014,6 +1044,13 @@
       "opinion": 3,
       "matchday": true,
       "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Groß's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
+    },
+    {
+      "ts": "2026-09-14T07:56 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning news. Led with the Manchester derby fallout since the automatic engine only carried the scoreline: Pro Ref's admitted VAR error on Haaland's winner (Justin/Ben D) and Maresca's post-match line that Bruno Fernandes should also have been sent off for the incident that got Marcus's Foden a red (Sky Sports). Third item is tonight's Leeds v Newcastle team news from ESPN, which touches all six squads at once (Justin, Edward, Ben D, Robert on the Leeds side; Marcus, Ben D, Ben C on Newcastle's). Weekend fixtures (Villa-Forest, Chelsea-Hull, Sunderland-Arsenal, Liverpool-Fulham, Spurs-Everton, Coventry-Brighton) were already thoroughly covered by prior runs, so left alone rather than repeated. No opinion pieces - morning run. Roast archive still holds 3 unused suggestions (Ben D on Ben D, Ben D on Justin, Justin on Marcus); last night's run note said these had been retired but roasts.json still shows them unused - flagging for tonight's run to actually resolve, since two look like they hit the barred categories (sexuality, race) and should be retired rather than used, and the third needs checking against tonight's facts before use."
     }
   ]
 }
