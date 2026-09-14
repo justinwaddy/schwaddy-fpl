@@ -692,6 +692,90 @@ degraded injury feed. Dropping 2021/22 alone was expected to take 30 to
 before quoting anything below, and retrain `data/evo_model.npz`, which
 was trained on the old target - `live` warns when it loads it.
 
+### What the cluster found (after the audit)
+
+ISCA array 2393201, 14 September 2026: population 200, 24 leagues per
+genome, 120 validation leagues per checkpoint, the three forward folds
+at three seeds each, cancelled between generation 95 and 105 to make
+room for the training array. Every number in this section is on the
+audited target and the rebuilt injury feed. Paired points a season
+against the reference, per fold, the three seeds' median and mean over
+the checkpoints from generation 25 to 95:
+
+```
+   fold       median    mean   note
+   2023-24     +73.9   +73.2   plateau from generation 25, never negative
+   2025-26     +73.5   +73.1   plateau from generation 25, never negative
+   2024-25     +10.6   +11.7   two of three seeds negative after generation 45
+```
+
+`report` puts the mean over all checkpoints at +45.3 +- 4.1, the raw
+best at generation 40 (+68.6) and the smoothed best at 95 (+61.2), and
+the gap between the training score and the held-out one grows from +55
+at generation 5 to +240 at 95: memorisation, as before, and again it
+does not make the two healthy folds worse. What is new is 2024-25:
+
+```
+   2024-25    seed 1000   seed 1001   seed 1002    median
+   gen  40        +70.0       +84.5       +21.9     +70.0
+   gen  65        +47.1       +71.1       -99.3     +47.1
+   gen  80        -70.9        -9.9       -38.4     -38.4
+   gen 100        -58.3           -       -68.7     -63.5
+```
+
+One seed is fine to the end; the other two go negative after
+generation 45 and stay there. So the count chosen is 40 - the last
+generation where every seed on every fold is positive, and the raw
+maximum of the mean - and the live model is FIVE seeds trained on every
+season for 40 generations, voting (see the deployment section).
+
+**Why 2024-25 fails, traced.** The top scorer that season, Salah, made
+344 points, 108 clear of second place; in every other archive season
+the gap is 4 to 14. He ranks 33rd of 240 on points per million, so no
+market feature marks him out, and the reference heuristic has him
+sixth on its board. The 120 validation leagues were replayed with the
+trace on and the paired difference split by whether he was still on
+the board when the genome made its first pick (a property of the
+league: the picks before it are the heuristics', identical in both
+halves of the pair) and by who drafted him. He is live at the genome's
+first pick in 94 of the 120 leagues.
+
+```
+                            Salah's rank    live and the     live and it     Salah gone
+   snapshot        paired   at pick one    genome took him   passed on him   before its pick
+   seed 1001 g40    +91.3        1           94  +120/lg            -           26   -14/lg
+   seed 1001 g90   +122.8        1           94  +151/lg            -           26   +21/lg
+   seed 1000 g40    +64.5        1           94   +83/lg            -           26    -3/lg
+   seed 1002 g40    +36.6        2           47   +96/lg      47    +3/lg       26   -10/lg
+   seed 1000 g80    -45.2        6           20    +2/lg      74   -62/lg       26   -32/lg
+   seed 1002 g65    -87.6       10            0        -      94   -98/lg       26   -50/lg
+   seed 1002 g100   -67.6        4           17   -17/lg      77   -86/lg       26   -47/lg
+```
+
+That settles it, and not in the direction the first reading guessed.
+The healthy lineages have Salah FIRST on the board - above Haaland,
+whom the reference and the market prefer - and take him in every league
+where he is available; the leagues where he was gone before their pick
+contribute nothing either way. The failing lineages rank him fourth to
+tenth, behind Son, Haaland, Solanke, Watkins and Foden, pass on him
+twice (the snake gives back-to-back picks), and a heuristic takes him a
+round later; those leagues are three quarters of the negative total.
+The bias is real and at the top of the board, it develops with the
+generations (seed 1002 had him second at generation 40 and tenth at
+65), and the reference's own sixth place is why it barely matters
+which manager sits in the paired seat: the reference only ever gets
+him when it picks last. Two consequences. The vote across seeds is the
+right deployment - three lineages in four rank him first, so a
+majority does - and the top-of-board guard (blend the network's rank
+with the base projection for the first two picks) is worth adding
+before next August, since it caps exactly this. It is not in yet.
+
+Replayed here rather than on the cluster, the seven snapshots come out
+at +95, +120, +61, +35, -47, -89 and -71 against the cluster's +85,
++121, +70, +22, -71, -99 and -69: same sign every time and inside the
+pair error, not bit-identical - the season is chaotic enough that a
+tie broken differently by another numpy moves a pick.
+
 ### What the cluster found (before the audit)
 
 Population 200, eight leagues per genome, 200 generations, all five
@@ -876,13 +960,21 @@ scp cluster:path/to/schwaddy-fpl/evo/runs/final/ckpt.npz evo/runs/final/
 python -m evo.run live --model evo/runs/final/ckpt.npz
 ```
 
-The committed copy of the model is `data/evo_model.npz`: the best genome
-and the standardizer only, eleven kilobytes, the population and hall of
-fame stripped out. The cron runs `live` against it every morning and
-writes `data/evo_plan.json`; `python -m evo.run explain --model
-data/evo_model.npz` says what it weighs. Merge a new model and the
-commit that trained it together, so the cron never sees one without the
-other.
+`--model` may be given several times, and should be: the one failure
+cross-validation found was per-seed, so the live plan is a vote across
+independently trained seeds. The eleven is picked on the median
+expected points across models, the claims and the draft board by Borda
+count over each model's own ranking, a swap only one model lists is
+left out, and every row of the plan carries how many models back it.
+The committed copies are `data/evo_models/seed{1..5}.npz`: the best
+genome and the standardizer only, fifteen kilobytes each, the
+population and hall of fame stripped out. The cron runs `live` against
+the five every morning and writes `data/evo_plan.json`; `python -m
+evo.run explain --model data/evo_models/seed1.npz` says what one of
+them weighs. Merge new models and the commit that trained them
+together, so the cron never sees one without the other.
+`data/evo_model.npz` is the pre-audit single model, kept for the record
+and no longer run.
 
 Online, it pulls the draft API for the league's current ownership and
 your squad, brings the injury log up to today from the bootstrap, works
@@ -906,11 +998,13 @@ harvested. And when the archive repo publishes a season's final files,
 
 ## Using it this season
 
-The draft happened on 21 August and three gameweeks are gone, so what is
-live this year is the waiver and line-up heads from gameweek 4:
+The draft happened on 21 August and the opening gameweeks are gone, so
+what is live this year is the waiver and line-up heads:
 
 ```
-python -m evo.run live --model evo/runs/final/ckpt.npz
+python -m evo.run live --model data/evo_models/seed1.npz \
+    --model data/evo_models/seed2.npz --model data/evo_models/seed3.npz \
+    --model data/evo_models/seed4.npz --model data/evo_models/seed5.npz
 ```
 
 reads the draft API for the league's current ownership and my squad and
