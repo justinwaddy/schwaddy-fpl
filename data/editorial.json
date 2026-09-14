@@ -191,6 +191,14 @@
       "scope": "mine",
       "text": "Milenkovic and Cunha both started Forest's full 90 minutes in Saturday's 2-1 win at Aston Villa, Igor Jesus scoring an 88th-minute winner - this week's recurring hamstring doubt did not materialize. The model's 0.60 availability for Milenkovic looks conservative; the Hill-for-Milenkovic waiver claim now rests on fixture value alone, not fitness.",
       "url": "https://www.espn.com/soccer/report/_/gameId/401879284"
+    },
+    {
+      "id": "2026-09-14-milenkovic-cunha-correction",
+      "ts": "2026-09-14T08:11 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Correction to last night's report: ESPN's own live commentary shows Milenkovic and Cunha did not play Saturday's 2-1 win at Villa Park - both dropped out with hamstring tightness found in Friday's training, Diomande and Munoz starting in their place. Glasner expects Milenkovic to also miss the Coventry game, with a return targeted for the fixture after.",
+      "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
     }
   ],
   "runs": [
@@ -363,6 +371,11 @@
       "ts": "2026-09-13T21:10 UTC",
       "published": 1,
       "note": "Club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle) plus general PL injury/team-news searches. Led with ESPN's confirmed match report for Forest 2-1 at Villa Park: Milenkovic and Cunha both started the full 90, resolving the recurring hamstring-doubt story in his favour. Chased down and discarded two stories that looked material but traced to stale dates: a Raya 'knee injury, out until 25 September vs Bolton' story traces to an arsenal.com article dated 27 September 2024, not this season (Bolton is not even a Premier League side); and a Kevin Schade red-card suspension story traces to a straight red shown against Aston Villa on 1 February 2026, already served and resolved by 21 February. Also discarded a Bogle/Ampadu-suspended-vs-Man-Utd story that does not match Leeds' actual fixture list (next opponent is Crystal Palace, not Man Utd) and a Jean-Philippe Mateta return-to-training story with no clear September 2026 date on cpfc.co.uk. Newcastle's Fernandez-Pardo update (bench debut vs Bournemouth confirmed, 'getting closer to starting' for Monday's Leeds trip) is incremental on this morning's already-published item, so left unpublished. Everything else reconfirmed unchanged: Collins still out until after the international break, Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth, Mitchell and Strand Larsen still nailed at Palace, Maddison/Kudus at Tottenham unchanged."
+    },
+    {
+      "ts": "2026-09-14T08:11 UTC",
+      "published": 1,
+      "note": "Club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Newcastle) plus general PL injury/team-news searches ahead of Monday night's Leeds-Newcastle game, first run of the day. Led with a correction to last night's own error: read the actual ESPN match page (not just a search summary) and found its live commentary states plainly that Milenkovic and Cunha 'both drop out of the squad due to injury, so Munoz makes his full debut and Diomande is handed his first Premier League start' - directly contradicting last night's published claim that they started the full 90. Further searches confirm Glasner found the hamstring tightness in Friday's final training session, scans came back worse than hoped, and he expects Milenkovic to also miss the Coventry game with a return targeted for the fixture after. This also fixes claims.json's claim 3, which had wrongly downgraded to low confidence on the same bad information; restored to medium and re-sourced to the correct ESPN URL. Also checked and confirmed unchanged: Vuskovic started Brighton's Coventry win and is in Sky/local predicted XIs for Arsenal, so no threat to Mitchell/Vuskovic's fixture logic; Collins still out until after the international break per Brentford's own site; Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth; Maddison and Kudus both closing in on returns at Tottenham per the club's own site, no change to Marmoush's standing; Fernandez-Pardo still 'getting closer to starting' at Newcastle with no fresher quote than yesterday's. Also resolved a standing question from Saturday's run: Michael Carrick, not Ruben Amorim, has been Man Utd's manager since May 2026 - a clarification, not news, since it changes no player's status."
     }
   ]
 }

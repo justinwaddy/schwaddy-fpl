@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-13T21:10 UTC",
-  "summary": "Same five claims, one downgrade: ESPN's match report confirms Milenkovic and Cunha both played the full 90 minutes in Forest's 2-1 win at Villa Park, resolving this week's recurring hamstring-doubt story in his favour - so the Hill-for-Milenkovic claim now rests purely on fixture-adjusted numbers rather than a fitness concern, and its confidence drops from medium to low. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after tonight's sweep found nothing that moves them; two other widely-repeated stories (a Raya knee injury, a Schade red-card suspension) both traced back to stale 2024/February articles and were discarded. Justin sits third of six on 188 points, tied with Ben C, and picks third in the reversed GW5 waiver order, behind only Robert and Ben D.",
+  "ts": "2026-09-14T08:11 UTC",
+  "summary": "Same five claims as last night's board, but claim 3 needed a correction: last night's report that Milenkovic and Cunha played the full 90 against Villa was wrong - ESPN's own commentary shows both actually missed the game with hamstring tightness, and Glasner expects Milenkovic to sit out the Coventry game too, so confidence on Hill-for-Milenkovic goes back up from low to medium. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after this morning's club-by-club sweep found nothing new against any of them. Justin sits third of six on 189 points and picks fourth in the reversed GW5 waiver order, behind Robert, Ben D and Ben C.",
   "claims": [
     {
       "rank": 1,
@@ -63,13 +63,13 @@
         "code": "227444",
         "club": "NFO"
       },
-      "why": "The hamstring doubt that motivated this claim is now resolved the wrong way for it: ESPN's match report confirms Milenkovic and Cunha both started and played the full 90 minutes in Saturday's 2-1 win at Villa Park (Igor Jesus's 88th-minute winner). This is no longer an injury-driven swap - it rests entirely on the model's fixture-adjusted numbers, with the underlying fitness concern that made it attractive now gone. Hill remains a nailed full-back in Bournemouth's settled back line regardless.",
-      "model": "Model has Hill's next5 at 16.1 (avail 1.00) against Milenkovi\u0107's 11.7 (avail 0.60) - the model's own availability figure still marks him down on fixture difficulty alone, even though he is confirmed fit and started; the case is weaker than last week now that the injury angle is gone.",
-      "confidence": "low",
+      "why": "Correcting last night's error: ESPN's own live commentary confirms Milenkovic and Cunha did NOT play Saturday - both dropped out of the squad with hamstring tightness found in Friday's training, with Diomande and Munoz starting in their place. Glasner expects Milenkovic to also miss the Coventry game, with a return targeted for the fixture after - so the injury-driven case for this swap is back, not gone.",
+      "model": "Model already marks Milenkovic down (avail 0.60, next5 11.7) with a 'Hamstring injury - 75% chance of playing' news line against Hill's 16.1 (avail 1.00) - agreeing with the model's caution now that the actual absence is confirmed, rather than reasoning from last night's mistaken report that he played.",
+      "confidence": "medium",
       "sources": [
         {
-          "title": "Aston Villa 1-2 Nottm Forest (Sep 12, 2026) Game Analysis",
-          "url": "https://www.espn.com/soccer/report/_/gameId/401879284"
+          "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
         }
       ]
     },
@@ -501,6 +501,12 @@
       "gw": 5,
       "claims": 5,
       "note": "Downgraded Hill/Milenkovic from medium to low confidence: ESPN's match report confirms Milenkovic and Cunha both played the full 90 in Forest's 2-1 win at Villa Park, resolving the recurring hamstring-doubt story in his favour, so the claim now rests on fixture numbers alone with the fitness angle gone. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after tonight's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle). Two other stories were chased down and discarded as stale: a Raya knee-injury story traced to a 27 September 2024 arsenal.com article, and a Schade red-card suspension traced to a 1 February 2026 incident already served."
+    },
+    {
+      "ts": "2026-09-14T08:11 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "Corrected claim 3: last night's claim that Milenkovic/Cunha started the full 90 traced to a citation (espn.com/soccer/report/_/gameId/401879284) that on closer reading does not even mention either player - the actual ESPN match page's live commentary states both dropped out of the squad with hamstring tightness. Re-sourced to the correct ESPN URL and raised confidence from low back to medium given the confirmed, ongoing absence (also set to miss Coventry). The other four claims (Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle, Fernandez-Pardo/Marmoush) carry forward unchanged."
     }
   ]
 }
