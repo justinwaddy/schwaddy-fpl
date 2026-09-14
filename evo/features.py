@@ -54,7 +54,7 @@ PLAY_WINDOW = 8          # club matches in the availability window
 # one match, so a player with less than that in the window has his rate
 # shrunk toward zero rather than exploded.
 MIN90 = 90.0
-CACHE_VERSION = 13
+CACHE_VERSION = 14
 
 # the scoring keys that pay the defensive-contribution rule (the *_limit
 # keys beside them are thresholds, and stay: a threshold with nothing
@@ -206,6 +206,10 @@ class SeasonData:
         self.team_idx = {nm: int(i) - 1 for i, nm in zip(teams["id"],
                                                         teams["name"])}
 
+        # the archive can repeat a row verbatim (2025/26 carries twenty,
+        # a player's first nine gameweeks twice over); summed into the
+        # target they would pay him double, so an exact repeat is one row
+        gws = gws.drop_duplicates()
         gws = gws[pd.to_numeric(gws["GW"], errors="coerce").notna()].copy()
         gws["GW"] = gws["GW"].astype(float).astype(int)
         gws = gws[(gws["GW"] >= 1) & (gws["GW"] <= 38)]

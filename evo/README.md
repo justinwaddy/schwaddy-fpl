@@ -653,6 +653,32 @@ how `features.py` consumes it. Its findings, and what was done:
 6. **Estimator noise.** `leagues_per_genome` 8 to 24; three seeds a
    fold; forward folds by default.
 
+A second pass over every file after those fixes found two more, both
+now handled:
+
+7. **Twenty verbatim duplicate rows in `gws_2025-26.csv`**, upstream in
+   the archive itself: one player's first nine gameweeks twice over,
+   another's first once. Summed into the target they paid him 140
+   points for a 113-point season. The builder now drops exact repeats,
+   the file is deduplicated, and `selftest` fails on a player-fixture
+   that appears twice with different numbers.
+8. **Thirteen out-of-order states in the live injury log.** The refresh
+   runs that append to it can race (two runs queued off one commit,
+   both appending), leaving a later observation with the same start as
+   the one before it; the loader then broke the tie by chance-of-
+   playing, so a player who had gone from 75% to out read as 75%. The
+   loader now breaks ties by observation time, every append
+   re-normalises the whole log, and the file is repaired.
+
+Also seen and left alone: the live season's reconstructed gameweek
+rows (`livegws.py`) carry appearances only, where the archive carries a
+row for every registered player - no reader depends on the difference
+and the archive replaces those gameweeks once it publishes them; the
+first two months of the Elo feed carry status and chance but no news
+text, so 170 flagged 2025/26 rows from July and August have no
+return-date line and take the status default; and `has_market` is
+constant in every season, a dead column that costs nothing.
+
 Every number in the tables that follow was measured before these
 changes: under the old target, with 2021/22 in the mean, on
 leave-one-season-out folds, at 8 leagues and one seed, and with the

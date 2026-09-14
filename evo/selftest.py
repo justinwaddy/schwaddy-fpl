@@ -354,6 +354,15 @@ def test_columns(cfg):
                       f"column", not bad and not unk,
                       (f"absent {bad}" if bad else "")
                       + (f" unmapped rule {unk}" if unk else ""))
+        # a player-fixture that appears twice with DIFFERENT numbers is a
+        # real conflict and fails; a verbatim repeat is dropped by the
+        # builder and only reported
+        g = pd.read_csv(path, low_memory=False)
+        key = [c for c in ("element", "fixture", "kickoff_time") if c in g.columns]
+        exact = int(g.duplicated().sum())
+        conflict = int(g.drop_duplicates().duplicated(key).sum()) if key else 0
+        ok &= _report(f"{s}: one row per player-fixture", conflict == 0,
+                      f"{exact} verbatim repeats (dropped), {conflict} conflicting")
     return ok
 
 

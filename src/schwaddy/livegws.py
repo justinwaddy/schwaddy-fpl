@@ -111,7 +111,13 @@ def gw_rows(gw, elements, fixtures, players, team_name, market=None):
             continue
         stats = entry.get("stats") or {}
         if int(stats.get("minutes") or 0) == 0:
-            continue                      # the archive omits non-appearances
+            # only appearances are written. The archive itself carries a
+            # row for every registered player in every gameweek (about
+            # three fifths of its rows are zero-minute ones), and takes
+            # these gameweeks over once it publishes them; until then a
+            # non-appearance simply has no row here, which every reader
+            # in src/ and evo/ treats the same as a zero-minute row
+            continue
         per_fixture = _explain_values(entry) if len(played) > 1 else {}
         for f in played:
             vals = per_fixture.get(f["id"])

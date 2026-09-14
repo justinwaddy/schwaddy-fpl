@@ -396,6 +396,35 @@ def report(data_dir, seasons):
               + (f"  {_day(a)} to {_day(b)}" if a else ""))
 
 
+def normalise(rows):
+    """A player's states strictly ordered in time, whatever order they
+    were appended in.
+
+    The refresh runs that append to the live log can race: two runs
+    queued off the same commit each append the state they saw, and the
+    merge keeps both, so a later observation can carry the same start as
+    the one before it (FPL had not touched news_added). Re-apply the
+    harvest's rule in observation order - a start that does not follow
+    its predecessor is dated from its own observation - so that every
+    append also repairs whatever an earlier race left.
+    """
+    rows = sorted(rows, key=lambda r: (int(r["code"]), float(r["observed_at"]),
+                                       float(r["start_at"])))
+    prev, out = {}, []
+    for r in rows:
+        code = int(r["code"])
+        start, obs = float(r["start_at"]), float(r["observed_at"])
+        p = prev.get(code)
+        if p is not None and start <= p:
+            start = obs if obs > p else p + 1.0
+        prev[code] = start
+        r = dict(r)
+        r["start_at"] = round(start)
+        out.append(r)
+    out.sort(key=lambda r: (int(r["code"]), float(r["start_at"])))
+    return out
+
+
 def append_bootstrap(data_dir, boot, now=None, season=LIVE_SEASON,
                      verbose=True):
     """Append the live game's current state to this season's change log.
@@ -443,9 +472,8 @@ def append_bootstrap(data_dir, boot, now=None, season=LIVE_SEASON,
         if verbose:
             print(f"  injuries: no change since the last snapshot ({path})")
         return 0
-    rows = existing + [{k: ("" if v is None else v) for k, v in r.items()}
-                       for r in add]
-    rows.sort(key=lambda r: (int(r["code"]), float(r["start_at"])))
+    rows = normalise(existing + [{k: ("" if v is None else v)
+                                  for k, v in r.items()} for r in add])
     with open(path, "w", newline="") as fh:
         w = csv.DictWriter(fh, FIELDS)
         w.writeheader()
@@ -539,7 +567,10 @@ def load(data_dir, season):
              1.0 if st == "d" else 0.0, float(r["observed_at"]), ret, known))
     out = {}
     for code, rows in by.items():
-        rows.sort()
+        # by start, then by observation: two rows can share a start when
+        # FPL changes a status without touching news_added, and the one
+        # seen later is the one that holds
+        rows.sort(key=lambda r: (r[0], r[4]))
         a = np.array(rows, float)
         out[code] = a
     return out
