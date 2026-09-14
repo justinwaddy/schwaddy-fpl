@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-14T23:21",
+ "generated": "2026-09-14T23:22",
  "gw": 5,
- "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -106,7 +106,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 3.89,
-   "ep": 3.72,
+   "ep": 3.73,
    "votes": 5
   },
   {
@@ -221,7 +221,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 20.18,
+   "gain": 20.21,
    "change": 1,
    "fallback": false,
    "votes": 4,
@@ -285,7 +285,7 @@
   },
   {
    "pos": "MID",
-   "gain": 19.26,
+   "gain": 19.25,
    "change": 1,
    "fallback": true,
    "votes": 3,
@@ -349,7 +349,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.21,
+   "gain": 9.19,
    "change": 2,
    "fallback": false,
    "votes": 5,
@@ -381,7 +381,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.15,
+   "gain": 10.11,
    "change": 2,
    "fallback": true,
    "votes": 3,
@@ -413,7 +413,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.6,
+   "gain": 6.58,
    "change": 2,
    "fallback": true,
    "votes": 2,
@@ -445,7 +445,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.2,
+   "gain": 5.16,
    "change": 2,
    "fallback": true,
    "votes": 2,
@@ -541,7 +541,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.95,
+   "gain": 7.96,
    "change": 4,
    "fallback": true,
    "votes": 3,
@@ -765,7 +765,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.04,
+   "gain": 7.05,
    "change": 7,
    "fallback": false,
    "votes": 2,
@@ -901,7 +901,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 195.74,
-   "ep": 194.98
+   "ep": 194.87
   },
   {
    "id": 165,
@@ -949,7 +949,7 @@
    "news": "",
    "p_play": 0.651,
    "base": 177.07,
-   "ep": 165.86
+   "ep": 164.98
   },
   {
    "id": 387,
@@ -973,7 +973,19 @@
    "news": "",
    "p_play": 0.964,
    "base": 176.56,
-   "ep": 164.1
+   "ep": 163.97
+  },
+  {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.871,
+   "base": 155.9,
+   "ep": 158.57
   },
   {
    "id": 388,
@@ -997,19 +1009,7 @@
    "news": "",
    "p_play": 0.915,
    "base": 168.38,
-   "ep": 161.66
-  },
-  {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.871,
-   "base": 155.9,
-   "ep": 158.46
+   "ep": 161.72
   },
   {
    "id": 12,
@@ -1033,7 +1033,7 @@
    "news": "",
    "p_play": 0.582,
    "base": 165.29,
-   "ep": 151.27
+   "ep": 151.4
   },
   {
    "id": 533,
@@ -1093,7 +1093,7 @@
    "news": "",
    "p_play": 0.961,
    "base": 159.29,
-   "ep": 146.54
+   "ep": 147.33
   },
   {
    "id": 368,
@@ -1105,7 +1105,7 @@
    "news": "",
    "p_play": 0.989,
    "base": 150.56,
-   "ep": 143.87
+   "ep": 143.91
   },
   {
    "id": 346,
@@ -1141,7 +1141,7 @@
    "news": "",
    "p_play": 0.732,
    "base": 148.5,
-   "ep": 145.72
+   "ep": 145.66
   },
   {
    "id": 8,
@@ -1177,7 +1177,7 @@
    "news": "",
    "p_play": 0.942,
    "base": 139.35,
-   "ep": 133.12
+   "ep": 133.04
   },
   {
    "id": 398,
@@ -1189,7 +1189,7 @@
    "news": "Suspended until 17 Oct",
    "p_play": 0.0,
    "base": 140.49,
-   "ep": 136.68
+   "ep": 136.76
   },
   {
    "id": 366,
@@ -1201,7 +1201,7 @@
    "news": "",
    "p_play": 0.906,
    "base": 136.94,
-   "ep": 132.21
+   "ep": 132.26
   },
   {
    "id": 200,
@@ -1216,16 +1216,16 @@
    "ep": 131.55
   },
   {
-   "id": 390,
-   "code": 171314,
-   "name": "R\u00faben",
-   "pos": "DEF",
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.933,
-   "base": 132.15,
-   "ep": 129.41
+   "p_play": 0.913,
+   "base": 136.12,
+   "ep": 134.18
   },
   {
    "id": 25,
@@ -1240,40 +1240,16 @@
    "ep": 142.64
   },
   {
-   "id": 95,
-   "code": 533463,
-   "name": "O.Dango",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.66,
-   "base": 147.94,
-   "ep": 126.99
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
+   "id": 390,
+   "code": 171314,
+   "name": "R\u00faben",
+   "pos": "DEF",
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.913,
-   "base": 136.12,
-   "ep": 133.25
-  },
-  {
-   "id": 142,
-   "code": 225796,
-   "name": "James",
-   "pos": "DEF",
-   "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.789,
-   "base": 136.38,
-   "ep": 128.5
+   "p_play": 0.933,
+   "base": 132.15,
+   "ep": 129.41
   },
   {
    "id": 154,
@@ -1288,6 +1264,18 @@
    "ep": 133.77
   },
   {
+   "id": 142,
+   "code": 225796,
+   "name": "James",
+   "pos": "DEF",
+   "team": "CHE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.789,
+   "base": 136.38,
+   "ep": 128.5
+  },
+  {
    "id": 208,
    "code": 232185,
    "name": "Sarr",
@@ -1300,6 +1288,18 @@
    "ep": 126.65
   },
   {
+   "id": 95,
+   "code": 533463,
+   "name": "O.Dango",
+   "pos": "MID",
+   "team": "BRE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.66,
+   "base": 147.94,
+   "ep": 126.31
+  },
+  {
    "id": 371,
    "code": 441266,
    "name": "Gravenberch",
@@ -1309,7 +1309,7 @@
    "news": "",
    "p_play": 0.639,
    "base": 140.37,
-   "ep": 128.76
+   "ep": 127.85
   }
  ]
 }
