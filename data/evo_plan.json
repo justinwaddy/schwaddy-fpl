@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T19:10",
+ "generated": "2026-09-15T19:12",
  "gw": 5,
  "horizon": "next5",
  "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.969,
    "base": 3.62,
-   "ep": 3.56,
+   "ep": 3.57,
    "votes": 4
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.29,
-   "ep": 3.23,
+   "ep": 3.25,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 11.28,
+   "gain": 11.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 265
+   "borda": 270
   },
   {
    "pos": "MID",
-   "gain": 13.24,
+   "gain": 13.2,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 226
+   "borda": 229
   },
   {
    "pos": "MID",
-   "gain": 11.11,
+   "gain": 11.05,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 205
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 10.76,
+   "gain": 10.75,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 190
+   "borda": 194
   },
   {
    "pos": "MID",
-   "gain": 9.98,
+   "gain": 10.0,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 237
+   "borda": 244
   },
   {
    "pos": "MID",
-   "gain": 9.82,
+   "gain": 9.91,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 204
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 9.69,
+   "gain": 9.72,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 204
+   "borda": 207
   },
   {
    "pos": "MID",
-   "gain": 8.81,
+   "gain": 8.9,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 134
+   "borda": 137
   },
   {
    "pos": "FWD",
-   "gain": 11.07,
+   "gain": 11.08,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.9,
+   "gain": 9.86,
    "change": 4,
    "fallback": false,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 177
+   "borda": 165
   },
   {
    "pos": "DEF",
-   "gain": 10.66,
+   "gain": 10.63,
    "change": 4,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 129
+   "borda": 120
   },
   {
    "pos": "DEF",
-   "gain": 9.9,
+   "gain": 9.8,
    "change": 4,
    "fallback": true,
    "add": {
@@ -602,11 +602,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 126
+   "borda": 117
   },
   {
    "pos": "DEF",
-   "gain": 9.52,
+   "gain": 9.47,
    "change": 4,
    "fallback": true,
    "add": {
@@ -634,11 +634,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 109
+   "borda": 100
   },
   {
    "pos": "DEF",
-   "gain": 5.67,
+   "gain": 5.59,
    "change": 5,
    "fallback": false,
    "add": {
@@ -666,11 +666,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 69
+   "borda": 66
   },
   {
    "pos": "DEF",
-   "gain": 6.87,
+   "gain": 6.84,
    "change": 5,
    "fallback": true,
    "add": {
@@ -698,11 +698,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 42
+   "borda": 40
   },
   {
    "pos": "DEF",
-   "gain": 6.77,
+   "gain": 6.78,
    "change": 5,
    "fallback": true,
    "add": {
@@ -730,11 +730,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 28
+   "borda": 27
   },
   {
    "pos": "DEF",
-   "gain": 9.78,
+   "gain": 9.8,
    "change": 6,
    "fallback": false,
    "add": {
@@ -766,7 +766,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 8.36,
+   "gain": 8.37,
    "change": 6,
    "fallback": true,
    "add": {
@@ -798,7 +798,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.17,
+   "gain": 10.24,
    "change": 6,
    "fallback": true,
    "add": {
@@ -826,11 +826,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 35
+   "borda": 36
   },
   {
    "pos": "DEF",
-   "gain": 9.46,
+   "gain": 9.4,
    "change": 6,
    "fallback": true,
    "add": {
@@ -862,7 +862,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 5.91,
+   "gain": 5.87,
    "change": 7,
    "fallback": false,
    "add": {
