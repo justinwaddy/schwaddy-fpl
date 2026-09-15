@@ -53,6 +53,19 @@ def pull(data_dir):
     except Exception as ex:
         print(f"team strengths not filled: {ex}")
 
+    # The archive's players file is a snapshot of the classic bootstrap
+    # taken when the archive last looked; every signing registered since
+    # is missing from it, and the reconstruction below keys on it, so
+    # such a player had no gameweek rows at all. Top it up from the
+    # bootstrap as it stands (see livegws.complete_players).
+    try:
+        n = livegws.complete_players(data_dir, api.classic_bootstrap())
+        if n:
+            print(f"players file: {n} late registrations added from the "
+                  f"classic bootstrap")
+    except Exception as ex:
+        print(f"players file not completed: {ex}")
+
     # The archive lags the live season, so the reconstruction fills in
     # whatever it has not published yet.
     #

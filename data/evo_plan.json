@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-15T08:36",
+ "generated": "2026-09-15T11:51",
  "gw": 5,
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -93,7 +93,7 @@
    "news": "",
    "p_play": 0.993,
    "base": 4.72,
-   "ep": 4.65,
+   "ep": 4.66,
    "votes": 5
   },
   {
@@ -106,7 +106,7 @@
    "news": "",
    "p_play": 0.991,
    "base": 3.97,
-   "ep": 3.73,
+   "ep": 3.74,
    "votes": 5
   },
   {
@@ -119,7 +119,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.29,
-   "ep": 3.24,
+   "ep": 3.25,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "p_play": 0.662,
    "base": 1.4,
    "ep": 1.17,
-   "votes": 5
+   "votes": 4
   }
  ],
  "bench": [
@@ -173,7 +173,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.65,
-   "ep": 3.41,
+   "ep": 3.42,
    "votes": 1
   },
   {
@@ -184,10 +184,10 @@
    "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.15,
-   "base": 0.4,
-   "ep": 0.26,
-   "votes": 1
+   "p_play": 0.379,
+   "base": 0.96,
+   "ep": 1.03,
+   "votes": 2
   },
   {
    "id": 84,
@@ -199,7 +199,7 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.29,
+   "ep": -0.28,
    "votes": 1
   },
   {
@@ -212,7 +212,7 @@
    "news": "Hamstring injury - Expected back 11 Oct",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.34,
+   "ep": -0.33,
    "votes": 1
   }
  ],
@@ -221,7 +221,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.77,
+   "gain": 11.25,
    "change": 1,
    "fallback": false,
    "add": {
@@ -244,16 +244,16 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.15,
+    "p_play": 0.379,
     "base": null,
     "ep": null
    },
    "votes": 5,
-   "borda": 341
+   "borda": 269
   },
   {
    "pos": "MID",
-   "gain": 18.65,
+   "gain": 13.18,
    "change": 1,
    "fallback": true,
    "add": {
@@ -276,16 +276,16 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.15,
+    "p_play": 0.379,
     "base": null,
     "ep": null
    },
-   "votes": 5,
-   "borda": 337
+   "votes": 4,
+   "borda": 229
   },
   {
    "pos": "MID",
-   "gain": 17.66,
+   "gain": 11.03,
    "change": 1,
    "fallback": true,
    "add": {
@@ -308,16 +308,16 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.15,
+    "p_play": 0.379,
     "base": null,
     "ep": null
    },
-   "votes": 5,
-   "borda": 337
+   "votes": 4,
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 17.44,
+   "gain": 10.74,
    "change": 1,
    "fallback": true,
    "add": {
@@ -340,16 +340,16 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.15,
+    "p_play": 0.379,
     "base": null,
     "ep": null
    },
-   "votes": 5,
-   "borda": 333
+   "votes": 4,
+   "borda": 194
   },
   {
    "pos": "MID",
-   "gain": 9.67,
+   "gain": 10.01,
    "change": 2,
    "fallback": false,
    "add": {
@@ -377,11 +377,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 240
+   "borda": 244
   },
   {
    "pos": "MID",
-   "gain": 9.69,
+   "gain": 9.93,
    "change": 2,
    "fallback": true,
    "add": {
@@ -409,11 +409,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 208
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 9.39,
+   "gain": 9.74,
    "change": 2,
    "fallback": true,
    "add": {
@@ -445,7 +445,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.7,
+   "gain": 8.92,
    "change": 2,
    "fallback": true,
    "add": {
@@ -477,7 +477,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 11.0,
+   "gain": 11.09,
    "change": 3,
    "fallback": false,
    "add": {
@@ -505,11 +505,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 166
+   "borda": 170
   },
   {
    "pos": "DEF",
-   "gain": 9.52,
+   "gain": 9.85,
    "change": 4,
    "fallback": false,
    "add": {
@@ -537,11 +537,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 162
+   "borda": 165
   },
   {
    "pos": "DEF",
-   "gain": 10.55,
+   "gain": 10.63,
    "change": 4,
    "fallback": true,
    "add": {
@@ -569,11 +569,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 119
+   "borda": 120
   },
   {
    "pos": "DEF",
-   "gain": 9.58,
+   "gain": 9.77,
    "change": 4,
    "fallback": true,
    "add": {
@@ -605,7 +605,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.37,
+   "gain": 9.47,
    "change": 4,
    "fallback": true,
    "add": {
@@ -637,7 +637,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.64,
+   "gain": 5.59,
    "change": 5,
    "fallback": false,
    "add": {
@@ -669,7 +669,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.83,
+   "gain": 6.82,
    "change": 5,
    "fallback": true,
    "add": {
@@ -697,43 +697,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 39
+   "borda": 40
   },
   {
    "pos": "DEF",
-   "gain": 5.16,
-   "change": 5,
-   "fallback": true,
-   "add": {
-    "id": 503,
-    "code": 491279,
-    "name": "Van de Ven",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 0.788,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 504,
-    "code": 610799,
-    "name": "Vuskovic",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.969,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 37
-  },
-  {
-   "pos": "DEF",
-   "gain": 6.97,
+   "gain": 6.79,
    "change": 5,
    "fallback": true,
    "add": {
@@ -765,7 +733,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.95,
+   "gain": 9.81,
    "change": 6,
    "fallback": false,
    "add": {
@@ -793,11 +761,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 58
+   "borda": 54
   },
   {
    "pos": "DEF",
-   "gain": 8.5,
+   "gain": 8.38,
    "change": 6,
    "fallback": true,
    "add": {
@@ -825,11 +793,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 49
+   "borda": 48
   },
   {
    "pos": "DEF",
-   "gain": 10.72,
+   "gain": 10.3,
    "change": 6,
    "fallback": true,
    "add": {
@@ -857,11 +825,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 38
+   "borda": 36
   },
   {
    "pos": "DEF",
-   "gain": 9.29,
+   "gain": 9.37,
    "change": 6,
    "fallback": true,
    "add": {
@@ -889,11 +857,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 34
+   "borda": 33
   },
   {
    "pos": "GKP",
-   "gain": 5.77,
+   "gain": 5.86,
    "change": 7,
    "fallback": false,
    "add": {
@@ -921,7 +889,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 29
+   "borda": 30
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; voted across 5 models by Borda count at every step of the list, a change needing 3 models behind it and a fallback 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -950,8 +918,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 239.4,
-   "ep": 254.96
+   "base": 239.41,
+   "ep": 254.97
   },
   {
    "id": 4,
@@ -974,8 +942,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 209.53,
-   "ep": 201.88
+   "base": 209.54,
+   "ep": 201.89
   },
   {
    "id": 106,
@@ -998,8 +966,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 195.69,
-   "ep": 194.94
+   "base": 195.7,
+   "ep": 194.95
   },
   {
    "id": 165,
@@ -1010,8 +978,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 182.73,
-   "ep": 185.43
+   "base": 182.72,
+   "ep": 185.42
   },
   {
    "id": 55,
@@ -1023,7 +991,7 @@
    "news": "Has joined Al Hilal permanently",
    "p_play": 0.003,
    "base": 169.01,
-   "ep": 172.34
+   "ep": 172.33
   },
   {
    "id": 427,
@@ -1034,8 +1002,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 163.23,
-   "ep": 166.0
+   "base": 163.24,
+   "ep": 166.01
   },
   {
    "id": 260,
@@ -1046,8 +1014,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.492,
-   "base": 177.02,
-   "ep": 165.81
+   "base": 177.03,
+   "ep": 165.82
   },
   {
    "id": 387,
@@ -1070,8 +1038,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.969,
-   "base": 176.51,
-   "ep": 164.06
+   "base": 176.52,
+   "ep": 164.07
   },
   {
    "id": 388,
@@ -1082,8 +1050,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 179.69,
-   "ep": 173.26
+   "base": 179.68,
+   "ep": 173.25
   },
   {
    "id": 13,
@@ -1094,8 +1062,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.908,
-   "base": 168.33,
-   "ep": 161.62
+   "base": 168.34,
+   "ep": 161.63
   },
   {
    "id": 428,
@@ -1118,8 +1086,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.943,
-   "base": 167.68,
-   "ep": 163.41
+   "base": 167.69,
+   "ep": 163.42
   },
   {
    "id": 155,
@@ -1130,8 +1098,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.577,
-   "base": 165.24,
-   "ep": 151.22
+   "base": 165.25,
+   "ep": 151.23
   },
   {
    "id": 533,
@@ -1142,8 +1110,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.788,
-   "base": 147.3,
-   "ep": 152.12
+   "base": 147.29,
+   "ep": 152.11
   },
   {
    "id": 1,
@@ -1178,8 +1146,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.563,
-   "base": 150.27,
-   "ep": 146.17
+   "base": 150.26,
+   "ep": 146.16
   },
   {
    "id": 236,
@@ -1202,8 +1170,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 150.51,
-   "ep": 143.83
+   "base": 150.52,
+   "ep": 143.84
   },
   {
    "id": 346,
@@ -1226,8 +1194,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 142.63,
-   "ep": 143.5
+   "base": 142.62,
+   "ep": 143.49
   },
   {
    "id": 399,
@@ -1262,7 +1230,7 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 157.77,
+   "base": 157.76,
    "ep": 136.28
   },
   {
@@ -1274,8 +1242,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.811,
-   "base": 139.3,
-   "ep": 133.07
+   "base": 139.31,
+   "ep": 133.08
   },
   {
    "id": 398,
@@ -1286,8 +1254,8 @@
    "status": "s",
    "news": "Suspended until 17 Oct",
    "p_play": 0.0,
-   "base": 140.44,
-   "ep": 136.64
+   "base": 140.45,
+   "ep": 136.65
   },
   {
    "id": 366,
@@ -1298,8 +1266,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.934,
-   "base": 136.9,
-   "ep": 132.17
+   "base": 136.91,
+   "ep": 132.18
   },
   {
    "id": 200,
@@ -1322,7 +1290,7 @@
    "status": "a",
    "news": "",
    "p_play": 0.178,
-   "base": 132.26,
+   "base": 132.25,
    "ep": 142.63
   },
   {
@@ -1346,8 +1314,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.981,
-   "base": 134.18,
-   "ep": 133.73
+   "base": 134.19,
+   "ep": 133.74
   },
   {
    "id": 481,
@@ -1358,8 +1326,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.913,
-   "base": 136.07,
-   "ep": 133.2
+   "base": 136.08,
+   "ep": 133.21
   },
   {
    "id": 142,
@@ -1371,7 +1339,7 @@
    "news": "",
    "p_play": 0.839,
    "base": 136.34,
-   "ep": 128.47
+   "ep": 128.46
   },
   {
    "id": 371,
@@ -1382,8 +1350,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.577,
-   "base": 140.32,
-   "ep": 128.72
+   "base": 140.33,
+   "ep": 128.73
   },
   {
    "id": 208,
@@ -1394,8 +1362,8 @@
    "status": "i",
    "news": "Groin injury - Unknown return date",
    "p_play": 0.0,
-   "base": 140.23,
-   "ep": 126.61
+   "base": 140.24,
+   "ep": 126.62
   },
   {
    "id": 95,
@@ -1406,8 +1374,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.551,
-   "base": 147.9,
-   "ep": 126.17
+   "base": 147.91,
+   "ep": 126.18
   }
  ]
 }

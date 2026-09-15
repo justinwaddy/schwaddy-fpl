@@ -159,6 +159,42 @@ def gw_rows(gw, elements, fixtures, players, team_name, market=None):
     return rows
 
 
+def complete_players(data_dir, boot, season=LIVE):
+    """Add to players_raw_<season>.csv every element of the classic
+    bootstrap the file lacks. Returns how many were added.
+
+    The file is the archive's copy of that same bootstrap, taken when
+    the archive last looked, and the archive looks rarely: on 15
+    September 2026 it was 616 players against the game's 659, the
+    forty-three being every summer signing registered after its
+    snapshot. Everything here keys the reconstruction on that file, so a
+    late signing had no gameweek rows at all - Barcola started and
+    played 71 minutes in GW4 and the season file said he had never
+    played, the history file auto-subbed him out of a squad he had
+    scored in, and the models read him as a man with no minutes. The
+    columns are the bootstrap's own fields, so a missing player is
+    written from the element as it stands; the archive's rows are kept
+    as they are.
+    """
+    path = f"{data_dir}/players_raw_{season}.csv"
+    if not os.path.exists(path):
+        return 0
+    with open(path, newline="") as fh:
+        rd = csv.reader(fh)
+        header = next(rd)
+        have = {row[header.index("code")] for row in rd if row}
+    add = [e for e in boot.get("elements") or []
+           if str(e.get("code")) not in have]
+    if not add:
+        return 0
+    with open(path, "a", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=header, extrasaction="ignore")
+        for e in add:
+            w.writerow({c: ("" if e.get(c) is None else e.get(c))
+                        for c in header})
+    return len(add)
+
+
 def load_players(data_dir, season=LIVE):
     """element id -> (name, element_type, team id) from the season's raw file."""
     path = f"{data_dir}/players_raw_{season}.csv"
@@ -219,18 +255,21 @@ def build_rows(data_dir, fixtures, season=LIVE, fetch=None, want=None,
 def write(data_dir, fixtures, season=LIVE, fetch=None):
     """Write gws_<season>.csv from the API. Returns rows written.
 
-    Settled gameweeks are kept as first written rather than rebuilt. The
-    club a player belongs to comes from the season's raw file, which holds
-    only his current one, so rewriting an old gameweek after he moves in
-    January would file those matches under the wrong club and hand them
-    the wrong opponent. The newest finished gameweek is always refetched,
-    since bonus and stat corrections land late.
+    Settled gameweeks keep every row as first written rather than being
+    rebuilt. The club a player belongs to comes from the season's raw
+    file, which holds only his current one, so rewriting an old gameweek
+    after he moves in January would file those matches under the wrong
+    club and hand them the wrong opponent. A settled gameweek does gain
+    rows for a player who had none, which is what a late registration
+    looks like once the raw file carries him. The newest finished
+    gameweek is always refetched, since bonus and stat corrections land
+    late.
 
     Writes nothing when the reconstruction comes back empty, so a failed
     lookup leaves build() on the archive-only path it used before.
     """
     path = f"{data_dir}/gws_{season}.csv"
-    kept, have = [], set()
+    kept, seen = [], set()
     finished = sorted({f["event"] for f in fixtures
                        if f.get("event") and f.get("finished")})
     newest = finished[-1] if finished else None
@@ -241,11 +280,18 @@ def write(data_dir, fixtures, season=LIVE, fetch=None):
                 if gw == newest:          # refetch: late corrections land here
                     continue
                 kept.append(r)
-                have.add(gw)
+                seen.add((gw, str(r.get("element")), str(r.get("fixture"))))
         except Exception:
-            kept, have = [], set()        # unreadable: rebuild from scratch
-    want = [g for g in finished if g not in have]
-    fresh = build_rows(data_dir, fixtures, season, fetch, want=want)
+            kept, seen = [], set()        # unreadable: rebuild from scratch
+    # every finished gameweek is fetched, but a settled one only ever
+    # GAINS rows: a player who had none when the week was written - a
+    # signing the players file did not carry yet (see complete_players)
+    # - gets his, and every row already there stays as it was written
+    fresh = [r for r in build_rows(data_dir, fixtures, season, fetch,
+                                   want=finished)
+             if int(r["GW"]) == newest
+             or (int(r["GW"]), str(r["element"]), str(r["fixture"]))
+             not in seen]
     if not fresh and not kept:
         return 0
     tmp = path + ".tmp"
