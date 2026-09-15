@@ -179,6 +179,7 @@ th.on{color:var(--ink)}
 <button class="tab on" data-v="squad">My squad</button>
 <button class="tab" data-v="live" id="livetab">Live</button>
 <button class="tab" data-v="waivers">Waivers</button>
+<button class="tab" data-v="nn">NN</button>
 <button class="tab" data-v="starters">Starters</button>
 <button class="tab" data-v="news">News</button>
 <button class="tab" data-v="league">League</button>
@@ -187,6 +188,7 @@ th.on{color:var(--ink)}
 <section id="squad" class="on"></section>
 <section id="live"></section>
 <section id="waivers"></section>
+<section id="nn"></section>
 <section id="starters"></section>
 <section id="news"></section>
 <section id="league"></section>
@@ -226,7 +228,7 @@ function render(){
   document.getElementById("meta").textContent=
     `updated ${DATA.generated?DATA.generated.slice(0,16).replace("T"," "):"?"} UTC · next: GW${NEXT+1} · λ=(${DATA.lambda_time}, ${DATA.lambda_nn??"∞"}) · ${DATA._src}`;
   PKIDX=null;                       // names index is built from DATA and STATS
-  renderSquad(ps);renderWaivers(ps);renderLeague(ps);renderPlayers(ps);renderStarters();
+  renderSquad(ps);renderWaivers(ps);renderNN();renderLeague(ps);renderPlayers(ps);renderStarters();
   renderNews();
   if(LIVE)renderLive();
 }
@@ -394,7 +396,7 @@ function marketHTML(free){
 const EVO_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan.json";
 let EVO=null;
 fetch(EVO_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{EVO=j;if(DATA)renderWaivers(DATA.players);}).catch(()=>{});
+  .then(j=>{EVO=j;if(DATA){renderWaivers(DATA.players);renderNN();}}).catch(()=>{});
 const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
 let CLAIMS=null;
 fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
@@ -1235,6 +1237,91 @@ function newsHTML(name,P,S){
       <span class="when">${(e.ts||"").slice(5,10)}</span></div>`;
   }
   return h+`</div>`;
+}
+// NN tab: the network's own plan, verbatim. Everything on the Waivers
+// tab sets the network beside the matrix model and Claude; this tab
+// answers one question only - what would the network do in this seat -
+// and nothing here is filtered through either of the other two.
+function nnPlayer(x,by){
+  const q=x&&x.code?by[String(x.code)]:null;
+  return (q?nm(q):esc(x?x.name:""))+` <span class="tm">${esc(x&&x.team||(q?club(q):""))}</span>`+(q?" "+runHTML(q):"");
+}
+function renderNN(){
+  const sec=document.getElementById("nn");if(!sec)return;
+  const E=EVO,ps=(DATA&&DATA.players)||[];
+  if(!E){
+    sec.innerHTML=`<div class="card evocard"><b class="h">What the network would do</b><div class="note">No plan yet. The refresh runs the five models against the live league each morning and writes data/evo_plan.json; this tab fills in after that.</div></div>`;
+    return;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=E.gw|0,n=E.n_models||1;
+  const fa=E.window==="free_agency",locked=E.window==="locked";
+  const cl=Array.isArray(E.claims)?E.claims:[];
+  const changes=cl.filter(c=>!c.fallback);
+  const votes=c=>(n>1&&c.votes!=null)?` <span class="pill${c.votes*2<n?" warn":""}" title="how many of the ${n} models list this swap">${c.votes}/${n}</span>`:"";
+  let h=`<div class="card evocard"><b class="h">What the network would do · GW${gw||"?"}</b>
+  <div class="clsub">${E.window==="waiver"?`waiver window · claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency · deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC · ${n>1?`${n} models voting`:"one model"}</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">Written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
+  h+=`<div class="note">Its own decisions, in full and in order, as it would submit them from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. The Waivers tab shows the three side by side.</div></div>`;
+  // ---- 1. the moves
+  if(locked){
+    h+=`<div class="card evocard"><b class="h">Nothing to submit</b><div class="note">The team sheet for GW${gw} is locked. The next window opens after the gameweek and the morning refresh writes its claims then.</div></div>`;
+  }else{
+    const title=!cl.length?"Hold: make no move this week":fa?`Take ${changes.length} free agent${changes.length>1?"s":""}, in this order`:`Submit ${cl.length} waiver claim${cl.length>1?"s":""}, in this order`;
+    h+=`<div class="card evocard"><b class="h">${title}</b>`;
+    if(!cl.length)h+=`<div class="note">Nothing on the board clears its switching margin against this squad.</div>`;
+    else h+=`<div class="clsub">${changes.length} change${changes.length>1?"s":""}, ${cl.length-changes.length} fallback${cl.length-changes.length!==1?"s":""}. ${fa?"Take the first row that is still free; if he has gone, the next for the same man.":"Enter every row as a claim, in this order: the queue works down the list, and a fallback only fires if the row above it was refused. Each change is scored against the squad the earlier ones leave, so the order is the plan."}</div>`;
+    cl.forEach((c,i)=>{
+      const A=c.add||{},D=c.drop||{};
+      const a=A.code?by[String(A.code)]:null,d=D.code?by[String(D.code)]:null;
+      const flags=[];
+      if(a&&a.owner)flags.push(`${esc(A.name)} is no longer a free agent`);
+      if(d&&!d.mine)flags.push(`${esc(D.name)} is no longer in your squad`);
+      h+=`<div class="cl${c.fallback?" clfb":""}"><div class="clhd"><span class="clno">${i+1}</span>
+        ${c.fallback?`<span class="clarr">if refused</span>`:`<span class="clarr">change ${c.change}</span>`}
+        <span class="pos ${esc(c.pos||"")}">${esc(c.pos||"")}</span>
+        <span class="clarr">add</span> ${nnPlayer(A,by)}
+        <span class="clarr">drop</span> ${nnPlayer(D,by)}
+        <span class="gain" title="the network's own score for the swap, expected points over five gameweeks${n>1?", the mean over the models that list it":""}">+${Number(c.gain||0).toFixed(1)}</span>${votes(c)}</div>`;
+      if(D.news)h+=`<div class="clwhy"><span class="flag">${esc(D.name)}: ${esc(D.news)}</span></div>`;
+      if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
+      h+=`</div>`;
+    });
+    h+=`</div>`;
+    // ---- the fifteen it is playing for
+    if(changes.length&&ps.length){
+      let squad=ps.filter(p=>p.mine).map(p=>({code:String(p.code),name:p.name,pos:p.pos,team:club(p),p:p,in:false}));
+      const dropped=[];
+      for(const c of changes){
+        const k=squad.findIndex(x=>x.code===String((c.drop||{}).code));
+        if(k>=0){dropped.push(squad[k]);squad.splice(k,1);}
+        const A=c.add||{};
+        squad.push({code:String(A.code),name:A.name,pos:A.pos||c.pos,team:A.team||"",p:by[String(A.code)]||null,in:true});
+      }
+      squad.sort((x,y)=>posord(x.pos)-posord(y.pos)||(x.in?1:0)-(y.in?1:0)||String(x.name).localeCompare(String(y.name)));
+      h+=`<div class="card evocard"><b class="h">The fifteen it is playing for</b><div class="clsub">if every change lands (fallbacks aside): ${changes.length} in, ${dropped.length} out</div><table>`;
+      for(const x of squad)h+=`<tr class="${x.in?"mine-row":""}"><td>${x.p?nm(x.p):esc(x.name)} <span class="tm">${esc(x.team)}</span>${x.in?` <span class="pill">in</span>`:""}</td><td><span class="pos ${x.pos}">${x.pos}</span></td><td>${x.p?runHTML(x.p):""}</td></tr>`;
+      h+=`</table><div class="note">Out: ${dropped.map(x=>(x.p?nm(x.p):esc(x.name))).join(", ")||"nobody"}.</div></div>`;
+    }
+  }
+  // ---- 2. the team sheet
+  if(Array.isArray(E.xi)&&E.xi.length){
+    const vt=p=>(n>1&&p.votes!=null)?` <span class="pill${p.votes*2<n?" warn":""}" title="how many of the ${n} models start him">${p.votes}/${n}</span>`:"";
+    h+=`<div class="card evocard"><b class="h">Start this eleven · ${esc(E.formation||"")} · ${Number(E.xi_ep||0).toFixed(1)} projected</b><table>
+    <tr><th>player</th><th></th><th style="text-align:right">E[pts]</th><th style="text-align:right">plays</th></tr>`;
+    for(const p of [...E.xi].sort((a,b)=>posord(a.pos)-posord(b.pos)||(b.ep||0)-(a.ep||0)))
+      h+=`<tr><td>${nnPlayer(p,by)}${p.news?`<span class="flag">${esc(p.news)}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span>${vt(p)}</td><td class="num">${Number(p.ep||0).toFixed(1)}</td><td class="num">${p.p_play!=null?Number(p.p_play).toFixed(2):"–"}</td></tr>`;
+    h+=`</table></div><div class="card evocard"><b class="h">Bench, in this order</b><table>`;
+    (E.bench||[]).forEach((p,i)=>{h+=`<tr><td>${i+1}. ${nnPlayer(p,by)}${p.news?`<span class="flag">${esc(p.news)}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span>${vt(p)}</td><td class="num">${Number(p.ep||0).toFixed(1)}</td><td class="num">${p.p_play!=null?Number(p.p_play).toFixed(2):"–"}</td></tr>`;});
+    h+=`</table><div class="note">The eleven is for the squad as it stands this morning; the run after waivers process rewrites it for the squad you end up with. E[pts] is the network's number for this gameweek, <b>plays</b> its probability that he plays.</div></div>`;
+  }
+  // ---- 3. the board
+  if(Array.isArray(E.board)&&E.board.length){
+    h+=`<div class="card evocard"><b class="h">Its draft board</b><div class="note">Season projections at pick one, for next August. It has no bearing on this week.</div><div class="note">${E.board.slice(0,40).map((p,i)=>`${i+1}. ${(p.code&&by[String(p.code)])?nm(by[String(p.code)]):esc(p.name)} <span class="tm">${esc(p.team||"")}</span>`).join(" · ")}</div></div>`;
+  }
+  // ---- 4. how it decides
+  h+=`<div class="card evocard"><b class="h">How it decides</b><div class="note">A policy evolved against itself over five archived seasons, scored against the heuristic it starts from (evo/README.md has the numbers and every caveat). Waivers and free agents are judged over the next five gameweeks, from a shortlist of the sixty free agents with the best five-week number; the eleven is judged on this gameweek alone; the board on the season. Injuries, return dates, prices and the fixture run are inside the features.${n>1?` Five independently trained models vote: the eleven on their median expected points, each change by Borda count over their rankings at that step of the list, with a change needing ${E.majority||"a majority"} of them behind it${E.min_votes>1?` and a fallback ${E.min_votes}`:""}.`:""}</div></div>`;
+  sec.innerHTML=h;
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
