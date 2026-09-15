@@ -1,40 +1,6 @@
 {
-  "generated": "2026-09-15T08:12 UTC",
+  "generated": "2026-09-15T22:56 UTC",
   "items": [
-    {
-      "id": "2026-09-04-opinion-small-ben-height",
-      "ts": "2026-09-04T21:50",
-      "kind": "opinion",
-      "text": "Small Ben topped the live gameweek standings tonight on the back of four Liverpool players - Isak, Gakpo, Szoboszlai and Virgil - doing all the actual elevating. Fitting, since it is the closest Small Ben has ever come to being tall.",
-      "source": null
-    },
-    {
-      "id": "2026-09-04-opinion-marcus-cushion",
-      "ts": "2026-09-04T21:50",
-      "kind": "opinion",
-      "text": "Marcus started the evening 27 points clear of Small Ben and finished it two ahead. One Liverpool match did that: Alisson's clean sheet, five saves and a bonus point were worth eight to Marcus, while Small Ben's four red shirts brought back thirty-three. Big Ben took three off Wirtz and Justin one for Barcola's cameo; Edward and Robert had nobody in the game and could only watch.",
-      "source": null
-    },
-    {
-      "id": "2026-09-04-isak-disallowed-hattrick",
-      "ts": "2026-09-04T22:45",
-      "kind": "news",
-      "text": "Alexander Isak thought he had a first-half hat-trick at Portman Road when a Florian Wirtz pass sent him through again, but the goal was ruled out for offside and he had to settle for the two that stood. Isak said afterwards it capped a mentally tough spell: 'It was a long injury, a difficult season in general... that season is kind of behind me now, but it wasn't easy.' Ben C still banked both goals that counted, and Big Ben's Wirtz picked up the assist on the one that did not.",
-      "source": {
-        "title": "Ipswich 0-2 Liverpool: Andoni Iraola up and running as Reds boss with Alexander Isak at the double",
-        "url": "https://www.skysports.com/football/news/11707/13565652/ipswich-0-2-liverpool-andoni-iraola-up-and-running-as-reds-boss-with-alexander-isak-at-the-double"
-      }
-    },
-    {
-      "id": "2026-09-05-arsenal-timber-mosquera",
-      "ts": "2026-09-05T07:58",
-      "kind": "news",
-      "text": "Mikel Arteta said Jurrien Timber is back in full training and 'in a really good place' as he nears a return from the groin injury that has kept him out for months. Arteta also confirmed Cristhian Mosquera, substituted as a precaution against Aston Villa, remains available for Sunday's game with Chelsea, easing any worry for Robert, who owns him.",
-      "source": {
-        "title": "Arteta delivers update on Timber, Mosquera and Saliba",
-        "url": "https://www.arsenal.com/news/arteta-delivers-update-on-timber-mosquera-and-saliba-aJhiV6J1zaCz"
-      }
-    },
     {
       "id": "2026-09-05-brentford-schade-thiago-form",
       "ts": "2026-09-05T07:58",
@@ -69,7 +35,7 @@
       "id": "2026-09-05-xi-1130",
       "ts": "2026-09-05T11:10",
       "kind": "news",
-      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
+      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Horn\u00edcek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedi\u0107). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
       "source": {
         "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
         "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
@@ -362,7 +328,7 @@
       "kind": "news",
       "text": "Liverpool came from behind to beat Atletico Madrid 2-1 in their Champions League opener at Anfield on Wednesday, Dominik Szoboszlai's equaliser and an Alexis Mac Allister strike turning the game around; Small Ben owns Szoboszlai. Justin's Bradley Barcola went off holding his calf just before the hour on his full Liverpool debut, after missing two clear first-half chances; head coach Andoni Iraola said afterwards it was cramp rather than an injury, pointing to Barcola having had no pre-season minutes.",
       "source": {
-        "title": "Bradley Barcola limps out of Liverpool home debut against Atlético",
+        "title": "Bradley Barcola limps out of Liverpool home debut against Atl\u00e9tico",
         "url": "https://www.espn.com/soccer/story/_/id/49884201/bradley-barcola-liverpool-injury-atletico-madrid-champions-league"
       }
     },
@@ -609,7 +575,7 @@
       "id": "2026-09-13-wrap-gross-brighton",
       "ts": "2026-09-13T22:48",
       "kind": "opinion",
-      "text": "Groß's 17 - the best number anyone posted all night - came from a penalty in Brighton's fifth of the afternoon against a Coventry side going nowhere. Easy pickings dressed up as a big night, and it still put Edward second overall. He'll take it either way.",
+      "text": "Gro\u00df's 17 - the best number anyone posted all night - came from a penalty in Brighton's fifth of the afternoon against a Coventry side going nowhere. Easy pickings dressed up as a big night, and it still put Edward second overall. He'll take it either way.",
       "source": null
     },
     {
@@ -722,6 +688,37 @@
         "title": "Premier League: 10 talking points from the weekend's action",
         "url": "https://www.theguardian.com/football/2026/sep/14/premier-league-10-talking-points-from-the-weekends-action"
       }
+    },
+    {
+      "id": "2026-09-15-elanga-injury",
+      "ts": "2026-09-15T22:52",
+      "kind": "news",
+      "text": "Newcastle boss Matthias Jaissle said after Monday's 4-1 defeat at Leeds that Anthony Elanga was missing through injury, that it could be long-term, and that Elanga is due another scan next week. Elanga is Marcus's, and he blanked in GW4 without kicking a ball.",
+      "source": {
+        "title": "Leeds 4 - 1 Newcastle - Match Report & Highlights",
+        "url": "https://www.skysports.com/football/leeds-vs-newcastle/report/559479"
+      }
+    },
+    {
+      "id": "2026-09-15-justin-bench-opinion",
+      "ts": "2026-09-15T22:53",
+      "kind": "opinion",
+      "text": "Justin's 87 topped GW4 while Edward's 69 and Marcus's 54 trailed in behind, and Justin still left 21 points on the bench, the most benched by anyone this gameweek. He's now within 7 of Marcus at the top. If that reserve unit ever got a start, this league would not be close.",
+      "source": null
+    },
+    {
+      "id": "2026-09-15-gross-edward-opinion",
+      "ts": "2026-09-15T22:54",
+      "kind": "opinion",
+      "text": "Edward's Gro\u00df put up 17 in GW4, the biggest individual haul in the league this week, and Edward still finished the gameweek on 69, some way back from Justin's 87. One goalscoring midfielder was never going to be enough against a whole XI that fires front to back.",
+      "source": null
+    },
+    {
+      "id": "2026-09-15-robert-bench-opinion",
+      "ts": "2026-09-15T22:55",
+      "kind": "opinion",
+      "text": "Robert left just 2 points on the bench in GW4, the smallest gap anywhere in the league, which means his 28 wasn't a selection headache, it was the actual ceiling. Last on 148, 70 behind the top, with nowhere to hide when your bench can't even offer you an excuse.",
+      "source": null
     }
   ],
   "runs": [
@@ -1029,7 +1026,7 @@
       "news": 0,
       "opinion": 0,
       "matchday": true,
-      "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Groß), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
+      "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Gro\u00df), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
     },
     {
       "ts": "2026-09-13T14:40 UTC",
@@ -1050,7 +1047,7 @@
       "news": 1,
       "opinion": 3,
       "matchday": true,
-      "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Groß's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
+      "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Gro\u00df's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
     },
     {
       "ts": "2026-09-14T07:56 UTC",
@@ -1079,6 +1076,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news, no fixtures today. Four items, all fresh angles not already on the page: Calvert-Lewin's England recall talk after Monday's Leeds win (BBC, Edward), Arsenal formally taking the Konsa-Ballard penalty to Pro Ref (BBC, Big Ben), a Guardian tactical piece flagging Sesko for Sunday's Fulham trip over the blanking Cunha while naming United's top two scorers (Robert, Small Ben, Big Ben, Marcus), and the Tottenham 0-0 Everton stalemate that only ever got team-news coverage before, not a result (Guardian, touches Robert, Justin, Marcus and Big Ben). Left the Man derby/Foden/Pro Ref VAR story alone since two prior runs already covered it from both sides. Roast archive still holds the same two entries as flagged on 14 Sept - one uses a term aimed at sexuality, the other invokes apartheid and reads as aimed at race - both correctly held rather than used; nothing new submitted to the archive since. No opinion pieces, this is a morning run."
+    },
+    {
+      "ts": "2026-09-15T22:56 UTC",
+      "news": 1,
+      "opinion": 3,
+      "matchday": false,
+      "note": "Evening wrap. No fixtures today (GW5 kicks off at the weekend); tonight's refresh finalised GW4 with bonus, so worked from those settled numbers rather than any live action. One news item: Newcastle boss Jaissle confirmed after Monday's 4-1 loss at Leeds that Elanga (Marcus's) is injured, possibly long-term, explaining his GW4 blank - read at Sky Sports, not previously posted. Three opinion pieces off the final GW4 table: Justin's GW4 win plus the biggest bench of the week and a lead cut to 7 over Marcus; Gro\u00df's 17 for Edward being the week's top individual haul yet still finishing well behind Justin's total; Robert's tiny 2-point bench proving his last-place 28 was his ceiling, not bad luck. Both unused roast archive entries held again, same reasons as every prior run: the Ben D self-roast uses a term aimed at sexuality, the Ben D-on-Justin line invokes apartheid and reads as aimed at race - both excluded categories under the banter rules, not reused. No FLOP items posted today, so nothing to rewrite via reflop.py."
     }
   ]
 }
