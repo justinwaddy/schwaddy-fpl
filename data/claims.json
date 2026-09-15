@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-14T21:45 UTC",
-  "summary": "Same five claims as this morning, with two updated on hard evidence from Monday night's Leeds 4-1 Newcastle game (confirmed off newcastleunited.com's own match centre): Bogle scored, which cuts against dropping him for Maguire, and Fernandez-Pardo finally got his full debut but struggled and was hooked at 3-0, giving the model its first real data point on him. Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic all carry forward unchanged - Milenkovic is confirmed out for Saturday's Coventry game too. Justin has moved up to second in the table on 210 points after a strong week, which pushes him back to fifth of six in the reversed GW5 waiver order (Robert, Ben D, Ben C and Edward all pick ahead of him now), so the higher-conviction claims at the top of this board are the ones most at risk of a rival taking the same man first.",
+  "ts": "2026-09-15T08:20 UTC",
+  "summary": "Same five claims as last night, reconfirmed after a full club-by-club sweep this morning - nothing found today clears the sourcing bar for a change. Milenkovic's absence looks set to run past Coventry into the international break per several outlets, but none of them are on the permitted list, so claim 3 stays sourced to last night's ESPN report and at medium confidence. Justin sits second in the table on 211 points, which still puts him fifth of six in the reversed GW5 waiver order (waivers close Thursday 17:30 UTC) - Robert, Ben D, Ben C and Edward all pick ahead of him, so the top of this board is the part most exposed to a rival taking the same man first.",
   "claims": [
     {
       "rank": 1,
@@ -59,7 +59,7 @@
         "club": "BOU"
       },
       "drop": {
-        "name": "Milenković",
+        "name": "Milenkovi\u0107",
         "code": "227444",
         "club": "NFO"
       },
@@ -138,7 +138,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Muñoz",
+            "name": "Mu\u00f1oz",
             "code": "247348",
             "club": "NFO"
           },
@@ -164,7 +164,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le Fée",
+            "name": "E.Le F\u00e9e",
             "code": "484420",
             "club": "SUN"
           },
@@ -319,7 +319,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Groß",
+            "name": "Gro\u00df",
             "code": "60307",
             "club": "BHA"
           },
@@ -522,6 +522,12 @@
       "gw": 5,
       "claims": 5,
       "note": "Updated claims 4 and 5 on hard evidence from tonight's Leeds 4-1 Newcastle game: Bogle scored (weakens the case for dropping him for Maguire, now the shakiest claim on the board) and Fernandez-Pardo got his full debut but struggled, hooked at 3-0 (a real data point at last, tempering but not killing the case for picking him up). Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic carry forward unchanged - Milenkovic confirmed out for Coventry too. Also noted: Justin's win this week moved him up to 2nd in the table, which paradoxically drops him to 5th of 6 in the reversed GW5 waiver order, worse than this morning's 4th."
+    },
+    {
+      "ts": "2026-09-15T08:20 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Palace, Man Utd, Newcastle, Sunderland) reconfirmed Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush exactly as last night. Investigated but could not use: reports that Milenkovic is out past Coventry into the international break, sourced only to Yahoo/OneFootball/a Forest fan site, not a permitted outlet - changes nothing anyway since the model already has him at 0.00 availability. Brobbey (free agent FWD, not currently claimed) reconfirmed a nailed Sunderland starter with nothing to change the model's read on him."
     }
   ]
 }
