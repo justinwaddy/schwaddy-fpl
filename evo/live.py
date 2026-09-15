@@ -35,7 +35,7 @@ from .config import SEASONS, LIVE_SEASON, POSITIONS, SQUAD
 from . import injuries
 from .features import SeasonData, build_season, Standardizer
 from .net import Brain
-from .sim import SeasonView, _draft_ctx, _rank_swaps
+from .sim import SeasonView, _draft_ctx, _score_pairs
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                       # noqa: E402
@@ -169,6 +169,9 @@ def _check_target(z, cfg, model_path):
               f"Retrain (python -m evo.run cv / train) before trusting it.")
 
 
+MAX_FALLBACKS = 3     # alternatives kept per change when several models vote
+
+
 def _load_models(paths, cfg):
     """One (Brain, Standardizer) per checkpoint, each checked against the
     configuration's target. A checkpoint is the best genome plus the
@@ -203,6 +206,75 @@ def _borda(lists, min_votes):
     out = [(key, float(np.mean(gains[key])), len(gains[key]), score[key])
            for key in score if len(gains[key]) >= min_votes]
     out.sort(key=lambda t: (-t[3], -t[1]))
+    return out
+
+
+def _vote_swaps(brains, views, cfg, squad, free_rows, gw, totals, is_fa,
+                min_votes, max_fb):
+    """The ranked list the models submit together for one window.
+
+    Built as _rank_swaps builds it for one model, with the vote inside
+    the loop: at each step every model scores every (free agent, squad
+    player) pair against the squad the earlier steps leave, the pairs
+    are merged by Borda count, the best-backed one is the change and the
+    next few for the same drop are its fallbacks, and the change is
+    ASSUMED before the next step. Merging the models' finished lists
+    instead would put one man at the top of two changes and average
+    gains that were scored against different squads. Free agency, or
+    sequential_claims off, is one scoring and one merge, grouped by the
+    man dropped. Two rules on top of the merge: a CHANGE needs a majority
+    of the models behind it (a fallback needs min_votes), so the list
+    ends where most models would hold rather than where the last two
+    still clear their margin; and a man added earlier in the list is
+    never the drop of a later one, since "claim him, then drop him" is
+    not advice. With one model the Borda order is the model's own, so
+    this is _rank_swaps with the fallback count as a parameter.
+
+    Returns [(gain, add, drop, votes, borda, change, fallback)].
+    """
+    majority = len(brains) // 2 + 1
+    def merged(sq, free):
+        lists = [[((a, d), g) for g, a, d in
+                  _score_pairs(b, v, cfg, sq, free, gw, totals, 0, is_fa)]
+                 for b, v in zip(brains, views)]
+        return _borda(lists, min_votes)
+
+    out = []
+    if is_fa or not cfg.sequential_claims:
+        by_drop, order = {}, []
+        for (a, d), g, votes, borda in merged(list(squad), free_rows):
+            if d not in by_drop:
+                if votes < majority:
+                    continue          # a change nobody much backs
+                by_drop[d] = []
+                order.append(d)
+            by_drop[d].append((g, a, votes, borda))
+        for step, d in enumerate(order, 1):
+            for k, (g, a, votes, borda) in enumerate(by_drop[d][:1 + max_fb]):
+                out.append((g, a, d, votes, borda, step, k > 0))
+        return out
+    squad, taken, step = list(squad), set(), 0
+    for _ in range(15):
+        free = np.array([r for r in free_rows if r not in taken])
+        if len(free) == 0:
+            break
+        pairs = [pr for pr in merged(squad, free) if pr[0][1] not in taken]
+        head = [pr for pr in pairs if pr[2] >= majority]
+        if not head:
+            break
+        (a, d), g, votes, borda = head[0]
+        step += 1
+        out.append((g, a, d, votes, borda, step, False))
+        nfb = 0
+        for (a2, d2), g2, v2, b2 in pairs[1:]:
+            if d2 == d and a2 != a:
+                out.append((g2, a2, d2, v2, b2, step, True))
+                nfb += 1
+                if nfb >= max_fb:
+                    break
+        squad.remove(d)
+        squad.append(a)
+        taken.add(a)
     return out
 
 
@@ -375,70 +447,44 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             totals = _standings(cfg, own, offline)
             free_rows = np.array([r for _, r in free])
             squad_rows = [int(r) for r in rows]
-            lists = [_rank_swaps(b, v, cfg, squad_rows, free_rows, gw,
-                                 totals, 0, is_fa=is_fa)
-                     for b, v in zip(brains, views)]
+            # a pair one model alone lists is the tail the vote is there
+            # to remove; with three or more models it takes two
+            min_votes = 2 if n_models >= 3 else 1
+            pairs = _vote_swaps(brains, views, cfg, squad_rows, free_rows, gw,
+                                totals, is_fa, min_votes, MAX_FALLBACKS)
+            if cfg.max_claims:
+                pairs = pairs[:cfg.max_claims]
             id_of_row = {r: i for i, r in free}
             id_of_row.update({int(r): i for r, i in zip(rows, ids)})
-            if n_models == 1:
-                merged = [((a, d), g, 1, 0) for g, a, d in lists[0]]
-                # the whole list, each row marked as a change or a
-                # fallback for the change above it: with waivers unlimited
-                # the list is long, and ten changes is a different thing
-                # from four changes with two fallbacks each
-                out, step, last = [], 0, None
-                for (add, drop), gain, votes, _ in merged:
-                    if drop != last:
-                        step, last = step + 1, drop
-                    out.append(dict(pos=POSITIONS[int(sv.pos[add])],
-                                    gain=round(gain, 2), change=step,
-                                    fallback=(drop == last and
-                                              any(o["change"] == step
-                                                  for o in out)),
-                                    add=describe(id_of_row.get(add, -1), add),
-                                    drop=describe(id_of_row.get(drop, -1),
-                                                  drop)))
-            else:
-                # a pair one model alone lists is the tail the vote is
-                # there to remove; with three or more models it takes two
-                min_votes = 2 if n_models >= 3 else 1
-                merged = _borda([[((a, d), g) for g, a, d in l]
-                                 for l in lists], min_votes)
-                # group by the man dropped, drops in the order the vote
-                # first reaches them, so that the alternatives for one
-                # drop sit under it as fallbacks as they do in a single
-                # model's sequential list
-                by_drop, order = {}, []
-                for (add, drop), gain, votes, borda in merged:
-                    if drop not in by_drop:
-                        by_drop[drop] = []
-                        order.append(drop)
-                    by_drop[drop].append((add, gain, votes, borda))
-                out = []
-                for step, drop in enumerate(order, 1):
-                    for k, (add, gain, votes, borda) in enumerate(by_drop[drop]):
-                        out.append(dict(pos=POSITIONS[int(sv.pos[add])],
-                                        gain=round(gain, 2), change=step,
-                                        fallback=k > 0, votes=votes,
-                                        borda=int(borda),
-                                        add=describe(id_of_row.get(add, -1),
-                                                     add),
-                                        drop=describe(id_of_row.get(drop, -1),
-                                                      drop)))
-                step = len(order)
-            if cfg.max_claims:
-                out = out[:cfg.max_claims]
-                step = max((o["change"] for o in out), default=0)
-            plan["changes"] = step
+            # the whole list, each row marked as a change or a fallback
+            # for the change above it: with waivers unlimited the list is
+            # long, and ten changes is a different thing from four changes
+            # with two fallbacks each
+            out = []
+            for gain, add, drop, votes, borda, step, fb in pairs:
+                row = dict(pos=POSITIONS[int(sv.pos[add])],
+                           gain=round(gain, 2), change=step, fallback=fb,
+                           add=describe(id_of_row.get(add, -1), add),
+                           drop=describe(id_of_row.get(drop, -1), drop))
+                if n_models > 1:
+                    row["votes"] = int(votes)
+                    row["borda"] = int(borda)
+                out.append(row)
+            plan["changes"] = max((o["change"] for o in out), default=0)
             plan["claims"] = out
             plan["claims_note"] = ("waivers are unlimited; these are the "
                                    "ranked claims above the margin, and "
                                    "the game processes them in this order")
             if n_models > 1:
+                plan["min_votes"] = min_votes
+                plan["majority"] = n_models // 2 + 1
                 plan["claims_note"] += (
-                    f"; voted across {n_models} models by Borda count, a "
-                    f"pair needing {min_votes} models to be listed at all, "
-                    f"and gain is the mean over the models that list it")
+                    f"; voted across {n_models} models by Borda count at "
+                    f"every step of the list, a change needing "
+                    f"{plan['majority']} models behind it and a fallback "
+                    f"{min_votes}, at most {MAX_FALLBACKS} fallbacks kept "
+                    f"per change, and gain is the mean over the models "
+                    f"that list it")
             plan["claims_are"] = ("free agents, first come first served"
                                   if is_fa else
                                   "waiver claims, in submission order")
