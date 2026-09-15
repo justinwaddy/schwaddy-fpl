@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-15T00:11",
+ "generated": "2026-09-15T00:12",
  "gw": 5,
- "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -54,7 +54,7 @@
    "news": "",
    "p_play": 0.847,
    "base": 3.85,
-   "ep": 3.71,
+   "ep": 3.72,
    "votes": 5
   },
   {
@@ -80,7 +80,7 @@
    "news": "",
    "p_play": 0.967,
    "base": 4.7,
-   "ep": 4.53,
+   "ep": 4.54,
    "votes": 5
   },
   {
@@ -537,7 +537,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 305
+   "borda": 307
   },
   {
    "pos": "DEF",
@@ -633,11 +633,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 206
+   "borda": 201
   },
   {
    "pos": "DEF",
-   "gain": 11.84,
+   "gain": 11.83,
    "change": 5,
    "fallback": false,
    "add": {
@@ -669,7 +669,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.19,
+   "gain": 9.18,
    "change": 5,
    "fallback": true,
    "add": {
@@ -701,7 +701,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.68,
+   "gain": 7.67,
    "change": 5,
    "fallback": true,
    "add": {
@@ -733,7 +733,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.06,
+   "gain": 9.05,
    "change": 5,
    "fallback": true,
    "add": {
@@ -893,7 +893,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.18,
+   "gain": 6.19,
    "change": 7,
    "fallback": true,
    "add": {
