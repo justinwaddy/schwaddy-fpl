@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T11:52",
+ "generated": "2026-09-15T13:51",
  "gw": 5,
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
@@ -28,7 +28,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.71,
-   "ep": 4.1,
+   "ep": 4.09,
    "votes": 4
   },
   {
@@ -119,7 +119,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.29,
-   "ep": 3.2,
+   "ep": 3.25,
    "votes": 5
   },
   {
@@ -216,12 +216,12 @@
    "votes": 1
   }
  ],
- "xi_ep": 45.6,
+ "xi_ep": 45.7,
  "changes": 7,
  "claims": [
   {
    "pos": "MID",
-   "gain": 11.25,
+   "gain": 11.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -249,11 +249,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 271
+   "borda": 270
   },
   {
    "pos": "MID",
-   "gain": 13.22,
+   "gain": 13.2,
    "change": 1,
    "fallback": true,
    "add": {
@@ -281,11 +281,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 231
+   "borda": 229
   },
   {
    "pos": "MID",
-   "gain": 11.02,
+   "gain": 11.05,
    "change": 1,
    "fallback": true,
    "add": {
@@ -317,7 +317,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.71,
+   "gain": 10.75,
    "change": 1,
    "fallback": true,
    "add": {
@@ -345,11 +345,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 193
+   "borda": 194
   },
   {
    "pos": "MID",
-   "gain": 9.68,
+   "gain": 10.0,
    "change": 2,
    "fallback": false,
    "add": {
@@ -377,11 +377,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 242
+   "borda": 244
   },
   {
    "pos": "MID",
-   "gain": 9.48,
+   "gain": 9.91,
    "change": 2,
    "fallback": true,
    "add": {
@@ -409,11 +409,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 208
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 9.29,
+   "gain": 9.72,
    "change": 2,
    "fallback": true,
    "add": {
@@ -441,11 +441,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 206
+   "borda": 207
   },
   {
    "pos": "MID",
-   "gain": 8.49,
+   "gain": 8.9,
    "change": 2,
    "fallback": true,
    "add": {
@@ -473,11 +473,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 136
+   "borda": 137
   },
   {
    "pos": "FWD",
-   "gain": 11.09,
+   "gain": 11.08,
    "change": 3,
    "fallback": false,
    "add": {
@@ -505,11 +505,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 170
+   "borda": 166
   },
   {
    "pos": "DEF",
-   "gain": 9.85,
+   "gain": 9.86,
    "change": 4,
    "fallback": false,
    "add": {
@@ -573,7 +573,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.77,
+   "gain": 9.8,
    "change": 4,
    "fallback": true,
    "add": {
@@ -637,7 +637,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.58,
+   "gain": 5.59,
    "change": 5,
    "fallback": false,
    "add": {
@@ -669,7 +669,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.82,
+   "gain": 6.84,
    "change": 5,
    "fallback": true,
    "add": {
@@ -701,7 +701,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.79,
+   "gain": 6.78,
    "change": 5,
    "fallback": true,
    "add": {
@@ -733,7 +733,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.81,
+   "gain": 9.8,
    "change": 6,
    "fallback": false,
    "add": {
@@ -761,11 +761,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 54
+   "borda": 53
   },
   {
    "pos": "DEF",
-   "gain": 8.38,
+   "gain": 8.37,
    "change": 6,
    "fallback": true,
    "add": {
@@ -797,7 +797,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.29,
+   "gain": 10.24,
    "change": 6,
    "fallback": true,
    "add": {
@@ -829,7 +829,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 9.37,
+   "gain": 9.4,
    "change": 6,
    "fallback": true,
    "add": {
@@ -861,7 +861,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 5.86,
+   "gain": 5.87,
    "change": 7,
    "fallback": false,
    "add": {
@@ -967,7 +967,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 195.7,
-   "ep": 194.89
+   "ep": 194.95
   },
   {
    "id": 165,
@@ -1003,7 +1003,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.24,
-   "ep": 165.95
+   "ep": 166.01
   },
   {
    "id": 260,
@@ -1015,7 +1015,7 @@
    "news": "",
    "p_play": 0.492,
    "base": 177.03,
-   "ep": 164.86
+   "ep": 165.82
   },
   {
    "id": 387,
@@ -1042,18 +1042,6 @@
    "ep": 164.07
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.898,
-   "base": 155.86,
-   "ep": 158.54
-  },
-  {
    "id": 388,
    "code": 209036,
    "name": "Gu\u00e9hi",
@@ -1078,6 +1066,18 @@
    "ep": 161.63
   },
   {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.898,
+   "base": 155.86,
+   "ep": 158.42
+  },
+  {
    "id": 12,
    "code": 223340,
    "name": "Saka",
@@ -1099,7 +1099,7 @@
    "news": "",
    "p_play": 0.577,
    "base": 165.25,
-   "ep": 151.36
+   "ep": 151.23
   },
   {
    "id": 533,
@@ -1159,7 +1159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.25,
-   "ep": 147.21
+   "ep": 146.5
   },
   {
    "id": 368,
@@ -1243,7 +1243,7 @@
    "news": "",
    "p_play": 0.811,
    "base": 139.31,
-   "ep": 133.04
+   "ep": 133.08
   },
   {
    "id": 398,
@@ -1282,18 +1282,6 @@
    "ep": 131.52
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.913,
-   "base": 136.08,
-   "ep": 134.06
-  },
-  {
    "id": 25,
    "code": 224117,
    "name": "Gy\u00f6keres",
@@ -1330,6 +1318,18 @@
    "ep": 133.74
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.913,
+   "base": 136.08,
+   "ep": 133.21
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1340,6 +1340,18 @@
    "p_play": 0.839,
    "base": 136.34,
    "ep": 128.46
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.577,
+   "base": 140.33,
+   "ep": 128.73
   },
   {
    "id": 208,
@@ -1364,18 +1376,6 @@
    "p_play": 0.551,
    "base": 147.91,
    "ep": 126.18
-  },
-  {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.577,
-   "base": 140.33,
-   "ep": 127.72
   }
  ]
 }
