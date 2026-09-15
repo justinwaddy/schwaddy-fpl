@@ -217,16 +217,26 @@ def _xi_split(sv, squad, ep):
     return xi_rows, float(sum(p["ep"] for p in bench)), floor
 
 
-def _score_pairs(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa):
+def _score_pairs(brain, sv, cfg, squad, free_rows, gw, totals, m, is_fa,
+                 base_all=None):
     """One head evaluation: every (free agent, squad player) pair at each
-    position with its gain, ranked, above this week's margin."""
+    position with its gain, ranked, above this week's margin.
+
+    base_all is the baseline the head adds its residual to, (rows, 38):
+    the five-gameweek total by default, which is what the policy was
+    trained on. The residual is scaled by the spread of whatever
+    baseline it is given and the margin by the same spread, so a caller
+    may hand in the rest-of-season baseline instead (live.py's
+    --horizon rest) and get the same judgement applied to the season.
+    """
     Xn, Xr = (sv.Xn_dl, sv.X_dl) if is_fa else (sv.Xn, sv.X)
     key = sv.key_dl if is_fa else sv.key
-    base_all = sv.base_next5_dl if is_fa else sv.base_next5
-    if cfg.waiver_blend > 0:
-        ep1 = sv.base_ep1_dl if is_fa else sv.base_ep1
-        base_all = ((1 - cfg.waiver_blend) * base_all
-                    + cfg.waiver_blend * 5.0 * ep1)
+    if base_all is None:
+        base_all = sv.base_next5_dl if is_fa else sv.base_next5
+        if cfg.waiver_blend > 0:
+            ep1 = sv.base_ep1_dl if is_fa else sv.base_ep1
+            base_all = ((1 - cfg.waiver_blend) * base_all
+                        + cfg.waiver_blend * 5.0 * ep1)
     sq = np.array(squad)
     spos = sv.pos[sq]
     strength = np.zeros(4)

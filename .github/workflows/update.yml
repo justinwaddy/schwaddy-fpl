@@ -82,6 +82,23 @@ jobs:
           --model data/evo_models/seed5.npz
           --json data/evo_plan.json
           || echo "neural network plan skipped"
+      # the same five, judging every claim on the rest of the season
+      # rather than the next five gameweeks: the NN tab reads this one
+      - name: neural network plan, season horizon
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
+        run: >-
+          python -m evo.run live
+          --model data/evo_models/seed1.npz
+          --model data/evo_models/seed2.npz
+          --model data/evo_models/seed3.npz
+          --model data/evo_models/seed4.npz
+          --model data/evo_models/seed5.npz
+          --horizon rest
+          --json data/evo_plan_rest.json
+          || echo "neural network season plan skipped"
 
       # the other crons: the day's matches have wrapped up, so post the
       # matchday recap against the morning run's forecasts without refitting

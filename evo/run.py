@@ -89,6 +89,9 @@ def main(argv=None):
     p.add_argument("--offline", action="store_true")
     p.add_argument("--gw", type=int, default=None)
     p.add_argument("--json", default="data/evo_plan.json")
+    p.add_argument("--horizon", default="next5", choices=("next5", "rest"),
+                   help="judge claims on the next five gameweeks (what the "
+                        "policy was trained on) or on the rest of the season")
 
     a = ap.parse_args(argv)
 
@@ -176,7 +179,7 @@ def main(argv=None):
     if a.cmd == "live":
         from .live import main as live_main
         return live_main(cfg_from_args(a), a.model, offline=a.offline,
-                         gw=a.gw, out_json=a.json)
+                         gw=a.gw, out_json=a.json, horizon=a.horizon)
 
     return 1
 

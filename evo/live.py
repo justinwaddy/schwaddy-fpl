@@ -210,7 +210,7 @@ def _borda(lists, min_votes):
 
 
 def _vote_swaps(brains, views, cfg, squad, free_rows, gw, totals, is_fa,
-                min_votes, max_fb):
+                min_votes, max_fb, base_all=None):
     """The ranked list the models submit together for one window.
 
     Built as _rank_swaps builds it for one model, with the vote inside
@@ -223,29 +223,43 @@ def _vote_swaps(brains, views, cfg, squad, free_rows, gw, totals, is_fa,
     gains that were scored against different squads. Free agency, or
     sequential_claims off, is one scoring and one merge, grouped by the
     man dropped. Two rules on top of the merge: a CHANGE needs a majority
-    of the models behind it (a fallback needs min_votes), so the list
-    ends where most models would hold rather than where the last two
-    still clear their margin; and a man added earlier in the list is
-    never the drop of a later one, since "claim him, then drop him" is
-    not advice. With one model the Borda order is the model's own, so
+    of the models agreeing that its man should be dropped (any pair
+    listed for him counts; the replacement is then the best-backed pair
+    for him, and a listed pair needs min_votes), so the list ends where
+    most models would hold rather than where the last two still clear
+    their margin; and a man added earlier in the list is never the drop
+    of a later one, since "claim him, then drop him" is not advice. With one model the Borda order is the model's own, so
     this is _rank_swaps with the fallback count as a parameter.
 
     Returns [(gain, add, drop, votes, borda, change, fallback)].
     """
     majority = len(brains) // 2 + 1
     def merged(sq, free):
+        """The Borda-merged pairs, and for each man dropped how many
+        models list ANY swap for him. A manager decides who goes and
+        then who comes in, and the vote is taken the same way: the
+        models agreeing that a man should go is the majority that
+        matters, since three of them can be sure of the drop and still
+        name three different replacements, which as a vote on exact
+        pairs reads as no change at all."""
         lists = [[((a, d), g) for g, a, d in
-                  _score_pairs(b, v, cfg, sq, free, gw, totals, 0, is_fa)]
+                  _score_pairs(b, v, cfg, sq, free, gw, totals, 0, is_fa,
+                               base_all=base_all)]
                  for b, v in zip(brains, views)]
-        return _borda(lists, min_votes)
+        drop_votes = {}
+        for l in lists:
+            for d in {key[1] for key, _ in l}:
+                drop_votes[d] = drop_votes.get(d, 0) + 1
+        return _borda(lists, min_votes), drop_votes
 
     out = []
     if is_fa or not cfg.sequential_claims:
+        pairs, drop_votes = merged(list(squad), free_rows)
         by_drop, order = {}, []
-        for (a, d), g, votes, borda in merged(list(squad), free_rows):
+        for (a, d), g, votes, borda in pairs:
             if d not in by_drop:
-                if votes < majority:
-                    continue          # a change nobody much backs
+                if drop_votes.get(d, 0) < majority:
+                    continue          # a drop nobody much backs
                 by_drop[d] = []
                 order.append(d)
             by_drop[d].append((g, a, votes, borda))
@@ -258,8 +272,9 @@ def _vote_swaps(brains, views, cfg, squad, free_rows, gw, totals, is_fa,
         free = np.array([r for r in free_rows if r not in taken])
         if len(free) == 0:
             break
-        pairs = [pr for pr in merged(squad, free) if pr[0][1] not in taken]
-        head = [pr for pr in pairs if pr[2] >= majority]
+        pairs, drop_votes = merged(squad, free)
+        pairs = [pr for pr in pairs if pr[0][1] not in taken]
+        head = [pr for pr in pairs if drop_votes.get(pr[0][1], 0) >= majority]
         if not head:
             break
         (a, d), g, votes, borda = head[0]
@@ -279,7 +294,15 @@ def _vote_swaps(brains, views, cfg, squad, free_rows, gw, totals, is_fa,
 
 
 def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
-         league_id=LEAGUE_ID, board_n=40):
+         league_id=LEAGUE_ID, board_n=40, horizon="next5"):
+    """horizon: what a claim is judged on. "next5" is the five-gameweek
+    total the policy was trained against; "rest" is the same head over
+    the rest-of-season baseline (features.build_season's base_rest: the
+    remaining fixtures at the same rate, the injury return date
+    included), for a manager who wants to hold what he claims. The
+    eleven is this week's either way."""
+    if horizon not in ("next5", "rest"):
+        raise ValueError(f"horizon must be next5 or rest, not {horizon!r}")
     # one checkpoint or several. With several, every decision is taken by
     # a vote: the eleven on the median expected points across models, the
     # claims and the board by Borda count over each model's own ranking.
@@ -363,7 +386,7 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
         return d
 
     plan = dict(generated=time.strftime("%Y-%m-%dT%H:%M", time.gmtime()),
-                gw=gw, model=os.path.abspath(paths[0]),
+                gw=gw, horizon=horizon, model=os.path.abspath(paths[0]),
                 models=[os.path.abspath(p) for p in paths],
                 n_models=n_models,
                 vote=("median expected points for the eleven, Borda count "
@@ -450,8 +473,12 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             # a pair one model alone lists is the tail the vote is there
             # to remove; with three or more models it takes two
             min_votes = 2 if n_models >= 3 else 1
+            base_all = None
+            if horizon == "rest":
+                base_all = arrays["base_rest_dl" if is_fa else "base_rest"]
             pairs = _vote_swaps(brains, views, cfg, squad_rows, free_rows, gw,
-                                totals, is_fa, min_votes, MAX_FALLBACKS)
+                                totals, is_fa, min_votes, MAX_FALLBACKS,
+                                base_all=base_all)
             if cfg.max_claims:
                 pairs = pairs[:cfg.max_claims]
             id_of_row = {r: i for i, r in free}
@@ -474,17 +501,23 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
             plan["claims"] = out
             plan["claims_note"] = ("waivers are unlimited; these are the "
                                    "ranked claims above the margin, and "
-                                   "the game processes them in this order")
+                                   "the game processes them in this order"
+                                   + ("; gains are expected points over "
+                                      "the rest of the season, the injury "
+                                      "return date included"
+                                      if horizon == "rest" else
+                                      "; gains are expected points over "
+                                      "the next five gameweeks"))
             if n_models > 1:
                 plan["min_votes"] = min_votes
                 plan["majority"] = n_models // 2 + 1
                 plan["claims_note"] += (
                     f"; voted across {n_models} models by Borda count at "
                     f"every step of the list, a change needing "
-                    f"{plan['majority']} models behind it and a fallback "
-                    f"{min_votes}, at most {MAX_FALLBACKS} fallbacks kept "
-                    f"per change, and gain is the mean over the models "
-                    f"that list it")
+                    f"{plan['majority']} models agreeing on the man dropped "
+                    f"and a listed pair {min_votes}, at most {MAX_FALLBACKS} "
+                    f"fallbacks kept per change, and gain is the mean over "
+                    f"the models that list it")
             plan["claims_are"] = ("free agents, first come first served"
                                   if is_fa else
                                   "waiver claims, in submission order")
@@ -511,7 +544,8 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     os.makedirs(os.path.dirname(out_json) or ".", exist_ok=True)
     with open(out_json, "w") as fh:
         json.dump(plan, fh, indent=1)
-    print(f"gameweek {gw}   {out_json}")
+    print(f"gameweek {gw}   {out_json}   (claims judged on "
+          f"{'the rest of the season' if horizon == 'rest' else 'the next five gameweeks'})")
     if plan.get("xi"):
         print(f"  XI ({plan['formation']}, {plan['xi_ep']} projected)")
         for p in plan["xi"]:

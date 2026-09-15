@@ -976,6 +976,18 @@ together, so the cron never sees one without the other.
 `data/evo_model.npz` is the pre-audit single model, kept for the record
 and no longer run.
 
+**Two horizons.** `--horizon next5` (the default) judges every claim on
+the five-gameweek total the policy was trained against. `--horizon
+rest` hands the same head the rest-of-season baseline instead - the
+remaining fixtures at each man's rate, the injury return date included
+- and writes `data/evo_plan_rest.json`; the residual and the margin
+are both scaled by the spread of whatever baseline the head is given,
+so the judgement transfers and nothing is retrained. The two can
+disagree on purpose: on the season a defender back in four weeks is
+worth holding, on five weeks he is not. The justino page's NN tab shows
+the season plan; its Waivers tab the five-week one beside the matrix
+model.
+
 Online, it pulls the draft API for the league's current ownership and
 your squad, brings the injury log up to today from the bootstrap, works
 out which window the week is in, and writes `data/evo_plan.json`: the
