@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-15T08:20 UTC",
-  "summary": "Same five claims as last night, reconfirmed after a full club-by-club sweep this morning - nothing found today clears the sourcing bar for a change. Milenkovic's absence looks set to run past Coventry into the international break per several outlets, but none of them are on the permitted list, so claim 3 stays sourced to last night's ESPN report and at medium confidence. Justin sits second in the table on 211 points, which still puts him fifth of six in the reversed GW5 waiver order (waivers close Thursday 17:30 UTC) - Robert, Ben D, Ben C and Edward all pick ahead of him, so the top of this board is the part most exposed to a rival taking the same man first.",
+  "ts": "2026-09-15T21:20 UTC",
+  "summary": "Evening sweep found nothing that moves any verdict - same five claims as this morning. Milenkovic's hamstring has now shown up directly in the model's own numbers (avail 0.00, next5 5.6, 'Expected back 11 Oct'), so claim 3 no longer needs the news to carry the case on its own. Justin sits second in the table on 211 points, which is still fifth of six in the reversed GW5 waiver order (waivers close Thursday 17:30 UTC) - Robert, Ben D, Ben C and Edward all pick ahead of him, so claims 2-5 are contingency picks that only matter if a rival passes on the same swap or claim 1 fails.",
   "claims": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
         "club": "BRE"
       },
       "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
-      "model": "Model has Truffert's next5 at 18.1 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
+      "model": "Model has Truffert's next5 at 17.7 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
       "confidence": "high",
       "sources": [
         {
@@ -41,7 +41,7 @@
         "club": "BHA"
       },
       "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
-      "model": "Model has Mitchell's next5 at 16.1 (avail 1.00) against Vuskovic's 10.9 (avail 0.68) - agreeing with the model here, mostly down to fixtures with both players fit.",
+      "model": "Model has Mitchell's next5 at 15.6 (avail 1.00) against Vuskovic's 15.2 (avail 1.00) - both fit, so this is now a fixture-only margin rather than an availability gap; agreeing with the model but at lower conviction than a week ago.",
       "confidence": "high",
       "sources": [
         {
@@ -59,13 +59,13 @@
         "club": "BOU"
       },
       "drop": {
-        "name": "Milenkovi\u0107",
+        "name": "Milenković",
         "code": "227444",
         "club": "NFO"
       },
-      "why": "Correcting last night's error: ESPN's own live commentary confirms Milenkovic and Cunha did NOT play Saturday - both dropped out of the squad with hamstring tightness found in Friday's training, with Diomande and Munoz starting in their place. Glasner expects Milenkovic to also miss the Coventry game, with a return targeted for the fixture after - so the injury-driven case for this swap is back, not gone.",
-      "model": "Model already marks Milenkovic down (avail 0.60, next5 11.7) with a 'Hamstring injury - 75% chance of playing' news line against Hill's 16.1 (avail 1.00) - agreeing with the model's caution now that the actual absence is confirmed, rather than reasoning from last night's mistaken report that he played.",
-      "confidence": "medium",
+      "why": "Milenkovic's hamstring, found in Friday training before the Aston Villa game, has kept him out since - Nottingham Forest boss Oliver Glasner ruled him out of Saturday's Coventry game too, with a return targeted only for after the international break. ESPN's live commentary from the Villa game remains the clearest permitted account of how the injury first surfaced.",
+      "model": "Model now has Milenkovic at avail 0.00, next5 5.6, with its own news line reading 'Hamstring injury - Expected back 11 Oct', against Hill's 15.7 (avail 1.00) - the model has caught up to the injury, so this claim is now numbers-and-news aligned rather than overruling anything.",
+      "confidence": "high",
       "sources": [
         {
           "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
@@ -87,7 +87,7 @@
         "club": "LEE"
       },
       "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
-      "model": "Model has Maguire's next5 at 15.5 (avail 1.00) against Bogle's 12.6 (avail 0.86), purely fixture-and-depth driven - and tonight's goal is a reminder that next5 does not capture the kind of explosive return Bogle just delivered. Treat this as the claim most likely to look wrong in hindsight.",
+      "model": "Model has Maguire's next5 at 15.0 (avail 1.00) against Bogle's 14.4 (avail 0.89), purely fixture-and-depth driven - Bogle's Monday-night goal is a reminder that next5 does not capture the kind of explosive return he just delivered. Treat this as the claim most likely to look wrong in hindsight.",
       "confidence": "low",
       "sources": [
         {
@@ -110,7 +110,7 @@
         "club": "TOT"
       },
       "why": "Confirmed: Fernandez-Pardo got his full Newcastle debut in Monday's 4-1 defeat at Leeds, but it did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0. That is a genuine data point for a player the model has otherwise never seen (n=0 games before tonight), but one bad full debut does not settle whether he starts again at home to Bournemouth; that Jaissle trusted him with 57 minutes at all, on the back of a 51m fee, is still the more instructive signal. Marmoush remains the drop purely on the model's own board, with no fitness concern against him.",
-      "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 2.7, avail 0.19) against Marmoush's 9.4, now off one real game rather than zero. Overruling the model on the strength of the transfer fee and the manager's willingness to start him is more speculative after tonight's performance than it looked this morning, so this stays the lowest-conviction claim on the board alongside Maguire/Bogle.",
+      "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
       "confidence": "low",
       "sources": [
         {
@@ -138,7 +138,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Mu\u00f1oz",
+            "name": "Muñoz",
             "code": "247348",
             "club": "NFO"
           },
@@ -164,7 +164,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le F\u00e9e",
+            "name": "E.Le Fée",
             "code": "484420",
             "club": "SUN"
           },
@@ -319,7 +319,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Gro\u00df",
+            "name": "Groß",
             "code": "60307",
             "club": "BHA"
           },
@@ -528,6 +528,12 @@
       "gw": 5,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Palace, Man Utd, Newcastle, Sunderland) reconfirmed Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush exactly as last night. Investigated but could not use: reports that Milenkovic is out past Coventry into the international break, sourced only to Yahoo/OneFootball/a Forest fan site, not a permitted outlet - changes nothing anyway since the model already has him at 0.00 availability. Brobbey (free agent FWD, not currently claimed) reconfirmed a nailed Sunderland starter with nothing to change the model's read on him."
+    },
+    {
+      "ts": "2026-09-15T21:20 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "Evening sweep (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus general PL injury/lineup searches. Nothing cleared the sourcing bar for a change: Milenkovic's extended hamstring timeline is now already reflected in the model's own avail/next5 figures, so refreshed claim 3's model line and lifted it to high confidence rather than treating it as new news. Checked and found unmoved: Marmoush is being previewed as a likely Spurs starter for Sunday's Villa game by unpermitted predicted-XI sites only, no permitted outlet has confirmed it, so no change to claim 5's reasoning; Fernandez-Pardo's next Newcastle game is away at Hull on the 19th with no fresh team news yet; Bogle, Mitchell, Vuskovic, Truffert, Collins and Hill all reconfirmed exactly as already reported. Next scheduled team-news pressers land Thu/Fri before Thursday's waiver close, so expect the next material change then."
     }
   ]
 }
