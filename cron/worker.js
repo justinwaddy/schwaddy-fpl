@@ -28,6 +28,15 @@ const REF = "main";
 // the workflow does the committing with its own credentials.
 const SUGGEST_WORKFLOW = "suggest.yml";
 const MAX_TEXT = 500;
+// A suggestion may carry a picture, base64 in the same body. It cannot be
+// committed from here - this token may start a workflow and nothing more -
+// so it is handed on as a dispatch input and the runner writes the file.
+// GitHub documents no size for a dispatch input; the ceiling people report
+// is the 65,535 characters Actions allows any string. The page shrinks a
+// picture to about 33KB before sending, and this is that with room to
+// spare and still comfortably under that. A dispatch refused anyway is
+// retried without the picture rather than losing the suggestion with it.
+const MAX_IMG_B64 = 46000;
 // Only these six are in the league, so only these six can be named. A
 // dispatch is cheap but not free, and this is a public endpoint.
 const ENTRIES = {
@@ -120,17 +129,60 @@ async function suggest(req, env) {
   const about = body.about == null ? "" : ENTRIES[body.about];
   if (body.about != null && !about) return json({ error: "unknown target" }, 400, h);
 
+  // The picture, if there is one. This endpoint is public, so none of it
+  // is taken on trust: the length, the alphabet and the first bytes are
+  // all checked here, and checked again on the runner before anything is
+  // written to a file. A data: prefix is tolerated and dropped, because
+  // that is what toDataURL hands a caller who forgets to split it off.
+  let image = String((body && body.image) || "").replace(/\s+/g, "");
+  if (image.startsWith("data:")) image = image.slice(image.indexOf(",") + 1);
+  if (image) {
+    if (image.length > MAX_IMG_B64) {
+      return json({ error: "that picture is too big, even shrunk" }, 413, h);
+    }
+    if (!/^[A-Za-z0-9+/]+={0,2}$/.test(image)) {
+      return json({ error: "could not read that picture" }, 400, h);
+    }
+    // Base64 of a fixed opening is itself fixed: a JPEG's ff d8 ff always
+    // encodes to "/9j/" and a PNG's signature to "iVBORw0KGgo". Cheaper
+    // than decoding, and it is only a first sieve anyway.
+    if (!image.startsWith("/9j/") && !image.startsWith("iVBORw0KGgo")) {
+      return json({ error: "that is not a JPEG or a PNG" }, 400, h);
+    }
+  }
+
+  const inputs = { from_name: from, about_name: about, text, image_b64: image };
+  let ok = await fileIt(env, inputs);
+  // If it went down with a picture attached, try again without it. GitHub
+  // documents no size limit on a dispatch input and 33KB has not found
+  // one, but the words are the suggestion and the picture is the garnish:
+  // losing both to a limit nobody can see would be the wrong failure. The
+  // answer says which happened, so the page can tell the sender.
+  let kept = !!image;
+  if (!ok && image) {
+    kept = false;
+    ok = await fileIt(env, { ...inputs, image_b64: "" });
+  }
+  if (!ok) return json({ error: "could not file that, try again in a minute" }, 502, h);
+
+  console.log(`suggestion from ${from} about ${about || "the league"}`
+    + `${image ? (kept ? ` (with a ${Math.round(image.length * 3 / 4096)}KB picture)`
+                       : " (the picture would not go)") : ""}`
+    + `: ${text.slice(0, 80)}`);
+  return json({ ok: true, image: kept }, 200, h);
+}
+
+/* One dispatch of the suggest workflow. True if GitHub took it. */
+async function fileIt(env, inputs) {
   try {
     await gh(`/repos/${REPO}/actions/workflows/${SUGGEST_WORKFLOW}/dispatches`, env, {
-      method: "POST",
-      body: JSON.stringify({ ref: REF, inputs: { from_name: from, about_name: about, text } }),
+      method: "POST", body: JSON.stringify({ ref: REF, inputs }),
     });
+    return true;
   } catch (e) {
-    console.log(`suggest dispatch failed: ${e.message}`);
-    return json({ error: "could not file that, try again in a minute" }, 502, h);
+    console.log(`suggest dispatch failed${inputs.image_b64 ? " (with a picture)" : ""}: ${e.message}`);
+    return false;
   }
-  console.log(`suggestion from ${from} about ${about || "the league"}: ${text.slice(0, 80)}`);
-  return json({ ok: true }, 200, h);
 }
 
 async function gh(path, env, init = {}) {

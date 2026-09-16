@@ -121,6 +121,16 @@ text-transform:uppercase;letter-spacing:.05em;padding:10px 0 4px}
 border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:9px 11px;
 font:14px "IBM Plex Sans",system-ui}
 .modal textarea{min-height:96px;resize:vertical}
+/* The optional picture on a suggestion. The file input is left as the
+   browser draws it - a styled one is a label over a hidden input, and on
+   iOS that loses the camera option, which is where half of these come
+   from. The thumbnail is capped small on purpose: it is a check that the
+   right picture is attached, not a viewer. */
+.modal input[type=file]{width:100%;background:var(--panel2);border:1px solid var(--line);
+border-radius:8px;color:var(--dim);padding:8px 10px;
+font:12px "IBM Plex Mono",ui-monospace,monospace}
+.sugthumb{display:flex;gap:10px;align-items:center;padding-top:9px}
+.sugthumb img{max-width:120px;max-height:88px;border:1px solid var(--line);border-radius:6px}
 .row{display:flex;gap:8px;align-items:center;padding-top:14px}
 .msg{font-size:13px;padding:8px 2px}
 .msg.err{color:var(--red)}.msg.ok{color:var(--green)}

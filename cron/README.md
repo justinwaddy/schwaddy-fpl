@@ -82,6 +82,22 @@ six managers, and dispatches `.github/workflows/suggest.yml`, which does
 the committing. That needs no permission beyond the Actions write the
 token already has.
 
+A suggestion may carry a picture, and it rides in the same JSON as
+base64 under `image`, no `data:` prefix needed. The worker cannot commit
+it - the token may start a workflow and nothing else - so it is handed
+straight on as the `image_b64` dispatch input and the runner writes the
+file into `data/roast_img/`. The page shrinks a picture to about 33KB
+before sending: GitHub documents no limit on a dispatch input, and the
+one people report hitting is the 65,535 characters Actions allows any
+string, so this stays well under a half of it. The worker turns away
+anything over `MAX_IMG_B64`, anything that is not base64, and anything
+whose first bytes are not a JPEG's or a PNG's; all three checks are made
+again by `.github/scripts/append_roast.py`, because this endpoint is
+public and the worker is a convenience rather than a boundary. If a
+dispatch carrying a picture is refused anyway, the worker files the
+suggestion again without it and says so in the answer, so the words are
+never lost with the picture.
+
 The endpoint is public, like the sites. It checks the browser's `Origin`
 header against the GitHub Pages and custom-domain origins, which turns
 away everything casual without pretending to be a real boundary. If it

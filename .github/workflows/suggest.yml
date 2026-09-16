@@ -26,6 +26,16 @@ on:
         description: "The suggestion"
         required: true
         type: string
+      image_b64:
+        # A picture that came with the suggestion, base64, no data: prefix.
+        # It arrives this way because the worker's token may start a
+        # workflow and nothing else - it cannot write a file to the
+        # repository, so the runner does it. The script checks the length,
+        # the encoding and the first bytes again before writing anything.
+        description: "An optional picture, base64 encoded"
+        required: false
+        default: ""
+        type: string
 concurrency:
   group: suggest          # one writer at a time; they all append to one file
   cancel-in-progress: false
@@ -41,6 +51,7 @@ jobs:
           FROM_NAME: ${{ inputs.from_name }}
           ABOUT_NAME: ${{ inputs.about_name }}
           TEXT: ${{ inputs.text }}
+          IMAGE_B64: ${{ inputs.image_b64 }}
         run: python3 .github/scripts/append_roast.py
       - name: commit
         run: |
@@ -50,9 +61,12 @@ jobs:
           # and `git add` on a missing path exits 128, which under `bash -e`
           # killed the job *after* the roast had been appended - three of
           # Edward's suggestions were written to the runner's disk and thrown
-          # away with it. Add whichever of the two is actually there.
-          for f in data/roasts.json data/feedback.json; do
-            if [ -f "$f" ]; then git add "$f"; fi
+          # away with it. data/roast_img, which holds the pictures, is the
+          # same: it exists only once somebody has sent one, and it is
+          # staged as a directory so a picture the archive has aged out of
+          # is staged as the deletion it is. Add whichever are there.
+          for f in data/roasts.json data/feedback.json data/roast_img; do
+            if [ -e "$f" ]; then git add "$f"; fi
           done
           git commit -m "from the league: a suggestion or a report" || { echo "nothing new"; exit 0; }
           for i in 1 2 3 4; do

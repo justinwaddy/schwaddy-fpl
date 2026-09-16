@@ -20,6 +20,27 @@ const PRICES_URL = RAW + "prices.json";
 const LIVE_URL = "https://schwaddy-live.justinl-waddy.workers.dev/";
 // where a suggested roast is posted (cron/worker.js). Empty disables the button.
 const SUGGEST_URL = "https://schwaddy-cron.justinl-waddy.workers.dev/suggest";
+// A suggestion may carry a picture: a screenshot of somebody's bench, a
+// graph, a photograph of the man himself. It rides in the same POST as
+// base64, because the worker holds a token that may start a workflow and
+// nothing else - the committing is done by the runner, and a dispatch
+// input is the only channel between the two. GitHub does not document a
+// size for one of those, and the ceiling people report hitting is the
+// 65,535 characters Actions allows a string anywhere, so the browser
+// shrinks the picture to a third of that before it is ever sent: a
+// suggestion should not fail at the far end over a phone photograph.
+const IMG_B64_MAX = 44000;              // ~33KB of image, a third of the string limit
+// Pixel budget and JPEG quality, tried in order until one comes in under
+// the cap. A budget rather than a longest edge, because half of these are
+// full-page phone screenshots: a picture 430 across and 2600 down is a
+// perfectly readable megapixel, and capping its longest edge at 1200 left
+// it 191 pixels wide, which is a thumbnail of a column of grey. The last
+// step is deliberately ugly - one that arrives beats one that does not.
+const IMG_STEPS = [[1.4e6, .7], [1e6, .6], [7e5, .5], [45e4, .44], [28e4, .38], [16e4, .32]];
+// Even inside the budget nothing is drawn wider or taller than this: a
+// panorama at a megapixel is 4000 across and 250 down, which no browser
+// enjoys and nobody can read anyway.
+const IMG_MAX_EDGE = 2000;
 
 const ME = (window.TEAM || {}).me;
 const SHOW_PRICES = !!(window.TEAM || {}).prices;
@@ -1023,11 +1044,69 @@ function renderNews() {
     () => { NEWSFILTER = c.dataset.f; renderNews(); }));
 }
 
+/* The picture on the suggestion currently open, already shrunk and encoded,
+   or null. Held here rather than on the file input because what is sent is
+   never the file the manager picked: it is what came back off the canvas. */
+let SUGIMG = null;
+
+/* A picture the browser has shrunk until it fits in a dispatch input.
+ *
+ * A phone photograph is three to six megabytes and nothing on the path
+ * from here to data/ will carry one. So the file never leaves the page at
+ * its own size: it is drawn into a canvas at a sane width and re-encoded
+ * as a JPEG, dropping a step at a time until the base64 is under the cap.
+ * Everything is re-encoded, a small PNG included, because a screenshot
+ * that is already small is not the case this has to survive.
+ */
+async function shrinkImage(file) {
+  if (!/^image\//.test(file.type || "")) throw new Error("that is not a picture");
+  const bmp = await loadPicture(file);
+  const cv = document.createElement("canvas");
+  for (const [budget, q] of IMG_STEPS) {
+    const scale = Math.min(1, Math.sqrt(budget / (bmp.width * bmp.height)),
+                           IMG_MAX_EDGE / Math.max(bmp.width, bmp.height));
+    cv.width = Math.max(1, Math.round(bmp.width * scale));
+    cv.height = Math.max(1, Math.round(bmp.height * scale));
+    const cx = cv.getContext("2d");
+    // A screenshot with a transparent corner comes out with a black one
+    // on a JPEG canvas unless something is painted under it first.
+    cx.fillStyle = "#101a30";
+    cx.fillRect(0, 0, cv.width, cv.height);
+    cx.drawImage(bmp, 0, 0, cv.width, cv.height);
+    const b64 = (cv.toDataURL("image/jpeg", q).split(",")[1] || "");
+    if (b64.length <= IMG_B64_MAX) {
+      if (bmp.close) bmp.close();
+      return { b64, w: cv.width, h: cv.height, bytes: Math.round(b64.length * 3 / 4) };
+    }
+  }
+  if (bmp.close) bmp.close();
+  throw new Error("could not get that one small enough - a screenshot rather than a photo usually will");
+}
+
+function loadPicture(file) {
+  // createImageBitmap turns an iPhone photograph the right way up, which
+  // matters: a portrait shot pasted in sideways is the one way this makes
+  // a suggestion worse. The <img> fallback is for browsers that lack it,
+  // and those are old enough to honour EXIF orientation themselves.
+  if (window.createImageBitmap) {
+    return createImageBitmap(file, { imageOrientation: "from-image" })
+      .catch(() => createImageBitmap(file));
+  }
+  return new Promise((ok, no) => {
+    const url = URL.createObjectURL(file);
+    const im = new Image();
+    im.onload = () => { URL.revokeObjectURL(url); ok(im); };
+    im.onerror = () => { URL.revokeObjectURL(url); no(new Error("could not read that file")); };
+    im.src = url;
+  });
+}
+
 function openSuggest() {
   // Everybody is fair game, the manager whose page this is included. The
   // pages are public and shared around, so excluding the one you happen to
   // be looking at only meant Ed could not be roasted from Ed's page.
   const others = (PUB && PUB.managers || []);
+  SUGIMG = null;
   const back = document.createElement("div");
   back.className = "back";
   back.innerHTML = `<div class="modal">
@@ -1042,22 +1121,62 @@ function openSuggest() {
     </select>
     <label for="text">Your suggestion</label>
     <textarea id="text" maxlength="500" placeholder="Rob has one of his own strikers benched and the opposition keeper starting..."></textarea>
+    <label for="pic">A picture, if you have one</label>
+    <input type="file" id="pic" accept="image/*">
+    <div class="note" id="picnote">The screenshot, the graph, the photograph. It is shrunk here in
+      the browser before it goes anywhere, so a full-size one off your phone is fine.</div>
+    <div id="picprev"></div>
     <div class="row"><button class="btn" id="send">Send it</button>
       <span class="msg" id="msg"></span></div>
   </div>`;
   document.body.appendChild(back);
   document.body.style.overflow = "hidden";
-  const close = () => { back.remove(); document.body.style.overflow = ""; };
+  const close = () => { back.remove(); document.body.style.overflow = ""; SUGIMG = null; };
   back.addEventListener("click", e => { if (e.target === back) close(); });
   $("cx").addEventListener("click", close);
+  $("pic").addEventListener("change", pickPicture);
   $("send").addEventListener("click", () => submitSuggestion(close));
   $("text").focus();
+}
+
+/* The file input changed: shrink it, show what will actually be sent.
+ *
+ * The thumbnail is the shrunk JPEG rather than the original file, because
+ * that is the picture the league will see - if the last step has made a
+ * mess of a dense screenshot, better it is obvious now than in Saturday's
+ * wrap. Shrinking a large photograph takes a moment, so the send button
+ * is held until it is done: a suggestion sent mid-encode would have gone
+ * without its picture. */
+function pickPicture() {
+  const inp = $("pic"), note = $("picnote"), prev = $("picprev"), send = $("send");
+  const file = inp.files && inp.files[0];
+  SUGIMG = null;
+  prev.innerHTML = "";
+  if (!file) { note.textContent = "No picture."; return; }
+  note.textContent = "Shrinking it\u2026";
+  send.disabled = true;
+  shrinkImage(file).then(img => {
+    SUGIMG = img;
+    note.textContent = `Ready: ${img.w}\u00d7${img.h}, ${Math.round(img.bytes / 1024)}KB.`;
+    prev.innerHTML = `<div class="sugthumb"><img src="data:image/jpeg;base64,${img.b64}" alt="">
+      <button class="x" id="picx" style="margin-left:0">Remove</button></div>`;
+    $("picx").addEventListener("click", () => {
+      inp.value = "";
+      pickPicture();
+    });
+  }).catch(e => {
+    note.textContent = String(e.message || e);
+    inp.value = "";
+  }).then(() => { send.disabled = false; });
 }
 
 function submitSuggestion(close) {
   const text = $("text").value.trim();
   const msg = $("msg"), send = $("send");
   const set = (cls, s) => { msg.className = "msg " + cls; msg.textContent = s; };
+  // A line is wanted even when a picture is attached: the archive is read
+  // as text by the run that writes the wrap, and a screenshot with nothing
+  // said about it is a puzzle rather than a suggestion.
   if (text.length < 4) { set("err", "Type something first."); return; }
   const sel = $("about");
   const about = sel.value ? +sel.value : null;
@@ -1070,11 +1189,23 @@ function submitSuggestion(close) {
       from: ME, from_name: m ? who(m.entry, m.name) : String(ME),
       about, about_name: about ? (mgrName(about) || String(about)) : null,
       text,
+      // base64 only, no data: prefix - the worker takes either, but the
+      // prefix is a hundred wasted bytes of a body GitHub is capping.
+      image: SUGIMG ? SUGIMG.b64 : null,
     }),
   }).then(r => r.json().catch(() => ({ error: "HTTP " + r.status })))
     .then(j => {
-      if (j && j.ok) { set("ok", "In the pile. Thanks."); setTimeout(close, 1200); }
-      else { set("err", (j && j.error) || "Could not send that."); send.disabled = false; }
+      if (j && j.ok) {
+        // The worker files the words on their own if GitHub will not take
+        // the picture, and says so. Better than a green tick over a
+        // suggestion that has quietly lost half of itself.
+        set("ok", SUGIMG && j.image === false
+          ? "In the pile - but the picture would not go."
+          : "In the pile. Thanks.");
+        setTimeout(close, SUGIMG && j.image === false ? 2600 : 1200);
+      } else {
+        set("err", (j && j.error) || "Could not send that."); send.disabled = false;
+      }
     })
     .catch(e => { set("err", String(e.message || e)); send.disabled = false; });
 }

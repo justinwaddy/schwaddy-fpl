@@ -150,7 +150,10 @@ except Exception as e:
 r=json.load(open('data/roasts.json')) if os.path.exists('data/roasts.json') else {'items':[]}
 un=[i for i in r.get('items',[]) if not i.get('used')]
 print(f"\nROAST ARCHIVE: {len(r.get('items',[]))} total, {len(un)} unused")
-for i in un: print(f"   [{i['id']}] {i['frm']} on {i['about'] or 'the league'}: {i['text']}")
+for i in un:
+    im=(i.get('image') or {}).get('src')
+    print(f"   [{i['id']}] {i['frm']} on {i['about'] or 'the league'}: {i['text']}"
+          + (f"\n       WITH A PICTURE: data/{im} - look at it before you write the line" if im else ""))
 auto=[x for x in (pub.get('news') or []) if str(x.get('ts',''))[:10]==str(today)]
 print(f"\nALREADY ON THE PAGE AUTOMATICALLY TODAY ({len(auto)}) - the engine posts these itself, badged HAUL, OVERTAKE, SCORE, WRAP, RACE, HEADLINE, INJURY, MOVE. Build on them; never restate one as your own item:")
 for x in auto: print(f"   {str(x.get('type','')).upper()}: {x.get('text','')[:140]}")
@@ -196,6 +199,16 @@ STEP 4 - OPINION. Morning run: none, skip to step 5. Evening run: 2 to 4 pieces,
     so read the error and fix the line rather than working around it. Do all of today's or none of
     them: half a list in your voice and half in the template's is worse than the template alone.
     The rewrite goes into data/news.json and data/public.json, so both are in the commit.
+  - A SUGGESTION MAY COME WITH A PICTURE - a screenshot of somebody's bench, a graph, the man
+    himself - and step 1 prints the path when it does. Open it and look at it; a line written
+    around a picture you have not seen is how a run ends up describing the wrong bench. If you
+    publish the picture with the item, copy the file into data/news_img/ under the item's own
+    slug rather than pointing at data/roast_img/, because the archive prunes its pictures when
+    an old suggestion ages out and the page would be left with a broken image. Write a proper
+    alt for it: the one on the archive entry is only the suggestion text, which says what the
+    picture is for and not what is in it. A picture is not a source of numbers - rule 7 holds
+    whatever a screenshot in front of you appears to show - and it never gets a caption that
+    says who sent it, any more than the words do.
   - Never say who suggested it. The archive is not published.
   - As long as the thought needs, inside the 600-character cap; no emoji, plain ASCII, "kind": "opinion", and no source: an opinion is yours, not an outlet's.
 
