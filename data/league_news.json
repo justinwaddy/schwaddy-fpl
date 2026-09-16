@@ -724,7 +724,7 @@
       "id": "2026-09-16-marcus-aca-lockout",
       "ts": "2026-09-16T10:29",
       "kind": "opinion",
-      "text": "Marcus has been locked out of his own page. Hours after telling LinkedIn he had passed all fifteen ACA exams, thanked his family, his friends and his colleagues at KPMG, and mentioned the assistant manager job starting in October, the league has put a ten-question ACA paper across his front door: goodwill with the NCI at fair value, marginal relief, a diluted EPS, an ungeared beta. No squad, no table and no waivers until all ten are answered, and the score is published here whatever it is."
+      "text": "Marcus has been locked out of his own page for swinging his dick on LinkedIn. Hours after telling LinkedIn he had passed all fifteen ACA exams, thanked his family and his colleagues at KPMG, and mentioned the assistant manager job starting in October, the league has put a ten-question ACA paper across his front door. No news, squad, no table and waivers until all ten are answered, and the score will be published here whatever it is."
     }
   ],
   "runs": [
@@ -1103,6 +1103,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Not a scheduled run. One opinion item filed by hand alongside the ACA gate added to Marcus's page (site/quiz.js): the lockout, and that the score gets published. No source, because this is the league's own doing rather than anything reported - the only outside fact is Marcus's own public LinkedIn post of 15 September saying he had passed all fifteen ACA exams. No player, fixture or scoring claim in it."
+    },
+    {
+      "ts": "2026-09-16T11:12 UTC",
+      "news": 0,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Not a scheduled run. Justin rewrote the ACA lockout item in his own words - the LinkedIn line, and news added to the list of what is behind the gate. Same id and timestamp, text verbatim as he sent it: the routine did not write this one and is not to reword it."
     }
   ]
 }
