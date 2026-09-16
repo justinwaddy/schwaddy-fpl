@@ -1008,13 +1008,19 @@ function renderNews() {
       ? `<div class="card"><div class="note">Could not load the feed (${esc(ERR.news || ERR.pub)}).</div></div>`
       : `<div class="card"><div class="note">Loading the feed&hellip;</div></div>`;
   } else {
-    const F = [["all", "All news"], ["league", "League"], ["players", "Players"]];
+    const F = [["all", "All news"], ["league", "League"], ["players", "Players"],
+               ["roasts", "Roasts"]];
     h += `<div class="chiprow">` + F.map(([k, lab]) =>
       `<button class="chip ${NEWSFILTER === k ? "on" : ""}" data-f="${k}">${lab}</button>`).join("")
       + btn + `</div>`;
     const ours = NEWSFILTER === "league" ? relevantNames() : null;
     const items = all.filter(e => {
       if (NEWSFILTER === "all") return true;
+      // The Roasts chip is the matchday opinion on its own: the pieces the
+      // six of you supply the material for, with the reported football and
+      // the running record of the league both out of the way. Opinion is
+      // written only into league_news.json, so the kind is the whole test.
+      if (NEWSFILTER === "roasts") return e.kind === "opinion";
       const g = NEWSGROUP[e.kind];
       if (g === NEWSFILTER) return true;
       return NEWSFILTER === "league" && g === "players" && ours && ours(e.text);
