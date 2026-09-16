@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T07:46 UTC",
+  "generated": "2026-09-16T10:30 UTC",
   "items": [
     {
       "id": "2026-09-05-xi-1130",
@@ -719,6 +719,18 @@
         "title": "Premier League title race: Are Arsenal and Man City the only contenders?",
         "url": "https://www.bbc.co.uk/sport/football/articles/cqwyzxx96wnwo"
       }
+    },
+    {
+      "id": "2026-09-16-marcus-aca-lockout",
+      "ts": "2026-09-16T10:29",
+      "kind": "opinion",
+      "text": "Marcus has been locked out of his own page. Fourteen hours after telling LinkedIn - and several hundred connections - that he had passed all fifteen ACA exams, thanked his family, his friends and his colleagues at KPMG for the three-year journey, and mentioned the assistant manager job starting in October, the league has put a ten-question ACA paper across his front door. Goodwill with the NCI at fair value, marginal relief, a diluted EPS, an ungeared beta, the fee dependency rule and a restructuring provision nobody announced. No squad, no table, no waivers until he sits it. Everyone else's pages are untouched, because nobody else made it everybody's business."
+    },
+    {
+      "id": "2026-09-16-marcus-aca-results-public",
+      "ts": "2026-09-16T10:30",
+      "kind": "opinion",
+      "text": "The terms, since Marcus will ask: ten questions, four options each, multiple choice, no marks for working. He answers them and the account opens whatever the score - locking a man out of his own fantasy football team over a beta is not proportionate, and the league is not a regulator. The score is the price. It is filed straight to the roast pile the moment the last question is marked, published on this feed under his name, and read out on the next matchday. Fifteen exams and a green tick emoji; ten questions and an audience."
     }
   ],
   "runs": [
@@ -1090,6 +1102,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news. No opinion pieces (morning run). GW5 has not kicked off (weekend fixtures); led with Sunday's Manchester derby, where City won 1-0 at Old Trafford with 10 men after Foden's red card, Haaland's winner off a Gvardiol cross, and Pro Ref admitting a VAR error and benching that officiating pair for this weekend - touches Justin (Haaland, Gvardiol) and Marcus (Foden). Also Leeds' rise to third under Farke (Justin's Bogle/Ampadu, Ben D's Trafford) and a BBC piece naming Arsenal and Man City the league's only unbeaten sides, which Robert's squad is unusually stacked with. Passed on an unverified Rayan Cherki quad-injury claim (Robert) that only showed up in search summaries, not a readable article on a permitted outlet - held rather than risk an invented detail. Chelsea injury-update and further Newcastle team-news pages found in search were dated months old (Sept 3, and one referencing an FA Cup semi that doesn't fit this season) so were dropped as stale, not reported."
+    },
+    {
+      "ts": "2026-09-16T10:30 UTC",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Not a scheduled run. Two opinion items filed by hand alongside the ACA gate added to Marcus's page (site/quiz.js): the lockout itself, and the terms under which it opens. No sources, because this is the league's own doing rather than anything reported - the only outside fact is Marcus's own public LinkedIn post of 15 September saying he had passed all fifteen ACA exams. No player, fixture or scoring claim in either item."
     }
   ]
 }
