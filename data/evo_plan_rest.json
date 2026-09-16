@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T19:14",
+ "generated": "2026-09-16T08:36",
  "gw": 5,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.71,
-   "ep": 4.1,
+   "ep": 4.11,
    "votes": 4
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.969,
    "base": 3.62,
-   "ep": 3.57,
+   "ep": 3.56,
    "votes": 4
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 7.6,
-   "ep": 7.37,
+   "ep": 7.38,
    "votes": 5
   },
   {
@@ -187,8 +187,8 @@
    "news": "",
    "p_play": 0.379,
    "base": 0.96,
-   "ep": 1.03,
-   "votes": 2
+   "ep": 1.04,
+   "votes": 1
   },
   {
    "id": 84,
@@ -200,7 +200,7 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.28,
+   "ep": -0.24,
    "votes": 1
   },
   {
@@ -214,7 +214,7 @@
    "p_play": 0.0,
    "base": 0.0,
    "ep": -0.33,
-   "votes": 1
+   "votes": 2
   }
  ],
  "xi_ep": 45.7,
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 78.35,
+   "gain": 78.88,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 167
+   "borda": 158
   },
   {
    "pos": "MID",
-   "gain": 95.24,
+   "gain": 95.96,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 142
+   "borda": 136
   },
   {
    "pos": "MID",
-   "gain": 69.58,
+   "gain": 71.14,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 124
+   "borda": 117
   },
   {
    "pos": "MID",
-   "gain": 70.08,
+   "gain": 70.63,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 120
+   "borda": 115
   },
   {
    "pos": "MID",
-   "gain": 66.51,
+   "gain": 68.26,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 139
+   "borda": 120
   },
   {
    "pos": "MID",
-   "gain": 55.92,
+   "gain": 57.1,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 109
+   "borda": 93
   },
   {
    "pos": "MID",
-   "gain": 52.17,
+   "gain": 54.32,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 108
+   "borda": 91
   },
   {
    "pos": "MID",
-   "gain": 49.35,
+   "gain": 50.83,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 70
+   "borda": 59
   },
   {
    "pos": "FWD",
-   "gain": 82.12,
+   "gain": 63.73,
    "change": 3,
    "fallback": false,
    "add": {
@@ -505,12 +505,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 51
+   "votes": 4,
+   "borda": 59
   },
   {
    "pos": "DEF",
-   "gain": 39.67,
+   "gain": 41.74,
    "change": 4,
    "fallback": false,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 32
+   "borda": 29
   },
   {
    "pos": "DEF",
-   "gain": 34.06,
+   "gain": 34.48,
    "change": 4,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 26
+   "borda": 23
   },
   {
    "pos": "DEF",
-   "gain": 40.48,
+   "gain": 39.93,
    "change": 4,
    "fallback": true,
    "add": {
@@ -602,7 +602,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 20
+   "borda": 16
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -680,7 +680,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 195.7,
-   "ep": 194.89
+   "ep": 194.95
   },
   {
    "id": 165,
@@ -716,7 +716,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.24,
-   "ep": 165.95
+   "ep": 166.01
   },
   {
    "id": 260,
@@ -728,7 +728,7 @@
    "news": "",
    "p_play": 0.492,
    "base": 177.03,
-   "ep": 164.86
+   "ep": 165.82
   },
   {
    "id": 387,
@@ -755,18 +755,6 @@
    "ep": 164.07
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.898,
-   "base": 155.86,
-   "ep": 158.54
-  },
-  {
    "id": 388,
    "code": 209036,
    "name": "Gu\u00e9hi",
@@ -791,6 +779,18 @@
    "ep": 161.63
   },
   {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.898,
+   "base": 155.86,
+   "ep": 158.42
+  },
+  {
    "id": 12,
    "code": 223340,
    "name": "Saka",
@@ -812,7 +812,7 @@
    "news": "",
    "p_play": 0.577,
    "base": 165.25,
-   "ep": 151.36
+   "ep": 151.23
   },
   {
    "id": 533,
@@ -872,7 +872,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.25,
-   "ep": 147.21
+   "ep": 146.5
   },
   {
    "id": 368,
@@ -956,7 +956,7 @@
    "news": "",
    "p_play": 0.811,
    "base": 139.31,
-   "ep": 133.04
+   "ep": 133.08
   },
   {
    "id": 398,
@@ -995,18 +995,6 @@
    "ep": 131.52
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.913,
-   "base": 136.08,
-   "ep": 134.06
-  },
-  {
    "id": 25,
    "code": 224117,
    "name": "Gy\u00f6keres",
@@ -1043,6 +1031,18 @@
    "ep": 133.74
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.913,
+   "base": 136.08,
+   "ep": 133.21
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1053,6 +1053,18 @@
    "p_play": 0.839,
    "base": 136.34,
    "ep": 128.46
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.577,
+   "base": 140.33,
+   "ep": 128.73
   },
   {
    "id": 208,
@@ -1077,18 +1089,6 @@
    "p_play": 0.551,
    "base": 147.91,
    "ep": 126.18
-  },
-  {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.577,
-   "base": 140.33,
-   "ep": 127.72
   }
  ]
 }
