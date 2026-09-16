@@ -12,11 +12,13 @@
  * it drops onto one page without team.css or team.js knowing about it, and
  * so removing one script tag removes the whole joke.
  *
- * Nothing here is a real lock. The pages are static and public, the state
- * lives in this browser's localStorage, and the gate has a "later" door in
- * the corner that opens without an answer. It is a bit, not a password:
- * the point is the result, which goes to the same worker the roast box
- * uses and lands in data/roasts.json for the whole league to read.
+ * There is no way past it but through it: ten answers, then the account
+ * opens whatever the score. It is still a bit rather than a password - the
+ * state is this browser's localStorage and the pages are static and public -
+ * but nothing on the gate lets him wave it away, because a man who has
+ * announced fifteen exams can manage ten questions. The point is the
+ * result, which goes to the same worker the roast box uses and lands in
+ * data/roasts.json for the whole league to read.
  */
 (function () {
   const OWNER = 299912;                 // Marcus, and nobody else
@@ -232,9 +234,6 @@ font:600 12px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.03em}
 .acabtn:disabled{opacity:.5;cursor:default}
 .acabtn.ghost{border-color:var(--line,#26365C);color:var(--dim,#8FA0C4)}
 .acabtn.ghost:hover{background:var(--panel2,#1C2B4D);color:var(--ink,#E9EEF8)}
-.acalater{background:none;border:none;color:var(--dim,#8FA0C4);text-decoration:underline;
-cursor:pointer;font:400 12px "IBM Plex Sans",system-ui;padding:0;margin-left:auto}
-.acalater:hover{color:var(--ink,#E9EEF8)}
 .acascore{font:600 52px "Barlow Condensed",system-ui;letter-spacing:.02em;line-height:1}
 .acascore em{font-style:normal;color:var(--dim,#8FA0C4);font-size:28px}
 .acaverdict{font:600 17px "Barlow Condensed",system-ui;letter-spacing:.04em;text-transform:uppercase;
@@ -348,19 +347,13 @@ background:var(--amber,#E8A13C);color:#0F1A31;margin-right:7px}
              the assistant manager job starting in October. The league has one question about that,
              and then nine more.`}</div>
         <p>Multiple choice, no marks back for working, no calculator anybody can see.
-           The score is published whatever it is.</p>
-        <div class="acafoot">${resit ? "" :
-          `<button class="acalater" id="acalater">Let me in, I will sit it later</button>`}</div>
+           Ten answers opens the account whatever they are worth. There is no other way in,
+           and the score is published either way.</p>
       </div>
       <div id="acabody"></div>
     </div>`;
     document.body.appendChild(back);
     document.body.style.overflow = "hidden";
-    // The door in the corner. It opens the account without an answer and
-    // leaves the notice on the News tab saying so, which is the point: a
-    // page nobody can get into is a broken page, not a joke.
-    const later = document.getElementById("acalater");
-    if (later) later.addEventListener("click", () => { save(Object.assign(state(), { open: true })); close(); });
     question();
   }
 
@@ -477,8 +470,7 @@ background:var(--amber,#E8A13C);color:#0F1A31;margin-right:7px}
         <span class="acasend">Sat ${esc(String(st.last.ts).slice(0, 10))}. The result was filed to the league.</span></div>`;
     }
     return `<span class="acabadge">ACA</span><span class="acatext"><b>Verification outstanding.</b>
-      You waved the ten questions away rather than answering them, which the league has
-      noted. The paper is still here.</span>
+      The account is shut until all ten are answered.</span>
       <div class="acaline"><button class="acabtn" data-aca="sit">Sit the paper</button></div>`;
   }
   function notice() {
