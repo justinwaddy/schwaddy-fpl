@@ -1,46 +1,6 @@
 {
-  "generated": "2026-09-16T10:30 UTC",
+  "generated": "2026-09-16T22:46 UTC",
   "items": [
-    {
-      "id": "2026-09-05-xi-1130",
-      "ts": "2026-09-05T11:10",
-      "kind": "news",
-      "text": "Newcastle v Bournemouth, 11:30 kick-off: Newcastle's confirmed XI - every league-owned player starts: Small Ben (Hornícek, Hall, Wissa), Marcus (Elanga), Big Ben (Thiaw), Edward (Dedić). Bournemouth's teamsheet was not available from a permitted source, leaving Marcus (Evanilson), Big Ben (Truffert) and Justin (Tavernier) uncovered.",
-      "source": {
-        "title": "Confirmed line-up: Home debut for Nico against Bournemouth, Fernandez-Pardo and Livramento on the bench",
-        "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-home-debut-for-nico-against-bournemouth-fernandez-pardo-and-livramento-on-the-bench"
-      }
-    },
-    {
-      "id": "2026-09-05-xi-1400",
-      "ts": "2026-09-05T13:13",
-      "kind": "news",
-      "text": "Team news, 15:00 kick-offs: Edward's Ajer, Verbruggen, Stach, Calvert-Lewin, Semenyo, N.Williams and Gibbs-White all start. Small Ben's Thiago, Donnarumma, Khusanov, Ruben Dias and Anderson all start. Justin's Collins, Schade, Gvardiol, Haaland, Milenkovic and Marmoush start; Bijol, Munoz and Strand Larsen are subs, Doku misses out. Big Ben's Kelleher, M.Sangare, Gonzalo and Delap start; Nunes and Enzo Fernandez are subs. Marcus's Mukiele, De Cuyper and Kinsky start; Foden is a sub, Richarlison out. Robert's Roefs, O'Reilly, Cherki and Ndiaye start; Wilson and Solanke are subs, Mateta injured.",
-      "source": {
-        "title": "Starting Lineups - Manchester City vs Coventry City",
-        "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/teams/559471"
-      }
-    },
-    {
-      "id": "2026-09-05-xi-1630",
-      "ts": "2026-09-05T16:08",
-      "kind": "news",
-      "text": "Team news, 16:30 kick-off (Hull City v Aston Villa): Edward's Nicolas Jackson is confirmed in Aston Villa's starting eleven, named up front by Unai Emery. No other league-owned player features, with nobody in the league holding a Hull City player.",
-      "source": {
-        "title": "Hull City vs Aston Villa Starting Lineups",
-        "url": "https://www.skysports.com/football/hull-city-vs-aston-villa/teams/559469"
-      }
-    },
-    {
-      "id": "2026-09-05-haaland-300-city-coventry",
-      "ts": "2026-09-05T22:45",
-      "kind": "news",
-      "text": "Erling Haaland headed in Antoine Semenyo's cross for the only goal as Manchester City beat Coventry 1-0, the 300th club goal of his career. Enzo Fernandez set up the move on his City debut, only playing because Nico O'Reilly was injured in the warm-up before kick-off. Justin owns Haaland, Big Ben owns Fernandez, and Robert owns O'Reilly, who did not end up featuring at all.",
-      "source": {
-        "title": "Man City 1-0 Coventry: Erling Haaland ensures perfect Premier League record is preserved under Enzo Maresca",
-        "url": "https://www.skysports.com/football/manchester-city-vs-coventry-city/report/559471"
-      }
-    },
     {
       "id": "2026-09-05-spurs-blank-record-forest",
       "ts": "2026-09-05T22:45",
@@ -725,6 +685,30 @@
       "ts": "2026-09-16T10:29",
       "kind": "opinion",
       "text": "Marcus has been locked out of his own page for swinging his dick on LinkedIn. Hours after telling LinkedIn he had passed all fifteen ACA exams, thanked his family and his colleagues at KPMG, and mentioned the assistant manager job starting in October, the league has put a ten-question ACA paper across his front door. No news, squad, no table and waivers until all ten are answered, and the score will be published here whatever it is."
+    },
+    {
+      "id": "2026-09-16-bha-mun-carabao",
+      "ts": "2026-09-16T22:46",
+      "kind": "news",
+      "text": "Brighton came back from two goals down to beat Manchester United 3-2 at Old Trafford in Tuesday's Carabao Cup third round. Babis Kostoulas scored just before half-time and later teed up the winner, Pascal Groß levelled after a United defensive error, and Maxim De Cuyper poked in from six yards for the winner. Marcus owns De Cuyper, Edward owns Groß and Ben D owns Kostoulas - between them the three scored every Albion goal.",
+      "source": {
+        "title": "United 2 Albion 3: 50-year record broken as Albion stun at Old Trafford",
+        "url": "https://www.brightonandhovealbion.com/media-article/pl-mft-match-report-manchester-united-bha-september-2026"
+      }
+    },
+    {
+      "id": "2026-09-16-carabao-nothing-counts",
+      "ts": "2026-09-16T22:46",
+      "kind": "opinion",
+      "text": "Marcus, Edward and Ben D can, between them, claim every goal from Tuesday's 3-2 smash-and-grab at Old Trafford - De Cuyper, Groß and Kostoulas did the damage - and it is worth precisely nothing on this page, because Carabao Cup goals do not touch the table. Ben C, Justin and Robert just have to sit with the knowledge that three of their rivals' players spent Tuesday night embarrassing Manchester United for fun.",
+      "source": null
+    },
+    {
+      "id": "2026-09-16-state-of-the-league",
+      "ts": "2026-09-16T22:46",
+      "kind": "opinion",
+      "text": "Four games in, the top of the table is a genuine scrap - Marcus leads Justin by just 7, with Edward 16 back in third - while underneath it Ben D's season has become a cautionary tale. His squad reads like a highlights reel (Wirtz, Havertz, Rogers, Grealish, Enzo, Matheus N.) and it still sits 45 behind the leader in fifth, propped up almost entirely by Kostoulas actually putting up points. Bottom of the pile, Robert is 70 adrift and still fielding Yoro, Mosquera and Mateta on 0 points apiece for the season - a squad that reads better than it counts.",
+      "source": null
     }
   ],
   "runs": [
@@ -1110,6 +1094,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Not a scheduled run. Justin rewrote the ACA lockout item in his own words - the LinkedIn line, and news added to the list of what is behind the gate. Same id and timestamp, text verbatim as he sent it: the routine did not write this one and is not to reword it."
+    },
+    {
+      "ts": "2026-09-16T22:46 UTC",
+      "news": 1,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap, no PL fixtures today (GW5 starts Thu 18th) so no fresh gameweek points to react to. Led with Brighton's 3-2 Carabao Cup comeback at Old Trafford (brightonandhovealbion.com), which happens to touch three squads at once (De Cuyper/Marcus, Groß/Edward, Kostoulas/Ben D) - used it for both the news item and one opinion riff, careful to say it doesn't move the table. Second opinion piece on the state of the league from the standings. Both unused roast-archive items passed over: the Ben D self-roast is a sexuality joke and the Ben D-on-Justin line references apartheid, both barred by the race/sexuality rule regardless of framing - holding, not scheduling. No flops to rewrite today (none posted automatically)."
     }
   ]
 }
