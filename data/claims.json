@@ -1,7 +1,7 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-15T21:20 UTC",
+  "ts": "2026-09-16T21:13 UTC",
   "summary": "Evening sweep found nothing that moves any verdict - same five claims as this morning. Milenkovic's hamstring has now shown up directly in the model's own numbers (avail 0.00, next5 5.6, 'Expected back 11 Oct'), so claim 3 no longer needs the news to carry the case on its own. Justin sits second in the table on 211 points, which is still fifth of six in the reversed GW5 waiver order (waivers close Thursday 17:30 UTC) - Robert, Ben D, Ben C and Edward all pick ahead of him, so claims 2-5 are contingency picks that only matter if a rival passes on the same swap or claim 1 fails.",
   "claims": [
     {
@@ -534,6 +534,12 @@
       "gw": 5,
       "claims": 5,
       "note": "Evening sweep (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus general PL injury/lineup searches. Nothing cleared the sourcing bar for a change: Milenkovic's extended hamstring timeline is now already reflected in the model's own avail/next5 figures, so refreshed claim 3's model line and lifted it to high confidence rather than treating it as new news. Checked and found unmoved: Marmoush is being previewed as a likely Spurs starter for Sunday's Villa game by unpermitted predicted-XI sites only, no permitted outlet has confirmed it, so no change to claim 5's reasoning; Fernandez-Pardo's next Newcastle game is away at Hull on the 19th with no fresh team news yet; Bogle, Mitchell, Vuskovic, Truffert, Collins and Hill all reconfirmed exactly as already reported. Next scheduled team-news pressers land Thu/Fri before Thursday's waiver close, so expect the next material change then."
+    },
+    {
+      "ts": "2026-09-16T21:13 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "No change to which five claims are made, ~23.5 hours after last night's board, with tomorrow's 17:30 UTC waiver close now under a day away. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check found nothing that clears the sourcing bar. Chased down and discarded a Tottenham team-news piece on Maddison/Kudus that read live on tottenhamhotspur.com turned out to be the same 11 September article already used for an earlier headline, not new, and it never mentions Marmoush at all - no change to claim 5's reasoning. Milenkovic's hamstring timeline and Palace's Nketiah/Sarr fitness doubts both resurfaced only via unofficial fan sites (nottinghamforest.news, Yorkshire Evening Post, Sports Mole), not a permitted outlet. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all reconfirmed exactly as last night. Thursday and Friday's pre-match pressers, which land after the waiver close, remain the likely source of the next material change - if nothing further comes in before then, this board stands as final."
     }
   ]
 }
