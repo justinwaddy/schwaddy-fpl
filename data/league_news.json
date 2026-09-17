@@ -1,16 +1,6 @@
 {
-  "generated": "2026-09-16T22:46 UTC",
+  "generated": "2026-09-17T07:59 UTC",
   "items": [
-    {
-      "id": "2026-09-05-spurs-blank-record-forest",
-      "ts": "2026-09-05T22:45",
-      "kind": "news",
-      "text": "Tottenham failed to score in any of their first three league games for the first time since 1974, held goalless again in a 0-0 draw at Nottingham Forest. Neco Williams had a second-half goal ruled out by VAR for handball for the hosts. Edward owns Williams, who continues to look like Forest's likeliest source of a goal despite the disallowed effort.",
-      "source": {
-        "title": "Nottingham Forest 0-0 Spurs: Another blank for Roberto De Zerbi in goalless draw at City Ground",
-        "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/6701572898492963232"
-      }
-    },
     {
       "id": "2026-09-05-opinion-marcus-luck",
       "ts": "2026-09-05T22:45",
@@ -709,6 +699,16 @@
       "kind": "opinion",
       "text": "Four games in, the top of the table is a genuine scrap - Marcus leads Justin by just 7, with Edward 16 back in third - while underneath it Ben D's season has become a cautionary tale. His squad reads like a highlights reel (Wirtz, Havertz, Rogers, Grealish, Enzo, Matheus N.) and it still sits 45 behind the leader in fifth, propped up almost entirely by Kostoulas actually putting up points. Bottom of the pile, Robert is 70 adrift and still fielding Yoro, Mosquera and Mateta on 0 points apiece for the season - a squad that reads better than it counts.",
       "source": null
+    },
+    {
+      "id": "2026-09-17-collins-out-again",
+      "ts": "2026-09-17T07:59",
+      "kind": "news",
+      "text": "Brentford's Nathan Collins will miss the visit of Chelsea as well as last week's trip to Bournemouth, with head coach Keith Andrews confirming the calf injury picked up against Sunderland means the defender will not be involved before the international break. Justin owns Collins, who has yet to feature since the injury.",
+      "source": {
+        "title": "Bournemouth v Brentford: Keith Andrews squad news update - Nathan Collins",
+        "url": "https://www.brentfordfc.com/en/news/article/first-team-bournemouth-v-brentford-premier-league-keith-andrews-squad-news-update-nathan-collins"
+      }
     }
   ],
   "runs": [
@@ -1101,6 +1101,13 @@
       "opinion": 2,
       "matchday": false,
       "note": "Evening wrap, no PL fixtures today (GW5 starts Thu 18th) so no fresh gameweek points to react to. Led with Brighton's 3-2 Carabao Cup comeback at Old Trafford (brightonandhovealbion.com), which happens to touch three squads at once (De Cuyper/Marcus, Groß/Edward, Kostoulas/Ben D) - used it for both the news item and one opinion riff, careful to say it doesn't move the table. Second opinion piece on the state of the league from the standings. Both unused roast-archive items passed over: the Ben D self-roast is a sexuality joke and the Ben D-on-Justin line references apartheid, both barred by the race/sexuality rule regardless of framing - holding, not scheduling. No flops to rewrite today (none posted automatically)."
+    },
+    {
+      "ts": "2026-09-17T07:59 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news, no PL fixtures today (GW5 runs Thu 18-Sun 20). Spent the bulk of this run trying to clear the sourcing bar and it was brutal: multiple permitted-outlet leads (a Liverpool.com Bournemouth-Tavernier-hamstring story, a Chelsea joao Pedro 'injury blow' line, Elanga's supposed long-term MRI, Foden's suspension length) either had no permitted source that actually stated the detail, or flatly failed a cross-check against fixtures_2627.json (the Tavernier story referenced a Bournemouth v Brighton match that isn't fixture list at all this season) so they were dropped rather than published. Ran with the one story that survived direct reading on the club site (brentfordfc.com) and matched our fixture data exactly on every date checked: Nathan Collins, who Justin owns, still out midweek and now confirmed out for Brentford-Chelsea too. Fewer items than usual on purpose per the sourcing rule rather than pad with anything unverified."
     }
   ]
 }
