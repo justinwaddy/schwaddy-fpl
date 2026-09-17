@@ -215,6 +215,14 @@
       "scope": "free",
       "text": "Newcastle's 51m deadline-day signing Matias Fernandez-Pardo got his full first-team debut in that same Leeds game, but Jaissle hooked him at the 57th minute with the score already 3-0, per the club's own match centre. The model still rates him bottom of the forward pool off essentially no minutes (avail 0.19, next5 2.7) - a real data point at last, though one bad afternoon does not settle whether he starts again against Bournemouth.",
       "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+    },
+    {
+      "id": "2026-09-17-kudus-first-start-marmoush-holds-place",
+      "ts": "2026-09-17T08:12 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Mohammed Kudus made his first Tottenham start since January in Wednesday's Carabao Cup exit at Liverpool, but Marmoush also started and played the full 90 in a heavily rotated XI - the pecking order for Justin's forward has not shifted yet, though Kudus's return is a fresh name to watch.",
+      "url": "https://www.tottenhamhotspur.com/news/1090166/confirmed-line-ups-liverpool-vs-spurs-carabao-cup"
     }
   ],
   "runs": [
@@ -412,6 +420,11 @@
       "ts": "2026-09-16T21:13 UTC",
       "published": 0,
       "note": "Club-by-club sweep ~23.5 hours after last night's 21:20 run (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check for anything dated today. Nothing genuinely new and citable to a permitted outlet turned up. Chased down and discarded: a Tottenham 'Maddison back in the frame, Kudus close to being ready' team-news piece read in full on tottenhamhotspur.com and confirmed it is the same 11 September article already published on the 11th, not new, and it does not mention Marmoush at all; a Milenkovic hamstring-timeline update traces only to nottinghamforest.news (an unofficial fan site, not nottinghamforest.com), three days old; Crystal Palace doubts on Nketiah and Sarr for the Leeds game trace only to Yorkshire Evening Post and Sports Mole, not a permitted outlet; no Newcastle press conference for Saturday's Hull game has surfaced yet, nor a Brighton team-news piece for Saturday's Arsenal game. One useful correction for internal tracking only, not a headline since it changes no player's status: Bournemouth's head coach is Marco Rose, not Andoni Iraola, confirmed on afcb.co.uk - Iraola left for Liverpool in May. Everything in the squad and free-agent shortlist reconfirmed unchanged: Collins still out at Brentford, Milenkovic still out at Forest past Coventry, Mitchell and Strand Larsen still nailed at Palace, Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth, Bogle/Ampadu/Vuskovic all fit. Nothing published. Thursday and Friday's pre-match pressers, landing after tomorrow's 17:30 UTC waiver close, are the likely source of the next material change."
+    },
+    {
+      "ts": "2026-09-17T08:12 UTC",
+      "published": 1,
+      "note": "Final sweep before today's 17:30 UTC waiver close, ~11 hours after last night's 21:13 run. Club-by-club pass (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Newcastle) plus Thursday-presser-focused searches and two general PL sweeps. Published one item: Kudus made his first Tottenham start since January in Wednesday's Carabao Cup tie at Liverpool, confirmed on tottenhamhotspur.com's own line-ups page, but Marmoush also started and played the full 90 in a 10-outfield-change rotated XI, so nothing yet threatens his spot despite Kudus's return. Chased down and discarded a Sky Sports 'Pickford out for a month with thigh injury' story - the search's own summary flagged it as dated September 2022, not this season, so left unpublished. Also confirmed but not news: Milenkovic still out past Saturday's Coventry game per Forest's own line, Collins still out at Brentford with no fresher timeline, Truffert/Hill/Scott/Tavernier all still nailed after Saturday's 2-2 draw with Brentford (Tavernier's fourth goal in five games), Bogle and Ampadu both fit for Sunday's Crystal Palace trip, Mitchell and Strand Larsen still nailed at Palace, and Fernandez-Pardo's next start is still an open question with no fresh Newcastle presser for Saturday's Hull game published yet. Nothing else cleared the sourcing bar."
     }
   ]
 }

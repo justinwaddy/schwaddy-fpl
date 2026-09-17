@@ -1,8 +1,8 @@
 {
   "gw": 5,
   "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-16T21:13 UTC",
-  "summary": "Evening sweep found nothing that moves any verdict - same five claims as this morning. Milenkovic's hamstring has now shown up directly in the model's own numbers (avail 0.00, next5 5.6, 'Expected back 11 Oct'), so claim 3 no longer needs the news to carry the case on its own. Justin sits second in the table on 211 points, which is still fifth of six in the reversed GW5 waiver order (waivers close Thursday 17:30 UTC) - Robert, Ben D, Ben C and Edward all pick ahead of him, so claims 2-5 are contingency picks that only matter if a rival passes on the same swap or claim 1 fails.",
+  "ts": "2026-09-17T08:12 UTC",
+  "summary": "Final sweep before today's 17:30 UTC waiver close - nothing changed the five claims themselves. Kudus made his first Tottenham start since January in Wednesday's Carabao Cup tie but Marmoush also started and played the full 90, so claim 5 stands as the same speculative, low-confidence punt it has been all week. Justin sits second in the table on 211 points, which is still fifth of six in the reversed GW5 waiver order - Robert, Ben D, Ben C and Edward all pick ahead of him, so claims 2-5 remain contingency picks that only matter if a rival passes on the same swap or claim 1 fails.",
   "claims": [
     {
       "rank": 1,
@@ -109,7 +109,7 @@
         "code": "438234",
         "club": "TOT"
       },
-      "why": "Confirmed: Fernandez-Pardo got his full Newcastle debut in Monday's 4-1 defeat at Leeds, but it did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0. That is a genuine data point for a player the model has otherwise never seen (n=0 games before tonight), but one bad full debut does not settle whether he starts again at home to Bournemouth; that Jaissle trusted him with 57 minutes at all, on the back of a 51m fee, is still the more instructive signal. Marmoush remains the drop purely on the model's own board, with no fitness concern against him.",
+      "why": "Fernandez-Pardo's full Newcastle debut (Monday's 4-1 defeat at Leeds) did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0 - but that Jaissle trusted a 51m signing with 57 minutes at all is still the more instructive signal than one bad afternoon. Marmoush remains the drop purely on the model's board: Wednesday's Carabao Cup tie at Liverpool saw Kudus make his first Tottenham start since January, but Marmoush also started and played the full 90 in that rotated XI, so nothing there favours dropping him either.",
       "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
       "confidence": "low",
       "sources": [
@@ -540,6 +540,12 @@
       "gw": 5,
       "claims": 5,
       "note": "No change to which five claims are made, ~23.5 hours after last night's board, with tomorrow's 17:30 UTC waiver close now under a day away. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check found nothing that clears the sourcing bar. Chased down and discarded a Tottenham team-news piece on Maddison/Kudus that read live on tottenhamhotspur.com turned out to be the same 11 September article already used for an earlier headline, not new, and it never mentions Marmoush at all - no change to claim 5's reasoning. Milenkovic's hamstring timeline and Palace's Nketiah/Sarr fitness doubts both resurfaced only via unofficial fan sites (nottinghamforest.news, Yorkshire Evening Post, Sports Mole), not a permitted outlet. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all reconfirmed exactly as last night. Thursday and Friday's pre-match pressers, which land after the waiver close, remain the likely source of the next material change - if nothing further comes in before then, this board stands as final."
+    },
+    {
+      "ts": "2026-09-17T08:12 UTC",
+      "gw": 5,
+      "claims": 5,
+      "note": "Final pre-close sweep. No change to which five claims are made or their order. Confirmed Kudus's first Tottenham start since January (Carabao Cup vs Liverpool) but Marmoush also started and played the full 90 in that heavily-rotated XI, so no change to claim 5's reasoning beyond noting it. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic and Maguire/Bogle all reconfirmed exactly as last night after a full club-by-club sweep. This board stands as final for the GW5 window unless something changes before 17:30 UTC."
     }
   ]
 }
