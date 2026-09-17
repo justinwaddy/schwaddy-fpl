@@ -786,19 +786,49 @@ function loading(what) {
 
 function draw() { renderSquad(); renderLeague(); renderPlayers(); renderNews(); renderLive(); }
 
+/* Everything on this page except the live feed is fetched once and held.
+ * On a phone the tab can sit for days and come back with Monday's numbers
+ * in it while the Live tab, which polls, looks current - which is how
+ * "the player cards are not updated" gets reported when the data was. So
+ * when the page comes back into view, or has simply been open a while,
+ * public.json is asked for again. If the refresh has run since, the stats
+ * and history files were rewritten in the same run, so they are dropped
+ * and fetched again with it, and the news feed is re-read. Nothing is
+ * redrawn unless the file actually changed: a repaint closes every
+ * breakdown somebody had opened. */
+const STALE_MS = 10 * 60e3;
+let PUBAT = 0;
+function loadPublic() {
+  PUBAT = Date.now();
+  get(PUBLIC_URL, j => {
+    // a later refresh than the one on screen, as opposed to the first load
+    const again = !!PUB && j.generated !== PUB.generated;
+    if (PUB && !again) return;
+    PUB = j;
+    const m = me();
+    $("title").innerHTML = m ? `${esc(m.team)}` : "27 Richmond Road Cup";
+    $("meta").textContent = `${m ? who(m.entry, m.name) + " · " : ""}GW${j.gw} · updated ${(j.generated || "").slice(0, 16).replace("T", " ")} UTC`;
+    if (again) {
+      STATS = null; STATSREQ = false; ID2CODE = {};
+      HIST = null; HISTREQ = false;
+      get(NEWS_URL, n => { NEWS = n; renderNews(); }, "news");
+    }
+    draw();
+    if (again && CARD) ensureStats(drawCard);
+  }, "pub");
+}
+function refetchIfStale() {
+  if (document.hidden || Date.now() - PUBAT < STALE_MS) return;
+  loadPublic();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
     document.querySelectorAll("section").forEach(x => x.classList.remove("on"));
     t.classList.add("on"); $(t.dataset.v).classList.add("on");
   }));
-  get(PUBLIC_URL, j => {
-    PUB = j;
-    const m = me();
-    $("title").innerHTML = m ? `${esc(m.team)}` : "27 Richmond Road Cup";
-    $("meta").textContent = `${m ? who(m.entry, m.name) + " · " : ""}GW${j.gw} · updated ${(j.generated || "").slice(0, 16).replace("T", " ")} UTC`;
-    draw();
-  }, "pub");
+  loadPublic();
   get(NEWS_URL, j => { NEWS = j; renderNews(); }, "news");
   if (SHOW_PRICES) get(PRICES_URL, j => { PRICES = j; draw(); }, "prices");
   pollLive();
@@ -1954,5 +1984,8 @@ async function pollLive() {
   if (d != null && !document.hidden) LIVETIMER = setTimeout(pollLive, d);
 }
 document.addEventListener("visibilitychange", () => {
-  if (document.hidden) clearTimeout(LIVETIMER); else pollLive();
+  if (document.hidden) clearTimeout(LIVETIMER); else { refetchIfStale(); pollLive(); }
 });
+// back out of the browser's page cache, or simply left open: same check
+window.addEventListener("pageshow", e => { if (e.persisted) refetchIfStale(); });
+setInterval(refetchIfStale, 60e3);

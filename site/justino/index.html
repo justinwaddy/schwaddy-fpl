@@ -1337,6 +1337,9 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
   document.querySelectorAll("section").forEach(x=>x.classList.remove("on"));
   t.classList.add("on");document.getElementById(t.dataset.v).classList.add("on");
 }));
+// the tab a stale-page reload (see reloadIfStale) was on
+try{const v=sessionStorage.getItem("tab");if(v){sessionStorage.removeItem("tab");
+  const t=document.querySelector(`.tab[data-v="${v}"]`);if(t)t.click();}}catch(e){}
 
 /* ---------------- Live tab ----------------
    Polls the worker (live/worker.js) for one bundled snapshot of the
@@ -1596,7 +1599,19 @@ async function pollLive(){
   const d=liveDelay();
   if(d!=null&&!document.hidden)LIVETIMER=setTimeout(pollLive,d);
 }
-document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(LIVETIMER);else pollLive();});
+/* The data files are fetched once, at load, and held; only the live feed
+   polls. A tab a phone brings back days later would show that day's cards
+   under a Live tab that looks current, so a page coming back into view
+   after a while reloads itself instead. The open card lives in the hash
+   and the tab is carried over, so it lands where it was. */
+const LOADED_AT=Date.now(),STALE_MS=10*60e3;
+function reloadIfStale(){
+  if(document.hidden||Date.now()-LOADED_AT<STALE_MS)return;
+  try{const on=document.querySelector(".tab.on");if(on)sessionStorage.setItem("tab",on.dataset.v);}catch(e){}
+  location.reload();
+}
+document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(LIVETIMER);else{reloadIfStale();pollLive();}});
+window.addEventListener("pageshow",e=>{if(e.persisted)reloadIfStale();});
 pollLive();
 fetch(RAW_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{j._src="live from GitHub";DATA=j;render();drawCard();})
