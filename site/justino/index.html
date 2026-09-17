@@ -397,14 +397,15 @@ const EVO_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/d
 let EVO=null;
 fetch(EVO_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{EVO=j;if(DATA){renderWaivers(DATA.players);renderNN();}}).catch(()=>{});
-// The NN tab reads the same models' plan with every claim judged on the
-// rest of the season rather than the next five gameweeks (evo.run live
-// --horizon rest). Until the refresh has written it, the tab shows the
-// five-week plan and says so.
-const EVO_REST_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan_rest.json";
-let EVO_REST=null;
-fetch(EVO_REST_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{EVO_REST=j;if(DATA)renderNN();}).catch(()=>{});
+// The NN tab reads that same file and nothing else. It used to read a
+// second plan with every claim judged on the rest of the season
+// (evo.run live --horizon rest), which was the same weights over a
+// season-length baseline: never trained that way, never cross-validated,
+// and its switching margin scales with the spread of whatever baseline
+// it is handed, so over a season it silently became about six times
+// stricter and cut the list off early. The tab now shows only what the
+// policy was actually scored on - the next five gameweeks - so every
+// number on it is a number the cross-validation covers.
 const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
 let CLAIMS=null;
 fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
@@ -1256,8 +1257,7 @@ function nnPlayer(x,by){
 }
 function renderNN(){
   const sec=document.getElementById("nn");if(!sec)return;
-  const E=EVO_REST||EVO,ps=(DATA&&DATA.players)||[];
-  const season=!!(E&&E.horizon==="rest");
+  const E=EVO,ps=(DATA&&DATA.players)||[];
   if(!E){
     sec.innerHTML=`<div class="card evocard"><b class="h">What the network would do</b><div class="note">No plan yet. The refresh runs the five models against the live league each morning and writes data/evo_plan.json; this tab fills in after that.</div></div>`;
     return;
@@ -1271,7 +1271,8 @@ function renderNN(){
   let h=`<div class="card evocard"><b class="h">What the network would do · GW${gw||"?"}</b>
   <div class="clsub">${E.window==="waiver"?`waiver window · claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency · deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC · ${n>1?`${n} models voting`:"one model"}</div>`;
   if(gw&&gw<cur)h+=`<div class="stale">Written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
-  h+=`<div class="note">Its own decisions, in full and in order, as it would submit them from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. ${season?"Every claim is judged on <b>the rest of the season</b>, the injury return dates included, for a manager who holds what he claims; the five-week version of the same plan is on the Waivers tab.":"Claims here are judged on <b>the next five gameweeks</b>; the season-horizon plan appears once the refresh has written it."}</div></div>`;
+  if(E.horizon&&E.horizon!=="next5")h+=`<div class="stale">This plan was written on the <b>${esc(E.horizon)}</b> horizon, not the five gameweeks this tab describes. Every number below is on that other horizon; the refresh should be writing next5.</div>`;
+  h+=`<div class="note">Its own decisions, in full and in order, as it would submit them from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. Every claim is judged on <b>the next five gameweeks</b> - the horizon the policy was trained and cross-validated on, so nothing here is the same weights stretched over a window they were never scored against.</div></div>`;
   // ---- 1. the moves
   if(locked){
     h+=`<div class="card evocard"><b class="h">Nothing to submit</b><div class="note">The team sheet for GW${gw} is locked. The next window opens after the gameweek and the morning refresh writes its claims then.</div></div>`;
@@ -1291,7 +1292,7 @@ function renderNN(){
         <span class="pos ${esc(c.pos||"")}">${esc(c.pos||"")}</span>
         <span class="clarr">add</span> ${nnPlayer(A,by)}
         <span class="clarr">drop</span> ${nnPlayer(D,by)}
-        <span class="gain" title="the network's own score for the swap, expected points over ${season?"the rest of the season":"five gameweeks"}${n>1?", the mean over the models that list it":""}">+${Number(c.gain||0).toFixed(1)}${season?` <span class="tm">season</span>`:""}</span>${votes(c)}</div>`;
+        <span class="gain" title="the network's own score for the swap, expected points over five gameweeks${n>1?", the mean over the models that list it":""}">+${Number(c.gain||0).toFixed(1)}</span>${votes(c)}</div>`;
       if(D.news)h+=`<div class="clwhy"><span class="flag">${esc(D.name)}: ${esc(D.news)}</span></div>`;
       if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
       h+=`</div>`;
@@ -1329,7 +1330,7 @@ function renderNN(){
     h+=`<div class="card evocard"><b class="h">Its draft board</b><div class="note">Season projections at pick one, for next August. It has no bearing on this week.</div><div class="note">${E.board.slice(0,40).map((p,i)=>`${i+1}. ${(p.code&&by[String(p.code)])?nm(by[String(p.code)]):esc(p.name)} <span class="tm">${esc(p.team||"")}</span>`).join(" · ")}</div></div>`;
   }
   // ---- 4. how it decides
-  h+=`<div class="card evocard"><b class="h">How it decides</b><div class="note">A policy evolved against itself over five archived seasons, scored against the heuristic it starts from (evo/README.md has the numbers and every caveat). ${season?"Waivers and free agents are judged here over the rest of the season - the remaining fixtures at each man's rate, with the injury return date - from a shortlist of the sixty free agents with the best season number; the policy was trained making five-week decisions, and the same weights are applied to the season baseline.":"Waivers and free agents are judged over the next five gameweeks, from a shortlist of the sixty free agents with the best five-week number."} The eleven is judged on this gameweek alone; the board on the season. Injuries, return dates, prices and the fixture run are inside the features.${n>1?` Five independently trained models vote: the eleven on their median expected points, each change by Borda count over their rankings at that step of the list, with a change needing ${E.majority||"a majority"} of them to agree on the man dropped${E.min_votes>1?` and a listed swap ${E.min_votes}`:""}.`:""}</div></div>`;
+  h+=`<div class="card evocard"><b class="h">How it decides</b><div class="note">A policy evolved against itself over five archived seasons, scored against the heuristic it starts from (evo/README.md has the numbers and every caveat). Waivers and free agents are judged over the next five gameweeks, from a shortlist of the sixty free agents with the best five-week number - and that shortlist is the heuristic's, taken before the network scores anything, so a man it ranks sixty-first never reaches the vote at all. The eleven is judged on this gameweek alone; the board on the season. Injuries, return dates, prices and the fixture run are inside the features.${n>1?` Five independently trained models vote: the eleven on their median expected points, each change by Borda count over their rankings at that step of the list, with a change needing ${E.majority||"a majority"} of them to agree on the man dropped${E.min_votes>1?` and a listed swap ${E.min_votes}`:""}.`:""}</div></div>`;
   sec.innerHTML=h;
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{

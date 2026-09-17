@@ -1008,17 +1008,29 @@ together, so the cron never sees one without the other.
 `data/evo_model.npz` is the pre-audit single model, kept for the record
 and no longer run.
 
-**Two horizons.** `--horizon next5` (the default) judges every claim on
-the five-gameweek total the policy was trained against. `--horizon
-rest` hands the same head the rest-of-season baseline instead - the
-remaining fixtures at each man's rate, the injury return date included
-- and writes `data/evo_plan_rest.json`; the residual and the margin
-are both scaled by the spread of whatever baseline the head is given,
-so the judgement transfers and nothing is retrained. The two can
-disagree on purpose: on the season a defender back in four weeks is
-worth holding, on five weeks he is not. The justino page's NN tab shows
-the season plan; its Waivers tab the five-week one beside the matrix
-model.
+**Two horizons, one of them scheduled.** `--horizon next5` (the default)
+judges every claim on the five-gameweek total the policy was trained
+against, and it is the only one anything reads: both the justino page's
+NN tab and its Waivers tab show it. `--horizon rest` hands the same head
+the rest-of-season baseline instead - the remaining fixtures at each
+man's rate, the injury return date included - and it remains available
+on the command line as a diagnostic, but nothing on the site or in the
+refresh writes or reads it any more.
+
+It was dropped from both because the transfer is weaker than it looks.
+The residual and the margin are both scaled by the spread of whatever
+baseline the head is given, which was the argument for it: the judgement
+transfers and nothing is retrained. But the residual the head produces
+is then *identical* on the two horizons, to two decimals - only the
+baseline underneath moves - so the season plan is not the policy
+reasoning about a season, it is a five-week opinion sitting on a
+season-length baseline. And `std(base)` goes from about 4.7 to about
+28.4 between them, so the switching margin inflates roughly sixfold in
+raw points at a horizon nobody tuned it for. In GW5 2026/27 that ended
+the claim list four changes in, with two injured defenders still held,
+where the five-week list ran to seven and dropped both. Nothing here was
+ever cross-validated on the season baseline; the numbers in this README
+are all `next5`.
 
 Online, it pulls the draft API for the league's current ownership and
 your squad, brings the injury log up to today from the bootstrap, works
