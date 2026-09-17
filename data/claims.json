@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-17T19:30 UTC",
-  "summary": "First board for the GW6 window, which does not close until 9 October after a three-week gap - plenty will change before it matters, but this reflects the research done today, the first run since GW5 waivers processed. Declined to follow the model's own top suggestion to drop Barcola for Anderson (+15.1, the biggest number on its whole board): two Champions League and Premier League starts running and Alexander Isak publicly backing him this week are the same new-arrival blind spot that undersold Marmoush and Munoz for weeks, not a genuine drop case. Instead used the fixture-only edges the model does support at GKP, DEF and MID, plus a low-confidence FWD form punt and a speculative bet on Timber, now a confirmed Palace midfield starter the model still can't see. Justin sits 2nd in the table on 211 points, which works out to 5th of 6 in the reversed GW6 waiver order - only Marcus, in 1st, picks after him.",
+  "ts": "2026-09-17T21:09 UTC",
+  "summary": "Board for the GW6 window, which does not close until 9 October after a three-week gap - plenty will change before it matters. A fresh sweep ~1.5 hours after this morning's first board found nothing that moves any of the five claims: Arsenal, Palace, Leeds and Spurs team news all reconfirmed rather than changed, and the Premier League's own injury tracker (updated today) does not list Marmoush or Van Hecke among the missing. Declined to follow the model's own top suggestion to drop Barcola for Anderson (+15.1, the biggest number on its whole board): two Champions League and Premier League starts running and Alexander Isak publicly backing him this week are the same new-arrival blind spot that undersold Marmoush and Munoz for weeks, not a genuine drop case. Instead used the fixture-only edges the model does support at GKP, DEF and MID, plus a low-confidence FWD form punt and a speculative bet on Timber, now a confirmed Palace midfield starter the model still can't see. Justin sits 2nd in the table on 211 points, which works out to 5th of 6 in the reversed GW6 waiver order - only Marcus, in 1st, picks after him.",
   "claims": [
     {
       "rank": 1,
@@ -457,6 +457,12 @@
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-17T21:09 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made, ~1.5 hours after this morning's first GW6 board. Fresh club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Nottingham Forest) plus the Premier League's own injury tracker (updated today) reconfirmed everything: no fresh word on the GW6 free-agent targets (McBurnie, Stach, Anderson, Truffert, Timber), Marmoush and Van Hecke are not on the league's own injury list, and Barcola's case is unchanged from this morning. This board stands as the GW6 recommendation pending anything new before the 9 October close."
+    },
     {
       "ts": "2026-09-17T19:30 UTC",
       "gw": 6,

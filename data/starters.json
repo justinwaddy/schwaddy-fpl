@@ -221,6 +221,12 @@
   ],
   "runs": [
     {
+      "ts": "2026-09-17T21:09 UTC",
+      "gw": 5,
+      "kind": "light",
+      "note": "No change, ~1.5 hours after this morning's deep pass, with tomorrow's 17:30 UTC deadline now under a day away. Fresh club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Nottingham Forest) plus the Premier League's own injury tracker (updated today) found nothing to move any of the 15 verdicts: Arsenal's own site still has only Saliba out and no fresh word on Raya; Crystal Palace's own coverage reconfirms Mateta out until after the international break with Strand Larsen leading the line, Sarr and Nketiah also doubtful; Leeds have Gruev, Gudmundsson and Gnonto working back into training with nothing on Bogle; the league's own tracker lists Spurs' absentees as Kudus, Maddison, Kulusevski, Odobert and Solanke, with neither Marmoush nor Van Hecke among them. Gvardiol and Haaland's Carabao Cup rest (already reflected here) was reconfirmed as pure rotation ahead of Sunday's Sunderland game. This board stands as final for GW5 unless something changes before the deadline."
+    },
+    {
       "ts": "2026-09-17T19:30 UTC",
       "gw": 5,
       "kind": "deep",
