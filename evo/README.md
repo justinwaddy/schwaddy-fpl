@@ -239,6 +239,38 @@ priced as a five-week one. Measured on 2024/25, a doubtful player's
 five-week value is 1.3 times five-times-this-week rather than exactly
 that, and a player who has left the club still values at nothing.
 
+**A date the game did not give is not a return.** Where the news line
+carries no date, `expected_return` falls back on a status-typical
+default and flags it `return_known = 0`. `factor_at` used to ignore that
+flag: it checked only that a date existed, so an invented date was
+priced exactly like a published one and an out player with no news came
+back, at full availability, on a day this repo made up. Over five
+gameweeks that is mostly harmless - the undated-injury default is 42
+days, past the horizon - but `--horizon rest` judges a claim on the
+whole season, and there it is the difference between carrying a man and
+dropping him. Measured over the five archive seasons, the mean
+advertised availability of a player whose out spell carried no published
+date is 0.47 at the invented date, 0.55 a fortnight past it and 0.63 two
+months past it, over 1198 spells: not 1.00. Past an invented date an out
+spell is now priced half way between the state he is in and fit
+(`UNKNOWN_RETURN_CONF`), and a published date still returns him in full.
+`selftest` asserts both, and that a knock - whose four-day default is a
+guess about the round `factor_at` already reads off the game - is
+deliberately left recovering in full.
+
+The same measurement says a knock does not fully recover either (0.60 at
+the invented date, 0.69 a fortnight past). Re-pricing every doubtful
+player in the pool is a bigger change than the one that needed making,
+so it is not made here; it wants its own cross-validation first.
+
+One caveat to carry: this moves the heuristic baseline, and the baseline
+is what the residual policy adds to. It shifts `base_next5` - the
+quantity training actually scores - on about 6% of live-season cells.
+The checkpoints in `data/evo_models/` were evolved before it and are
+therefore calibrated to the old baseline. They are still the best models
+here and the live plan is better for the fix, but the cross-validated
+numbers below predate it and the folds are due a re-run.
+
 Two honest gaps. The cadence is a gameweek, so a knock picked up and
 cleared inside one week can be missed entirely. And the harvest stops
 wherever the archive repo last committed, which during a live season is

@@ -110,6 +110,27 @@ def test_return_dates(cfg):
     r, k = expected_return("d", "Knock - 75% chance of playing", t0)
     ok &= _report("  and a knock is this round's question only",
                   k == 0.0 and r < t0 + 7 * 86400)
+    # a date the news gave is a return; a date DEFAULT_DAYS invented for
+    # an out spell is a guess, and a guess is not worth a fit player.
+    # Without this the season baseline prefers the injured man with no
+    # news to the one whose club published a date.
+    from .injuries import factor_at, UNKNOWN_RETURN_CONF
+    far = t0 + 90 * 86400
+    known_st = (0.0, 1.0, 0.0, 0.0, 0.0, 1.0, t0 + 42 * 86400, 1.0)
+    guess_st = (0.0, 1.0, 0.0, 0.0, 0.0, 1.0, t0 + 42 * 86400, 0.0)
+    ok &= _report("a published return date is priced as a full return",
+                  factor_at(known_st, far, t0) == 1.0)
+    ok &= _report("  and an invented one is not",
+                  factor_at(guess_st, far, t0) == UNKNOWN_RETURN_CONF,
+                  f"factor {factor_at(guess_st, far, t0):.2f} past the "
+                  f"invented date, against 1.00 for a published one")
+    ok &= _report("  and before either date he is still out",
+                  factor_at(guess_st, t0 + 14 * 86400, t0) == 0.0)
+    # a knock keeps the old behaviour: its four-day default is a guess
+    # about the round factor_at already reads off the game
+    knock_st = (0.9, 0.0, 1.0, 0.0, 0.0, 1.0, t0 + 4 * 86400, 0.0)
+    ok &= _report("  and a knock still recovers in full",
+                  factor_at(knock_st, far, t0) == 1.0)
     # in the features: a doubtful player's five-week baseline recovers
     ix = {n: i for i, n in enumerate(FEATURE_NAMES)}
     d = load_seasons(cfg, ["2024-25"])["2024-25"]

@@ -515,6 +515,25 @@ _BACK = re.compile(r"(?:expected back|suspended until|back)\s+(\d{1,2})\s+([A-Za
 # round's question, an injury without a date is a long one, a suspension
 # is a match or three, a loan is the season
 DEFAULT_DAYS = {"d": 4.0, "i": 42.0, "s": 10.0, "n": 60.0, "u": 400.0}
+# and how much of a return to believe when the date is one of those
+# defaults rather than FPL's own. A published date is a claim the game
+# will be held to; an invented one is this table's guess, and pricing it
+# as a certain return is what makes an injured player with no news read
+# as fit a month out. Measured over the five archive seasons, the mean
+# advertised availability of a player whose OUT spell carried no
+# published date is 0.47 at the invented date, 0.55 a fortnight past it
+# and 0.63 two months past it (1198 'i' spells). One flat number, low in
+# that range, beats a curve fitted to it.
+#
+# This applies to the out statuses only. A knock carries no date either,
+# and the same measurement says it does not fully recover on the fourth
+# day (0.60 at the invented date, 0.69 a fortnight past it) - but a
+# four-day default is a guess about THIS round, which is the round
+# factor_at already reads straight off the game, and discounting it
+# would re-price every doubtful player in the pool on the strength of a
+# bug report about injuries. Left alone deliberately; if it is ever
+# taken on, it wants its own cross-validation.
+UNKNOWN_RETURN_CONF = 0.5
 
 
 def expected_return(status, news, start):
@@ -613,12 +632,19 @@ def state_at(rows, t, snaps=None):
 def factor_at(state, t_fixture, t_now):
     """The availability multiplier for a fixture at t_fixture, given the
     state as at t_now. This round is whatever the game advertises; a
-    later round is fit once the expected return has passed."""
-    f, out, doubt, _, _, known, ret, _ = state
+    later round is fit once the expected return has passed - fully when
+    the game published that return date, part way when an OUT spell's
+    date is one expected_return invented out of DEFAULT_DAYS (see
+    UNKNOWN_RETURN_CONF). Without that distinction "Unknown return date"
+    prices exactly like a date, and over a season-length horizon the man
+    with no news is the one the baseline likes best."""
+    f, out, doubt, _, _, known, ret, retk = state
     if t_fixture <= t_now + 6 * 86400 or f >= 1.0:
         return f
     if not np.isnan(ret) and t_fixture >= ret:
-        return 1.0
+        if retk or not out:
+            return 1.0
+        return f + (1.0 - f) * UNKNOWN_RETURN_CONF
     return f
 
 

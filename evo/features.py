@@ -54,7 +54,7 @@ PLAY_WINDOW = 8          # club matches in the availability window
 # one match, so a player with less than that in the window has his rate
 # shrunk toward zero rather than exploded.
 MIN90 = 90.0
-CACHE_VERSION = 14
+CACHE_VERSION = 15
 
 # the scoring keys that pay the defensive-contribution rule (the *_limit
 # keys beside them are thresholds, and stay: a threshold with nothing
