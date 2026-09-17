@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T08:37",
+ "generated": "2026-09-17T13:46",
  "gw": 5,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.993,
    "base": 4.72,
-   "ep": 4.67,
+   "ep": 4.68,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.29,
-   "ep": 3.08,
+   "ep": 3.07,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.662,
    "base": 1.4,
-   "ep": 1.3,
+   "ep": 1.32,
    "votes": 4
   }
  ],
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.379,
    "base": 0.96,
-   "ep": 1.04,
+   "ep": 1.05,
    "votes": 1
   },
   {
@@ -200,7 +200,7 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.23,
+   "ep": -0.21,
    "votes": 1
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 79.35,
+   "gain": 79.52,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 96.8,
+   "gain": 96.94,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 72.06,
+   "gain": 72.32,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 71.39,
+   "gain": 71.58,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 126
+   "borda": 127
   },
   {
    "pos": "MID",
-   "gain": 65.1,
+   "gain": 64.93,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 120
+   "borda": 121
   },
   {
    "pos": "MID",
-   "gain": 52.43,
+   "gain": 52.08,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 49.97,
+   "gain": 49.72,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 45.86,
+   "gain": 45.7,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 56
+   "borda": 55
   },
   {
    "pos": "FWD",
-   "gain": 63.46,
+   "gain": 63.4,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 59
+   "borda": 63
   },
   {
    "pos": "DEF",
-   "gain": 43.18,
+   "gain": 43.29,
    "change": 4,
    "fallback": false,
    "add": {

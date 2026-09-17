@@ -12,6 +12,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 56979,1785832691,1784808083,u,,0.0,has departed the club as a free agent.
 56979,1787270210,1786267807,d,,75.0,Wrist injury - 75% chance of playing
 56979,1789134473,1789134473,i,75.0,0.0,Wrist injury - Unknown return date
+56979,1789652748,1789652748,d,0.0,50.0,Wrist injury - 50% chance of playing
 59735,1785832691,1784808084,d,,75.0,Unspecified injury - 75% chance of playing
 59735,1787910473,1787910473,a,75.0,100.0,
 60307,1785832691,1785832691,a,,,
@@ -628,6 +629,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 486672,1787910473,1787596207,d,,75.0,Unspecified injury - 75% chance of playing
 486672,1788989362,1788105608,d,75.0,75.0,Calf injury - 75% chance of playing
 486672,1789134473,1789134473,i,75.0,0.0,Calf injury - Expected back 18 Sep
+486672,1789652748,1789652748,d,0.0,50.0,Calf injury - 50% chance of playing
 487053,1785832691,1785832691,a,,,
 487053,1789202150,1789149609,d,,75.0,Unspecified injury - 75% chance of playing
 487053,1789427800,1789427800,a,75.0,100.0,
@@ -785,6 +787,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 538638,1788894459,1788268565,u,0.0,0.0,Has joined Charlton Athletic on loan for the rest of the season
 539142,1785832691,1785832691,a,,,
 539142,1789634190,1789630209,d,,50.0,Calf injury - 50% chance of playing
+539142,1789652748,1789652748,d,,25.0,Calf injury - 25% chance of playing
 540324,1785832691,1785832691,a,,,
 543158,1787270210,1787270210,a,,,
 543295,1785832691,1784808083,d,,75.0,Knee injury - 75% chance of playing
@@ -865,6 +868,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 575458,1785832691,1785832691,a,,,
 575458,1789230234,1789221610,d,,75.0,Hamstring injury - 75% chance of playing
 575458,1789427800,1789427800,d,,50.0,Hamstring injury - 50% chance of playing
+575458,1789652748,1789652748,d,,75.0,Hamstring injury - 75% chance of playing
 575476,1785832691,1784808084,d,,75.0,Muscle injury - 75% chance of playing
 575476,1787270210,1787270210,a,,100.0,
 575901,1785832691,1785832691,a,,,
@@ -946,6 +950,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 620109,1785832691,1785832691,a,,,
 620109,1787910473,1787596207,d,,75.0,Unspecified injury - 75% chance of playing
 620109,1789202150,1789202150,i,75.0,0.0,Thigh injury - Expected back 18 Sep
+620109,1789652748,1789652748,d,0.0,50.0,Thigh injury - 50% chance of playing
 620487,1785832691,1785832691,a,,,
 620487,1787270210,1786010410,i,,0.0,Unspecified injury - Unknown return date
 620487,1789202150,1789202150,i,0.0,0.0,Thigh injury - Unknown return date

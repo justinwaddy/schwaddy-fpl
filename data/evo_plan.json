@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T08:36",
+ "generated": "2026-09-17T13:46",
  "gw": 5,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.993,
    "base": 4.72,
-   "ep": 4.67,
+   "ep": 4.68,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.29,
-   "ep": 3.08,
+   "ep": 3.07,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.662,
    "base": 1.4,
-   "ep": 1.3,
+   "ep": 1.32,
    "votes": 4
   }
  ],
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.379,
    "base": 0.96,
-   "ep": 1.04,
+   "ep": 1.05,
    "votes": 1
   },
   {
@@ -200,7 +200,7 @@
    "news": "Calf injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.23,
+   "ep": -0.21,
    "votes": 1
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 11.44,
+   "gain": 11.46,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 280
+   "borda": 281
   },
   {
    "pos": "MID",
-   "gain": 13.47,
+   "gain": 13.49,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 239
+   "borda": 240
   },
   {
    "pos": "MID",
-   "gain": 11.41,
+   "gain": 11.46,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 212
+   "borda": 211
   },
   {
    "pos": "MID",
-   "gain": 10.95,
+   "gain": 10.97,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 197
+   "borda": 196
   },
   {
    "pos": "MID",
-   "gain": 9.46,
+   "gain": 9.44,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 223
+   "borda": 224
   },
   {
    "pos": "MID",
-   "gain": 8.92,
+   "gain": 8.89,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.94,
+   "gain": 8.89,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 191
+   "borda": 189
   },
   {
    "pos": "MID",
-   "gain": 7.96,
+   "gain": 7.94,
    "change": 2,
    "fallback": true,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 156
+   "borda": 160
   },
   {
    "pos": "DEF",
-   "gain": 9.52,
+   "gain": 9.58,
    "change": 4,
    "fallback": false,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 154
+   "borda": 151
   },
   {
    "pos": "DEF",
-   "gain": 10.22,
+   "gain": 10.31,
    "change": 4,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 112
+   "borda": 109
   },
   {
    "pos": "DEF",
-   "gain": 9.74,
+   "gain": 9.76,
    "change": 4,
    "fallback": true,
    "add": {
@@ -602,11 +602,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 105
+   "borda": 102
   },
   {
    "pos": "DEF",
-   "gain": 9.96,
+   "gain": 10.02,
    "change": 4,
    "fallback": true,
    "add": {
@@ -638,7 +638,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 8.54,
+   "gain": 8.16,
    "change": 5,
    "fallback": false,
    "add": {
@@ -665,40 +665,8 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 58
-  },
-  {
-   "pos": "DEF",
-   "gain": 9.24,
-   "change": 5,
-   "fallback": true,
-   "add": {
-    "id": 503,
-    "code": 491279,
-    "name": "Van de Ven",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 0.788,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 471,
-    "code": 227444,
-    "name": "Milenkovi\u0107",
-    "pos": "DEF",
-    "team": "NFO",
-    "status": "i",
-    "news": "Hamstring injury - Expected back 11 Oct",
-    "p_play": 0.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 54
+   "votes": 4,
+   "borda": 75
   },
   {
    "pos": "DEF",
@@ -734,7 +702,39 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.81,
+   "gain": 9.21,
+   "change": 5,
+   "fallback": true,
+   "add": {
+    "id": 503,
+    "code": 491279,
+    "name": "Van de Ven",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 0.788,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 471,
+    "code": 227444,
+    "name": "Milenkovi\u0107",
+    "pos": "DEF",
+    "team": "NFO",
+    "status": "i",
+    "news": "Hamstring injury - Expected back 11 Oct",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 51
+  },
+  {
+   "pos": "DEF",
+   "gain": 6.78,
    "change": 5,
    "fallback": true,
    "add": {
@@ -766,7 +766,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 5.94,
+   "gain": 5.97,
    "change": 6,
    "fallback": false,
    "add": {
@@ -798,7 +798,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.76,
+   "gain": 6.77,
    "change": 7,
    "fallback": false,
    "add": {
@@ -830,7 +830,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.55,
+   "gain": 6.52,
    "change": 7,
    "fallback": true,
    "add": {
