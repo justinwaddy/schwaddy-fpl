@@ -1,11 +1,29 @@
 {
-  "gw": 5,
-  "waivers_close": "2026-09-17T17:30:00Z",
-  "ts": "2026-09-17T08:12 UTC",
-  "summary": "Final sweep before today's 17:30 UTC waiver close - nothing changed the five claims themselves. Kudus made his first Tottenham start since January in Wednesday's Carabao Cup tie but Marmoush also started and played the full 90, so claim 5 stands as the same speculative, low-confidence punt it has been all week. Justin sits second in the table on 211 points, which is still fifth of six in the reversed GW5 waiver order - Robert, Ben D, Ben C and Edward all pick ahead of him, so claims 2-5 remain contingency picks that only matter if a rival passes on the same swap or claim 1 fails.",
+  "gw": 6,
+  "waivers_close": "2026-10-09T10:00:00Z",
+  "ts": "2026-09-17T19:30 UTC",
+  "summary": "First board for the GW6 window, which does not close until 9 October after a three-week gap - plenty will change before it matters, but this reflects the research done today, the first run since GW5 waivers processed. Declined to follow the model's own top suggestion to drop Barcola for Anderson (+15.1, the biggest number on its whole board): two Champions League and Premier League starts running and Alexander Isak publicly backing him this week are the same new-arrival blind spot that undersold Marmoush and Munoz for weeks, not a genuine drop case. Instead used the fixture-only edges the model does support at GKP, DEF and MID, plus a low-confidence FWD form punt and a speculative bet on Timber, now a confirmed Palace midfield starter the model still can't see. Justin sits 2nd in the table on 211 points, which works out to 5th of 6 in the reversed GW6 waiver order - only Marcus, in 1st, picks after him.",
   "claims": [
     {
       "rank": 1,
+      "pos": "GKP",
+      "add": {
+        "name": "Tzolakis",
+        "code": "473284",
+        "club": "HUL"
+      },
+      "drop": {
+        "name": "Pickford",
+        "code": "111234",
+        "club": "EVE"
+      },
+      "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source raised any doubt over either man's status this week. Hull's run over the next five is simply kinder than Everton's.",
+      "model": "Model has Tzolakis at 19.9 next5 (avail 1.00) against Pickford's 16.6 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers rather than any news, so no sources are cited beyond that.",
+      "confidence": "medium",
+      "sources": []
+    },
+    {
+      "rank": 2,
       "pos": "DEF",
       "add": {
         "name": "Truffert",
@@ -13,81 +31,12 @@
         "club": "BOU"
       },
       "drop": {
-        "name": "Collins",
-        "code": "432830",
-        "club": "BRE"
-      },
-      "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
-      "model": "Model has Truffert's next5 at 17.7 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
-      "confidence": "high",
-      "sources": [
-        {
-          "title": "Nathan Collins injury update after Brentford v Sunderland",
-          "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
-        }
-      ]
-    },
-    {
-      "rank": 2,
-      "pos": "DEF",
-      "add": {
-        "name": "Mitchell",
-        "code": "244723",
-        "club": "CRY"
-      },
-      "drop": {
-        "name": "Vuskovic",
-        "code": "610799",
-        "club": "BHA"
-      },
-      "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
-      "model": "Model has Mitchell's next5 at 15.6 (avail 1.00) against Vuskovic's 15.2 (avail 1.00) - both fit, so this is now a fixture-only margin rather than an availability gap; agreeing with the model but at lower conviction than a week ago.",
-      "confidence": "high",
-      "sources": [
-        {
-          "title": "Team news: Palace, three changes, Ipswich",
-          "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
-        }
-      ]
-    },
-    {
-      "rank": 3,
-      "pos": "DEF",
-      "add": {
-        "name": "Hill",
-        "code": "463981",
-        "club": "BOU"
-      },
-      "drop": {
-        "name": "Milenković",
-        "code": "227444",
-        "club": "NFO"
-      },
-      "why": "Milenkovic's hamstring, found in Friday training before the Aston Villa game, has kept him out since - Nottingham Forest boss Oliver Glasner ruled him out of Saturday's Coventry game too, with a return targeted only for after the international break. ESPN's live commentary from the Villa game remains the clearest permitted account of how the injury first surfaced.",
-      "model": "Model now has Milenkovic at avail 0.00, next5 5.6, with its own news line reading 'Hamstring injury - Expected back 11 Oct', against Hill's 15.7 (avail 1.00) - the model has caught up to the injury, so this claim is now numbers-and-news aligned rather than overruling anything.",
-      "confidence": "high",
-      "sources": [
-        {
-          "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
-          "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "pos": "DEF",
-      "add": {
-        "name": "Maguire",
-        "code": "95658",
-        "club": "MUN"
-      },
-      "drop": {
         "name": "Bogle",
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
-      "model": "Model has Maguire's next5 at 15.0 (avail 1.00) against Bogle's 14.4 (avail 0.89), purely fixture-and-depth driven - Bogle's Monday-night goal is a reminder that next5 does not capture the kind of explosive return he just delivered. Treat this as the claim most likely to look wrong in hindsight.",
+      "why": "Bogle was named Newcastle's own Hisense Player of the Match after scoring in Monday's 4-1 win, and Daniel Farke's fitness update this week gave no hint of any fresh doubt over him - the case against him is fixtures, not form or injury. Truffert is a nailed Bournemouth left-back with a kinder run over the same five gameweeks.",
+      "model": "Model has Truffert at 17.7 next5 (avail 1.00) against Bogle's 14.4 (avail 0.89) - the gap is Leeds' tougher run, not a fitness question. Partly disagree given how well Bogle is playing right now, hence the low confidence rather than dropping him outright.",
       "confidence": "low",
       "sources": [
         {
@@ -97,34 +46,205 @@
       ]
     },
     {
-      "rank": 5,
+      "rank": 3,
+      "pos": "MID",
+      "add": {
+        "name": "Stach",
+        "code": "466525",
+        "club": "LEE"
+      },
+      "drop": {
+        "name": "Lewis-Potter",
+        "code": "249231",
+        "club": "BRE"
+      },
+      "why": "Both are fit, nailed starters - Brentford's own preview for Friday's Chelsea game raises no fitness concern over Lewis-Potter, and Leeds' Farke separately reports an almost fully fit squad. This is a fixture swap, not a news-driven one, and it is deliberately not Barcola: he has started Liverpool's last two games and Alexander Isak this week publicly backed him to make the side 'much better as a team' - the same blind spot the model had on Marmoush and Munoz in August, not a real drop case despite his rock-bottom number.",
+      "model": "Model has Stach at 17.8 next5 (avail 0.97) against Lewis-Potter's 14.2 (avail 0.96); separately, it rates Barcola at just 3.2 next5, which is why its own greedy board proposes Anderson-for-Barcola at +15.1 instead of this swap. Declining that one and taking the smaller, safer fixture edge here instead.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Match previews: Brentford v Chelsea, Premier League, 18/09/2026",
+          "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-chelsea-premier-league-18-09-2026"
+        },
+        {
+          "title": "Alexander Isak on his fitness and form, Liverpool fans and Barcola excitement",
+          "url": "https://www.liverpoolfc.com/news/alexander-isak-his-fitness-and-form-liverpool-fans-and-barcola-excitement"
+        }
+      ]
+    },
+    {
+      "rank": 4,
       "pos": "FWD",
       "add": {
-        "name": "Fernandez-Pardo",
-        "code": "613221",
-        "club": "NEW"
+        "name": "McBurnie",
+        "code": "169432",
+        "club": "HUL"
       },
       "drop": {
         "name": "Marmoush",
         "code": "438234",
         "club": "TOT"
       },
-      "why": "Fernandez-Pardo's full Newcastle debut (Monday's 4-1 defeat at Leeds) did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0 - but that Jaissle trusted a 51m signing with 57 minutes at all is still the more instructive signal than one bad afternoon. Marmoush remains the drop purely on the model's board: Wednesday's Carabao Cup tie at Liverpool saw Kudus make his first Tottenham start since January, but Marmoush also started and played the full 90 in that rotated XI, so nothing there favours dropping him either.",
-      "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
+      "why": "Marmoush remains Tottenham's clear first-choice striker - De Zerbi has started him in every game since his move from City, most recently through Wednesday's Carabao Cup exit - but he is still without a Premier League goal, and said this week the squad is 'working hard' to fix a goalless start. McBurnie is a nailed, in-form Hull striker with a kinder run. This is a speculative, form-only punt against a player whose underlying role is not actually in question, so it is ranked below the fitness- and fixture-driven claims above.",
+      "model": "Model has McBurnie at 13.9 next5 (avail 0.98) against Marmoush's 9.4 (avail 0.58) - the avail figure looks light for a player who has not missed a minute through injury, so the real gap is probably smaller than +4.6. Kept at low confidence for that reason.",
       "confidence": "low",
       "sources": [
         {
-          "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
-          "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
-        },
+          "title": "'All of us are working hard on that' - Marmoush on fixing goalless league start",
+          "url": "https://www.tottenhamhotspur.com/news/1089669/all-of-us-are-working-hard-on-that-marmoush-on-fixing-goalless-league-start"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "pos": "MID",
+      "add": {
+        "name": "Timber",
+        "code": "450063",
+        "club": "CRY"
+      },
+      "drop": {
+        "name": "Scott",
+        "code": "503139",
+        "club": "BOU"
+      },
+      "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola, Munoz and Schuster for weeks. Crystal Palace's own team news for the Ipswich game has Quinten Timber partnered with captain Adam Wharton in central midfield, not on the bench - a real Premier League starting role for a Netherlands international the model still rates as a fringe squad player. Scott is the safer body to submit last: a fully fit, nailed Bournemouth starter with no news against him at all, so this only matters if the four claims above all land or fail.",
+      "model": "Model has Timber at just 5.2 next5 (avail 0.37) against Scott's 16.7 (avail 0.99) - essentially no read on Timber off two career games. Overruling the number on the strength of Palace's own team sheet, not the model's math.",
+      "confidence": "low",
+      "sources": [
         {
-          "title": "Leeds United v Newcastle United match centre",
-          "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+          "title": "Team news: Palace, three changes, Ipswich",
+          "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
         }
       ]
     }
   ],
   "previous": [
+    {
+      "gw": 5,
+      "ts": "2026-09-17T08:12 UTC",
+      "claims": [
+        {
+          "rank": 1,
+          "pos": "DEF",
+          "add": {
+            "name": "Truffert",
+            "code": "494521",
+            "club": "BOU"
+          },
+          "drop": {
+            "name": "Collins",
+            "code": "432830",
+            "club": "BRE"
+          },
+          "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
+          "model": "Model has Truffert's next5 at 17.7 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Nathan Collins injury update after Brentford v Sunderland",
+              "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "pos": "DEF",
+          "add": {
+            "name": "Mitchell",
+            "code": "244723",
+            "club": "CRY"
+          },
+          "drop": {
+            "name": "Vuskovic",
+            "code": "610799",
+            "club": "BHA"
+          },
+          "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
+          "model": "Model has Mitchell's next5 at 15.6 (avail 1.00) against Vuskovic's 15.2 (avail 1.00) - both fit, so this is now a fixture-only margin rather than an availability gap; agreeing with the model but at lower conviction than a week ago.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Team news: Palace, three changes, Ipswich",
+              "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "pos": "DEF",
+          "add": {
+            "name": "Hill",
+            "code": "463981",
+            "club": "BOU"
+          },
+          "drop": {
+            "name": "Milenković",
+            "code": "227444",
+            "club": "NFO"
+          },
+          "why": "Milenkovic's hamstring, found in Friday training before the Aston Villa game, has kept him out since - Nottingham Forest boss Oliver Glasner ruled him out of Saturday's Coventry game too, with a return targeted only for after the international break. ESPN's live commentary from the Villa game remains the clearest permitted account of how the injury first surfaced.",
+          "model": "Model now has Milenkovic at avail 0.00, next5 5.6, with its own news line reading 'Hamstring injury - Expected back 11 Oct', against Hill's 15.7 (avail 1.00) - the model has caught up to the injury, so this claim is now numbers-and-news aligned rather than overruling anything.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
+              "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "pos": "DEF",
+          "add": {
+            "name": "Maguire",
+            "code": "95658",
+            "club": "MUN"
+          },
+          "drop": {
+            "name": "Bogle",
+            "code": "226182",
+            "club": "LEE"
+          },
+          "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
+          "model": "Model has Maguire's next5 at 15.0 (avail 1.00) against Bogle's 14.4 (avail 0.89), purely fixture-and-depth driven - Bogle's Monday-night goal is a reminder that next5 does not capture the kind of explosive return he just delivered. Treat this as the claim most likely to look wrong in hindsight.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Leeds United v Newcastle United match centre",
+              "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "pos": "FWD",
+          "add": {
+            "name": "Fernandez-Pardo",
+            "code": "613221",
+            "club": "NEW"
+          },
+          "drop": {
+            "name": "Marmoush",
+            "code": "438234",
+            "club": "TOT"
+          },
+          "why": "Fernandez-Pardo's full Newcastle debut (Monday's 4-1 defeat at Leeds) did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0 - but that Jaissle trusted a 51m signing with 57 minutes at all is still the more instructive signal than one bad afternoon. Marmoush remains the drop purely on the model's board: Wednesday's Carabao Cup tie at Liverpool saw Kudus make his first Tottenham start since January, but Marmoush also started and played the full 90 in that rotated XI, so nothing there favours dropping him either.",
+          "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
+              "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+            },
+            {
+              "title": "Leeds United v Newcastle United match centre",
+              "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+            }
+          ]
+        }
+      ]
+    },
     {
       "gw": 4,
       "ts": "2026-09-11T09:05 UTC",
@@ -337,6 +457,12 @@
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-17T19:30 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "First board for GW6 (waivers close 9 October, a three-week gap). GW5's board is now filed under previous. Rebuilt from scratch: kept Barcola despite the model's own biggest suggested swap (Anderson +15.1) on the strength of two straight starts and Isak's public backing this week; used the model's fixture-only edges at GKP (Tzolakis/Pickford) and MID (Stach/Lewis-Potter); kept a lower-confidence Truffert/Bogle given Bogle's midweek Player of the Match award; added a speculative McBurnie/Marmoush form punt; and closed with a genuinely new find - cpfc.co.uk's own Ipswich team news has free agent Quinten Timber partnered with Wharton in Palace's midfield, a real starting role the model still can't price given only two games of data, so added him as a rank-5 punt over Scott."
+    },
     {
       "ts": "2026-09-09T21:09 UTC",
       "gw": 4,

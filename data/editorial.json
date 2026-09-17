@@ -223,9 +223,22 @@
       "scope": "mine",
       "text": "Mohammed Kudus made his first Tottenham start since January in Wednesday's Carabao Cup exit at Liverpool, but Marmoush also started and played the full 90 in a heavily rotated XI - the pecking order for Justin's forward has not shifted yet, though Kudus's return is a fresh name to watch.",
       "url": "https://www.tottenhamhotspur.com/news/1090166/confirmed-line-ups-liverpool-vs-spurs-carabao-cup"
+    },
+    {
+      "id": "2026-09-17-city-rest-haaland-gvardiol-cup",
+      "ts": "2026-09-17T19:30 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Maresca left Haaland and Gvardiol out of Manchester City's squad entirely for tonight's Carabao Cup tie with Norwich - Man City's own site frames it as workload rotation after Sunday's derby, not injury, with both expected back for Sunday's league game at home to Sunderland. Worth knowing before a blank appearance tonight reads as a fitness concern on the board.",
+      "url": "https://www.mancity.com/news/mens/city-v-norwich-enzo-maresca-provides-injury-update-and-team-news-63925149"
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-17T19:30 UTC",
+      "published": 1,
+      "note": "Manual off-schedule run at Justin's request, ~11 hours after this morning's sweep, and the first run after GW5 waivers processed (deadline tomorrow 17:30 UTC) - also did the weekly deep starters.json pass this run. Club-by-club sweep on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent-target clubs (Fulham, Nottingham Forest, Sunderland, Coventry) and two general PL sweeps, roughly 30 searches. Led with Man City resting Haaland and Gvardiol entirely for tonight's Carabao Cup tie with Norwich - mancity.com's own team news frames it as pure workload management after Sunday's derby, both pencilled back in for Sunday's Sunderland game, so a blank appearance tonight shouldn't read as a knock. Investigated and could not publish: a Sports Mole-only claim of a Raya knee injury after the Man City game never turned up on arsenal.com or Sky Sports, and Arsenal's own site is currently focused on Saliba (out) and Timber's return, not Raya, so left alone as unconfirmed; Ajayi's hamstring situation remains murky - Sky Sports' own lineup confirms he played and scored against Man Utd on 22 August, but no permitted outlet has since published his hamstring recovery timeline (only Yahoo and fan sites), so his status stays as already modelled rather than published as news either way. Confirmed but not new: Van Hecke, Marmoush, Bogle, Vuskovic, Strand Larsen, Tavernier and the rest of the squad all training and playing normally with nothing citable that changes a status. Full starters.json deep pass done this run - see its own run log for the gameweek-by-gameweek verdicts."
+    },
     {
       "ts": "2026-09-09T21:09 UTC",
       "published": 1,
