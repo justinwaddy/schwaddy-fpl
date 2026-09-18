@@ -85,7 +85,7 @@
       "pos": "DEF",
       "status": "likely",
       "verdict": "No injury reported; established centre-back",
-      "note": "Van Hecke has been a first-choice centre-back since his £52m move from Brighton and Tottenham's own coverage of him this week raises no fitness concern. No permitted outlet has yet published Saturday's confirmed team news for the visit of Aston Villa.",
+      "note": "Van Hecke has been a first-choice centre-back since his \u00a352m move from Brighton and Tottenham's own coverage of him this week raises no fitness concern. No permitted outlet has yet published Saturday's confirmed team news for the visit of Aston Villa.",
       "sources": []
     },
     {
@@ -220,6 +220,12 @@
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-18T08:10 UTC",
+      "gw": 5,
+      "kind": "light",
+      "note": "no change - morning sweep ahead of today's 17:30 UTC deadline reconfirmed every verdict (Pickford, Raya, Bogle, Vuskovic, Ajayi, Van Hecke, Gvardiol, Barcola, Lewis-Potter, Scott, Tavernier, Schade, Marmoush, Strand Larsen, Haaland); no permitted outlet has yet published a confirmed XI for any of tomorrow's fixtures"
+    },
     {
       "ts": "2026-09-17T21:09 UTC",
       "gw": 5,
