@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-18T08:10 UTC",
-  "summary": "Board for the GW6 window, which does not close until 9 October after a three-week gap. A fresh morning sweep found nothing that moves any of the five claims: Arsenal, Leeds, Brighton, Tottenham, Brentford and Bournemouth team news for this weekend's fixtures all reconfirmed rather than changed the picture, and a search claiming Hull's Ajayi missed six fixtures since an AFCON injury did not survive a closer look against this weekend's predicted lineups, so it changes nothing here either. Still declining the model's own top suggestion to drop Barcola for Anderson (+15.1): two Champions League and Premier League starts running is the same new-arrival blind spot that undersold Marmoush and Munoz for weeks, not a genuine drop case. Justin sits 2nd in the table on 211 points, which works out to 5th of 6 in the reversed GW6 waiver order - only Marcus, in 1st, picks after him.",
+  "ts": "2026-09-18T21:11 UTC",
+  "summary": "Board holds for the GW6 window (closes 9 October) after a second sweep tonight found nothing that moves any of the five claims. A run of promising-looking leads on Schade, Raya, Ajayi and Gvardiol all turned out to be stale or contradicted outright by this season's own minutes data once checked. Truffert (claim 2) picked up his first senior France call-up tonight per Bournemouth's own site, reinforcing rather than changing his case. Justin sits 2nd in the table on 212 points, still 5th of 6 in the reversed GW6 waiver order.",
   "claims": [
     {
       "rank": 1,
@@ -179,7 +179,7 @@
             "club": "BOU"
           },
           "drop": {
-            "name": "Milenkovi\u0107",
+            "name": "Milenković",
             "code": "227444",
             "club": "NFO"
           },
@@ -258,7 +258,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Mu\u00f1oz",
+            "name": "Muñoz",
             "code": "247348",
             "club": "NFO"
           },
@@ -284,7 +284,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le F\u00e9e",
+            "name": "E.Le Fée",
             "code": "484420",
             "club": "SUN"
           },
@@ -439,7 +439,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Gro\u00df",
+            "name": "Groß",
             "code": "60307",
             "club": "BHA"
           },
@@ -684,6 +684,12 @@
       "gw": 5,
       "claims": 5,
       "note": "Final pre-close sweep. No change to which five claims are made or their order. Confirmed Kudus's first Tottenham start since January (Carabao Cup vs Liverpool) but Marmoush also started and played the full 90 in that heavily-rotated XI, so no change to claim 5's reasoning beyond noting it. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic and Maguire/Bogle all reconfirmed exactly as last night after a full club-by-club sweep. This board stands as final for the GW5 window unless something changes before 17:30 UTC."
+    },
+    {
+      "ts": "2026-09-18T21:11 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Full club-by-club sweep found nothing that clears the sourcing bar: Truffert's first France call-up is a positive but incremental confirmation of claim 2, not new information about his standing at Bournemouth. Investigated and discarded several stale-dated stories that would otherwise have looked like fresh injury news - Schade/surgery (traces to a January 2026 Everton fixture that hasn't happened yet this season), Raya/knee (contradicted by his own four full 90s), Ajayi/hamstring (traces to the 22 August season opener) and Gvardiol/broken leg (contradicted by his own recent minutes) - none of which are squad or shortlist players whose claim status would change anyway. Marmoush/Kudus/Maddison at Tottenham unchanged; Timber started Palace's Europa League tie on top of his Ipswich start, no change to claim 5's reasoning."
     }
   ]
 }
