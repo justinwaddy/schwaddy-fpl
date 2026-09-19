@@ -247,6 +247,30 @@
       "scope": "free",
       "text": "Anton Stach, Justin's rank-3 GW6 waiver target, has been named in Jurgen Klopp's first Germany squad on the back of an eye-catching debut season at Leeds - a form signal for a player already on the claims board as the upgrade on Lewis-Potter, not a change to his role at the club.",
       "url": "https://www.leedsunited.com/en/news/anton-stach-named-in-jurgen-klopps-first-germany-squad"
+    },
+    {
+      "id": "2026-09-19-raya-starts-brighton-defeat",
+      "ts": "2026-09-19T21:11 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Raya started as normal in goal for Arsenal's 3-0 defeat at Brighton today (Gross, Kostoulas, Chema Andres) - the loss is on the defense in front of him, not a fitness issue, and a clean team sheet finally retires the recurring 'knee bandaged' Raya injury story that has resurfaced and been discarded on four separate runs since 5 September.",
+      "url": "https://africa.espn.com/football/match/_/gameId/401879274"
+    },
+    {
+      "id": "2026-09-19-gross-scores-arsenal-upset",
+      "ts": "2026-09-19T21:11 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Free agent Pascal Gross scored the opener in Brighton's 3-0 win over Arsenal today, with Kostoulas adding a second before half-time - live evidence for the model's own suggested Gross-for-Barcola swap (+15.1 next5), which this week's claims board again declined given Barcola's own two straight Liverpool starts.",
+      "url": "https://africa.espn.com/football/match/_/gameId/401879274"
+    },
+    {
+      "id": "2026-09-19-mateta-henderson-return-after-break",
+      "ts": "2026-09-19T21:11 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Crystal Palace boss Pierre Sage said this week he hopes Mateta and Dean Henderson will return only 'after the international break,' pushing his striker's timeline further out than earlier estimates and cementing Strand Larsen as Palace's clear starting forward through the whole GW6 waiver window.",
+      "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-hints-at-possible-sarr-nketiah-returns/"
     }
   ],
   "runs": [
@@ -474,6 +498,11 @@
       "ts": "2026-09-18T21:11 UTC",
       "published": 1,
       "note": "Club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Newcastle, Nottingham Forest) plus two general PL sweeps, ~13 hours after this morning's 08:10 claims refresh. Published one item: Truffert's first France call-up (afcb.co.uk), reinforcing rather than changing his case as claim 2's target. Chased down and discarded a wave of hits that read as fresh news but checked out as stale against this season's own minutes data: a Brentford story on Kevin Schade requiring surgery after 'Brentford's 3-1 defeat to Everton' traces to a January 2026 fixture - Brentford haven't played Everton yet this season and Schade has started all four league games; an Arsenal story of Raya 'limping with knee bandaged' at the Etihad is contradicted by Raya's own full 90 minutes played through GW4; a Hull/Ajayi hamstring complaint traces to the season-opening win over Man Utd on 22 August, with no games missed since; and a Man City story that Gvardiol 'is expected to miss the rest of the season with a broken leg' is flatly contradicted by his own full 90 minutes played in three of the last four gameweeks. Also confirmed but not news: Milenkovic still out past Saturday's Coventry game and Cunha a fitness assessment away per Forest's own presser on the 17th; Maddison/Kudus/Marmoush unchanged at Tottenham (the 'edging closer to a start' piece re-surfacing is the same 11 September article already published); Vuskovic fine after a described knock; and Timber started Palace's Europa League tie on the 17th on top of his Ipswich start, nothing changing claim 5's reasoning. Nothing else cleared the sourcing bar."
+    },
+    {
+      "ts": "2026-09-19T21:11 UTC",
+      "published": 3,
+      "note": "Evening sweep ~13 hours after this morning's 08:09 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland, Newcastle) plus general PL sweeps, 21 searches. Today's round of GW5 fixtures (played after Thursday's GW5 waiver deadline) produced three genuine items, all confirmed directly off ESPN's own match page or cpfc.co.uk rather than aggregators: Raya started as normal in Arsenal's 3-0 defeat at Brighton, finally retiring the recurring 'knee bandaged' injury story; free agent Pascal Gross scored the opener in that same match, live evidence for the model's own suggested Gross-for-Barcola swap that this week's board again declined; and Palace's Sage pushed Mateta and Henderson's return timeline out to 'after the international break' on cpfc.co.uk, cementing Strand Larsen's role through the whole GW6 window. Also established: most of the division, including Everton (next league game Hull away), does not play again until around 11 October after this weekend's round, due to an international break - context for why the GW6 waiver window runs three weeks. Checked and found nothing new to publish: Ajayi's hamstring story is the same stale 22 August season-opener item already discarded on 18 September; Bogle, Vuskovic, Van Hecke, Marmoush, Lewis-Potter, Schade, Scott and Tavernier all confirmed fit with nothing citable that changes a status."
     }
   ]
 }

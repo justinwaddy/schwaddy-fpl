@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-19T08:09 UTC",
-  "summary": "Board holds for the GW6 window (closes 9 October) after this morning's sweep found nothing that moves any of the five claims. Stach (claim 3) was named in Jurgen Klopp's first Germany squad, reinforcing rather than changing his case. A recurring Raya 'bandaged knee' story resurfaced again but is the same stale 2024 item already discarded on 18 September. Justin's GW5 win moved him to top of the table on 220 points, which is now the worst spot in the reversed GW6 waiver order - 6th of 6 to submit.",
+  "ts": "2026-09-19T21:14 UTC",
+  "summary": "Board holds for the GW6 window (closes 9 October) after tonight's sweep. Today's full round of GW5 fixtures confirmed rather than changed the picture: Raya started normally in a 3-0 defeat at Brighton, finally retiring the recurring stale knee-injury story, while free agent Pascal Gross scored in that same match - live evidence for the model's own Gross-for-Barcola suggestion, still declined given Barcola's two straight starts. Palace's Sage also pushed Mateta and Henderson's return out to 'after the international break', which now covers the whole three-week gap before GW6 resumes on 11 October. Justin is tied second on 230 points behind Edward's 240, meaning he now submits 5th of 6 in the reversed GW6 waiver order - better than yesterday's 6th, since Edward has taken over top spot.",
   "claims": [
     {
       "rank": 1,
@@ -59,7 +59,7 @@
         "club": "BRE"
       },
       "why": "Both are fit, nailed starters - Brentford's own preview for Friday's Chelsea game raises no fitness concern over Lewis-Potter, and Leeds' Farke separately reports an almost fully fit squad. Stach was also named this week in Jurgen Klopp's first Germany squad, reported recognition for his form since joining from Hoffenheim. This is a fixture swap, not a news-driven one, and it is deliberately not Barcola: he has started Liverpool's last two games and Alexander Isak this week publicly backed him to make the side 'much better as a team' - the same blind spot the model had on Marmoush and Munoz in August, not a real drop case despite his rock-bottom number.",
-      "model": "Model has Stach at 17.8 next5 (avail 0.97) against Lewis-Potter's 14.2 (avail 0.96); separately, it rates Barcola at just 3.2 next5, which is why its own greedy board proposes Anderson-for-Barcola at +15.1 instead of this swap. Declining that one and taking the smaller, safer fixture edge here instead.",
+      "model": "Model has Stach at 17.8 next5 (avail 0.97) against Lewis-Potter's 14.2 (avail 0.96); separately, it rates Barcola at just 3.3 next5, which is why its own greedy board proposes Gross-for-Barcola at +15.1 instead of this swap - and tonight Gross scored the opener in Brighton's 3-0 win at Arsenal, the clearest live case yet for that suggestion. Declining it again anyway: Barcola has started Liverpool's last two games and Isak has publicly backed him, so taking the smaller, safer fixture edge here instead.",
       "confidence": "medium",
       "sources": [
         {
@@ -696,6 +696,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Full club-by-club sweep found nothing that clears the sourcing bar: Truffert's first France call-up is a positive but incremental confirmation of claim 2, not new information about his standing at Bournemouth. Investigated and discarded several stale-dated stories that would otherwise have looked like fresh injury news - Schade/surgery (traces to a January 2026 Everton fixture that hasn't happened yet this season), Raya/knee (contradicted by his own four full 90s), Ajayi/hamstring (traces to the 22 August season opener) and Gvardiol/broken leg (contradicted by his own recent minutes) - none of which are squad or shortlist players whose claim status would change anyway. Marmoush/Kudus/Maddison at Tottenham unchanged; Timber started Palace's Europa League tie on top of his Ipswich start, no change to claim 5's reasoning."
+    },
+    {
+      "ts": "2026-09-19T21:14 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Today's GW5 round confirmed Raya's fitness (ending the recurring stale injury story) and gave live proof of the model's own declined Gross-for-Barcola suggestion (Gross scored in Brighton's 3-0 win at Arsenal) - refreshed claim 3's model line with that detail but kept the decision to stick with Barcola. Palace's Sage confirmed Mateta and Henderson are targeted for after the international break, which is not a claims change (Strand Larsen is kept, not a claim target) but firms up why he's not at risk. League position update: Edward has moved to 1st on 240 points, dropping Justin (230, tied 2nd with Marcus) to 5th of 6 in the reversed waiver order, an improvement on yesterday's 6th."
     }
   ]
 }
