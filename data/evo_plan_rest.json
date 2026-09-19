@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T08:37",
+ "generated": "2026-09-19T12:41",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.92,
    "base": 3.4,
-   "ep": 3.28,
+   "ep": 3.29,
    "votes": 5
   },
   {
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.738,
    "base": 1.67,
-   "ep": 1.6,
+   "ep": 1.61,
    "votes": 0
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 113.95,
+   "gain": 113.99,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 64.87,
+   "gain": 64.9,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 63.76,
+   "gain": 63.75,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 72.44,
+   "gain": 72.27,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 64.81,
+   "gain": 64.71,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 69.19,
+   "gain": 69.17,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 65.81,
+   "gain": 65.74,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 54.43,
+   "gain": 54.41,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 38
+   "borda": 37
   },
   {
    "pos": "MID",
-   "gain": 38.07,
+   "gain": 38.01,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 22
+   "borda": 20
   },
   {
    "pos": "MID",
-   "gain": 32.94,
+   "gain": 32.77,
    "change": 3,
    "fallback": true,
    "add": {
@@ -616,7 +616,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 195.7,
-   "ep": 194.89
+   "ep": 194.83
   },
   {
    "id": 165,
@@ -625,7 +625,7 @@
    "pos": "FWD",
    "team": "CHE",
    "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
+   "news": "Knee injury - 75% chance of playing",
    "p_play": 0.75,
    "base": 182.72,
    "ep": 185.42
@@ -652,7 +652,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.24,
-   "ep": 165.95
+   "ep": 166.07
   },
   {
    "id": 260,
@@ -664,7 +664,7 @@
    "news": "Thigh injury - Unknown return date",
    "p_play": 0.0,
    "base": 177.03,
-   "ep": 164.86
+   "ep": 165.91
   },
   {
    "id": 387,
@@ -688,7 +688,7 @@
    "news": "",
    "p_play": 0.969,
    "base": 176.52,
-   "ep": 164.07
+   "ep": 164.13
   },
   {
    "id": 428,
@@ -700,7 +700,7 @@
    "news": "",
    "p_play": 0.898,
    "base": 155.86,
-   "ep": 158.54
+   "ep": 158.48
   },
   {
    "id": 388,
@@ -724,7 +724,7 @@
    "news": "",
    "p_play": 0.908,
    "base": 168.34,
-   "ep": 161.63
+   "ep": 161.59
   },
   {
    "id": 12,
@@ -748,7 +748,7 @@
    "news": "",
    "p_play": 0.577,
    "base": 165.25,
-   "ep": 151.36
+   "ep": 151.3
   },
   {
    "id": 533,
@@ -808,7 +808,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.25,
-   "ep": 147.21
+   "ep": 146.42
   },
   {
    "id": 368,
@@ -820,7 +820,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 150.52,
-   "ep": 143.84
+   "ep": 143.88
   },
   {
    "id": 346,
@@ -856,7 +856,7 @@
    "news": "",
    "p_play": 0.665,
    "base": 148.46,
-   "ep": 145.69
+   "ep": 145.63
   },
   {
    "id": 8,
@@ -892,7 +892,7 @@
    "news": "",
    "p_play": 0.811,
    "base": 139.31,
-   "ep": 133.04
+   "ep": 133.08
   },
   {
    "id": 398,
@@ -904,7 +904,7 @@
    "news": "Suspended until 17 Oct",
    "p_play": 0.0,
    "base": 140.45,
-   "ep": 136.65
+   "ep": 136.73
   },
   {
    "id": 366,
@@ -916,7 +916,7 @@
    "news": "",
    "p_play": 0.934,
    "base": 136.91,
-   "ep": 132.18
+   "ep": 132.23
   },
   {
    "id": 200,
@@ -929,18 +929,6 @@
    "p_play": 0.797,
    "base": 133.32,
    "ep": 131.52
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.913,
-   "base": 136.08,
-   "ep": 134.06
   },
   {
    "id": 25,
@@ -979,6 +967,18 @@
    "ep": 133.74
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.913,
+   "base": 136.08,
+   "ep": 133.12
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -989,6 +989,18 @@
    "p_play": 0.63,
    "base": 136.34,
    "ep": 128.46
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.577,
+   "base": 140.33,
+   "ep": 128.76
   },
   {
    "id": 208,
@@ -1012,19 +1024,7 @@
    "news": "",
    "p_play": 0.551,
    "base": 147.91,
-   "ep": 126.18
-  },
-  {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.577,
-   "base": 140.33,
-   "ep": 127.72
+   "ep": 126.28
   }
  ]
 }

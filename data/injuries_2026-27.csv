@@ -474,6 +474,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441164,1787910473,1787910473,a,0.0,100.0,
 441164,1789202150,1789149609,d,100.0,75.0,Unspecified injury - 75% chance of playing
 441164,1789736901,1789736901,a,75.0,100.0,
+441164,1789821645,1789819209,d,100.0,75.0,Unspecified injury - 75% chance of playing
 441191,1785832691,1784808084,d,,75.0,Calf injury - 75% chance of playing
 441191,1787270210,1787270210,i,,0.0,Calf injury - Unknown return date
 441191,1788894459,1788894459,a,0.0,100.0,
@@ -614,6 +615,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 474120,1787910473,1787910473,a,,100.0,
 475168,1785832691,1785832691,a,,,
 475168,1789634190,1789585210,d,,75.0,Unspecified injury - 75% chance of playing
+475168,1789821645,1789821645,d,75.0,75.0,Knee injury - 75% chance of playing
 476887,1785832691,1785832691,a,,,
 476887,1787910473,1787842383,u,,0.0,Has joined Lille on loan for the rest of the season
 477064,1785832691,1785832691,a,,,
@@ -1015,6 +1017,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 649208,1788894459,1788364921,u,0.0,0.0,Has joined Swansea City on loan for the rest of the season
 651426,1785832691,1785832691,a,,,
 653481,1785832691,1785832691,a,,,
+653481,1789821645,1789817409,d,,75.0,Unspecified injury - 75% chance of playing
 660392,1785832691,1784809136,u,,0.0,has returned to Getafe CF
 661016,1789346400,1789346400,a,,,
 661313,1788894459,1788894459,a,,,
