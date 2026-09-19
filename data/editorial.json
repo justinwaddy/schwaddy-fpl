@@ -239,9 +239,22 @@
       "scope": "free",
       "text": "Adrien Truffert, this week's top waiver target for Justin's defence, has earned his first call-up to the senior France squad, per Bournemouth's own site - recognition for a player who started all 38 league games last season and is in career-best form now. It doesn't change the case for claiming him, just reinforces it.",
       "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall"
+    },
+    {
+      "id": "2026-09-19-stach-germany-callup",
+      "ts": "2026-09-19T08:09 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Anton Stach, Justin's rank-3 GW6 waiver target, has been named in Jurgen Klopp's first Germany squad on the back of an eye-catching debut season at Leeds - a form signal for a player already on the claims board as the upgrade on Lewis-Potter, not a change to his role at the club.",
+      "url": "https://www.leedsunited.com/en/news/anton-stach-named-in-jurgen-klopps-first-germany-squad"
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-19T08:09 UTC",
+      "published": 1,
+      "note": "Morning sweep ~11 hours after last night's 21:11 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus two general PL sweeps, 15 searches. Led with Stach's Germany call-up (leedsunited.com). Chased down one lead in depth that did not survive: a widely-repeated 'Raya limping, bandaged knee, fears of a serious setback' story after a Man City game - this is the same stale item flagged and discarded on 18 September, traced back to a 27 September 2024 Etihad fixture (the Neto-debut game), not anything current; his four full 90s this season already contradict it, so left unpublished. Also checked and found nothing citable: Vuskovic (cramp only, fine per Brighton's own read), Gvardiol (a recurring stale 'broken leg' search result contradicted by his own recent minutes), Anderson (cramp substitution, no concern), and Truffert/Tavernier both fit and playing for Bournemouth. Reconfirmed unchanged: Pickford, Bogle, Ajayi, Van Hecke, Lewis-Potter, Scott, Tavernier, Schade, Marmoush, Strand Larsen and Haaland all training and selected normally with nothing citable that changes a status."
+    },
     {
       "ts": "2026-09-18T08:10 UTC",
       "published": 0,
