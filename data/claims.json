@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-19T21:14 UTC",
-  "summary": "Board holds for the GW6 window (closes 9 October) after tonight's sweep. Today's full round of GW5 fixtures confirmed rather than changed the picture: Raya started normally in a 3-0 defeat at Brighton, finally retiring the recurring stale knee-injury story, while free agent Pascal Gross scored in that same match - live evidence for the model's own Gross-for-Barcola suggestion, still declined given Barcola's two straight starts. Palace's Sage also pushed Mateta and Henderson's return out to 'after the international break', which now covers the whole three-week gap before GW6 resumes on 11 October. Justin is tied second on 230 points behind Edward's 240, meaning he now submits 5th of 6 in the reversed GW6 waiver order - better than yesterday's 6th, since Edward has taken over top spot.",
+  "ts": "2026-09-20T08:12 UTC",
+  "summary": "Board holds five claims for the GW6 window (closes 9 October) after this morning's sweep, with one real change: Leeds' own team news for today's Palace game has Bogle benched for the first time all season (James Justin in at right wing-back), so claim 2 firms up from low to medium confidence. Elsewhere today's live GW5 round reconfirmed the picture - Marmoush and Van Hecke both pencilled into Tottenham's XI for the Villa game, Haaland/Gvardiol both set to start for City. Sunderland's deadline-day, up-to-GBP30m capture of Malick Fofana from Lyon is a new-arrival blind spot exactly like Barcola's, but he is not a squad player and has yet to start a Premier League match, so it stays a headline rather than a claim. Marcus has now pulled clear of Justin on points (231 to 230), which resolves last night's tie and moves Justin up to 4th of 6 in the reversed GW6 waiver order, better than last night's 5th.",
   "claims": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
         "club": "EVE"
       },
       "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source raised any doubt over either man's status this week. Hull's run over the next five is simply kinder than Everton's.",
-      "model": "Model has Tzolakis at 19.9 next5 (avail 1.00) against Pickford's 16.6 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers rather than any news, so no sources are cited beyond that.",
+      "model": "Model has Tzolakis at 19.1 next5 (avail 1.00) against Pickford's 16.7 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers rather than any news, so no sources are cited beyond that.",
       "confidence": "medium",
       "sources": []
     },
@@ -35,10 +35,14 @@
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Bogle was named Newcastle's own Hisense Player of the Match after scoring in Monday's 4-1 win, and Daniel Farke's fitness update this week gave no hint of any fresh doubt over him - the case against him is fixtures, not form or injury. Truffert is a nailed Bournemouth left-back with a kinder run over the same five gameweeks.",
-      "model": "Model has Truffert at 17.7 next5 (avail 1.00) against Bogle's 14.4 (avail 0.89) - the gap is Leeds' tougher run, not a fitness question. Partly disagree given how well Bogle is playing right now, hence the low confidence rather than dropping him outright.",
-      "confidence": "low",
+      "why": "Reversing last week's reasoning: Leeds' own team news for today's Palace game has Bogle among the substitutes, with James Justin retained at right wing-back and Joe Rodon and Jaka Bijol both restored to the back three. A week ago he was Newcastle's own Hisense Player of the Match after scoring in the 4-1 win, so this reads as rotation rather than a fitness concern, but it is the first time all season a permitted source has actually left him out of the XI. Truffert is a nailed Bournemouth left-back with a kinder run over the same five gameweeks.",
+      "model": "Model has Truffert at 18.0 next5 (avail 1.00) against Bogle's 14.3 (avail 0.89) - the 0.89 figure has not caught up with today's benching at all, so the real gap is probably larger than the model shows. Upgraded from low to medium confidence on the back of it.",
+      "confidence": "medium",
       "sources": [
+        {
+          "title": "Team News: Daniel Farke names XI to face Crystal Palace",
+          "url": "https://www.leedsunited.com/en/news/team-news-daniel-farke-names-xi-to-face-crystal-palace-away"
+        },
         {
           "title": "Leeds United v Newcastle United match centre",
           "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
@@ -59,7 +63,7 @@
         "club": "BRE"
       },
       "why": "Both are fit, nailed starters - Brentford's own preview for Friday's Chelsea game raises no fitness concern over Lewis-Potter, and Leeds' Farke separately reports an almost fully fit squad. Stach was also named this week in Jurgen Klopp's first Germany squad, reported recognition for his form since joining from Hoffenheim. This is a fixture swap, not a news-driven one, and it is deliberately not Barcola: he has started Liverpool's last two games and Alexander Isak this week publicly backed him to make the side 'much better as a team' - the same blind spot the model had on Marmoush and Munoz in August, not a real drop case despite his rock-bottom number.",
-      "model": "Model has Stach at 17.8 next5 (avail 0.97) against Lewis-Potter's 14.2 (avail 0.96); separately, it rates Barcola at just 3.3 next5, which is why its own greedy board proposes Gross-for-Barcola at +15.1 instead of this swap - and tonight Gross scored the opener in Brighton's 3-0 win at Arsenal, the clearest live case yet for that suggestion. Declining it again anyway: Barcola has started Liverpool's last two games and Isak has publicly backed him, so taking the smaller, safer fixture edge here instead.",
+      "model": "Model has Stach at 18.3 next5 (avail 1.00) against Lewis-Potter's 13.7 (avail 0.95); separately, it rates Barcola at just 3.3 next5, which is why its own greedy board proposes Gross-for-Barcola at +15.1 instead of this swap. Declining it again anyway: nothing this week has surfaced to challenge Barcola's last two starts, so taking the smaller, safer fixture edge here instead.",
       "confidence": "medium",
       "sources": [
         {
@@ -86,7 +90,7 @@
         "club": "TOT"
       },
       "why": "Marmoush remains Tottenham's clear first-choice striker - De Zerbi has started him in every game since his move from City, most recently through Wednesday's Carabao Cup exit - but he is still without a Premier League goal, and said this week the squad is 'working hard' to fix a goalless start. McBurnie is a nailed, in-form Hull striker with a kinder run. This is a speculative, form-only punt against a player whose underlying role is not actually in question, so it is ranked below the fitness- and fixture-driven claims above.",
-      "model": "Model has McBurnie at 13.9 next5 (avail 0.98) against Marmoush's 9.4 (avail 0.58) - the avail figure looks light for a player who has not missed a minute through injury, so the real gap is probably smaller than +4.6. Kept at low confidence for that reason.",
+      "model": "Model has McBurnie at 13.1 next5 (avail 0.98) against Marmoush's 9.1 (avail 0.58) - the avail figure looks light for a player who has not missed a minute through injury, so the real gap is probably smaller than +4.0. Kept at low confidence for that reason.",
       "confidence": "low",
       "sources": [
         {
@@ -109,7 +113,7 @@
         "club": "BOU"
       },
       "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola, Munoz and Schuster for weeks. Crystal Palace's own team news for the Ipswich game has Quinten Timber partnered with captain Adam Wharton in central midfield, not on the bench - a real Premier League starting role for a Netherlands international the model still rates as a fringe squad player. Scott is the safer body to submit last: a fully fit, nailed Bournemouth starter with no news against him at all, so this only matters if the four claims above all land or fail.",
-      "model": "Model has Timber at just 5.2 next5 (avail 0.37) against Scott's 16.7 (avail 0.99) - essentially no read on Timber off two career games. Overruling the number on the strength of Palace's own team sheet, not the model's math.",
+      "model": "Model has Timber at just 5.3 next5 (avail 0.37) against Scott's 17.0 (avail 0.99) - essentially no read on Timber off two career games. Overruling the number on the strength of Palace's own team sheet, not the model's math.",
       "confidence": "low",
       "sources": [
         {
@@ -457,6 +461,12 @@
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-20T08:12 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made, but claim 2 (Truffert/Bogle) upgraded from low to medium confidence: leedsunited.com's own team news for today's Palace game has Bogle among the substitutes for the first time all season, James Justin in at right wing-back. Full club-by-club sweep plus today's live GW5 fixtures (Man City-Sunderland, Leeds-Palace, Bournemouth-Liverpool) reconfirmed the rest of the board unchanged - Marmoush/Van Hecke both pencilled in for Tottenham's Villa game, Haaland/Gvardiol both set for City, Stach/Lewis-Potter, McBurnie/Marmoush and Timber/Scott all checked out with nothing new. Also flagged Sunderland's Malick Fofana (deadline-day, up to GBP30m from Lyon) as a fresh new-arrival blind spot for the model, but he is not a squad player and has no Premier League start yet, so he is a headline, not a claim. League position update: Marcus (231) has pulled clear of Justin (230), resolving last night's tie and moving Justin to 4th of 6 in the reversed waiver order, better than last night's 5th. Discarded as stale on direct fetch: a Pickford 'out a month' Sky Sports story (dated 2022-09-07) and the recurring Raya thigh-injury story (dated 2024-09-27, same one flagged stale before)."
+    },
     {
       "ts": "2026-09-19T08:09 UTC",
       "gw": 6,

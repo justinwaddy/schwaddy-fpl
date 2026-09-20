@@ -271,9 +271,30 @@
       "scope": "mine",
       "text": "Crystal Palace boss Pierre Sage said this week he hopes Mateta and Dean Henderson will return only 'after the international break,' pushing his striker's timeline further out than earlier estimates and cementing Strand Larsen as Palace's clear starting forward through the whole GW6 waiver window.",
       "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-hints-at-possible-sarr-nketiah-returns/"
+    },
+    {
+      "id": "2026-09-20-bogle-benched-leeds-palace",
+      "ts": "2026-09-20T08:12 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Leeds' own team news for today's home game against Crystal Palace has Bogle among the substitutes, the first time all season a permitted source has actually left him out of the XI - James Justin comes in at right wing-back, with Joe Rodon and Jaka Bijol both restored to the back three. The model's 0.89 availability figure has not caught up with it yet.",
+      "url": "https://www.leedsunited.com/en/news/team-news-daniel-farke-names-xi-to-face-crystal-palace-away"
+    },
+    {
+      "id": "2026-09-20-fofana-sunderland-blind-spot",
+      "ts": "2026-09-20T08:12 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Sunderland's deadline-day signing of Malick Fofana from Lyon, a deal worth up to GBP30m that owner Kyril Louis-Dreyfus personally flew to Lyon to close after Crystal Palace tried to hijack it, is the same blind spot that hit Barcola and Munoz: the model has him at just 0.15 availability and a 2.1 next5, near the bottom of the free-agent midfield pool. He has only started for Sunderland in the Carabao Cup so far and has yet to nail down a Premier League place.",
+      "url": "https://www.skysports.com/transfer/news/12691/13579894/malick-fofana-transfer-news-lyon-winger-at-centre-of-premier-league-tug-of-war-as-crystal-palace-and-sunderland-agree-deals"
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-20T08:12 UTC",
+      "published": 2,
+      "note": "Morning sweep ~11 hours after last night's 21:11 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus today's live GW5 fixtures (Man City-Sunderland, Leeds-Palace, Bournemouth-Liverpool) and the free-agent shortlist clubs, about 20 searches. Led with a direct fetch of leedsunited.com's own team news for today's Palace game, which has Bogle among the substitutes for the first time all season - James Justin in at right wing-back, Rodon and Bijol restored to the back three - a genuine surprise the initial aggregator search had wrongly reported as an unchanged Leeds XI with Bogle still starting. Second item: Sunderland's deadline-day, up-to-GBP30m signing of Malick Fofana from Lyon (owner personally flew out to beat a Crystal Palace hijack) is the same new-arrival blind spot as Barcola and Munoz, and the model still has him at the bottom of the midfield pool. Chased down and discarded two stale stories masquerading as current: a 'Pickford out a month with a thigh injury' Sky Sports piece that dates to 2022-09-07, and the recurring Raya thigh-injury/Bolton-squad story that traces to the same 2024-09-27 arsenal.com article flagged stale on four earlier runs - both would have been real news if current, so worth the direct fetch-and-check each time they resurface. Also checked and found nothing further to publish: Tottenham's Van Hecke and Marmoush are both pencilled into the predicted XI for the Villa game with Van Hecke 'fresh after being rested at Anfield', Man City's Haaland (rested midweek, back to lead the line) and Gvardiol both set for today's Sunderland game, and Bournemouth's and Brentford's injury lists (Araujo, Kroupi, Adli, Milosavljevic; Dasilva, Milambo, Collins, van den Berg, Furo, Jensen) contain no squad or shortlist names. A Premier League transfer-news search also surfaced a 'Gross and Dunk to miss Sunday vs Bournemouth' line that contradicts Brighton's own site (Gross the club's standout performer, next match is Man Utd away in the cup, not Bournemouth) - discarded as a mismatched/stale result."
+    },
     {
       "ts": "2026-09-19T08:09 UTC",
       "published": 1,
