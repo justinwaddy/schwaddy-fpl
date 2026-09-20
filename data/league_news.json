@@ -2,13 +2,6 @@
   "generated": "2026-09-20T12:15 UTC",
   "items": [
     {
-      "id": "2026-09-09-robert-saka-sky",
-      "ts": "2026-09-09T22:46",
-      "kind": "opinion",
-      "text": "Robert sits last of the six, 44 points off the leader, and his Bukayo Saka spent Wednesday night in Naples proving the misfortune travels: clean through with the goal gaping, Saka put the finish into the top tier rather than the net. Odegaard did the hard part, picking him out; Saka did the rest.",
-      "source": null
-    },
-    {
       "id": "2026-09-09-delap-tzolis-irony",
       "ts": "2026-09-09T22:47",
       "kind": "opinion",
@@ -721,16 +714,19 @@
         "title": "Bournemouth vs Liverpool LIVE! Premier League score updates, news, prediction, line-ups and how to watch or stream",
         "url": "https://www.skysports.com/football/live-blog/11095/13572153/bournemouth-vs-liverpool-live-premier-league-score-updates-news-prediction-line-ups-and-how-to-watch-or-stream"
       }
+    },
+    {
+      "id": "2026-09-20-xi-1530",
+      "ts": "2026-09-20T15:07",
+      "kind": "news",
+      "text": "Team news, 15:30 kick-off, Fulham v Man Utd (Sky Sports): Edward's Lammens starts in goal. Marcus has Mbeumo and King both starting. Ben C's Cunha starts. Ben D's B.Fernandes starts, but his Gonzalo is not in Fulham's squad. Robert's Yoro is among the substitutes and his Sesko is not in United's matchday squad.",
+      "source": {
+        "title": "Starting Lineups - Fulham vs Manchester United | 20.09.2026",
+        "url": "https://www.skysports.com/football/fulham-vs-manchester-united/teams/6387779637306466232"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-05T11:10",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "11:30 kickoff NEW v BOU: Newcastle XI confirmed via newcastleunited.com (all owned players starting). Bournemouth sheet not found at a permitted outlet - left out of counts."
-    },
     {
       "ts": "2026-09-05T13:13",
       "news": 1,
@@ -1145,6 +1141,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "13:00 slot: confirmed BOU-LIV and MCI-SUN sheets via Sky Sports live blogs (read as raw page data, not search snippets) - all league-owned starters at those four clubs listed, Foden (Marcus) and O'Reilly (Robert) the only ones left out. LEE-CRY sheet was not out at any permitted outlet by kick-off minus ~45 (tried leedsunited.com, cpfc.co.uk, Sky Sports live blog - lineup was image-only graphic with no extractable text); leedsunited.com's own preview did confirm Wilson (Robert) ruled out with a quad injury, so included that fact and left the rest of Leeds/Palace out of the counts rather than guess. BBC domains were unreachable from this session's fetcher throughout."
+    },
+    {
+      "ts": "2026-09-20T15:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 KO FUL v MUN: confirmed both squads via Sky Sports teams page (read as raw page data, id 6387779637306466232). Lammens (Edward), Mbeumo/King (Marcus), Cunha (Ben C) and B.Fernandes (Ben D) all start; Yoro (Robert) is a Man Utd substitute; Gonzalo (Ben D, Fulham) and Sesko (Robert, Man Utd) are both left out of their matchday squads entirely. manutd.com's own team-news article for this fixture stayed behind a Cloudflare 403 all run, same as this morning."
     }
   ]
 }
