@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20T08:36",
+ "generated": "2026-09-20T13:13",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.738,
    "base": 1.67,
-   "ep": 1.6,
+   "ep": 1.59,
    "votes": 0
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 16.22,
+   "gain": 16.18,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,7 +250,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 220
+   "borda": 215
   },
   {
    "pos": "MID",
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 135
+   "borda": 131
   },
   {
    "pos": "MID",
-   "gain": 8.33,
+   "gain": 8.31,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 94
+   "borda": 90
   },
   {
    "pos": "MID",
-   "gain": 9.68,
+   "gain": 9.69,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 90
+   "borda": 87
   },
   {
    "pos": "DEF",
-   "gain": 8.01,
+   "gain": 8.05,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,12 +378,44 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 154
+   "borda": 145
+  },
+  {
+   "pos": "FWD",
+   "gain": 7.81,
+   "change": 3,
+   "fallback": false,
+   "add": {
+    "id": 295,
+    "code": 169432,
+    "name": "McBurnie",
+    "pos": "FWD",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.979,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.662,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 68
   },
   {
    "pos": "MID",
-   "gain": 7.54,
-   "change": 3,
+   "gain": 8.75,
+   "change": 4,
    "fallback": false,
    "add": {
     "id": 542,
@@ -409,13 +441,13 @@
     "base": null,
     "ep": null
    },
-   "votes": 4,
-   "borda": 93
+   "votes": 3,
+   "borda": 66
   },
   {
    "pos": "MID",
-   "gain": 5.2,
-   "change": 3,
+   "gain": 5.19,
+   "change": 4,
    "fallback": true,
    "add": {
     "id": 67,
@@ -443,38 +475,6 @@
    },
    "votes": 3,
    "borda": 61
-  },
-  {
-   "pos": "FWD",
-   "gain": 7.81,
-   "change": 4,
-   "fallback": false,
-   "add": {
-    "id": 295,
-    "code": 169432,
-    "name": "McBurnie",
-    "pos": "FWD",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.979,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 222,
-    "code": 247412,
-    "name": "Strand Larsen",
-    "pos": "FWD",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.662,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 58
   },
   {
    "pos": "DEF",
@@ -506,7 +506,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 37
+   "borda": 35
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
