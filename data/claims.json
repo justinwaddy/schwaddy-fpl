@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-20T08:12 UTC",
-  "summary": "Board holds five claims for the GW6 window (closes 9 October) after this morning's sweep, with one real change: Leeds' own team news for today's Palace game has Bogle benched for the first time all season (James Justin in at right wing-back), so claim 2 firms up from low to medium confidence. Elsewhere today's live GW5 round reconfirmed the picture - Marmoush and Van Hecke both pencilled into Tottenham's XI for the Villa game, Haaland/Gvardiol both set to start for City. Sunderland's deadline-day, up-to-GBP30m capture of Malick Fofana from Lyon is a new-arrival blind spot exactly like Barcola's, but he is not a squad player and has yet to start a Premier League match, so it stays a headline rather than a claim. Marcus has now pulled clear of Justin on points (231 to 230), which resolves last night's tie and moves Justin up to 4th of 6 in the reversed GW6 waiver order, better than last night's 5th.",
+  "ts": "2026-09-20T21:12 UTC",
+  "summary": "Board holds the same five claims for the GW6 window (closes 9 October) but claim 2's basis changes: leedsunited.com's own report shows Bogle actually started and was booked in today's 0-0 draw with Crystal Palace, so this morning's 'benched' story is retracted and the swap now rests on fixture value alone, not a lost starting job. Everything else reconfirmed by today's full round of matches - Truffert and Timber both started again (Bournemouth 0-1 Liverpool, Leeds 0-0 Palace), Stach started for Leeds, and the model's own Gro\u00df-for-Barcola suggestion is declined again after Barcola started at Bournemouth before being subbed for Munoz. Justin sits 2nd of 6 on points, which is 5th of 6 in the reversed GW6 waiver order - only Edward, the league leader, picks after him.",
   "claims": [
     {
       "rank": 1,
@@ -17,8 +17,8 @@
         "code": "111234",
         "club": "EVE"
       },
-      "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source raised any doubt over either man's status this week. Hull's run over the next five is simply kinder than Everton's.",
-      "model": "Model has Tzolakis at 19.1 next5 (avail 1.00) against Pickford's 16.7 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers rather than any news, so no sources are cited beyond that.",
+      "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source has raised any doubt over either man's status. Hull's run over the GW6 window is simply softer than Everton's, and nothing this evening changes that read.",
+      "model": "Model has Tzolakis at 19.1 next5 (avail 1.00) against Pickford's 16.7 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers alone.",
       "confidence": "medium",
       "sources": []
     },
@@ -35,17 +35,17 @@
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Reversing last week's reasoning: Leeds' own team news for today's Palace game has Bogle among the substitutes, with James Justin retained at right wing-back and Joe Rodon and Jaka Bijol both restored to the back three. A week ago he was Newcastle's own Hisense Player of the Match after scoring in the 4-1 win, so this reads as rotation rather than a fitness concern, but it is the first time all season a permitted source has actually left him out of the XI. Truffert is a nailed Bournemouth left-back with a kinder run over the same five gameweeks.",
-      "model": "Model has Truffert at 18.0 next5 (avail 1.00) against Bogle's 14.3 (avail 0.89) - the 0.89 figure has not caught up with today's benching at all, so the real gap is probably larger than the model shows. Upgraded from low to medium confidence on the back of it.",
+      "why": "Correction: this morning's report that Bogle was among the substitutes for today's Palace game was wrong - Leeds' own match report confirms he started at right wing-back and was booked, so that fitness angle is retracted. The claim now rests on production and fixtures alone: Truffert started again today and picked out Evanilson's early flick in Bournemouth's 0-1 home defeat to Liverpool, a nailed attacking full-back, while Leeds' defence at Elland Road managed only a blank against a Palace side missing three defenders.",
+      "model": "Model has Truffert at 18.0 next5 (avail 1.00) against Bogle's 14.3 (avail 0.89) - one of the larger gaps on the board. The 0.89 figure was never about tonight's team news; it is holding up fine now the benching story is gone, so this is a fixture/production swap, not a fitness one.",
       "confidence": "medium",
       "sources": [
         {
-          "title": "Team News: Daniel Farke names XI to face Crystal Palace",
-          "url": "https://www.leedsunited.com/en/news/team-news-daniel-farke-names-xi-to-face-crystal-palace-away"
+          "title": "Leeds United and Crystal Palace clash ends in stalemate",
+          "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
         },
         {
-          "title": "Leeds United v Newcastle United match centre",
-          "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+          "title": "Cherries edged out by Liverpool at Vitality Stadium",
+          "url": "https://www.afcb.co.uk/news/2026/september/20/afc-bournemouth-liverpool-premier-league-match-report-september-2026"
         }
       ]
     },
@@ -62,17 +62,13 @@
         "code": "249231",
         "club": "BRE"
       },
-      "why": "Both are fit, nailed starters - Brentford's own preview for Friday's Chelsea game raises no fitness concern over Lewis-Potter, and Leeds' Farke separately reports an almost fully fit squad. Stach was also named this week in Jurgen Klopp's first Germany squad, reported recognition for his form since joining from Hoffenheim. This is a fixture swap, not a news-driven one, and it is deliberately not Barcola: he has started Liverpool's last two games and Alexander Isak this week publicly backed him to make the side 'much better as a team' - the same blind spot the model had on Marmoush and Munoz in August, not a real drop case despite his rock-bottom number.",
-      "model": "Model has Stach at 18.3 next5 (avail 1.00) against Lewis-Potter's 13.7 (avail 0.95); separately, it rates Barcola at just 3.3 next5, which is why its own greedy board proposes Gross-for-Barcola at +15.1 instead of this swap. Declining it again anyway: nothing this week has surfaced to challenge Barcola's last two starts, so taking the smaller, safer fixture edge here instead.",
+      "why": "Both fit, nailed starters - Stach started and went the distance again today in Leeds' 0-0 draw with Palace, continuing an unbeaten start that has them third in the table, while Brentford's own preview this week raised no fitness concern over Lewis-Potter. This is squarely a fixture and output swap: Stach is a goal threat from midfield in a rampant Leeds side.",
+      "model": "Model has Stach at 18.3 next5 (avail 1.00) against Lewis-Potter's 13.7 (avail 0.95); separately it rates Barcola at just 3.3 next5, which is why its own suggested swap is Gro\u00df for Barcola rather than this one - the board declines that suggestion given Barcola's now-established starting role, and keeps this swap instead.",
       "confidence": "medium",
       "sources": [
         {
-          "title": "Match previews: Brentford v Chelsea, Premier League, 18/09/2026",
-          "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-chelsea-premier-league-18-09-2026"
-        },
-        {
-          "title": "Alexander Isak on his fitness and form, Liverpool fans and Barcola excitement",
-          "url": "https://www.liverpoolfc.com/news/alexander-isak-his-fitness-and-form-liverpool-fans-and-barcola-excitement"
+          "title": "Leeds United and Crystal Palace clash ends in stalemate",
+          "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
         }
       ]
     },
@@ -89,13 +85,17 @@
         "code": "438234",
         "club": "TOT"
       },
-      "why": "Marmoush remains Tottenham's clear first-choice striker - De Zerbi has started him in every game since his move from City, most recently through Wednesday's Carabao Cup exit - but he is still without a Premier League goal, and said this week the squad is 'working hard' to fix a goalless start. McBurnie is a nailed, in-form Hull striker with a kinder run. This is a speculative, form-only punt against a player whose underlying role is not actually in question, so it is ranked below the fitness- and fixture-driven claims above.",
-      "model": "Model has McBurnie at 13.1 next5 (avail 0.98) against Marmoush's 9.1 (avail 0.58) - the avail figure looks light for a player who has not missed a minute through injury, so the real gap is probably smaller than +4.0. Kept at low confidence for that reason.",
+      "why": "Marmoush remains Tottenham's first-choice striker with no fitness doubt raised anywhere, but he is still without a Premier League goal this season, and Sunday's 2-3 home defeat to Aston Villa dropped Spurs into the relegation zone with two points from five games - Sky Sports reports it is piling pressure on manager Roberto De Zerbi, the kind of run that precedes team changes even if Marmoush himself keeps starting for now.",
+      "model": "Model has McBurnie at 13.2 next5 (avail 0.98) against Marmoush's 9.3 (avail 0.59) - the avail figure already prices in some risk around a goalless striker at a struggling club; today's result adds context rather than changing the number.",
       "confidence": "low",
       "sources": [
         {
           "title": "'All of us are working hard on that' - Marmoush on fixing goalless league start",
           "url": "https://www.tottenhamhotspur.com/news/1089669/all-of-us-are-working-hard-on-that-marmoush-on-fixing-goalless-league-start"
+        },
+        {
+          "title": "Tottenham 2-3 Aston Villa: Winless Spurs drop into relegation zone while visitors secure first win of Premier League season",
+          "url": "https://www.skysports.com/football/news/11095/13586058/tottenham-2-3-aston-villa-roberto-de-zerbi-under-pressure-as-winless-spurs-drop-into-relegation-zone"
         }
       ]
     },
@@ -112,10 +112,14 @@
         "code": "503139",
         "club": "BOU"
       },
-      "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola, Munoz and Schuster for weeks. Crystal Palace's own team news for the Ipswich game has Quinten Timber partnered with captain Adam Wharton in central midfield, not on the bench - a real Premier League starting role for a Netherlands international the model still rates as a fringe squad player. Scott is the safer body to submit last: a fully fit, nailed Bournemouth starter with no news against him at all, so this only matters if the four claims above all land or fail.",
-      "model": "Model has Timber at just 5.3 next5 (avail 0.37) against Scott's 17.0 (avail 0.99) - essentially no read on Timber off two career games. Overruling the number on the strength of Palace's own team sheet, not the model's math.",
+      "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola for weeks. Timber started again today in Palace's goalless draw at Leeds, his latest league start on top of Ipswich and a midweek Europa League appearance, and Palace are missing three defenders which should keep midfield largely settled around him.",
+      "model": "Model has Timber at just 5.3 next5 (avail 0.37) against Scott's 17.0 (avail 0.99) - essentially no read on Timber off a handful of career games. Overruling the model here on the strength of his now-repeated starts rather than any single article.",
       "confidence": "low",
       "sources": [
+        {
+          "title": "Leeds United and Crystal Palace clash ends in stalemate",
+          "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
+        },
         {
           "title": "Team news: Palace, three changes, Ipswich",
           "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
@@ -183,7 +187,7 @@
             "club": "BOU"
           },
           "drop": {
-            "name": "Milenković",
+            "name": "Milenkovi\u0107",
             "code": "227444",
             "club": "NFO"
           },
@@ -262,7 +266,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Muñoz",
+            "name": "Mu\u00f1oz",
             "code": "247348",
             "club": "NFO"
           },
@@ -288,7 +292,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le Fée",
+            "name": "E.Le F\u00e9e",
             "code": "484420",
             "club": "SUN"
           },
@@ -443,7 +447,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Groß",
+            "name": "Gro\u00df",
             "code": "60307",
             "club": "BHA"
           },
@@ -712,6 +716,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Today's GW5 round confirmed Raya's fitness (ending the recurring stale injury story) and gave live proof of the model's own declined Gross-for-Barcola suggestion (Gross scored in Brighton's 3-0 win at Arsenal) - refreshed claim 3's model line with that detail but kept the decision to stick with Barcola. Palace's Sage confirmed Mateta and Henderson are targeted for after the international break, which is not a claims change (Strand Larsen is kept, not a claim target) but firms up why he's not at risk. League position update: Edward has moved to 1st on 240 points, dropping Justin (230, tied 2nd with Marcus) to 5th of 6 in the reversed waiver order, an improvement on yesterday's 6th."
+    },
+    {
+      "ts": "2026-09-20T21:12 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "Corrected claim 2: Bogle actually started and was booked against Palace today, so this morning's benching report was wrong and is retracted; the swap now rests on fixture/production value only. Reinforced claims 3 and 5 with today's confirmed Leeds and Palace lineups (Stach and Timber both started). No change to which five claims are made or their order otherwise."
     }
   ]
 }

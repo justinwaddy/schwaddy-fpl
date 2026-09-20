@@ -287,6 +287,30 @@
       "scope": "free",
       "text": "Sunderland's deadline-day signing of Malick Fofana from Lyon, a deal worth up to GBP30m that owner Kyril Louis-Dreyfus personally flew to Lyon to close after Crystal Palace tried to hijack it, is the same blind spot that hit Barcola and Munoz: the model has him at just 0.15 availability and a 2.1 next5, near the bottom of the free-agent midfield pool. He has only started for Sunderland in the Carabao Cup so far and has yet to nail down a Premier League place.",
       "url": "https://www.skysports.com/transfer/news/12691/13579894/malick-fofana-transfer-news-lyon-winger-at-centre-of-premier-league-tug-of-war-as-crystal-palace-and-sunderland-agree-deals"
+    },
+    {
+      "id": "2026-09-20-bogle-started-not-benched",
+      "ts": "2026-09-20T21:12 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Leeds' own match report confirms Jayden Bogle started and was booked in today's 0-0 draw with Crystal Palace, contradicting this morning's substitutes report - he was not benched after all, undercutting part of this week's Truffert-for-Bogle case.",
+      "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
+    },
+    {
+      "id": "2026-09-20-van-hecke-spurs-relegation-zone",
+      "ts": "2026-09-20T21:12 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Jan Paul Van Hecke's stoppage-time header was Tottenham's only bright spot in Sunday's 2-3 home defeat to Aston Villa, which leaves Spurs winless with two points from five games, in the relegation zone, and reportedly piling pressure on manager Roberto De Zerbi.",
+      "url": "https://www.skysports.com/football/news/11095/13586058/tottenham-2-3-aston-villa-roberto-de-zerbi-under-pressure-as-winless-spurs-drop-into-relegation-zone"
+    },
+    {
+      "id": "2026-09-20-truffert-bournemouth-liverpool",
+      "ts": "2026-09-20T21:12 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Adrien Truffert, this week's claim-2 waiver target, started again for Bournemouth and picked out Evanilson's early flick that Alisson somehow kept out, in today's 0-1 home defeat to Liverpool in which Alexander Isak scored the winner on his return to Vitality Stadium.",
+      "url": "https://www.afcb.co.uk/news/2026/september/20/afc-bournemouth-liverpool-premier-league-match-report-september-2026"
     }
   ],
   "runs": [
@@ -333,7 +357,7 @@
     {
       "ts": "2026-09-07T21:15 UTC",
       "published": 0,
-      "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Groß, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
+      "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Gro\u00df, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
     },
     {
       "ts": "2026-09-01T09:51",
@@ -413,7 +437,7 @@
     {
       "ts": "2026-09-05T21:21 UTC",
       "published": 3,
-      "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
+      "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Gro\u00df, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
     },
     {
       "ts": "2026-09-06T08:11 UTC",
@@ -524,6 +548,11 @@
       "ts": "2026-09-19T21:11 UTC",
       "published": 3,
       "note": "Evening sweep ~13 hours after this morning's 08:09 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland, Newcastle) plus general PL sweeps, 21 searches. Today's round of GW5 fixtures (played after Thursday's GW5 waiver deadline) produced three genuine items, all confirmed directly off ESPN's own match page or cpfc.co.uk rather than aggregators: Raya started as normal in Arsenal's 3-0 defeat at Brighton, finally retiring the recurring 'knee bandaged' injury story; free agent Pascal Gross scored the opener in that same match, live evidence for the model's own suggested Gross-for-Barcola swap that this week's board again declined; and Palace's Sage pushed Mateta and Henderson's return timeline out to 'after the international break' on cpfc.co.uk, cementing Strand Larsen's role through the whole GW6 window. Also established: most of the division, including Everton (next league game Hull away), does not play again until around 11 October after this weekend's round, due to an international break - context for why the GW6 waiver window runs three weeks. Checked and found nothing new to publish: Ajayi's hamstring story is the same stale 22 August season-opener item already discarded on 18 September; Bogle, Vuskovic, Van Hecke, Marmoush, Lewis-Potter, Schade, Scott and Tavernier all confirmed fit with nothing citable that changes a status."
+    },
+    {
+      "ts": "2026-09-20T21:12 UTC",
+      "published": 3,
+      "note": "Sunday GW5 round sweep ~13 hours after this morning's 08:12 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL and rival sweeps, 16 searches. Three genuine items, all confirmed against official club or Sky Sports match reports rather than predicted-lineup aggregators: leedsunited.com's own report shows Bogle started and was booked against Crystal Palace, directly contradicting this morning's 'among the substitutes' item - that was wrong, sourced too early off a stale predicted XI, and is corrected here; Van Hecke's stoppage-time header was the one bright spot as Spurs fell 2-3 at home to Aston Villa and dropped into the relegation zone, with Sky Sports reporting pressure building on De Zerbi (Marmoush started too per foreign outlets but no permitted source confirms it, so left unstated); and Truffert again started and nearly assisted for Bournemouth in today's 0-1 home defeat to Liverpool (Barcola started and was subbed for Munoz, Isak scored the winner), reinforcing claim 2's target. Also checked and found nothing new to publish: Ajayi's hamstring story is the same stale 22 August item; Vuskovic, Scott, Tavernier, Schade, Lewis-Potter and Strand Larsen (who started for Palace) all reconfirmed fit with nothing citable that changes a status; Haaland scored again in City's 5-3 win over Sunderland but that is already reflected in his numbers, not news; Fofana's Sunderland debut status unchanged since yesterday's item."
     }
   ]
 }
