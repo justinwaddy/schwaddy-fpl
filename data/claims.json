@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-20T21:12 UTC",
-  "summary": "Board holds the same five claims for the GW6 window (closes 9 October) but claim 2's basis changes: leedsunited.com's own report shows Bogle actually started and was booked in today's 0-0 draw with Crystal Palace, so this morning's 'benched' story is retracted and the swap now rests on fixture value alone, not a lost starting job. Everything else reconfirmed by today's full round of matches - Truffert and Timber both started again (Bournemouth 0-1 Liverpool, Leeds 0-0 Palace), Stach started for Leeds, and the model's own Gro\u00df-for-Barcola suggestion is declined again after Barcola started at Bournemouth before being subbed for Munoz. Justin sits 2nd of 6 on points, which is 5th of 6 in the reversed GW6 waiver order - only Edward, the league leader, picks after him.",
+  "ts": "2026-09-21T08:10 UTC",
+  "summary": "Board holds the same five claims for the GW6 window (closes 9 October), with nothing from a full morning sweep changing any of them. Barcola started and was subbed again in Sunday's Bournemouth defeat before the international break shuts football down for three weeks - the model's own Gross-for-Barcola suggestion is declined again on the same basis as every week: a GBP123m signing still generating too little data (n=2) for the model to judge, not a player actually losing his role. A Brentford 'Lewis-Potter facing two months out' story looked like a threat to claim 3 but traced to a stale page from the Thomas Frank era, discarded after reading it in full; brentfordfc.com's current archive shows him fit and starting under Keith Andrews, so claim 3 still rests on fixture/production value only. Justin sits 2nd of 6 on points, which is 5th of 6 in the reversed GW6 waiver order - only Edward, the league leader, picks after him.",
   "claims": [
     {
       "rank": 1,
@@ -17,8 +17,8 @@
         "code": "111234",
         "club": "EVE"
       },
-      "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source has raised any doubt over either man's status. Hull's run over the GW6 window is simply softer than Everton's, and nothing this evening changes that read.",
-      "model": "Model has Tzolakis at 19.1 next5 (avail 1.00) against Pickford's 16.7 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's own numbers alone.",
+      "why": "Both keepers are undisputed starters with clean bills of health, so this is fixture value rather than fitness - no permitted source has raised any doubt over either man's status this week. A recurring 'Pickford out for a month' story that resurfaces in searches was checked again and is confirmed via its own byline as a September 2022 article, not current news. Hull's run over the coming weeks remains the softer of the two.",
+      "model": "Model has Tzolakis at 19.1 next5 (avail 1.00) against Pickford's 16.7 (avail 1.00) - a pure fixture gap, not an availability one. This rests on the model's numbers; no news changes either man's standing.",
       "confidence": "medium",
       "sources": []
     },
@@ -35,8 +35,8 @@
         "code": "226182",
         "club": "LEE"
       },
-      "why": "Correction: this morning's report that Bogle was among the substitutes for today's Palace game was wrong - Leeds' own match report confirms he started at right wing-back and was booked, so that fitness angle is retracted. The claim now rests on production and fixtures alone: Truffert started again today and picked out Evanilson's early flick in Bournemouth's 0-1 home defeat to Liverpool, a nailed attacking full-back, while Leeds' defence at Elland Road managed only a blank against a Palace side missing three defenders.",
-      "model": "Model has Truffert at 18.0 next5 (avail 1.00) against Bogle's 14.3 (avail 0.89) - one of the larger gaps on the board. The 0.89 figure was never about tonight's team news; it is holding up fine now the benching story is gone, so this is a fixture/production swap, not a fitness one.",
+      "why": "Bogle remains a nailed starter at right wing-back for Leeds with no fitness doubt - reports of England interest following Tino Livramento's injury are a credit to his form, not a threat to his club minutes, but they trace only to outlets outside the permitted list so are not cited here. Truffert continues to start every week at left-back for Bournemouth and nearly assisted again in Sunday's home defeat to Liverpool, so this is a fixture-and-production swap between two fit, nailed defenders.",
+      "model": "Model has Truffert at 18.0 next5 (avail 1.00) against Bogle's 14.3 (avail 0.89) - one of the larger gaps on the board. The 0.89 figure has never reflected an actual fitness doubt; it is a fixture-run discount the model applies, and we agree Truffert's run is the stronger one right now.",
       "confidence": "medium",
       "sources": [
         {
@@ -62,8 +62,8 @@
         "code": "249231",
         "club": "BRE"
       },
-      "why": "Both fit, nailed starters - Stach started and went the distance again today in Leeds' 0-0 draw with Palace, continuing an unbeaten start that has them third in the table, while Brentford's own preview this week raised no fitness concern over Lewis-Potter. This is squarely a fixture and output swap: Stach is a goal threat from midfield in a rampant Leeds side.",
-      "model": "Model has Stach at 18.3 next5 (avail 1.00) against Lewis-Potter's 13.7 (avail 0.95); separately it rates Barcola at just 3.3 next5, which is why its own suggested swap is Gro\u00df for Barcola rather than this one - the board declines that suggestion given Barcola's now-established starting role, and keeps this swap instead.",
+      "why": "Both fit, nailed starters. A Brentford story surfaced today reading 'Lewis-Potter out for up to two months with a knee injury' was checked in full on brentfordfc.com and turned out to be a stale page from the Thomas Frank era (it quotes Frank as manager and lists Mbeumo still in the squad, both years out of date) - Brentford's own current team-news archive under Keith Andrews shows Lewis-Potter repeatedly starting, so he remains fit. Stach continues to start every week in a Leeds side unbeaten and third in the table.",
+      "model": "Model has Stach at 18.3 next5 (avail 1.00) against Lewis-Potter's 13.7 (avail 0.95); separately it rates Barcola at just 3.3 next5, which is why its own greedy suggestion is Gross-for-Barcola rather than this swap - we again decline that and stick with Barcola, still undersold on a small sample for a GBP123m signing, and take this smaller, safer MID upgrade instead.",
       "confidence": "medium",
       "sources": [
         {
@@ -85,8 +85,8 @@
         "code": "438234",
         "club": "TOT"
       },
-      "why": "Marmoush remains Tottenham's first-choice striker with no fitness doubt raised anywhere, but he is still without a Premier League goal this season, and Sunday's 2-3 home defeat to Aston Villa dropped Spurs into the relegation zone with two points from five games - Sky Sports reports it is piling pressure on manager Roberto De Zerbi, the kind of run that precedes team changes even if Marmoush himself keeps starting for now.",
-      "model": "Model has McBurnie at 13.2 next5 (avail 0.98) against Marmoush's 9.3 (avail 0.59) - the avail figure already prices in some risk around a goalless striker at a struggling club; today's result adds context rather than changing the number.",
+      "why": "Marmoush remains Tottenham's first-choice striker with no fitness doubt raised anywhere, but he is still without a Premier League goal this season, and Sunday's 2-3 home defeat to Aston Villa left Spurs in the relegation zone with Sky Sports reporting pressure building on head coach Roberto De Zerbi. The club's own hierarchy are said to be standing by him for now (Spurs' GBP60m severance cost is a real barrier to a change), so Marmoush's minutes are not at risk in the short term - this claim is about output, not availability.",
+      "model": "Model has McBurnie at 13.2 next5 (avail 0.98) against Marmoush's 9.3 (avail 0.59) - the avail figure already prices in some risk around a goalless start and a struggling team. We agree with the model's direction here; a speculative downgrade given Marmoush's importance to Tottenham's attack, hence low confidence rather than higher.",
       "confidence": "low",
       "sources": [
         {
@@ -112,8 +112,8 @@
         "code": "503139",
         "club": "BOU"
       },
-      "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola for weeks. Timber started again today in Palace's goalless draw at Leeds, his latest league start on top of Ipswich and a midweek Europa League appearance, and Palace are missing three defenders which should keep midfield largely settled around him.",
-      "model": "Model has Timber at just 5.3 next5 (avail 0.37) against Scott's 17.0 (avail 0.99) - essentially no read on Timber off a handful of career games. Overruling the model here on the strength of his now-repeated starts rather than any single article.",
+      "why": "Speculative punt on the model's blind spot for new arrivals, the same one that undersold Barcola for weeks. Timber started again in Palace's goalless draw at Leeds on Saturday, his latest league start on top of a Europa League appearance, and remains part of Pierre Sage's midfield with Mateta and Henderson still not back until after the international break.",
+      "model": "Model has Timber at just 5.3 next5 (avail 0.37) against Scott's 17.0 (avail 0.99) - essentially no read on Timber off a handful of career games. Overruling the model's low figure the same way the Barcola case argues we should, but keeping it a low-confidence punt since, unlike Barcola, no permitted source has yet written up Timber's underlying role in detail.",
       "confidence": "low",
       "sources": [
         {
@@ -187,7 +187,7 @@
             "club": "BOU"
           },
           "drop": {
-            "name": "Milenkovi\u0107",
+            "name": "Milenković",
             "code": "227444",
             "club": "NFO"
           },
@@ -266,7 +266,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Mu\u00f1oz",
+            "name": "Muñoz",
             "code": "247348",
             "club": "NFO"
           },
@@ -292,7 +292,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le F\u00e9e",
+            "name": "E.Le Fée",
             "code": "484420",
             "club": "SUN"
           },
@@ -447,7 +447,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Gro\u00df",
+            "name": "Groß",
             "code": "60307",
             "club": "BHA"
           },
@@ -722,6 +722,12 @@
       "gw": 6,
       "claims": 5,
       "note": "Corrected claim 2: Bogle actually started and was booked against Palace today, so this morning's benching report was wrong and is retracted; the swap now rests on fixture/production value only. Reinforced claims 3 and 5 with today's confirmed Leeds and Palace lineups (Stach and Timber both started). No change to which five claims are made or their order otherwise."
+    },
+    {
+      "ts": "2026-09-21T08:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Investigated and discarded a Brentford 'Lewis-Potter facing two months out' story that traced to a stale, years-old page (Thomas Frank era) rather than current news - Brentford's own archive under Keith Andrews confirms he is fit and starting, so claim 3 stands on fixture/production grounds only, now more firmly. Barcola started and was subbed again in Sunday's Bournemouth defeat, reinforcing rather than changing the decision to decline the model's own Gross-for-Barcola suggestion. Everton, and most of the division, now enter a three-week gap for the international break; the next material team news is likely to come from pressers in the run-up to games resuming around 11 October, well before this window's 9 October waiver close."
     }
   ]
 }
