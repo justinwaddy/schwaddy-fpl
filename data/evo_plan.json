@@ -1,14 +1,14 @@
 {
- "generated": "2026-09-21T08:36",
+ "generated": "2026-09-21T13:54",
  "gw": 6,
  "horizon": "next5",
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.839,
    "base": 3.38,
-   "ep": 3.35,
+   "ep": 3.36,
    "votes": 4
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 19.41,
+   "gain": 19.38,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 208
+   "borda": 209
   },
   {
    "pos": "MID",
-   "gain": 10.82,
+   "gain": 10.81,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 133
+   "borda": 134
   },
   {
    "pos": "MID",
-   "gain": 10.01,
+   "gain": 10.05,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 93
+   "borda": 94
   },
   {
    "pos": "MID",
-   "gain": 8.23,
+   "gain": 8.3,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 75
+   "borda": 76
   },
   {
    "pos": "FWD",
-   "gain": 10.72,
+   "gain": 10.58,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 112
+   "borda": 111
   },
   {
    "pos": "FWD",
-   "gain": 7.7,
+   "gain": 7.72,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 7.14,
+   "gain": 7.1,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.35,
+   "gain": 6.41,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.13,
+   "gain": 6.08,
    "change": 4,
    "fallback": false,
    "add": {
@@ -542,7 +542,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.27,
+   "gain": 7.2,
    "change": 4,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 30
+   "borda": 29
   },
   {
    "pos": "MID",
-   "gain": 6.47,
+   "gain": 6.46,
    "change": 4,
    "fallback": true,
    "add": {
@@ -606,7 +606,7 @@
   },
   {
    "pos": "MID",
-   "gain": 3.48,
+   "gain": 3.51,
    "change": 4,
    "fallback": true,
    "add": {
@@ -816,9 +816,9 @@
    "name": "Rice",
    "pos": "MID",
    "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.926,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.695,
    "base": 168.31,
    "ep": 161.56
   },
@@ -1068,9 +1068,9 @@
    "name": "Palmer",
    "pos": "MID",
    "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.985,
+   "status": "d",
+   "news": "Muscular injury - 75% chance of playing",
+   "p_play": 0.739,
    "base": 134.16,
    "ep": 133.71
   },
