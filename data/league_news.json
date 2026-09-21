@@ -1,43 +1,6 @@
 {
-  "generated": "2026-09-21T07:46 UTC",
+  "generated": "2026-09-21T22:55 UTC",
   "items": [
-    {
-      "id": "2026-09-11-arteta-mosquera-timber",
-      "ts": "2026-09-11T22:43",
-      "kind": "news",
-      "text": "Mikel Arteta's press conference ahead of Saturday's trip to Sunderland touched two Arsenal defenders held in this league: he said Cristhian Mosquera is 'doing really well' and could be back 'for this game or the next one,' and that Jurrien Timber 'looks in good shape' after training with the squad for a few days. Robert owns Mosquera, Edward owns Timber.",
-      "source": {
-        "title": "Every word from Arteta's pre-Sunderland presser",
-        "url": "https://www.arsenal.com/news/every-word-from-artetas-pre-sunderland-presser-akCWE6B1yPR2"
-      }
-    },
-    {
-      "id": "2026-09-11-waiver-callback",
-      "ts": "2026-09-11T22:44",
-      "kind": "opinion",
-      "text": "This page needled the league on 7 September for a gameweek podium that belonged entirely to free agents - Mitchell, Bogle, Barnes and Vuskovic, all outscoring anything on a roster. Justin evidently took it personally: today's waiver sheet has him grabbing both Bogle and Vuskovic in one afternoon, along with Scott and Ampadu, four moves from a manager who has sat fifth since Monday.",
-      "source": null
-    },
-    {
-      "id": "2026-09-12-palace-strand-larsen-brace",
-      "ts": "2026-09-12T07:55",
-      "kind": "news",
-      "text": "Jorgen Strand Larsen scored twice as Crystal Palace beat Middlesbrough 3-0 in the Carabao Cup third round on Tuesday, heading in a first-half cross from Oscar Mingueza before adding a second from a Ben Chilwell delivery; Daichi Kamada completed the scoring. Justin owns Strand Larsen.",
-      "source": {
-        "title": "Crystal Palace 3-0 Middlesbrough: Jorden Strand Larsen nets twice as Eagles cruise into fourth round",
-        "url": "https://www.skysports.com/football/news/11938/13582701/crystal-palace-3-0-middlesbrough-jorden-strand-larsen-nets-twice-as-eagles-cruise-into-fourth-round"
-      }
-    },
-    {
-      "id": "2026-09-12-chelsea-front-three",
-      "ts": "2026-09-12T07:56",
-      "kind": "news",
-      "text": "Xabi Alonso says his front three of Cole Palmer, Morgan Rogers and Joao Pedro have already produced 11 goal involvements between them this season, calling it early days for a partnership he is delighted to see click, ahead of Saturday's visit from a Hull side yet to concede in the league. Edward owns Palmer, Big Ben owns Rogers and Marcus owns Joao Pedro.",
-      "source": {
-        "title": "Alonso on Palmer and Rogers enjoying themselves and Hull respect",
-        "url": "https://www.chelseafc.com/en/news/article/alonso-on-palmer-and-rogers-enjoying-themselves-and-hull-respect"
-      }
-    },
     {
       "id": "2026-09-12-liverpool-gakpo-barcola",
       "ts": "2026-09-12T07:57",
@@ -721,23 +684,43 @@
         "title": "Trent Alexander-Arnold and Cole Palmer recalled to England squad for Nations League games by Thomas Tuchel",
         "url": "https://www.skysports.com/football/news/12016/13589193/trent-alexander-arnold-and-cole-palmer-recalled-to-england-squad-for-nations-league-games-by-thomas-tuchel"
       }
+    },
+    {
+      "id": "2026-09-21-england-withdrawals",
+      "ts": "2026-09-21T22:52",
+      "kind": "news",
+      "text": "Cole Palmer and Declan Rice, both named in this morning's England squad, have since withdrawn from the Nations League squad, along with Tino Livramento, Kobbie Mainoo and Marcus Rashford - no details have been given on the nature of any of their injuries. Nottingham Forest's Morgan Gibbs-White and Everton's James Garner, both Edward's, have been called up as replacements and join the squad on Tuesday.",
+      "source": {
+        "title": "England squad: Cole Palmer and Declan Rice among five withdrawals from England squad",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c617j2prweejo"
+      }
+    },
+    {
+      "id": "2026-09-21-enzo-first-goal",
+      "ts": "2026-09-21T22:52",
+      "kind": "news",
+      "text": "Enzo Fernandez scored his first goal for Manchester City in Sunday's 5-3 win over Sunderland, the game already reported on this page - the goal was part of a 7-point gameweek haul for Ben D, who owns him.",
+      "source": {
+        "title": "Man City 5-3 Sunderland: Perfect 24 hours for Enzo Maresca puts pressure on Arsenal",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c6z7z2we5lgwo"
+      }
+    },
+    {
+      "id": "2026-09-21-op-edward-one-win",
+      "ts": "2026-09-21T22:52",
+      "kind": "opinion",
+      "text": "Edward leads the table after five gameweeks having actually won only one of them - GW5's 57, his sole gameweek victory this season. It is not the story the haul lines tell, all big individual numbers and one-week swagger, but it is the one the standings reward: stay ahead of the bad weeks and the good one takes care of itself.",
+      "source": null
+    },
+    {
+      "id": "2026-09-21-op-robert-cherki-roefs",
+      "ts": "2026-09-21T22:52",
+      "kind": "opinion",
+      "text": "Robert's Sunday came from both ends of the same fixture: his Rayan Cherki turned in the kind of display that had Joe Hart calling him a genius as Manchester City piled on five, while his Sunderland goalkeeper Roefs picked the ball out of his own net five times and finished the game on nothing. Eight points from Cherki, zero from Roefs, in the same ninety minutes - which is as good a summary as any of why Pardinho sits last, 89 off the top, its most exciting player permanently cancelled out by its most exposed one.",
+      "source": null
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-05T16:08",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "16:30 kickoff Hull v Aston Villa: AVL confirmed XI found (Sky Sports), Jackson starts; HUL had no league-owned players to check"
-    },
-    {
-      "ts": "2026-09-05T22:45",
-      "news": 2,
-      "opinion": 3,
-      "matchday": true,
-      "note": "Evening wrap, all 7 fixtures done by kick-off of the check (last was Hull v Villa, 16:30). Led with Man City 1-0 Coventry (Haaland's 300th club goal, Enzo Fernandez's debut, Nico O'Reilly injured in the warm-up - touches Justin, Big Ben and Robert) and Tottenham's scoreless run plus Neco Williams' disallowed goal at Forest (touches Edward), both read in full at Sky Sports; skipped Newcastle-Bournemouth and Brighton-Leeds as their main storylines (Thiaw own goal, Tavernier haul, Bogle/Vuskovic) were already covered by the engine's own LOWLIGHT/HAUL/FREEAGENT badges. Two roast-archive submissions used and marked used: Edward's 'relies on luck every week' on Marcus, hung on seven blanking players and a keeper/centre-back doing the scoring, and Edward's 'biased Arsenal fan, zero ball knowledge' on Big Ben, hung on his three Arsenal picks (White, Havertz, Konsa) combining for zero this gameweek. Third opinion is original: Ben C's 27-point deficit to Marcus before kick-off flipping into a 4-point lead, a 31-point swing off four Liverpool and four Man City players, both figures taken straight from the live feed's before-kick-off totals and the RACE badge's stated gap. The remaining unused submission, Edward's 'Mong' on Robert, was not used and will not be: it is an ableist slur under the archive's own exclusion rule, not a joke that can be sharpened, so it stays in the archive unused rather than landing another week."
-    },
     {
       "ts": "2026-09-06T07:40",
       "gw": 3,
@@ -1152,6 +1135,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news, no fixtures today (int'l break starts). GW5 wrap-up: covered the two Sunday matches the evening wrap missed - Fulham 1-1 Man Utd (Lammens/Martinez own goal, Cunha's late equaliser, touching Edward/Ben C/Ben D) and Leeds 0-0 Crystal Palace (Khalaili's disallowed assist and Calvert-Lewin's miss both Edward's, Trafford's saves for Ben D). Also reported Tuchel's England squad, which calls up players from all six squads. Roast archive unchanged - the two unused submissions are the slur/race ones flagged off-limits on 20 Sept, nothing new submitted since."
+    },
+    {
+      "ts": "2026-09-21T22:55 UTC",
+      "news": 2,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday - international break, GW6's ten fixtures all still to come per the live feed. This session started with a stale local checkout (three commits behind main) and drafted a full set of items on Man City 5-3 Sunderland, Arsenal 3-0 at Brighton and Robert's Roefs/Cherki split before the rebase conflict surfaced that all of it, plus a near-identical state-of-the-table opinion, had already been posted by two runs earlier today and yesterday evening. Aborted that rebase, reset to origin/main, and re-read the actual current page before writing anything - the GW5 story is thoroughly told already. What was left: Cole Palmer and Declan Rice, named in this morning's England call-up post, withdrew from the Nations League squad this afternoon (confirmed via BBC, updated 16:06 UTC, after our 07:55 post) with Edward's Gibbs-White and Garner drafted in as replacements; and Enzo Fernandez's first City goal in the already-reported 5-3 win, a detail that hadn't been mentioned. Two opinion pieces off previously-unused angles in the now-final GW5 numbers: Edward's one gameweek win from five yet leading the table, and Robert's Cherki (8) and Roefs (0) landing at opposite ends of the same match. Roast archive unchanged - the two unused submissions are the same sexuality and race jokes flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
     }
   ]
 }
