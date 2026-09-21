@@ -1,14 +1,14 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-21T14:20 UTC",
-  "summary": "Board rebuilt for GW6 rather than reconfirmed, and the headline is a reversal: Groß comes in at claim 1. He is unowned, has started and finished all five games, and has 47 points - 3 goals, 4 assists, a goal and an assist in Brighton's 3-0 win over Arsenal on Saturday - which makes him the best free agent in the league by some distance on every measure this repo has. Five straight runs declined him because the swap was framed as Groß-for-Barcola and this board would not drop a £123m signing on two games; that reasoning has now cost a month. Barcola is fit (Iraola: cramps, \"there's no injury\") and has still managed 168 minutes and no returns in three appearances, so the sample is not small, the role is small. Two other changes: Brobbey comes onto the board at claim 3 after Sunday's hat-trick at the Etihad, and Truffert-for-Bogle is REMOVED. Yesterday's run upgraded that claim to medium on a reading that leedsunited.com had Bogle among the substitutes with James Justin at right wing-back; the club's own team news says Farke named an unchanged side and Bogle started, was booked and came off on 67. Bogle has 42 points, two goals and five starts from five - he is not a drop, and Truffert with 10 points and 2.0 form is not the man to make room for. Justin sits 2nd of 6 on 252 points, which is 5th of 6 in the reversed GW6 waiver order, so four managers claim before him and Groß may well not survive; if he does survive the 9 October processing he is a free agent first-come-first-served until the 10 October deadline and should be taken the moment waivers clear. The international break means this board has 18 days and no football to change it.",
+  "ts": "2026-09-21T21:08 UTC",
+  "summary": "Board rebuilt for GW6 rather than reconfirmed, and the headline is a reversal: Gro\u00df comes in at claim 1. He is unowned, has started and finished all five games, and has 47 points - 3 goals, 4 assists, a goal and an assist in Brighton's 3-0 win over Arsenal on Saturday - which makes him the best free agent in the league by some distance on every measure this repo has. Five straight runs declined him because the swap was framed as Gro\u00df-for-Barcola and this board would not drop a \u00a3123m signing on two games; that reasoning has now cost a month. Barcola is fit (Iraola: cramps, \"there's no injury\") and has still managed 168 minutes and no returns in three appearances, so the sample is not small, the role is small. Other changes: Brobbey comes onto the board at claim 3 after Sunday's hat-trick at the Etihad; Truffert-for-Bogle is dropped since Leeds' own team news confirms Bogle started and was booked against Palace, not benched as first read, and Truffert now targets the weaker Ajayi at claim 5 instead, on model grounds rather than news. Justin sits 2nd of 6 on 252 points, which is 5th of 6 in the reversed GW6 waiver order, so four managers claim before him and Gro\u00df may well not survive; if he does survive the 9 October processing he is a free agent first-come-first-served until the 10 October deadline and should be taken the moment waivers clear. The international break, now underway, leaves this board 18 days and no squad-club football to change it before the window closes.",
   "claims": [
     {
       "rank": 1,
       "pos": "MID",
       "add": {
-        "name": "Groß",
+        "name": "Gro\u00df",
         "code": "60307",
         "club": "BHA"
       },
@@ -17,13 +17,13 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "This board has declined the model's Groß suggestion every week since GW2 on the grounds that Barcola is a £123m signing with too small a sample to judge, and that argument has now been wrong for five gameweeks running. Two things settle it. First, Barcola's problem is not a sample size, it is a role: Iraola confirmed on 11 September that the Atletico withdrawal was cramp and \"there's no injury\", and Barcola has still played 26, 71 and 71 minutes in the three games since - he is fit, he is being used off the bench or hooked on the hour, and he has returned nothing in 168 minutes. Second, and more to the point, the hold was always framed as Groß-or-Barcola when it never had to be: Groß is the best free agent in the league by any measure and somebody was always going to take him. He has started all five, played every minute of all five, and has 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 demolition of Arsenal on Saturday. 47 points, sitting unowned, is the single biggest thing on this board and it has been left there for a month.",
-      "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.2 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
+      "why": "This board declined the model's Gro\u00df suggestion every week since GW2 on the grounds that Barcola, a \u00a3123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Gro\u00df-or-Barcola when it never had to be: Gro\u00df has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
+      "model": "Model has Gro\u00df at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.2 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
       "confidence": "high",
       "sources": [
         {
           "url": "https://www.skysports.com/football/news/11661/13586062/brighton-3-0-arsenal-mikel-artetas-side-lose-for-first-time-this-season-as-impressive-hosts-thrash-defending-champions",
-          "title": "Brighton 3-0 Arsenal: Groß scores and sets up the third (Sky Sports, 19 Sep 2026)"
+          "title": "Brighton 3-0 Arsenal: Gro\u00df scores and sets up the third (Sky Sports, 19 Sep 2026)"
         },
         {
           "url": "https://www.brightonandhovealbion.com/media-article/mft-match-report-pl-bhaars",
@@ -48,8 +48,8 @@
         "code": "249231",
         "club": "BRE"
       },
-      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth.",
-      "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
+      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Gro\u00df, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth.",
+      "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le F\u00e9e for Lewis-Potter, which is claim 5 here.",
       "confidence": "medium",
       "sources": [
         {
@@ -75,7 +75,7 @@
         "code": "247412",
         "club": "CRY"
       },
-      "why": "Brobbey took a hat-trick off Manchester City on Sunday - 12th, 33rd and 59th minutes in a 5-3 defeat, the first Premier League hat-trick on the losing side since Roque Santa Cruz in 2007 - and has now played 90 minutes in each of Sunderland's last three. Le Bris after the game: \"It's clear for us that he's a good striker, he's getting better with every game.\" One haul is not a season, and the three games before it returned 2, 2, 1, so this is a bet on a settled role and a decent run (BHA, bou, LEE, cov, CHE) rather than on Sunday repeating. Marmoush is the other candidate for this drop and is arguably the worse player right now - four starts, no goal, 2 points every single week, and Spurs went three league games without scoring for the first time since 1980 - but both the matrix model and four of five network models prefer dropping Strand Larsen, whose minutes (27, 62, 45, 83, 81) say he has only just won his place and whose one goal in five is the thinner ledger. Marmoush stays on watch for next week.",
+      "why": "Brobbey took a hat-trick off Manchester City on Sunday - a 5-3 defeat, the first PL hat-trick on the losing side since 2007 - and has played 90 minutes in each of Sunderland's last three. Le Bris: \"it's clear for us that he's a good striker.\" One haul is not a season, so this is a bet on a settled role and a decent run (BHA, bou, LEE, cov, CHE), not on Sunday repeating. Marmoush is arguably worse right now (four starts, no goal) but both the matrix model and most network models prefer dropping Strand Larsen, whose minutes (27, 62, 45, 83, 81) say he only just won his place. Marmoush stays on watch.",
       "model": "Model has Brobbey at 14.9 next5 / 98.6 rest (avail 0.90) against Strand Larsen's 10.8 / 72.8 (avail 0.80) - +4.1 over five, +25.8 over the season. Against Marmoush (12.7 / 83.6) the same add is only +2.2, which is why the drop falls this way. The neural network makes it change 2 at 4/5 models, +10.6 next5 and +64 on the season.",
       "confidence": "medium",
       "sources": [
@@ -109,24 +109,24 @@
     },
     {
       "rank": 5,
-      "pos": "MID",
+      "pos": "DEF",
       "add": {
-        "name": "E.Le Fée",
-        "code": "484420",
-        "club": "SUN"
+        "name": "Truffert",
+        "code": "494521",
+        "club": "BOU"
       },
       "drop": {
-        "name": "Lewis-Potter",
-        "code": "249231",
-        "club": "BRE"
+        "name": "Ajayi",
+        "code": "146426",
+        "club": "HUL"
       },
-      "why": "The fallback for claim 2 and nothing more: it takes the same man out, so it can only be granted if Stach has already gone to somebody picking earlier. Le Fée has started all five for Sunderland, played 438 minutes, and laid on Brobbey's opener at the Etihad. Belloumi (HUL) is the alternative here and the better one on form - 31 points, 2 goals and 2 assists, 7.0 form against Le Fée's 3.6 - but he has been taken off early three times (59, 81, 82 minutes) and the model prices that at 0.94 availability against Le Fée's 0.99, so the network's pick gets the slot and Belloumi is the name to substitute if you would rather buy the form than the minutes.",
-      "model": "Model has Le Fée at 18.1 next5 / 120.1 rest (avail 0.99) against Lewis-Potter's 14.0 / 97.1 - +4.1 over five, +23.0 over the season; Belloumi is 15.9 / 110.0 on the same drop. The neural network lists Le Fée as change 4 at 3/5 models and again as a fallback behind Groß, which is the only reason it ranks ahead of Belloumi here.",
+      "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who started and was booked against Palace and is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth, just earned his first France call-up, and sits on a stronger fixture run. This rests on the model's own numbers rather than any fresh news about Ajayi specifically, who remains fit and undisturbed at Hull.",
+      "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
       "confidence": "low",
       "sources": [
         {
-          "url": "https://www.skysports.com/football/manchester-city-vs-sunderland/report/559490",
-          "title": "Man City 5-3 Sunderland: Le Fée's through ball for Brobbey's opener (Sky Sports, 20 Sep 2026)"
+          "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
+          "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
         }
       ]
     }
@@ -191,7 +191,7 @@
             "club": "BOU"
           },
           "drop": {
-            "name": "Milenković",
+            "name": "Milenkovi\u0107",
             "code": "227444",
             "club": "NFO"
           },
@@ -270,7 +270,7 @@
             "club": "CRY"
           },
           "drop": {
-            "name": "Muñoz",
+            "name": "Mu\u00f1oz",
             "code": "247348",
             "club": "NFO"
           },
@@ -296,7 +296,7 @@
           "rank": 2,
           "pos": "MID",
           "add": {
-            "name": "E.Le Fée",
+            "name": "E.Le F\u00e9e",
             "code": "484420",
             "club": "SUN"
           },
@@ -451,7 +451,7 @@
           "rank": 3,
           "pos": "MID",
           "add": {
-            "name": "Groß",
+            "name": "Gro\u00df",
             "code": "60307",
             "club": "BHA"
           },
@@ -473,7 +473,7 @@
       "ts": "2026-09-21T14:20 UTC",
       "gw": 6,
       "claims": 5,
-      "note": "Board rebuilt, not reconfirmed - three substantive changes and one correction of an earlier run. (1) Groß-for-Barcola promoted from declined-every-week to claim 1 at high confidence: 47 points unowned, 5/5 starts, 450 minutes, 3g 4a, goal and corner assist in Brighton 3-0 Arsenal; verified against Sky and brightonandhovealbion.com. The standing objection - too small a sample on a £123m signing - was checked against liverpoolfc.com's own fitness update (11 Sep, Iraola: \"just cramps... there's no injury\") and does not hold: Barcola is fit and on 26/71/71 minutes with no returns, which is a role, not a sample. Model +16.2 next5 / +100 rest; the neural network makes the same swap its change 1 with all 5 models agreeing, the only unanimous row on either horizon. (2) Brobbey-for-Strand Larsen added at claim 3 after Sunday's hat-trick at Manchester City (Sky report, Le Bris quote), 90 minutes in each of Sunderland's last three; Marmoush considered as the alternative drop and left in on the model's and the network's joint preference, but flagged for next week on four starts and no goal. (3) CORRECTION: Truffert-for-Bogle removed from the board. The 20 September run upgraded it to medium confidence on a reading that leedsunited.com's team news put Bogle among the substitutes with James Justin in at right wing-back; leedsunited.com's own 'Farke names unchanged side to face Palace' and the match report say Bogle started, was booked and was withdrawn on 67. With 42 points and two goals from five starts he is the squad's second-best defender on the ledger and Truffert (10 points, 2.0 form) is not the swap. McBurnie-for-Marmoush and Timber-for-Scott also dropped - the first is +0.4 next5, inside noise, and the second was an explicit punt on the model's blind spot for new arrivals that the Groß case no longer needs to carry. Tzolakis-for-Pickford held at claim 4, unchanged. Ranking matters more than usual this week: Justin submits 5th of 6 in the reversed order, so claim 1 is very likely the only one that lands, and it is the one worth landing. Run made against a full data refresh taken at 14:00 UTC today (GW5 final, prices, injury log) and a fresh five-seed neural network plan on both horizons."
+      "note": "Board rebuilt, not reconfirmed - three substantive changes and one correction of an earlier run. (1) Gro\u00df-for-Barcola promoted from declined-every-week to claim 1 at high confidence: 47 points unowned, 5/5 starts, 450 minutes, 3g 4a, goal and corner assist in Brighton 3-0 Arsenal; verified against Sky and brightonandhovealbion.com. The standing objection - too small a sample on a \u00a3123m signing - was checked against liverpoolfc.com's own fitness update (11 Sep, Iraola: \"just cramps... there's no injury\") and does not hold: Barcola is fit and on 26/71/71 minutes with no returns, which is a role, not a sample. Model +16.2 next5 / +100 rest; the neural network makes the same swap its change 1 with all 5 models agreeing, the only unanimous row on either horizon. (2) Brobbey-for-Strand Larsen added at claim 3 after Sunday's hat-trick at Manchester City (Sky report, Le Bris quote), 90 minutes in each of Sunderland's last three; Marmoush considered as the alternative drop and left in on the model's and the network's joint preference, but flagged for next week on four starts and no goal. (3) CORRECTION: Truffert-for-Bogle removed from the board. The 20 September run upgraded it to medium confidence on a reading that leedsunited.com's team news put Bogle among the substitutes with James Justin in at right wing-back; leedsunited.com's own 'Farke names unchanged side to face Palace' and the match report say Bogle started, was booked and was withdrawn on 67. With 42 points and two goals from five starts he is the squad's second-best defender on the ledger and Truffert (10 points, 2.0 form) is not the swap. McBurnie-for-Marmoush and Timber-for-Scott also dropped - the first is +0.4 next5, inside noise, and the second was an explicit punt on the model's blind spot for new arrivals that the Gro\u00df case no longer needs to carry. Tzolakis-for-Pickford held at claim 4, unchanged. Ranking matters more than usual this week: Justin submits 5th of 6 in the reversed order, so claim 1 is very likely the only one that lands, and it is the one worth landing. Run made against a full data refresh taken at 14:00 UTC today (GW5 final, prices, injury log) and a fresh five-seed neural network plan on both horizons."
     },
     {
       "ts": "2026-09-20T08:12 UTC",
@@ -738,6 +738,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Investigated and discarded a Brentford 'Lewis-Potter facing two months out' story that traced to a stale, years-old page (Thomas Frank era) rather than current news - Brentford's own archive under Keith Andrews confirms he is fit and starting, so claim 3 stands on fixture/production grounds only, now more firmly. Barcola started and was subbed again in Sunday's Bournemouth defeat, reinforcing rather than changing the decision to decline the model's own Gross-for-Barcola suggestion. Everton, and most of the division, now enter a three-week gap for the international break; the next material team news is likely to come from pressers in the run-up to games resuming around 11 October, well before this window's 9 October waiver close."
+    },
+    {
+      "ts": "2026-09-21T21:08 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "First sweep after the international break began. No change to which players are targeted, but two fixes to the file itself: claims 1 and 3 had grown past this file's 700-character limit on 'why' and are trimmed to the same substance; and claim 5 (Le F\u00e9e-for-Lewis-Potter) was an illegal duplicate of claim 2's drop, so it is replaced with Truffert-for-Ajayi, a model-only, low-confidence punt on Justin's thinnest defensive slot once Bogle is set aside. Research turned up nothing that changes a target: England's official squad leaves Bogle out despite pre-announcement speculation, not a claims matter since he was never a target; Stach is away with Germany, already known; Gro\u00df, Brobbey and Tzolakis unaffected by anything the international window has produced so far; Nketiah's brief fitness issue at Palace (since resolved) does not touch claim 3, since Strand Larsen is Justin's own player and Mateta/Henderson remain out past the break regardless. League position unchanged: Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. This board stands with 18 days and no squad-club football left before the 9 October waiver close."
     }
   ]
 }
