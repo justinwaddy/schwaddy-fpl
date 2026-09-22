@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T08:36",
+ "generated": "2026-09-22T13:39",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 4.95,
-   "ep": 4.87,
+   "ep": 4.89,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.951,
    "base": 4.58,
-   "ep": 4.49,
+   "ep": 4.48,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.3,
-   "ep": 6.19,
+   "ep": 6.18,
    "votes": 5
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 19.23,
+   "gain": 19.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 209
+   "borda": 199
   },
   {
    "pos": "MID",
-   "gain": 10.84,
+   "gain": 10.64,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 135
+   "borda": 125
   },
   {
    "pos": "MID",
-   "gain": 10.1,
+   "gain": 10.01,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 95
+   "borda": 90
   },
   {
    "pos": "MID",
-   "gain": 8.33,
+   "gain": 8.43,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 79
+   "borda": 75
   },
   {
    "pos": "FWD",
-   "gain": 10.32,
+   "gain": 10.22,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 107
+   "borda": 96
   },
   {
    "pos": "FWD",
-   "gain": 7.69,
+   "gain": 7.84,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 37
+   "borda": 33
   },
   {
    "pos": "FWD",
-   "gain": 7.1,
+   "gain": 6.84,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 36
+   "borda": 31
   },
   {
    "pos": "DEF",
-   "gain": 6.5,
+   "gain": 6.6,
    "change": 3,
    "fallback": false,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 54
+   "borda": 52
   },
   {
    "pos": "DEF",
-   "gain": 7.26,
+   "gain": 7.16,
    "change": 3,
    "fallback": true,
    "add": {
@@ -509,40 +509,8 @@
    "borda": 30
   },
   {
-   "pos": "DEF",
-   "gain": 3.6,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 116,
-    "code": 83299,
-    "name": "Dunk",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
-    "pos": "DEF",
-    "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.839,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 10
-  },
-  {
    "pos": "MID",
-   "gain": 6.1,
+   "gain": 5.86,
    "change": 4,
    "fallback": false,
    "add": {
@@ -570,43 +538,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 47
+   "borda": 45
   },
   {
    "pos": "MID",
-   "gain": 7.1,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 286,
-    "code": 540324,
-    "name": "Belloumi",
-    "pos": "MID",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.894,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.917,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 27
-  },
-  {
-   "pos": "MID",
-   "gain": 6.49,
+   "gain": 6.4,
    "change": 4,
    "fallback": true,
    "add": {
@@ -634,11 +570,43 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 27
+   "borda": 26
   },
   {
    "pos": "MID",
-   "gain": 3.52,
+   "gain": 6.95,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 286,
+    "code": 540324,
+    "name": "Belloumi",
+    "pos": "MID",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.894,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 86,
+    "code": 249231,
+    "name": "Lewis-Potter",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.917,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 25
+  },
+  {
+   "pos": "MID",
+   "gain": 3.61,
    "change": 4,
    "fallback": true,
    "add": {
@@ -666,7 +634,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 7
+   "borda": 8
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
