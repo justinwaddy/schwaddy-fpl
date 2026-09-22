@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-22T08:06 UTC",
+  "ts": "2026-09-22T21:12 UTC",
   "summary": "Board rebuilt for GW6 rather than reconfirmed, and the headline is a reversal: Groß comes in at claim 1. He is unowned, has started and finished all five games, and has 47 points - 3 goals, 4 assists, a goal and an assist in Brighton's 3-0 win over Arsenal on Saturday - which makes him the best free agent in the league by some distance on every measure this repo has. Five straight runs declined him because the swap was framed as Groß-for-Barcola and this board would not drop a £123m signing on two games; that reasoning has now cost a month. Barcola is fit (Iraola: cramps, \"there's no injury\") and has still managed 168 minutes and no returns in three appearances, so the sample is not small, the role is small. Other changes: Brobbey comes onto the board at claim 3 after Sunday's hat-trick at the Etihad; Truffert-for-Bogle is dropped since Leeds' own team news confirms Bogle started and was booked against Palace, not benched as first read, and Truffert now targets the weaker Ajayi at claim 5 instead, on model grounds rather than news. Justin sits 2nd of 6 on 252 points, which is 5th of 6 in the reversed GW6 waiver order, so four managers claim before him and Groß may well not survive; if he does survive the 9 October processing he is a free agent first-come-first-served until the 10 October deadline and should be taken the moment waivers clear. The international break, now underway, leaves this board 18 days and no squad-club football to change it before the window closes.",
   "claims": [
     {
@@ -750,6 +750,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Full sweep (16 searches) found nothing that touches a target: Stach's Germany call-up and clean bill of health reconfirmed in detail via leedsunited.com's own feature (old ankle injury from May, fully healed, playing every league game since); Truffert, Tavernier, Scott, Bogle, Ajayi, Vuskovic, Marmoush, Van Hecke, Gvardiol, Haaland, Barcola, Lewis-Potter and Schade all reconfirmed fit with nothing citable that changes a status. One bad lead caught and discarded before use: a search result describing a Bournemouth Europa League game at Real Sociedad does not check out against afcb.co.uk's own news feed and was not used for anything. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order. No PL fixtures have been played since last night's run; the division stays idle for the international break until around 11 October, well ahead of the 9 October waiver close."
+    },
+    {
+      "ts": "2026-09-22T21:12 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Evening sweep found nothing that touches a target: the recurring Sky Sports 'Pickford out for a month' story resurfaced again and was re-confirmed as the same 7 September 2022 piece, not current; Gross's own club news feed (brightonandhovealbion.com) carries no injury story, so an unpermitted claim that he was ruled out v Newcastle is not used and claim 1 stands; Sunderland's own news feed (safc.com) has nothing on Brobbey either way, so claim 3 stands unchanged; Truffert's France recall and Stach's clean bill of health with Germany both reconfirmed but already priced into this board since earlier in the week. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. The international break continues with no squad-club football until around 11 October, well ahead of the 9 October waiver close."
     }
   ]
 }
