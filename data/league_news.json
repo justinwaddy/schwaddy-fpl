@@ -1,36 +1,6 @@
 {
-  "generated": "2026-09-21T22:55 UTC",
+  "generated": "2026-09-22T07:47 UTC",
   "items": [
-    {
-      "id": "2026-09-12-liverpool-gakpo-barcola",
-      "ts": "2026-09-12T07:57",
-      "kind": "news",
-      "text": "Liverpool head coach Andoni Iraola says Bradley Barcola, forced off with cramp during Wednesday's Champions League win over Atletico Madrid, should be available to face Fulham on Saturday, while Cody Gakpo remains doubtful after missing Friday's training. Justin owns Barcola and Small Ben owns Gakpo.",
-      "source": {
-        "title": "Liverpool v Fulham: Team news",
-        "url": "https://www.liverpoolfc.com/news/liverpool-v-fulham-team-news-3"
-      }
-    },
-    {
-      "id": "2026-09-12-xi-1400",
-      "ts": "2026-09-12T13:11",
-      "kind": "news",
-      "text": "Team news, 14:00 kick-offs: Liverpool's XI is out - Small Ben starts Jacquet, Virgil, Szoboszlai and Isak, with Gakpo among the subs; Big Ben starts Wirtz; Justin starts Barcola; Marcus starts A.Becker. Sheets are not out yet for Aston Villa, Nottingham Forest, Bournemouth, Brentford, Chelsea, Crystal Palace or Fulham, so Edward and Robert plus the rest of Small Ben, Big Ben, Justin and Marcus squads at those clubs remain unconfirmed.",
-      "source": {
-        "title": "Confirmed Liverpool line-up v Fulham",
-        "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-v-fulham-9"
-      }
-    },
-    {
-      "id": "2026-09-12-xi-1400-b",
-      "ts": "2026-09-12T13:35",
-      "kind": "news",
-      "text": "Team news, the rest of the 15:00 sheets: Justin starts Scott, Tavernier, Schade and Strand Larsen, but Milenkovic and Collins are not in the Forest and Brentford squads. Edward starts Jackson, N.Williams, Gibbs-White, Hato, Palmer and Khalaili. Marcus starts Evanilson and Joao Pedro; Palestra is not in Chelsea's squad. Small Ben starts Suzuki and Thiago, with Lacroix on the bench. Big Ben starts Kelleher, Rogers and Gonzalo. Robert starts Martinez and James, Estevao is a sub and Mateta is not in Palace's squad.",
-      "source": {
-        "title": "Starting Lineups - Aston Villa vs N Forest | 12.09.2026",
-        "url": "https://www.skysports.com/football/aston-villa-vs-nottingham-forest/teams/559474"
-      }
-    },
     {
       "id": "2026-09-12-xi-1630",
       "ts": "2026-09-12T16:14",
@@ -718,17 +688,39 @@
       "kind": "opinion",
       "text": "Robert's Sunday came from both ends of the same fixture: his Rayan Cherki turned in the kind of display that had Joe Hart calling him a genius as Manchester City piled on five, while his Sunderland goalkeeper Roefs picked the ball out of his own net five times and finished the game on nothing. Eight points from Cherki, zero from Roefs, in the same ninety minutes - which is as good a summary as any of why Pardinho sits last, 89 off the top, its most exciting player permanently cancelled out by its most exposed one.",
       "source": null
+    },
+    {
+      "id": "2026-09-22-news-hall-england",
+      "ts": "2026-09-22T07:47",
+      "kind": "news",
+      "text": "Lewis Hall has been named in Thomas Tuchel's England squad for this month's Nations League games against Spain and Czechia, while Newcastle team-mate Tino Livramento has withdrawn from the same squad through injury. Hall is the top scorer in Ben C's squad on the numbers so far, sitting on 13.",
+      "source": {
+        "title": "International Magpies: Livramento withdraws from England squad",
+        "url": "https://www.newcastleunited.com/en/news/international-call-ups-september-october-2026"
+      }
+    },
+    {
+      "id": "2026-09-22-news-palmer-caicedo",
+      "ts": "2026-09-22T07:47",
+      "kind": "news",
+      "text": "Cole Palmer, owned by Edward, is back from two months out with groin and toe trouble and played the final half hour of Chelsea's midweek trip to Leeds, though Enzo Maresca would not commit to him starting again straight away. Moises Caicedo serves the second game of his three-match suspension for the red card against Arsenal, with Levi Colwill, Dario Essugo and Romeo Lavia also out injured.",
+      "source": {
+        "title": "Enzo Maresca confirms Chelsea team news for Bournemouth",
+        "url": "https://www.chelseafc.com/en/news/article/enzo-maresca-confirms-chelsea-team-news-for-bournemouth"
+      }
+    },
+    {
+      "id": "2026-09-22-news-wilson-quad",
+      "ts": "2026-09-22T07:47",
+      "kind": "news",
+      "text": "Robert's Harry Wilson, on 0 points so far, has been ruled out with a quad injury picked up in training, and Leeds boss Daniel Farke said he will probably miss Wales duty over the international break too. Joe Rodon is also out for Leeds, though Ilia Gruev is back available after a long-term injury.",
+      "source": {
+        "title": "Daniel Farke discusses fresh injury concerns ahead of Palace",
+        "url": "https://www.leedsunited.com/en/news/daniel-farke-discusses-fresh-injury-concerns-ahead-of-palace"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T07:40",
-      "gw": 3,
-      "news": 0,
-      "opinion": 0,
-      "matchday": true,
-      "note": "Correction by hand. Last night's wrap treated the gameweek as finished when two of GW3's ten fixtures - Everton v Man Utd and Arsenal v Chelsea - had not kicked off, and all three opinion pieces leaned on that. The Marcus piece counted seven players 'still on zero' when six of the seven had not played a minute, only Richarlison had; rewritten around what his side has actually returned, which stands on its own. The Big Ben piece hung on White, Havertz and Konsa 'combining for precisely nothing' - all three are Arsenal, kicking off at 16:30 UK today - so it is pulled and Edward's submission is back in the archive unused for this evening's wrap, when those three will have played. The swing piece said Small Ben 'finished it 4 clear'; the four points are right, the finished is not, with five of Marcus's eleven still to play."
-    },
     {
       "ts": "2026-09-06T08:05",
       "gw": 3,
@@ -1142,6 +1134,13 @@
       "opinion": 2,
       "matchday": false,
       "note": "Evening wrap. Not a matchday - international break, GW6's ten fixtures all still to come per the live feed. This session started with a stale local checkout (three commits behind main) and drafted a full set of items on Man City 5-3 Sunderland, Arsenal 3-0 at Brighton and Robert's Roefs/Cherki split before the rebase conflict surfaced that all of it, plus a near-identical state-of-the-table opinion, had already been posted by two runs earlier today and yesterday evening. Aborted that rebase, reset to origin/main, and re-read the actual current page before writing anything - the GW5 story is thoroughly told already. What was left: Cole Palmer and Declan Rice, named in this morning's England call-up post, withdrew from the Nations League squad this afternoon (confirmed via BBC, updated 16:06 UTC, after our 07:55 post) with Edward's Gibbs-White and Garner drafted in as replacements; and Enzo Fernandez's first City goal in the already-reported 5-3 win, a detail that hadn't been mentioned. Two opinion pieces off previously-unused angles in the now-final GW5 numbers: Edward's one gameweek win from five yet leading the table, and Robert's Cherki (8) and Roefs (0) landing at opposite ends of the same match. Roast archive unchanged - the two unused submissions are the same sexuality and race jokes flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
+    },
+    {
+      "ts": "2026-09-22T07:47 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning news. GW6's ten fixtures are today (the last round before the September/October international break), all still to kick off per the live feed, so nothing on the pitch to report yet - focused research on pre-break team news instead. Verified three items by reading the club pages directly rather than trusting search summaries, several of which were unreliable or stale (a mancity.com snippet crediting Enzo Maresca as City boss did not hold up on inspection and was dropped; an old NUFC piece from Dec 25 and JS-rendered Everton/Villa/Man City pages could not be read and were skipped). Used: Lewis Hall's England call-up (Ben C's top scorer), Cole Palmer's return from injury alongside Caicedo's suspension (Edward), and Harry Wilson's quad injury (Robert, currently on 0). No roast pieces today - this is the news run; the two unused archive submissions remain the sexuality/race-adjacent ones flagged out of bounds on 17 and 20 September and stay unused."
     }
   ]
 }
