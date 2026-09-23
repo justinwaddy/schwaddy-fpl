@@ -858,7 +858,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const NEWSGROUP = {
   move: "league", score: "league", live: "league", wrap: "league",
   overtake: "league", race: "league", bench: "league", pint: "league",
-  squad: "league", opinion: "league",
+  squad: "league", opinion: "league", deadline: "league",
   injury: "players", recovery: "players", haul: "players", flop: "players",
   lowlight: "players", freeagent: "players", headline: "players",
   news: "players",
@@ -942,51 +942,21 @@ function newsFeed() {
   }
   return out.sort((a, b) => String(b.ts || "").localeCompare(String(a.ts || "")));
 }
-/* The three clocks of a draft week, and the window they are worth showing in.
-
-   Between the line-ups locking and the following Monday evening there is
-   nothing a manager can do about any of them - the gameweek is being
-   played - so the card would just be furniture. It appears on Monday
-   evening, once the week just gone is done with, and disappears the
-   moment line-ups lock again.
+/* The three clocks of a draft week: trades close, waivers process,
+   line-ups lock. The card sits at the top of the News tab whenever there
+   is a deadline still to come, so the week's dates are always one tap
+   away; inside the last seven days it is headed as this week's.
 
    Everything is worked out here from the times in public.json rather than
    written into a file by anybody, so it cannot say "closes today" on a
    Sunday, and Europe/London is asked for every field rather than assumed:
    the deadline is 17:30Z for most of the season and 18:30Z under BST, and
-   guessing the offset gets it wrong twice a year. */
-const DL_OPEN_HOUR = 18;              // Monday, UK
+   guessing the offset gets it wrong twice a year. The feed also carries a
+   "deadline" item for each gameweek, posted by the scheduled refresh once
+   the deadline is within the week (news.py). */
+const DL_WEEK = 7 * 864e5;
 
-function ukHour(d) {
-  return +d.toLocaleString("en-GB",
-    { timeZone: "Europe/London", hour: "2-digit", hour12: false });
-}
 function ukYMD(d) { return d.toLocaleDateString("en-CA", { timeZone: "Europe/London" }); }
-function ukWeekday(d) {
-  return d.toLocaleDateString("en-GB", { timeZone: "Europe/London", weekday: "short" });
-}
-// The instant that is <hour> o'clock UK on a given YYYY-MM-DD. Tries both
-// offsets and keeps the one the calendar agrees with, so it is right in
-// GMT and in BST without a timezone library.
-function ukAt(ymd, hour) {
-  for (const off of [0, 1]) {
-    const t = new Date(`${ymd}T${String(hour - off).padStart(2, "0")}:00:00Z`);
-    if (ukHour(t) === hour) return t;
-  }
-  return new Date(`${ymd}T${String(hour).padStart(2, "0")}:00:00Z`);
-}
-// Monday evening before a deadline. Walks back a day at a time rather than
-// doing weekday arithmetic, because a UK date and a UTC date are not the
-// same date for an hour of every summer night.
-function dlOpens(dl) {
-  for (let i = 0; i < 15; i++) {
-    const c = new Date(dl.getTime() - i * 864e5);
-    if (ukWeekday(c) !== "Mon") continue;
-    const open = ukAt(ukYMD(c), DL_OPEN_HOUR);
-    if (open < dl) return open;
-  }
-  return new Date(dl.getTime() - 4 * 864e5);   // a deadline with no Monday before it
-}
 function ukWhen(d) {
   const at = d.toLocaleString("en-GB",
     { timeZone: "Europe/London", hour: "2-digit", minute: "2-digit", hour12: false });
@@ -999,7 +969,7 @@ function deadlineHTML() {
   const dl = PUB && PUB.deadline ? new Date(PUB.deadline) : null;
   if (!dl || isNaN(dl)) return "";
   const now = Date.now();
-  if (now >= +dl || now < +dlOpens(dl)) return "";
+  if (now >= +dl) return "";
 
   const gw = PUB.next_gw || "";
   const ms = +dl - now;
@@ -1018,7 +988,8 @@ function deadlineHTML() {
         <span class="tm">${esc(ukWhen(t))}</span></div>`;
     }).join("");
 
-  return `<div class="card dl"><b class="h">Bench and line-up deadline</b>
+  const head = +dl - now <= DL_WEEK ? "Deadlines this week" : "Next deadlines";
+  return `<div class="card dl"><b class="h">${head}</b>
     <div class="dlbig">Gameweek ${gw} closes <em>${esc(ukWhen(dl))}</em> UK, in ${left}</div>
     ${rows}
     <div class="note">Anything you change after that will not count. Substitutions are applied

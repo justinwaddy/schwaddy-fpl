@@ -22,7 +22,7 @@ directly; "mine" marks events that involve your squad or your entry.
 """
 import json
 import os
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from . import api, liveform
 from .league import MY_ENTRY
@@ -130,6 +130,54 @@ def _editorial(data_dir, state):
                         scope=it.get("scope") or "league"))
     state["ed_seen"] = sorted(seen)[-400:]
     return out
+
+
+DEADLINE_LEAD = timedelta(days=7)   # post the week's clocks this far out
+try:
+    from zoneinfo import ZoneInfo
+    UK = ZoneInfo("Europe/London")
+except Exception:                   # no tz database: say UTC, never guess
+    UK = None
+
+
+def _uk(iso):
+    """'Thu 8 Oct, 11:00' in UK time, from the game's UTC timestamp."""
+    t = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    if UK is None:
+        return t.strftime("%a %-d %b, %H:%M UTC")
+    return t.astimezone(UK).strftime("%a %-d %b, %H:%M")
+
+
+def _deadlines(bootstrap, state, ts, now=None):
+    """The coming gameweek's trade, waiver and line-up deadlines, once.
+
+    Posted by the first run inside the week before the line-up lock, and
+    only once per gameweek (state["dl_posted"]), so every refresh after
+    it is a no-op. The News tab's deadline card counts down to the same
+    three times from public.json; this item is the week's notice in the
+    feed itself.
+    """
+    ev = bootstrap.get("events") or {}
+    nxt = next((e for e in ev.get("data") or []
+                if e.get("id") == ev.get("next")), None)
+    if not nxt or not nxt.get("deadline_time"):
+        return None
+    gw = nxt["id"]
+    if state.get("dl_posted") == gw:
+        return None
+    now = now or datetime.now(timezone.utc)
+    dl = datetime.fromisoformat(nxt["deadline_time"].replace("Z", "+00:00"))
+    if not (now < dl <= now + DEADLINE_LEAD):
+        return None
+    parts = [f"{lab} {_uk(nxt[k])}" for lab, k in
+             (("trades close", "trades_time"),
+              ("waivers process", "waivers_time"),
+              ("line-ups lock", "deadline_time"))
+             if nxt.get(k)]
+    state["dl_posted"] = gw
+    tz = "" if UK is None else " (UK)"
+    return dict(ts=ts, gw=gw, type="deadline", mine=False,
+                text=f"GW{gw} deadlines{tz}: " + "; ".join(parts))
 
 
 def _load(path):
@@ -603,6 +651,11 @@ def update(data_dir, league_id, bootstrap, owned, id_of_code, weekly=None):
     if txn_ok:
         state["txn_ready"] = True
     state["txn_seen"] = sorted(seen, key=str)
+
+    # the week's deadlines, once per gameweek
+    dl_item = _deadlines(bootstrap, state, ts)
+    if dl_item:
+        new.append(dl_item)
 
     # Editorial headlines, written twice a day by a scheduled Claude
     # session from the last 24 hours of real football news. They live in
