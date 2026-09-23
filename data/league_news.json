@@ -1,20 +1,6 @@
 {
-  "generated": "2026-09-23T07:58 UTC",
+  "generated": "2026-09-23T22:41 UTC",
   "items": [
-    {
-      "id": "2026-09-12-opinion-robert-archive",
-      "ts": "2026-09-12T22:42",
-      "kind": "opinion",
-      "text": "Robert went into Saturday last of the six and came out of it last of the six, and the afternoon hardly involved him: his Mateta was not in Palace's eighteen at all, so the one fixture he had a live interest in turned into an hour of watching Edward's Khalaili and Justin's Strand Larsen score the goals instead.",
-      "source": null
-    },
-    {
-      "id": "2026-09-12-opinion-justin-bench",
-      "ts": "2026-09-12T22:42",
-      "kind": "opinion",
-      "text": "Justin's night summed up his month: David Raya's penalty save set the tone for the best score of anyone in the league tonight, and he still goes to bed 38 points off Marcus at the top. The stranger line is his bench, where 21 points did precisely nothing for him - more than the other five benches put together.",
-      "source": null
-    },
     {
       "id": "2026-09-12-opinion-palace-heartbreak",
       "ts": "2026-09-12T22:43",
@@ -715,6 +701,23 @@
         "title": "September and October international fixtures for our players",
         "url": "https://www.tottenhamhotspur.com/news/1091532/september-and-october-international-fixtures-for-our-players"
       }
+    },
+    {
+      "id": "2026-09-23-cherki-quad-tear",
+      "ts": "2026-09-23T22:41",
+      "kind": "news",
+      "text": "Rayan Cherki has torn his left quadriceps, out for what Pep Guardiola called \"seven or eight weeks\" after Manchester City's loss at Brighton, and the injury has also taken him out of France's World Cup qualifiers this month. He was the best thing in Robert's GW5, his 8 points the top score in a squad that still finished the week 89 points off the top - Robert now goes into the international break without him.",
+      "source": {
+        "title": "Liverpool's Ekitike gets first France call-up after Man City's Cherki sidelined",
+        "url": "https://www.espn.com/soccer/story/_/id/46121377/liverpool-hugo-ekitike-gets-first-france-call-man-city-rayan-cherki-sidelined"
+      }
+    },
+    {
+      "id": "2026-09-23-delap-tzolis-irony",
+      "ts": "2026-09-23T22:41",
+      "kind": "opinion",
+      "text": "With no football to argue about tonight, a word on the two team names that don't survive contact with their own squads: Ben C called his 'Delap Dance' but doesn't own Delap - he sits on Ben D's team for 1 point - and Ben D's 'Quantum of Tzolis' is Tzolis-free too, because Marcus has quietly had him from the start and got 2 out of him in GW5. Two confused branding decisions, and one very smug Marcus.",
+      "source": null
     }
   ],
   "runs": [
@@ -1137,6 +1140,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news. Deep in the international break - GW6 doesn't kick off until 10 October, confirmed against fixtures_2627.json rather than trusting the live feed's bare kickoff times, which lacked dates and briefly looked like a same-day GW6. No opinion pieces, per the morning rule. Verified every fact by fetching the actual outlet rather than trusting search summaries, which disagreed with each other on basic things like who manages Man City and Chelsea this season (one summary wrongly had Maresca at City; the directly-fetched mancity.com and skysports.com pages settled it as Guardiola and Rosenior respectively) - dropped anything I couldn't pin to a primary source. Used: Reece James's 10th hamstring injury (Robert), Benjamin Sesko's shin withdrawal from the Slovenia squad (also Robert - a rough morning for the bottom side), and Kinsky's Czech recall plus Marmoush's Egypt AFCON-qualifier duty (Marcus and Justin) off the Tottenham international-fixtures roundup. Passed over: Antoine Semenyo's Ghana ankle withdrawal (Edward) and Lewis Hall's new Newcastle contract (Ben C) - both real and fresh but never turned up on a permitted outlet despite repeated searches, only aggregators. The Garner/Gibbs-White England replacement call-ups looked promising but turned out to already be posted on 21 September. Roast archive unchanged - the two unused submissions are the sexuality and race-adjacent ones flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
+    },
+    {
+      "ts": "2026-09-23T22:41 UTC",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Deep in the international break, no fixtures today (fixtures_2627.json confirms 0 today; the live feed's GAMEWEEK 6 listing with bare kickoff times is upcoming, not tonight - matches an earlier run's finding that GW6 doesn't start until 10 October). Nothing to rewrite for FLOPs since no automatic items posted today. Led with Rayan Cherki's torn quad (ESPN, read directly, quoting Guardiola's own 'seven or eight weeks'), which matters because he was Robert's best GW5 scorer in a squad already 89 off the pace. One opinion piece per the no-football/no-archive-material rule, built on a verifiable oddity in the standings printout: neither Ben's team name matches a player he actually owns. Roast archive: both unused submissions (Ben D on Ben D, Ben D on Justin) remain unused - one invokes sexuality, the other race via apartheid, both excluded outright by rule 4 regardless of who they target or who submitted them; consistent with the 17/20 September calls, they are not pending a fact and will not be used."
     }
   ]
 }
