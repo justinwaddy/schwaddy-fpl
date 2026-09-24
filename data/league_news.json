@@ -1,13 +1,6 @@
 {
-  "generated": "2026-09-23T22:41 UTC",
+  "generated": "2026-09-24T07:52 UTC",
   "items": [
-    {
-      "id": "2026-09-12-opinion-palace-heartbreak",
-      "ts": "2026-09-12T22:43",
-      "kind": "opinion",
-      "text": "Crystal Palace played more than an hour with ten men after Axel Disasi's 34th-minute red card, and still contrived to lose 3-2 at home - but not before Edward's Khalaili had put them ahead in the 14th minute and Justin's Strand Larsen dragged them level with 20 minutes left. Ipswich's Zian Flemming won it in the 90th, leaving two different owners with nothing from an afternoon that had briefly promised both of them something.",
-      "source": null
-    },
     {
       "id": "2026-09-13-derby-team-news",
       "ts": "2026-09-13T07:55",
@@ -718,23 +711,19 @@
       "kind": "opinion",
       "text": "With no football to argue about tonight, a word on the two team names that don't survive contact with their own squads: Ben C called his 'Delap Dance' but doesn't own Delap - he sits on Ben D's team for 1 point - and Ben D's 'Quantum of Tzolis' is Tzolis-free too, because Marcus has quietly had him from the start and got 2 out of him in GW5. Two confused branding decisions, and one very smug Marcus.",
       "source": null
+    },
+    {
+      "id": "2026-09-24-vandijk-100-caps",
+      "ts": "2026-09-24T07:52",
+      "kind": "news",
+      "text": "Virgil van Dijk, owned by Ben C, sits four caps short of a century for the Netherlands and could reach the milestone under new boss Xavi Hernandez when the Dutch host Germany in Amsterdam tonight - Jurgen Klopp's first game in charge of Die Mannschaft, and a reunion with the Liverpool side he used to manage. Ben C's Cody Gakpo is also in the Dutch squad, while Ben D's Florian Wirtz has been left out, held back by Klopp for October's games against Serbia and Greece instead.",
+      "source": {
+        "title": "Dutch Reds v Jurgen Klopp: Liverpool eyes on international meeting in Amsterdam",
+        "url": "https://www.liverpoolfc.com/news/dutch-reds-v-jurgen-klopp-liverpool-eyes-international-meeting-amsterdam"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T15:10",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "15:30 UTC kick-off (ARS v CHE): found confirmed XIs for both Arsenal and Chelsea via Sky Sports"
-    },
-    {
-      "ts": "2026-09-06T15:17",
-      "news": 0,
-      "opinion": 1,
-      "matchday": true,
-      "note": "Manual roast on request: Big Ben's GW2 total (55) leaned on Bruno Fernandes' 23 while Havertz/Gonzalo/Delap returned 5 combined and Konsa was hooked after 11 minutes for 1 point; all figures from gw_history.json gw 2 (finished)."
-    },
     {
       "ts": "2026-09-06T15:22",
       "news": 0,
@@ -1147,6 +1136,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Evening wrap. Deep in the international break, no fixtures today (fixtures_2627.json confirms 0 today; the live feed's GAMEWEEK 6 listing with bare kickoff times is upcoming, not tonight - matches an earlier run's finding that GW6 doesn't start until 10 October). Nothing to rewrite for FLOPs since no automatic items posted today. Led with Rayan Cherki's torn quad (ESPN, read directly, quoting Guardiola's own 'seven or eight weeks'), which matters because he was Robert's best GW5 scorer in a squad already 89 off the pace. One opinion piece per the no-football/no-archive-material rule, built on a verifiable oddity in the standings printout: neither Ben's team name matches a player he actually owns. Roast archive: both unused submissions (Ben D on Ben D, Ben D on Justin) remain unused - one invokes sexuality, the other race via apartheid, both excluded outright by rule 4 regardless of who they target or who submitted them; consistent with the 17/20 September calls, they are not pending a fact and will not be used."
+    },
+    {
+      "ts": "2026-09-24T07:52 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. Still deep in the international break (fixtures_2627.json confirms GW6 doesn't kick off until 10 October); the live feed's GW6 listing has bare kickoff times with no date and briefly looked like a same-day fixture list again, same trap as two days ago - ignored it. Checked every candidate against the full 80-item archive before writing anything, not just the last 12: Cole Palmer's withdrawal and Morgan Gibbs-White/James Garner's call-ups (21 Sept), Jarrad Branthwaite and Jordan Pickford's England call-ups (21 Sept squad list), and Declan Rice's withdrawal were all already posted, so despite a dozen searches turning them up as if fresh, none of it was usable. Led instead with something genuinely new: Virgil van Dijk closing in on his 100th Dutch cap and Cody Gakpo alongside him as Jurgen Klopp takes his first game in charge of Germany tonight in Amsterdam, with Florian Wirtz held back until October - read directly off liverpoolfc.com. Passed over: a Bukayo Saka goal at Aston Villa (arsenal.com match report) because the exact date within the season couldn't be pinned down with confidence; Nottingham Forest's Milenkovic/Savona injuries pulling Murillo into a back three, since every write-up sat on unpermitted sites and Forest's real site is nottinghamforest.co.uk, not the .com on the sources list; Wissa's recovery update, which turned out to be dated to last season; and Gabriel's Brazil call-up and Mateta's injury at Palace, neither of which I could pin to a permitted source I'd actually read. Roast archive untouched - no opinion pieces on a morning run, and both unused submissions remain out of bounds regardless."
     }
   ]
 }
