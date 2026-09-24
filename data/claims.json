@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-24T08:20 UTC",
-  "summary": "Board unchanged again - still deep in the international break, no squad-club football since GW5 ended on 20 September and none until around 11 October, well after both the 9 October waiver close and the 10 October deadline. Today's sweep (every squad club, the free-agent shortlist clubs, and international-duty checks for Haaland, Gvardiol and Van Hecke) found nothing that moves a verdict - the closest thing to a lead, a 'Lewis-Potter out two months' Brentford story, turned out to be from March 2023 and was discarded. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him - so claim 1 remains the one most likely to land.",
+  "ts": "2026-09-24T21:08 UTC",
+  "summary": "Board otherwise unchanged through the international break, but claim 3 needs a flag: Brian Brobbey went off injured after 35 minutes of Netherlands 1-1 Germany tonight, pointing to his right leg, four days after his Man City hat-trick (Sky Sports) - severity unknown, so that claim drops to low confidence pending a diagnosis before the 9 October waiver close. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
       "rank": 1,
@@ -75,17 +75,17 @@
         "code": "247412",
         "club": "CRY"
       },
-      "why": "Brobbey took a hat-trick off Manchester City on Sunday - a 5-3 defeat, the first PL hat-trick on the losing side since 2007 - and has played 90 minutes in each of Sunderland's last three. Le Bris: \"it's clear for us that he's a good striker.\" One haul is not a season, so this is a bet on a settled role and a decent run (BHA, bou, LEE, cov, CHE), not on Sunday repeating. Marmoush is arguably worse right now (four starts, no goal) but both the matrix model and most network models prefer dropping Strand Larsen, whose minutes (27, 62, 45, 83, 81) say he only just won his place. Marmoush stays on watch.",
-      "model": "Model has Brobbey at 14.9 next5 / 98.6 rest (avail 0.90) against Strand Larsen's 10.8 / 72.8 (avail 0.80) - +4.1 over five, +25.8 over the season. Against Marmoush (12.7 / 83.6) the same add is only +2.2, which is why the drop falls this way. The neural network makes it change 2 at 4/5 models, +10.6 next5 and +64 on the season.",
-      "confidence": "medium",
+      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after just 35 minutes of the Netherlands' Nations League draw with Germany tonight - he pulled up chasing a ball, went down pointing at his right leg, and was substituted. No club or national-team diagnosis yet, so the severity is unknown; this claim is downgraded to low confidence until that lands, with Marmoush still on watch as the alternative drop if Brobbey is ruled out before the window closes.",
+      "model": "Model still has Brobbey at 14.9 next5 / 98.6 rest (avail 0.90) against Strand Larsen's 10.8 / 72.8 (avail 0.80) - +4.1 over five, +25.8 over the season - but that number predates tonight's injury and the model has no way to see it yet; treat the gap as stale until a fitness update arrives.",
+      "confidence": "low",
       "sources": [
         {
-          "url": "https://www.skysports.com/football/manchester-city-vs-sunderland/report/559490",
-          "title": "Man City 5-3 Sunderland: Brobbey hat-trick, Le Bris quotes (Sky Sports, 20 Sep 2026)"
+          "title": "Sunderland latest: Brobbey taken off injured during Netherlands game (Sky Sports, 24 Sep 2026)",
+          "url": "https://www.skysports.com/football/live-blog/13375102/sunderland-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts"
         },
         {
-          "url": "https://www.tottenhamhotspur.com/news/1089669/all-of-us-are-working-hard-on-that-marmoush-on-fixing-goalless-league-start",
-          "title": "Marmoush on fixing the goalless league start (tottenhamhotspur.com)"
+          "title": "Man City 5-3 Sunderland: Brobbey hat-trick, Le Bris quotes (Sky Sports, 20 Sep 2026)",
+          "url": "https://www.skysports.com/football/manchester-city-vs-sunderland/report/559490"
         }
       ]
     },
@@ -774,6 +774,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Second sweep today (19 searches) chased down three leads that read like fresh injuries for squad players - Tavernier (hamstring), Bogle (foot) and Stach (ankle) - and all three traced to stale, already-resolved dates from before this season (January, last season's Wolves/Chelsea run, and a May 2026 cut respectively), so nothing changes for claims 2, 3 or 5. Brobbey's hat-trick and transfer interest are already priced into claim 3; Barcola coverage (Iraola: lacking freshness, still the club's priority signing) restates rather than changes claim 1. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him."
+    },
+    {
+      "ts": "2026-09-24T21:08 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "Claim 3 (Brobbey/Strand Larsen) downgraded from medium to low confidence: Sky Sports confirms Brobbey was taken off after 35 minutes of tonight's Netherlands 1-1 Germany draw, pointing to his right leg, with no diagnosis yet - confirmed independently via ESPN's own match data (substituted 35', only 11 touches). Claims 1, 2, 4 and 5 unchanged after a full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL sweeps, ~18 searches. Two other leads chased and discarded as stale once read in full: a 'Kevin Schade set for surgery, out for months' story traces to a September 2023 adductor injury (Wikipedia and Soccerway both date the recovery to April 2024), not current; Stach, Bogle, Ajayi, Van Hecke, Gvardiol and Haaland all reconfirmed fit on international duty with nothing new. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
     }
   ]
 }
