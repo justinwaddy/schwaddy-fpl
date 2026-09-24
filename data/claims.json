@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-23T21:05 UTC",
-  "summary": "Board unchanged from Monday's rebuild - the international break has meant no squad-club football since GW5 ended on 20 September, and none resumes until around 11 October, after both the 9 October waiver close and the 10 October deadline. Today's sweep found nothing that moves a verdict: Crystal Palace's own site quotes Sage differentiating the two injured strikers for the first time - \"I think Dean will be more sure. Mateta is more uncertain. That's why we have to wait\" - which if anything hardens claim 3, since it pushes Mateta's return further from view and keeps Strand Larsen the one being dropped, not the one under threat. Gro\u00df remains fit with no injury news on Brighton's own feed, Stach passed a clean bill of health on Germany duty, and Ajayi is undisturbed at Hull. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him - so claim 1 remains the one most likely to land.",
+  "ts": "2026-09-24T08:20 UTC",
+  "summary": "Board unchanged again - still deep in the international break, no squad-club football since GW5 ended on 20 September and none until around 11 October, well after both the 9 October waiver close and the 10 October deadline. Today's sweep (every squad club, the free-agent shortlist clubs, and international-duty checks for Haaland, Gvardiol and Van Hecke) found nothing that moves a verdict - the closest thing to a lead, a 'Lewis-Potter out two months' Brentford story, turned out to be from March 2023 and was discarded. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him - so claim 1 remains the one most likely to land.",
   "claims": [
     {
       "rank": 1,
@@ -469,6 +469,12 @@
     }
   ],
   "runs": [
+    {
+      "ts": "2026-09-24T08:20 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made. Deep international-break sweep of every squad club, the free-agent shortlist clubs (Brighton, Leeds, Sunderland) and international duty for Haaland, Gvardiol and Van Hecke found nothing that clears the sourcing bar. Chased down a Brentford-site 'Lewis-Potter out two months with a knee injury' search result that would have hardened claim 2 - traced to a March 2023 article on a follow-up search naming the club site directly, so not used. Also discarded as stale: recurring Pickford/Raya/Gvardiol injury stories, an Ajayi hamstring story from a non-permitted outlet dated 23 August, and a Vuskovic/Tavernier pair of results that did not match any actual fixture this season."
+    },
     {
       "ts": "2026-09-21T14:20 UTC",
       "gw": 6,
