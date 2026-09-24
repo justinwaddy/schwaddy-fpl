@@ -1,26 +1,6 @@
 {
-  "generated": "2026-09-24T07:52 UTC",
+  "generated": "2026-09-24T22:43 UTC",
   "items": [
-    {
-      "id": "2026-09-13-derby-team-news",
-      "ts": "2026-09-13T07:55",
-      "kind": "news",
-      "text": "Manchester City are missing only Jeremy Doku and Nico O'Reilly through injury for today's derby at Old Trafford - Robert's O'Reilly among them. Marc Guehi, Phil Foden, Enzo Fernandez and Rayan Cherki are all pencilled in to start for Enzo Maresca's side, giving Marcus (Guehi, Foden), Big Ben (Fernandez) and Robert (Cherki) a stake in City's XI. United, without Carlos Baleba, Amad Diallo, Matthijs de Ligt and Manuel Ugarte, face a choice between Robert's Benjamin Sesko and Small Ben's Matheus Cunha up front, with Marcus's Bryan Mbeumo and Big Ben's Bruno Fernandes both expected to start.",
-      "source": {
-        "title": "Manchester United vs. Manchester City: TV channel, how to watch in UK, kick-off time, live stream, team news, referee, predicted line-ups",
-        "url": "https://www.espn.com/soccer/story/_/id/49900345/manchester-united-vs-manchester-city-derby-2026-27-premier-league-tv-channel-how-watch-kickoff-live-stream-referee-injury-predicted-lineups"
-      }
-    },
-    {
-      "id": "2026-09-13-arteta-konsa-penalty",
-      "ts": "2026-09-13T07:56",
-      "kind": "news",
-      "text": "Mikel Arteta was still fuming after Saturday's 2-0 win at Sunderland, calling the penalty given away 'unacceptable' after Big Ben's Ezri Konsa was penalised for fouling Dan Ballard at a corner - 'not a penalty in any case, in any context, at any level,' he told TNT Sports. Justin's David Raya saved Enzo Le Fee's spot-kick, and Robert's Bukayo Saka added a stoppage-time penalty of his own to seal the win.",
-      "source": {
-        "title": "Arsenal's Mikel Arteta fumes at Sunderland penalty decision: 'Unacceptable'",
-        "url": "https://www.espn.com/soccer/story/_/id/49919381/arsenal-mikel-arteta-fumes-sunderland-penalty-decision-unacceptable"
-      }
-    },
     {
       "id": "2026-09-13-iraola-liverpool-fulham",
       "ts": "2026-09-13T07:57",
@@ -721,16 +701,26 @@
         "title": "Dutch Reds v Jurgen Klopp: Liverpool eyes on international meeting in Amsterdam",
         "url": "https://www.liverpoolfc.com/news/dutch-reds-v-jurgen-klopp-liverpool-eyes-international-meeting-amsterdam"
       }
+    },
+    {
+      "id": "2026-09-24-havertz-forced-off",
+      "ts": "2026-09-24T22:43",
+      "kind": "news",
+      "text": "Kai Havertz was forced off in the 30th minute of Germany's 1-1 draw with the Netherlands on Thursday night, Sky Sports reported, with the nature of the injury not yet confirmed. Havertz is part of Ben D's fifteen, already 40 points off the league lead, and there is no word yet on whether it threatens his return when the Premier League resumes on 10 October.",
+      "source": {
+        "title": "Netherlands 1-1 Germany: Jurgen Klopp's first game in charge ends all square after late Cody Gakpo equaliser",
+        "url": "https://www.skysports.com/football/news/13591589/netherlands-x-x-germany-report"
+      }
+    },
+    {
+      "id": "2026-09-24-robert-injury-crisis",
+      "ts": "2026-09-24T22:43",
+      "kind": "opinion",
+      "text": "Robert's international break has been one long injury bulletin about players who are actually his: Rayan Cherki's torn quad, Benjamin Sesko's shin trouble, Reece James's tenth hamstring injury and Harry Wilson's quad problem have all landed on Pardinho's fifteen within the same week. He was already 89 points off the top before any of it, and the one man who might have clawed some of that back before the season restarts on 10 October is now the one ruled out the longest.",
+      "source": null
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T15:22",
-      "news": 0,
-      "opinion": 1,
-      "matchday": true,
-      "note": "Manual roast on request: Everton 2-2 Man Utd (finished_provisional, fetched live from fantasy.premierleague.com/api), Big Ben's only player in the match was B.Fernandes (90 mins, 2 pts, no goal/assist) while Mbeumo/Mainoo/Shaw did the damage."
-    },
     {
       "ts": "2026-09-06T15:24",
       "news": 0,
@@ -1143,6 +1133,13 @@
       "opinion": 0,
       "matchday": false,
       "note": "Morning news. Still deep in the international break (fixtures_2627.json confirms GW6 doesn't kick off until 10 October); the live feed's GW6 listing has bare kickoff times with no date and briefly looked like a same-day fixture list again, same trap as two days ago - ignored it. Checked every candidate against the full 80-item archive before writing anything, not just the last 12: Cole Palmer's withdrawal and Morgan Gibbs-White/James Garner's call-ups (21 Sept), Jarrad Branthwaite and Jordan Pickford's England call-ups (21 Sept squad list), and Declan Rice's withdrawal were all already posted, so despite a dozen searches turning them up as if fresh, none of it was usable. Led instead with something genuinely new: Virgil van Dijk closing in on his 100th Dutch cap and Cody Gakpo alongside him as Jurgen Klopp takes his first game in charge of Germany tonight in Amsterdam, with Florian Wirtz held back until October - read directly off liverpoolfc.com. Passed over: a Bukayo Saka goal at Aston Villa (arsenal.com match report) because the exact date within the season couldn't be pinned down with confidence; Nottingham Forest's Milenkovic/Savona injuries pulling Murillo into a back three, since every write-up sat on unpermitted sites and Forest's real site is nottinghamforest.co.uk, not the .com on the sources list; Wissa's recovery update, which turned out to be dated to last season; and Gabriel's Brazil call-up and Mateta's injury at Palace, neither of which I could pin to a permitted source I'd actually read. Roast archive untouched - no opinion pieces on a morning run, and both unused submissions remain out of bounds regardless."
+    },
+    {
+      "ts": "2026-09-24T22:43 UTC",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday and deep in the international break - fixtures_2627.json and the live feed both confirm GW6 doesn't kick off until 10 October, so no points moved today and no FLOP lines to rewrite. Led with Kai Havertz being forced off for Germany against the Netherlands (Sky Sports, read directly - the article names an injury for Brobbey but not for Havertz, so left the type unconfirmed rather than borrow the hamstring diagnosis from unpermitted sites); he's on Ben D's fifteen, already 40 back. Passed over Antoine Semenyo's Ghana ankle withdrawal (Edward's squad) and Brian Brobbey's own hamstring knock (a free-agent waiver target) - both real and reported everywhere, but every write-up I could find sat on aggregators or non-permitted sites; will keep checking for a permitted source. One opinion piece per the no-football/no-archive-material rule: Robert's fifteen has now had four different players (Cherki, Sesko, James, Wilson) flagged with injuries in the same week, all already reported, tied to his 89-point deficit. Roast archive: the same two submissions remain unused (Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid), both excluded outright by rule 4 regardless of who they target - not pending a fact, permanently unused."
     }
   ]
 }
