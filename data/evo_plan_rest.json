@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T08:37",
+ "generated": "2026-09-25T14:09",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 133.2,
+   "gain": 133.09,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 58.6,
+   "gain": 62.07,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 127
+   "borda": 129
   },
   {
    "pos": "MID",
-   "gain": 58.92,
+   "gain": 58.8,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 121
+   "borda": 119
   },
   {
    "pos": "MID",
-   "gain": 60.01,
+   "gain": 59.98,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 67.14,
+   "gain": 67.22,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 107
+   "borda": 111
   },
   {
    "pos": "FWD",
-   "gain": 52.76,
+   "gain": 52.78,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 36
+   "borda": 37
   },
   {
    "pos": "DEF",
-   "gain": 35.81,
+   "gain": 35.84,
    "change": 3,
    "fallback": false,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 50
+   "borda": 53
   },
   {
    "pos": "DEF",
-   "gain": 44.31,
+   "gain": 44.32,
    "change": 3,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 31
+   "borda": 32
   },
   {
    "pos": "DEF",
-   "gain": 29.67,
+   "gain": 29.65,
    "change": 3,
    "fallback": true,
    "add": {
@@ -506,7 +506,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 22
+   "borda": 21
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -620,19 +620,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.2,
-   "ep": 165.98
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "i",
-   "news": "Thigh injury - Unknown return date",
-   "p_play": 0.0,
-   "base": 177.0,
-   "ep": 164.82
+   "ep": 166.03
   },
   {
    "id": 387,
@@ -647,6 +635,18 @@
    "ep": 177.69
   },
   {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "i",
+   "news": "Thigh injury - Unknown return date",
+   "p_play": 0.0,
+   "base": 177.0,
+   "ep": 164.74
+  },
+  {
    "id": 40,
    "code": 244850,
    "name": "Rogers",
@@ -656,19 +656,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 176.48,
-   "ep": 164.1
-  },
-  {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.919,
-   "base": 155.83,
-   "ep": 158.5
+   "ep": 163.97
   },
   {
    "id": 388,
@@ -683,6 +671,18 @@
    "ep": 173.28
   },
   {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.919,
+   "base": 155.83,
+   "ep": 158.45
+  },
+  {
    "id": 13,
    "code": 204480,
    "name": "Rice",
@@ -692,7 +692,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.695,
    "base": 168.31,
-   "ep": 161.56
+   "ep": 161.53
   },
   {
    "id": 12,
@@ -707,18 +707,6 @@
    "ep": 163.39
   },
   {
-   "id": 155,
-   "code": 448047,
-   "name": "Enzo",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.662,
-   "base": 165.22,
-   "ep": 151.0
-  },
-  {
    "id": 533,
    "code": 200834,
    "name": "Mukiele",
@@ -729,6 +717,18 @@
    "p_play": 0.83,
    "base": 147.32,
    "ep": 152.14
+  },
+  {
+   "id": 155,
+   "code": 448047,
+   "name": "Enzo",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.662,
+   "base": 165.22,
+   "ep": 151.2
   },
   {
    "id": 1,
@@ -776,7 +776,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.22,
-   "ep": 146.47
+   "ep": 147.0
   },
   {
    "id": 368,
@@ -788,7 +788,7 @@
    "news": "",
    "p_play": 0.981,
    "base": 150.49,
-   "ep": 143.81
+   "ep": 143.77
   },
   {
    "id": 346,
@@ -860,7 +860,7 @@
    "news": "",
    "p_play": 0.849,
    "base": 139.28,
-   "ep": 132.93
+   "ep": 133.01
   },
   {
    "id": 398,
@@ -872,7 +872,7 @@
    "news": "Suspended until 17 Oct",
    "p_play": 0.0,
    "base": 140.42,
-   "ep": 136.93
+   "ep": 136.78
   },
   {
    "id": 366,
@@ -884,7 +884,7 @@
    "news": "",
    "p_play": 0.909,
    "base": 136.88,
-   "ep": 132.09
+   "ep": 132.15
   },
   {
    "id": 200,
@@ -908,7 +908,19 @@
    "news": "",
    "p_play": 0.165,
    "base": 140.21,
-   "ep": 128.54
+   "ep": 128.9
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.93,
+   "base": 136.04,
+   "ep": 134.12
   },
   {
    "id": 390,
@@ -947,18 +959,6 @@
    "ep": 133.71
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.93,
-   "base": 136.04,
-   "ep": 133.47
-  },
-  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -980,7 +980,7 @@
    "news": "",
    "p_play": 0.488,
    "base": 147.88,
-   "ep": 126.73
+   "ep": 126.05
   },
   {
    "id": 371,
@@ -992,7 +992,7 @@
    "news": "",
    "p_play": 0.509,
    "base": 140.3,
-   "ep": 128.23
+   "ep": 128.15
   }
  ]
 }
