@@ -1,50 +1,6 @@
 {
-  "generated": "2026-09-24T22:43 UTC",
+  "generated": "2026-09-25T07:49 UTC",
   "items": [
-    {
-      "id": "2026-09-13-iraola-liverpool-fulham",
-      "ts": "2026-09-13T07:57",
-      "kind": "news",
-      "text": "Liverpool were held 0-0 by Fulham at Anfield on Saturday, with head coach Andoni Iraola blaming 'a lack of freshness' after the midweek Champions League trip to Atletico Madrid rather than his attack. Small Ben's Alexander Isak shot straight at Bernd Leno after weaving into the box, while his own Jeremy Jacquet cleared off the line to preserve the point; Big Ben's Florian Wirtz and Justin's Bradley Barcola were also on the pitch as the draw left Liverpool having drawn three of their first four league games this season.",
-      "source": {
-        "title": "Andoni Iraola cites 'lack of freshness' after Liverpool draw",
-        "url": "https://www.espn.com/soccer/story/_/id/49916096/andoni-iraola-lack-freshness-liverpool-draw-fulham"
-      }
-    },
-    {
-      "id": "2026-09-13-xi-1530",
-      "kind": "news",
-      "text": "Team news, 16:30 derby at Old Trafford, confirmed by Sky Sports. Justin has Gvardiol and Haaland starting. Marcus has Mbeumo, Guehi and Foden all in. Edward has Lammens in goal and Semenyo starting. Small Ben has Cunha, Donnarumma and Ruben Dias starting. Big Ben has Bruno Fernandes, Matheus Nunes and Enzo Fernandez starting. Robert has Cherki starting but Sesko and Yoro are on United's bench and O'Reilly and Ndiaye on City's. Rashford starts ahead of Sesko, with Shaw out and Dorgu at left-back.",
-      "source": {
-        "title": "Starting Lineups - Man Utd vs Man City | 13.09.2026",
-        "url": "https://www.skysports.com/football/manchester-united-vs-manchester-city/teams/559481"
-      },
-      "ts": "2026-09-13T15:01"
-    },
-    {
-      "id": "2026-09-13-derby-haaland-var",
-      "ts": "2026-09-13T22:45",
-      "kind": "news",
-      "text": "Erling Haaland scored the only goal as ten-man Manchester City won 1-0 at Old Trafford, turning in Josko Gvardiol's ball at the back post - both start for Justin. Referees' body Pro Ref later admitted the goal should not have stood, since Enzo Fernandez was in an offside position in Haaland's eyeline when the semi-automated technology cleared it. City had gone down to ten men in the 23rd minute, when Phil Foden was sent off for kicking out at Bruno Fernandes.",
-      "source": {
-        "title": "Man Utd 0-1 Man City: Erling Haaland's controversial winner follows Phil Foden's contentious red card in dramatic Manchester derby",
-        "url": "https://www.skysports.com/football/news/11095/13583589/man-utd-0-1-man-city-erling-haalands-controversial-winner-follows-phil-fodens-contentious-red-card-in-dramatic-manchester-derby"
-      }
-    },
-    {
-      "id": "2026-09-13-wrap-robert-pint",
-      "ts": "2026-09-13T22:46",
-      "kind": "opinion",
-      "text": "Robert closes the night exactly where he opened it: bottom of the table, 74 points off Marcus at the top. Gabriel's 9 and Saka's 8 were the whole show; the rest of the eleven mustered 1s, 2s and nothing at all. Somewhere in that graph is a man who couldn't finish his own pint last week - some things are just consistent.",
-      "source": null
-    },
-    {
-      "id": "2026-09-13-wrap-benc-boxing",
-      "ts": "2026-09-13T22:47",
-      "kind": "opinion",
-      "text": "Ben C's 35 today was the second-quietest shift in the league, propped up by Jacquet's 9 and Virgil's 8 while Cunha and the rest mostly stood still. He's got a boxing exhibition coming up, and on this evidence the preparation is going about how you'd expect - though at 188 for the season he can afford the odd quiet night more than most.",
-      "source": null
-    },
     {
       "id": "2026-09-13-wrap-gross-brighton",
       "ts": "2026-09-13T22:48",
@@ -718,16 +674,59 @@
       "kind": "opinion",
       "text": "Robert's international break has been one long injury bulletin about players who are actually his: Rayan Cherki's torn quad, Benjamin Sesko's shin trouble, Reece James's tenth hamstring injury and Harry Wilson's quad problem have all landed on Pardinho's fifteen within the same week. He was already 89 points off the top before any of it, and the one man who might have clawed some of that back before the season restarts on 10 October is now the one ruled out the longest.",
       "source": null
+    },
+    {
+      "id": "2026-09-25-alisson-save-of-month",
+      "ts": "2026-09-25T07:49",
+      "kind": "news",
+      "text": "Alisson Becker has been shortlisted for the Premier League's Save of the Month award, for a reflex stop that denied a first-time flick from Evanilson in Liverpool's 1-0 win at Bournemouth. Both players are owned by Marcus.",
+      "source": {
+        "title": "Alisson Becker nominated for Premier League Save of the Month",
+        "url": "https://www.liverpoolfc.com/news/alisson-becker-nominated-premier-league-save-month-0"
+      }
+    },
+    {
+      "id": "2026-09-25-gakpo-van-dijk-wirtz-nations-league",
+      "ts": "2026-09-25T07:49",
+      "kind": "news",
+      "text": "Cody Gakpo struck a stoppage-time volley to earn the Netherlands a 1-1 draw with Germany on Thursday, in Jurgen Klopp's first match in charge of the Germany national team since leaving Liverpool. Virgil van Dijk, who like Gakpo is owned by Ben C, had a first-half header ruled out for offside in the same game, while Florian Wirtz, owned by Ben D, was not part of the squad for that fixture and has instead joined up with Germany for their final two games of the break.",
+      "source": {
+        "title": "Internationals: Cody Gakpo scores late equaliser in reunion with Jurgen Klopp",
+        "url": "https://www.liverpoolfc.com/news/internationals-cody-gakpo-scores-late-equaliser-reunion-jurgen-klopp"
+      }
+    },
+    {
+      "id": "2026-09-25-bruno-fernandes-portugal-wales",
+      "ts": "2026-09-25T07:49",
+      "kind": "news",
+      "text": "Bruno Fernandes played in an unfamiliar left-midfield role as Portugal beat Wales 1-0 in the Nations League on Thursday, Joao Felix's deflected strike settling it. Fernandes, owned by Ben D, said afterwards: \"We scored one, and we didn't concede. That's the big thing.\"",
+      "source": {
+        "title": "Portugal 1-0 Wales: Joao Felix spares Cristiano Ronaldo's blushes in Nations League win",
+        "url": "https://www.skysports.com/football/news/13591454/portugal-1-0-wales-joao-felix-spares-cristiano-ronaldos-blushes-in-nations-league-win"
+      }
+    },
+    {
+      "id": "2026-09-25-pickford-branthwaite-england-squad",
+      "ts": "2026-09-25T07:49",
+      "kind": "news",
+      "text": "Jordan Pickford and Jarrad Branthwaite have both been named in England's squad for this international break, with Branthwaite handed his first call-up since Thomas Tuchel became manager. Pickford, owned by Justin, and Branthwaite, owned by Ben D, will hope to feature when England open their Nations League campaign against Spain at Wembley on Saturday.",
+      "source": {
+        "title": "Trent Alexander-Arnold and Cole Palmer recalled to England squad for Nations League games by Thomas Tuchel",
+        "url": "https://www.skysports.com/football/news/13589193/trent-alexander-arnold-and-cole-palmer-recalled-to-england-squad-for-nations-league-games-by-thomas-tuchel"
+      }
+    },
+    {
+      "id": "2026-09-25-estevao-brazil-south-korea",
+      "ts": "2026-09-25T07:49",
+      "kind": "news",
+      "text": "Estevao scored twice, including a 13th-minute opener from Bruno Guimaraes' pass, as Brazil beat South Korea 5-0 on Thursday. The Chelsea winger, owned by Robert, has now scored in three consecutive matches for the Selecao.",
+      "source": {
+        "title": "Internationals: Estevao Willian shines for Brazil",
+        "url": "https://www.chelseafc.com/en/news/article/internationals-estevao-willian-shines-for-brazil"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T15:24",
-      "news": 0,
-      "opinion": 0,
-      "matchday": true,
-      "note": "Pulled 2026-09-06-opinion-big-ben-1ae9c82a31 (Big Ben GW2 Bruno Fernandes roast) on request. The Everton v Man Utd Big Ben roast stays up."
-    },
     {
       "ts": "2026-09-06T17:42",
       "news": 1,
@@ -1140,6 +1139,13 @@
       "opinion": 1,
       "matchday": false,
       "note": "Evening wrap. Not a matchday and deep in the international break - fixtures_2627.json and the live feed both confirm GW6 doesn't kick off until 10 October, so no points moved today and no FLOP lines to rewrite. Led with Kai Havertz being forced off for Germany against the Netherlands (Sky Sports, read directly - the article names an injury for Brobbey but not for Havertz, so left the type unconfirmed rather than borrow the hamstring diagnosis from unpermitted sites); he's on Ben D's fifteen, already 40 back. Passed over Antoine Semenyo's Ghana ankle withdrawal (Edward's squad) and Brian Brobbey's own hamstring knock (a free-agent waiver target) - both real and reported everywhere, but every write-up I could find sat on aggregators or non-permitted sites; will keep checking for a permitted source. One opinion piece per the no-football/no-archive-material rule: Robert's fifteen has now had four different players (Cherki, Sesko, James, Wilson) flagged with injuries in the same week, all already reported, tied to his 89-point deficit. Roast archive: the same two submissions remain unused (Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid), both excluded outright by rule 4 regardless of who they target - not pending a fact, permanently unused."
+    },
+    {
+      "ts": "2026-09-25T07:49 UTC",
+      "news": 5,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. Still deep in the international break - fixtures_2627.json confirms no fixtures today (GW6 kicks off 10 October); the live feed's kickoff times for GW6 are time-of-day only and belong to that same 10 October slate, not today, so this is not a matchday. Five items, all from club/broadcaster sites read directly: Alisson's Save of the Month nomination (Marcus); Gakpo's stoppage-time equaliser and Van Dijk's disallowed header for the Netherlands against Germany, Klopp's first match in charge of the Germans, plus Wirtz being rested from that game (Ben C x2, Ben D); Bruno Fernandes in an unfamiliar left-midfield role as Portugal beat Wales (Ben D); Pickford and Branthwaite both called into England's squad, Branthwaite's first under Tuchel, ahead of Saturday's Spain game (Justin, Ben D); Estevao's brace for Brazil against South Korea (Robert). Passed over Semenyo's ankle injury on Ghana duty (Edward's squad, genuinely reported) and an Odegaard-to-Haaland international goal (Edward and Justin) - both real but every write-up I found sat on aggregators, fan sites or SI/Yardbarker, none on the permitted list; will keep checking. No opinion pieces - morning run."
     }
   ]
 }
