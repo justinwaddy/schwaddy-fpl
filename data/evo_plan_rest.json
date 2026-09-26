@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T14:09",
+ "generated": "2026-09-26T08:36",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.949,
    "base": 4.58,
-   "ep": 4.53,
+   "ep": 4.52,
    "votes": 5
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.37,
+   "ep": 4.38,
    "votes": 5
   },
   {
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.4,
-   "ep": 3.29,
+   "ep": 3.28,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.951,
    "base": 4.58,
-   "ep": 4.48,
+   "ep": 4.47,
    "votes": 5
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.992,
    "base": 3.79,
-   "ep": 3.7,
+   "ep": 3.71,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.3,
-   "ep": 6.18,
+   "ep": 6.17,
    "votes": 5
   }
  ],
@@ -213,7 +213,7 @@
    "news": "",
    "p_play": 0.467,
    "base": 1.1,
-   "ep": 1.08,
+   "ep": 1.07,
    "votes": 0
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 133.09,
+   "gain": 133.06,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 204
+   "borda": 215
   },
   {
    "pos": "MID",
-   "gain": 62.07,
+   "gain": 62.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 129
+   "borda": 138
   },
   {
    "pos": "MID",
-   "gain": 58.8,
+   "gain": 58.52,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 119
+   "borda": 126
   },
   {
    "pos": "MID",
-   "gain": 59.98,
+   "gain": 59.84,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 91
+   "borda": 98
   },
   {
    "pos": "FWD",
-   "gain": 67.22,
+   "gain": 66.93,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 111
+   "borda": 110
   },
   {
    "pos": "FWD",
-   "gain": 52.78,
+   "gain": 53.65,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 37
+   "borda": 36
   },
   {
    "pos": "DEF",
-   "gain": 35.84,
+   "gain": 38.05,
    "change": 3,
    "fallback": false,
    "add": {
@@ -430,83 +430,19 @@
     "ep": null
    },
    "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
+    "id": 112,
+    "code": 469142,
+    "name": "Van Hecke",
     "pos": "DEF",
-    "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.839,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 53
-  },
-  {
-   "pos": "DEF",
-   "gain": 44.32,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 305,
-    "code": 455084,
-    "name": "Davis",
-    "pos": "DEF",
-    "team": "IPS",
+    "team": "TOT",
     "status": "a",
     "news": "",
     "p_play": 1.0,
     "base": null,
     "ep": null
    },
-   "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
-    "pos": "DEF",
-    "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.839,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 32
-  },
-  {
-   "pos": "DEF",
-   "gain": 29.65,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.975,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 330,
-    "code": 226182,
-    "name": "Bogle",
-    "pos": "DEF",
-    "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.839,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 21
+   "votes": 3,
+   "borda": 53
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
