@@ -1,37 +1,6 @@
 {
-  "generated": "2026-09-26T07:48 UTC",
+  "generated": "2026-09-26T22:51 UTC",
   "items": [
-    {
-      "id": "2026-09-14-leeds-newcastle-4-1",
-      "ts": "2026-09-14T22:45",
-      "kind": "news",
-      "text": "Leeds beat Newcastle 4-1 at Elland Road, Ao Tanaka, Jayden Bogle, Dominic Calvert-Lewin and Noah Okafor doing the scoring before Bazoumana Toure's late consolation; Daniel Farke's side move up to third, their best four-game start since 2000-01. It was Matthias Jaissle's first defeat as Newcastle boss, and he confirmed after the game that Anthony Elanga, out injured and one of Marcus's, is in for another MRI next week.",
-      "source": {
-        "title": "Leeds 4-1 Newcastle: Matthias Jaissle handed first defeat as Magpies boss as Dominic Calvert-Lewin leads Elland Road rout",
-        "url": "https://www.skysports.com/football/news/33694/13583594/leeds-4-1-newcastle-matthias-jaissle-handed-first-defeat-as-magpies-boss-as-dominic-calvert-lewin-leads-elland-road-rout"
-      }
-    },
-    {
-      "id": "2026-09-14-op-newcastle-stack",
-      "ts": "2026-09-14T22:46",
-      "kind": "opinion",
-      "text": "Small Ben's Newcastle back line was at Elland Road for the 4-1 hiding: Wissa, Hall and Barnes returned 2, 0 and 2 while Bogle and Calvert-Lewin hauled the other way for Justin and Edward in the same match. Big Ben's night wasn't much better, Thiaw's 90 minutes bringing 2 more. Four separate portfolios, one theme.",
-      "source": null
-    },
-    {
-      "id": "2026-09-14-op-justin-day",
-      "ts": "2026-09-14T22:47",
-      "kind": "opinion",
-      "text": "Justin's 81 since this morning was the best day anyone had, enough to leapfrog both Edward and Ben C into second, Bogle's 15 doing plenty of the work. Marcus needed only 54 to stay top of GW4 - the whole thing might already be his to lose.",
-      "source": null
-    },
-    {
-      "id": "2026-09-14-op-jobacus",
-      "ts": "2026-09-14T22:48",
-      "kind": "opinion",
-      "text": "Marcus tops GW4 without needing to lift a finger, which leaves plenty of time to reflect on his other project - the Jobacus channel, still out there on YouTube for anyone brave enough to go looking. Outdoor content, apparently. Make of that what you will.",
-      "source": null
-    },
     {
       "id": "2026-09-15-calvertlewin-england",
       "ts": "2026-09-15T08:05",
@@ -93,7 +62,7 @@
       "id": "2026-09-15-gross-edward-opinion",
       "ts": "2026-09-15T22:54",
       "kind": "opinion",
-      "text": "Edward's Groß put up 17 in GW4, the biggest individual haul in the league this week, and Edward still finished the gameweek on 69, some way back from Justin's 87. One goalscoring midfielder was never going to be enough against a whole XI that fires front to back.",
+      "text": "Edward's Gro\u00df put up 17 in GW4, the biggest individual haul in the league this week, and Edward still finished the gameweek on 69, some way back from Justin's 87. One goalscoring midfielder was never going to be enough against a whole XI that fires front to back.",
       "source": null
     },
     {
@@ -143,7 +112,7 @@
       "id": "2026-09-16-bha-mun-carabao",
       "ts": "2026-09-16T22:46",
       "kind": "news",
-      "text": "Brighton came back from two goals down to beat Manchester United 3-2 at Old Trafford in Tuesday's Carabao Cup third round. Babis Kostoulas scored just before half-time and later teed up the winner, Pascal Groß levelled after a United defensive error, and Maxim De Cuyper poked in from six yards for the winner. Marcus owns De Cuyper, Edward owns Groß and Ben D owns Kostoulas - between them the three scored every Albion goal.",
+      "text": "Brighton came back from two goals down to beat Manchester United 3-2 at Old Trafford in Tuesday's Carabao Cup third round. Babis Kostoulas scored just before half-time and later teed up the winner, Pascal Gro\u00df levelled after a United defensive error, and Maxim De Cuyper poked in from six yards for the winner. Marcus owns De Cuyper, Edward owns Gro\u00df and Ben D owns Kostoulas - between them the three scored every Albion goal.",
       "source": {
         "title": "United 2 Albion 3: 50-year record broken as Albion stun at Old Trafford",
         "url": "https://www.brightonandhovealbion.com/media-article/pl-mft-match-report-manchester-united-bha-september-2026"
@@ -153,7 +122,7 @@
       "id": "2026-09-16-carabao-nothing-counts",
       "ts": "2026-09-16T22:46",
       "kind": "opinion",
-      "text": "Marcus, Edward and Ben D can, between them, claim every goal from Tuesday's 3-2 smash-and-grab at Old Trafford - De Cuyper, Groß and Kostoulas did the damage - and it is worth precisely nothing on this page, because Carabao Cup goals do not touch the table. Ben C, Justin and Robert just have to sit with the knowledge that three of their rivals' players spent Tuesday night embarrassing Manchester United for fun.",
+      "text": "Marcus, Edward and Ben D can, between them, claim every goal from Tuesday's 3-2 smash-and-grab at Old Trafford - De Cuyper, Gro\u00df and Kostoulas did the damage - and it is worth precisely nothing on this page, because Carabao Cup goals do not touch the table. Ben C, Justin and Robert just have to sit with the knowledge that three of their rivals' players spent Tuesday night embarrassing Manchester United for fun.",
       "source": null
     },
     {
@@ -177,7 +146,7 @@
       "id": "2026-09-17-gross-cut",
       "ts": "2026-09-17T22:45",
       "kind": "opinion",
-      "text": "Robert starts GW5 sitting 70 points off the lead and the only one of the six who didn't touch the waiver wire this week, while Justin and Edward both made three moves apiece. Edward's business included cutting loose Groß, who dropped 17 on him in GW4 - not exactly a vote of confidence in form.",
+      "text": "Robert starts GW5 sitting 70 points off the lead and the only one of the six who didn't touch the waiver wire this week, while Justin and Edward both made three moves apiece. Edward's business included cutting loose Gro\u00df, who dropped 17 on him in GW4 - not exactly a vote of confidence in form.",
       "source": null
     },
     {
@@ -335,7 +304,7 @@
       "id": "2026-09-19-edward-top",
       "ts": "2026-09-19T22:50",
       "kind": "opinion",
-      "text": "Edward spent the season chasing; today he did the overtaking, leapfrogging Marcus and Justin into a lead of 9 and 10 respectively off the back of James Tarkowski's 14-point haul and Thierno Barry's goal for Everton, with James Garner catching some of Ipswich's afternoon too. Return of the Djedi's title charge is being built on Hornícek, Murillo and N.Williams putting in 90 unglamorous minutes for two to four points at a time, while the more famous names elsewhere managed nothing at all on Saturday.",
+      "text": "Edward spent the season chasing; today he did the overtaking, leapfrogging Marcus and Justin into a lead of 9 and 10 respectively off the back of James Tarkowski's 14-point haul and Thierno Barry's goal for Everton, with James Garner catching some of Ipswich's afternoon too. Return of the Djedi's title charge is being built on Horn\u00edcek, Murillo and N.Williams putting in 90 unglamorous minutes for two to four points at a time, while the more famous names elsewhere managed nothing at all on Saturday.",
       "source": null
     },
     {
@@ -570,7 +539,7 @@
       "kind": "news",
       "text": "Benjamin Sesko has withdrawn from Slovenia's squad for this month's Nations League games with a recurring shin problem, having already missed Sunday's 1-1 draw at Fulham with the same issue. United say he will be tested this week before a recovery plan is set - the fourth international camp he has missed since his move from RB Leipzig. Robert, already last in the table, now has two fresh injury worries in a day.",
       "source": {
-        "title": "Šeško withdraws from Slovenia squad",
+        "title": "\u0160e\u0161ko withdraws from Slovenia squad",
         "url": "https://www.manutd.com/en/news/sesko-withdraws-from-slovenia-squad"
       }
     },
@@ -724,16 +693,43 @@
         "title": "Why this break has come at the worst time for De Zerbi & Spurs",
         "url": "https://www.bbc.com/sport/football/articles/crd68ev059y8o"
       }
+    },
+    {
+      "id": "2026-09-26-isak-scores-sweden",
+      "ts": "2026-09-26T22:47",
+      "kind": "news",
+      "text": "Alexander Isak scored a 20th-minute opener as Sweden beat Romania 2-1 in Nations League action on Friday night, continuing his hot scoring run - good news for Ben C, who owns the Liverpool striker. In the same round of internationals, Ben C's Dominik Szoboszlai played the full 90 minutes as Hungary lost 1-0 to Ukraine, while Justin's Bradley Barcola came off the bench for France's 1-0 win over Turkiye.",
+      "source": {
+        "title": "Internationals: Alexander Isak's scoring form continues with Sweden on Friday",
+        "url": "https://www.liverpoolfc.com/news/internationals-alexander-isaks-scoring-form-continues-sweden-friday"
+      }
+    },
+    {
+      "id": "2026-09-26-goal-of-month-shortlist",
+      "ts": "2026-09-26T22:48",
+      "kind": "news",
+      "text": "Harvey Barnes, Bryan Mbeumo and Nicolas Jackson have all been shortlisted for the Premier League's Guinness Goal of the Month award for September, Newcastle United confirmed this week. Barnes' entry is his curling strike from the left in Newcastle's 2-2 comeback draw with Bournemouth, giving Ben C's Newcastle stack a highlight reel moment, while the same shortlist carries Marcus's Mbeumo and league leader Edward's Jackson.",
+      "source": {
+        "title": "Harvey Barnes nominated for Premier League Guinness Goal of the Month award",
+        "url": "https://www.newcastleunited.com/en/news/harvey-barnes-nominated-for-premier-league-guinness-goal-of-the-month-award"
+      }
+    },
+    {
+      "id": "2026-09-26-quantum-of-tzolis",
+      "ts": "2026-09-26T22:49",
+      "kind": "opinion",
+      "text": "Ben D has spent the season fifth of six, forty points off Edward at the top, running a squad called 'Quantum of Tzolis' - a name built around a player he has never actually owned. Kostas Tzolis sits on Marcus's roster, two places above Ben D in the table, which makes the team name either the longest-running joke at Ben D's own expense or a sign he forgot to draft the guy.",
+      "source": null
+    },
+    {
+      "id": "2026-09-26-robert-blank-bench",
+      "ts": "2026-09-26T22:50",
+      "kind": "opinion",
+      "text": "Robert sits last of six, 89 points off the pace, and his bench column reads a flat zero - the only zero in the whole league table. Every other squad has banked something in reserve this season; Robert's has banked nothing at all, which either means perfect starting picks every week or a bench that has never once been worth picking up.",
+      "source": null
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T18:16",
-      "news": 0,
-      "opinion": 0,
-      "matchday": true,
-      "note": "Correction by hand: the wrap's table piece said Ben C finished 4 clear at the top, 150 to 146, copied from the game's standings. Those are re-tallied only when FPL closes the gameweek and were a day behind (they had Big Ben on 9 for a day he scored 27). Settled GW1+GW2 from gw_history, which match the game's own per-entry history exactly, plus the day's official points give Marcus 164, Ben C 153: Marcus leads by 11. Rewritten to say so and to say why the game's table still shows otherwise. Bonus recomputed 3/2/1 from bps matched the official award on all ten fixtures; the cron's auto-subs match the game's rule. STEP 1 in the routine now builds totals from gw_history and brackets the game's figure."
-    },
     {
       "ts": "2026-09-06T22:49",
       "news": 0,
@@ -893,7 +889,7 @@
       "news": 0,
       "opinion": 0,
       "matchday": true,
-      "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Groß), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
+      "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Gro\u00df), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
     },
     {
       "ts": "2026-09-13T14:40 UTC",
@@ -914,7 +910,7 @@
       "news": 1,
       "opinion": 3,
       "matchday": true,
-      "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Groß's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
+      "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Gro\u00df's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
     },
     {
       "ts": "2026-09-14T07:56 UTC",
@@ -949,7 +945,7 @@
       "news": 1,
       "opinion": 3,
       "matchday": false,
-      "note": "Evening wrap. No fixtures today (GW5 kicks off at the weekend); tonight's refresh finalised GW4 with bonus, so worked from those settled numbers rather than any live action. One news item: Newcastle boss Jaissle confirmed after Monday's 4-1 loss at Leeds that Elanga (Marcus's) is injured, possibly long-term, explaining his GW4 blank - read at Sky Sports, not previously posted. Three opinion pieces off the final GW4 table: Justin's GW4 win plus the biggest bench of the week and a lead cut to 7 over Marcus; Groß's 17 for Edward being the week's top individual haul yet still finishing well behind Justin's total; Robert's tiny 2-point bench proving his last-place 28 was his ceiling, not bad luck. Both unused roast archive entries held again, same reasons as every prior run: the Ben D self-roast uses a term aimed at sexuality, the Ben D-on-Justin line invokes apartheid and reads as aimed at race - both excluded categories under the banter rules, not reused. No FLOP items posted today, so nothing to rewrite via reflop.py."
+      "note": "Evening wrap. No fixtures today (GW5 kicks off at the weekend); tonight's refresh finalised GW4 with bonus, so worked from those settled numbers rather than any live action. One news item: Newcastle boss Jaissle confirmed after Monday's 4-1 loss at Leeds that Elanga (Marcus's) is injured, possibly long-term, explaining his GW4 blank - read at Sky Sports, not previously posted. Three opinion pieces off the final GW4 table: Justin's GW4 win plus the biggest bench of the week and a lead cut to 7 over Marcus; Gro\u00df's 17 for Edward being the week's top individual haul yet still finishing well behind Justin's total; Robert's tiny 2-point bench proving his last-place 28 was his ceiling, not bad luck. Both unused roast archive entries held again, same reasons as every prior run: the Ben D self-roast uses a term aimed at sexuality, the Ben D-on-Justin line invokes apartheid and reads as aimed at race - both excluded categories under the banter rules, not reused. No FLOP items posted today, so nothing to rewrite via reflop.py."
     },
     {
       "ts": "2026-09-16T07:46 UTC",
@@ -977,7 +973,7 @@
       "news": 1,
       "opinion": 2,
       "matchday": false,
-      "note": "Evening wrap, no PL fixtures today (GW5 starts Thu 18th) so no fresh gameweek points to react to. Led with Brighton's 3-2 Carabao Cup comeback at Old Trafford (brightonandhovealbion.com), which happens to touch three squads at once (De Cuyper/Marcus, Groß/Edward, Kostoulas/Ben D) - used it for both the news item and one opinion riff, careful to say it doesn't move the table. Second opinion piece on the state of the league from the standings. Both unused roast-archive items passed over: the Ben D self-roast is a sexuality joke and the Ben D-on-Justin line references apartheid, both barred by the race/sexuality rule regardless of framing - holding, not scheduling. No flops to rewrite today (none posted automatically)."
+      "note": "Evening wrap, no PL fixtures today (GW5 starts Thu 18th) so no fresh gameweek points to react to. Led with Brighton's 3-2 Carabao Cup comeback at Old Trafford (brightonandhovealbion.com), which happens to touch three squads at once (De Cuyper/Marcus, Gro\u00df/Edward, Kostoulas/Ben D) - used it for both the news item and one opinion riff, careful to say it doesn't move the table. Second opinion piece on the state of the league from the standings. Both unused roast-archive items passed over: the Ben D self-roast is a sexuality joke and the Ben D-on-Justin line references apartheid, both barred by the race/sexuality rule regardless of framing - holding, not scheduling. No flops to rewrite today (none posted automatically)."
     },
     {
       "ts": "2026-09-17T07:59 UTC",
@@ -1146,6 +1142,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "Morning run, GW6 matchday (10 fixtures from 11:30 UTC, none kicked off yet). Led with Man City's guilty verdict on the majority of the 115 charges (BBC, Fri) - touches every squad but Edward's - and Tottenham's winless start amid De Zerbi's international-break squad disruption (BBC). No opinion pieces on a morning run. Research was heavy on stale/mis-dated search results (years-old press conferences and FA Cup-era injury stories resurfacing for Arsenal, Liverpool, Man City, Everton, Newcastle, Chelsea, Man Utd and Brighton), so kept to two items I could verify by reading the primary source rather than pad the count. Two roast-archive submissions remain unused (Ben D on Ben D; Ben D on Justin) - held for tonight's wrap, not used on a news-only morning run."
+    },
+    {
+      "ts": "2026-09-26T22:51 UTC",
+      "news": 2,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday and not even close: fixtures_2627.json confirms 0 fixtures today, and cross-checking the live feed's GW6 entries against fixtures_2627.json shows that gameweek doesn't start until 10-12 October - the live feed only prints kickoff time-of-day, which makes an upcoming slate look like 'today' if you don't check the date underneath, so no points moved and there was nothing to build a hauls/blanks piece on. Two news items, both read directly and dated within the international break: Isak's goal for Sweden plus Szoboszlai and Barcola's international minutes (Liverpool FC; Ben C and Justin), and the Guinness Goal of the Month shortlist naming Barnes, Mbeumo and Jackson (Newcastle United; Ben C, Marcus, Edward). Two opinion pieces since there was no day of football to roast: Ben D's team name 'Quantum of Tzolis' naming a player who actually plays for Marcus, and Robert's bench sitting on the only zero in the table while he's last by 89. Roast archive unchanged - the same two submissions (Ben D on Ben D; Ben D on Justin) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
     }
   ]
 }
