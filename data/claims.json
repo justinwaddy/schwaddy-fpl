@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-25T21:06 UTC",
-  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Claim 3 stays flagged but not moved: Xavi Hernandez has confirmed Brobbey's hamstring injury from last Thursday's Netherlands 1-1 Germany draw and that he has returned to Wearside, but Sunderland have still given no diagnosis or timeline, so it holds at low confidence rather than being upgraded or downgraded further. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged; a recurring Gross 'ruled out' story again attributes the quote to a manager who is not Brighton's and is again contradicted by him scoring against Arsenal on the 19th, so it stays discarded. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
+  "ts": "2026-09-26T08:07 UTC",
+  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Claim 3 stays at low confidence, not moved: ESPN confirms Netherlands boss Xavi Hernandez called Brobbey 'indeed injured' and that Joshua Zirkzee replaced him in the squad, but no permitted outlet has yet published a diagnosis or return timeline - a circulating 'two to four weeks' quote traces only to non-permitted sites and one version misattributes the injury to a different game, so it is not used. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
       "rank": 1,
@@ -75,7 +75,7 @@
         "code": "247412",
         "club": "CRY"
       },
-      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after just 35 minutes of the Netherlands' Nations League draw with Germany on 24 September - Sky Sports' own match report confirms he was 'taken off with what appeared to be a hamstring injury'. No club or national-team diagnosis has followed a day on, so the severity is still unknown; this claim stays at low confidence until that lands, with Marmoush still on watch as the alternative drop if Brobbey is ruled out before the window closes.",
+      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after 35 minutes of the Netherlands' 24 September draw with Germany - Sky Sports' match report says it looked like a hamstring injury, and ESPN's international-break roundup has Netherlands boss Xavi Hernandez confirming 'Brian is indeed injured' with Joshua Zirkzee called up in his place. No permitted outlet has yet published a diagnosis or timeline, so this stays low confidence, with Marmoush on watch as the alternative drop if Brobbey is ruled out before the window closes.",
       "model": "Model still has Brobbey at 14.9 next5 / 98.6 rest (avail 0.90) against Strand Larsen's 10.8 / 72.8 (avail 0.80) - +4.1 over five, +25.8 over the season - but that number predates the injury and the model has no way to see it yet; treat the gap as stale until a fitness update arrives.",
       "confidence": "low",
       "sources": [
@@ -792,6 +792,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Evening sweep (18 searches) re-confirmed Brobbey's injury via Sky Sports and Sunderland's own reporting on last Thursday's Netherlands 1-1 Germany draw - Xavi Hernandez has confirmed he is injured and back on Wearside, but neither Sunderland nor any permitted outlet has given a diagnosis or return date yet, so claim 3 holds at low confidence rather than moving either way. Stach reconfirmed fit via Sky Sports' own recent Forest match report (matchwinner with a late free-kick), no ankle issue. Gross's 'ruled out by Fabian Hurzeler' story resurfaced again in search results and was discarded again - contradicted by his own goal and start against Arsenal on the 19th, with nothing from a permitted outlet since. Tzolakis and Truffert both reconfirmed fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+    },
+    {
+      "ts": "2026-09-26T08:07 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made. Deep club-by-club sweep of every squad club plus the free-agent shortlist clubs (Brighton, Leeds, Sunderland) found nothing that clears the sourcing bar for a change. Chased Brobbey's injury status in depth: ESPN (permitted) confirms Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, but a 'two to four weeks' timeline circulating on non-permitted sites (TeamTalk, Sunderland Echo, LiveScore) could not be traced to safc.com or any permitted outlet, and one version of the quote misattributes the injury to the wrong game - discarded as unreliable, so claim 3's why was refreshed with the confirmed detail but its confidence is unchanged."
     }
   ]
 }
