@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-26T08:07 UTC",
-  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Claim 3 stays at low confidence, not moved: ESPN confirms Netherlands boss Xavi Hernandez called Brobbey 'indeed injured' and that Joshua Zirkzee replaced him in the squad, but no permitted outlet has yet published a diagnosis or return timeline - a circulating 'two to four weeks' quote traces only to non-permitted sites and one version misattributes the injury to a different game, so it is not used. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
+  "ts": "2026-09-26T21:18 UTC",
+  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Claim 3 stays at low confidence, not moved: Sunderland's own news index still carries no fresh article on Brobbey since January and no permitted outlet has published a diagnosis or return timeline for the hamstring problem picked up on Netherlands duty - a circulating 'two to four weeks' quote traces only to non-permitted sites and one version misattributes the injury to a different game, so it is not used. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
       "rank": 1,
@@ -474,6 +474,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made. Deep international-break sweep of every squad club, the free-agent shortlist clubs (Brighton, Leeds, Sunderland) and international duty for Haaland, Gvardiol and Van Hecke found nothing that clears the sourcing bar. Chased down a Brentford-site 'Lewis-Potter out two months with a knee injury' search result that would have hardened claim 2 - traced to a March 2023 article on a follow-up search naming the club site directly, so not used. Also discarded as stale: recurring Pickford/Raya/Gvardiol injury stories, an Ajayi hamstring story from a non-permitted outlet dated 23 August, and a Vuskovic/Tavernier pair of results that did not match any actual fixture this season."
+    },
+    {
+      "ts": "2026-09-26T21:18 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Evening sweep re-checked Brobbey directly against safc.com's own news index (no article on him since January) - still no permitted diagnosis or timeline, so claim 3 holds at low confidence. Also checked De Zerbi's mounting sack pressure at Tottenham (no reported change to Marmoush's role), Mateta's Palace return timeline (Sage still gives no firm date, changes nothing for Strand Larsen) and a leedsunited.com Bogle 'back in training' press page that turned out to be dated a year stale (25 Sep 2025, references a Wolves fixture Leeds do not play this season) - discarded. Gross, Stach, Tzolakis and Truffert all reconfirmed fit and undisturbed."
     },
     {
       "ts": "2026-09-21T14:20 UTC",
