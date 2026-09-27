@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-26T21:18 UTC",
-  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Claim 3 stays at low confidence, not moved: Sunderland's own news index still carries no fresh article on Brobbey since January and no permitted outlet has published a diagnosis or return timeline for the hamstring problem picked up on Netherlands duty - a circulating 'two to four weeks' quote traces only to non-permitted sites and one version misattributes the injury to a different game, so it is not used. Claims 1, 2, 4 and 5 (Gross, Stach, Tzolakis, Truffert) are all reconfirmed fit and unchanged. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
+  "ts": "2026-09-27T08:35 UTC",
+  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). New this run: Jayden Bogle and Pascal Gross were both named on the Premier League's own list of nominees for September's Player of the Month (premierleague.com) - Bogle for his goal at Brighton and 4-1 demolition of Newcastle, Gross for two goals and three assists including the Arsenal win - the strongest outside evidence yet for keeping Bogle over Truffert in claim 5 and for backing claim 1's Gross swap. Claim 3 (Brobbey) stays at low confidence: Sunderland's own news index still has nothing since January and no permitted outlet has published a diagnosis, though the model's own news field has caught up with 'Hamstring injury - 75% chance of playing' and dropped his availability from 0.90 to 0.68 this week. Claims 1, 2 and 4 (Gross, Stach, Tzolakis) are all reconfirmed fit and unchanged; several recurring injury stories (Raya, Haaland, Lewis-Potter, Schade) checked directly this run all traced to stale articles two or more years old and were discarded again. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
         "club": "LIV"
       },
       "why": "This board declined the model's Groß suggestion every week since GW2 on the grounds that Barcola, a £123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Groß-or-Barcola when it never had to be: Groß has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
-      "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.2 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
+      "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.3 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
       "confidence": "high",
       "sources": [
         {
@@ -75,8 +75,8 @@
         "code": "247412",
         "club": "CRY"
       },
-      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after 35 minutes of the Netherlands' 24 September draw with Germany - Sky Sports' match report says it looked like a hamstring injury, and ESPN's international-break roundup has Netherlands boss Xavi Hernandez confirming 'Brian is indeed injured' with Joshua Zirkzee called up in his place. No permitted outlet has yet published a diagnosis or timeline, so this stays low confidence, with Marmoush on watch as the alternative drop if Brobbey is ruled out before the window closes.",
-      "model": "Model still has Brobbey at 14.9 next5 / 98.6 rest (avail 0.90) against Strand Larsen's 10.8 / 72.8 (avail 0.80) - +4.1 over five, +25.8 over the season - but that number predates the injury and the model has no way to see it yet; treat the gap as stale until a fitness update arrives.",
+      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after 35 minutes of the Netherlands' 24 September draw with Germany with what Sky Sports' match report called a hamstring injury. No permitted outlet has published a diagnosis or timeline since - this morning's check of Sunderland's own news index (safc.com) turned up nothing on him since January - so this stays the board's one speculative punt, with Marmoush on watch as the alternative drop if he is ruled out before the window closes.",
+      "model": "Model still has Brobbey at 14.2 next5 / 97.9 rest against Strand Larsen's 10.8 / 72.8 - a narrower +3.4/+25.2 than last week's +4.1/+25.8, because the model's own news field has now caught up with the injury ('Hamstring injury - 75% chance of playing') and cut his availability from 0.90 to 0.68. That is the model pricing in the same uncertainty as this claim, not new information beyond it.",
       "confidence": "low",
       "sources": [
         {
@@ -120,13 +120,17 @@
         "code": "146426",
         "club": "HUL"
       },
-      "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who started and was booked against Palace and is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth, just earned his first France call-up, and sits on a stronger fixture run. This rests on the model's own numbers rather than any fresh news about Ajayi specifically, who remains fit and undisturbed at Hull.",
+      "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth and just earned his first France call-up. Bogle's case for staying got stronger again today too: he is a nominee for the Premier League's own September Player of the Month award, credited for his goal at Brighton and a starring role in the 4-1 win over Newcastle.",
       "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
       "confidence": "low",
       "sources": [
         {
           "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
           "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
+        },
+        {
+          "title": "Jayden Bogle nominated for September Player of the Month (premierleague.com)",
+          "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
         }
       ]
     }
@@ -804,6 +808,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made. Deep club-by-club sweep of every squad club plus the free-agent shortlist clubs (Brighton, Leeds, Sunderland) found nothing that clears the sourcing bar for a change. Chased Brobbey's injury status in depth: ESPN (permitted) confirms Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, but a 'two to four weeks' timeline circulating on non-permitted sites (TeamTalk, Sunderland Echo, LiveScore) could not be traced to safc.com or any permitted outlet, and one version of the quote misattributes the injury to the wrong game - discarded as unreliable, so claim 3's why was refreshed with the confirmed detail but its confidence is unchanged."
+    },
+    {
+      "ts": "2026-09-27T08:35 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change to which five claims are made or their order. Bogle and Gross both nominated for the Premier League's own September Player of the Month award (premierleague.com) - reinforcing claim 5's case for keeping Bogle over Truffert and claim 1's Gross-for-Barcola swap. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Brighton, Leeds, Bournemouth, Hull), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023 from the Thomas Frank era; the same outlet's Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Brobbey's availability dropped from 0.90 to 0.68 in the model's own numbers this week as its news field picked up the hamstring doubt, but no permitted outlet has published a diagnosis or timeline, so claim 3 stays at low confidence. Everything else reconfirmed unchanged: Pickford, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
     }
   ]
 }

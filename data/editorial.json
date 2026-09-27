@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-01-munoz-forest-signing",
-      "ts": "2026-09-01T21:39",
-      "mine": true,
-      "scope": "mine",
-      "text": "Munoz completed a permanent GBP22m move from Crystal Palace to Nottingham Forest, a three-year deal and a direct request from Oliver Glasner, who managed him before. He was a regular starter and a key contributor at Palace, so his 0.36 availability on your board is the same new-club discount hitting Marmoush, not a form or fitness concern - treat him as a starter, not a bench risk.",
-      "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
-    },
-    {
       "id": "2026-09-04-garner-set-to-start-man-utd",
       "ts": "2026-09-04T08:15 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "free",
       "text": "Brian Brobbey, this week's rank-3 waiver target, was taken off after just 35 minutes of Netherlands' 1-1 draw with Germany tonight, pulling up and pointing to his right leg four days after his Man City hat-trick - no diagnosis yet, but it puts real doubt on that claim before the 9 October waiver close.",
       "url": "https://www.skysports.com/football/live-blog/13375102/sunderland-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts"
+    },
+    {
+      "id": "2026-09-27-bogle-player-of-month-nomination",
+      "ts": "2026-09-27T08:35 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Jayden Bogle has been named among the Premier League's eight nominees for September's Player of the Month award, the League's own nominee page crediting his goal in the 1-1 draw at Brighton and a starring role in the 4-1 demolition of Newcastle, with Leeds boasting the joint-tightest defence in the league alongside Everton. It is the strongest evidence yet against dropping him for Truffert, a swap this board has considered and set aside three weeks running.",
+      "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-24T08:15 UTC",
-      "published": 0,
-      "note": "Deep international-break sweep, ~4 days after the last run - still no squad-club football since GW5 ended 20 September, none resumes until around 11 October. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus the GW6 free-agent shortlist clubs (Brighton for Gross, Leeds for Stach, Sunderland for Brobbey) and international-duty checks for Haaland (Norway), Gvardiol (Croatia) and Van Hecke (Netherlands), about 20 searches. Nothing survived scrutiny. Chased down the one genuine-looking lead in depth: a brentfordfc.com search result headlined 'Keane Lewis-Potter will be out for up to two months with a knee injury' - traced by a follow-up search naming the club site directly to a March 2023 article, not current, so left unpublished (this week's claim 2, Stach-for-Lewis-Potter, stands on form and fixtures alone, not injury). Also discarded as stale on inspection: the recurring Pickford 'out a month' story (2022), the recurring Raya bandaged-knee story (2024), a Gvardiol 'broken leg' result mixing in an old rehab timeline, a Vuskovic 'cramp in a 3-2 win over Man Utd' result that does not match any Brighton result this season, an Ajayi hamstring story from Pulse Sports Nigeria dated 23 August (already priced into his 0.98 availability and not a permitted source anyway), and a Tavernier hamstring story dated January. Reconfirmed with nothing new to publish: Barcola fit and uninjured per Get French Football News (not a permitted source, and adds nothing to what liverpoolfc.com already established), Truffert's France call-up already published on 18 September, Stach still nailed in Leeds' midfield after two more full appearances, Brobbey still Sunderland's first-choice striker off his Man City hat-trick (already published 20 September) with only January transfer speculation (Chelsea, Tottenham) attached to his name, and Groß undisturbed on Brighton's own injury list. Nothing published."
-    },
     {
       "ts": "2026-09-20T08:12 UTC",
       "published": 2,
@@ -621,6 +616,11 @@
       "ts": "2026-09-26T21:18 UTC",
       "published": 0,
       "note": "Evening sweep ~13 hours after this morning's 08:07 run, still the international break (GW6 fixtures resume 10 October, waivers close 9 October). Club-by-club pass on every squad club plus free-agent shortlist clubs (Sunderland for Brobbey, Brighton for Gross, Leeds for Stach, Bournemouth for Truffert, Hull for Tzolakis) and general sweeps on De Zerbi's position at Tottenham, Mateta's return timeline at Palace and Man City internationals, 12 searches plus three direct-fetch verifications (safc.com news index, ESPN's international-break injury roundup, leedsunited.com's Bournemouth-clash presser). Chased Brobbey again: Sky/ESPN's own reporting is unchanged since this morning - Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, still no diagnosis or return date from Sunderland itself, and safc.com's own news index carries no new article on him since January. A leedsunited.com press-conference page calling Bogle 'back in team training' after a bruise looked promising but is dated 25 Sep 25, a year stale, and Leeds do not play Wolves this season - discarded. Also discarded on inspection: a recurring Gvardiol 'broken leg' story mixing in an old rehab timeline (same one flagged stale on 24 September) and a De Zerbi sack-pressure story that changes nothing about Marmoush's role since no permitted outlet reports a change to Tottenham's forward line. Everything else reconfirmed unchanged: Pickford, Raya, Bogle, Ajayi, Van Hecke, Vuskovic, Haaland, Barcola, Groß, Stach, Lewis-Potter, Scott, Schade, Tavernier and Truffert. Nothing published."
+    },
+    {
+      "ts": "2026-09-27T08:35 UTC",
+      "published": 1,
+      "note": "Led with Jayden Bogle's September Player of the Month nomination, confirmed via premierleague.com's own nominee article (goal at Brighton, starring role in the 4-1 demolition of Newcastle, joint-tightest PL defence with Everton) - the strongest evidence yet for keeping him over the Truffert swap. Pascal Gross also nominated on the same page, reinforcing claim 1's Gross-for-Barcola case. Full club-by-club sweep across all 11 squad clubs (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland for Brobbey, Brighton for Gross, Leeds for Stach, Bournemouth for Truffert, Hull for Tzolakis), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full, all resurfacing stale articles rather than fresh news: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date coincidence); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, from before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023, from the Thomas Frank era; the same outlet's Kevin Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Checked safc.com directly for a Brobbey update - its 24 September international round-up carries no mention of him, and no permitted outlet has published a diagnosis since Netherlands duty on the 24th, though the model's own news field has now caught up with a 'hamstring injury, 75% chance of playing' note and cut his availability from 0.90 to 0.68 this week. Everything else reconfirmed unchanged: Pickford, Raya, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
     }
   ]
 }
