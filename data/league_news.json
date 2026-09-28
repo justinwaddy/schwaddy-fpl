@@ -1,47 +1,6 @@
 {
- "generated": "2026-09-27T22:41 UTC",
+ "generated": "2026-09-28T22:50 UTC",
  "items": [
-  {
-   "id": "2026-09-15-spurs-everton-toothless",
-   "ts": "2026-09-15T08:11",
-   "kind": "news",
-   "text": "Tottenham were held 0-0 at home by Everton on Saturday, a fourth straight league game without a goal, with Roberto De Zerbi giving Mathys Tel an on-pitch tutorial on playing centre-forward after Dominic Solanke, in his first start of the season, \"ghosted through\" the game. Robert's Solanke and Justin's Omar Marmoush both drew blanks up front for Spurs, while Marcus's Antonin Kinsky kept the clean sheet and Big Ben's Jarrad Branthwaite started at the back for Everton.",
-   "source": {
-    "title": "Premier League: 10 talking points from the weekend's action",
-    "url": "https://www.theguardian.com/football/2026/sep/14/premier-league-10-talking-points-from-the-weekends-action"
-   }
-  },
-  {
-   "id": "2026-09-15-elanga-injury",
-   "ts": "2026-09-15T22:52",
-   "kind": "news",
-   "text": "Newcastle boss Matthias Jaissle said after Monday's 4-1 defeat at Leeds that Anthony Elanga was missing through injury, that it could be long-term, and that Elanga is due another scan next week. Elanga is Marcus's, and he blanked in GW4 without kicking a ball.",
-   "source": {
-    "title": "Leeds 4 - 1 Newcastle - Match Report & Highlights",
-    "url": "https://www.skysports.com/football/leeds-vs-newcastle/report/559479"
-   }
-  },
-  {
-   "id": "2026-09-15-justin-bench-opinion",
-   "ts": "2026-09-15T22:53",
-   "kind": "opinion",
-   "text": "Justin's 87 topped GW4 while Edward's 69 and Marcus's 54 trailed in behind, and Justin still left 21 points on the bench, the most benched by anyone this gameweek. He's now within 7 of Marcus at the top. If that reserve unit ever got a start, this league would not be close.",
-   "source": null
-  },
-  {
-   "id": "2026-09-15-gross-edward-opinion",
-   "ts": "2026-09-15T22:54",
-   "kind": "opinion",
-   "text": "Edward's Groß put up 17 in GW4, the biggest individual haul in the league this week, and Edward still finished the gameweek on 69, some way back from Justin's 87. One goalscoring midfielder was never going to be enough against a whole XI that fires front to back.",
-   "source": null
-  },
-  {
-   "id": "2026-09-15-robert-bench-opinion",
-   "ts": "2026-09-15T22:55",
-   "kind": "opinion",
-   "text": "Robert left just 2 points on the bench in GW4, the smallest gap anywhere in the league, which means his 28 wasn't a selection headache, it was the actual ceiling. Last on 148, 70 behind the top, with nowhere to hide when your bench can't even offer you an excuse.",
-   "source": null
-  },
   {
    "id": "2026-09-16-city-derby-var",
    "ts": "2026-09-16T07:46",
@@ -724,16 +683,50 @@
    "kind": "opinion",
    "text": "Seven of Robert's fifteen - Mosquera, Sesko, Mateta, Roefs, Wilson, James and Yoro - sit on zero points apiece through five gameweeks, which explains last place a good deal better than any single waiver call could. The closest thing to a highlight is Rayan Cherki's 8, top scorer in a squad that otherwise tops out at 5, and he is currently several weeks into recovering from a torn quad. It is possible to own this many famous names and still be building nothing.",
    "source": null
+  },
+  {
+   "id": "2026-09-28-liverpool-isak-gakpo",
+   "ts": "2026-09-28T22:50",
+   "kind": "news",
+   "text": "Alexander Isak is back at Liverpool with a minor injury and will miss Sweden's remaining games of the break, while Cody Gakpo lasted 17 minutes for the Netherlands against Serbia holding his right ankle, with Xavi Hernandez saying only that it is his ankle and hoping it is not too important. Both belong to Small Ben.",
+   "source": {
+    "title": "Which Premier League players got injured in the international break?",
+    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
+   }
+  },
+  {
+   "id": "2026-09-28-havertz-fernandes",
+   "ts": "2026-09-28T22:50",
+   "kind": "news",
+   "text": "Kai Havertz was sent back to Arsenal from the Germany camp with a muscle strain, and Bruno Fernandes was left out of Portugal's squad for the Norway game, with Jorge Jesus saying he played with an injury he brought from Manchester United. Big Ben owns both.",
+   "source": {
+    "title": "Which Premier League players got injured in the international break?",
+    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
+   }
+  },
+  {
+   "id": "2026-09-28-op-edward-justin",
+   "ts": "2026-09-28T22:50",
+   "kind": "opinion",
+   "text": "Justin went into gameweek 5 nine points clear and came out seven behind, because Edward scored 57 to his 41. Semenyo alone gave Edward 17. Justin now has a fortnight-plus international break to explain how Haaland's 6 fits a title bid, and Edward has the same break to stop mentioning it.",
+   "source": null
+  },
+  {
+   "id": "2026-09-28-op-smallben",
+   "ts": "2026-09-28T22:50",
+   "kind": "opinion",
+   "text": "Small Ben scored 56 in gameweek 5, Hall 13 and Cunha 10 among them, and still lost a point to Edward, going from 12 behind to 13. That is a special sort of achievement: a huge week that made things worse. Now Isak and Gakpo are both limping home from international duty to make the rebuild harder.",
+   "source": null
+  },
+  {
+   "id": "2026-09-28-op-bigben-tzolis",
+   "ts": "2026-09-28T22:50",
+   "kind": "opinion",
+   "text": "Big Ben runs a team called Quantum of Tzolis, sits fifth, 40 points off the lead, and does not own Tzolis. Marcus does. Meanwhile Havertz and Bruno Fernandes are both nursing knocks, so the only thing Big Ben has a full grip on this break is the name.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-07T08:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "By hand, at Justin's request: the cheeseburgers-per-hour-against-hours-in-McDonald's graph, posted for Robert as an alternative to the beer mile. It is the first item on the page to carry a picture - the feed now takes an optional image named relative to data/, rendered under the text and opening full size in a tab. Nothing from the model and nothing from the roast archive used."
-  },
   {
    "ts": "2026-09-07T08:58",
    "news": 0,
@@ -1146,6 +1139,13 @@
    "opinion": 1,
    "matchday": false,
    "note": "Evening wrap. fixtures_2627.json confirms 0 fixtures today (GW6 still doesn't start until 10-12 October); the live feed's HH:MM-only kickoff times keep making that slate look same-day, but 0 of 10 fixtures had kicked off and every manager's live total equalled their pre-kickoff total, so no hauls/blanks piece was possible. Research this evening: confirmed via Sky Sports that Isak (thigh, out of Sweden's remaining games) and via multiple non-permitted outlets that Gakpo (ankle, hurt in today's Serbia 1-2 defeat) are fresh injury concerns for Ben C, but both are already on the page today as automatic INJURY items, so neither became a news item of mine - and no permitted outlet (BBC/Sky/Guardian/PL/ESPN/Reuters/AP/Athletic/club site) carried the Gakpo detail, so it would have been unsourceable anyway. Checked Havertz (hamstring, Germany, already posted 24 Sept), Van Dijk (nearing 100 caps, but no permitted outlet confirms today's Serbia involvement), Man City's verdict (already posted 26 Sept) and tomorrow's Belgium-France game (hasn't been played yet) - all either duplicates or unconfirmable, so zero news items tonight rather than padding the count. One opinion piece: seven of Robert's fifteen sit on zero points for the season, a fresh angle off the printout's own squad list, closing on his top scorer Cherki's torn quad. Roast archive unchanged - the same two submissions (Ben D on Ben D, touching sexuality; Ben D on Justin, hung on apartheid) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
+  },
+  {
+   "ts": "2026-09-28T22:50",
+   "news": 2,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, no fixtures (international break, GW6 starts 10 Oct). Led with Isak/Gakpo and Havertz/Fernandes injuries from ESPN. Passed over both unused roast suggestions: one is a sexuality slur, the other is race-related; neither is used. No flops today so no reflop. Opinions built on GW5 final numbers only."
   }
  ]
 }
