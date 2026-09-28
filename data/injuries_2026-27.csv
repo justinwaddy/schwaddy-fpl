@@ -291,6 +291,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 218997,1785832691,1785832691,a,,,
 219168,1785832691,1785832691,a,,,
 219168,1790518596,1790505009,d,,75.0,Foot injury - 75% chance of playing
+219168,1790584573,1790584573,d,,75.0,Thigh injury - 75% chance of playing
 219249,1785832691,1785832691,a,,,
 219847,1785832691,1785832691,a,,,
 219847,1790325402,1790287209,d,,75.0,Hamstring injury - 75% chance of playing
@@ -398,6 +399,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 243298,1785832691,1785832691,a,,,
 243298,1788989362,1788978609,d,,75.0,Thigh injury - 75% chance of playing
 243298,1789230234,1789230234,a,75.0,100.0,
+243298,1790584573,1790544608,d,100.0,75.0,Ankle injury - 75% chance of playing
 243413,1785832691,1785832691,a,,,
 243526,1785832691,1785832691,a,,,
 243526,1787270210,1786219208,i,,0.0,Hamstring injury - Unknown return date
@@ -972,6 +974,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 596047,1785832691,1785832691,a,,,
 596047,1789427800,1789402362,u,,0.0,Has joined Willem II on loan for the rest of the season
 596777,1785832691,1785832691,a,,,
+596777,1790584573,1790544608,d,,75.0,Hamstring injury - 75% chance of playing
 597320,1785832691,1785832691,a,,,
 597320,1787270210,1786974799,u,,0.0,Has joined Leicester City on loan for the rest of the season
 597462,1787270210,1787270210,a,,,
