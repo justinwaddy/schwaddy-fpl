@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-19T08:09 UTC",
-      "published": 1,
-      "note": "Morning sweep ~11 hours after last night's 21:11 run. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus two general PL sweeps, 15 searches. Led with Stach's Germany call-up (leedsunited.com). Chased down one lead in depth that did not survive: a widely-repeated 'Raya limping, bandaged knee, fears of a serious setback' story after a Man City game - this is the same stale item flagged and discarded on 18 September, traced back to a 27 September 2024 Etihad fixture (the Neto-debut game), not anything current; his four full 90s this season already contradict it, so left unpublished. Also checked and found nothing citable: Vuskovic (cramp only, fine per Brighton's own read), Gvardiol (a recurring stale 'broken leg' search result contradicted by his own recent minutes), Anderson (cramp substitution, no concern), and Truffert/Tavernier both fit and playing for Bournemouth. Reconfirmed unchanged: Pickford, Bogle, Ajayi, Van Hecke, Lewis-Potter, Scott, Tavernier, Schade, Marmoush, Strand Larsen and Haaland all training and selected normally with nothing citable that changes a status."
-    },
-    {
       "ts": "2026-09-18T08:10 UTC",
       "published": 0,
       "note": "Morning sweep ~10.5 hours after last night's 21:09 run, and the last run before today's 17:30 UTC GW5 deadline. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus two general PL sweeps, 16 searches. Nothing survived that both moves a verdict and clears a permitted source. Chased down two leads in depth: Hull's Semi Ajayi has search results claiming he 'missed Hull's last six fixtures' since an AFCON hamstring injury and is only 'expected to rejoin full training next week' (Yahoo/hayters.com), but this contradicts multiple fresher predicted lineups for Saturday's Newcastle game that all have him nailed at centre-back, and the AFCON injury dates to January - treated the six-fixtures story as a stale aggregator mix-up rather than current, no permitted outlet carries it either way, so left unpublished and his status stands. Also checked whether Van Hecke's Carabao Cup bench role at Anfield signals anything - predicted lineups have him back in Tottenham's XI for Saturday's Villa game, but that is rotation for a cup tie, not news, and no permitted outlet has published tomorrow's confirmed XI yet. Reconfirmed unchanged: Raya, Bogle, Vuskovic, Gvardiol/Haaland (both still pencilled in for Sunday after last night's rest), Barcola, Lewis-Potter, Scott, Tavernier, Schade, Marmoush and Strand Larsen all training and selected normally with nothing citable that changes a status. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-09-28T08:20 UTC",
       "published": 0,
       "note": "Morning sweep ~11 hours after last night's 21:11 run, still inside the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland, Coventry, Fulham, Nottingham Forest) plus today's international-duty injuries, ~25 searches. Nothing cleared the bar. A 'Tavernier hamstring, out at Brighton' story recurred again and was traced directly to afcb.co.uk's own URL date (23 January 2026, last season, a Liverpool-fixture piece) - stale, discarded again. Brobbey's return timeline is now actively contradictory across search results (2-4 weeks vs 6-8 weeks, neither traceable to safc.com or a permitted outlet's own reporting of a Le Bris quote), so still no usable diagnosis - claim 3 stays as is. A Lewis-Potter 'lost his starting spot to Aaron Hickey' item could not be confirmed at brentfordfc.com, Sky Sports, the Guardian or the BBC and is not used. Everything else reconfirmed unchanged: Pickford, Raya, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Bogle, Stach, Scott, Schade, Tavernier, Strand Larsen and Marmoush."
+    },
+    {
+      "ts": "2026-09-28T21:10 UTC",
+      "published": 0,
+      "note": "Evening check inside the international break (GW6 resumes 10 October, waivers close 9 October). Searched premierleague.com and Sky Sports injury round-ups and Barcola team news. Only new items were Isak (Liverpool) and Havertz injuries on international duty, neither on Justin's squad or the claims board, and Brobbey's hamstring remains without a permitted-outlet diagnosis. Nothing material; claims unchanged."
     }
   ]
 }

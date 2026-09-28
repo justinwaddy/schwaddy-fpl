@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-28T08:20 UTC",
+  "ts": "2026-09-28T21:10 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -826,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change to which five claims are made or their order. Full club-by-club sweep (all 11 squad clubs plus Sunderland, Coventry, Fulham, Nottingham Forest for free-agent shortlist), ~25 searches, plus today's international-duty injury list (Havertz, Gakpo, Kluivert, Malen - none of them squad or shortlisted players). Chased and discarded: a recurring 'Tavernier hamstring, out at Brighton' story that traces via afcb.co.uk's own URL to 23 January 2026 (last season); a 'Brobbey out 2-4 weeks' vs 'Brobbey out 6-8 weeks' pair of results that contradict each other and neither is traceable to safc.com or a permitted outlet's own account of a Le Bris quote, so claim 3's timeline is still unknown rather than firmed up either way; a Lewis-Potter 'dropped for Hickey' item with no confirmation at brentfordfc.com or any permitted outlet. Gross, Stach, Tzolakis, Truffert and Bogle all reconfirmed fit and undisturbed."
+    },
+    {
+      "ts": "2026-09-28T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: evening check found no news affecting squad or shortlisted players; claims carried forward."
     }
   ]
 }
