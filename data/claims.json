@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-28T21:10 UTC",
+  "ts": "2026-09-29T08:15 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-24T08:20 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made. Deep international-break sweep of every squad club, the free-agent shortlist clubs (Brighton, Leeds, Sunderland) and international duty for Haaland, Gvardiol and Van Hecke found nothing that clears the sourcing bar. Chased down a Brentford-site 'Lewis-Potter out two months with a knee injury' search result that would have hardened claim 2 - traced to a March 2023 article on a follow-up search naming the club site directly, so not used. Also discarded as stale: recurring Pickford/Raya/Gvardiol injury stories, an Ajayi hamstring story from a non-permitted outlet dated 23 August, and a Vuskovic/Tavernier pair of results that did not match any actual fixture this season."
-    },
-    {
       "ts": "2026-09-26T21:18 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: evening check found no news affecting squad or shortlisted players; claims carried forward."
+    },
+    {
+      "ts": "2026-09-29T08:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: international-break injuries touch none of the squad or shortlist; Brobbey diagnosis still unconfirmed at a permitted outlet."
     }
   ]
 }

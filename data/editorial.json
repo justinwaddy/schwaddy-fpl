@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-18T08:10 UTC",
-      "published": 0,
-      "note": "Morning sweep ~10.5 hours after last night's 21:09 run, and the last run before today's 17:30 UTC GW5 deadline. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus two general PL sweeps, 16 searches. Nothing survived that both moves a verdict and clears a permitted source. Chased down two leads in depth: Hull's Semi Ajayi has search results claiming he 'missed Hull's last six fixtures' since an AFCON hamstring injury and is only 'expected to rejoin full training next week' (Yahoo/hayters.com), but this contradicts multiple fresher predicted lineups for Saturday's Newcastle game that all have him nailed at centre-back, and the AFCON injury dates to January - treated the six-fixtures story as a stale aggregator mix-up rather than current, no permitted outlet carries it either way, so left unpublished and his status stands. Also checked whether Van Hecke's Carabao Cup bench role at Anfield signals anything - predicted lineups have him back in Tottenham's XI for Saturday's Villa game, but that is rotation for a cup tie, not news, and no permitted outlet has published tomorrow's confirmed XI yet. Reconfirmed unchanged: Raya, Bogle, Vuskovic, Gvardiol/Haaland (both still pencilled in for Sunday after last night's rest), Barcola, Lewis-Potter, Scott, Tavernier, Schade, Marmoush and Strand Larsen all training and selected normally with nothing citable that changes a status. Nothing published."
-    },
-    {
       "ts": "2026-09-17T21:09 UTC",
       "published": 0,
       "note": "Second run today, ~1.5 hours after the 19:30 sweep that built the first GW6 claims board and the GW5 deep starters pass. Fresh club-by-club sweep on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Nottingham Forest) plus two general PL injury/lineup sweeps, about 19 searches. Nothing moved: Arsenal's own site still has Saliba out and Timber a late fitness test, neither a squad player of Justin's; Raya's only injury history is an old thigh knock already recovered from, no fresh concern; Crystal Palace's own coverage reconfirms Mateta out until after the international break with Strand Larsen leading the line, and Sarr/Nketiah also doubtful, all already priced in; Leeds have Gruev, Gudmundsson and Gnonto working back into training but nothing on Bogle; the Premier League's own injury tracker (updated today) lists Spurs absentees as Kudus, Maddison, Kulusevski, Odobert and Solanke - Marmoush and Van Hecke are not on it, reinforcing both as fit. Checked the GW6 free-agent targets (McBurnie, Stach, Anderson, Truffert, Timber) for anything that would change this morning's claims board - nothing new turned up. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-09-28T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 resumes 10 October, waivers close 9 October). Searched premierleague.com and Sky Sports injury round-ups and Barcola team news. Only new items were Isak (Liverpool) and Havertz injuries on international duty, neither on Justin's squad or the claims board, and Brobbey's hamstring remains without a permitted-outlet diagnosis. Nothing material; claims unchanged."
+    },
+    {
+      "ts": "2026-09-29T08:15 UTC",
+      "published": 0,
+      "note": "Morning check inside the international break (GW6 waivers close 9 October). Injury round-up searches surfaced only Havertz, Gakpo, Isak and Bruno Fernandes knocks, none on Justin's squad or the claims board. Brobbey still has no diagnosis at a permitted outlet (a one-month absence appears only at flashscore, which is off-list). Nothing material; claims unchanged."
     }
   ]
 }
