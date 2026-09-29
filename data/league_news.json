@@ -1,32 +1,6 @@
 {
- "generated": "2026-09-29T07:41 UTC",
+ "generated": "2026-09-29T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-16-arsenal-city-duopoly",
-   "ts": "2026-09-16T07:46",
-   "kind": "news",
-   "text": "BBC analysis this week named Arsenal and Manchester City the Premier League's only unbeaten sides after four games, with Manchester United, Chelsea, Liverpool and Tottenham all off to shaky starts under new management. Robert's squad leans hardest on that duopoly, holding Arsenal's Gabriel, Bukayo Saka and Cristhian Mosquera alongside City's Nico O'Reilly, Rayan Cherki and Ndiaye.",
-   "source": {
-    "title": "Premier League title race: Are Arsenal and Man City the only contenders?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqwyzxx96wnwo"
-   }
-  },
-  {
-   "id": "2026-09-16-marcus-aca-lockout",
-   "ts": "2026-09-16T10:29",
-   "kind": "opinion",
-   "text": "Marcus has been locked out of his own page for swinging his dick on LinkedIn. Hours after telling LinkedIn he had passed all fifteen ACA exams, thanked his family and his colleagues at KPMG, and mentioned the assistant manager job starting in October, the league has put a ten-question ACA paper across his front door. No news, squad, no table and waivers until all ten are answered, and the score will be published here whatever it is."
-  },
-  {
-   "id": "2026-09-16-bha-mun-carabao",
-   "ts": "2026-09-16T22:46",
-   "kind": "news",
-   "text": "Brighton came back from two goals down to beat Manchester United 3-2 at Old Trafford in Tuesday's Carabao Cup third round. Babis Kostoulas scored just before half-time and later teed up the winner, Pascal Groß levelled after a United defensive error, and Maxim De Cuyper poked in from six yards for the winner. Marcus owns De Cuyper, Edward owns Groß and Ben D owns Kostoulas - between them the three scored every Albion goal.",
-   "source": {
-    "title": "United 2 Albion 3: 50-year record broken as Albion stun at Old Trafford",
-    "url": "https://www.brightonandhovealbion.com/media-article/pl-mft-match-report-manchester-united-bha-september-2026"
-   }
-  },
   {
    "id": "2026-09-16-carabao-nothing-counts",
    "ts": "2026-09-16T22:46",
@@ -724,16 +698,33 @@
     "title": "Pickford or Trafford? The battle to be England's number one is now on",
     "url": "https://www.bbc.co.uk/sport/football/articles/ckm2qqpjv7nro"
    }
+  },
+  {
+   "id": "2026-09-29-suzuki-rib",
+   "ts": "2026-09-29T22:45",
+   "kind": "news",
+   "text": "Aston Villa goalkeeper Zion Suzuki missed Japan's main training session on September 22 with a rib injury, worked alone, and was left out of the matchday squad for Japan's 3-1 win over Uruguay, according to ESPN's round-up of international-break injuries. Small Ben owns him; there is no word yet on whether he is fit for Villa.",
+   "source": {
+    "title": "Which Premier League players got injured in the international break?",
+    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
+   }
+  },
+  {
+   "id": "2026-09-29-marcus-zeroes",
+   "ts": "2026-09-29T22:45",
+   "kind": "opinion",
+   "text": "Marcus finished gameweek 5 on 31, the lowest of anyone bar Robert, and four of his fifteen (Mukiele, Joao Pedro, Foden and Palestra) returned exactly nothing. Ten points off the lead is not a disaster. Ten points off the lead with a bench that scored 2 is a man with nowhere left to hide.",
+   "source": null
+  },
+  {
+   "id": "2026-09-29-justin-bench",
+   "ts": "2026-09-29T22:45",
+   "kind": "opinion",
+   "text": "Justin's bench scored 21 in gameweek 5. He is 7 points behind Edward. Nobody is saying the eleven was picked by a man who reads the fixture list upside down, but the numbers are saying it quite loudly, and they do not care about his feelings.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-07T22:50 UTC",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Scheduled evening wrap. No fixtures today (rest day, next is 12 Sept) and the live feed confirms GW3 fully settled - 10 of 10 kicked off, nobody still to come. Six to eight searches (England/Norway international-duty angles, Chelsea, Newcastle, Man Utd, Man City sites) turned up nothing usable: results were either already covered (mancity.com's Ndiaye/Haaland pieces from the 5th), unverifiable on a permitted outlet (newcastleunited.com and chelseafc.com both served JS shells with no readable dated articles), or visibly scrambled placeholder content (one Chelsea search result claimed Maresca and the club 'parted company' while he is plainly managing Man City this season, and the England/Norway searches surfaced World Cup coverage that does not belong to this September) - so no reported item was published rather than risk an invented or misdated fact. Three opinion pieces instead, all built from today's automatic HAUL/OVERTAKE/RACE badges and the table/live-feed printout: (1) the week's four biggest individual hauls bar one - Mitchell 15, Bogle 14, Barnes 12, Vuskovic 12 - all belong to free agents, with Small Ben's Isak (13) the best any rostered player managed; (2) Justin's Haaland scored 9 today and it still was not enough to stop Edward and Big Ben both overtaking him into 3rd and 4th, dropping Schwaddy to 5th; (3) Robert's season total, 120, exactly matches what Marcus had banked before today's gameweek alone. The roast archive's only unused submission, Edward's 'Mong' about Robert, remains excluded permanently as the ableist slur rule 4 rules out - not a timing issue, so it is not noted as pending. No flops to rewrite: no FLOP badges appear in today's automatic feed since no matches were played."
-  },
   {
    "ts": "2026-09-08T07:47 UTC",
    "news": 4,
@@ -1146,6 +1137,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with O'Reilly ruled out/Konsa in and the Pickford v Trafford England race, both BBC Sport. Fewer items than quota: search tool returned mostly fantasy/aggregator sites and the City verdict was already posted 26 Sep. Roast archive: 2 unused (Ben D on himself, Ben D on Justin) both left unused: slur/race-adjacent and not fit to publish; morning run has no opinion anyway. Note: BBC copy says the league resumes 11 Oct while the live feed lists GW6 fixtures today, so I asserted nothing about fixture dates."
+  },
+  {
+   "ts": "2026-09-29T22:45",
+   "news": 1,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening, no fixtures today and GW6 not yet started, so no points-dependent claims beyond settled GW5. Led with Suzuki rib doubt (ESPN). Two roast suggestions left unused: one is a homophobic slur, the other is aimed at race/politics - both out of bounds under the rules. No flops today, nothing to reflop."
   }
  ]
 }
