@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-29T08:15 UTC",
+  "ts": "2026-09-29T21:10 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-26T21:18 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Evening sweep re-checked Brobbey directly against safc.com's own news index (no article on him since January) - still no permitted diagnosis or timeline, so claim 3 holds at low confidence. Also checked De Zerbi's mounting sack pressure at Tottenham (no reported change to Marmoush's role), Mateta's Palace return timeline (Sage still gives no firm date, changes nothing for Strand Larsen) and a leedsunited.com Bogle 'back in training' press page that turned out to be dated a year stale (25 Sep 2025, references a Wolves fixture Leeds do not play this season) - discarded. Gross, Stach, Tzolakis and Truffert all reconfirmed fit and undisturbed."
-    },
-    {
       "ts": "2026-09-21T14:20 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: international-break injuries touch none of the squad or shortlist; Brobbey diagnosis still unconfirmed at a permitted outlet."
+    },
+    {
+      "ts": "2026-09-29T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: evening check found nothing new at a permitted outlet."
     }
   ]
 }
