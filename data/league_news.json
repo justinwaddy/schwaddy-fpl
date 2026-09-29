@@ -728,13 +728,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-09-07T08:58",
-   "news": 0,
-   "opinion": 0,
-   "matchday": false,
-   "note": "By hand: the cheeseburgers item, already published, gains its closing line - the pints, then the week being settled and Robert being the one to sip up. Checked before posting: public.json has GW3 at all ten fixtures finished with nothing until the 12th, and Robert props up the gameweek on 22 and the season on 120, so the line has something under it."
-  },
-  {
    "ts": "2026-09-07T22:50 UTC",
    "news": 0,
    "opinion": 3,
