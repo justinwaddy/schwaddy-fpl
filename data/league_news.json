@@ -1,26 +1,6 @@
 {
- "generated": "2026-09-28T22:50 UTC",
+ "generated": "2026-09-29T07:41 UTC",
  "items": [
-  {
-   "id": "2026-09-16-city-derby-var",
-   "ts": "2026-09-16T07:46",
-   "kind": "news",
-   "text": "Manchester City won 1-0 at Old Trafford on Sunday despite Phil Foden's 23rd-minute red card, Erling Haaland turning in Josko Gvardiol's cross for the only goal after VAR overturned an offside call. Pro Ref has since admitted an \"error of judgement\" over Enzo Fernandez's position in the build-up and left VAR duo Matt Donohue and Blake Antrobus out of this weekend's fixtures. Justin owns both Haaland and Gvardiol; Marcus owns the sent-off Foden.",
-   "source": {
-    "title": "Manchester derby VAR officials not given Premier League game at weekend",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6pwlk0kjqwqo"
-   }
-  },
-  {
-   "id": "2026-09-16-leeds-third-farke",
-   "ts": "2026-09-16T07:46",
-   "kind": "news",
-   "text": "Leeds United sit third in the Premier League after Monday's 4-1 win over Newcastle, their best start to a top-flight campaign since 2001-02 under Daniel Farke's back-three system. Justin owns Leeds pair Jayden Bogle and Ethan Ampadu; Ben D owns Leeds goalkeeper Trafford.",
-   "source": {
-    "title": "A team in form - how Farke has turned Leeds around",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6x2zgnngj71o"
-   }
-  },
   {
    "id": "2026-09-16-arsenal-city-duopoly",
    "ts": "2026-09-16T07:46",
@@ -724,6 +704,26 @@
    "kind": "opinion",
    "text": "Big Ben runs a team called Quantum of Tzolis, sits fifth, 40 points off the lead, and does not own Tzolis. Marcus does. Meanwhile Havertz and Bruno Fernandes are both nursing knocks, so the only thing Big Ben has a full grip on this break is the name.",
    "source": null
+  },
+  {
+   "id": "2026-09-29-oreilly-out-konsa-in",
+   "ts": "2026-09-29T07:41",
+   "kind": "news",
+   "text": "Nico O'Reilly has been ruled out of England's Nations League match against the Czech Republic on Tuesday night, one of only two players to miss training on Monday, while Ezri Konsa is set to be in the squad. That is a knock for Robert's O'Reilly and a shrug for Big Ben's Konsa, and BBC Sport says Newcastle's Lewis Hall, one of Small Ben's, could get a look at left-back.",
+   "source": {
+    "title": "O'Reilly to miss Czech Republic but Konsa in squad",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cj62eyx9grzxo"
+   }
+  },
+  {
+   "id": "2026-09-29-pickford-trafford-race",
+   "ts": "2026-09-29T07:41",
+   "kind": "news",
+   "text": "Thomas Tuchel has said Jordan Pickford and James Trafford get two consecutive matches each this international break, with Trafford making his competitive England debut in Saturday's 3-2 loss to Spain, where he was beaten three times. Justin owns Pickford and Big Ben owns Trafford, so the England number one shirt is now a live argument between the two of them.",
+   "source": {
+    "title": "Pickford or Trafford? The battle to be England's number one is now on",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckm2qqpjv7nro"
+   }
   }
  ],
  "runs": [
@@ -1146,6 +1146,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, no fixtures (international break, GW6 starts 10 Oct). Led with Isak/Gakpo and Havertz/Fernandes injuries from ESPN. Passed over both unused roast suggestions: one is a sexuality slur, the other is race-related; neither is used. No flops today so no reflop. Opinions built on GW5 final numbers only."
+  },
+  {
+   "ts": "2026-09-29T07:41",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with O'Reilly ruled out/Konsa in and the Pickford v Trafford England race, both BBC Sport. Fewer items than quota: search tool returned mostly fantasy/aggregator sites and the City verdict was already posted 26 Sep. Roast archive: 2 unused (Ben D on himself, Ben D on Justin) both left unused: slur/race-adjacent and not fit to publish; morning run has no opinion anyway. Note: BBC copy says the league resumes 11 Oct while the live feed lists GW6 fixtures today, so I asserted nothing about fixture dates."
   }
  ]
 }
