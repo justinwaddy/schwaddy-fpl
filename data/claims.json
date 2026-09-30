@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-21T14:20 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "Board rebuilt, not reconfirmed - three substantive changes and one correction of an earlier run. (1) Groß-for-Barcola promoted from declined-every-week to claim 1 at high confidence: 47 points unowned, 5/5 starts, 450 minutes, 3g 4a, goal and corner assist in Brighton 3-0 Arsenal; verified against Sky and brightonandhovealbion.com. The standing objection - too small a sample on a £123m signing - was checked against liverpoolfc.com's own fitness update (11 Sep, Iraola: \"just cramps... there's no injury\") and does not hold: Barcola is fit and on 26/71/71 minutes with no returns, which is a role, not a sample. Model +16.2 next5 / +100 rest; the neural network makes the same swap its change 1 with all 5 models agreeing, the only unanimous row on either horizon. (2) Brobbey-for-Strand Larsen added at claim 3 after Sunday's hat-trick at Manchester City (Sky report, Le Bris quote), 90 minutes in each of Sunderland's last three; Marmoush considered as the alternative drop and left in on the model's and the network's joint preference, but flagged for next week on four starts and no goal. (3) CORRECTION: Truffert-for-Bogle removed from the board. The 20 September run upgraded it to medium confidence on a reading that leedsunited.com's team news put Bogle among the substitutes with James Justin in at right wing-back; leedsunited.com's own 'Farke names unchanged side to face Palace' and the match report say Bogle started, was booked and was withdrawn on 67. With 42 points and two goals from five starts he is the squad's second-best defender on the ledger and Truffert (10 points, 2.0 form) is not the swap. McBurnie-for-Marmoush and Timber-for-Scott also dropped - the first is +0.4 next5, inside noise, and the second was an explicit punt on the model's blind spot for new arrivals that the Groß case no longer needs to carry. Tzolakis-for-Pickford held at claim 4, unchanged. Ranking matters more than usual this week: Justin submits 5th of 6 in the reversed order, so claim 1 is very likely the only one that lands, and it is the one worth landing. Run made against a full data refresh taken at 14:00 UTC today (GW5 final, prices, injury log) and a fresh five-seed neural network plan on both horizons."
-    },
-    {
       "ts": "2026-09-20T08:12 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: evening check found nothing new at a permitted outlet."
+    },
+    {
+      "ts": "2026-09-30T08:20 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: international-break injury round-ups found nothing affecting squad or claim targets."
     }
   ]
 }
