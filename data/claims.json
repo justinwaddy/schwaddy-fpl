@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-20T08:12 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made, but claim 2 (Truffert/Bogle) upgraded from low to medium confidence: leedsunited.com's own team news for today's Palace game has Bogle among the substitutes for the first time all season, James Justin in at right wing-back. Full club-by-club sweep plus today's live GW5 fixtures (Man City-Sunderland, Leeds-Palace, Bournemouth-Liverpool) reconfirmed the rest of the board unchanged - Marmoush/Van Hecke both pencilled in for Tottenham's Villa game, Haaland/Gvardiol both set for City, Stach/Lewis-Potter, McBurnie/Marmoush and Timber/Scott all checked out with nothing new. Also flagged Sunderland's Malick Fofana (deadline-day, up to GBP30m from Lyon) as a fresh new-arrival blind spot for the model, but he is not a squad player and has no Premier League start yet, so he is a headline, not a claim. League position update: Marcus (231) has pulled clear of Justin (230), resolving last night's tie and moving Justin to 4th of 6 in the reversed waiver order, better than last night's 5th. Discarded as stale on direct fetch: a Pickford 'out a month' Sky Sports story (dated 2022-09-07) and the recurring Raya thigh-injury story (dated 2024-09-27, same one flagged stale before)."
-    },
-    {
       "ts": "2026-09-19T08:09 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: international-break injury round-ups found nothing affecting squad or claim targets."
+    },
+    {
+      "ts": "2026-09-30T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: evening injury round-ups found nothing new at a permitted outlet."
     }
   ]
 }
