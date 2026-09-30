@@ -1,37 +1,6 @@
 {
- "generated": "2026-09-29T22:45 UTC",
+ "generated": "2026-09-30T07:55 UTC",
  "items": [
-  {
-   "id": "2026-09-16-carabao-nothing-counts",
-   "ts": "2026-09-16T22:46",
-   "kind": "opinion",
-   "text": "Marcus, Edward and Ben D can, between them, claim every goal from Tuesday's 3-2 smash-and-grab at Old Trafford - De Cuyper, Groß and Kostoulas did the damage - and it is worth precisely nothing on this page, because Carabao Cup goals do not touch the table. Ben C, Justin and Robert just have to sit with the knowledge that three of their rivals' players spent Tuesday night embarrassing Manchester United for fun.",
-   "source": null
-  },
-  {
-   "id": "2026-09-16-state-of-the-league",
-   "ts": "2026-09-16T22:46",
-   "kind": "opinion",
-   "text": "Four games in, the top of the table is a genuine scrap - Marcus leads Justin by just 7, with Edward 16 back in third - while underneath it Ben D's season has become a cautionary tale. His squad reads like a highlights reel (Wirtz, Havertz, Rogers, Grealish, Enzo, Matheus N.) and it still sits 45 behind the leader in fifth, propped up almost entirely by Kostoulas actually putting up points. Bottom of the pile, Robert is 70 adrift and still fielding Yoro, Mosquera and Mateta on 0 points apiece for the season - a squad that reads better than it counts.",
-   "source": null
-  },
-  {
-   "id": "2026-09-17-collins-out-again",
-   "ts": "2026-09-17T07:59",
-   "kind": "news",
-   "text": "Brentford's Nathan Collins will miss the visit of Chelsea as well as last week's trip to Bournemouth, with head coach Keith Andrews confirming the calf injury picked up against Sunderland means the defender will not be involved before the international break. Justin owns Collins, who has yet to feature since the injury.",
-   "source": {
-    "title": "Bournemouth v Brentford: Keith Andrews squad news update - Nathan Collins",
-    "url": "https://www.brentfordfc.com/en/news/article/first-team-bournemouth-v-brentford-premier-league-keith-andrews-squad-news-update-nathan-collins"
-   }
-  },
-  {
-   "id": "2026-09-17-gross-cut",
-   "ts": "2026-09-17T22:45",
-   "kind": "opinion",
-   "text": "Robert starts GW5 sitting 70 points off the lead and the only one of the six who didn't touch the waiver wire this week, while Justin and Edward both made three moves apiece. Edward's business included cutting loose Groß, who dropped 17 on him in GW4 - not exactly a vote of confidence in form.",
-   "source": null
-  },
   {
    "id": "2026-09-18-joao-pedro-doubt",
    "ts": "2026-09-18T08:10",
@@ -722,16 +691,49 @@
    "kind": "opinion",
    "text": "Justin's bench scored 21 in gameweek 5. He is 7 points behind Edward. Nobody is saying the eleven was picked by a man who reads the fixture list upside down, but the numbers are saying it quite loudly, and they do not care about his feelings.",
    "source": null
+  },
+  {
+   "id": "2026-09-30-city-guilty",
+   "ts": "2026-09-30T07:55",
+   "kind": "news",
+   "text": "An independent commission has found Manchester City guilty of all Premier League financial charges over a nine-year period, citing sham contracts with commercial partners, and City say they will appeal by Friday. Sanctions including points deductions are on the table, which matters to everyone here: Edward has Semenyo, Justin has Haaland and Gvardiol, Marcus has Guehi and Foden, Small Ben has Donnarumma and Ruben, Robert has Cherki, Ndiaye and O'Reilly.",
+   "source": {
+    "title": "Manchester City guilty over Premier League charges after £900m of 'sham' contracts",
+    "url": "https://www.theguardian.com/football/2026/sep/29/manchester-city-found-guilty-all-premier-league-charges-rule-breaches"
+   }
+  },
+  {
+   "id": "2026-09-30-england-czech",
+   "ts": "2026-09-30T07:55",
+   "kind": "news",
+   "text": "England beat the Czech Republic 2-0 in Prague through goals from Anthony Gordon and Harry Kane, with Pavel Sulc sent off in the first half. Small Ben's Lewis Hall was in the side, Marcus's Guehi was in the ratings with a 6, and Edward's Gibbs-White came on as a substitute.",
+   "source": {
+    "title": "Czech Republic 0-2 England: Anthony Gordon, Harry Kane net to give Three Lions first Nations League win",
+    "url": "https://www.skysports.com/football/czech-republic-vs-england/report/554024"
+   }
+  },
+  {
+   "id": "2026-09-30-palmer-load",
+   "ts": "2026-09-30T07:55",
+   "kind": "news",
+   "text": "PFA chief executive Maheta Molango has called Cole Palmer a 'victim' of a 'sick' calendar after the Chelsea forward withdrew from England's squad for load management. Declan Rice was one of five players to pull out, so Edward and Small Ben both have a man the international window has been getting at.",
+   "source": {
+    "title": "England's Palmer a 'victim' of 'sick' schedule, says PFA chief",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c68048pynj94o"
+   }
+  },
+  {
+   "id": "2026-09-30-odegaard-training",
+   "ts": "2026-09-30T07:55",
+   "kind": "news",
+   "text": "Sky Sports reports Martin Odegaard missed Norway training on Tuesday after an 'ugly' tackle from Silva. Edward owns him; there is no detail yet on how serious it is.",
+   "source": {
+    "title": "Arsenal latest: Odegaard misses Norway training after 'ugly' Silva tackle",
+    "url": "https://www.skysports.com/football/live-blog/11095/13025486/arsenal-transfer-news-rumours-and-gossip-live-upda"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-08T07:47 UTC",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Scheduled morning news. GW3 is fully settled (10/10 fixtures) and there is no matchday today, so this covers the most recent football rather than a literal last 24 hours. Four reported items, all fetched and read directly from club sites (newcastleunited.com, liverpoolfc.com, chelseafc.com, tottenhamhotspur.com) after mancity.com blocked every fetch attempt with a JS/Cloudflare challenge (403), so a promising Maresca-on-Ndiaye quote from Man City's Coventry win went unused rather than being cited from a search summary alone. No opinion pieces on a morning run. The one unused roast archive entry (Edward on Robert, 'Mong') stays out permanently as an ableist slur, not a timing issue."
-  },
   {
    "ts": "2026-09-08T22:47 UTC",
    "news": 2,
@@ -1144,6 +1146,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening, no fixtures today and GW6 not yet started, so no points-dependent claims beyond settled GW5. Led with Suzuki rib doubt (ESPN). Two roast suggestions left unused: one is a homophobic slur, the other is aimed at race/politics - both out of bounds under the rules. No flops today, nothing to reflop."
+  },
+  {
+   "ts": "2026-09-30T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with the Man City guilty verdict and who owns City players. Roast suggestions left unused: both unused entries are unusable (one is a slur, the other alleges something serious as fact about a real person), so not written."
   }
  ]
 }
