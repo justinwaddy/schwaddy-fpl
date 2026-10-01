@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T08:36",
+ "generated": "2026-10-01T15:39",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.38,
+   "ep": 4.37,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 130.31,
+   "gain": 130.01,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 60.73,
+   "gain": 60.91,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 59.75,
+   "gain": 59.67,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 144
+   "borda": 143
   },
   {
    "pos": "MID",
-   "gain": 56.02,
+   "gain": 55.68,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 65.95,
+   "gain": 65.98,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 58.24,
+   "gain": 58.51,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 36
+   "borda": 37
   },
   {
    "pos": "DEF",
-   "gain": 36.44,
+   "gain": 36.73,
    "change": 3,
    "fallback": false,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 91
+   "borda": 92
   },
   {
    "pos": "DEF",
-   "gain": 39.49,
+   "gain": 39.38,
    "change": 3,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 34.46,
+   "gain": 34.3,
    "change": 3,
    "fallback": true,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 33
+   "borda": 32
   },
   {
    "pos": "DEF",
-   "gain": 27.31,
+   "gain": 26.86,
    "change": 3,
    "fallback": true,
    "add": {
@@ -672,9 +672,9 @@
    "name": "O'Reilly",
    "pos": "DEF",
    "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.458,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.343,
    "base": 180.77,
    "ep": 177.69
   },

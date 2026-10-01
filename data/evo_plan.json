@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T08:36",
+ "generated": "2026-10-01T15:38",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.38,
+   "ep": 4.37,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.77,
+   "gain": 18.72,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 239
+   "borda": 234
   },
   {
    "pos": "MID",
-   "gain": 10.55,
+   "gain": 10.58,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 163
+   "borda": 159
   },
   {
    "pos": "MID",
-   "gain": 8.72,
+   "gain": 8.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 150
+   "borda": 146
   },
   {
    "pos": "MID",
-   "gain": 9.23,
+   "gain": 9.18,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,108 +346,12 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 114
-  },
-  {
-   "pos": "FWD",
-   "gain": 10.11,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 552,
-    "code": 441264,
-    "name": "Brobbey",
-    "pos": "FWD",
-    "team": "SUN",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.678,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 222,
-    "code": 247412,
-    "name": "Strand Larsen",
-    "pos": "FWD",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.713,
-    "base": null,
-    "ep": null
-   },
-   "votes": 4,
-   "borda": 125
-  },
-  {
-   "pos": "FWD",
-   "gain": 9.05,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 295,
-    "code": 169432,
-    "name": "McBurnie",
-    "pos": "FWD",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.983,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 222,
-    "code": 247412,
-    "name": "Strand Larsen",
-    "pos": "FWD",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.713,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 40
-  },
-  {
-   "pos": "FWD",
-   "gain": 5.51,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 316,
-    "code": 543968,
-    "name": "Emersonn",
-    "pos": "FWD",
-    "team": "IPS",
-    "status": "a",
-    "news": "",
-    "p_play": 0.749,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 222,
-    "code": 247412,
-    "name": "Strand Larsen",
-    "pos": "FWD",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.713,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 34
+   "borda": 111
   },
   {
    "pos": "DEF",
-   "gain": 7.01,
-   "change": 3,
+   "gain": 7.28,
+   "change": 2,
    "fallback": false,
    "add": {
     "id": 10,
@@ -474,12 +378,12 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 102
+   "borda": 113
   },
   {
    "pos": "DEF",
-   "gain": 5.94,
-   "change": 3,
+   "gain": 6.08,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 305,
@@ -506,12 +410,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 32
+   "borda": 35
   },
   {
    "pos": "DEF",
-   "gain": 4.99,
-   "change": 3,
+   "gain": 5.13,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 114,
@@ -538,12 +442,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 25
+   "borda": 27
   },
   {
    "pos": "DEF",
-   "gain": 4.15,
-   "change": 3,
+   "gain": 4.22,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 282,
@@ -570,11 +474,107 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 17
+   "borda": 18
+  },
+  {
+   "pos": "FWD",
+   "gain": 10.98,
+   "change": 3,
+   "fallback": false,
+   "add": {
+    "id": 552,
+    "code": 441264,
+    "name": "Brobbey",
+    "pos": "FWD",
+    "team": "SUN",
+    "status": "d",
+    "news": "Hamstring injury - 75% chance of playing",
+    "p_play": 0.678,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.713,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 73
+  },
+  {
+   "pos": "FWD",
+   "gain": 9.09,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 295,
+    "code": 169432,
+    "name": "McBurnie",
+    "pos": "FWD",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.983,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.713,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 31
+  },
+  {
+   "pos": "FWD",
+   "gain": 5.51,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 316,
+    "code": 543968,
+    "name": "Emersonn",
+    "pos": "FWD",
+    "team": "IPS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.749,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.713,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 28
   },
   {
    "pos": "MID",
-   "gain": 5.65,
+   "gain": 5.69,
    "change": 4,
    "fallback": false,
    "add": {
@@ -736,9 +736,9 @@
    "name": "O'Reilly",
    "pos": "DEF",
    "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.458,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.343,
    "base": 180.77,
    "ep": 177.69
   },
