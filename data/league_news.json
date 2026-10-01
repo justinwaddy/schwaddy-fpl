@@ -1,26 +1,6 @@
 {
- "generated": "2026-09-30T22:45 UTC",
+ "generated": "2026-10-01T07:42 UTC",
  "items": [
-  {
-   "id": "2026-09-18-pickford-carabao-save",
-   "ts": "2026-09-18T08:14",
-   "kind": "news",
-   "text": "Jordan Pickford kept Everton on course in the Carabao Cup with a smart second-half save to deny substitute Adam Armstrong, before Charly Alcaraz's late winner saw off Wolves 1-0 on Wednesday. Another clean night's work between the sticks for Justin, who owns Pickford.",
-   "source": {
-    "title": "Everton 1-0 Wolves: Charly Alcaraz hits late winner to send Toffees through to Carabao Cup fourth round",
-    "url": "https://www.skysports.com/football/news/11671/13582684/everton-1-0-wolves-charly-alcaraz-hits-late-winner-to-send-toffees-through-to-carabao-cup-fourth-round"
-   }
-  },
-  {
-   "id": "2026-09-18-bre-che-schade-thiago",
-   "ts": "2026-09-18T22:50",
-   "kind": "news",
-   "text": "Brentford beat Chelsea 3-0 at the Gtech on Friday night to post their best five-game start to a Premier League season, Jaidon Anthony heading in a corner before Kevin Schade set up both further goals - the rebound Igor Thiago finished and Fabio Carvalho's stoppage-time strike. Schade and Thiago's night belongs to Justin and Ben C; at the other end Chelsea's Martinez, Rogers and Palmer, owned by Robert, Ben D and Edward, all played the full 90 without finding a way through.",
-   "source": {
-    "title": "Brentford 3 Chelsea 0: Jaidon Anthony, Igor Thiago and Fabio Carvalho on target as Bees make best start to a Premier League season",
-    "url": "https://www.brentfordfc.com/en/news/article/match-reports-brentford-3-chelsea-0-premier-league-jaidon-anthony-igor-thiago-fabio-carvalho"
-   }
-  },
   {
    "id": "2026-09-18-justin-lead-one-match",
    "ts": "2026-09-18T22:51",
@@ -728,16 +708,29 @@
    "kind": "opinion",
    "text": "No football tonight and the table is still cruel: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back, Big Ben 40 back and Robert 89 back. Robert has had an international break to reflect on being 89 points off the lead, and will spend the next ten days doing precisely what everyone else does, which is refreshing the injury list and hoping it is somebody else's player.",
    "source": null
+  },
+  {
+   "id": "2026-10-01-city-punishment-timing",
+   "ts": "2026-10-01T07:42",
+   "kind": "news",
+   "text": "Senior football figures have told BBC Sport that Manchester City's punishment should be handed down before the end of this season, after the Premier League found them guilty of all charges over financial breaches between 2009-10 and 2017-18. City deny wrongdoing and have signalled an appeal by the end of this week. All six managers own City players, so this is one headline nobody in the league gets to ignore.",
+   "source": {
+    "title": "Manchester City charges: Punishment before end of season, Premier League clubs believe",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6vgyg3zv3kwo"
+   }
+  },
+  {
+   "id": "2026-10-01-van-hecke-foot",
+   "ts": "2026-10-01T07:42",
+   "kind": "news",
+   "text": "Tottenham defender Jan Paul van Hecke has withdrawn from the Netherlands squad with a foot injury picked up in the clash with Serbia, ESPN reports, and is returning to Spurs with no replacement called up. Justin owns him.",
+   "source": {
+    "title": "Which Premier League players got injured in the international break?",
+    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-09T07:52 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news run, no Premier League fixtures today (next PL action is the 12th; Arsenal host Napoli and Liverpool host Atletico Madrid tonight in the Champions League, which does not score in this league). Ran a dozen-plus searches across Man City, Arsenal, Liverpool, Newcastle, Man Utd, Chelsea, Leeds, Crystal Palace, Bournemouth, Fulham, Aston Villa and Brentford and found almost nothing usable: search summaries kept surfacing stale or outright wrong material - an Arsenal.com URL titled 'Arsenal 2-0 Napoli match report' turned out to be an Ozil/Giroud report from over a decade ago, a Crystal Palace search invented a manager ('Pierre Sage') who does not exist there, a Chelsea 'Newcastle team news' piece referenced an Aston Villa fixture on '27 December' and a Brentford Thiago injury update referenced a Tottenham match on 'New Year's Day' - both many months out of step with today. The Arsenal Timber/Mosquera fitness lines that did check out against a live arsenal.com page were already published on 5 and 7 September, so re-running them would have repeated the page. One item survived verification: Ben C's Anderson and Khusanov were both left out of Manchester City's XI for Tuesday's Porto trip (Sky Sports lineup page, read directly), a fact not covered by Sunday night's Doku/O'Reilly/Ndiaye item on the same match. No opinion pieces on a morning run. Roast archive's only unused entry, Edward's 'Mong' about Robert, remains permanently excluded as the ableist slur rule 4 rules out."
-  },
   {
    "ts": "2026-09-09T22:48 UTC",
    "news": 2,
@@ -1150,6 +1143,13 @@
    "opinion": 1,
    "matchday": false,
    "note": "Evening wrap, no fixtures (international break, GW6 has not kicked off). Led with Havertz muscle strain (ESPN) and a state-of-the-table piece. Both unused roast suggestions passed over: one is a slur, the other is aimed at race/politics; neither is usable. No flops today."
+  },
+  {
+   "ts": "2026-10-01T07:42",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with BBC on Man City punishment timing; Van Hecke foot injury via ESPN tracker. Most other break injuries (Isak, Gakpo, Havertz, Fernandes, Suzuki, O'Reilly) already posted; Dorgu/Mazraoui/Brobbey not owned in the league. Fewer than quota: nothing else found on permitted outlets. No roast suggestions used (morning)."
   }
  ]
 }
