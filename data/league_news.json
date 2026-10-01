@@ -1,27 +1,6 @@
 {
- "generated": "2026-10-01T07:42 UTC",
+ "generated": "2026-10-01T22:50 UTC",
  "items": [
-  {
-   "id": "2026-09-18-justin-lead-one-match",
-   "ts": "2026-09-18T22:51",
-   "kind": "opinion",
-   "text": "Justin's lead is one match deep: Kevin Schade's double assist did the early work, and by his own printout ten of his eleven have not kicked a ball yet this gameweek. Marcus, two points back, watched the one player of his in action tonight - Joao Pedro - add nothing to a Chelsea side already coming apart at Brentford.",
-   "source": null
-  },
-  {
-   "id": "2026-09-18-chelsea-three-owners",
-   "ts": "2026-09-18T22:52",
-   "kind": "opinion",
-   "text": "Half of tonight's flops landed on the same match. Robert, Ben D and Edward - sixth, fifth and third in the table - each own a slice of Chelsea's non-show at Brentford, and between Martinez, Rogers and Palmer that is six points from four and a half hours of first-team football. Small mercy: none of the three needed the minutes tonight, with most of their squads still to come this weekend.",
-   "source": null
-  },
-  {
-   "id": "2026-09-18-quantum-of-tzolis",
-   "ts": "2026-09-18T22:53",
-   "kind": "opinion",
-   "text": "Quantum of Tzolis remains the name of Ben D's team, and Tzolis remains a player Ben D has never owned - he sits on Marcus's bench, not Ben D's XI. Forty-five points off the lead and the joke is still uncorrected; at some point that stops being a bit and starts being a confession.",
-   "source": null
-  },
   {
    "id": "2026-09-19-mosquera-saliba",
    "ts": "2026-09-19T07:55",
@@ -728,16 +707,33 @@
     "title": "Which Premier League players got injured in the international break?",
     "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
    }
+  },
+  {
+   "id": "2026-10-01-joao-pedro-knee",
+   "ts": "2026-10-01T22:50",
+   "kind": "news",
+   "text": "Chelsea manager Xabi Alonso says Joao Pedro, who missed the Brentford match with a knee problem, is expected back for the next game against Bournemouth after the international break. He is Marcus's, and he returned 0 in gameweek 5.",
+   "source": {
+    "title": "Why FPL managers need to monitor injury CHAOS",
+    "url": "https://www.premierleague.com/en/news/4727332"
+   }
+  },
+  {
+   "id": "2026-10-01-tzolis-name",
+   "ts": "2026-10-01T22:50",
+   "kind": "opinion",
+   "text": "Big Ben is 40 points behind Edward and calls his team Quantum of Tzolis. Tzolis, per the squad lists, sits in Marcus's fifteen. It is the only quantum of anything Big Ben has managed this season: a tiny, unobservable amount of ownership.",
+   "source": null
+  },
+  {
+   "id": "2026-10-01-robert-gap",
+   "ts": "2026-10-01T22:50",
+   "kind": "opinion",
+   "text": "No football tonight, so Robert's 89 points behind Edward will have to sit and think about itself until the weekend. Pardinho has Mosquera, Seseko, Mateta, Roefs, Wilson and James on zero for gameweek 5, which is not so much a squad as a witness protection programme.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-09T22:48 UTC",
-   "news": 2,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap. No Premier League fixtures today - GW3 is fully settled and the table has been static since the weekend, so no HAUL/OVERTAKE/FLOP badges posted automatically today, nothing to rewrite there. Champions League did play tonight though, and it touched four of the six squads: led with Arsenal's 1-0 win at Napoli (Edward's Odegaard scored the winner, Robert's Saka missed a sitter) and Ben C's Gakpo being left out of the Atletico Madrid tie with a minor adductor issue (Liverpool's own site, direct Iraola quote). Two opinion pieces off the back of that plus the day-to-day: Robert's last-place table position paired with Saka's miss, and the irony that Ben C's 'Delap Dance' doesn't own Delap (Ben D does) while Ben D's 'Quantum of Tzolis' doesn't own Tzolis (Marcus does). Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded - it's a disablist slur and rule 4 rules it out permanently, not just for tonight."
-  },
   {
    "ts": "2026-09-10T08:05 UTC",
    "news": 3,
@@ -1150,6 +1146,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with BBC on Man City punishment timing; Van Hecke foot injury via ESPN tracker. Most other break injuries (Isak, Gakpo, Havertz, Fernandes, Suzuki, O'Reilly) already posted; Dorgu/Mazraoui/Brobbey not owned in the league. Fewer than quota: nothing else found on permitted outlets. No roast suggestions used (morning)."
+  },
+  {
+   "ts": "2026-10-01T22:50",
+   "news": 1,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening, no fixtures (GW6 not started). Led with Alonso on Joao Pedro's knee (PL site, read directly; Marcus). Opinion: Big Ben's team name v Tzolis being Marcus's, and Robert's zero-scorers. Both unused roast suggestions held: one is a sexuality slur, the other an apartheid reference aimed at race/politics, so neither is going on the page. Passed over Isak/Gakpo/Semenyo/Palmer injuries as already posted. Note: Robert's zero-list is from the gameweek 5 squad line in public.json."
   }
  ]
 }
