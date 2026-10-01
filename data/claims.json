@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-09-29T21:10 UTC",
+  "ts": "2026-10-01T08:10 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-19T08:09 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) found one reinforcing note - Stach's Germany call-up - and nothing else that clears the sourcing bar or changes a model number. The recurring Raya knee story resurfaced again in search results but is the same stale 27 September 2024 item discarded yesterday; still not a squad-affecting concern. Updated league position: Justin's GW5 win pushed him to 1st on 220 points, meaning he now submits 6th of 6 in the reversed GW6 waiver order, worse than yesterday's 5th."
-    },
-    {
       "ts": "2026-09-18T08:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: evening injury round-ups found nothing new at a permitted outlet."
+    },
+    {
+      "ts": "2026-10-01T08:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change; no new squad-relevant news found, claims carried forward."
     }
   ]
 }
