@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-01T10:40",
-      "published": 1,
-      "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
-    },
-    {
       "ts": "2026-09-01T21:39",
       "published": 2,
       "note": "Marmoush (Man City to Spurs, started and impressed on debut) and Munoz (Palace to Forest, permanent, Glasner's man) both hit the same new-club-discount blind spot the model has for Barcola - both are mine, both look like bench risks on the dashboard and are actually starters"
@@ -621,6 +616,11 @@
       "ts": "2026-10-02T08:10 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com round-ups still show only the known Havertz, Gakpo, Isak, Dorgu and Brobbey knocks; nothing new for Justin's squad. Nothing material."
+    },
+    {
+      "ts": "2026-10-02T21:10 UTC",
+      "published": 0,
+      "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com injury round-ups only repeat the known Brobbey hamstring (return listed as 10 October, reported); a search hit on Gvardiol tibial fracture is old and contradicts the model's 0.95 availability, so discarded. Nothing material."
     }
   ]
 }

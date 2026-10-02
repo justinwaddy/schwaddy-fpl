@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-10-01T21:10 UTC",
+  "ts": "2026-10-02T21:10 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-17T19:30 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "First board for GW6 (waivers close 9 October, a three-week gap). GW5's board is now filed under previous. Rebuilt from scratch: kept Barcola despite the model's own biggest suggested swap (Anderson +15.1) on the strength of two straight starts and Isak's public backing this week; used the model's fixture-only edges at GKP (Tzolakis/Pickford) and MID (Stach/Lewis-Potter); kept a lower-confidence Truffert/Bogle given Bogle's midweek Player of the Match award; added a speculative McBurnie/Marmoush form punt; and closed with a genuinely new find - cpfc.co.uk's own Ipswich team news has free agent Quinten Timber partnered with Wharton in Palace's midfield, a real starting role the model still can't price given only two games of data, so added him as a rank-5 punt over Scott."
-    },
-    {
       "ts": "2026-09-09T21:09 UTC",
       "gw": 4,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: international-break round-ups show nothing new for the squad or shortlist."
+    },
+    {
+      "ts": "2026-10-02T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: premierleague.com round-ups show nothing new; Brobbey return reported as 10 October, claim 3 stays low."
     }
   ]
 }
