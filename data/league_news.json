@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-01T22:50 UTC",
+ "generated": "2026-10-02T08:15 UTC",
  "items": [
-  {
-   "id": "2026-09-19-mosquera-saliba",
-   "ts": "2026-09-19T07:55",
-   "kind": "news",
-   "text": "William Saliba misses Arsenal's trip to Brighton after picking up an issue against Chelsea, with Cristhian Mosquera coming into the back four alongside Gabriel - both of them Robert's players.",
-   "source": {
-    "title": "Team news: Mosquera starts away to Brighton",
-    "url": "https://www.arsenal.com/news/team-news-mosquera-starts-away-to-brighton-asdwb5r948zU"
-   }
-  },
-  {
-   "id": "2026-09-19-gomez-liverpool",
-   "ts": "2026-09-19T07:56",
-   "kind": "news",
-   "text": "Joe Gomez is fit again for Liverpool's trip to Bournemouth and set to make his 300th club appearance, but Conor Bradley, Federico Chiesa, Hugo Ekitike and Giovanni Leoni all remain sidelined. None of it touches Ben C's four-man Anfield contingent of Szoboszlai, Isak, Gakpo and Virgil.",
-   "source": {
-    "title": "AFC Bournemouth v Liverpool: Team news",
-    "url": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
-   }
-  },
   {
    "id": "2026-09-19-newcastle-elanga",
    "ts": "2026-09-19T07:57",
@@ -731,16 +711,29 @@
    "kind": "opinion",
    "text": "No football tonight, so Robert's 89 points behind Edward will have to sit and think about itself until the weekend. Pardinho has Mosquera, Seseko, Mateta, Roefs, Wilson and James on zero for gameweek 5, which is not so much a squad as a witness protection programme.",
    "source": null
+  },
+  {
+   "id": "2026-10-02-tzolis-greece",
+   "ts": "2026-10-02T08:10",
+   "kind": "news",
+   "text": "Christos Tzolis was substituted in the 18th minute of Greece's 2-2 Nations League draw with the Netherlands on Thursday with an apparent injury, and ESPN says his availability for Greece's rematch with Germany on Sunday is unknown. He is Marcus's, and Arsenal host Leeds at 11:30 today.",
+   "source": {
+    "title": "Arsenal's Christos Tzolis limps off in Greece, Netherlands draw",
+    "url": "https://www.espn.com/soccer/story/_/id/50079534/arsenal-christos-tzolis-limps-greece-netherlands-draw"
+   }
+  },
+  {
+   "id": "2026-10-02-wirtz-vandijk",
+   "ts": "2026-10-02T08:12",
+   "kind": "news",
+   "text": "Florian Wirtz scored Germany's second in the 61st minute and helped set up the first as Jurgen Klopp won his first game in charge, 2-0 against Serbia, while Virgil van Dijk headed in for the Netherlands against Greece. Wirtz is Big Ben's, Van Dijk Small Ben's, and Liverpool host Man City at 15:30 today.",
+   "source": {
+    "title": "Thursday's internationals: Van Dijk and Wirtz score as Liverpool teammates meet",
+    "url": "https://liverpoolfc.com/news/thursdays-internationals-van-dijk-and-wirtz-score-liverpool-teammates-meet"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-10T08:05 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news run, no Premier League fixtures today (next is the 12th). Search results were unusually unreliable this run - old stories surfaced dated as current (a Ruben Amorim sacking from last January, a Cole Palmer toe injury from last November, Guardiola still named as Man City's manager when Maresca has had the job since June) - so nothing here was taken from a search summary alone; every fact was checked against the actual dated article. Three sourced items, all read in full from Wednesday's cup and Champions League ties: Chelsea's 6-3 Carabao Cup comeback over Leeds after trailing 2-0 (Sky Sports), where half-time substitutes Cole Palmer and Morgan Rogers did the damage - touches Edward, Big Ben and Robert (James also introduced at the break); Liverpool's 2-1 comeback win over Atletico Madrid (ESPN), Szoboszlai's equaliser for Small Ben and Justin's Barcola going off with cramp rather than an injury on his full debut; and a fresh angle on Wednesday's already-reported Arsenal win at Napoli - Marcus's Tzolis teed up Odegaard's winner from the bench, a detail last night's item on the same match did not carry. No opinion pieces, per the morning rule. Roast archive's only unused entry, Edward's 'Mong' about Robert, stays excluded permanently as the ableist slur rule 4 rules out."
-  },
   {
    "ts": "2026-09-10T22:46 UTC",
    "news": 0,
@@ -1153,6 +1146,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening, no fixtures (GW6 not started). Led with Alonso on Joao Pedro's knee (PL site, read directly; Marcus). Opinion: Big Ben's team name v Tzolis being Marcus's, and Robert's zero-scorers. Both unused roast suggestions held: one is a sexuality slur, the other an apartheid reference aimed at race/politics, so neither is going on the page. Passed over Isak/Gakpo/Semenyo/Palmer injuries as already posted. Note: Robert's zero-list is from the gameweek 5 squad line in public.json."
+  },
+  {
+   "ts": "2026-10-02T08:15",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Tzolis injury (ESPN) and Wirtz/Van Dijk internationals (liverpoolfc.com). Only two items: other searches returned stale or off-list sources (Sesko story dated 21 Sept, Sky blogs unreadable). Passed over both unused roasts: one is a slur and one is aimed at race, so neither is used."
   }
  ]
 }
