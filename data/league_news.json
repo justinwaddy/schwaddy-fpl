@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-02T08:15 UTC",
+ "generated": "2026-10-02T22:47 UTC",
  "items": [
-  {
-   "id": "2026-09-19-newcastle-elanga",
-   "ts": "2026-09-19T07:57",
-   "kind": "news",
-   "text": "Newcastle will be without Anthony Elanga and Amar Dedic for Saturday's visit of Hull City, though head coach Matthias Jaissle said he hopes Elanga's issue is not serious. Ben C's other four Magpies - Botman, Hall, Barnes and Wissa - are untouched by the news.",
-   "source": {
-    "title": "How to watch Newcastle United vs Hull City: TV details, kick-off time and team news",
-    "url": "https://www.newcastleunited.com/en/news/how-to-watch-newcastle-united-vs-hull-city-tv-details-kick-off-time-and-team-news"
-   }
-  },
-  {
-   "id": "2026-09-19-everton-rohl-armstrong",
-   "ts": "2026-09-19T07:58",
-   "kind": "news",
-   "text": "Merlin Rohl is ruled out of Everton's home game with Ipswich, while Harrison Armstrong is back in contention for David Moyes. Edward owns three of that back line and midfield in Tarkowski, Garner and Barry, and Ben D owns another three in Mykolenko, Branthwaite and Grealish.",
-   "source": {
-    "title": "Armstrong Update & Everton Team News For Ipswich Clash",
-    "url": "https://www.evertonfc.com/news/2026/september/18/everton-team-news-for-ipswich-clash/"
-   }
-  },
   {
    "id": "2026-09-19-xi-1130",
    "ts": "2026-09-19T11:06",
@@ -731,16 +711,23 @@
     "title": "Thursday's internationals: Van Dijk and Wirtz score as Liverpool teammates meet",
     "url": "https://liverpoolfc.com/news/thursdays-internationals-van-dijk-and-wirtz-score-liverpool-teammates-meet"
    }
+  },
+  {
+   "id": "2026-10-02-gw6-eve",
+   "ts": "2026-10-02T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Edward sits on 259 with Justin 7 back, Marcus 10 back and Small Ben 13 back, and Return of the Djedi has not played a minute of Gameweek 6. Neither has anyone else: all ten fixtures are still to come, starting with Arsenal v Leeds. Nobody has hauled, nobody has blanked, and Edward gets one more night of being right about everything."
+  },
+  {
+   "id": "2026-10-02-marcus-arsenal",
+   "ts": "2026-10-02T22:46",
+   "kind": "opinion",
+   "source": null,
+   "text": "Marcus, 10 points off the lead, has Calafiori and Tzolis in his Arsenal corner, and the page is currently flagging Tzolis with a hamstring injury at 75% to play. Haramball Enthusiast kicks off Gameweek 6 hoping a hamstring reads the fixture list as generously as he does."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-10T22:46 UTC",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, next is the 12th) and the live feed confirms GW3 is fully settled, 10 of 10 kicked off, nothing still to come, unchanged since this morning. Ten-plus searches across Man City, Arsenal, Liverpool, Newcastle, Chelsea and Brentford found nothing genuinely new: every promising lead traced back either to a stale article (Doku's calf from the Community Shield before the season started, Saka's hamstring and Gabriel's Brazil injury both a season out of date once the actual publish dates were checked, Guardiola still quoted as Man City manager) or to a story already on this page - a Liverpool fitness piece on Gakpo's adductor niggles and his doubt for Saturday's Fulham game turned out to be the same Wednesday Atletico absence last night's wrap already reported, so it was dropped rather than re-run with an extra sentence bolted on. No reported items published as a result. One opinion piece instead, built from tonight's table/live-feed printout and not touching anything used in a previous piece: Ben C posted the best gameweek three in the league (60 from his XI) while also carrying the biggest bench return (13), a fresh angle distinct from Tuesday's 'Delap Dance' joke about the same manager. The roast archive's only unused submission, Edward's 'Mong' about Robert, stays excluded permanently under the ableist-slur rule, not as a timing hold. No FLOP badges in today's automatic feed since no matches were played, so nothing to rewrite via reflop.py."
-  },
   {
    "ts": "2026-09-11T07:59 UTC",
    "news": 3,
@@ -1153,6 +1140,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Tzolis injury (ESPN) and Wirtz/Van Dijk internationals (liverpoolfc.com). Only two items: other searches returned stale or off-list sources (Sesko story dated 21 Sept, Sky blogs unreadable). Passed over both unused roasts: one is a slur and one is aimed at race, so neither is used."
+  },
+  {
+   "ts": "2026-10-02T22:47",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening, no fixtures today, GW6 not started. Zero reported items: search only surfaced off-list or unreadable pages (ESPN injuries piece would not load, Tzolis detail only via Yahoo/TeamTalk/Metro), so nothing was cited. Opinion on the table and Marcus's Arsenal exposure. Held both unused roasts: one is a slur, the other is aimed at race. No flops today so reflop not run."
   }
  ]
 }
