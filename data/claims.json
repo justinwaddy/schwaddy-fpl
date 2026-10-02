@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-17T21:09 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~1.5 hours after this morning's first GW6 board. Fresh club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Nottingham Forest) plus the Premier League's own injury tracker (updated today) reconfirmed everything: no fresh word on the GW6 free-agent targets (McBurnie, Stach, Anderson, Truffert, Timber), Marmoush and Van Hecke are not on the league's own injury list, and Barcola's case is unchanged from this morning. This board stands as the GW6 recommendation pending anything new before the 9 October close."
-    },
-    {
       "ts": "2026-09-17T19:30 UTC",
       "gw": 6,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: international-break injury round-ups show nothing new for the squad or shortlist."
+    },
+    {
+      "ts": "2026-10-02T08:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: international-break round-ups show nothing new for the squad or shortlist."
     }
   ]
 }

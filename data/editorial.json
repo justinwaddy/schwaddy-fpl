@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T21:15 UTC",
-      "published": 0,
-      "note": "Third run today, ~6.5 hours after the 14:49 update. Full club-by-club sweep (Everton, Man Utd, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus two general searches. Nothing material and new survived: Collins' calf still has no confirmed timeline from Brentford's own site; Bijol still Leeds' fourth centre-back per last week's Brighton team news, with nothing fresher published since; Munoz remains an impact sub rather than a confirmed starter for Forest, still working into full fitness after his mid-week move; Doku's own manager, Maresca, said today only 'Jeremy, we're not sure yet, we need to wait' on the Man Utd derby (13 September) - restates the existing doubt rather than changing it, since that match falls after GW4's own deadline regardless. Maguire took a bloody nose in the Everton draw but played on and shows no fitness concern. Checked Le Fee, Barcola, Strand Larsen, Groß, Kostoulas and Maguire himself - all unchanged from what's already published. Nothing published."
-    },
-    {
       "ts": "2026-09-01T10:40",
       "published": 1,
       "note": "Garner's pre-season groin surgery - explains an availability number the model could only read as 'not playing'"
@@ -621,6 +616,11 @@
       "ts": "2026-10-01T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com injury round-ups again only show the known Havertz, Gakpo, Isak, Dorgu, Brobbey and Palmer knocks; nothing new for Justin's squad. Nothing material; claims unchanged."
+    },
+    {
+      "ts": "2026-10-02T08:10 UTC",
+      "published": 0,
+      "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com round-ups still show only the known Havertz, Gakpo, Isak, Dorgu and Brobbey knocks; nothing new for Justin's squad. Nothing material."
     }
   ]
 }
