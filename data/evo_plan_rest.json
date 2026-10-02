@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T08:36",
+ "generated": "2026-10-02T14:58",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 129.26,
+   "gain": 129.24,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 61.79,
+   "gain": 61.81,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 61.22,
+   "gain": 61.23,
    "change": 1,
    "fallback": true,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 40.31,
+   "gain": 40.3,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 34.95,
+   "gain": 34.89,
    "change": 2,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 72.1,
+   "gain": 72.12,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 37.73,
+   "gain": 37.74,
    "change": 3,
    "fallback": true,
    "add": {
@@ -542,7 +542,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 59.19,
+   "gain": 59.21,
    "change": 3,
    "fallback": true,
    "add": {
