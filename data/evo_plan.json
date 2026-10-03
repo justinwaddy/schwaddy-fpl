@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T08:36",
+ "generated": "2026-10-03T13:41",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -217,7 +217,7 @@
    "votes": 0
   }
  ],
- "xi_ep": 47.8,
+ "xi_ep": 47.9,
  "changes": 4,
  "claims": [
   {
