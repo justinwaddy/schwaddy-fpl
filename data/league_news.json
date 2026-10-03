@@ -1,16 +1,6 @@
 {
- "generated": "2026-10-02T22:47 UTC",
+ "generated": "2026-10-03T07:50 UTC",
  "items": [
-  {
-   "id": "2026-09-19-xi-1130",
-   "ts": "2026-09-19T11:06",
-   "kind": "news",
-   "text": "Team news, 11:30 kick-off: Tottenham v Aston Villa. Every league player involved starts. For Spurs: Justin has Van Hecke and Marmoush in, Robert has Solanke in, Marcus has Kinsky in. For Villa: Small Ben has Suzuki in, Edward has N.Jackson in.",
-   "source": {
-    "title": "Confirmed line-ups | Spurs vs Aston Villa",
-    "url": "https://www.tottenhamhotspur.com/news/1090959/confirmed-line-ups-spurs-vs-aston-villa"
-   }
-  },
   {
    "id": "2026-09-19-xi-1400",
    "ts": "2026-09-19T13:10",
@@ -725,16 +715,19 @@
    "kind": "opinion",
    "source": null,
    "text": "Marcus, 10 points off the lead, has Calafiori and Tzolis in his Arsenal corner, and the page is currently flagging Tzolis with a hamstring injury at 75% to play. Haramball Enthusiast kicks off Gameweek 6 hoping a hamstring reads the fixture list as generously as he does."
+  },
+  {
+   "id": "2026-10-03-city-appeal",
+   "ts": "2026-10-03T07:50",
+   "kind": "news",
+   "text": "Manchester City have lodged an appeal against the independent commission's guilty verdict, calling it unsafe, and BBC Sport reports that without clarity on sanctions their ability to retain players and make signings is uncertain. City players with owners in this league: Edward has Semenyo, Justin has Haaland and Gvardiol, Marcus has Guehi and Foden, Small Ben has Donnarumma, Ben D has Matheus Nunes and Robert has Cherki, Ndiaye and O'Reilly. BBC Sport notes Nunes is one of four City players with a contract expiring within two summers.",
+   "source": {
+    "title": "What does Man City guilty verdict mean for their squad?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c68jdjdz32n3o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-11T07:59 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. No PL fixtures today (rest day before Saturday's GW4 slate) so focused searches on the clubs most represented across the six squads plus press conferences ahead of the weekend. Three items published, all verified against permitted-source articles with confirmed recent publish dates: Sesko's derby case (ESPN, published today), Chelsea's four-man injury list ahead of Hull (chelseafc.com, published Monday), and Jaissle's praise for Hall and Hornicek ahead of the Leeds trip (newcastleunited.com, published last night). Dropped several leads after checking actual publish dates rather than search summaries: a Cherki quadriceps tear and Marmoush knee injury both traced back to September 2025 articles despite reading as current in search snippets (the 'Manchester derby' and 'a few weeks before the next international break' framing matched last year, not this weekend's fixture), an Arsenal pre-Sunderland presser dated February 2026 referencing a different Sunderland meeting entirely, and a Cole Palmer groin update stamped February 2026. No opinion pieces, as instructed for a morning run. Roast archive checked: the one unused submission (Edward's one-word line about Robert) is a slur and stays excluded permanently under rule 4, not held for timing - morning runs skip opinion pieces anyway."
-  },
   {
    "ts": "2026-09-11T22:44 UTC",
    "news": 1,
@@ -1147,6 +1140,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening, no fixtures today, GW6 not started. Zero reported items: search only surfaced off-list or unreadable pages (ESPN injuries piece would not load, Tzolis detail only via Yahoo/TeamTalk/Metro), so nothing was cited. Opinion on the table and Marcus's Arsenal exposure. Held both unused roasts: one is a slur, the other is aimed at race. No flops today so reflop not run."
+  },
+  {
+   "ts": "2026-10-03T07:50",
+   "news": 1,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. One item: Man City appeal and what the verdict means for their squad (BBC), because it touches all six squads. Search tooling returned mostly stale or off-list results and bbc/guardian domains are blocked from WebSearch, so I published fewer, better-sourced items rather than fill the quota. Roast archive untouched on a morning run; the two unused suggestions stay held (one about a slur-adjacent insult and one referencing apartheid, both outside the banter rules)."
   }
  ]
 }
