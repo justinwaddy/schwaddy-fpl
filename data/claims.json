@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-09T21:09 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~13 hours after this morning's board. Updated the Le Fee/Barcola case with tonight's news: Barcola made his first Liverpool start (Champions League vs Atletico Madrid) and went off in the 58th minute with an apparent calf injury (ESPN live commentary), which strengthens rather than weakens the case to move on from him. Checked but could not use: a BBC Radio Leeds pundit's claim that Bijol's Brighton bench call was pure selection (Elvedi's training form) rather than injury-related, since it only reached a permitted outlet via Yahoo/aggregator reprints of the podcast, not bbc.co.uk itself - changes nothing about the Maguire/Bijol claim either way. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Bournemouth, Palace, Tottenham, Man Utd and Sunderland."
-    },
-    {
       "ts": "2026-09-09T08:15 UTC",
       "gw": 4,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: premierleague.com round-ups show nothing new; Brobbey return reported as 10 October, claim 3 stays low."
+    },
+    {
+      "ts": "2026-10-03T08:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: no new permitted-source news on any squad or shortlisted player; Van Hecke foot knock (reported withdrawal from Netherlands duty) unconfirmed, not acted on."
     }
   ]
 }
