@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-03T07:50 UTC",
+ "generated": "2026-10-03T22:41 UTC",
  "items": [
-  {
-   "id": "2026-09-19-xi-1400",
-   "ts": "2026-09-19T13:10",
-   "kind": "news",
-   "text": "Team news, 15:00 kick-offs: Newcastle's XI is confirmed for Hull City - Small Ben's Botman, Hall, Barnes and Wissa all start, Edward's Hornicek starts in goal, and Big Ben's Thiaw starts too. Brighton v Arsenal and Everton v Ipswich sheets were not out at a permitted source in time, so Justin, Marcus and Robert's players there are not covered, nor are Edward's, Small Ben's and Big Ben's other players in those two games, or Hull's sheet covering Justin's Ajayi.",
-   "source": {
-    "title": "Confirmed line-up: Two tweaks for Tigers test",
-    "url": "https://www.newcastleunited.com/en/news/hull-h-team-news-26-27"
-   }
-  },
-  {
-   "id": "2026-09-19-xi-1630",
-   "ts": "2026-09-19T16:07",
-   "kind": "news",
-   "text": "Team news, 16:30 kick-off: Nottingham Forest v Coventry City. Edward has Murillo, N.Williams and Gibbs-White all starting for Forest. Small Ben's Munoz and Big Ben's Delap are also in the XI. Marcus's Igor Jesus misses out, left out of the matchday squad entirely.",
-   "source": {
-    "title": "Nottingham Forest vs Coventry City - Starting Lineups",
-    "url": "https://www.skysports.com/football/nottingham-forest-vs-coventry-city/teams/559492"
-   }
-  },
   {
    "id": "2026-09-19-arsenal-thumped",
    "ts": "2026-09-19T22:48",
@@ -725,16 +705,23 @@
     "title": "What does Man City guilty verdict mean for their squad?",
     "url": "https://www.bbc.co.uk/sport/football/articles/c68jdjdz32n3o"
    }
+  },
+  {
+   "id": "2026-10-03-derby-split",
+   "ts": "2026-10-03T22:41",
+   "kind": "opinion",
+   "source": null,
+   "text": "Liverpool v Man City is still to come, and it is a neat way to see who is exposed. Small Ben has Szoboszlai, Isak, Gakpo and Virgil on one side and Donnarumma and Ruben on the other, so he cannot lose the afternoon and cannot win it either, which is the only kind of hedging this league allows. Justin has Haaland and Gvardiol over there, and Big Ben has Wirtz facing Enzo and Matheus N., so he can at least cheer for himself."
+  },
+  {
+   "id": "2026-10-03-robert-weekend",
+   "ts": "2026-10-03T22:41",
+   "kind": "opinion",
+   "source": null,
+   "text": "Ten fixtures are still to come, nobody in the league has kicked a ball in the new gameweek, and Robert is 89 behind Edward. That makes this the one weekend where his team name, Pardinho, gets to be a joke and not a cry for help. He has Cherki and Ndiaye lined up against Liverpool and a whole lot of Arsenal and Chelsea waiting on a result, so there is a plot. It is a long way from a plot that gets him to the top."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-11T22:44 UTC",
-   "news": 1,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Scheduled evening wrap. No Premier League fixtures today (rest day, GW4 starts tomorrow) and the live feed confirms GW3 is still fully settled at the same totals as this morning, so no fresh table angle and no FLOP badges to rewrite. One reported item: Arteta's pre-Sunderland presser (arsenal.com, published today, checked for the correct 2026 datePublished after an identically-titled November 2025 URL surfaced first and was discarded) gave direct quotes on Robert's Mosquera ('doing really well', could return this game or the next) and Edward's Timber ('looks in good shape' after training). One opinion piece: today's automatic MOVE badges show Justin claiming both Bogle and Vuskovic off waivers, two of the four free agents this page singled out on 7 September for outscoring every rostered player in the league - a fresh angle building on an automatic feed item rather than restating it. The roast archive's only unused submission, Edward's one-word line about Robert ('Mong'), stays excluded permanently as the ableist-slur rule 4 rules out, not a timing hold."
-  },
   {
    "ts": "2026-09-12T07:58 UTC",
    "news": 3,
@@ -1147,6 +1134,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. One item: Man City appeal and what the verdict means for their squad (BBC), because it touches all six squads. Search tooling returned mostly stale or off-list results and bbc/guardian domains are blocked from WebSearch, so I published fewer, better-sourced items rather than fill the quota. Roast archive untouched on a morning run; the two unused suggestions stay held (one about a slur-adjacent insult and one referencing apartheid, both outside the banter rules)."
+  },
+  {
+   "ts": "2026-10-03T22:41",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening. No matchday and no fixture of GW6 kicked off, so no wrap material. Search returned only stale or unverifiable articles, so no reported items rather than an uncited one. Opinion: the Liverpool v Man City split across squads, and Robert's 89-point gap. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over: one is a slur and the other is aimed at race. Neither is used. No flop lines to rewrite."
   }
  ]
 }
