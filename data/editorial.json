@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-01T22:00",
-      "published": 1,
-      "note": "Woltemade (mine, weakest forward) loaned out to Juventus on deadline day - he is out of the Premier League entirely, not just out of favour, which the 0.37 availability figure did not capture"
-    },
-    {
       "ts": "2026-09-02T07:50",
       "published": 3,
       "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
@@ -621,6 +616,11 @@
       "ts": "2026-10-03T08:15 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com/club-site searches show only the known Havertz, Gakpo, Isak, Brobbey and Palmer knocks. A search summary said Van Hecke withdrew from the Netherlands squad with a foot injury, but I could not confirm it in the article text, so not published; the model already shows him 75%. Nothing material."
+    },
+    {
+      "ts": "2026-10-03T21:10 UTC",
+      "published": 0,
+      "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com internationals round-up shows Haaland scoreless but no injury, Marmoush scoring for Egypt, and only the known Brobbey/Isak/Gakpo doubts. A search summary again claims Van Hecke withdrew with a foot injury, but I could not confirm it in a permitted article, so not published. Nothing material."
     }
   ]
 }

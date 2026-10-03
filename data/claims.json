@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-09T08:15 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~11 hours after last night's board. Full club-by-club sweep re-confirmed all five: Mitchell/Munoz, Le Fee/Barcola, Maguire/Bijol, Hill/Collins and Scott/Garner all have exactly the model numbers already on file. Checked Maguire's new Man Utd contract (real, but signed 2 August, so not fresh evidence for the swap) and Liam Delap's Forest transfer (completed 27 August, already the reason Igor Jesus lost his place, so it changes nothing here). Doku via premierleague.com's own update - Maresca still says only 'we need to wait' on the derby, and Doku was left out of the Champions League squad for Porto - restates rather than changes his exclusion. No fresh Leeds team news on Bijol since last week's Brighton bench call, and no confirmed Brentford timeline yet on Collins' calf. Chelsea vs Leeds (Carabao Cup) and Liverpool vs Atletico Madrid (Champions League) both kick off later today and could move Bijol and Barcola - worth a follow-up once they've been played, though neither result feeds this file directly since both are cup competitions."
-    },
-    {
       "ts": "2026-09-02T07:50",
       "gw": 3,
       "claims": 4,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: no new permitted-source news on any squad or shortlisted player; Van Hecke foot knock (reported withdrawal from Netherlands duty) unconfirmed, not acted on."
+    },
+    {
+      "ts": "2026-10-03T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: premierleague.com internationals round-up shows nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
     }
   ]
 }
