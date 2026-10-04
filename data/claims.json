@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-02T07:50",
-      "gw": 3,
-      "claims": 4,
-      "note": "first run - four claims submitted (Munoz drop upgraded from yesterday's hold after fresh reporting on his Aina competition); a fifth was not included since the rest of the squad is either performing above its model rating (Marmoush, kept) or has no clear replacement worth the waiver priority this week"
-    },
-    {
       "ts": "2026-09-02T08:13",
       "gw": 3,
       "claims": 4,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: premierleague.com internationals round-up shows nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
+    },
+    {
+      "ts": "2026-10-04T08:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: international-break searches show nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
     }
   ]
 }

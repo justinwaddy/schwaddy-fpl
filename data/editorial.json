@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-02T07:50",
-      "published": 3,
-      "note": "Munoz correction (he's competing with Aina for the RB spot, not a guaranteed starter as reported yesterday), Garner benefiting from Hackney's ankle knock, and Palace's Mateta hamstring injury opening the door for free agents Strand Larsen and Nketiah"
-    },
-    {
       "ts": "2026-09-02T08:13",
       "published": 1,
       "note": "Leeds' Rodon (hamstring) and Gruev (meniscus) both sidelined, thinning the competition for Bijol's centre-back spot. Checked rivals' best assets (Bruno Fernandes, Mbeumo, Guehi, Dewsbury-Hall) for league-scope news but every lead traced back to stale Dec 2025/pre-season stories, not current - nothing else published this run"
@@ -621,6 +616,11 @@
       "ts": "2026-10-03T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com internationals round-up shows Haaland scoreless but no injury, Marmoush scoring for Egypt, and only the known Brobbey/Isak/Gakpo doubts. A search summary again claims Van Hecke withdrew with a foot injury, but I could not confirm it in a permitted article, so not published. Nothing material."
+    },
+    {
+      "ts": "2026-10-04T08:10 UTC",
+      "published": 0,
+      "note": "Morning check inside the international break (GW6 waivers close 9 October). Searches of Sky/premierleague.com/club sites return only the known Brobbey hamstring, Isak, Haaland scoring for Norway and Barcola cramps; the Van Hecke foot-withdrawal claim is still only in a search summary, not confirmed in a permitted article, so not published. Nothing material."
     }
   ]
 }
