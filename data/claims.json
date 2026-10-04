@@ -1,7 +1,7 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-10-02T21:10 UTC",
+  "ts": "2026-10-04T21:10 UTC",
   "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
   "claims": [
     {
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-02T08:13",
-      "gw": 3,
-      "claims": 4,
-      "note": "No material change since the last run 18 minutes ago. Refreshed sourcing - confirmed Igor Jesus as Forest's starting striker ahead of Chris Wood, and Bournemouth's Hill, Rayan and Tavernier all in the latest predicted XI - and confirmed Bijol is not a drop risk since his two rivals for the Leeds centre-back shirt (Rodon, Gruev) are both injured. Still no fifth claim: Marmoush's real starting role beats his model rating and the rest of the squad is performing at or above its number."
-    },
-    {
       "ts": "2026-09-02T21:11 UTC",
       "gw": 3,
       "claims": 4,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: international-break searches show nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
+    },
+    {
+      "ts": "2026-10-04T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: evening sweep found nothing new; claims carried forward."
     }
   ]
 }
