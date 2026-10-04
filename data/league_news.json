@@ -1,13 +1,6 @@
 {
- "generated": "2026-10-04T07:42 UTC",
+ "generated": "2026-10-04T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-19-smallben-newcastle",
-   "ts": "2026-09-19T22:51",
-   "kind": "opinion",
-   "text": "Small Ben doesn't just support Newcastle, he fields half of them: Botman, Hall, Barnes and Wissa were all in his fifteen for today's 2-1 win over Hull, and three of the four picked up the pieces while Wissa's afternoon ended with a missed penalty. It has put Delap Dance fourth and closing, 17 behind the top - which, for a squad that's basically a St James' Park season ticket, feels about right.",
-   "source": null
-  },
   {
    "id": "2026-09-19-justin-bench",
    "ts": "2026-09-19T22:52",
@@ -722,16 +715,16 @@
     "title": "When does the Premier League return?",
     "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
    }
+  },
+  {
+   "id": "2026-10-04-leader-no-strikers",
+   "ts": "2026-10-04T22:45",
+   "kind": "opinion",
+   "text": "Edward leads on 259 and owns neither of the league's two leading scorers: Haaland is Justin's, 7 back, and Isak is Small Ben's, 13 back. Return of the Djedi is top of the table with Semenyo and a lot of defenders, which is either a masterclass or the longest-running bit of luck in the league, and the six of you get to find out which when the break ends.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T13:11 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "14:00 kick-off slot (AVL-NFO, BOU-BRE, CHE-HUL, CRY-IPS, LIV-FUL). Only Liverpool's XI was confirmed at a permitted outlet (liverpoolfc.com, published ~25 min before kickoff). Checked avfc.co.uk, nottinghamforest.com, afcb.co.uk, brentfordfc.com, chelseafc.com, cpfc.co.uk and fulhamfc.com plus skysports.com/premierleague.com for the other seven clubs the league owns players at - none had a confirmed sheet out yet (site fetches kept returning stale/contradictory cached articles from other dates, or no lineup posted), so those clubs were left out of the counts per the no-guessing rule rather than reported."
-  },
   {
    "ts": "2026-09-12T13:35 UTC",
    "news": 1,
@@ -1144,6 +1137,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. International break, no fixtures until 10 Oct. Most searches returned only off-list or already-posted stories (Havertz, Isak, Gakpo, Suzuki, O'Reilly already covered); Semenyo's Ghana withdrawal and Arsenal return-to-training news only found on non-permitted sites so dropped. Led with the premierleague.com return-of-the-league piece: Haaland v Isak, Arsenal v Leeds and Man Utd v Spurs, Coventry v Newcastle. No opinion on a morning run; roast archive untouched."
+  },
+  {
+   "ts": "2026-10-04T22:45",
+   "news": 0,
+   "opinion": 1,
+   "matchday": false,
+   "note": "Evening, international break, no fixtures today and all ten GW6 fixtures still to come, so no points-based pieces and no flops to rewrite. No reported items: nothing new worth citing since the morning run. One opinion on the leader owning neither Haaland nor Isak. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over and left unused: one is a slur, the other is aimed at race/politics, neither is publishable."
   }
  ]
 }
