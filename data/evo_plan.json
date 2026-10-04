@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T08:36",
+ "generated": "2026-10-04T14:21",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.55,
+   "gain": 8.56,
    "change": 1,
    "fallback": true,
    "add": {
@@ -442,7 +442,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 21
+   "borda": 22
   },
   {
    "pos": "DEF",
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 73
+   "borda": 70
   },
   {
    "pos": "FWD",
-   "gain": 9.5,
+   "gain": 9.51,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,7 +538,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 31
+   "borda": 30
   },
   {
    "pos": "FWD",
@@ -570,7 +570,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 30
+   "borda": 28
   },
   {
    "pos": "MID",
@@ -602,7 +602,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 50
+   "borda": 49
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
