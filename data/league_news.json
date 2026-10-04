@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-03T22:41 UTC",
+ "generated": "2026-10-04T07:42 UTC",
  "items": [
-  {
-   "id": "2026-09-19-arsenal-thumped",
-   "ts": "2026-09-19T22:48",
-   "kind": "news",
-   "text": "Arsenal's unbeaten start to the season ended at the Amex on Saturday: Brighton won 3-0 through Pascal Gross, Charalampos Kostoulas and Chema Andres, with Gross's opener arriving after Gabriel and Riccardo Calafiori gave him too much room to shoot. Robert's Gabriel, Marcus's Calafiori and Justin's David Raya were all on the pitch for it.",
-   "source": {
-    "title": "Arsenal battered by brilliant Brighton to end perfect start",
-    "url": "https://www.espn.com/soccer/report/_/gameId/401879274"
-   }
-  },
-  {
-   "id": "2026-09-19-everton-fatawu",
-   "ts": "2026-09-19T22:49",
-   "kind": "news",
-   "text": "Everton beat 10-man Ipswich 1-0: James Tarkowski's speculative 30-yard volley took a deflection off Thierno Barry for the only goal, and Abdul Fatawu was sent off for simulation after already being booked for fouling Kiernan Dewsbury-Hall, the red card coming as he barrelled past James Garner. Edward owns all three of Tarkowski, Barry and Garner.",
-   "source": {
-    "title": "Thierno Barry strikes for Everton to sink 10-man Ipswich",
-    "url": "https://www.espn.com/soccer/report/_/gameId/401878778"
-   }
-  },
-  {
-   "id": "2026-09-19-edward-top",
-   "ts": "2026-09-19T22:50",
-   "kind": "opinion",
-   "text": "Edward spent the season chasing; today he did the overtaking, leapfrogging Marcus and Justin into a lead of 9 and 10 respectively off the back of James Tarkowski's 14-point haul and Thierno Barry's goal for Everton, with James Garner catching some of Ipswich's afternoon too. Return of the Djedi's title charge is being built on Hornícek, Murillo and N.Williams putting in 90 unglamorous minutes for two to four points at a time, while the more famous names elsewhere managed nothing at all on Saturday.",
-   "source": null
-  },
   {
    "id": "2026-09-19-smallben-newcastle",
    "ts": "2026-09-19T22:51",
@@ -719,16 +692,39 @@
    "kind": "opinion",
    "source": null,
    "text": "Ten fixtures are still to come, nobody in the league has kicked a ball in the new gameweek, and Robert is 89 behind Edward. That makes this the one weekend where his team name, Pardinho, gets to be a joke and not a cry for help. He has Cherki and Ndiaye lined up against Liverpool and a whole lot of Arsenal and Chelsea waiting on a result, so there is a plot. It is a long way from a plot that gets him to the top."
+  },
+  {
+   "id": "2026-10-04-haaland-isak",
+   "ts": "2026-10-04T07:42",
+   "kind": "news",
+   "text": "The Premier League says its two leading scorers, Erling Haaland on five goals and Alexander Isak on four, go head-to-head when leaders Manchester City visit Liverpool on Sunday 11 October. Haaland is Justin's and Isak is Small Ben's, so the two of them will be watching the same match for different reasons.",
+   "source": {
+    "title": "When does the Premier League return?",
+    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
+   }
+  },
+  {
+   "id": "2026-10-04-arsenal-leeds-united-spurs",
+   "ts": "2026-10-04T07:42",
+   "kind": "news",
+   "text": "The league resumes on Saturday 10 October with Arsenal, beaten 3-0 at Brighton before the break, at home to unbeaten Leeds, and Manchester United hosting bottom club Tottenham in the late game, the Premier League reports. At Old Trafford, Justin's Van Hecke and Marcus's Kinsky are in the Tottenham camp, with Edward's Lammens, Small Ben's Cunha and Big Ben's Bruno Fernandes among the United owners.",
+   "source": {
+    "title": "When does the Premier League return?",
+    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
+   }
+  },
+  {
+   "id": "2026-10-04-coventry-forest",
+   "ts": "2026-10-04T07:42",
+   "kind": "news",
+   "text": "Coventry City, who recorded their first win and points of the season at Nottingham Forest, host Newcastle on Monday 12 October, the Premier League notes. Edward owns Forest's Murillo, Williams and Gibbs-White; Small Ben owns Newcastle's Hall, Barnes and Botman, and Big Ben has Thiaw.",
+   "source": {
+    "title": "When does the Premier League return?",
+    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T07:58 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Scheduled morning news. Today is a full GW4 matchday (7 fixtures from 14:00 UTC), so this run previewed team news for the clubs most represented across the six squads rather than reporting on games not yet played. Three sourced items: Strand Larsen's Carabao Cup brace for Crystal Palace on Tuesday (Justin), Alonso's comments on the Palmer-Rogers-Joao Pedro front three ahead of the Hull game (Edward, Big Ben, Marcus), and Liverpool's Gakpo/Barcola fitness calls ahead of Fulham (Small Ben, Justin). Passed over several leads that only turned up on unpermitted aggregator sites (Yahoo, football365, sportsmole, thehardtackle) with no matching permitted-outlet source, including Arsenal's Timber/Mosquera update (already covered on 11 September anyway) and a Man City derby team-news line on O'Reilly/Doku that turned out to already be covered from 8 September once checked against the archive. No opinion pieces, per the morning rule. The roast archive's one unused submission (Edward's one-word line about Robert) stays excluded as it falls foul of rule 4."
-  },
   {
    "ts": "2026-09-12T13:11 UTC",
    "news": 1,
@@ -1141,6 +1137,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening. No matchday and no fixture of GW6 kicked off, so no wrap material. Search returned only stale or unverifiable articles, so no reported items rather than an uncited one. Opinion: the Liverpool v Man City split across squads, and Robert's 89-point gap. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over: one is a slur and the other is aimed at race. Neither is used. No flop lines to rewrite."
+  },
+  {
+   "ts": "2026-10-04T07:42",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. International break, no fixtures until 10 Oct. Most searches returned only off-list or already-posted stories (Havertz, Isak, Gakpo, Suzuki, O'Reilly already covered); Semenyo's Ghana withdrawal and Arsenal return-to-training news only found on non-permitted sites so dropped. Led with the premierleague.com return-of-the-league piece: Haaland v Isak, Arsenal v Leeds and Man Utd v Spurs, Coventry v Newcastle. No opinion on a morning run; roast archive untouched."
   }
  ]
 }
