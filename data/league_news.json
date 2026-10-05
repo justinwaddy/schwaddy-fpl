@@ -1,56 +1,6 @@
 {
- "generated": "2026-10-05T07:55 UTC",
+ "generated": "2026-10-05T22:50 UTC",
  "items": [
-  {
-   "id": "2026-09-20-foden-suspended",
-   "ts": "2026-09-20T07:44",
-   "kind": "news",
-   "text": "Phil Foden is suspended for today's Manchester City-Sunderland game, still working through the three-match ban for his red card in the Manchester derby, per the Premier League's official suspensions list. Sunderland's Reinildo is out for the same fixture, also suspended. Marcus owns both Foden and Sunderland's Mukiele, so this fixture already costs him a starter at each end before kick-off.",
-   "source": {
-    "title": "Which players are suspended or close to a ban in Premier League and Fantasy",
-    "url": "https://www.premierleague.com/en/news/4425344/which-players-are-suspended-or-close-to-a-ban-in-fantasy"
-   }
-  },
-  {
-   "id": "2026-09-20-liverpool-fit",
-   "ts": "2026-09-20T07:44",
-   "kind": "news",
-   "text": "Liverpool have no fresh fitness concerns for today's trip to Bournemouth: Andoni Iraola confirmed 'everyone is ready to go' beyond the long-term absentees Conor Bradley, Federico Chiesa, Hugo Ekitike and Giovanni Leoni. That is a clean bill of health for Ben C's four-man Liverpool contingent of Szoboszlai, Isak, Gakpo and Virgil van Dijk.",
-   "source": {
-    "title": "AFC Bournemouth v Liverpool: Team news",
-    "url": "https://www.liverpoolfc.com/news/afc-bournemouth-v-liverpool-team-news-1"
-   }
-  },
-  {
-   "id": "2026-09-20-xi-1300",
-   "ts": "2026-09-20T12:16",
-   "kind": "news",
-   "text": "Team news, 13:00 kick-offs: Bournemouth v Liverpool and Man City v Sunderland sheets are confirmed; Leeds v Crystal Palace is not out, though Leeds confirm Wilson (Robert) is missing with a quad injury. Justin (Scott, Tavernier, Barcola, Gvardiol, Haaland), Small Ben (Van Dijk, Gakpo, Szoboszlai, Isak, Donnarumma, Dias), Big Ben (Wirtz, Nunes, Fernandez), Marcus (Evanilson, Alisson, Mukiele, Guehi) and Edward (Semenyo) all start their men. Robert has Cherki, Ndiaye and Roefs starting, but Marcus loses Foden to suspension and Robert also has O'Reilly left out.",
-   "source": {
-    "title": "Bournemouth vs Liverpool LIVE! Premier League score updates, news, prediction, line-ups and how to watch or stream",
-    "url": "https://www.skysports.com/football/live-blog/11095/13572153/bournemouth-vs-liverpool-live-premier-league-score-updates-news-prediction-line-ups-and-how-to-watch-or-stream"
-   }
-  },
-  {
-   "id": "2026-09-20-xi-1530",
-   "ts": "2026-09-20T15:07",
-   "kind": "news",
-   "text": "Team news, 15:30 kick-off, Fulham v Man Utd (Sky Sports): Edward's Lammens starts in goal. Marcus has Mbeumo and King both starting. Ben C's Cunha starts. Ben D's B.Fernandes starts, but his Gonzalo is not in Fulham's squad. Robert's Yoro is among the substitutes and his Sesko is not in United's matchday squad.",
-   "source": {
-    "title": "Starting Lineups - Fulham vs Manchester United | 20.09.2026",
-    "url": "https://www.skysports.com/football/fulham-vs-manchester-united/teams/6387779637306466232"
-   }
-  },
-  {
-   "id": "2026-09-20-isak-alisson",
-   "ts": "2026-09-20T22:46",
-   "kind": "news",
-   "text": "Alexander Isak broke the deadlock at Bournemouth in the 57th minute, converting after a driving Cody Gakpo run that took a deflection off Florian Wirtz on its way in - Isak and Gakpo are both Ben C's, Wirtz is Ben D's. Alisson had already denied Evanilson's near-post flick before half time, one Marcus player saving off another.",
-   "source": {
-    "title": "B'mouth 0 - 1 Liverpool - Match Report & Highlights",
-    "url": "https://www.skysports.com/football/bournemouth-vs-liverpool/report/559484"
-   }
-  },
   {
    "id": "2026-09-20-city-sunderland",
    "ts": "2026-09-20T22:46",
@@ -725,16 +675,50 @@
     "title": "Kai Havertz returning to Arsenal to be assessed after suffering injury for Germany against Netherlands",
     "url": "https://www.skysports.com/football/news/13591713/kai-havertz-returning-to-arsenal-to-be-assessed-after-suffering-injury-for-germany-against-netherlands"
    }
+  },
+  {
+   "id": "2026-10-05-scott-quad",
+   "ts": "2026-10-05T22:50",
+   "kind": "news",
+   "text": "Bournemouth's Alex Scott picked up a quad injury on his first England start in the 7-0 win in Croatia and has gone back to his club, with media reports suggesting he could be out for up to two months. Justin owns Scott. Ezri Konsa, Ben D's, also withdrew from the England squad with what is believed to be a minor issue.",
+   "source": {
+    "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+    "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+   }
+  },
+  {
+   "id": "2026-10-05-oreilly-saka",
+   "ts": "2026-10-05T22:50",
+   "kind": "news",
+   "text": "Man City's Nico O'Reilly withdrew from the England squad after playing just one match, while Arsenal's Bukayo Saka scored twice in the 7-0 win in Croatia. Robert owns both.",
+   "source": {
+    "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+    "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+   }
+  },
+  {
+   "id": "2026-10-05-benD-quantum",
+   "ts": "2026-10-05T22:50",
+   "kind": "opinion",
+   "text": "Ben D is 40 off the lead in a team called Quantum of Tzolis, and Tzolis plays for Marcus. Ben D himself owns Havertz, reportedly out for four weeks, and Konsa, who has pulled out of England duty. Bold branding for a man who cannot keep his own Arsenal players upright.",
+   "source": null
+  },
+  {
+   "id": "2026-10-05-smallben-delap",
+   "ts": "2026-10-05T22:50",
+   "kind": "opinion",
+   "text": "Small Ben runs a team called Delap Dance, and Delap is in Ben D's squad. Small Ben owns Isak and Gakpo, both sent home from international duty with injuries, and he is 13 off the lead with Liverpool v Man City to come. The dance is looking like a limp.",
+   "source": null
+  },
+  {
+   "id": "2026-10-05-robert-saka",
+   "ts": "2026-10-05T22:50",
+   "kind": "opinion",
+   "text": "Saka scored twice for England and Robert owns him. Robert is still 89 points off the lead on 170, because England goals score nothing in this league, and O'Reilly has gone home after one match. Pardinho: a fine name for a team whose best week happened somewhere it cannot score.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T16:11 UTC",
-   "news": 0,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 kickoff Tottenham v Everton. Checked tottenhamhotspur.com match centre (JS shell, no lineup data server-side), evertonfc.com (same, plus a Sept 11 Moyes preview piece which predates any teamsheet), premierleague.com fixture/lineups page (JS shell, no data), skysports.com and espn.com (no readable confirmed-XI content returned), and searched for bbc.co.uk/theguardian.com/theathletic.com coverage of this fixture with none surfacing. No permitted outlet had a directly-readable confirmed XI for either club at fire time, so no item posted per rule 2 (owned players affected: TOT - Kinsky, Richarlison, Marmoush, Solanke; EVE - Tarkowski, Barry, Dewsbury-Hall, Branthwaite, Grealish, Pickford)."
-  },
   {
    "ts": "2026-09-12T16:14 UTC",
    "news": 1,
@@ -1147,6 +1131,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with the international-break injury scares: Haaland, Isak/Gakpo, Havertz. Roast archive: both unused suggestions passed over (slur/sexuality-and-race territory); no opinion on a morning run anyway."
+  },
+  {
+   "ts": "2026-10-05T22:50",
+   "news": 2,
+   "opinion": 3,
+   "matchday": false,
+   "note": "evening wrap, no fixtures today (international break, GW6 starts Saturday). Led with Scott quad/Konsa and O'Reilly/Saka from the PL internationals round-up. No flops to rewrite. Both unused roast suggestions passed over: one is a slur aimed at the submitter, the other is aimed at race; neither used."
   }
  ]
 }
