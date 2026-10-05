@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-02T21:11 UTC",
-      "published": 1,
-      "note": "Ran club-by-club searches on every squad member and free-agent target (Munoz/Aina, Garner, Bijol's rivals, Woltemade, Palace strikers, Bournemouth and Brighton free agents) but every lead just re-confirmed what was already published earlier today - the one new item was a fresh (17:10 UTC) pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, not just a one-off debut start, which the model's 0.35 availability still does not reflect"
-    },
-    {
       "ts": "2026-09-03T14:41 UTC",
       "published": 2,
       "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
@@ -621,6 +616,11 @@
       "ts": "2026-10-04T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com/Sky searches show only the known Brobbey hamstring and no new injury to a squad or shortlisted player; Van Hecke foot claim still unconfirmed in a permitted article. Nothing material."
+    },
+    {
+      "ts": "2026-10-05T08:15 UTC",
+      "published": 0,
+      "note": "Morning check inside the international break (GW6 waivers close 9 October). premierleague.com and Sky searches repeat the known international injuries (Havertz, Isak, Gakpo, O'Reilly, Semenyo, Brobbey hamstring); nothing new on a squad or shortlisted player. Nothing material."
     }
   ]
 }

@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-02T21:11 UTC",
-      "gw": 3,
-      "claims": 4,
-      "note": "No change to the four claims after a full club-by-club refresh - the model's numbers for every add/drop pair are unchanged and every squad member's situation (Munoz vs Aina, Woltemade in Serie A, Eze benched, Garner's careful reintroduction, Bijol's injured rivals) still checks out. The one new find was a pundit piece projecting Marmoush inside Tottenham's actual strongest XI going forward, reinforcing rather than changing the decision to keep him over a fifth claim."
-    },
-    {
       "ts": "2026-09-03T14:41 UTC",
       "gw": 3,
       "claims": 3,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: evening sweep found nothing new; claims carried forward."
+    },
+    {
+      "ts": "2026-10-05T08:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: board unchanged from last run; no new fitness news on squad or shortlist."
     }
   ]
 }
