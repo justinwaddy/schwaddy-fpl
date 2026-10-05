@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T08:36",
+ "generated": "2026-10-05T17:23",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.8,
-   "ep": 5.67,
+   "ep": 5.66,
    "votes": 5
   },
   {
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.949,
    "base": 4.58,
-   "ep": 4.49,
+   "ep": 4.48,
    "votes": 5
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.36,
+   "ep": 4.35,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.839,
    "base": 3.38,
-   "ep": 3.32,
+   "ep": 3.31,
    "votes": 4
   },
   {
@@ -94,7 +94,7 @@
    "news": "Foot injury - 75% chance of playing",
    "p_play": 0.75,
    "base": 2.55,
-   "ep": 2.5,
+   "ep": 2.49,
    "votes": 5
   },
   {
@@ -120,20 +120,7 @@
    "news": "",
    "p_play": 0.951,
    "base": 4.58,
-   "ep": 4.48,
-   "votes": 5
-  },
-  {
-   "id": 69,
-   "code": 503139,
-   "name": "Scott",
-   "pos": "MID",
-   "team": "BOU",
-   "status": "a",
-   "news": "",
-   "p_play": 0.992,
-   "base": 3.79,
-   "ep": 3.71,
+   "ep": 4.47,
    "votes": 5
   },
   {
@@ -148,6 +135,19 @@
    "base": 3.35,
    "ep": 3.26,
    "votes": 5
+  },
+  {
+   "id": 69,
+   "code": 503139,
+   "name": "Scott",
+   "pos": "MID",
+   "team": "BOU",
+   "status": "d",
+   "news": "Thigh injury - 50% chance of playing",
+   "p_play": 0.496,
+   "base": 1.9,
+   "ep": 1.82,
+   "votes": 3
   },
   {
    "id": 411,
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.25,
-   "ep": 4.09,
+   "ep": 4.08,
    "votes": 0
   },
   {
@@ -188,7 +188,7 @@
    "p_play": 0.79,
    "base": 1.76,
    "ep": 1.7,
-   "votes": 0
+   "votes": 1
   },
   {
    "id": 222,
@@ -200,8 +200,8 @@
    "news": "",
    "p_play": 0.713,
    "base": 1.74,
-   "ep": 1.6,
-   "votes": 1
+   "ep": 1.59,
+   "votes": 2
   },
   {
    "id": 628,
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.467,
    "base": 1.1,
-   "ep": 1.02,
+   "ep": 1.01,
    "votes": 0
   }
  ],
- "xi_ep": 47.8,
+ "xi_ep": 45.9,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.23,
+   "gain": 18.2,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 228
+   "borda": 263
   },
   {
    "pos": "MID",
-   "gain": 10.78,
+   "gain": 10.79,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 158
+   "borda": 186
   },
   {
    "pos": "MID",
-   "gain": 8.74,
+   "gain": 8.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 139
+   "borda": 158
   },
   {
    "pos": "MID",
-   "gain": 7.31,
+   "gain": 8.52,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 88
+   "borda": 122
   },
   {
    "pos": "DEF",
-   "gain": 7.8,
+   "gain": 8.36,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 107
+   "borda": 120
   },
   {
    "pos": "DEF",
-   "gain": 5.97,
+   "gain": 5.94,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 34
+   "borda": 37
   },
   {
    "pos": "DEF",
-   "gain": 4.62,
+   "gain": 4.65,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 22
+   "borda": 25
   },
   {
    "pos": "FWD",
-   "gain": 7.48,
+   "gain": 11.41,
    "change": 3,
    "fallback": false,
    "add": {
@@ -462,23 +462,87 @@
     "ep": null
    },
    "drop": {
-    "id": 401,
-    "code": 438234,
-    "name": "Marmoush",
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
     "pos": "FWD",
-    "team": "TOT",
+    "team": "CRY",
     "status": "a",
     "news": "",
-    "p_play": 0.79,
+    "p_play": 0.713,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 71
+   "borda": 76
+  },
+  {
+   "pos": "FWD",
+   "gain": 5.88,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 316,
+    "code": 543968,
+    "name": "Emersonn",
+    "pos": "FWD",
+    "team": "IPS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.749,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.713,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 34
+  },
+  {
+   "pos": "FWD",
+   "gain": 9.7,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 295,
+    "code": 169432,
+    "name": "McBurnie",
+    "pos": "FWD",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.983,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.713,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 32
   },
   {
    "pos": "MID",
-   "gain": 5.39,
+   "gain": 6.82,
    "change": 4,
    "fallback": false,
    "add": {
@@ -494,19 +558,83 @@
     "ep": null
    },
    "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
     "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.917,
+    "team": "BOU",
+    "status": "d",
+    "news": "Thigh injury - 50% chance of playing",
+    "p_play": 0.496,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 50
+   "borda": 59
+  },
+  {
+   "pos": "MID",
+   "gain": 7.55,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 286,
+    "code": 540324,
+    "name": "Belloumi",
+    "pos": "MID",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.894,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "d",
+    "news": "Thigh injury - 50% chance of playing",
+    "p_play": 0.496,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 38
+  },
+  {
+   "pos": "MID",
+   "gain": 5.03,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "a",
+    "news": "",
+    "p_play": 0.97,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "d",
+    "news": "Thigh injury - 50% chance of playing",
+    "p_play": 0.496,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 29
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
