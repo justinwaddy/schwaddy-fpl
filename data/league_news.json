@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-04T22:45 UTC",
+ "generated": "2026-10-05T07:55 UTC",
  "items": [
-  {
-   "id": "2026-09-19-justin-bench",
-   "ts": "2026-09-19T22:52",
-   "kind": "opinion",
-   "text": "Justin's day belonged to players nobody backed: Schade, Pickford and Vuskovic did the scoring, while Haaland, Barcola and Gvardiol - by reputation the best of his fifteen - returned nothing between them. His bench matched his starting eleven exactly, 19 points each, with six of his team still to kick off before the picture is final.",
-   "source": null
-  },
-  {
-   "id": "2026-09-20-odegaard-mcl",
-   "ts": "2026-09-20T07:44",
-   "kind": "news",
-   "text": "Martin Odegaard will be sidelined for some time after Arsenal confirmed he suffered a medial collateral ligament injury to his left knee in Saturday's win over West Ham. He has withdrawn from the Norway squad and will be assessed through the international break, with no firm return date given. Edward loses Arsenal's talisman from his midfield for the foreseeable future.",
-   "source": {
-    "title": "Medical update: Martin Odegaard",
-    "url": "https://www.arsenal.com/news/medical-update-martin-odegaard"
-   }
-  },
-  {
-   "id": "2026-09-20-rice-back",
-   "ts": "2026-09-20T07:44",
-   "kind": "news",
-   "text": "Declan Rice was substituted at half-time of Arsenal's 2-2 draw with Tottenham after picking up a back injury, with Mikel Arteta calling it 'strange for someone like him to come off' and saying the club still needs to assess him. Ben C owns Rice, whose fitness for Arsenal's next fixture is now in doubt.",
-   "source": {
-    "title": "Declan Rice: Mikel Arteta reveals Arsenal midfielder has suffered back injury as Gunners' problems mount",
-    "url": "https://www.skysports.com/football/news/11670/12969175/declan-rice-mikel-arteta-reveals-arsenal-midfielder-has-suffered-back-injury-as-gunners-problems-mount"
-   }
-  },
   {
    "id": "2026-09-20-foden-suspended",
    "ts": "2026-09-20T07:44",
@@ -722,16 +695,39 @@
    "kind": "opinion",
    "text": "Edward leads on 259 and owns neither of the league's two leading scorers: Haaland is Justin's, 7 back, and Isak is Small Ben's, 13 back. Return of the Djedi is top of the table with Semenyo and a lot of defenders, which is either a masterclass or the longest-running bit of luck in the league, and the six of you get to find out which when the break ends.",
    "source": null
+  },
+  {
+   "id": "2026-10-05-haaland-subbed",
+   "ts": "2026-10-05T07:55",
+   "kind": "news",
+   "text": "Erling Haaland asked to be substituted after 67 minutes of Norway's 2-1 Nations League defeat by Portugal on Sunday, with no word afterwards on his fitness. He was replaced by Jorgen Strand Larsen, so both are Justin's, and Manchester City visit Anfield on Sunday 11 October.",
+   "source": {
+    "title": "Erling Haaland injury fear after asking to be substituted for Norway",
+    "url": "https://www.espn.com/soccer/story/_/id/50107853/erling-haaland-injury-fear-asked-substituted-norway"
+   }
+  },
+  {
+   "id": "2026-10-05-isak-gakpo",
+   "ts": "2026-10-05T07:55",
+   "kind": "news",
+   "text": "Alexander Isak left the Sweden squad with what Liverpool called a minor injury, and Cody Gakpo's break ended after 17 minutes against Serbia with an ankle problem, per the Dutch FA. Both are Small Ben's, and Liverpool host Manchester City on 11 October.",
+   "source": {
+    "title": "Cody Gakpo returns to Liverpool after injury for Netherlands",
+    "url": "https://www.espn.com/soccer/story/_/id/50051618/netherlands-cody-gakpo-nations-league-liverpool"
+   }
+  },
+  {
+   "id": "2026-10-05-havertz-strain",
+   "ts": "2026-10-05T07:55",
+   "kind": "news",
+   "text": "Kai Havertz went off in Germany's 1-1 draw with the Netherlands and has gone back to Arsenal for treatment, the knock understood to be a minor muscle strain. Big Ben owns him, and Arsenal are at home to Leeds on Saturday 10 October.",
+   "source": {
+    "title": "Kai Havertz returning to Arsenal to be assessed after suffering injury for Germany against Netherlands",
+    "url": "https://www.skysports.com/football/news/13591713/kai-havertz-returning-to-arsenal-to-be-assessed-after-suffering-injury-for-germany-against-netherlands"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T13:35 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Follow-up for the 14:00 UTC slot covering the seven clubs the first item could not: Sky Sports line-up pages read for AVL-NFO (559474), BOU-BRE (559475), CHE-HUL (559476), CRY-IPS (559478) and LIV-FUL (559480, for Fulham's Gonzalo). Milenkovic, Collins, Palestra and Mateta absent from their squads; Lacroix and Estevao on the bench; everyone else the league owns at those clubs starts."
-  },
   {
    "ts": "2026-09-12T16:11 UTC",
    "news": 0,
@@ -1144,6 +1140,13 @@
    "opinion": 1,
    "matchday": false,
    "note": "Evening, international break, no fixtures today and all ten GW6 fixtures still to come, so no points-based pieces and no flops to rewrite. No reported items: nothing new worth citing since the morning run. One opinion on the leader owning neither Haaland nor Isak. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over and left unused: one is a slur, the other is aimed at race/politics, neither is publishable."
+  },
+  {
+   "ts": "2026-10-05T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with the international-break injury scares: Haaland, Isak/Gakpo, Havertz. Roast archive: both unused suggestions passed over (slur/sexuality-and-race territory); no opinion on a morning run anyway."
   }
  ]
 }
