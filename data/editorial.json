@@ -1,22 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-04-rodon-injury-clears-bijol",
-      "ts": "2026-09-04T13:10 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Leeds boss Daniel Farke confirmed centre-back rival Joe Rodon has a hamstring injury and will be out for eight to ten weeks, removing Bijol's main competition for a starting spot for the rest of this international window and beyond.",
-      "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-fitness-update-ahead-of-brighton-clash-a"
-    },
-    {
-      "id": "2026-09-04-marmoush-available-forest",
-      "ts": "2026-09-04T13:10 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Tottenham boss Roberto De Zerbi said Marmoush is available to play, possibly from kickoff, against Forest - direct manager confirmation for a player who only just arrived on loan from Man City alongside Savio. The model's availability figure has been rising with the news but is still a step behind what the manager is actually saying.",
-      "url": "https://www.tottenhamhotspur.com/news/1087342/team-news-roberto-on-omar-marmoushs-availability"
-    },
-    {
       "id": "2026-09-05-mateta-hamstring-clears-strand-larsen",
       "ts": "2026-09-05T08:12 UTC",
       "mine": true,
@@ -319,14 +303,25 @@
       "scope": "mine",
       "text": "Kevin Schade has joined Bogle and Gross as a nominee for the Premier League's September Player of the Month award, Brentford's own site confirming two goals in three unbeaten league games (Sunderland, Bournemouth, Chelsea); voting closes Monday. A third of Justin's or his waiver targets' players is now up for the award this month, and none of the three has a fitness question against him.",
       "url": "https://www.brentfordfc.com/en/news/first-team-kevin-schade-premier-league-player-of-the-month-september-2026"
+    },
+    {
+      "id": "2026-10-05-scott-tendon",
+      "ts": "2026-10-05T21:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Bournemouth's Alex Scott (yours) withdrew from England duty with a tendon injury picked up against Croatia and could miss 'several weeks' per Sky Sports; scans planned. The model still has him at 50% availability and 15.4 next5, which is far too kind - a replacement claim is now live (Anderson is the model's pick).",
+      "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
+    },
+    {
+      "id": "2026-10-05-haaland-subbed",
+      "ts": "2026-10-05T21:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Haaland (yours) asked to be taken off after 67 minutes of Norway's 2-1 loss to Portugal, a week before Man City host Liverpool; his coach said the plan was to play him until he could no longer contribute. No injury has been reported, but watch City's pre-match news.",
+      "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-03T14:41 UTC",
-      "published": 2,
-      "note": "Munoz reversal - Forest's own predicted XI (published this morning) has him starting at right wing-back against Spurs, not competing with Aina as reported Tuesday, so he comes off the drop list this week; and Barcola is now confirmed live in the FPL pool with a possible bench debut Friday at Ipswich, still rated near the bottom of all free agents by the model. Full club-by-club refresh (Everton, Arsenal, Forest, City, Leeds, Brentford, Fulham, Bournemouth, Tottenham, Newcastle, Brighton) plus rivals' best assets (Bruno Fernandes, Palmer, Gibbs-White, Semenyo) found nothing else new or actionable"
-    },
     {
       "ts": "2026-09-03T20:54 UTC",
       "published": 3,
@@ -621,6 +616,11 @@
       "ts": "2026-10-05T08:15 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). premierleague.com and Sky searches repeat the known international injuries (Havertz, Isak, Gakpo, O'Reilly, Semenyo, Brobbey hamstring); nothing new on a squad or shortlisted player. Nothing material."
+    },
+    {
+      "ts": "2026-10-05T21:15 UTC",
+      "published": 2,
+      "note": "Led with Scott tendon injury (several weeks) and Haaland early sub for Norway; no injury confirmed for Haaland."
     }
   ]
 }

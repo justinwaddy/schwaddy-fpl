@@ -1,8 +1,8 @@
 {
   "gw": 6,
   "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-10-04T21:10 UTC",
-  "summary": "Board unchanged through the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep plus today's international-duty injuries (Havertz, Gakpo, Kluivert, Malen) found nothing affecting a squad or shortlisted player - none of the internationals hurt today are on this board. A recurring Tavernier hamstring story was traced to afcb.co.uk's own URL date and confirmed stale (23 Jan 2026, last season). Brobbey's return timeline remains unverifiable and now contradictory across sources (2-4 weeks vs 6-8 weeks quoted nowhere on safc.com or a permitted outlet), so claim 3 holds at low confidence with no firmer date than last run. Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order - only Edward claims ahead of him.",
+  "ts": "2026-10-05T21:15 UTC",
+  "summary": "Alex Scott's tendon injury (several weeks, Sky Sports) changes the board: he is now a clear drop for Anderson at rank 2, and the Brobbey punt (hamstring, 2-4 weeks quoted earlier) is removed. Haaland went off early for Norway with no reported injury, so I am holding him. Justin is 5th of 6 in the reversed GW6 waiver order, so only Edward claims ahead; waivers close 9 October.",
   "claims": [
     {
       "rank": 1,
@@ -39,6 +39,33 @@
       "rank": 2,
       "pos": "MID",
       "add": {
+        "name": "Anderson",
+        "code": "215379",
+        "club": "MCI"
+      },
+      "drop": {
+        "name": "Scott",
+        "code": "503139",
+        "club": "BOU"
+      },
+      "why": "New this run: Sky Sports reports Scott withdrew from England with a tendon injury and could miss 'several weeks', with scans planned; the premierleague.com round-up says media reports suggest up to two months. Anderson is the model's own pick and plays Man City's run of fixtures.",
+      "model": "Model has Anderson 18.2 next5 vs Scott 15.4 (avail 0.49) - I agree on the swap, and the news says Scott's 0.49 is generous.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Alex Scott: Bournemouth midfielder withdraws from England duty and could miss 'several weeks' with tendon injury",
+          "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
+        },
+        {
+          "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+          "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "pos": "MID",
+      "add": {
         "name": "Stach",
         "code": "466525",
         "club": "LEE"
@@ -48,7 +75,7 @@
         "code": "249231",
         "club": "BRE"
       },
-      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth.",
+      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth. (Now rank 3: claim 2 takes Scott's slot, so the midfield would read Tavernier, Sch",
       "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
       "confidence": "medium",
       "sources": [
@@ -59,33 +86,6 @@
         {
           "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate",
           "title": "Leeds United and Crystal Palace clash ends in stalemate (leedsunited.com)"
-        }
-      ]
-    },
-    {
-      "rank": 3,
-      "pos": "FWD",
-      "add": {
-        "name": "Brobbey",
-        "code": "441264",
-        "club": "SUN"
-      },
-      "drop": {
-        "name": "Strand Larsen",
-        "code": "247412",
-        "club": "CRY"
-      },
-      "why": "Brobbey took a hat-trick off Manchester City on 20 September and had played 90 minutes in each of Sunderland's last three, but he was taken off after 35 minutes of the Netherlands' 24 September draw with Germany with what Sky Sports' match report called a hamstring injury. No permitted outlet has published a diagnosis or timeline since - this morning's check of Sunderland's own news index (safc.com) turned up nothing on him since January - so this stays the board's one speculative punt, with Marmoush on watch as the alternative drop if he is ruled out before the window closes.",
-      "model": "Model still has Brobbey at 14.2 next5 / 97.9 rest against Strand Larsen's 10.8 / 72.8 - a narrower +3.4/+25.2 than last week's +4.1/+25.8, because the model's own news field has now caught up with the injury ('Hamstring injury - 75% chance of playing') and cut his availability from 0.90 to 0.68. That is the model pricing in the same uncertainty as this claim, not new information beyond it.",
-      "confidence": "low",
-      "sources": [
-        {
-          "title": "Netherlands 1-1 Germany: Jurgen Klopp's first game in charge ends all square after late Cody Gakpo equaliser (Sky Sports, 24 Sep 2026)",
-          "url": "https://www.skysports.com/football/netherlands-vs-germany/7021350875593003232"
-        },
-        {
-          "title": "Man City 5-3 Sunderland: Brobbey hat-trick, Le Bris quotes (Sky Sports, 20 Sep 2026)",
-          "url": "https://www.skysports.com/football/manchester-city-vs-sunderland/report/559490"
         }
       ]
     },
@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-03T14:41 UTC",
-      "gw": 3,
-      "claims": 3,
-      "note": "Dropped the Hill-for-Munoz claim: Forest's own predicted XI (published this morning) has Munoz starting at right wing-back against Spurs, not competing with Aina, so he is no longer a drop candidate and no other squad DEF clears the swap bar. Igor Jesus/Woltemade, Rayan/Eze and Gross/Garner carried forward unchanged after a full club-by-club refresh; also checked Barcola (now live in the pool, possible bench debut Friday at Ipswich) but no squad MID is weak enough to justify dropping for him."
-    },
-    {
       "ts": "2026-09-03T20:54 UTC",
       "gw": 4,
       "claims": 4,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: board unchanged from last run; no new fitness news on squad or shortlist."
+    },
+    {
+      "ts": "2026-10-05T21:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "Scott tendon injury: added Anderson for Scott at rank 2, dropped the Brobbey punt."
     }
   ]
 }
