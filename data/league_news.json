@@ -1,13 +1,6 @@
 {
- "generated": "2026-10-06T07:50 UTC",
+ "generated": "2026-10-06T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-20-marcus-own-keeper",
-   "ts": "2026-09-20T22:47",
-   "kind": "opinion",
-   "text": "Marcus's afternoon boiled down to his own goalkeeper doing a number on his own striker: Alisson kept Evanilson out at Bournemouth, and by the time the day's fixtures were done Marcus had finished with the smallest gameweek total in the league bar Robert. Haramball Enthusiast, undone by Haramball Enthusiast.",
-   "source": null
-  },
   {
    "id": "2026-09-20-team-names",
    "ts": "2026-09-20T22:48",
@@ -719,16 +712,16 @@
     "title": "Liverpool: Andoni Iraola's early impact at Anfield assessed ahead of huge Super Sunday showdown with Man City",
     "url": "https://www.skysports.com/football/news/13595435/liverpool-andoni-iraolas-early-impact-at-anfield-assessed-ahead-of"
    }
+  },
+  {
+   "id": "2026-10-06-nothing-kicked-off",
+   "ts": "2026-10-06T22:45",
+   "kind": "opinion",
+   "text": "Gameweek 6 has ten fixtures and not one has kicked off, so tonight's table is the last honest one for a while: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back. Four managers inside 13 points, which is the most fragile kind of peace, and Robert is 89 behind on 170 and watching it from a different postcode.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T18:09 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "19:00 kickoff Sunderland v Arsenal: no permitted outlet had a readable confirmed XI yet (arsenal.com, safc.com, premierleague.com and skysports.com all served JS shells or a live blog error, and BBC Sport is not reachable by this session's fetch tool at all), so fell back to ESPN's official lineups feed (espn.com, permitted), which had both confirmed sheets in. Mukiele, Calafiori, Tzolis, Roefs, Gabriel, Saka, Konsa, White, Havertz, Odegaard and Rice all start; Raya starts in goal; J.Timber is among the Arsenal substitutes; Mosquera is not in Arsenal's 20-man squad at all."
-  },
   {
    "ts": "2026-09-12T22:51",
    "news": 2,
@@ -1141,6 +1134,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Man City's appeal and Liverpool v Man City. Only two items: most search results were off-list outlets, so I held back anything I could not source to a permitted outlet I had read. Unused roast suggestions (2) passed over: one is a slur and the other is aimed at race/politics, neither used."
+  },
+  {
+   "ts": "2026-10-06T22:45",
+   "news": 0,
+   "opinion": 1,
+   "matchday": false,
+   "note": "Evening. No fixtures today and GW6 not started, so no wrap on hauls. Searches found nothing new at a permitted outlet beyond Isak/Gakpo/Havertz items already posted, so no reported items. Led with the table before GW6. Passed over both unused roast suggestions: one is a homophobic slur and the other an apartheid jibe that is a claim aimed at race, both outside the line. Both left unused. No flops today so reflop not run."
   }
  ]
 }
