@@ -40,6 +40,7 @@ from .sim import SeasonView, _draft_ctx, _score_pairs
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from schwaddy.lineup import pick_xi                       # noqa: E402
 from schwaddy.league import LEAGUE_ID, OWNER_ID  # noqa: E402
+from schwaddy import overrides                   # noqa: E402
 
 def _ts(s):
     return float(np.datetime64(s.replace("Z", ""), "s").astype("int64"))
@@ -323,6 +324,10 @@ def main(cfg, model_path, offline=False, gw=None, out_json="data/evo_plan.json",
     brains = [Brain(g, cfg) for g, _ in models]
 
     boot, fixtures, own = _fetch(cfg, offline, league_id)
+    # news the API has not posted yet, forced before the injury log reads
+    # the bootstrap - the same overrides the dashboard applies
+    for w in overrides.apply(boot):
+        print(f"  override: {w}")
     # bring the injury log up to date BEFORE the features are built, so
     # that availability reflects this morning's team news and not the
     # archive repo's last commit

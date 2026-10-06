@@ -26,15 +26,24 @@ how long it has been carried.
 """
 from datetime import date
 
-# player code -> (status, news, date added). Status codes match the API's
-# own: "u" unavailable, "i" injured, "s" suspended, "d" doubtful, "a" fit.
+# player code -> (status, news, date added[, chance of playing]). Status
+# codes match the API's own: "u" unavailable, "i" injured, "s" suspended,
+# "d" doubtful, "a" fit. The optional chance (0-100) is forced onto both
+# rounds; without it both are cleared. For an injury, write the news the
+# way FPL does - "... - Expected back 23 Nov" - and the neural network
+# reads the return date out of it (evo.injuries.expected_return).
+#
+# Empty is the healthy state. The Watkins entry lived here for six days
+# after his Saudi move while the API still had him at Aston Villa, status
+# "a", no news; the API then carried status "u" itself, apply() reported
+# the entry as redundant, and it was deleted. That is the loop working as
+# intended - add one when the API lags the news, delete it when apply()
+# says the API has caught up.
 OVERRIDES = {
-    # Empty, and that is the healthy state. The Watkins entry lived here
-    # for six days after his Saudi move while the API still had him at
-    # Aston Villa, status "a", no news; the API now carries status "u"
-    # itself, apply() reported the entry as redundant, and it was deleted.
-    # That is the loop working as intended - add one when the API lags a
-    # move, delete it when apply() says the API has caught up.
+    # Alex Scott (BOU): reported out 6-8 weeks with the thigh injury while
+    # FPL still had him at 50%. Return dated at the midpoint, seven weeks
+    # from the 5 Oct news.
+    "503139": ("i", "Thigh injury - Expected back 23 Nov", "2026-10-06", 0),
 }
 
 
@@ -60,12 +69,13 @@ def apply(bootstrap):
         if ov is None:
             continue
         seen.add(code)
-        status, news, added = ov
+        status, news, added = ov[:3]
+        chance = ov[3] if len(ov) > 3 else None
         name = e.get("web_name") or code
         was = e.get("status")
         e["status"], e["news"] = status, news
-        e["chance_of_playing_next_round"] = None
-        e["chance_of_playing_this_round"] = None
+        e["chance_of_playing_next_round"] = chance
+        e["chance_of_playing_this_round"] = chance
         if was == status:
             lines.append(f"{name} -> {status}: the API now says this itself"
                          f"{_age(added)}. DELETE this entry.")

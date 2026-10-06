@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T23:02",
+ "generated": "2026-10-06T23:10",
  "gw": 6,
  "horizon": "next5",
  "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -17,7 +17,7 @@
  "window": "waiver",
  "waivers_time": "2026-10-09T10:00:00Z",
  "deadline": "2026-10-10T10:00:00Z",
- "formation": "5-4-1",
+ "formation": "5-3-2",
  "xi": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.8,
-   "ep": 5.66,
+   "ep": 5.64,
    "votes": 5
   },
   {
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.97,
    "base": 5.02,
-   "ep": 4.96,
+   "ep": 4.95,
    "votes": 5
   },
   {
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.949,
    "base": 4.58,
-   "ep": 4.48,
+   "ep": 4.47,
    "votes": 5
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.35,
+   "ep": 4.33,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.839,
    "base": 3.38,
-   "ep": 3.3,
+   "ep": 3.29,
    "votes": 4
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.951,
    "base": 4.58,
-   "ep": 4.48,
+   "ep": 4.46,
    "votes": 5
   },
   {
@@ -133,21 +133,8 @@
    "news": "",
    "p_play": 0.917,
    "base": 3.35,
-   "ep": 3.26,
+   "ep": 3.25,
    "votes": 5
-  },
-  {
-   "id": 69,
-   "code": 503139,
-   "name": "Scott",
-   "pos": "MID",
-   "team": "BOU",
-   "status": "d",
-   "news": "Thigh injury - 50% chance of playing",
-   "p_play": 0.496,
-   "base": 1.9,
-   "ep": 1.82,
-   "votes": 3
   },
   {
    "id": 411,
@@ -159,8 +146,21 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.3,
-   "ep": 6.17,
+   "ep": 6.15,
    "votes": 5
+  },
+  {
+   "id": 401,
+   "code": 438234,
+   "name": "Marmoush",
+   "pos": "FWD",
+   "team": "TOT",
+   "status": "a",
+   "news": "",
+   "p_play": 0.79,
+   "base": 1.76,
+   "ep": 1.69,
+   "votes": 3
   }
  ],
  "bench": [
@@ -174,21 +174,8 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.25,
-   "ep": 4.09,
+   "ep": 4.06,
    "votes": 0
-  },
-  {
-   "id": 401,
-   "code": 438234,
-   "name": "Marmoush",
-   "pos": "FWD",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 0.79,
-   "base": 1.76,
-   "ep": 1.7,
-   "votes": 1
   },
   {
    "id": 222,
@@ -200,7 +187,7 @@
    "news": "",
    "p_play": 0.713,
    "base": 1.74,
-   "ep": 1.59,
+   "ep": 1.57,
    "votes": 2
   },
   {
@@ -213,16 +200,29 @@
    "news": "",
    "p_play": 0.467,
    "base": 1.1,
-   "ep": 1.01,
+   "ep": 1.0,
    "votes": 0
+  },
+  {
+   "id": 69,
+   "code": 503139,
+   "name": "Scott",
+   "pos": "MID",
+   "team": "BOU",
+   "status": "i",
+   "news": "Thigh injury - Expected back 23 Nov",
+   "p_play": 0.0,
+   "base": 0.0,
+   "ep": -0.02,
+   "votes": 1
   }
  ],
- "xi_ep": 45.9,
+ "xi_ep": 45.6,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.05,
+   "gain": 26.8,
    "change": 1,
    "fallback": false,
    "add": {
@@ -238,25 +238,121 @@
     "ep": null
    },
    "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
     "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.467,
+    "team": "BOU",
+    "status": "i",
+    "news": "Thigh injury - Expected back 23 Nov",
+    "p_play": 0.0,
     "base": null,
     "ep": null
    },
    "votes": 5,
-   "borda": 258
+   "borda": 296
   },
   {
    "pos": "MID",
-   "gain": 10.85,
+   "gain": 18.4,
    "change": 1,
    "fallback": true,
+   "add": {
+    "id": 542,
+    "code": 484420,
+    "name": "E.Le F\u00e9e",
+    "pos": "MID",
+    "team": "SUN",
+    "status": "a",
+    "news": "",
+    "p_play": 0.977,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "i",
+    "news": "Thigh injury - Expected back 23 Nov",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 268
+  },
+  {
+   "pos": "MID",
+   "gain": 15.93,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
+    "pos": "MID",
+    "team": "CHE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.777,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "i",
+    "news": "Thigh injury - Expected back 23 Nov",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 255
+  },
+  {
+   "pos": "MID",
+   "gain": 15.17,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 286,
+    "code": 540324,
+    "name": "Belloumi",
+    "pos": "MID",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.894,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 69,
+    "code": 503139,
+    "name": "Scott",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "i",
+    "news": "Thigh injury - Expected back 23 Nov",
+    "p_play": 0.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 233
+  },
+  {
+   "pos": "MID",
+   "gain": 10.84,
+   "change": 2,
+   "fallback": false,
    "add": {
     "id": 542,
     "code": 484420,
@@ -282,44 +378,12 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 182
+   "borda": 164
   },
   {
    "pos": "MID",
-   "gain": 10.04,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.777,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.467,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 119
-  },
-  {
-   "pos": "MID",
-   "gain": 10.01,
-   "change": 1,
+   "gain": 10.12,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 127,
@@ -346,12 +410,76 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 119
+   "borda": 110
+  },
+  {
+   "pos": "MID",
+   "gain": 8.85,
+   "change": 2,
+   "fallback": true,
+   "add": {
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
+    "pos": "MID",
+    "team": "CHE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.777,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.467,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 101
+  },
+  {
+   "pos": "MID",
+   "gain": 7.31,
+   "change": 2,
+   "fallback": true,
+   "add": {
+    "id": 481,
+    "code": 215379,
+    "name": "Anderson",
+    "pos": "MID",
+    "team": "MCI",
+    "status": "a",
+    "news": "",
+    "p_play": 0.93,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.467,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 94
   },
   {
    "pos": "DEF",
-   "gain": 8.5,
-   "change": 2,
+   "gain": 8.04,
+   "change": 3,
    "fallback": false,
    "add": {
     "id": 10,
@@ -378,12 +506,12 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 120
+   "borda": 112
   },
   {
    "pos": "DEF",
-   "gain": 5.91,
-   "change": 2,
+   "gain": 5.97,
+   "change": 3,
    "fallback": true,
    "add": {
     "id": 305,
@@ -410,12 +538,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 37
+   "borda": 40
   },
   {
    "pos": "DEF",
-   "gain": 4.8,
-   "change": 2,
+   "gain": 4.87,
+   "change": 3,
    "fallback": true,
    "add": {
     "id": 418,
@@ -442,12 +570,44 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 25
+   "borda": 28
+  },
+  {
+   "pos": "DEF",
+   "gain": 4.92,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 176,
+    "code": 173878,
+    "name": "Dasilva",
+    "pos": "DEF",
+    "team": "COV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.989,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.839,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 26
   },
   {
    "pos": "FWD",
-   "gain": 7.77,
-   "change": 3,
+   "gain": 7.87,
+   "change": 4,
    "fallback": false,
    "add": {
     "id": 552,
@@ -474,103 +634,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 77
-  },
-  {
-   "pos": "MID",
-   "gain": 6.78,
-   "change": 4,
-   "fallback": false,
-   "add": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
-    "pos": "MID",
-    "team": "SUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.977,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 69,
-    "code": 503139,
-    "name": "Scott",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "d",
-    "news": "Thigh injury - 50% chance of playing",
-    "p_play": 0.496,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 59
-  },
-  {
-   "pos": "MID",
-   "gain": 7.37,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 286,
-    "code": 540324,
-    "name": "Belloumi",
-    "pos": "MID",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.894,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 69,
-    "code": 503139,
-    "name": "Scott",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "d",
-    "news": "Thigh injury - 50% chance of playing",
-    "p_play": 0.496,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 38
-  },
-  {
-   "pos": "MID",
-   "gain": 4.97,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.97,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 69,
-    "code": 503139,
-    "name": "Scott",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "d",
-    "news": "Thigh injury - 50% chance of playing",
-    "p_play": 0.496,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 26
+   "borda": 68
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
