@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-03T21:08 UTC",
-      "gw": 4,
-      "claims": 4,
-      "note": "No change. Re-checked all four adds and drops (Igor Jesus/Marmoush, Ampadu/Garner, Le Fee/Barcola, Rayan/Doku) plus rivals across a fresh club-by-club sweep 13 minutes after the last update - Forest's Munoz/Milenkovic, Rodon's hamstring, Doku's calf timeline and Barcola's expected bench debut at Ipswich all check out exactly as before. Still no fifth claim; the rest of the squad remains confirmed starters above their model numbers."
-    },
-    {
       "ts": "2026-09-04T08:15 UTC",
       "gw": 4,
       "claims": 3,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: no new fitness news on squad or shortlist since last run."
+    },
+    {
+      "ts": "2026-10-06T21:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: no new fitness news on squad or shortlist from permitted outlets."
     }
   ]
 }

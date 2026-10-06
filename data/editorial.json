@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-03T21:08 UTC",
-      "published": 0,
-      "note": "Re-run 13 minutes after the last deep pass ahead of GW3's deadline (17:30 UTC tomorrow). Ran a fresh sweep across every squad club (Everton, Forest, Man City, Leeds, Bournemouth, Brentford, Palace, Tottenham, Liverpool, Sunderland) plus rivals' best assets - Rodon's 8-10 week hamstring, Doku's calf, Munoz's Forest debut, Marmoush vs Solanke, and Barcola's expected bench debut are all confirmed exactly as already published this evening. One search flagged a possible Solanke ankle knock, but a follow-up read found only stale July/August articles referencing his prior surgery, not a current one, so nothing new to add or correct."
-    },
-    {
       "ts": "2026-09-04T08:15 UTC",
       "published": 2,
       "note": "Full club-by-club sweep ~11 hours ahead of the GW3 deadline (17:30 UTC). Two corrections against last night's read: Garner is now set to start against Man Utd (Hackney a doubt with a knock), and Solanke's ankle injury (out since early August, major doubt) removes the competition threat to Marmoush that was cited last night, with Marmoush now in Tottenham's predicted XI. Also checked Brentford (two search hits on Schade/Collins injuries turned out to be stale articles from a prior season and were discarded), Leeds (Bijol still locked in alongside new signing Elvedi), Bournemouth (Hill, Rayan, Tavernier all in the predicted XI), Crystal Palace (Strand Larsen confirmed starting with Mateta out until October) and Liverpool (Barcola still expected on the bench for his debut at Ipswich tonight) - all unchanged from what's already published."
@@ -621,6 +616,11 @@
       "ts": "2026-10-06T08:10 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). premierleague.com and Sky searches repeat known items (Haaland early sub, Brobbey hamstring, Isak thigh); nothing new on Van Hecke or Marmoush. Nothing material."
+    },
+    {
+      "ts": "2026-10-06T21:10 UTC",
+      "published": 0,
+      "note": "Evening check in the international break. Searches returned known items (Havertz, Gakpo, Brobbey, Isak) and off-list sources only; nothing new on a squad or shortlisted player. Nothing material."
     }
   ]
 }
