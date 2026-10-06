@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-03T20:54 UTC",
-      "gw": 4,
-      "claims": 4,
-      "note": "First run for the GW4 window (GW3 waivers have processed and the squad moved on since last week's file, which is now filed under previous). Four claims: Igor Jesus for Marmoush (Forest's confirmed #1 striker over Wood vs a Marmoush facing real competition from Solanke), Ampadu for Garner (Garner was a sub, not a starter, at Preston as earlier reported, and is behind Hackney for Sunday), Le Fee for Barcola (Barcola confirmed bench for his Liverpool debut), and a low-confidence Rayan for Doku (Doku's return is pegged for right around this gameweek, so it's a hedge). No fifth claim - the rest of the defense and attack are confirmed starters outperforming their model numbers."
-    },
-    {
       "ts": "2026-09-03T21:08 UTC",
       "gw": 4,
       "claims": 4,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "Scott tendon injury: added Anderson for Scott at rank 2, dropped the Brobbey punt."
+    },
+    {
+      "ts": "2026-10-06T08:10 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: no new fitness news on squad or shortlist since last run."
     }
   ]
 }
