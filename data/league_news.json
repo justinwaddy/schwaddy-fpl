@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-07T07:55 UTC",
+ "generated": "2026-10-07T22:41 UTC",
  "items": [
-  {
-   "id": "2026-09-21-england-squad",
-   "ts": "2026-09-21T07:55",
-   "kind": "news",
-   "text": "Thomas Tuchel's England squad for this month's Nations League games against Spain, Croatia and Czech Republic touches almost the whole league: Cole Palmer and Dominic Calvert-Lewin (Edward's), Lewis Hall and Declan Rice (Ben C's), Jarrad Branthwaite and James Trafford (Ben D's), Marc Guehi (Marcus's), Nico O'Reilly and Bukayo Saka (Robert's) and Jordan Pickford (Justin's) are all called up for the three-week camp.",
-   "source": {
-    "title": "Trent Alexander-Arnold and Cole Palmer recalled to England squad for Nations League games by Thomas Tuchel",
-    "url": "https://www.skysports.com/football/news/12016/13589193/trent-alexander-arnold-and-cole-palmer-recalled-to-england-squad-for-nations-league-games-by-thomas-tuchel"
-   }
-  },
-  {
-   "id": "2026-09-21-england-withdrawals",
-   "ts": "2026-09-21T22:52",
-   "kind": "news",
-   "text": "Cole Palmer and Declan Rice, both named in this morning's England squad, have since withdrawn from the Nations League squad, along with Tino Livramento, Kobbie Mainoo and Marcus Rashford - no details have been given on the nature of any of their injuries. Nottingham Forest's Morgan Gibbs-White and Everton's James Garner, both Edward's, have been called up as replacements and join the squad on Tuesday.",
-   "source": {
-    "title": "England squad: Cole Palmer and Declan Rice among five withdrawals from England squad",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c617j2prweejo"
-   }
-  },
   {
    "id": "2026-09-21-enzo-first-goal",
    "ts": "2026-09-21T22:52",
@@ -722,16 +702,23 @@
     "title": "Midfield options and a fab front four - what we've learned about England",
     "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
    }
+  },
+  {
+   "id": "2026-10-07-top-four-bunched",
+   "ts": "2026-10-07T22:41",
+   "kind": "opinion",
+   "text": "Edward leads on 259 with Justin on 252, Marcus on 249 and Small Ben on 246: thirteen points separate first from fourth, and ten fixtures kick off tomorrow with nobody having scored a thing. Robert is 89 back, which is nearly seven times that gap, so he is not so much in the title race as watching it from the car park.",
+   "source": null
+  },
+  {
+   "id": "2026-10-07-bench-ledger",
+   "ts": "2026-10-07T22:41",
+   "kind": "opinion",
+   "text": "Gameweek 5 left Justin's bench on 21 against 41 from his eleven, which is half a second team doing the work of the first. Robert's bench scored 0, so at least one of them is consistent. Both have the same ten fixtures to fix it tomorrow.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T23:59 UTC",
-   "news": 0,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Hand edit at Justin's request, not a scheduled run: the page had put six of its twenty-four opinion pieces at Robert, the man bottom of the table, and three of those went at his hairline, his weight and his drinking rather than his football. Dropped the 4 Sept hairline piece and the 7 Sept cheeseburgers piece outright, and rewrote the 7 Sept and 12 Sept ones onto what actually happened in the fixtures. Left the three that are about his squad - the City cameos, Saka in Naples, and his passing mention in the Marcus cushion piece. Also retired the unused archive suggestions that rule 4 forbids anyway so no future run has to decide about them."
-  },
   {
    "ts": "2026-09-13T07:58 UTC",
    "news": 3,
@@ -1144,6 +1131,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with the BBC international-break injury round-up (Bruno Fernandes playing through pain) and BBC's England takeaways (Palmer/Gibbs-White, Rogers, Rice). Search tool could not query BBC/Guardian, so read their pages directly; Man City legal stories skipped as already covered. Both unused roast suggestions passed over: one is a slur aimed at the sender himself, the other rests on a race-adjacent charge and is not a joke about anything in the table."
+  },
+  {
+   "ts": "2026-10-07T22:41",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening wrap, non-matchday with GW6 not yet kicked off. One search found no usable current reports from permitted outlets, so no news. Led with the bunched top four and the bench ledger. Passed over both unused roast entries (2026-09-12-ca1422e269 and 2026-09-12-d9048f2afb): both hang on slurs or sexuality/race-adjacent material, outside the rules. No flops to rewrite."
   }
  ]
 }
