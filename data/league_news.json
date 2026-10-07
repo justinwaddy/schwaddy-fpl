@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-06T22:45 UTC",
+ "generated": "2026-10-07T07:55 UTC",
  "items": [
-  {
-   "id": "2026-09-20-team-names",
-   "ts": "2026-09-20T22:48",
-   "kind": "opinion",
-   "text": "A word on team names: Ben C's Delap Dance is built around a player who has never worn Ben C's colours, because Delap belongs to Ben D, whose own Quantum of Tzolis is named for a player who has never worn his colours either, because Tzolis belongs to Marcus. Between them they have managed to brand two squads after other people's forwards.",
-   "source": null
-  },
-  {
-   "id": "2026-09-21-fulham-manutd-draw",
-   "ts": "2026-09-21T07:50",
-   "kind": "news",
-   "text": "Manchester United were pegged back at Craven Cottage on Sunday: keeper Lammens could only push Calvin Bassey's long-range strike into the path of Lisandro Martinez, who turned it into his own net in the 63rd minute, before Matheus Cunha steered home a Dorgu pass for an 89th-minute equaliser and a 1-1 draw. Lammens is Edward's; Cunha's leveller sits inside his 10-point haul for Ben C.",
-   "source": {
-    "title": "Man United rescue draw at Fulham after own goal",
-    "url": "https://www.espn.com/soccer/match/_/gameId/401878777/manchester-united-fulham"
-   }
-  },
-  {
-   "id": "2026-09-21-leeds-palace-goalless",
-   "ts": "2026-09-21T07:52",
-   "kind": "news",
-   "text": "Leeds and Crystal Palace shared a goalless draw at Elland Road on Sunday: Tyrick Mitchell thought he had won it after Anan Khalaili's cross deflected in off Tarik Muharemovic, but VAR chalked the goal off for Khalaili's offside position, and Dominic Calvert-Lewin then fired the rebound chance straight at keeper Walter Benitez. Khalaili and Calvert-Lewin are both Edward's, so his own players cancelled each other out; James Trafford, Ben D's keeper, made several of the game's better saves to keep it goalless.",
-   "source": {
-    "title": "Leeds and Crystal Palace battle to gritty goalless draw",
-    "url": "https://www.espn.com/soccer/report/_/gameId/401879273"
-   }
-  },
   {
    "id": "2026-09-21-england-squad",
    "ts": "2026-09-21T07:55",
@@ -719,16 +692,39 @@
    "kind": "opinion",
    "text": "Gameweek 6 has ten fixtures and not one has kicked off, so tonight's table is the last honest one for a while: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back. Four managers inside 13 points, which is the most fragile kind of peace, and Robert is 89 behind on 170 and watching it from a different postcode.",
    "source": null
+  },
+  {
+   "id": "2026-10-07-fernandes-pain",
+   "ts": "2026-10-07T07:55",
+   "kind": "news",
+   "text": "Portugal boss Jorge Jesus revealed that Bruno Fernandes had been playing through pain during the international break. That is Ben D's Manchester United man, and nothing in the report says he is out of Saturday's game.",
+   "source": {
+    "title": "Player welfare, injury worries & boredom - has extended break worked?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq8jz7verm24o"
+   }
+  },
+  {
+   "id": "2026-10-07-palmer-gibbs-white",
+   "ts": "2026-10-07T07:55",
+   "kind": "news",
+   "text": "Cole Palmer withdrew from the England squad, and BBC Sport says that has let others cement their place in front of him, with Morgan Gibbs-White cutting short a family holiday to join up after initially being left out. Edward owns both of them.",
+   "source": {
+    "title": "Midfield options and a fab front four - what we've learned about England",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
+   }
+  },
+  {
+   "id": "2026-10-07-rogers-rice",
+   "ts": "2026-10-07T07:55",
+   "kind": "news",
+   "text": "Chelsea's Morgan Rogers is part of the England front four BBC Sport rates after the break, while Declan Rice is out of the side as his load is managed after injury. Rogers is Ben D's; Rice is Small Ben's.",
+   "source": {
+    "title": "Midfield options and a fab front four - what we've learned about England",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-12T22:51",
-   "news": 2,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap, 22:41 UTC. GW4 is not finished - Man Utd v Man City, Leeds v Newcastle and Coventry v Brighton still to come, so wrote up today's 7 completed fixtures rather than treating the gameweek as over. Led with Raya's penalty save and Saka's late spot-kick in Arsenal's win at Sunderland, and the Rogers-Palmer-Joao Pedro goal chain in Chelsea 2-2 Hull (all Sky Sports, verified by reading the reports directly). Opinion: used the archive's unused Edward-on-Robert line (hairline/team/no-transfers) since Robert is genuinely last tonight as well as in the table - marked used. Also wrote up Justin's bench (21, more than the other five combined) and the Palace 2-3 Ipswich collapse that cost both Edward's Khalaili goal and Justin's Strand Larsen equaliser. Passed over the rest of the unused archive: Edward's 'Mong' line and the Harvey Price comparison target a real disability, Ben D's self-directed line targets sexuality, his Robert-depression line hits a real illness, and his apartheid line on Justin trades on a real racial atrocity - all four stay unused, not held for later, since none of them clears the banned categories regardless of timing. Also rewrote all 12 of today's canned FLOP lines via reflop.py, using verified match-report detail (Dewsbury-Hall's saved one-on-one, Barry's saved header, Martinez's stop on McBurnie) where it was available."
-  },
   {
    "ts": "2026-09-12T23:59 UTC",
    "news": 0,
@@ -1141,6 +1137,13 @@
    "opinion": 1,
    "matchday": false,
    "note": "Evening. No fixtures today and GW6 not started, so no wrap on hauls. Searches found nothing new at a permitted outlet beyond Isak/Gakpo/Havertz items already posted, so no reported items. Led with the table before GW6. Passed over both unused roast suggestions: one is a homophobic slur and the other an apartheid jibe that is a claim aimed at race, both outside the line. Both left unused. No flops today so reflop not run."
+  },
+  {
+   "ts": "2026-10-07T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with the BBC international-break injury round-up (Bruno Fernandes playing through pain) and BBC's England takeaways (Palmer/Gibbs-White, Rogers, Rice). Search tool could not query BBC/Guardian, so read their pages directly; Man City legal stories skipped as already covered. Both unused roast suggestions passed over: one is a slur aimed at the sender himself, the other rests on a race-adjacent charge and is not a joke about anything in the table."
   }
  ]
 }
