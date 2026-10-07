@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-04T13:10 UTC",
-      "gw": 4,
-      "claims": 3,
-      "note": "Re-sourced all three claims after today's SOURCES-list purge stripped their citations - real permitted links are back for Igor Jesus/Marmoush, Le Fee/Barcola and Rayan/Doku. Also upgraded Rayan/Doku from low to medium confidence: Doku's calf return now points to around 13 September, which is after GW4's own deadline (12 September), so this is no longer just a timing hedge. No change to which three claims are made."
-    },
-    {
       "ts": "2026-09-04T21:10 UTC",
       "gw": 4,
       "claims": 3,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: no new fitness news on squad or shortlist; Haaland still being assessed per Sky Sports and premierleague.com."
+    },
+    {
+      "ts": "2026-10-07T21:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: evening searches found nothing new on squad or shortlisted players; GW6 claims carried forward."
     }
   ]
 }

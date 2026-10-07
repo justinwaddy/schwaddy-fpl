@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-04T12:30",
-      "kind": "sources",
-      "note": "dropped 17 of 19 items whose only citation was off the SOURCES list"
-    },
-    {
       "ts": "2026-09-04T13:10 UTC",
       "published": 2,
       "note": "Two items the source purge had removed, republished with permitted citations found this run: Rodon's 8-10 week hamstring injury (clears Bijol's path at Leeds, leedsunited.com) and De Zerbi confirming Marmoush available, possibly from the start, against Forest (tottenhamhotspur.com). Also re-sourced starters.json and claims.json this run - see their own run logs. Nothing else material found in a fresh club-by-club sweep, including a check on Strand Larsen (his old 'leading the line' claim did not survive a fresh look at the source, which turned out to be nine months stale, so not republished)."
@@ -621,6 +616,11 @@
       "ts": "2026-10-07T08:15 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky Sports and premierleague.com round-ups repeat known items (Haaland assessed after early sub, Scott out, Isak/Gakpo/Jacquet); Marmoush scored twice for Egypt, no fitness news on Van Hecke. Nothing material."
+    },
+    {
+      "ts": "2026-10-07T21:15 UTC",
+      "published": 0,
+      "note": "Evening check in the international break. Searches returned only known items (Gakpo, Isak, Havertz, Brobbey) via off-list outlets, and old-season pages for Haaland, Van Hecke and the shortlist; nothing citable and new. Nothing material."
     }
   ]
 }
