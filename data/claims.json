@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-04T08:15 UTC",
-      "gw": 4,
-      "claims": 3,
-      "note": "Dropped Ampadu for Garner: Garner is now confirmed set to start against Man Utd (Hackney a doubt with a knock), reversing last night's bench read, and no other squad midfielder or defender is weak enough once confirmed starting roles are accounted for. Kept Igor Jesus/Marmoush (reworded - Solanke's ankle injury has actually improved Marmoush's own case, so this is now a value upgrade not a bench-risk swap) and Le Fee/Barcola and Rayan/Doku unchanged. Three claims this week, down from four."
-    },
-    {
       "ts": "2026-09-04T13:10 UTC",
       "gw": 4,
       "claims": 3,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: no new fitness news on squad or shortlist from permitted outlets."
+    },
+    {
+      "ts": "2026-10-07T08:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: no new fitness news on squad or shortlist; Haaland still being assessed per Sky Sports and premierleague.com."
     }
   ]
 }

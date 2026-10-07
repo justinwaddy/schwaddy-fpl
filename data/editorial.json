@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-04T08:15 UTC",
-      "published": 2,
-      "note": "Full club-by-club sweep ~11 hours ahead of the GW3 deadline (17:30 UTC). Two corrections against last night's read: Garner is now set to start against Man Utd (Hackney a doubt with a knock), and Solanke's ankle injury (out since early August, major doubt) removes the competition threat to Marmoush that was cited last night, with Marmoush now in Tottenham's predicted XI. Also checked Brentford (two search hits on Schade/Collins injuries turned out to be stale articles from a prior season and were discarded), Leeds (Bijol still locked in alongside new signing Elvedi), Bournemouth (Hill, Rayan, Tavernier all in the predicted XI), Crystal Palace (Strand Larsen confirmed starting with Mateta out until October) and Liverpool (Barcola still expected on the bench for his debut at Ipswich tonight) - all unchanged from what's already published."
-    },
-    {
       "ts": "2026-09-04T12:30",
       "kind": "sources",
       "note": "dropped 17 of 19 items whose only citation was off the SOURCES list"
@@ -621,6 +616,11 @@
       "ts": "2026-10-06T21:10 UTC",
       "published": 0,
       "note": "Evening check in the international break. Searches returned known items (Havertz, Gakpo, Brobbey, Isak) and off-list sources only; nothing new on a squad or shortlisted player. Nothing material."
+    },
+    {
+      "ts": "2026-10-07T08:15 UTC",
+      "published": 0,
+      "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky Sports and premierleague.com round-ups repeat known items (Haaland assessed after early sub, Scott out, Isak/Gakpo/Jacquet); Marmoush scored twice for Egypt, no fitness news on Van Hecke. Nothing material."
     }
   ]
 }
