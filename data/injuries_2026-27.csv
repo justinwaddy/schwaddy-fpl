@@ -104,6 +104,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 153366,1785832691,1785832691,a,,,
 153682,1785832691,1785832691,a,,,
 153682,1789807008,1789738210,i,0.0,0.0,Thigh injury - Unknown return date
+153682,1791474643,1791474643,d,0.0,75.0,Thigh injury - 75% chance of playing
 154043,1788894459,1788894459,a,,,
 154561,1785832691,1785832691,a,,,
 154566,1785832691,1785832691,a,,,
@@ -173,6 +174,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 180736,1787270210,1786370631,u,,0.0,Has joined Como permanently
 180974,1785832691,1784808084,d,,75.0,Thigh injury - 75% chance of playing
 180974,1787270210,1786867208,i,,0.0,Unspecified injury - Unknown return date
+180974,1791474643,1791474643,d,0.0,75.0,Unspecified injury - 75% chance of playing
 183015,1785832691,1785832691,a,,,
 183656,1785832691,1785832691,a,,,
 183656,1788894459,1788528608,i,0.0,0.0,Hamstring injury - Expected back 10 Oct
@@ -206,6 +208,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 199798,1791220971,1791192610,d,,75.0,Unspecified injury - 75% chance of playing
 200089,1785832691,1785832691,a,,,
 200617,1785832691,1785832691,a,,,
+200617,1791474643,1791468012,i,,0.0,Back injury - Expected back 18 Oct
 200641,1785832691,1785832691,a,,,
 200641,1788894459,1787963589,u,0.0,0.0,has departed the club as a free agent.
 200720,1785832691,1785832691,a,,,
@@ -333,6 +336,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 223723,1789998835,1789997409,d,,75.0,Calf injury - 75% chance of playing
 223827,1785832691,1785832691,a,,,
 223827,1790411760,1790371810,d,,75.0,Hamstring injury - 75% chance of playing
+223827,1791474643,1791474643,i,,0.0,Hamstring injury - Unknown return date
 224117,1785832691,1785832691,a,,,
 224967,1785832691,1785832691,a,,,
 224967,1790930148,1790883009,d,,75.0,Leg injury - 75% chance of playing
@@ -507,6 +511,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441191,1789893388,1789826409,d,100.0,75.0,Unspecified injury - 75% chance of playing
 441264,1785832691,1785832691,a,,,
 441264,1790325402,1790285410,d,,75.0,Hamstring injury - 75% chance of playing
+441264,1791474643,1791474643,i,,0.0,Hamstring injury - Expected back 25 Oct
 441266,1785832691,1785832691,a,,,
 441302,1785832691,1785832691,a,,,
 441302,1789288550,1789236009,d,,25.0,Ankle injury - 25% chance of playing
@@ -606,6 +611,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 465351,1788894459,1788894459,a,100.0,100.0,
 465390,1785832691,1785832691,a,,,
 465390,1787910473,1787842589,i,,0.0,Hamstring injury - Unknown return date
+465390,1791474643,1791474643,d,0.0,50.0,Hamstring injury - 50% chance of playing
 465525,1785832691,1784808084,i,,0.0,Knee injury - Unknown return date
 465642,1785832691,1785832691,a,,,
 465680,1785832691,1785832691,a,,,
@@ -784,6 +790,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 503037,1789807008,1789807008,i,0.0,0.0,Hamstring injury - Expected back 10 Oct
 503139,1785832691,1785832691,a,,,
 503139,1791220971,1791192610,d,,50.0,Thigh injury - 50% chance of playing
+503139,1791474643,1791474643,i,,0.0,Thigh injury - Unknown return date
 503301,1785832691,1785832691,a,,,
 503301,1788894459,1788269032,u,0.0,0.0,Has joined AC Milan on loan for the rest of the season
 505079,1785832691,1785832691,a,,,
@@ -874,6 +881,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 546600,1787910473,1787666650,u,,0.0,Has joined Valencia on loan for the rest of the season
 547027,1785832691,1785832691,a,,,
 547027,1788894459,1788107408,i,0.0,0.0,Hamstring injury - Unknown return date
+547027,1791474643,1791474643,i,0.0,0.0,Hamstring injury - Expected back 18 Oct
 547037,1785832691,1785832691,a,,,
 547676,1785832691,1785832691,a,,,
 547676,1787270210,1787062352,u,,0.0,Has joined Lausanne-Sport permanently
@@ -968,6 +976,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 586268,1787270210,1787062279,u,,0.0,Has joined TSV Hartberg on loan for the rest of the season
 586309,1785832691,1785832691,a,,,
 587982,1788894459,1788894459,a,,,
+587982,1791474643,1791468012,d,,75.0,Ankle injury - 75% chance of playing
 590014,1785832691,1785832691,a,,,
 590014,1787270210,1786543727,u,,0.0,Has joined Bristol City on loan for the rest of the season
 590039,1785832691,1785832691,a,,,
