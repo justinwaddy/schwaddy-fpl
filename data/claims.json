@@ -1,837 +1,837 @@
 {
-  "gw": 6,
-  "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-10-05T21:15 UTC",
-  "summary": "Alex Scott's tendon injury (several weeks, Sky Sports) changes the board: he is now a clear drop for Anderson at rank 2, and the Brobbey punt (hamstring, 2-4 weeks quoted earlier) is removed. Haaland went off early for Norway with no reported injury, so I am holding him. Justin is 5th of 6 in the reversed GW6 waiver order, so only Edward claims ahead; waivers close 9 October.",
-  "claims": [
+ "gw": 6,
+ "waivers_close": "2026-10-09T10:00:00Z",
+ "ts": "2026-10-08T08:10 UTC",
+ "summary": "Alex Scott's tendon injury (several weeks, Sky Sports) changes the board: he is now a clear drop for Anderson at rank 2, and the Brobbey punt (hamstring, 2-4 weeks quoted earlier) is removed. Haaland went off early for Norway with no reported injury, so I am holding him. Justin is 5th of 6 in the reversed GW6 waiver order, so only Edward claims ahead; waivers close 9 October.",
+ "claims": [
+  {
+   "rank": 1,
+   "pos": "MID",
+   "add": {
+    "name": "Groß",
+    "code": "60307",
+    "club": "BHA"
+   },
+   "drop": {
+    "name": "Barcola",
+    "code": "482616",
+    "club": "LIV"
+   },
+   "why": "This board declined the model's Groß suggestion every week since GW2 on the grounds that Barcola, a £123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Groß-or-Barcola when it never had to be: Groß has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
+   "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.3 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
+   "confidence": "high",
+   "sources": [
     {
-      "rank": 1,
-      "pos": "MID",
-      "add": {
-        "name": "Groß",
-        "code": "60307",
-        "club": "BHA"
-      },
-      "drop": {
-        "name": "Barcola",
-        "code": "482616",
-        "club": "LIV"
-      },
-      "why": "This board declined the model's Groß suggestion every week since GW2 on the grounds that Barcola, a £123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Groß-or-Barcola when it never had to be: Groß has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
-      "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.3 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
-      "confidence": "high",
-      "sources": [
-        {
-          "url": "https://www.skysports.com/football/news/11661/13586062/brighton-3-0-arsenal-mikel-artetas-side-lose-for-first-time-this-season-as-impressive-hosts-thrash-defending-champions",
-          "title": "Brighton 3-0 Arsenal: Groß scores and sets up the third (Sky Sports, 19 Sep 2026)"
-        },
-        {
-          "url": "https://www.brightonandhovealbion.com/media-article/mft-match-report-pl-bhaars",
-          "title": "Report: Albion 3 Arsenal 0 (brightonandhovealbion.com)"
-        },
-        {
-          "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike",
-          "title": "Iraola on Barcola: \"just cramps... there's no injury\" (liverpoolfc.com, 11 Sep 2026)"
-        }
-      ]
+     "url": "https://www.skysports.com/football/news/11661/13586062/brighton-3-0-arsenal-mikel-artetas-side-lose-for-first-time-this-season-as-impressive-hosts-thrash-defending-champions",
+     "title": "Brighton 3-0 Arsenal: Groß scores and sets up the third (Sky Sports, 19 Sep 2026)"
     },
     {
-      "rank": 2,
-      "pos": "MID",
-      "add": {
-        "name": "Anderson",
-        "code": "215379",
-        "club": "MCI"
-      },
-      "drop": {
-        "name": "Scott",
-        "code": "503139",
-        "club": "BOU"
-      },
-      "why": "New this run: Sky Sports reports Scott withdrew from England with a tendon injury and could miss 'several weeks', with scans planned; the premierleague.com round-up says media reports suggest up to two months. Anderson is the model's own pick and plays Man City's run of fixtures.",
-      "model": "Model has Anderson 18.2 next5 vs Scott 15.4 (avail 0.49) - I agree on the swap, and the news says Scott's 0.49 is generous.",
-      "confidence": "medium",
-      "sources": [
-        {
-          "title": "Alex Scott: Bournemouth midfielder withdraws from England duty and could miss 'several weeks' with tendon injury",
-          "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
-        },
-        {
-          "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
-          "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
-        }
-      ]
+     "url": "https://www.brightonandhovealbion.com/media-article/mft-match-report-pl-bhaars",
+     "title": "Report: Albion 3 Arsenal 0 (brightonandhovealbion.com)"
     },
     {
-      "rank": 3,
-      "pos": "MID",
-      "add": {
-        "name": "Stach",
-        "code": "466525",
-        "club": "LEE"
-      },
-      "drop": {
-        "name": "Lewis-Potter",
-        "code": "249231",
-        "club": "BRE"
-      },
-      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth. (Now rank 3: claim 2 takes Scott's slot, so the midfield would read Tavernier, Sch",
-      "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
-      "confidence": "medium",
-      "sources": [
-        {
-          "url": "https://www.leedsunited.com/en/news/daniel-farke-names-unchanged-side-to-face-palace",
-          "title": "Daniel Farke names unchanged side to face Palace (leedsunited.com, 20 Sep 2026)"
-        },
-        {
-          "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate",
-          "title": "Leeds United and Crystal Palace clash ends in stalemate (leedsunited.com)"
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "pos": "GKP",
-      "add": {
-        "name": "Tzolakis",
-        "code": "473284",
-        "club": "HUL"
-      },
-      "drop": {
-        "name": "Pickford",
-        "code": "111234",
-        "club": "EVE"
-      },
-      "why": "Unchanged from last week and unchanged in substance all month: both keepers have played every minute of all five, neither has a fitness question against him at any permitted source, and the gap is fixture value alone. The recurring 'Pickford out for a month' item that keeps surfacing in searches is the same September 2022 article and is discarded again. This is the smallest gain of the five and the first one to give up if the priority is better spent elsewhere - on the points ledger Tzolakis is 34 to Pickford's 25, but Tzolakis has 2 and 6 in his last two and the separation is mostly Hull's run (EVE, ful, BRE, IPS) against Everton's (hul, CHE, ars, new).",
-      "model": "Model has Tzolakis at 20.0 next5 / 136.9 rest (avail 1.00) against Pickford's 17.7 / 120.1 (avail 1.00) - +2.3 over five, +16.8 over the season. No availability component on either side. The neural network does not list a goalkeeper move at all; it starts Raya and benches Pickford, so on its reading the second keeper's identity barely matters.",
-      "confidence": "medium",
-      "sources": []
-    },
-    {
-      "rank": 5,
-      "pos": "DEF",
-      "add": {
-        "name": "Truffert",
-        "code": "494521",
-        "club": "BOU"
-      },
-      "drop": {
-        "name": "Ajayi",
-        "code": "146426",
-        "club": "HUL"
-      },
-      "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth and just earned his first France call-up. Bogle's case for staying got stronger again today too: he is a nominee for the Premier League's own September Player of the Month award, credited for his goal at Brighton and a starring role in the 4-1 win over Newcastle.",
-      "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
-      "confidence": "low",
-      "sources": [
-        {
-          "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
-          "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
-        },
-        {
-          "title": "Jayden Bogle nominated for September Player of the Month (premierleague.com)",
-          "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
-        }
-      ]
+     "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike",
+     "title": "Iraola on Barcola: \"just cramps... there's no injury\" (liverpoolfc.com, 11 Sep 2026)"
     }
-  ],
-  "previous": [
+   ]
+  },
+  {
+   "rank": 2,
+   "pos": "MID",
+   "add": {
+    "name": "Anderson",
+    "code": "215379",
+    "club": "MCI"
+   },
+   "drop": {
+    "name": "Scott",
+    "code": "503139",
+    "club": "BOU"
+   },
+   "why": "New this run: Sky Sports reports Scott withdrew from England with a tendon injury and could miss 'several weeks', with scans planned; the premierleague.com round-up says media reports suggest up to two months. Anderson is the model's own pick and plays Man City's run of fixtures.",
+   "model": "Model has Anderson 18.2 next5 vs Scott 15.4 (avail 0.49) - I agree on the swap, and the news says Scott's 0.49 is generous.",
+   "confidence": "medium",
+   "sources": [
     {
-      "gw": 5,
-      "ts": "2026-09-17T08:12 UTC",
-      "claims": [
-        {
-          "rank": 1,
-          "pos": "DEF",
-          "add": {
-            "name": "Truffert",
-            "code": "494521",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Collins",
-            "code": "432830",
-            "club": "BRE"
-          },
-          "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
-          "model": "Model has Truffert's next5 at 17.7 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Nathan Collins injury update after Brentford v Sunderland",
-              "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "pos": "DEF",
-          "add": {
-            "name": "Mitchell",
-            "code": "244723",
-            "club": "CRY"
-          },
-          "drop": {
-            "name": "Vuskovic",
-            "code": "610799",
-            "club": "BHA"
-          },
-          "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
-          "model": "Model has Mitchell's next5 at 15.6 (avail 1.00) against Vuskovic's 15.2 (avail 1.00) - both fit, so this is now a fixture-only margin rather than an availability gap; agreeing with the model but at lower conviction than a week ago.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Team news: Palace, three changes, Ipswich",
-              "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "pos": "DEF",
-          "add": {
-            "name": "Hill",
-            "code": "463981",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Milenković",
-            "code": "227444",
-            "club": "NFO"
-          },
-          "why": "Milenkovic's hamstring, found in Friday training before the Aston Villa game, has kept him out since - Nottingham Forest boss Oliver Glasner ruled him out of Saturday's Coventry game too, with a return targeted only for after the international break. ESPN's live commentary from the Villa game remains the clearest permitted account of how the injury first surfaced.",
-          "model": "Model now has Milenkovic at avail 0.00, next5 5.6, with its own news line reading 'Hamstring injury - Expected back 11 Oct', against Hill's 15.7 (avail 1.00) - the model has caught up to the injury, so this claim is now numbers-and-news aligned rather than overruling anything.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
-              "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "pos": "DEF",
-          "add": {
-            "name": "Maguire",
-            "code": "95658",
-            "club": "MUN"
-          },
-          "drop": {
-            "name": "Bogle",
-            "code": "226182",
-            "club": "LEE"
-          },
-          "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
-          "model": "Model has Maguire's next5 at 15.0 (avail 1.00) against Bogle's 14.4 (avail 0.89), purely fixture-and-depth driven - Bogle's Monday-night goal is a reminder that next5 does not capture the kind of explosive return he just delivered. Treat this as the claim most likely to look wrong in hindsight.",
-          "confidence": "low",
-          "sources": [
-            {
-              "title": "Leeds United v Newcastle United match centre",
-              "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "pos": "FWD",
-          "add": {
-            "name": "Fernandez-Pardo",
-            "code": "613221",
-            "club": "NEW"
-          },
-          "drop": {
-            "name": "Marmoush",
-            "code": "438234",
-            "club": "TOT"
-          },
-          "why": "Fernandez-Pardo's full Newcastle debut (Monday's 4-1 defeat at Leeds) did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0 - but that Jaissle trusted a 51m signing with 57 minutes at all is still the more instructive signal than one bad afternoon. Marmoush remains the drop purely on the model's board: Wednesday's Carabao Cup tie at Liverpool saw Kudus make his first Tottenham start since January, but Marmoush also started and played the full 90 in that rotated XI, so nothing there favours dropping him either.",
-          "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
-          "confidence": "low",
-          "sources": [
-            {
-              "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
-              "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
-            },
-            {
-              "title": "Leeds United v Newcastle United match centre",
-              "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-            }
-          ]
-        }
-      ]
+     "title": "Alex Scott: Bournemouth midfielder withdraws from England duty and could miss 'several weeks' with tendon injury",
+     "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
     },
     {
-      "gw": 4,
-      "ts": "2026-09-11T09:05 UTC",
-      "claims": [
-        {
-          "rank": 1,
-          "pos": "DEF",
-          "add": {
-            "name": "Mitchell",
-            "code": "244723",
-            "club": "CRY"
-          },
-          "drop": {
-            "name": "Muñoz",
-            "code": "247348",
-            "club": "NFO"
-          },
-          "why": "Mitchell scored twice as Palace came from behind twice to win 3-2 at Fulham, and has started all three league games. Munoz went the other way in the same window and came on at 59 minutes for Ola Aina on his Forest debut against Tottenham - Neco Williams has played every minute at wing-back and scored 6 and 7 points doing it. Watch one thing: Ben Chilwell has re-signed for Palace and scored the winner at Fulham with his first touch after replacing Mitchell on 73 minutes.",
-          "model": "Model has Mitchell at next5 16.4 (avail 0.98) against Munoz at 6.4 (avail 0.34), the widest gap on the board, and Palace have the kindest run in the league by its own fixture term (+0.5), starting at home to Ipswich. Agree - but note the model is reading Munoz off 85 minutes played while his Palace exit was negotiated, so if Glasner puts the man he signed as a right wing-back specialist straight into his back three, this one ages badly.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Report & Highlights: Palace hit back to stun Fulham for first win of 26/27",
-              "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
-            },
-            {
-              "title": "Starting Lineups - N Forest vs Spurs",
-              "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
-            },
-            {
-              "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace",
-              "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
-            }
-          ]
-        },
-        {
-          "rank": 2,
-          "pos": "MID",
-          "add": {
-            "name": "E.Le Fée",
-            "code": "484420",
-            "club": "SUN"
-          },
-          "drop": {
-            "name": "Barcola",
-            "code": "482616",
-            "club": "LIV"
-          },
-          "why": "Barcola made his first Liverpool start tonight, in the Champions League against Atletico Madrid, and went off holding his calf in the 58th minute - but Iraola confirmed post-match it was cramp, not an injury, and said he was 'very happy' with two clear second-half chances. That removes last night's fresh fitness scare, but the underlying case is unchanged: he still has zero Premier League minutes started this season and goes into Saturday against Fulham fighting Gakpo, Isak and Ngumoha for a place. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford.",
-          "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.4 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree regardless of tonight's cramp/injury correction: Barcola's problem is minutes, not fitness, and that hasn't changed.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener but Bees' unbeaten start continues",
-              "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
-            },
-            {
-              "title": "Bradley Barcola, Cody Gakpo and Milos Kerkez fitness update",
-              "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "pos": "DEF",
-          "add": {
-            "name": "Maguire",
-            "code": "95658",
-            "club": "MUN"
-          },
-          "drop": {
-            "name": "Bijol",
-            "code": "434752",
-            "club": "LEE"
-          },
-          "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. He was recalled for Wednesday's Carabao Cup tie at Chelsea (a 6-3 defeat with eight changes and two debuts), which shows he is fully fit but is a heavily rotated cup side, not evidence he is back ahead of Elvedi in the league XI. Maguire has played every minute of Manchester United's season.",
-          "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction. Note Elvedi, the man now preferred over Bijol, is himself a new-to-pool signing the model rates at just 6.5 next5 off two games (avail 0.46) - too thin a sample to claim ahead of Bijol, so Maguire's proven full-season 15.5 is the safer target, not Elvedi.",
-          "confidence": "medium",
-          "sources": [
-            {
-              "title": "Team News: Brighton & Hove Albion vs Leeds United",
-              "url": "https://www.leedsunited.com/en/news/team-news-brighton-and-hove-albion-vs-leeds-united"
-            },
-            {
-              "title": "Starting Lineups - Everton vs Man Utd",
-              "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
-            }
-          ]
-        },
-        {
-          "rank": 4,
-          "pos": "DEF",
-          "add": {
-            "name": "Hill",
-            "code": "463981",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Collins",
-            "code": "432830",
-            "club": "BRE"
-          },
-          "why": "Brentford's captain was forced off after 17 minutes against Sunderland and Keith Andrews said only 'it's a calf strain, I don't know the extent'. Two days on the club has still published no scan result and no timeline, and Brentford are away at Bournemouth in GW4. Hill has played every minute for Bournemouth and faces Brentford at home in the same fixture.",
-          "model": "Model has Hill at next5 15.9 (avail 0.98) against Collins at 10.9 (avail 0.20). The +5.0 is honest rather than injury-inflated - the model already has Collins back and scoring normally from GW5, so this is Hill being the better defender over the run, not just the fitter one this week.",
-          "confidence": "medium",
-          "sources": [
-            {
-              "title": "Nathan Collins injury update after Brentford v Sunderland",
-              "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
-            },
-            {
-              "title": "Newcastle 2-2 Bournemouth - Game Analysis",
-              "url": "https://www.espn.com/soccer/report/_/gameId/401879286"
-            }
-          ]
-        },
-        {
-          "rank": 5,
-          "pos": "MID",
-          "add": {
-            "name": "Scott",
-            "code": "503139",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Garner",
-            "code": "232928",
-            "club": "EVE"
-          },
-          "why": "The one to skip if you want to skip one. Garner was substituted in the 77th minute against Man Utd and now carries an unspecified injury with a 75% chance of playing, but 75% is not an absence, and he has been building back from July groin surgery at 11, 61 and 76 minutes - the trend is upward, not downward. Scott is the safer body: every minute for Bournemouth, a goal and an assist in the last two. Submit last so it only lands if the four above have.",
-          "model": "Model has Scott at next5 16.6 (avail 0.96) against Garner at 9.7 (avail 0.50) and puts this swap on its own board at +7.0. Partly overruling it: the 0.50 is measured off the games Garner missed recovering from surgery, so if the knock passes he is worth far more than 9.7 and this becomes a downgrade.",
-          "confidence": "low",
-          "sources": [
-            {
-              "title": "Starting Lineups - Everton vs Man Utd",
-              "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
-            },
-            {
-              "title": "Alex Scott strike cancelled out by late Tarkowski leveller | AFC Bournemouth 1-1 Everton",
-              "url": "https://www.premierleague.com/en/news/4700601/match-highlights-afc-bournemouth-1-1-everton"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "gw": 3,
-      "ts": "2026-09-03T14:41 UTC",
-      "claims": [
-        {
-          "rank": 1,
-          "pos": "FWD",
-          "add": {
-            "name": "Igor Jesus",
-            "code": "482973",
-            "club": "NFO"
-          },
-          "drop": {
-            "name": "Woltemade",
-            "code": "470313",
-            "club": "NEW"
-          },
-          "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
-          "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
-          "confidence": "high",
-          "sources": []
-        },
-        {
-          "rank": 2,
-          "pos": "MID",
-          "add": {
-            "name": "Rayan",
-            "code": "499604",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Eze",
-            "code": "232413",
-            "club": "ARS"
-          },
-          "why": "Eze is still stuck behind Arsenal's front line under Arteta with no sign of a minutes trend pointing up. Rayan is confirmed in Bournemouth's predicted attacking three alongside Kluivert and Tavernier for the Newcastle game, and is being talked up as a breakout name this season.",
-          "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
-              "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "pos": "MID",
-          "add": {
-            "name": "Groß",
-            "code": "60307",
-            "club": "BHA"
-          },
-          "drop": {
-            "name": "Garner",
-            "code": "232928",
-            "club": "EVE"
-          },
-          "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
-          "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
-          "confidence": "low",
-          "sources": []
-        }
-      ]
+     "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+     "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
     }
-  ],
-  "runs": [
+   ]
+  },
+  {
+   "rank": 3,
+   "pos": "MID",
+   "add": {
+    "name": "Stach",
+    "code": "466525",
+    "club": "LEE"
+   },
+   "drop": {
+    "name": "Lewis-Potter",
+    "code": "249231",
+    "club": "BRE"
+   },
+   "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth. (Now rank 3: claim 2 takes Scott's slot, so the midfield would read Tavernier, Sch",
+   "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
+   "confidence": "medium",
+   "sources": [
     {
-      "ts": "2026-09-04T21:10 UTC",
-      "gw": 4,
-      "claims": 3,
-      "note": "No change. Fresh club-by-club sweep ~8 hours later re-confirmed all three claims (Igor Jesus/Marmoush, Le Fee/Barcola, Rayan/Doku) plus checked Bijol, Garner and the rest of the squad for anything that would open a fourth claim - nothing did. Reports naming Aina ahead of Munoz at Forest right wing-back surfaced but only through unpermitted outlets, so Munoz was not added as a drop candidate on that alone."
+     "url": "https://www.leedsunited.com/en/news/daniel-farke-names-unchanged-side-to-face-palace",
+     "title": "Daniel Farke names unchanged side to face Palace (leedsunited.com, 20 Sep 2026)"
     },
     {
-      "ts": "2026-09-05T08:12 UTC",
-      "gw": 4,
-      "claims": 3,
-      "note": "Reordered rather than changed: Le Fee/Barcola and Rayan/Doku swap to ranks 1-2 (Barcola still bench-bound for today's Ipswich debut, Doku still out for today's Coventry game) and Igor Jesus/Marmoush drops to rank 3 at low confidence, since Marmoush is now a confirmed Tottenham starter alongside Igor Jesus at Forest, leaving this as a pure model-number swap rather than a bench-risk case. Also confirmed via Palace's own site that Mateta is out three weeks with a hamstring injury, which secures Strand Larsen's role further but does not open a fourth claim since he is already kept, not dropped. No other squad member's situation changed."
-    },
-    {
-      "ts": "2026-09-05T21:21 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Full round of GW3 matches produced real news the model can't see: Igor Jesus was not even in Forest's 18 today (Delap started, Wood the sub), killing the Igor Jesus/Marmoush claim outright since Marmoush started and played 84 minutes for Spurs - dropped rather than replaced, since Marmoush is now clearly the stronger, more secure player of the two. In its place, two fresh DEF claims from today's confirmed lineups: Bijol was benched for the first time this season at Leeds (Elvedi/Muharemovic started), and Munoz was again only an impact sub at Forest, reinforcing his existing low model rating - both sourced directly off Sky Sports lineup pages rather than predicted-XI aggregators. A fifth, low-confidence claim was added on the back of Nathan Collins' calf strain (forced off after 17 minutes for Brentford, severity unknown) as a hedge, since the model does not yet reflect it at all. Le Fee/Barcola and Rayan/Doku carried forward with fresh sourcing (Le Fee's penalty and man-of-the-match display, Doku confirmed absent from City's 18 vs Coventry) and Le Fee/Barcola upgraded to high confidence given how comprehensively Barcola remains unintegrated."
-    },
-    {
-      "ts": "2026-09-06T08:11 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made after a full overnight club-by-club sweep. Corrected the summary's stale 'bottom of the table' line - Justin is actually third of six on 121 points, so his claims process fourth in the six-team priority order, not first. Refreshed every model line with the latest next5/availability numbers, which have moved further toward the news on Bijol (12.7, down from 15.4) and Collins (12.5, down from 16.5) as the model catches up. Doku's return date still cannot be pinned down on a permitted source - only Sports Mole, goal.com and bet365 speculate anywhere from City's next match to mid-October, none of them citable - so his claim stands as before. Also checked Garner (described this morning as Everton's standout performer in league play, reinforcing the decision not to add a sixth claim there) and found nothing to change Munoz, Barcola or the free-agent targets."
-    },
-    {
-      "ts": "2026-09-06T21:10 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made. Corrected the league position again with this run's fresh table: Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order (reverse table order), not fourth. Today's final round of GW3 matches confirmed rather than changed the picture: Garner started the full 90 for Everton (2-2 draw with Man Utd) and Raya started Arsenal's 2-1 comeback win over Chelsea, both exactly as already priced in - no sixth claim opened there. Refreshed model numbers moved further toward the news on Doku (avail down to 0.00, was 0.11) and Collins (avail down to 0.20, was 0.60). Also checked Haaland and Gvardiol (both fit and rated well against Coventry, no concern) and found nothing new on Munoz, Bijol or the free-agent targets."
-    },
-    {
-      "ts": "2026-09-07T08:14 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made. Refreshed Le Fee/Barcola sourcing with a post-debut Iraola quote (ESPN) rather than the pre-match preview used last time. Investigated Crystal Palace confirming Eddie Nketiah, not Strand Larsen, started at Fulham (Strand Larsen on only from half-time) but did not turn it into a claim: the model already rates the two within 0.5 of each other and Palace itself describes a genuine three-way rotation with Mateta, so it is flagged in the summary and as a headline rather than acted on. Also confirmed the model is still overrating Igor Jesus (not even in Forest squad list latest, per Tuesday) and left him out despite the model itself proposing that swap."
-    },
-    {
-      "ts": "2026-09-07T14:39 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Early manual fire ahead of GW4 waivers (Justin choosing today rather than tonight's run). Swapped Botman/Bijol out and Scott/Garner in at rank 4: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing), reversing Saturday night's 'played the full 90' read, and the model's own greedy board now proposes this exact swap. Also upgraded Le Fee/Barcola and Gross/Doku to high confidence (Doku's return now pointed to 13 September, after GW4's own deadline) and switched the Munoz swap from Hill to Mitchell, who scored twice in Palace's first win of the season - Hill moves to the Collins hedge at rank 5 instead. Collins and Munoz themselves unchanged: still no Brentford timeline, still an impact sub at Forest, with no fresh GW3 fixtures for either club since Friday/Saturday's already-published results."
-    },
-    {
-      "ts": "2026-09-07T14:48 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Second manual run today, going deeper on the GW4 appearance question. Two changes against the 14:39 board. Dropped the Gross/Doku claim: the model's per-gameweek line for Doku is 0.0, 0.4, 0.6, 0.9, 0.7 over GW4-8, i.e. it never recovers him at all, so its next5 of 2.5 is a floor rather than a forecast for a player the API expects back on 13 September - he misses one gameweek. Restored the Bijol claim at rank 3 against Maguire, sourced to Leeds' own team news naming him on the bench at Brighton, with minutes going 90/45/29; the model's avail 0.75 makes its +3.0 too small. Kept Mitchell/Munoz at 1, Le Fee/Barcola at 2, moved Hill/Collins to 4 and raised it from low to medium (the model already has Collins fit from GW5, so the gap is real, not injury-inflated), and left Scott/Garner at 5 but cut it to low: 75% is not an absence and Garner's minutes have been climbing back from July groin surgery. Also added the caveat that Ben Chilwell has re-signed for Palace and replaced Mitchell on 73 minutes at Fulham."
-    },
-    {
-      "ts": "2026-09-07T21:15 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~6.5 hours after the last update. Full club-by-club sweep found nothing that moves any of the five: Collins' calf still has no confirmed timeline from Brentford's own site, Bijol has had no fresh Leeds team news since last week's Brighton bench call, and Munoz remains an impact sub for Forest rather than a confirmed starter (fantasy-site chatter that he is now nailed on did not clear a permitted source, so it changes nothing here). Maresca said today only that City are 'not sure yet' whether Doku is back for the 13 September derby - restates the existing doubt without changing it, since that fixture falls after GW4's own deadline either way. Also checked Le Fee, Barcola, Strand Larsen, Maguire (took a bloody nose against Everton but played on, no fitness concern) and Scott/Hill at Bournemouth - all confirmed exactly as already priced into this file."
-    },
-    {
-      "ts": "2026-09-08T08:10 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~11 hours after last night's sweep. Fresh club-by-club round (Palace, Sunderland, Man Utd, Bournemouth, Brentford, Leeds, Man City among them) confirmed rather than moved anything: Mitchell has no fresh fitness concern beyond an unpermitted preview mentioning an EFL Cup doubt (discarded, wrong competition and not sourced to a permitted outlet), Le Fee remains first-choice at Sunderland with no injury news, Bijol is still behind Elvedi at Leeds with no new Leeds team news since Brighton, Collins' calf still has no confirmed Brentford timeline, and Garner has had no fresh update on his 75% figure. Doku still projected for the 13 September derby, a day after GW4's own deadline, unchanged from last night."
-    },
-    {
-      "ts": "2026-09-08T21:12 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~13 hours after this morning's run. Strengthened the Maguire/Bijol reasoning: Elvedi, the man Leeds are now picking ahead of Bijol, is himself only a two-game sample the model rates at 6.5 next5 (avail 0.46) - the model's new-signing blind spot cuts both ways here, and it argues for Maguire's proven number over chasing Elvedi, not against the swap. Investigated but could not confirm on a permitted source: reports that Bijol was seen with Leeds medical staff in the Brighton warm-up (only Yahoo/aggregator reprints of BBC Radio Leeds commentary), and reports that Sage now has Nketiah sidelined with Strand Larsen the clear leader for Ipswich (only Sports Mole/Yahoo/lastwordonsports previews for the Middlesbrough League Cup tie) - neither changes a claim since Bijol is dropped regardless and Strand Larsen is already kept, not added. Everything else (Mitchell/Munoz, Le Fee/Barcola, Hill/Collins, Scott/Garner) reconfirmed exactly as this morning."
-    },
-    {
-      "ts": "2026-09-10T08:35 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~11 hours after last night's board. Corrected the Le Fee/Barcola case: liverpoolfc.com quotes Iraola confirming last night's calf scare was cramp, not injury - the swap now rests on Barcola's lack of Premier League minutes alone. Also noted Bijol was recalled for Leeds' heavily-rotated Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts), which shows he's fit but does not resolve his league pecking order behind Elvedi. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland and Brighton. Checked and discarded: a search-index result claiming Marmoush suffered a Man City-era knee injury 'ahead of the Manchester derby' traced back to a stale ESPN pair from 9-10 September 2025, a full year old, from before his move to Spurs - not current, not published."
-    },
-    {
-      "ts": "2026-09-10T21:16 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~12.5 hours after this morning's board. Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) found nothing that moves any of the five. Confirmed unchanged: Bijol still behind Elvedi in Leeds' own team news, Collins' calf still has no scan result or timeline from Brentford's own site, Doku still stuck on Maresca's 'we're not sure yet' for the 13 September derby (after GW4's own deadline regardless), Barcola's cramp-not-injury already reflected from this morning, and Le Fee, Maguire, Hill and Scott all reconfirmed fit and starting. Investigated but not a claim target: Saliba's back injury (already priced into the model at avail 0.01, and he is a free agent, not on any squad in the league)."
-    },
-    {
-      "ts": "2026-09-11T09:05 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to the five claims, final sweep before the 12:30 UTC deadline. Corroborating detail only: Alex Scott's full name and regular-starter status confirmed (premierleague.com, ESPN, Sky Sports, afcb.co.uk); Chilwell's move to Palace reconfirmed as a permanent transfer, still not yet a threat to Mitchell; Maguire handed a contract extension at Man Utd (manutd.com), a confidence signal on top of his already-nailed status; Doku's 7 September 'not sure yet' on the derby is now sourced directly to premierleague.com with nothing fresher published since."
-    },
-    {
-      "ts": "2026-09-11T21:17 UTC",
-      "gw": 5,
-      "claims": 4,
-      "note": "First GW5 board, built the morning after GW4 waivers processed. Four claims rather than five: Collins (confirmed calf strain, no Brentford timeline) is the one clear need, Mitchell/Vuskovic and Hill/Bogle are modest fixture-driven upgrades with no news against either incumbent, and Igor Jesus/Strand Larsen is a low-confidence numbers-only punt after this week's research could not pin down Forest's forward pecking order to a permitted source. Explicitly did not follow the model's own greedy suggestion to swap Barcola for Stach - Liverpool's own site has Iraola saying Barcola 'should be available' for Saturday's Fulham game after Friday's cramp scare, and he is trending toward a second start, not a sale, even though the model still rates him near the bottom of the board."
-    },
-    {
-      "ts": "2026-09-12T08:20 UTC",
-      "gw": 5,
-      "claims": 3,
-      "note": "Dropped the Igor Jesus/Strand Larsen speculative punt, four claims down to three - cpfc.co.uk's own Carabao Cup report has Strand Larsen scoring twice against Middlesbrough, strengthening rather than weakening his case to start over Nketiah at Ipswich this afternoon, while Forest's pecking order for Igor Jesus still can't be pinned to a permitted source. Truffert/Collins, Mitchell/Vuskovic and Hill/Bogle carried forward unchanged after today's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham) found nothing that moves any of the three. Discarded a stale 2024 arsenal.com article wrongly resurfacing as fresh 'Raya injury' news, a Schade suspension and a Collins-vs-Newcastle preview that both matched a future fixture rather than this week's, and the recurring stale claim that Gvardiol has missed City's whole season, already refuted by Sky Sports' own lineup pages."
-    },
-    {
-      "ts": "2026-09-12T21:20 UTC",
-      "gw": 5,
-      "claims": 4,
-      "note": "Redirected the weakest defensive claim from Hill-for-Bogle to Hill-for-Milenkovic after today's model re-ranking (Milenkovic's own avail figure dropped to 0.60); could not confirm the underlying story to any permitted source (a widely-repeated Milenkovic/Cunha hamstring tale traced back to Yahoo Sports/hayters.com aggregator copy that also wrongly credited Milenkovic with a goal actually scored in a real December 2024 match), so the claim rests on the model's numbers alone rather than the injury story. Upgraded the Mitchell-for-Vuskovic claim with a fresh cpfc.co.uk citation confirming Mitchell nailed at wing-back for today's Ipswich game. Confirmed Truffert/Collins and Maguire/Bogle unchanged. Kept Barcola over Stach for a third straight week - liverpoolfc.com confirms his second start in four days (Tuesday's Champions League tie plus today's Fulham game) while the model still rates him near the bottom of the board."
-    },
-    {
-      "ts": "2026-09-13T09:15 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Added a fifth, speculative claim - Fernandez-Pardo for Marmoush - after Newcastle's own site quoted Jaissle saying the 51m deadline-day signing is 'getting closer to starting'; the model still has him bottom of the forward pool off zero games, the same blind spot flagged on Barcola for weeks. The four defensive claims (Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle) carry forward unchanged - today's sweep reconfirmed Collins' timeline, Mitchell's start, and Bournemouth's back line, and again failed to find a permitted source for the recurring Milenkovic-omitted-at-Villa story, so that claim stays numbers-only as it was last week."
-    },
-    {
-      "ts": "2026-09-13T21:10 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Downgraded Hill/Milenkovic from medium to low confidence: ESPN's match report confirms Milenkovic and Cunha both played the full 90 in Forest's 2-1 win at Villa Park, resolving the recurring hamstring-doubt story in his favour, so the claim now rests on fixture numbers alone with the fitness angle gone. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after tonight's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle). Two other stories were chased down and discarded as stale: a Raya knee-injury story traced to a 27 September 2024 arsenal.com article, and a Schade red-card suspension traced to a 1 February 2026 incident already served."
-    },
-    {
-      "ts": "2026-09-14T08:11 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Corrected claim 3: last night's claim that Milenkovic/Cunha started the full 90 traced to a citation (espn.com/soccer/report/_/gameId/401879284) that on closer reading does not even mention either player - the actual ESPN match page's live commentary states both dropped out of the squad with hamstring tightness. Re-sourced to the correct ESPN URL and raised confidence from low back to medium given the confirmed, ongoing absence (also set to miss Coventry). The other four claims (Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle, Fernandez-Pardo/Marmoush) carry forward unchanged."
-    },
-    {
-      "ts": "2026-09-14T21:45 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Updated claims 4 and 5 on hard evidence from tonight's Leeds 4-1 Newcastle game: Bogle scored (weakens the case for dropping him for Maguire, now the shakiest claim on the board) and Fernandez-Pardo got his full debut but struggled, hooked at 3-0 (a real data point at last, tempering but not killing the case for picking him up). Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic carry forward unchanged - Milenkovic confirmed out for Coventry too. Also noted: Justin's win this week moved him up to 2nd in the table, which paradoxically drops him to 5th of 6 in the reversed GW5 waiver order, worse than this morning's 4th."
-    },
-    {
-      "ts": "2026-09-15T08:20 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Palace, Man Utd, Newcastle, Sunderland) reconfirmed Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush exactly as last night. Investigated but could not use: reports that Milenkovic is out past Coventry into the international break, sourced only to Yahoo/OneFootball/a Forest fan site, not a permitted outlet - changes nothing anyway since the model already has him at 0.00 availability. Brobbey (free agent FWD, not currently claimed) reconfirmed a nailed Sunderland starter with nothing to change the model's read on him."
-    },
-    {
-      "ts": "2026-09-15T21:20 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Evening sweep (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus general PL injury/lineup searches. Nothing cleared the sourcing bar for a change: Milenkovic's extended hamstring timeline is now already reflected in the model's own avail/next5 figures, so refreshed claim 3's model line and lifted it to high confidence rather than treating it as new news. Checked and found unmoved: Marmoush is being previewed as a likely Spurs starter for Sunday's Villa game by unpermitted predicted-XI sites only, no permitted outlet has confirmed it, so no change to claim 5's reasoning; Fernandez-Pardo's next Newcastle game is away at Hull on the 19th with no fresh team news yet; Bogle, Mitchell, Vuskovic, Truffert, Collins and Hill all reconfirmed exactly as already reported. Next scheduled team-news pressers land Thu/Fri before Thursday's waiver close, so expect the next material change then."
-    },
-    {
-      "ts": "2026-09-16T21:13 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~23.5 hours after last night's board, with tomorrow's 17:30 UTC waiver close now under a day away. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check found nothing that clears the sourcing bar. Chased down and discarded a Tottenham team-news piece on Maddison/Kudus that read live on tottenhamhotspur.com turned out to be the same 11 September article already used for an earlier headline, not new, and it never mentions Marmoush at all - no change to claim 5's reasoning. Milenkovic's hamstring timeline and Palace's Nketiah/Sarr fitness doubts both resurfaced only via unofficial fan sites (nottinghamforest.news, Yorkshire Evening Post, Sports Mole), not a permitted outlet. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all reconfirmed exactly as last night. Thursday and Friday's pre-match pressers, which land after the waiver close, remain the likely source of the next material change - if nothing further comes in before then, this board stands as final."
-    },
-    {
-      "ts": "2026-09-17T08:12 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Final pre-close sweep. No change to which five claims are made or their order. Confirmed Kudus's first Tottenham start since January (Carabao Cup vs Liverpool) but Marmoush also started and played the full 90 in that heavily-rotated XI, so no change to claim 5's reasoning beyond noting it. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic and Maguire/Bogle all reconfirmed exactly as last night after a full club-by-club sweep. This board stands as final for the GW5 window unless something changes before 17:30 UTC."
-    },
-    {
-      "ts": "2026-09-18T21:11 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full club-by-club sweep found nothing that clears the sourcing bar: Truffert's first France call-up is a positive but incremental confirmation of claim 2, not new information about his standing at Bournemouth. Investigated and discarded several stale-dated stories that would otherwise have looked like fresh injury news - Schade/surgery (traces to a January 2026 Everton fixture that hasn't happened yet this season), Raya/knee (contradicted by his own four full 90s), Ajayi/hamstring (traces to the 22 August season opener) and Gvardiol/broken leg (contradicted by his own recent minutes) - none of which are squad or shortlist players whose claim status would change anyway. Marmoush/Kudus/Maddison at Tottenham unchanged; Timber started Palace's Europa League tie on top of his Ipswich start, no change to claim 5's reasoning."
-    },
-    {
-      "ts": "2026-09-19T21:14 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Today's GW5 round confirmed Raya's fitness (ending the recurring stale injury story) and gave live proof of the model's own declined Gross-for-Barcola suggestion (Gross scored in Brighton's 3-0 win at Arsenal) - refreshed claim 3's model line with that detail but kept the decision to stick with Barcola. Palace's Sage confirmed Mateta and Henderson are targeted for after the international break, which is not a claims change (Strand Larsen is kept, not a claim target) but firms up why he's not at risk. League position update: Edward has moved to 1st on 240 points, dropping Justin (230, tied 2nd with Marcus) to 5th of 6 in the reversed waiver order, an improvement on yesterday's 6th."
-    },
-    {
-      "ts": "2026-09-20T21:12 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "Corrected claim 2: Bogle actually started and was booked against Palace today, so this morning's benching report was wrong and is retracted; the swap now rests on fixture/production value only. Reinforced claims 3 and 5 with today's confirmed Leeds and Palace lineups (Stach and Timber both started). No change to which five claims are made or their order otherwise."
-    },
-    {
-      "ts": "2026-09-21T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Investigated and discarded a Brentford 'Lewis-Potter facing two months out' story that traced to a stale, years-old page (Thomas Frank era) rather than current news - Brentford's own archive under Keith Andrews confirms he is fit and starting, so claim 3 stands on fixture/production grounds only, now more firmly. Barcola started and was subbed again in Sunday's Bournemouth defeat, reinforcing rather than changing the decision to decline the model's own Gross-for-Barcola suggestion. Everton, and most of the division, now enter a three-week gap for the international break; the next material team news is likely to come from pressers in the run-up to games resuming around 11 October, well before this window's 9 October waiver close."
-    },
-    {
-      "ts": "2026-09-21T21:08 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "First sweep after the international break began. No change to which players are targeted, but two fixes to the file itself: claims 1 and 3 had grown past this file's 700-character limit on 'why' and are trimmed to the same substance; and claim 5 (Le Fée-for-Lewis-Potter) was an illegal duplicate of claim 2's drop, so it is replaced with Truffert-for-Ajayi, a model-only, low-confidence punt on Justin's thinnest defensive slot once Bogle is set aside. Research turned up nothing that changes a target: England's official squad leaves Bogle out despite pre-announcement speculation, not a claims matter since he was never a target; Stach is away with Germany, already known; Groß, Brobbey and Tzolakis unaffected by anything the international window has produced so far; Nketiah's brief fitness issue at Palace (since resolved) does not touch claim 3, since Strand Larsen is Justin's own player and Mateta/Henderson remain out past the break regardless. League position unchanged: Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. This board stands with 18 days and no squad-club football left before the 9 October waiver close."
-    },
-    {
-      "ts": "2026-09-22T08:06 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full sweep (16 searches) found nothing that touches a target: Stach's Germany call-up and clean bill of health reconfirmed in detail via leedsunited.com's own feature (old ankle injury from May, fully healed, playing every league game since); Truffert, Tavernier, Scott, Bogle, Ajayi, Vuskovic, Marmoush, Van Hecke, Gvardiol, Haaland, Barcola, Lewis-Potter and Schade all reconfirmed fit with nothing citable that changes a status. One bad lead caught and discarded before use: a search result describing a Bournemouth Europa League game at Real Sociedad does not check out against afcb.co.uk's own news feed and was not used for anything. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order. No PL fixtures have been played since last night's run; the division stays idle for the international break until around 11 October, well ahead of the 9 October waiver close."
-    },
-    {
-      "ts": "2026-09-22T21:12 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Evening sweep found nothing that touches a target: the recurring Sky Sports 'Pickford out for a month' story resurfaced again and was re-confirmed as the same 7 September 2022 piece, not current; Gross's own club news feed (brightonandhovealbion.com) carries no injury story, so an unpermitted claim that he was ruled out v Newcastle is not used and claim 1 stands; Sunderland's own news feed (safc.com) has nothing on Brobbey either way, so claim 3 stands unchanged; Truffert's France recall and Stach's clean bill of health with Germany both reconfirmed but already priced into this board since earlier in the week. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. The international break continues with no squad-club football until around 11 October, well ahead of the 9 October waiver close."
-    },
-    {
-      "ts": "2026-09-23T08:30 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. International break sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL injury/transfer searches, ~16 queries. Found and verified on cpfc.co.uk a fresh Sage quote differentiating Henderson ('more sure') from Mateta ('more uncertain... I maybe can give you the best answer in two weeks') on their post-break return - reinforces rather than changes claim 3, since it is Strand Larsen who is being dropped from this board, not added. Checked and found nothing citable that changes a status: Kostoulas and Groß both scored again in the EFL Cup and against Arsenal respectively but both are already fully priced (Groß already claim 1, Kostoulas not a squad or shortlist player); Iraola called Barcola's Bournemouth start (his third) 'the best is still to come' but offered no new fact beyond what is already on the board; Raya was named the league's Player of the Matchweek for his derby-defining penalty save, no fitness angle; Lewis-Potter's wing-back competition with Aaron Hickey checked directly and found no confirmed change to his starting role. Rayan Cherki's quad tear (7-8 weeks) is a Man City new-signing story but he is neither a squad nor shortlist player. League position unchanged: Justin 2nd of 6 on 252 points."
-    },
-    {
-      "ts": "2026-09-23T21:05 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Second sweep today (19 searches) chased down three leads that read like fresh injuries for squad players - Tavernier (hamstring), Bogle (foot) and Stach (ankle) - and all three traced to stale, already-resolved dates from before this season (January, last season's Wolves/Chelsea run, and a May 2026 cut respectively), so nothing changes for claims 2, 3 or 5. Brobbey's hat-trick and transfer interest are already priced into claim 3; Barcola coverage (Iraola: lacking freshness, still the club's priority signing) restates rather than changes claim 1. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him."
-    },
-    {
-      "ts": "2026-09-24T21:08 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "Claim 3 (Brobbey/Strand Larsen) downgraded from medium to low confidence: Sky Sports confirms Brobbey was taken off after 35 minutes of tonight's Netherlands 1-1 Germany draw, pointing to his right leg, with no diagnosis yet - confirmed independently via ESPN's own match data (substituted 35', only 11 touches). Claims 1, 2, 4 and 5 unchanged after a full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL sweeps, ~18 searches. Two other leads chased and discarded as stale once read in full: a 'Kevin Schade set for surgery, out for months' story traces to a September 2023 adductor injury (Wikipedia and Soccerway both date the recovery to April 2024), not current; Stach, Bogle, Ajayi, Van Hecke, Gvardiol and Haaland all reconfirmed fit on international duty with nothing new. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
-      "ts": "2026-09-25T08:35 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Fetched Sky Sports' own Netherlands 1-1 Germany match report directly, which firms up claim 3's sourcing by confirming in the outlet's own words that Brobbey was 'taken off with what appeared to be a hamstring injury' - previously only cited via a live blog. Still no diagnosis or timeline from Sunderland, so confidence stays low rather than moving either way. Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland, Hull for Tzolakis) and general PL sweeps, 20 searches. Investigated and discarded: a Pascal Gross 'ruled out, undisclosed injury' story quoting Fabian Hurzeler, who is not Brighton's manager, and directly contradicted by Gross scoring and starting against Arsenal five days ago; Stach came on for 26 minutes off the bench for Germany against the Netherlands, fit but a squad option internationally, no change to his Leeds status; Gvardiol's recurring 'broken leg' story resurfaced again and is again the same discredited item. Everything else reconfirmed unchanged: Pickford, Raya, Bogle, Ajayi, Van Hecke, Marmoush, Vuskovic, Haaland, Barcola, Lewis-Potter, Scott, Tavernier and Truffert. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
-      "ts": "2026-09-25T21:06 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Evening sweep (18 searches) re-confirmed Brobbey's injury via Sky Sports and Sunderland's own reporting on last Thursday's Netherlands 1-1 Germany draw - Xavi Hernandez has confirmed he is injured and back on Wearside, but neither Sunderland nor any permitted outlet has given a diagnosis or return date yet, so claim 3 holds at low confidence rather than moving either way. Stach reconfirmed fit via Sky Sports' own recent Forest match report (matchwinner with a late free-kick), no ankle issue. Gross's 'ruled out by Fabian Hurzeler' story resurfaced again in search results and was discarded again - contradicted by his own goal and start against Arsenal on the 19th, with nothing from a permitted outlet since. Tzolakis and Truffert both reconfirmed fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
-      "ts": "2026-09-26T08:07 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made. Deep club-by-club sweep of every squad club plus the free-agent shortlist clubs (Brighton, Leeds, Sunderland) found nothing that clears the sourcing bar for a change. Chased Brobbey's injury status in depth: ESPN (permitted) confirms Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, but a 'two to four weeks' timeline circulating on non-permitted sites (TeamTalk, Sunderland Echo, LiveScore) could not be traced to safc.com or any permitted outlet, and one version of the quote misattributes the injury to the wrong game - discarded as unreliable, so claim 3's why was refreshed with the confirmed detail but its confidence is unchanged."
-    },
-    {
-      "ts": "2026-09-27T08:35 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Bogle and Gross both nominated for the Premier League's own September Player of the Month award (premierleague.com) - reinforcing claim 5's case for keeping Bogle over Truffert and claim 1's Gross-for-Barcola swap. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Brighton, Leeds, Bournemouth, Hull), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023 from the Thomas Frank era; the same outlet's Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Brobbey's availability dropped from 0.90 to 0.68 in the model's own numbers this week as its news field picked up the hamstring doubt, but no permitted outlet has published a diagnosis or timeline, so claim 3 stays at low confidence. Everything else reconfirmed unchanged: Pickford, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
-      "ts": "2026-09-27T21:11 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Kevin Schade's September Player of the Month nomination (brentfordfc.com) adds to Bogle's and Gross's from this morning - all three fit and undisturbed, so no claim moves on it. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Coventry, Ipswich), ~20 searches. A 'Brobbey out 2-4 weeks, injured against Fulham' result contradicted the established Netherlands-Germany hamstring story and could not be verified at safc.com or any permitted outlet, so not used - claim 3 unchanged at low confidence. Discarded as stale on direct check: Gvardiol 'broken leg, out for the season' (last season's January-May injury, long recovered), Tavernier and Bogle 'injury' stories (old leedsunited.com/afcb.co.uk pieces from last season or before, contradicted by this year's own minutes and today's Bogle nomination). Truffert's full 90 and clean sheet on his France debut only reached non-permitted outlets, so held rather than published, though it reinforces his fitness. Emersonn's two goals in his last two Ipswich starts are real (ESPN) but both games are over a week old, so not fresh enough to publish. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
-      "ts": "2026-09-28T08:20 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full club-by-club sweep (all 11 squad clubs plus Sunderland, Coventry, Fulham, Nottingham Forest for free-agent shortlist), ~25 searches, plus today's international-duty injury list (Havertz, Gakpo, Kluivert, Malen - none of them squad or shortlisted players). Chased and discarded: a recurring 'Tavernier hamstring, out at Brighton' story that traces via afcb.co.uk's own URL to 23 January 2026 (last season); a 'Brobbey out 2-4 weeks' vs 'Brobbey out 6-8 weeks' pair of results that contradict each other and neither is traceable to safc.com or a permitted outlet's own account of a Le Bris quote, so claim 3's timeline is still unknown rather than firmed up either way; a Lewis-Potter 'dropped for Hickey' item with no confirmation at brentfordfc.com or any permitted outlet. Gross, Stach, Tzolakis, Truffert and Bogle all reconfirmed fit and undisturbed."
-    },
-    {
-      "ts": "2026-09-28T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening check found no news affecting squad or shortlisted players; claims carried forward."
-    },
-    {
-      "ts": "2026-09-29T08:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break injuries touch none of the squad or shortlist; Brobbey diagnosis still unconfirmed at a permitted outlet."
-    },
-    {
-      "ts": "2026-09-29T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening check found nothing new at a permitted outlet."
-    },
-    {
-      "ts": "2026-09-30T08:20 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break injury round-ups found nothing affecting squad or claim targets."
-    },
-    {
-      "ts": "2026-09-30T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening injury round-ups found nothing new at a permitted outlet."
-    },
-    {
-      "ts": "2026-10-01T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change; no new squad-relevant news found, claims carried forward."
-    },
-    {
-      "ts": "2026-10-01T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break injury round-ups show nothing new for the squad or shortlist."
-    },
-    {
-      "ts": "2026-10-02T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break round-ups show nothing new for the squad or shortlist."
-    },
-    {
-      "ts": "2026-10-02T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: premierleague.com round-ups show nothing new; Brobbey return reported as 10 October, claim 3 stays low."
-    },
-    {
-      "ts": "2026-10-03T08:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new permitted-source news on any squad or shortlisted player; Van Hecke foot knock (reported withdrawal from Netherlands duty) unconfirmed, not acted on."
-    },
-    {
-      "ts": "2026-10-03T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: premierleague.com internationals round-up shows nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
-    },
-    {
-      "ts": "2026-10-04T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break searches show nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
-    },
-    {
-      "ts": "2026-10-04T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening sweep found nothing new; claims carried forward."
-    },
-    {
-      "ts": "2026-10-05T08:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: board unchanged from last run; no new fitness news on squad or shortlist."
-    },
-    {
-      "ts": "2026-10-05T21:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "Scott tendon injury: added Anderson for Scott at rank 2, dropped the Brobbey punt."
-    },
-    {
-      "ts": "2026-10-06T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new fitness news on squad or shortlist since last run."
-    },
-    {
-      "ts": "2026-10-06T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new fitness news on squad or shortlist from permitted outlets."
-    },
-    {
-      "ts": "2026-10-07T08:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new fitness news on squad or shortlist; Haaland still being assessed per Sky Sports and premierleague.com."
-    },
-    {
-      "ts": "2026-10-07T21:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening searches found nothing new on squad or shortlisted players; GW6 claims carried forward."
+     "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate",
+     "title": "Leeds United and Crystal Palace clash ends in stalemate (leedsunited.com)"
     }
-  ]
+   ]
+  },
+  {
+   "rank": 4,
+   "pos": "GKP",
+   "add": {
+    "name": "Tzolakis",
+    "code": "473284",
+    "club": "HUL"
+   },
+   "drop": {
+    "name": "Pickford",
+    "code": "111234",
+    "club": "EVE"
+   },
+   "why": "Unchanged from last week and unchanged in substance all month: both keepers have played every minute of all five, neither has a fitness question against him at any permitted source, and the gap is fixture value alone. The recurring 'Pickford out for a month' item that keeps surfacing in searches is the same September 2022 article and is discarded again. This is the smallest gain of the five and the first one to give up if the priority is better spent elsewhere - on the points ledger Tzolakis is 34 to Pickford's 25, but Tzolakis has 2 and 6 in his last two and the separation is mostly Hull's run (EVE, ful, BRE, IPS) against Everton's (hul, CHE, ars, new).",
+   "model": "Model has Tzolakis at 20.0 next5 / 136.9 rest (avail 1.00) against Pickford's 17.7 / 120.1 (avail 1.00) - +2.3 over five, +16.8 over the season. No availability component on either side. The neural network does not list a goalkeeper move at all; it starts Raya and benches Pickford, so on its reading the second keeper's identity barely matters.",
+   "confidence": "medium",
+   "sources": []
+  },
+  {
+   "rank": 5,
+   "pos": "DEF",
+   "add": {
+    "name": "Truffert",
+    "code": "494521",
+    "club": "BOU"
+   },
+   "drop": {
+    "name": "Ajayi",
+    "code": "146426",
+    "club": "HUL"
+   },
+   "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth and just earned his first France call-up. Bogle's case for staying got stronger again today too: he is a nominee for the Premier League's own September Player of the Month award, credited for his goal at Brighton and a starring role in the 4-1 win over Newcastle.",
+   "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
+   "confidence": "low",
+   "sources": [
+    {
+     "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
+     "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
+    },
+    {
+     "title": "Jayden Bogle nominated for September Player of the Month (premierleague.com)",
+     "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
+    }
+   ]
+  }
+ ],
+ "previous": [
+  {
+   "gw": 5,
+   "ts": "2026-09-17T08:12 UTC",
+   "claims": [
+    {
+     "rank": 1,
+     "pos": "DEF",
+     "add": {
+      "name": "Truffert",
+      "code": "494521",
+      "club": "BOU"
+     },
+     "drop": {
+      "name": "Collins",
+      "code": "432830",
+      "club": "BRE"
+     },
+     "why": "Collins remains out with the calf strain that forced him off after 17 minutes against Sunderland - Brentford's own site confirms he will not be involved this side of the international break, ruling him out of Bournemouth away and the games either side of it. Truffert is a nailed starting left-back in a settled Bournemouth back line with a clean run of fixtures.",
+     "model": "Model has Truffert's next5 at 17.7 (avail 1.00) against Collins at 3.2 (avail 0.03) - the model already treats Collins as unavailable; the club's own timeline just confirms it stretches through this window.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Nathan Collins injury update after Brentford v Sunderland",
+       "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+      }
+     ]
+    },
+    {
+     "rank": 2,
+     "pos": "DEF",
+     "add": {
+      "name": "Mitchell",
+      "code": "244723",
+      "club": "CRY"
+     },
+     "drop": {
+      "name": "Vuskovic",
+      "code": "610799",
+      "club": "BHA"
+     },
+     "why": "Tyrick Mitchell keeps starting at wing-back for Crystal Palace - cpfc.co.uk's own team news for Saturday's Ipswich game confirmed him again, with no fresh threat to his place since Chilwell's move there remains a substitute role. Vuskovic is fit and nothing found this week counts against him either, so this is a fixture and squad-depth swap rather than an injury-driven one.",
+     "model": "Model has Mitchell's next5 at 15.6 (avail 1.00) against Vuskovic's 15.2 (avail 1.00) - both fit, so this is now a fixture-only margin rather than an availability gap; agreeing with the model but at lower conviction than a week ago.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Team news: Palace, three changes, Ipswich",
+       "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
+      }
+     ]
+    },
+    {
+     "rank": 3,
+     "pos": "DEF",
+     "add": {
+      "name": "Hill",
+      "code": "463981",
+      "club": "BOU"
+     },
+     "drop": {
+      "name": "Milenković",
+      "code": "227444",
+      "club": "NFO"
+     },
+     "why": "Milenkovic's hamstring, found in Friday training before the Aston Villa game, has kept him out since - Nottingham Forest boss Oliver Glasner ruled him out of Saturday's Coventry game too, with a return targeted only for after the international break. ESPN's live commentary from the Villa game remains the clearest permitted account of how the injury first surfaced.",
+     "model": "Model now has Milenkovic at avail 0.00, next5 5.6, with its own news line reading 'Hamstring injury - Expected back 11 Oct', against Hill's 15.7 (avail 1.00) - the model has caught up to the injury, so this claim is now numbers-and-news aligned rather than overruling anything.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Nottingham Forest vs Aston Villa - live commentary and team news",
+       "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
+      }
+     ]
+    },
+    {
+     "rank": 4,
+     "pos": "DEF",
+     "add": {
+      "name": "Maguire",
+      "code": "95658",
+      "club": "MUN"
+     },
+     "drop": {
+      "name": "Bogle",
+      "code": "226182",
+      "club": "LEE"
+     },
+     "why": "Bogle scored in Monday's 4-1 win over Newcastle - Leeds' own match data (via Newcastle's match centre) has him netting in the 34th minute as part of a 3-0 half-time lead. That is exactly the kind of return that argues against dropping him, even though nothing here changes his weaker run of fixtures against Maguire's. This is now the most speculative of the four defensive claims, more so than this morning.",
+     "model": "Model has Maguire's next5 at 15.0 (avail 1.00) against Bogle's 14.4 (avail 0.89), purely fixture-and-depth driven - Bogle's Monday-night goal is a reminder that next5 does not capture the kind of explosive return he just delivered. Treat this as the claim most likely to look wrong in hindsight.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Leeds United v Newcastle United match centre",
+       "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+      }
+     ]
+    },
+    {
+     "rank": 5,
+     "pos": "FWD",
+     "add": {
+      "name": "Fernandez-Pardo",
+      "code": "613221",
+      "club": "NEW"
+     },
+     "drop": {
+      "name": "Marmoush",
+      "code": "438234",
+      "club": "TOT"
+     },
+     "why": "Fernandez-Pardo's full Newcastle debut (Monday's 4-1 defeat at Leeds) did not go well - the club's own match centre has him withdrawn at 57' with the game already lost 3-0 - but that Jaissle trusted a 51m signing with 57 minutes at all is still the more instructive signal than one bad afternoon. Marmoush remains the drop purely on the model's board: Wednesday's Carabao Cup tie at Liverpool saw Kudus make his first Tottenham start since January, but Marmoush also started and played the full 90 in that rotated XI, so nothing there favours dropping him either.",
+     "model": "Model still rates Fernandez-Pardo bottom of the forward pool (next5 3.9, avail 0.27, now off two games rather than one) against Marmoush's 9.4 (avail 0.58) - and Hull's McBurnie (next5 13.9, avail 0.98) would be the model's own pick to replace Marmoush ahead of Fernandez-Pardo on pure numbers. Keeping Fernandez-Pardo here is a speculative bet on the transfer fee and the manager's willingness to keep starting him, not something the model supports.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Matthias Jaissle's team news update: Fernandez-Pardo and Hall latest ahead of Leeds trip",
+       "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
+      },
+      {
+       "title": "Leeds United v Newcastle United match centre",
+       "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gw": 4,
+   "ts": "2026-09-11T09:05 UTC",
+   "claims": [
+    {
+     "rank": 1,
+     "pos": "DEF",
+     "add": {
+      "name": "Mitchell",
+      "code": "244723",
+      "club": "CRY"
+     },
+     "drop": {
+      "name": "Muñoz",
+      "code": "247348",
+      "club": "NFO"
+     },
+     "why": "Mitchell scored twice as Palace came from behind twice to win 3-2 at Fulham, and has started all three league games. Munoz went the other way in the same window and came on at 59 minutes for Ola Aina on his Forest debut against Tottenham - Neco Williams has played every minute at wing-back and scored 6 and 7 points doing it. Watch one thing: Ben Chilwell has re-signed for Palace and scored the winner at Fulham with his first touch after replacing Mitchell on 73 minutes.",
+     "model": "Model has Mitchell at next5 16.4 (avail 0.98) against Munoz at 6.4 (avail 0.34), the widest gap on the board, and Palace have the kindest run in the league by its own fixture term (+0.5), starting at home to Ipswich. Agree - but note the model is reading Munoz off 85 minutes played while his Palace exit was negotiated, so if Glasner puts the man he signed as a right wing-back specialist straight into his back three, this one ages badly.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Report & Highlights: Palace hit back to stun Fulham for first win of 26/27",
+       "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
+      },
+      {
+       "title": "Starting Lineups - N Forest vs Spurs",
+       "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
+      },
+      {
+       "title": "Daniel Munoz: Nottingham Forest sign defender from Crystal Palace",
+       "url": "https://www.skysports.com/football/news/11095/13579400/daniel-munoz-nottingham-forest-sign-defender-from-crystal-palace-in-transfer-deal-worth-up-to-lb22m"
+      }
+     ]
+    },
+    {
+     "rank": 2,
+     "pos": "MID",
+     "add": {
+      "name": "E.Le Fée",
+      "code": "484420",
+      "club": "SUN"
+     },
+     "drop": {
+      "name": "Barcola",
+      "code": "482616",
+      "club": "LIV"
+     },
+     "why": "Barcola made his first Liverpool start tonight, in the Champions League against Atletico Madrid, and went off holding his calf in the 58th minute - but Iraola confirmed post-match it was cramp, not an injury, and said he was 'very happy' with two clear second-half chances. That removes last night's fresh fitness scare, but the underlying case is unchanged: he still has zero Premier League minutes started this season and goes into Saturday against Fulham fighting Gakpo, Isak and Ngumoha for a place. Le Fee has played 79, 89 and 90 minutes, and scored Sunderland's equalising penalty at Brentford.",
+     "model": "Model has Le Fee at next5 17.0 (avail 1.00) against Barcola at 2.4 (avail 0.16), but most of that gap is the model having zero career matches on a marquee arrival - it is a placeholder, not a judgement. Agree regardless of tonight's cramp/injury correction: Barcola's problem is minutes, not fitness, and that hasn't changed.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Brentford 1-1 Sunderland: Enzo Le Fee penalty cancels out Vitaly Janelt opener but Bees' unbeaten start continues",
+       "url": "https://www.skysports.com/football/news/11095/13565671/brentford-1-1-sunderland-enzo-le-fee-penalty-cancels-out-vitaly-janelt-opener-but-bees-unbeaten-start-continues"
+      },
+      {
+       "title": "Bradley Barcola, Cody Gakpo and Milos Kerkez fitness update",
+       "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
+      }
+     ]
+    },
+    {
+     "rank": 3,
+     "pos": "DEF",
+     "add": {
+      "name": "Maguire",
+      "code": "95658",
+      "club": "MUN"
+     },
+     "drop": {
+      "name": "Bijol",
+      "code": "434752",
+      "club": "LEE"
+     },
+     "why": "Leeds' own team news for Brighton names Bijol among the substitutes, with Nico Elvedi making a full debut alongside Tarik Muharemovic and James Justin in the back line. His minutes have gone 90, 45, 29 across the three gameweeks, which is a selection decision hardening rather than a knock. He was recalled for Wednesday's Carabao Cup tie at Chelsea (a 6-3 defeat with eight changes and two debuts), which shows he is fully fit but is a heavily rotated cup side, not evidence he is back ahead of Elvedi in the league XI. Maguire has played every minute of Manchester United's season.",
+     "model": "Model has Maguire at next5 15.5 (avail 1.00) against Bijol at 12.5 (avail 0.75) and calls it +3.0, which understates it - avail 0.75 still reads Bijol as a starter who missed a game, not as the fourth-choice centre-half Farke's last team sheet makes him. Overruling the size of the gap, not its direction. Note Elvedi, the man now preferred over Bijol, is himself a new-to-pool signing the model rates at just 6.5 next5 off two games (avail 0.46) - too thin a sample to claim ahead of Bijol, so Maguire's proven full-season 15.5 is the safer target, not Elvedi.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Team News: Brighton & Hove Albion vs Leeds United",
+       "url": "https://www.leedsunited.com/en/news/team-news-brighton-and-hove-albion-vs-leeds-united"
+      },
+      {
+       "title": "Starting Lineups - Everton vs Man Utd",
+       "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
+      }
+     ]
+    },
+    {
+     "rank": 4,
+     "pos": "DEF",
+     "add": {
+      "name": "Hill",
+      "code": "463981",
+      "club": "BOU"
+     },
+     "drop": {
+      "name": "Collins",
+      "code": "432830",
+      "club": "BRE"
+     },
+     "why": "Brentford's captain was forced off after 17 minutes against Sunderland and Keith Andrews said only 'it's a calf strain, I don't know the extent'. Two days on the club has still published no scan result and no timeline, and Brentford are away at Bournemouth in GW4. Hill has played every minute for Bournemouth and faces Brentford at home in the same fixture.",
+     "model": "Model has Hill at next5 15.9 (avail 0.98) against Collins at 10.9 (avail 0.20). The +5.0 is honest rather than injury-inflated - the model already has Collins back and scoring normally from GW5, so this is Hill being the better defender over the run, not just the fitter one this week.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Nathan Collins injury update after Brentford v Sunderland",
+       "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
+      },
+      {
+       "title": "Newcastle 2-2 Bournemouth - Game Analysis",
+       "url": "https://www.espn.com/soccer/report/_/gameId/401879286"
+      }
+     ]
+    },
+    {
+     "rank": 5,
+     "pos": "MID",
+     "add": {
+      "name": "Scott",
+      "code": "503139",
+      "club": "BOU"
+     },
+     "drop": {
+      "name": "Garner",
+      "code": "232928",
+      "club": "EVE"
+     },
+     "why": "The one to skip if you want to skip one. Garner was substituted in the 77th minute against Man Utd and now carries an unspecified injury with a 75% chance of playing, but 75% is not an absence, and he has been building back from July groin surgery at 11, 61 and 76 minutes - the trend is upward, not downward. Scott is the safer body: every minute for Bournemouth, a goal and an assist in the last two. Submit last so it only lands if the four above have.",
+     "model": "Model has Scott at next5 16.6 (avail 0.96) against Garner at 9.7 (avail 0.50) and puts this swap on its own board at +7.0. Partly overruling it: the 0.50 is measured off the games Garner missed recovering from surgery, so if the knock passes he is worth far more than 9.7 and this becomes a downgrade.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Starting Lineups - Everton vs Man Utd",
+       "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
+      },
+      {
+       "title": "Alex Scott strike cancelled out by late Tarkowski leveller | AFC Bournemouth 1-1 Everton",
+       "url": "https://www.premierleague.com/en/news/4700601/match-highlights-afc-bournemouth-1-1-everton"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gw": 3,
+   "ts": "2026-09-03T14:41 UTC",
+   "claims": [
+    {
+     "rank": 1,
+     "pos": "FWD",
+     "add": {
+      "name": "Igor Jesus",
+      "code": "482973",
+      "club": "NFO"
+     },
+     "drop": {
+      "name": "Woltemade",
+      "code": "470313",
+      "club": "NEW"
+     },
+     "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
+     "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
+     "confidence": "high",
+     "sources": []
+    },
+    {
+     "rank": 2,
+     "pos": "MID",
+     "add": {
+      "name": "Rayan",
+      "code": "499604",
+      "club": "BOU"
+     },
+     "drop": {
+      "name": "Eze",
+      "code": "232413",
+      "club": "ARS"
+     },
+     "why": "Eze is still stuck behind Arsenal's front line under Arteta with no sign of a minutes trend pointing up. Rayan is confirmed in Bournemouth's predicted attacking three alongside Kluivert and Tavernier for the Newcastle game, and is being talked up as a breakout name this season.",
+     "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
+       "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
+      }
+     ]
+    },
+    {
+     "rank": 3,
+     "pos": "MID",
+     "add": {
+      "name": "Groß",
+      "code": "60307",
+      "club": "BHA"
+     },
+     "drop": {
+      "name": "Garner",
+      "code": "232928",
+      "club": "EVE"
+     },
+     "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
+     "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
+     "confidence": "low",
+     "sources": []
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "ts": "2026-09-05T08:12 UTC",
+   "gw": 4,
+   "claims": 3,
+   "note": "Reordered rather than changed: Le Fee/Barcola and Rayan/Doku swap to ranks 1-2 (Barcola still bench-bound for today's Ipswich debut, Doku still out for today's Coventry game) and Igor Jesus/Marmoush drops to rank 3 at low confidence, since Marmoush is now a confirmed Tottenham starter alongside Igor Jesus at Forest, leaving this as a pure model-number swap rather than a bench-risk case. Also confirmed via Palace's own site that Mateta is out three weeks with a hamstring injury, which secures Strand Larsen's role further but does not open a fourth claim since he is already kept, not dropped. No other squad member's situation changed."
+  },
+  {
+   "ts": "2026-09-05T21:21 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Full round of GW3 matches produced real news the model can't see: Igor Jesus was not even in Forest's 18 today (Delap started, Wood the sub), killing the Igor Jesus/Marmoush claim outright since Marmoush started and played 84 minutes for Spurs - dropped rather than replaced, since Marmoush is now clearly the stronger, more secure player of the two. In its place, two fresh DEF claims from today's confirmed lineups: Bijol was benched for the first time this season at Leeds (Elvedi/Muharemovic started), and Munoz was again only an impact sub at Forest, reinforcing his existing low model rating - both sourced directly off Sky Sports lineup pages rather than predicted-XI aggregators. A fifth, low-confidence claim was added on the back of Nathan Collins' calf strain (forced off after 17 minutes for Brentford, severity unknown) as a hedge, since the model does not yet reflect it at all. Le Fee/Barcola and Rayan/Doku carried forward with fresh sourcing (Le Fee's penalty and man-of-the-match display, Doku confirmed absent from City's 18 vs Coventry) and Le Fee/Barcola upgraded to high confidence given how comprehensively Barcola remains unintegrated."
+  },
+  {
+   "ts": "2026-09-06T08:11 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made after a full overnight club-by-club sweep. Corrected the summary's stale 'bottom of the table' line - Justin is actually third of six on 121 points, so his claims process fourth in the six-team priority order, not first. Refreshed every model line with the latest next5/availability numbers, which have moved further toward the news on Bijol (12.7, down from 15.4) and Collins (12.5, down from 16.5) as the model catches up. Doku's return date still cannot be pinned down on a permitted source - only Sports Mole, goal.com and bet365 speculate anywhere from City's next match to mid-October, none of them citable - so his claim stands as before. Also checked Garner (described this morning as Everton's standout performer in league play, reinforcing the decision not to add a sixth claim there) and found nothing to change Munoz, Barcola or the free-agent targets."
+  },
+  {
+   "ts": "2026-09-06T21:10 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made. Corrected the league position again with this run's fresh table: Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order (reverse table order), not fourth. Today's final round of GW3 matches confirmed rather than changed the picture: Garner started the full 90 for Everton (2-2 draw with Man Utd) and Raya started Arsenal's 2-1 comeback win over Chelsea, both exactly as already priced in - no sixth claim opened there. Refreshed model numbers moved further toward the news on Doku (avail down to 0.00, was 0.11) and Collins (avail down to 0.20, was 0.60). Also checked Haaland and Gvardiol (both fit and rated well against Coventry, no concern) and found nothing new on Munoz, Bijol or the free-agent targets."
+  },
+  {
+   "ts": "2026-09-07T08:14 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made. Refreshed Le Fee/Barcola sourcing with a post-debut Iraola quote (ESPN) rather than the pre-match preview used last time. Investigated Crystal Palace confirming Eddie Nketiah, not Strand Larsen, started at Fulham (Strand Larsen on only from half-time) but did not turn it into a claim: the model already rates the two within 0.5 of each other and Palace itself describes a genuine three-way rotation with Mateta, so it is flagged in the summary and as a headline rather than acted on. Also confirmed the model is still overrating Igor Jesus (not even in Forest squad list latest, per Tuesday) and left him out despite the model itself proposing that swap."
+  },
+  {
+   "ts": "2026-09-07T14:39 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Early manual fire ahead of GW4 waivers (Justin choosing today rather than tonight's run). Swapped Botman/Bijol out and Scott/Garner in at rank 4: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing), reversing Saturday night's 'played the full 90' read, and the model's own greedy board now proposes this exact swap. Also upgraded Le Fee/Barcola and Gross/Doku to high confidence (Doku's return now pointed to 13 September, after GW4's own deadline) and switched the Munoz swap from Hill to Mitchell, who scored twice in Palace's first win of the season - Hill moves to the Collins hedge at rank 5 instead. Collins and Munoz themselves unchanged: still no Brentford timeline, still an impact sub at Forest, with no fresh GW3 fixtures for either club since Friday/Saturday's already-published results."
+  },
+  {
+   "ts": "2026-09-07T14:48 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "Second manual run today, going deeper on the GW4 appearance question. Two changes against the 14:39 board. Dropped the Gross/Doku claim: the model's per-gameweek line for Doku is 0.0, 0.4, 0.6, 0.9, 0.7 over GW4-8, i.e. it never recovers him at all, so its next5 of 2.5 is a floor rather than a forecast for a player the API expects back on 13 September - he misses one gameweek. Restored the Bijol claim at rank 3 against Maguire, sourced to Leeds' own team news naming him on the bench at Brighton, with minutes going 90/45/29; the model's avail 0.75 makes its +3.0 too small. Kept Mitchell/Munoz at 1, Le Fee/Barcola at 2, moved Hill/Collins to 4 and raised it from low to medium (the model already has Collins fit from GW5, so the gap is real, not injury-inflated), and left Scott/Garner at 5 but cut it to low: 75% is not an absence and Garner's minutes have been climbing back from July groin surgery. Also added the caveat that Ben Chilwell has re-signed for Palace and replaced Mitchell on 73 minutes at Fulham."
+  },
+  {
+   "ts": "2026-09-07T21:15 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~6.5 hours after the last update. Full club-by-club sweep found nothing that moves any of the five: Collins' calf still has no confirmed timeline from Brentford's own site, Bijol has had no fresh Leeds team news since last week's Brighton bench call, and Munoz remains an impact sub for Forest rather than a confirmed starter (fantasy-site chatter that he is now nailed on did not clear a permitted source, so it changes nothing here). Maresca said today only that City are 'not sure yet' whether Doku is back for the 13 September derby - restates the existing doubt without changing it, since that fixture falls after GW4's own deadline either way. Also checked Le Fee, Barcola, Strand Larsen, Maguire (took a bloody nose against Everton but played on, no fitness concern) and Scott/Hill at Bournemouth - all confirmed exactly as already priced into this file."
+  },
+  {
+   "ts": "2026-09-08T08:10 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~11 hours after last night's sweep. Fresh club-by-club round (Palace, Sunderland, Man Utd, Bournemouth, Brentford, Leeds, Man City among them) confirmed rather than moved anything: Mitchell has no fresh fitness concern beyond an unpermitted preview mentioning an EFL Cup doubt (discarded, wrong competition and not sourced to a permitted outlet), Le Fee remains first-choice at Sunderland with no injury news, Bijol is still behind Elvedi at Leeds with no new Leeds team news since Brighton, Collins' calf still has no confirmed Brentford timeline, and Garner has had no fresh update on his 75% figure. Doku still projected for the 13 September derby, a day after GW4's own deadline, unchanged from last night."
+  },
+  {
+   "ts": "2026-09-08T21:12 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~13 hours after this morning's run. Strengthened the Maguire/Bijol reasoning: Elvedi, the man Leeds are now picking ahead of Bijol, is himself only a two-game sample the model rates at 6.5 next5 (avail 0.46) - the model's new-signing blind spot cuts both ways here, and it argues for Maguire's proven number over chasing Elvedi, not against the swap. Investigated but could not confirm on a permitted source: reports that Bijol was seen with Leeds medical staff in the Brighton warm-up (only Yahoo/aggregator reprints of BBC Radio Leeds commentary), and reports that Sage now has Nketiah sidelined with Strand Larsen the clear leader for Ipswich (only Sports Mole/Yahoo/lastwordonsports previews for the Middlesbrough League Cup tie) - neither changes a claim since Bijol is dropped regardless and Strand Larsen is already kept, not added. Everything else (Mitchell/Munoz, Le Fee/Barcola, Hill/Collins, Scott/Garner) reconfirmed exactly as this morning."
+  },
+  {
+   "ts": "2026-09-10T08:35 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~11 hours after last night's board. Corrected the Le Fee/Barcola case: liverpoolfc.com quotes Iraola confirming last night's calf scare was cramp, not injury - the swap now rests on Barcola's lack of Premier League minutes alone. Also noted Bijol was recalled for Leeds' heavily-rotated Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts), which shows he's fit but does not resolve his league pecking order behind Elvedi. Mitchell/Munoz, Hill/Collins and Scott/Garner reconfirmed unchanged after a fresh club-by-club sweep of Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland and Brighton. Checked and discarded: a search-index result claiming Marmoush suffered a Man City-era knee injury 'ahead of the Manchester derby' traced back to a stale ESPN pair from 9-10 September 2025, a full year old, from before his move to Spurs - not current, not published."
+  },
+  {
+   "ts": "2026-09-10T21:16 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~12.5 hours after this morning's board. Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) found nothing that moves any of the five. Confirmed unchanged: Bijol still behind Elvedi in Leeds' own team news, Collins' calf still has no scan result or timeline from Brentford's own site, Doku still stuck on Maresca's 'we're not sure yet' for the 13 September derby (after GW4's own deadline regardless), Barcola's cramp-not-injury already reflected from this morning, and Le Fee, Maguire, Hill and Scott all reconfirmed fit and starting. Investigated but not a claim target: Saliba's back injury (already priced into the model at avail 0.01, and he is a free agent, not on any squad in the league)."
+  },
+  {
+   "ts": "2026-09-11T09:05 UTC",
+   "gw": 4,
+   "claims": 5,
+   "note": "No change to the five claims, final sweep before the 12:30 UTC deadline. Corroborating detail only: Alex Scott's full name and regular-starter status confirmed (premierleague.com, ESPN, Sky Sports, afcb.co.uk); Chilwell's move to Palace reconfirmed as a permanent transfer, still not yet a threat to Mitchell; Maguire handed a contract extension at Man Utd (manutd.com), a confidence signal on top of his already-nailed status; Doku's 7 September 'not sure yet' on the derby is now sourced directly to premierleague.com with nothing fresher published since."
+  },
+  {
+   "ts": "2026-09-11T21:17 UTC",
+   "gw": 5,
+   "claims": 4,
+   "note": "First GW5 board, built the morning after GW4 waivers processed. Four claims rather than five: Collins (confirmed calf strain, no Brentford timeline) is the one clear need, Mitchell/Vuskovic and Hill/Bogle are modest fixture-driven upgrades with no news against either incumbent, and Igor Jesus/Strand Larsen is a low-confidence numbers-only punt after this week's research could not pin down Forest's forward pecking order to a permitted source. Explicitly did not follow the model's own greedy suggestion to swap Barcola for Stach - Liverpool's own site has Iraola saying Barcola 'should be available' for Saturday's Fulham game after Friday's cramp scare, and he is trending toward a second start, not a sale, even though the model still rates him near the bottom of the board."
+  },
+  {
+   "ts": "2026-09-12T08:20 UTC",
+   "gw": 5,
+   "claims": 3,
+   "note": "Dropped the Igor Jesus/Strand Larsen speculative punt, four claims down to three - cpfc.co.uk's own Carabao Cup report has Strand Larsen scoring twice against Middlesbrough, strengthening rather than weakening his case to start over Nketiah at Ipswich this afternoon, while Forest's pecking order for Igor Jesus still can't be pinned to a permitted source. Truffert/Collins, Mitchell/Vuskovic and Hill/Bogle carried forward unchanged after today's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham) found nothing that moves any of the three. Discarded a stale 2024 arsenal.com article wrongly resurfacing as fresh 'Raya injury' news, a Schade suspension and a Collins-vs-Newcastle preview that both matched a future fixture rather than this week's, and the recurring stale claim that Gvardiol has missed City's whole season, already refuted by Sky Sports' own lineup pages."
+  },
+  {
+   "ts": "2026-09-12T21:20 UTC",
+   "gw": 5,
+   "claims": 4,
+   "note": "Redirected the weakest defensive claim from Hill-for-Bogle to Hill-for-Milenkovic after today's model re-ranking (Milenkovic's own avail figure dropped to 0.60); could not confirm the underlying story to any permitted source (a widely-repeated Milenkovic/Cunha hamstring tale traced back to Yahoo Sports/hayters.com aggregator copy that also wrongly credited Milenkovic with a goal actually scored in a real December 2024 match), so the claim rests on the model's numbers alone rather than the injury story. Upgraded the Mitchell-for-Vuskovic claim with a fresh cpfc.co.uk citation confirming Mitchell nailed at wing-back for today's Ipswich game. Confirmed Truffert/Collins and Maguire/Bogle unchanged. Kept Barcola over Stach for a third straight week - liverpoolfc.com confirms his second start in four days (Tuesday's Champions League tie plus today's Fulham game) while the model still rates him near the bottom of the board."
+  },
+  {
+   "ts": "2026-09-13T09:15 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Added a fifth, speculative claim - Fernandez-Pardo for Marmoush - after Newcastle's own site quoted Jaissle saying the 51m deadline-day signing is 'getting closer to starting'; the model still has him bottom of the forward pool off zero games, the same blind spot flagged on Barcola for weeks. The four defensive claims (Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle) carry forward unchanged - today's sweep reconfirmed Collins' timeline, Mitchell's start, and Bournemouth's back line, and again failed to find a permitted source for the recurring Milenkovic-omitted-at-Villa story, so that claim stays numbers-only as it was last week."
+  },
+  {
+   "ts": "2026-09-13T21:10 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Downgraded Hill/Milenkovic from medium to low confidence: ESPN's match report confirms Milenkovic and Cunha both played the full 90 in Forest's 2-1 win at Villa Park, resolving the recurring hamstring-doubt story in his favour, so the claim now rests on fixture numbers alone with the fitness angle gone. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after tonight's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle). Two other stories were chased down and discarded as stale: a Raya knee-injury story traced to a 27 September 2024 arsenal.com article, and a Schade red-card suspension traced to a 1 February 2026 incident already served."
+  },
+  {
+   "ts": "2026-09-14T08:11 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Corrected claim 3: last night's claim that Milenkovic/Cunha started the full 90 traced to a citation (espn.com/soccer/report/_/gameId/401879284) that on closer reading does not even mention either player - the actual ESPN match page's live commentary states both dropped out of the squad with hamstring tightness. Re-sourced to the correct ESPN URL and raised confidence from low back to medium given the confirmed, ongoing absence (also set to miss Coventry). The other four claims (Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle, Fernandez-Pardo/Marmoush) carry forward unchanged."
+  },
+  {
+   "ts": "2026-09-14T21:45 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Updated claims 4 and 5 on hard evidence from tonight's Leeds 4-1 Newcastle game: Bogle scored (weakens the case for dropping him for Maguire, now the shakiest claim on the board) and Fernandez-Pardo got his full debut but struggled, hooked at 3-0 (a real data point at last, tempering but not killing the case for picking him up). Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic carry forward unchanged - Milenkovic confirmed out for Coventry too. Also noted: Justin's win this week moved him up to 2nd in the table, which paradoxically drops him to 5th of 6 in the reversed GW5 waiver order, worse than this morning's 4th."
+  },
+  {
+   "ts": "2026-09-15T08:20 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Palace, Man Utd, Newcastle, Sunderland) reconfirmed Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush exactly as last night. Investigated but could not use: reports that Milenkovic is out past Coventry into the international break, sourced only to Yahoo/OneFootball/a Forest fan site, not a permitted outlet - changes nothing anyway since the model already has him at 0.00 availability. Brobbey (free agent FWD, not currently claimed) reconfirmed a nailed Sunderland starter with nothing to change the model's read on him."
+  },
+  {
+   "ts": "2026-09-15T21:20 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Evening sweep (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus general PL injury/lineup searches. Nothing cleared the sourcing bar for a change: Milenkovic's extended hamstring timeline is now already reflected in the model's own avail/next5 figures, so refreshed claim 3's model line and lifted it to high confidence rather than treating it as new news. Checked and found unmoved: Marmoush is being previewed as a likely Spurs starter for Sunday's Villa game by unpermitted predicted-XI sites only, no permitted outlet has confirmed it, so no change to claim 5's reasoning; Fernandez-Pardo's next Newcastle game is away at Hull on the 19th with no fresh team news yet; Bogle, Mitchell, Vuskovic, Truffert, Collins and Hill all reconfirmed exactly as already reported. Next scheduled team-news pressers land Thu/Fri before Thursday's waiver close, so expect the next material change then."
+  },
+  {
+   "ts": "2026-09-16T21:13 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "No change to which five claims are made, ~23.5 hours after last night's board, with tomorrow's 17:30 UTC waiver close now under a day away. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check found nothing that clears the sourcing bar. Chased down and discarded a Tottenham team-news piece on Maddison/Kudus that read live on tottenhamhotspur.com turned out to be the same 11 September article already used for an earlier headline, not new, and it never mentions Marmoush at all - no change to claim 5's reasoning. Milenkovic's hamstring timeline and Palace's Nketiah/Sarr fitness doubts both resurfaced only via unofficial fan sites (nottinghamforest.news, Yorkshire Evening Post, Sports Mole), not a permitted outlet. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all reconfirmed exactly as last night. Thursday and Friday's pre-match pressers, which land after the waiver close, remain the likely source of the next material change - if nothing further comes in before then, this board stands as final."
+  },
+  {
+   "ts": "2026-09-17T08:12 UTC",
+   "gw": 5,
+   "claims": 5,
+   "note": "Final pre-close sweep. No change to which five claims are made or their order. Confirmed Kudus's first Tottenham start since January (Carabao Cup vs Liverpool) but Marmoush also started and played the full 90 in that heavily-rotated XI, so no change to claim 5's reasoning beyond noting it. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic and Maguire/Bogle all reconfirmed exactly as last night after a full club-by-club sweep. This board stands as final for the GW5 window unless something changes before 17:30 UTC."
+  },
+  {
+   "ts": "2026-09-18T21:11 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Full club-by-club sweep found nothing that clears the sourcing bar: Truffert's first France call-up is a positive but incremental confirmation of claim 2, not new information about his standing at Bournemouth. Investigated and discarded several stale-dated stories that would otherwise have looked like fresh injury news - Schade/surgery (traces to a January 2026 Everton fixture that hasn't happened yet this season), Raya/knee (contradicted by his own four full 90s), Ajayi/hamstring (traces to the 22 August season opener) and Gvardiol/broken leg (contradicted by his own recent minutes) - none of which are squad or shortlist players whose claim status would change anyway. Marmoush/Kudus/Maddison at Tottenham unchanged; Timber started Palace's Europa League tie on top of his Ipswich start, no change to claim 5's reasoning."
+  },
+  {
+   "ts": "2026-09-19T21:14 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Today's GW5 round confirmed Raya's fitness (ending the recurring stale injury story) and gave live proof of the model's own declined Gross-for-Barcola suggestion (Gross scored in Brighton's 3-0 win at Arsenal) - refreshed claim 3's model line with that detail but kept the decision to stick with Barcola. Palace's Sage confirmed Mateta and Henderson are targeted for after the international break, which is not a claims change (Strand Larsen is kept, not a claim target) but firms up why he's not at risk. League position update: Edward has moved to 1st on 240 points, dropping Justin (230, tied 2nd with Marcus) to 5th of 6 in the reversed waiver order, an improvement on yesterday's 6th."
+  },
+  {
+   "ts": "2026-09-20T21:12 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "Corrected claim 2: Bogle actually started and was booked against Palace today, so this morning's benching report was wrong and is retracted; the swap now rests on fixture/production value only. Reinforced claims 3 and 5 with today's confirmed Leeds and Palace lineups (Stach and Timber both started). No change to which five claims are made or their order otherwise."
+  },
+  {
+   "ts": "2026-09-21T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Investigated and discarded a Brentford 'Lewis-Potter facing two months out' story that traced to a stale, years-old page (Thomas Frank era) rather than current news - Brentford's own archive under Keith Andrews confirms he is fit and starting, so claim 3 stands on fixture/production grounds only, now more firmly. Barcola started and was subbed again in Sunday's Bournemouth defeat, reinforcing rather than changing the decision to decline the model's own Gross-for-Barcola suggestion. Everton, and most of the division, now enter a three-week gap for the international break; the next material team news is likely to come from pressers in the run-up to games resuming around 11 October, well before this window's 9 October waiver close."
+  },
+  {
+   "ts": "2026-09-21T21:08 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "First sweep after the international break began. No change to which players are targeted, but two fixes to the file itself: claims 1 and 3 had grown past this file's 700-character limit on 'why' and are trimmed to the same substance; and claim 5 (Le Fée-for-Lewis-Potter) was an illegal duplicate of claim 2's drop, so it is replaced with Truffert-for-Ajayi, a model-only, low-confidence punt on Justin's thinnest defensive slot once Bogle is set aside. Research turned up nothing that changes a target: England's official squad leaves Bogle out despite pre-announcement speculation, not a claims matter since he was never a target; Stach is away with Germany, already known; Groß, Brobbey and Tzolakis unaffected by anything the international window has produced so far; Nketiah's brief fitness issue at Palace (since resolved) does not touch claim 3, since Strand Larsen is Justin's own player and Mateta/Henderson remain out past the break regardless. League position unchanged: Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. This board stands with 18 days and no squad-club football left before the 9 October waiver close."
+  },
+  {
+   "ts": "2026-09-22T08:06 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Full sweep (16 searches) found nothing that touches a target: Stach's Germany call-up and clean bill of health reconfirmed in detail via leedsunited.com's own feature (old ankle injury from May, fully healed, playing every league game since); Truffert, Tavernier, Scott, Bogle, Ajayi, Vuskovic, Marmoush, Van Hecke, Gvardiol, Haaland, Barcola, Lewis-Potter and Schade all reconfirmed fit with nothing citable that changes a status. One bad lead caught and discarded before use: a search result describing a Bournemouth Europa League game at Real Sociedad does not check out against afcb.co.uk's own news feed and was not used for anything. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order. No PL fixtures have been played since last night's run; the division stays idle for the international break until around 11 October, well ahead of the 9 October waiver close."
+  },
+  {
+   "ts": "2026-09-22T21:12 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Evening sweep found nothing that touches a target: the recurring Sky Sports 'Pickford out for a month' story resurfaced again and was re-confirmed as the same 7 September 2022 piece, not current; Gross's own club news feed (brightonandhovealbion.com) carries no injury story, so an unpermitted claim that he was ruled out v Newcastle is not used and claim 1 stands; Sunderland's own news feed (safc.com) has nothing on Brobbey either way, so claim 3 stands unchanged; Truffert's France recall and Stach's clean bill of health with Germany both reconfirmed but already priced into this board since earlier in the week. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. The international break continues with no squad-club football until around 11 October, well ahead of the 9 October waiver close."
+  },
+  {
+   "ts": "2026-09-23T08:30 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. International break sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL injury/transfer searches, ~16 queries. Found and verified on cpfc.co.uk a fresh Sage quote differentiating Henderson ('more sure') from Mateta ('more uncertain... I maybe can give you the best answer in two weeks') on their post-break return - reinforces rather than changes claim 3, since it is Strand Larsen who is being dropped from this board, not added. Checked and found nothing citable that changes a status: Kostoulas and Groß both scored again in the EFL Cup and against Arsenal respectively but both are already fully priced (Groß already claim 1, Kostoulas not a squad or shortlist player); Iraola called Barcola's Bournemouth start (his third) 'the best is still to come' but offered no new fact beyond what is already on the board; Raya was named the league's Player of the Matchweek for his derby-defining penalty save, no fitness angle; Lewis-Potter's wing-back competition with Aaron Hickey checked directly and found no confirmed change to his starting role. Rayan Cherki's quad tear (7-8 weeks) is a Man City new-signing story but he is neither a squad nor shortlist player. League position unchanged: Justin 2nd of 6 on 252 points."
+  },
+  {
+   "ts": "2026-09-23T21:05 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Second sweep today (19 searches) chased down three leads that read like fresh injuries for squad players - Tavernier (hamstring), Bogle (foot) and Stach (ankle) - and all three traced to stale, already-resolved dates from before this season (January, last season's Wolves/Chelsea run, and a May 2026 cut respectively), so nothing changes for claims 2, 3 or 5. Brobbey's hat-trick and transfer interest are already priced into claim 3; Barcola coverage (Iraola: lacking freshness, still the club's priority signing) restates rather than changes claim 1. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him."
+  },
+  {
+   "ts": "2026-09-24T21:08 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "Claim 3 (Brobbey/Strand Larsen) downgraded from medium to low confidence: Sky Sports confirms Brobbey was taken off after 35 minutes of tonight's Netherlands 1-1 Germany draw, pointing to his right leg, with no diagnosis yet - confirmed independently via ESPN's own match data (substituted 35', only 11 touches). Claims 1, 2, 4 and 5 unchanged after a full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL sweeps, ~18 searches. Two other leads chased and discarded as stale once read in full: a 'Kevin Schade set for surgery, out for months' story traces to a September 2023 adductor injury (Wikipedia and Soccerway both date the recovery to April 2024), not current; Stach, Bogle, Ajayi, Van Hecke, Gvardiol and Haaland all reconfirmed fit on international duty with nothing new. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+  },
+  {
+   "ts": "2026-09-25T08:35 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Fetched Sky Sports' own Netherlands 1-1 Germany match report directly, which firms up claim 3's sourcing by confirming in the outlet's own words that Brobbey was 'taken off with what appeared to be a hamstring injury' - previously only cited via a live blog. Still no diagnosis or timeline from Sunderland, so confidence stays low rather than moving either way. Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland, Hull for Tzolakis) and general PL sweeps, 20 searches. Investigated and discarded: a Pascal Gross 'ruled out, undisclosed injury' story quoting Fabian Hurzeler, who is not Brighton's manager, and directly contradicted by Gross scoring and starting against Arsenal five days ago; Stach came on for 26 minutes off the bench for Germany against the Netherlands, fit but a squad option internationally, no change to his Leeds status; Gvardiol's recurring 'broken leg' story resurfaced again and is again the same discredited item. Everything else reconfirmed unchanged: Pickford, Raya, Bogle, Ajayi, Van Hecke, Marmoush, Vuskovic, Haaland, Barcola, Lewis-Potter, Scott, Tavernier and Truffert. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+  },
+  {
+   "ts": "2026-09-25T21:06 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Evening sweep (18 searches) re-confirmed Brobbey's injury via Sky Sports and Sunderland's own reporting on last Thursday's Netherlands 1-1 Germany draw - Xavi Hernandez has confirmed he is injured and back on Wearside, but neither Sunderland nor any permitted outlet has given a diagnosis or return date yet, so claim 3 holds at low confidence rather than moving either way. Stach reconfirmed fit via Sky Sports' own recent Forest match report (matchwinner with a late free-kick), no ankle issue. Gross's 'ruled out by Fabian Hurzeler' story resurfaced again in search results and was discarded again - contradicted by his own goal and start against Arsenal on the 19th, with nothing from a permitted outlet since. Tzolakis and Truffert both reconfirmed fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+  },
+  {
+   "ts": "2026-09-26T08:07 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made. Deep club-by-club sweep of every squad club plus the free-agent shortlist clubs (Brighton, Leeds, Sunderland) found nothing that clears the sourcing bar for a change. Chased Brobbey's injury status in depth: ESPN (permitted) confirms Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, but a 'two to four weeks' timeline circulating on non-permitted sites (TeamTalk, Sunderland Echo, LiveScore) could not be traced to safc.com or any permitted outlet, and one version of the quote misattributes the injury to the wrong game - discarded as unreliable, so claim 3's why was refreshed with the confirmed detail but its confidence is unchanged."
+  },
+  {
+   "ts": "2026-09-27T08:35 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Bogle and Gross both nominated for the Premier League's own September Player of the Month award (premierleague.com) - reinforcing claim 5's case for keeping Bogle over Truffert and claim 1's Gross-for-Barcola swap. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Brighton, Leeds, Bournemouth, Hull), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023 from the Thomas Frank era; the same outlet's Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Brobbey's availability dropped from 0.90 to 0.68 in the model's own numbers this week as its news field picked up the hamstring doubt, but no permitted outlet has published a diagnosis or timeline, so claim 3 stays at low confidence. Everything else reconfirmed unchanged: Pickford, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+  },
+  {
+   "ts": "2026-09-27T21:11 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Kevin Schade's September Player of the Month nomination (brentfordfc.com) adds to Bogle's and Gross's from this morning - all three fit and undisturbed, so no claim moves on it. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Coventry, Ipswich), ~20 searches. A 'Brobbey out 2-4 weeks, injured against Fulham' result contradicted the established Netherlands-Germany hamstring story and could not be verified at safc.com or any permitted outlet, so not used - claim 3 unchanged at low confidence. Discarded as stale on direct check: Gvardiol 'broken leg, out for the season' (last season's January-May injury, long recovered), Tavernier and Bogle 'injury' stories (old leedsunited.com/afcb.co.uk pieces from last season or before, contradicted by this year's own minutes and today's Bogle nomination). Truffert's full 90 and clean sheet on his France debut only reached non-permitted outlets, so held rather than published, though it reinforces his fitness. Emersonn's two goals in his last two Ipswich starts are real (ESPN) but both games are over a week old, so not fresh enough to publish. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
+  },
+  {
+   "ts": "2026-09-28T08:20 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to which five claims are made or their order. Full club-by-club sweep (all 11 squad clubs plus Sunderland, Coventry, Fulham, Nottingham Forest for free-agent shortlist), ~25 searches, plus today's international-duty injury list (Havertz, Gakpo, Kluivert, Malen - none of them squad or shortlisted players). Chased and discarded: a recurring 'Tavernier hamstring, out at Brighton' story that traces via afcb.co.uk's own URL to 23 January 2026 (last season); a 'Brobbey out 2-4 weeks' vs 'Brobbey out 6-8 weeks' pair of results that contradict each other and neither is traceable to safc.com or a permitted outlet's own account of a Le Bris quote, so claim 3's timeline is still unknown rather than firmed up either way; a Lewis-Potter 'dropped for Hickey' item with no confirmation at brentfordfc.com or any permitted outlet. Gross, Stach, Tzolakis, Truffert and Bogle all reconfirmed fit and undisturbed."
+  },
+  {
+   "ts": "2026-09-28T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: evening check found no news affecting squad or shortlisted players; claims carried forward."
+  },
+  {
+   "ts": "2026-09-29T08:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: international-break injuries touch none of the squad or shortlist; Brobbey diagnosis still unconfirmed at a permitted outlet."
+  },
+  {
+   "ts": "2026-09-29T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: evening check found nothing new at a permitted outlet."
+  },
+  {
+   "ts": "2026-09-30T08:20 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: international-break injury round-ups found nothing affecting squad or claim targets."
+  },
+  {
+   "ts": "2026-09-30T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: evening injury round-ups found nothing new at a permitted outlet."
+  },
+  {
+   "ts": "2026-10-01T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change; no new squad-relevant news found, claims carried forward."
+  },
+  {
+   "ts": "2026-10-01T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: international-break injury round-ups show nothing new for the squad or shortlist."
+  },
+  {
+   "ts": "2026-10-02T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: international-break round-ups show nothing new for the squad or shortlist."
+  },
+  {
+   "ts": "2026-10-02T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: premierleague.com round-ups show nothing new; Brobbey return reported as 10 October, claim 3 stays low."
+  },
+  {
+   "ts": "2026-10-03T08:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: no new permitted-source news on any squad or shortlisted player; Van Hecke foot knock (reported withdrawal from Netherlands duty) unconfirmed, not acted on."
+  },
+  {
+   "ts": "2026-10-03T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: premierleague.com internationals round-up shows nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
+  },
+  {
+   "ts": "2026-10-04T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: international-break searches show nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
+  },
+  {
+   "ts": "2026-10-04T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: evening sweep found nothing new; claims carried forward."
+  },
+  {
+   "ts": "2026-10-05T08:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: board unchanged from last run; no new fitness news on squad or shortlist."
+  },
+  {
+   "ts": "2026-10-05T21:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "Scott tendon injury: added Anderson for Scott at rank 2, dropped the Brobbey punt."
+  },
+  {
+   "ts": "2026-10-06T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: no new fitness news on squad or shortlist since last run."
+  },
+  {
+   "ts": "2026-10-06T21:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: no new fitness news on squad or shortlist from permitted outlets."
+  },
+  {
+   "ts": "2026-10-07T08:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: no new fitness news on squad or shortlist; Haaland still being assessed per Sky Sports and premierleague.com."
+  },
+  {
+   "ts": "2026-10-07T21:15 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change: evening searches found nothing new on squad or shortlisted players; GW6 claims carried forward."
+  },
+  {
+   "ts": "2026-10-08T08:10 UTC",
+   "gw": 6,
+   "claims": 5,
+   "note": "No change to claims. Noted premierleague.com Scout caution that Gross (35) may have minutes managed; still best-value swap for Barcola."
+  }
+ ]
 }
