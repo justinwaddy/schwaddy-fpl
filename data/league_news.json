@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-07T22:41 UTC",
+ "generated": "2026-10-08T07:50 UTC",
  "items": [
-  {
-   "id": "2026-09-21-enzo-first-goal",
-   "ts": "2026-09-21T22:52",
-   "kind": "news",
-   "text": "Enzo Fernandez scored his first goal for Manchester City in Sunday's 5-3 win over Sunderland, the game already reported on this page - the goal was part of a 7-point gameweek haul for Ben D, who owns him.",
-   "source": {
-    "title": "Man City 5-3 Sunderland: Perfect 24 hours for Enzo Maresca puts pressure on Arsenal",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6z7z2we5lgwo"
-   }
-  },
-  {
-   "id": "2026-09-21-op-edward-one-win",
-   "ts": "2026-09-21T22:52",
-   "kind": "opinion",
-   "text": "Edward leads the table after five gameweeks having actually won only one of them - GW5's 57, his sole gameweek victory this season. It is not the story the haul lines tell, all big individual numbers and one-week swagger, but it is the one the standings reward: stay ahead of the bad weeks and the good one takes care of itself.",
-   "source": null
-  },
-  {
-   "id": "2026-09-21-op-robert-cherki-roefs",
-   "ts": "2026-09-21T22:52",
-   "kind": "opinion",
-   "text": "Robert's Sunday came from both ends of the same fixture: his Rayan Cherki turned in the kind of display that had Joe Hart calling him a genius as Manchester City piled on five, while his Sunderland goalkeeper Roefs picked the ball out of his own net five times and finished the game on nothing. Eight points from Cherki, zero from Roefs, in the same ninety minutes - which is as good a summary as any of why Pardinho sits last, 89 off the top, its most exciting player permanently cancelled out by its most exposed one.",
-   "source": null
-  },
   {
    "id": "2026-09-22-news-hall-england",
    "ts": "2026-09-22T07:47",
@@ -716,16 +692,39 @@
    "kind": "opinion",
    "text": "Gameweek 5 left Justin's bench on 21 against 41 from his eleven, which is half a second team doing the work of the first. Robert's bench scored 0, so at least one of them is consistent. Both have the same ten fixtures to fix it tomorrow.",
    "source": null
+  },
+  {
+   "id": "2026-10-08-rice-contract",
+   "ts": "2026-10-08T07:50",
+   "kind": "news",
+   "text": "Declan Rice is close to agreeing a new long-term Arsenal contract, BBC Sport reports, and is expected to be involved when Arsenal host Leeds on Saturday at 12:30 BST. He is in Small Ben's squad; Edward has Calvert-Lewin on the Leeds side of that fixture.",
+   "source": {
+    "title": "Rice close to agreeing new Arsenal deal",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c9gkvx74je7do"
+   }
+  },
+  {
+   "id": "2026-10-08-arteta-contract",
+   "ts": "2026-10-08T07:50",
+   "kind": "news",
+   "text": "Mikel Arteta has signed a new contract with Arsenal running until 2030, calling it 'only the beginning' of what the club can achieve. Every one of the six squads holds an Arsenal player, so nobody in this league gets to be neutral about it.",
+   "source": {
+    "title": "Arteta signs new contract with champions Arsenal",
+    "url": "https://www.bbc.co.uk/sport/football/articles/crz65j5p8l57o"
+   }
+  },
+  {
+   "id": "2026-10-08-rogers-bournemouth",
+   "ts": "2026-10-08T07:50",
+   "kind": "news",
+   "text": "Chelsea's Morgan Rogers, on Ben D's squad, faces Bournemouth at Stamford Bridge on Saturday, the club where BBC Sport says he had an underwhelming Championship loan. Justin (Scott, Tavernier) and Marcus (Evanilson) own Bournemouth players in the same fixture.",
+   "source": {
+    "title": "£117m Rogers failed at Bournemouth - and feared he may not make it",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckp84r967d3go"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-13T07:58 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "morning: led with today's Man Utd-Man City derby team news (ESPN) touching Marcus, Small Ben, Big Ben and Robert, plus Arteta's fury at the Konsa penalty call against Sunderland and Iraola's reaction to Liverpool's Fulham draw, both ESPN. Skipped Coventry v Brighton team news - couldn't verify facts against a permitted source after several tries, so left it out rather than force a bad citation. No opinion pieces on a morning run."
-  },
   {
    "ts": "2026-09-13T12:11 UTC",
    "news": 0,
@@ -1138,6 +1137,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening wrap, non-matchday with GW6 not yet kicked off. One search found no usable current reports from permitted outlets, so no news. Led with the bunched top four and the bench ledger. Passed over both unused roast entries (2026-09-12-ca1422e269 and 2026-09-12-d9048f2afb): both hang on slurs or sexuality/race-adjacent material, outside the rules. No flops to rewrite."
+  },
+  {
+   "ts": "2026-10-08T07:50",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Rice's new Arsenal deal (BBC), then Arteta's contract and Rogers v Bournemouth. Search engine returned mostly fantasy sites so only BBC pieces read in full. Roast archive: 2 unused, both passed over - one is an insult at a slur level, the other aimed at race/politics; neither is fit to publish and it's a morning run anyway."
   }
  ]
 }
