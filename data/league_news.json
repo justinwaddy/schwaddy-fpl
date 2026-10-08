@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-08T07:50 UTC",
+ "generated": "2026-10-08T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-22-news-hall-england",
-   "ts": "2026-09-22T07:47",
-   "kind": "news",
-   "text": "Lewis Hall has been named in Thomas Tuchel's England squad for this month's Nations League games against Spain and Czechia, while Newcastle team-mate Tino Livramento has withdrawn from the same squad through injury. Hall is the top scorer in Ben C's squad on the numbers so far, sitting on 13.",
-   "source": {
-    "title": "International Magpies: Livramento withdraws from England squad",
-    "url": "https://www.newcastleunited.com/en/news/international-call-ups-september-october-2026"
-   }
-  },
-  {
-   "id": "2026-09-22-news-palmer-caicedo",
-   "ts": "2026-09-22T07:47",
-   "kind": "news",
-   "text": "Cole Palmer, owned by Edward, is back from two months out with groin and toe trouble and played the final half hour of Chelsea's midweek trip to Leeds, though Enzo Maresca would not commit to him starting again straight away. Moises Caicedo serves the second game of his three-match suspension for the red card against Arsenal, with Levi Colwill, Dario Essugo and Romeo Lavia also out injured.",
-   "source": {
-    "title": "Enzo Maresca confirms Chelsea team news for Bournemouth",
-    "url": "https://www.chelseafc.com/en/news/article/enzo-maresca-confirms-chelsea-team-news-for-bournemouth"
-   }
-  },
   {
    "id": "2026-09-22-news-wilson-quad",
    "ts": "2026-09-22T07:47",
@@ -722,16 +702,23 @@
     "title": "£117m Rogers failed at Bournemouth - and feared he may not make it",
     "url": "https://www.bbc.co.uk/sport/football/articles/ckp84r967d3go"
    }
+  },
+  {
+   "id": "2026-10-08-name-game",
+   "ts": "2026-10-08T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Small Ben runs a team called Delap Dance, and Delap is in Big Ben's squad, where he returned 1 point in Gameweek 5. Big Ben's team is Quantum of Tzolis, and Tzolis sits in Marcus's squad on 2. Between them the two Bens have named their teams after footballers they do not own."
+  },
+  {
+   "id": "2026-10-08-robert-gw6",
+   "ts": "2026-10-08T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Robert is on 170, 89 behind Edward, after a Gameweek 5 of 22 points. None of the ten Gameweek 6 fixtures has kicked off, so for now Pardinho has not been outscored by anyone this week. Enjoy it, Robert; it ends at the first whistle."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-13T12:11 UTC",
-   "news": 0,
-   "opinion": 0,
-   "matchday": true,
-   "note": "13:00 kick-off Coventry v Brighton, checked ~49 minutes out. Coventry have no league-owned players. For Brighton: brightonandhovealbion.com's own preview article (read in full) covers only fitness/availability chat, no confirmed XI; skysports.com's match page returned a live blog marked 'currently unavailable' with no lineup; premierleague.com's match-centre URL 404'd; bbc.co.uk is not reachable by this session's fetch tool; theathletic.com had no matching article. Every other lead (whoscored, lastwordonsports, 101greatgoals, fotmob, thefootballfaithful) is an unpermitted aggregator publishing predicted rather than confirmed line-ups, so none of it was used despite search summaries repeatedly mislabelling them 'confirmed'. No permitted outlet had Brighton's actual teamsheet out yet, so no item posted per rule 2 rather than report a prediction as fact. If it lands before kick-off: Edward (Verbruggen, Groß), Justin (Vuskovic), Marcus (De Cuyper) and Big Ben (Kostoulas) are the ones affected."
-  },
   {
    "ts": "2026-09-13T14:40 UTC",
    "news": 0,
@@ -1144,6 +1131,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Rice's new Arsenal deal (BBC), then Arteta's contract and Rogers v Bournemouth. Search engine returned mostly fantasy sites so only BBC pieces read in full. Roast archive: 2 unused, both passed over - one is an insult at a slur level, the other aimed at race/politics; neither is fit to publish and it's a morning run anyway."
+  },
+  {
+   "ts": "2026-10-08T22:45",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening, no fixtures today (GW6 not started); no football to report, so two opinion pieces off team names and Robert's position. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): both aimed at sexuality/race, out of bounds. No flops today."
   }
  ]
 }
