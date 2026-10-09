@@ -509,6 +509,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441191,1787270210,1787270210,i,,0.0,Calf injury - Unknown return date
 441191,1788894459,1788894459,a,0.0,100.0,
 441191,1789893388,1789826409,d,100.0,75.0,Unspecified injury - 75% chance of playing
+441191,1791534974,1791534974,d,100.0,50.0,Unspecified injury - 50% chance of playing
 441264,1785832691,1785832691,a,,,
 441264,1790325402,1790285410,d,,75.0,Hamstring injury - 75% chance of playing
 441264,1791474643,1791474643,i,,0.0,Hamstring injury - Expected back 25 Oct
@@ -600,6 +601,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 463726,1788989362,1788964208,d,,75.0,Hamstring injury - 75% chance of playing
 463726,1789427800,1789427800,a,75.0,100.0,
 463726,1789720597,1789655410,i,75.0,0.0,Unspecified injury - Unknown return date
+463726,1791534974,1791534974,d,0.0,50.0,Unspecified injury - 50% chance of playing
 463936,1785832691,1785832691,a,,,
 463936,1790411760,1790400609,d,,75.0,Ankle injury - 75% chance of playing
 463981,1785832691,1785832691,a,,,
@@ -862,6 +864,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 538007,1787270210,1787270210,a,,,
 538207,1785832691,1785832691,a,,,
 538207,1787910473,1787684408,i,,0.0,Foot injury - Unknown return date
+538207,1791534974,1791534974,d,0.0,50.0,Foot injury - 50% chance of playing
 538638,1785832691,1785832691,a,,,
 538638,1788894459,1788268565,u,0.0,0.0,Has joined Charlton Athletic on loan for the rest of the season
 539142,1785832691,1785832691,a,,,

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T15:51",
+ "generated": "2026-10-09T08:37",
  "gw": 6,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.42,
-   "ep": 4.32,
+   "ep": 4.31,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.839,
    "base": 3.38,
-   "ep": 3.3,
+   "ep": 3.32,
    "votes": 4
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.917,
    "base": 3.35,
-   "ep": 3.25,
+   "ep": 3.26,
    "votes": 5
   },
   {
@@ -200,7 +200,7 @@
    "news": "",
    "p_play": 0.467,
    "base": 1.1,
-   "ep": 1.01,
+   "ep": 1.02,
    "votes": 1
   },
   {
@@ -213,16 +213,16 @@
    "news": "Thigh injury - Unknown return date",
    "p_play": 0.0,
    "base": 0.0,
-   "ep": -0.05,
+   "ep": -0.04,
    "votes": 0
   }
  ],
- "xi_ep": 45.6,
+ "xi_ep": 45.7,
  "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 124.49,
+   "gain": 124.19,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 210
+   "borda": 205
   },
   {
    "pos": "MID",
-   "gain": 58.95,
+   "gain": 59.51,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 127
+   "borda": 126
   },
   {
    "pos": "MID",
-   "gain": 69.91,
+   "gain": 70.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 107
+   "borda": 106
   },
   {
    "pos": "MID",
-   "gain": 57.57,
+   "gain": 58.19,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 86
+   "borda": 84
   },
   {
    "pos": "DEF",
-   "gain": 44.6,
+   "gain": 44.26,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 93
+   "borda": 95
   },
   {
    "pos": "DEF",
-   "gain": 39.83,
+   "gain": 38.81,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 34
+   "borda": 32
   },
   {
    "pos": "DEF",
-   "gain": 35.05,
+   "gain": 35.38,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 28
+   "borda": 30
   },
   {
    "pos": "FWD",
-   "gain": 70.7,
+   "gain": 71.74,
    "change": 3,
    "fallback": false,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 55
+   "borda": 58
   },
   {
    "pos": "FWD",
-   "gain": 65.3,
+   "gain": 65.81,
    "change": 3,
    "fallback": true,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 31
+   "borda": 33
   },
   {
    "pos": "FWD",
-   "gain": 42.47,
+   "gain": 42.86,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,7 +538,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 23
+   "borda": 25
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
