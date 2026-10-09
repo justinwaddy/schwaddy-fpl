@@ -474,12 +474,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-05T21:21 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Full round of GW3 matches produced real news the model can't see: Igor Jesus was not even in Forest's 18 today (Delap started, Wood the sub), killing the Igor Jesus/Marmoush claim outright since Marmoush started and played 84 minutes for Spurs - dropped rather than replaced, since Marmoush is now clearly the stronger, more secure player of the two. In its place, two fresh DEF claims from today's confirmed lineups: Bijol was benched for the first time this season at Leeds (Elvedi/Muharemovic started), and Munoz was again only an impact sub at Forest, reinforcing his existing low model rating - both sourced directly off Sky Sports lineup pages rather than predicted-XI aggregators. A fifth, low-confidence claim was added on the back of Nathan Collins' calf strain (forced off after 17 minutes for Brentford, severity unknown) as a hedge, since the model does not yet reflect it at all. Le Fee/Barcola and Rayan/Doku carried forward with fresh sourcing (Le Fee's penalty and man-of-the-match display, Doku confirmed absent from City's 18 vs Coventry) and Le Fee/Barcola upgraded to high confidence given how comprehensively Barcola remains unintegrated."
-    },
-    {
       "ts": "2026-09-06T08:11 UTC",
       "gw": 4,
       "claims": 5,
@@ -832,6 +826,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: evening searches found no new permitted-source news; claims carried over."
+    },
+    {
+      "ts": "2026-10-09T08:15 UTC",
+      "gw": 6,
+      "claims": 5,
+      "note": "No change: no permitted-outlet news found overnight to alter the ranking before waivers close."
     }
   ]
 }

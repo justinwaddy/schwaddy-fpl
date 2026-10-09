@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-05T08:12 UTC",
-      "published": 1,
-      "note": "Palace boss Pierre Sage confirmed on cpfc.co.uk that Mateta is out three weeks with a hamstring injury, cementing Strand Larsen as the nailed starting striker through GW3 and GW4 - the model's 0.74 availability figure undersells this now. Full club-by-club sweep (Everton, Forest, Man City, Leeds, Brentford, Liverpool, Bournemouth, Tottenham, Palace, Sunderland) plus free-agent targets (Brighton's Gross/Kostoulas, Leeds' Ampadu, Forest's Igor Jesus) and rivals (Bruno Fernandes, Mbeumo, Palmer, Salah) found nothing else new: Doku remains out for today's Coventry game with no fresh return-date confirmation beyond the existing two-to-three-week estimate, Barcola remains bench-bound for his Ipswich debut, Tavernier and Munoz are both confirmed starting in today's lineups with no fitness concerns, and an old Bijol hip-flexor reference traced back to a different season and was discarded rather than published."
-    },
-    {
       "ts": "2026-09-05T21:21 UTC",
       "published": 3,
       "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
@@ -621,6 +616,11 @@
       "ts": "2026-10-08T21:10 UTC",
       "published": 0,
       "note": "Evening check before GW6 waivers close. Searches (premierleague.com, Sky Sports, Brentford site) repeat known items: Haaland sub for Norway, Scott tendon, Konsa knock; no press conferences yet. Nothing material."
+    },
+    {
+      "ts": "2026-10-09T08:15 UTC",
+      "published": 0,
+      "note": "Morning check before GW6 waivers close at 10:00 UTC. Searches returned only off-list previews or old-season pages; Van Hecke foot doubt for Man Utd is already known and unconfirmed by a permitted outlet. Nothing material."
     }
   ]
 }
