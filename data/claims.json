@@ -1,69 +1,11 @@
 {
-  "gw": 6,
-  "waivers_close": "2026-10-09T10:00:00Z",
-  "ts": "2026-10-08T08:10 UTC",
-  "summary": "Alex Scott's tendon injury (several weeks, Sky Sports) changes the board: he is now a clear drop for Anderson at rank 2, and the Brobbey punt (hamstring, 2-4 weeks quoted earlier) is removed. Haaland went off early for Norway with no reported injury, so I am holding him. Justin is 5th of 6 in the reversed GW6 waiver order, so only Edward claims ahead; waivers close 9 October.",
+  "gw": 7,
+  "waivers_close": "2026-10-16T10:00:00Z",
+  "ts": "2026-10-09T21:30 UTC",
+  "summary": "Waivers for GW6 have processed; these claims target the GW7 window closing 16 October. News changed little against the model: Stach and Truffert are backed, but I am treating Barcola as a hold until Sunday because Liverpool's forwards are injured, and the model cannot see that. Justin is 2nd on points so claims fifth of six in waiver order, ahead of only Edward.",
   "claims": [
     {
       "rank": 1,
-      "pos": "MID",
-      "add": {
-        "name": "Groß",
-        "code": "60307",
-        "club": "BHA"
-      },
-      "drop": {
-        "name": "Barcola",
-        "code": "482616",
-        "club": "LIV"
-      },
-      "why": "This board declined the model's Groß suggestion every week since GW2 on the grounds that Barcola, a £123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Groß-or-Barcola when it never had to be: Groß has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
-      "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.3 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
-      "confidence": "high",
-      "sources": [
-        {
-          "url": "https://www.skysports.com/football/news/11661/13586062/brighton-3-0-arsenal-mikel-artetas-side-lose-for-first-time-this-season-as-impressive-hosts-thrash-defending-champions",
-          "title": "Brighton 3-0 Arsenal: Groß scores and sets up the third (Sky Sports, 19 Sep 2026)"
-        },
-        {
-          "url": "https://www.brightonandhovealbion.com/media-article/mft-match-report-pl-bhaars",
-          "title": "Report: Albion 3 Arsenal 0 (brightonandhovealbion.com)"
-        },
-        {
-          "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike",
-          "title": "Iraola on Barcola: \"just cramps... there's no injury\" (liverpoolfc.com, 11 Sep 2026)"
-        }
-      ]
-    },
-    {
-      "rank": 2,
-      "pos": "MID",
-      "add": {
-        "name": "Anderson",
-        "code": "215379",
-        "club": "MCI"
-      },
-      "drop": {
-        "name": "Scott",
-        "code": "503139",
-        "club": "BOU"
-      },
-      "why": "New this run: Sky Sports reports Scott withdrew from England with a tendon injury and could miss 'several weeks', with scans planned; the premierleague.com round-up says media reports suggest up to two months. Anderson is the model's own pick and plays Man City's run of fixtures.",
-      "model": "Model has Anderson 18.2 next5 vs Scott 15.4 (avail 0.49) - I agree on the swap, and the news says Scott's 0.49 is generous.",
-      "confidence": "medium",
-      "sources": [
-        {
-          "title": "Alex Scott: Bournemouth midfielder withdraws from England duty and could miss 'several weeks' with tendon injury",
-          "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
-        },
-        {
-          "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
-          "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
-        }
-      ]
-    },
-    {
-      "rank": 3,
       "pos": "MID",
       "add": {
         "name": "Stach",
@@ -75,22 +17,45 @@
         "code": "249231",
         "club": "BRE"
       },
-      "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth. (Now rank 3: claim 2 takes Scott's slot, so the midfield would read Tavernier, Sch",
-      "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
+      "why": "The Premier League's Matchweek 6 preview says Aaronson has not started a league game since August, with Tanaka and Stach favoured, and an unchanged Leeds XI is distinctly possible. Stach is a settled starter; Lewis-Potter is fit and playing, so this is an upgrade on value rather than a rescue.",
+      "model": "Model has Stach 19.1 next5 vs Lewis-Potter 14.3 (+4.8); I agree, and the news backs his minutes.",
       "confidence": "medium",
       "sources": [
         {
-          "url": "https://www.leedsunited.com/en/news/daniel-farke-names-unchanged-side-to-face-palace",
-          "title": "Daniel Farke names unchanged side to face Palace (leedsunited.com, 20 Sep 2026)"
-        },
-        {
-          "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate",
-          "title": "Leeds United and Crystal Palace clash ends in stalemate (leedsunited.com)"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
     {
-      "rank": 4,
+      "rank": 2,
+      "pos": "DEF",
+      "add": {
+        "name": "Truffert",
+        "code": "494521",
+        "club": "BOU"
+      },
+      "drop": {
+        "name": "White",
+        "code": "198869",
+        "club": "ARS"
+      },
+      "why": "White is back from the groin problem and Arsenal's site lists him as available, but Arsenal also have Konsa and Mosquera competing for defensive places, so his start is not assured. The Premier League expects Bournemouth to be unchanged bar Scott, which keeps Truffert in the side.",
+      "model": "Model has Truffert 18.3 vs White 12.3 (avail 0.75, +6.0); I agree, the biggest gap on the board.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Injury latest on Havertz, Tzolis, Rice, Konsa and White",
+          "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+        }
+      ]
+    },
+    {
+      "rank": 3,
       "pos": "GKP",
       "add": {
         "name": "Tzolakis",
@@ -102,40 +67,195 @@
         "code": "111234",
         "club": "EVE"
       },
-      "why": "Unchanged from last week and unchanged in substance all month: both keepers have played every minute of all five, neither has a fitness question against him at any permitted source, and the gap is fixture value alone. The recurring 'Pickford out for a month' item that keeps surfacing in searches is the same September 2022 article and is discarded again. This is the smallest gain of the five and the first one to give up if the priority is better spent elsewhere - on the points ledger Tzolakis is 34 to Pickford's 25, but Tzolakis has 2 and 6 in his last two and the separation is mostly Hull's run (EVE, ful, BRE, IPS) against Everton's (hul, CHE, ars, new).",
-      "model": "Model has Tzolakis at 20.0 next5 / 136.9 rest (avail 1.00) against Pickford's 17.7 / 120.1 (avail 1.00) - +2.3 over five, +16.8 over the season. No availability component on either side. The neural network does not list a goalkeeper move at all; it starts Raya and benches Pickford, so on its reading the second keeper's identity barely matters.",
-      "confidence": "medium",
+      "why": "Both keepers are fit and nailed on, and neither has a reported fitness issue, so this is a fixture-value swap only. It is the smallest gain of the five and the first claim to drop if you would rather not churn the position. Rests purely on the model's numbers.",
+      "model": "Model has Tzolakis 20.0 vs Pickford 17.7 (+2.3); I agree, but without conviction.",
+      "confidence": "low",
       "sources": []
     },
     {
-      "rank": 5,
-      "pos": "DEF",
+      "rank": 4,
+      "pos": "FWD",
       "add": {
-        "name": "Truffert",
-        "code": "494521",
-        "club": "BOU"
-      },
-      "drop": {
-        "name": "Ajayi",
-        "code": "146426",
+        "name": "McBurnie",
+        "code": "169432",
         "club": "HUL"
       },
-      "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth and just earned his first France call-up. Bogle's case for staying got stronger again today too: he is a nominee for the Premier League's own September Player of the Month award, credited for his goal at Brighton and a starring role in the 4-1 win over Newcastle.",
-      "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
+      "drop": {
+        "name": "Strand Larsen",
+        "code": "247412",
+        "club": "CRY"
+      },
+      "why": "Strand Larsen leads Palace's line this weekend because the Premier League says Mateta is back in training but not ready to play. That cover is temporary: once Mateta returns Strand Larsen's minutes are exposed, and the model already prices him at 0.80 availability.",
+      "model": "Model has McBurnie 13.1 vs Strand Larsen 10.8 (+2.3); I agree, though the Mateta return is the only news-based reason.",
       "confidence": "low",
       "sources": [
         {
-          "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
-          "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
-        },
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "pos": "MID",
+      "add": {
+        "name": "Anderson",
+        "code": "215379",
+        "club": "MCI"
+      },
+      "drop": {
+        "name": "Barcola",
+        "code": "482616",
+        "club": "LIV"
+      },
+      "why": "A conditional punt. Barcola's model value is poor, but Liverpool have Isak, Gakpo and Ekitike out so he could be used up front against City on Sunday. Waivers close on 16 October, after that game, so only submit this if he fails to start or return anything.",
+      "model": "Model has Anderson 18.2 vs Barcola 4.8 (avail 0.36, +13.4); I am overruling it for now because it cannot see Liverpool's forward injuries.",
+      "confidence": "low",
+      "sources": [
         {
-          "title": "Jayden Bogle nominated for September Player of the Month (premierleague.com)",
-          "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     }
   ],
   "previous": [
+    {
+      "gw": 6,
+      "ts": "2026-10-08T08:10 UTC",
+      "claims": [
+        {
+          "rank": 1,
+          "pos": "MID",
+          "add": {
+            "name": "Groß",
+            "code": "60307",
+            "club": "BHA"
+          },
+          "drop": {
+            "name": "Barcola",
+            "code": "482616",
+            "club": "LIV"
+          },
+          "why": "This board declined the model's Groß suggestion every week since GW2 on the grounds that Barcola, a £123m signing, had too small a sample - wrong for five gameweeks running. Barcola's problem is role, not sample: Iraola confirmed on 11 September it was cramp, \"no injury\", yet Barcola has played 26, 71 and 71 minutes since and returned nothing in 168 minutes. The hold was framed as Groß-or-Barcola when it never had to be: Groß has started and played every minute of all five games, with 3 goals and 4 assists including a goal and a corner assist in Brighton's 3-0 win over Arsenal. 47 points, unowned, is the single biggest thing on this board and has sat there a month.",
+          "model": "Model has Groß at 20.4 next5 / 140.5 rest (avail 1.00) against Barcola's 4.3 / 40.1 (avail 0.32) - +16.2 over five gameweeks and +100 over the season, more than three times the next claim on this board. The neural network makes it change 1 with all five models agreeing, at +19.4 next5 and +134 on the season horizon; it is the only swap on either board that every model lists.",
+          "confidence": "high",
+          "sources": [
+            {
+              "url": "https://www.skysports.com/football/news/11661/13586062/brighton-3-0-arsenal-mikel-artetas-side-lose-for-first-time-this-season-as-impressive-hosts-thrash-defending-champions",
+              "title": "Brighton 3-0 Arsenal: Groß scores and sets up the third (Sky Sports, 19 Sep 2026)"
+            },
+            {
+              "url": "https://www.brightonandhovealbion.com/media-article/mft-match-report-pl-bhaars",
+              "title": "Report: Albion 3 Arsenal 0 (brightonandhovealbion.com)"
+            },
+            {
+              "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike",
+              "title": "Iraola on Barcola: \"just cramps... there's no injury\" (liverpoolfc.com, 11 Sep 2026)"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "pos": "MID",
+          "add": {
+            "name": "Anderson",
+            "code": "215379",
+            "club": "MCI"
+          },
+          "drop": {
+            "name": "Scott",
+            "code": "503139",
+            "club": "BOU"
+          },
+          "why": "New this run: Sky Sports reports Scott withdrew from England with a tendon injury and could miss 'several weeks', with scans planned; the premierleague.com round-up says media reports suggest up to two months. Anderson is the model's own pick and plays Man City's run of fixtures.",
+          "model": "Model has Anderson 18.2 next5 vs Scott 15.4 (avail 0.49) - I agree on the swap, and the news says Scott's 0.49 is generous.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Alex Scott: Bournemouth midfielder withdraws from England duty and could miss 'several weeks' with tendon injury",
+              "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
+            },
+            {
+              "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+              "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "pos": "MID",
+          "add": {
+            "name": "Stach",
+            "code": "466525",
+            "club": "LEE"
+          },
+          "drop": {
+            "name": "Lewis-Potter",
+            "code": "249231",
+            "club": "BRE"
+          },
+          "why": "Carried over from last week's board unchanged, and it is the second MID drop rather than a competitor for claim 1 - if both are granted the midfield reads Tavernier, Schade, Scott, Groß, Stach. Both men are fit and nailed: Farke named an unchanged Leeds side for Saturday and Stach played 90 again, his fifth full or near-full game. The honest caveat is that Stach's season is front-loaded - 13 of his 27 points came in GW1 and he has 4, 2, 3, 5 since - so this rests on the model's fixture read rather than on current form. Lewis-Potter has gone 2, 1, 3 in his last three and was hooked on 59 minutes at Bournemouth. (Now rank 3: claim 2 takes Scott's slot, so the midfield would read Tavernier, Sch",
+          "model": "Model has Stach at 19.1 next5 / 130.8 rest (avail 1.00) against Lewis-Potter's 14.0 / 97.1 (avail 0.95) - +5.1 over five, +33.7 over the season, the second-largest gain on the board. The neural network does not list this pair; its own second midfield move is E.Le Fée for Lewis-Potter, which is claim 5 here.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "url": "https://www.leedsunited.com/en/news/daniel-farke-names-unchanged-side-to-face-palace",
+              "title": "Daniel Farke names unchanged side to face Palace (leedsunited.com, 20 Sep 2026)"
+            },
+            {
+              "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate",
+              "title": "Leeds United and Crystal Palace clash ends in stalemate (leedsunited.com)"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "pos": "GKP",
+          "add": {
+            "name": "Tzolakis",
+            "code": "473284",
+            "club": "HUL"
+          },
+          "drop": {
+            "name": "Pickford",
+            "code": "111234",
+            "club": "EVE"
+          },
+          "why": "Unchanged from last week and unchanged in substance all month: both keepers have played every minute of all five, neither has a fitness question against him at any permitted source, and the gap is fixture value alone. The recurring 'Pickford out for a month' item that keeps surfacing in searches is the same September 2022 article and is discarded again. This is the smallest gain of the five and the first one to give up if the priority is better spent elsewhere - on the points ledger Tzolakis is 34 to Pickford's 25, but Tzolakis has 2 and 6 in his last two and the separation is mostly Hull's run (EVE, ful, BRE, IPS) against Everton's (hul, CHE, ars, new).",
+          "model": "Model has Tzolakis at 20.0 next5 / 136.9 rest (avail 1.00) against Pickford's 17.7 / 120.1 (avail 1.00) - +2.3 over five, +16.8 over the season. No availability component on either side. The neural network does not list a goalkeeper move at all; it starts Raya and benches Pickford, so on its reading the second keeper's identity barely matters.",
+          "confidence": "medium",
+          "sources": []
+        },
+        {
+          "rank": 5,
+          "pos": "DEF",
+          "add": {
+            "name": "Truffert",
+            "code": "494521",
+            "club": "BOU"
+          },
+          "drop": {
+            "name": "Ajayi",
+            "code": "146426",
+            "club": "HUL"
+          },
+          "why": "A model-driven punt, not a news-driven one, and the fifth defensive slot rather than a repeat run at Bogle, who is not a drop. Ajayi has started for Hull all season but carries only five career games on this model's books against Truffert's 42, and his 15.7 next5 is the softest of Justin's five defenders once Bogle is set aside. Truffert has started all five for Bournemouth and just earned his first France call-up. Bogle's case for staying got stronger again today too: he is a nominee for the Premier League's own September Player of the Month award, credited for his goal at Brighton and a starring role in the 4-1 win over Newcastle.",
+          "model": "Model has Truffert at 18.3 next5 / 120.8 rest (avail 1.00) against Ajayi's 15.7 / 108.8 (avail 0.98) - +2.6 over five, +12.0 over the season, the smallest edge of any claim on this board.",
+          "confidence": "low",
+          "sources": [
+            {
+              "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall",
+              "title": "Truffert earns first France call-up (afcb.co.uk, 18 Sep 2026)"
+            },
+            {
+              "title": "Jayden Bogle nominated for September Player of the Month (premierleague.com)",
+              "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
+            }
+          ]
+        }
+      ]
+    },
     {
       "gw": 5,
       "ts": "2026-09-17T08:12 UTC",
@@ -473,12 +593,6 @@
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-06T08:11 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made after a full overnight club-by-club sweep. Corrected the summary's stale 'bottom of the table' line - Justin is actually third of six on 121 points, so his claims process fourth in the six-team priority order, not first. Refreshed every model line with the latest next5/availability numbers, which have moved further toward the news on Bijol (12.7, down from 15.4) and Collins (12.5, down from 16.5) as the model catches up. Doku's return date still cannot be pinned down on a permitted source - only Sports Mole, goal.com and bet365 speculate anywhere from City's next match to mid-October, none of them citable - so his claim stands as before. Also checked Garner (described this morning as Everton's standout performer in league play, reinforcing the decision not to add a sixth claim there) and found nothing to change Munoz, Barcola or the free-agent targets."
-    },
     {
       "ts": "2026-09-06T21:10 UTC",
       "gw": 4,
@@ -832,6 +946,12 @@
       "gw": 6,
       "claims": 5,
       "note": "No change: no permitted-outlet news found overnight to alter the ranking before waivers close."
+    },
+    {
+      "ts": "2026-10-09T21:30 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "Rewritten for the GW7 window after GW6 waivers processed; squad changed (Gross, Scott, Bogle gone). Barcola downgraded to a conditional punt on Liverpool's forward injuries."
     }
   ]
 }

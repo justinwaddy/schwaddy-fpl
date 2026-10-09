@@ -1,22 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-05-collins-calf-strain",
-      "ts": "2026-09-05T21:21 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Brentford captain Nathan Collins was forced off after just 17 minutes of today's 1-1 draw with Sunderland with a calf strain. Boss Keith Andrews said \"It's a calf strain, I don't know the extent\" - your model still rates him a nailed starter at 1.00 availability, so this is one to watch rather than act on yet.",
-      "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
-    },
-    {
-      "id": "2026-09-05-bijol-benched-leeds",
-      "ts": "2026-09-05T21:21 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Bijol was left out of Leeds' starting XI against Brighton today - Nico Elvedi and Tarik Muharemovic started in central defence instead - and only came on as a 61st-minute substitute. That is his first confirmed bench appearance of the season and the model's 0.92 availability figure has not caught up with it.",
-      "url": "https://www.skysports.com/football/leeds-united-vs-brighton-and-hove-albion/teams/559466"
-    },
-    {
       "id": "2026-09-05-igor-jesus-out-of-squad",
       "ts": "2026-09-05T21:21 UTC",
       "mine": false,
@@ -319,14 +303,25 @@
       "scope": "mine",
       "text": "Tavernier (yours) may inherit Bournemouth penalty duty: the Premier League's Scout notes regular takers Kluivert and Kroupi are both injured, and Tavernier leads midfielders with three open-play goals. Chelsea away in GW6 is the test; the model has him at 18.5 next5, the second-best in your midfield.",
       "url": "https://premierleague.com/en/news/4730017/the-scouts-fpl-gameweek-6-transfer-radar"
+    },
+    {
+      "id": "2026-10-09-barcola-forwards-out",
+      "ts": "2026-10-09T21:30 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Barcola (yours) has a clearer route into Liverpool's XI for Sunday's game with Man City: the Premier League's Matchweek 6 preview has Isak and Gakpo confirmed out and Ekitike still sidelined, with Lewis Koumas or Barcola himself as the option up front. The model's 0.36 availability for him reads as a squad-fringe player and does not see Liverpool's forward injuries.",
+      "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+    },
+    {
+      "id": "2026-10-09-van-hecke-twins",
+      "ts": "2026-10-09T21:30 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Van Hecke (yours) is fit for Spurs at Old Trafford despite a knock with the Netherlands, De Zerbi confirmed, but his wife gave birth to twins on Thursday and the manager says he has to consider the 'emotional aspect'. Treat his start as a genuine call rather than the model's 1.00 certainty.",
+      "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-05T21:21 UTC",
-      "published": 3,
-      "note": "Today's full round of matches produced three genuine surprises, all confirmed directly off Sky Sports/club lineup pages rather than predicted-XI aggregators: Collins forced off with a calf strain after 17 minutes for Brentford, Bijol left out of Leeds' XI for the first time this season (Elvedi/Muharemovic started, Bijol a 61st-minute sub), and Igor Jesus not even in Forest's 18 against Tottenham, with Chris Wood the striker option off the bench instead - all three overrule this morning's 08:12 read, which had Munoz and Igor Jesus both confirmed starting and no concern at Brentford. Munoz himself was again an impact substitute rather than a starter for Forest (on in the 59th minute), consistent with what the model already prices in (0.37 availability), so not published separately as new. Two leads were discarded as stale on closer reading: a widely-cited Pickford 'thigh injury, out a month' story traced back to a 2022 Sky Sports article, and a Schade red-card suspension story traced back to a February 2026 incident already served - neither is current. Also checked Groß, Le Fee and Munoz (Liverpool's, not Forest's) among free-agent-adjacent names and rivals' best players; nothing else material found."
-    },
     {
       "ts": "2026-09-06T08:11 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-10-09T08:15 UTC",
       "published": 0,
       "note": "Morning check before GW6 waivers close at 10:00 UTC. Searches returned only off-list previews or old-season pages; Van Hecke foot doubt for Man Utd is already known and unconfirmed by a permitted outlet. Nothing material."
+    },
+    {
+      "ts": "2026-10-09T21:30 UTC",
+      "published": 2,
+      "note": "Barcola's route into Liverpool's XI with Isak, Gakpo and Ekitike out, and Van Hecke's fitness/twins call, both from the Premier League Matchweek 6 predicted line-ups. Deep GW6 starters pass written."
     }
   ]
 }

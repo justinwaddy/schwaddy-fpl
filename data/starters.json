@@ -1,8 +1,8 @@
 {
-  "gw": 5,
-  "deadline": "2026-09-18T17:30:00Z",
-  "ts": "2026-09-17T19:30 UTC",
-  "summary": "First deep pass for GW5 now that waivers have processed and the 15-man squad is final. Twelve of fifteen look nailed or close to it; the two City men (Gvardiol, Haaland) were simply rested for tonight's Carabao Cup tie and are pencilled back in for Sunday, not doubts. The real uncertainty is at the back and in midfield where no permitted outlet has yet published this weekend's confirmed team news - Raya, Van Hecke, Ajayi, Scott and the three Bournemouth/Brentford mids are all treated as 'likely' rather than 'start' purely because that confirmation hasn't landed yet, not because of any actual fitness doubt.",
+  "gw": 6,
+  "deadline": "2026-10-10T10:00:00Z",
+  "ts": "2026-10-09T21:30 UTC",
+  "summary": "Nobody is a confirmed start yet because no permitted outlet has published an XI; 14 are likely and Van Hecke is a doubt (twins born Thursday). Barcola may play more than the model's 0.36 suggests with Liverpool's forwards out.",
   "players": [
     {
       "name": "Pickford",
@@ -10,12 +10,16 @@
       "club": "EVE",
       "pos": "GKP",
       "status": "likely",
-      "verdict": "Undisputed No.1, no fresh fitness concern",
-      "note": "Everton's own lineup pages have started Pickford in every league game this season, most recently the derby draw with Man Utd. No permitted outlet has yet published Saturday's confirmed team news for the Ipswich visit, but nothing has surfaced to put his place in doubt.",
+      "verdict": "Fit, no issue reported at Everton",
+      "note": "Moyes's team news for Hull mentions Mykolenko and Norgaard, not Pickford, and the Premier League preview names no goalkeeper concern. No XI is published yet.",
       "sources": [
         {
-          "title": "Starting Lineups - Everton vs Man Utd",
-          "url": "https://www.skysports.com/football/everton-vs-manchester-united/teams/559467"
+          "title": "Double Fitness Update As Moyes Reveals Everton Team News For Hull",
+          "url": "https://www.evertonfc.com/news/2026/october/09/moyes-reveals-everton-team-news-for-hull-trip"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -25,41 +29,31 @@
       "club": "ARS",
       "pos": "GKP",
       "status": "likely",
-      "verdict": "No fresh fitness concern; undisputed No.1",
-      "note": "A search-engine claim of a Raya knee problem after the Man City game never traced back to arsenal.com or Sky Sports, and Arsenal's own site this week covers Saliba (out) and Timber's return, not Raya. No permitted outlet has yet published Saturday's confirmed team news for the trip to Brighton.",
-      "sources": []
-    },
-    {
-      "name": "Bogle",
-      "code": "226182",
-      "club": "LEE",
-      "pos": "DEF",
-      "status": "start",
-      "verdict": "Nailed at right-back, fresh off a goal and Player of the Match",
-      "note": "Bogle scored and was named Newcastle's own Hisense Player of the Match in Monday's 4-1 win, and Daniel Farke's fitness update this week for Sunday's trip to Crystal Palace reports an almost fully fit squad with no mention of him as a doubt.",
+      "verdict": "No issue listed in Arsenal's injury latest",
+      "note": "Arsenal's official injury update names Havertz, Tzolis, Rice, Konsa and White only. No Arsenal XI has been published yet.",
       "sources": [
         {
-          "title": "Leeds United v Newcastle United match centre",
-          "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-        },
-        {
-          "title": "Daniel Farke provides fitness update ahead of Crystal Palace clash",
-          "url": "https://www.leedsunited.com/en/news/daniel-farke-provides-fitness-update-ahead-of-crystal-palace-clash"
+          "title": "Injury latest on Havertz, Tzolis, Rice, Konsa and White",
+          "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
         }
       ]
     },
     {
-      "name": "Vuskovic",
-      "code": "610799",
-      "club": "BHA",
+      "name": "White",
+      "code": "198869",
+      "club": "ARS",
       "pos": "DEF",
-      "status": "start",
-      "verdict": "Nailed teenage centre-back, just scored his first goal",
-      "note": "Vuskovic scored his first Brighton goal in the recent draw with Leeds and Lewis Dunk praised his progress on the club's own site. No fitness concern has been reported ahead of Saturday's visit from Arsenal.",
+      "status": "likely",
+      "verdict": "Back from groin issue, available, rotation risk",
+      "note": "Arsenal's site says White is available again after a groin problem, while the Premier League has Konsa out and Mosquera in line to start in central defence, so his place is not certain. Model avail is 0.75.",
       "sources": [
         {
-          "title": "Dunk's delight at progress of Vuskovic and Yalcouye",
-          "url": "https://www.brightonandhovealbion.com/media-article/dunks-delight-at-progress-of-vuskovic-and-yalcouye"
+          "title": "Injury latest on Havertz, Tzolis, Rice, Konsa and White",
+          "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -69,12 +63,12 @@
       "club": "HUL",
       "pos": "DEF",
       "status": "likely",
-      "verdict": "Fit and scoring in his last confirmed appearance",
-      "note": "Sky Sports' own lineup for the 22 August win over Man Utd has Ajayi starting and scoring, but no permitted outlet has since published a line-up or press conference confirming him for this weekend's game against Newcastle, and unconfirmed reports of a hamstring complaint around that time were never verified on a permitted site.",
+      "verdict": "Hull left-back with Targett out, not confirmed",
+      "note": "The Premier League says Targett is out of the Everton game and Mendy returns in central defence; it does not name Ajayi. No permitted outlet confirms his place, so he stays at likely.",
       "sources": [
         {
-          "title": "Starting Lineups - Hull City vs Man Utd",
-          "url": "https://www.skysports.com/football/hull-city-vs-manchester-united/teams/559447"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -83,25 +77,44 @@
       "code": "469142",
       "club": "TOT",
       "pos": "DEF",
+      "status": "doubt",
+      "verdict": "Fit, but twins born Thursday; De Zerbi weighing it",
+      "note": "De Zerbi says he and Van de Ven are fit despite knocks with the Netherlands, but Van Hecke's wife had twins on Thursday and the manager has to consider the 'emotional aspect'. The model's 1.00 availability misses this.",
+      "sources": [
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+        }
+      ]
+    },
+    {
+      "name": "Vuskovic",
+      "code": "610799",
+      "club": "BHA",
+      "pos": "DEF",
       "status": "likely",
-      "verdict": "No injury reported; established centre-back",
-      "note": "Van Hecke has been a first-choice centre-back since his \u00a352m move from Brighton and Tottenham's own coverage of him this week raises no fitness concern. No permitted outlet has yet published Saturday's confirmed team news for the visit of Aston Villa.",
-      "sources": []
+      "verdict": "Brighton escaped the break with no new injuries",
+      "note": "The Premier League says Brighton have no fresh injuries and Dunk is set to replace Struijk, which leaves Vuskovic's place unaffected on that evidence. Hurzeler's Friday press conference reported on the club site lists only Dunk and Hinshelwood back.",
+      "sources": [
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+        },
+        {
+          "title": "Sunderland team news: Dunk back, Hinshelwood being assessed",
+          "url": "https://www.brightonandhovealbion.com/media-article/mft-match-preview-sunderland-bha-pl-october-2026"
+        }
+      ]
     },
     {
       "name": "Gvardiol",
       "code": "477424",
       "club": "MCI",
       "pos": "DEF",
-      "status": "start",
-      "verdict": "Rested for tonight's Cup tie, pencilled in for Sunderland",
-      "note": "Man City's own team news says Gvardiol, Haaland and Dias were left out entirely for tonight's Carabao Cup tie with Norwich purely as workload management after Sunday's derby, and describes it as 'highly unlikely' any of the three are risked in the cup - all three are expected back for Sunday's league game at home to Sunderland.",
-      "sources": [
-        {
-          "title": "Maresca provides injury update and team news ahead of Canaries clash",
-          "url": "https://www.mancity.com/news/mens/city-v-norwich-enzo-maresca-provides-injury-update-and-team-news-63925149"
-        }
-      ]
+      "status": "likely",
+      "verdict": "No fitness news; Man City at Liverpool",
+      "note": "No permitted outlet has reported a problem or a lineup for him this week. Maresca only addressed Haaland, so this rests on the absence of bad news and carries some rotation risk.",
+      "sources": []
     },
     {
       "name": "Barcola",
@@ -109,12 +122,12 @@
       "club": "LIV",
       "pos": "MID",
       "status": "likely",
-      "verdict": "Two straight starts, trending up not down",
-      "note": "Barcola has started Liverpool's last two matches (the Atletico Madrid Champions League tie and the win over Fulham), and Alexander Isak publicly backed him this week to make the side 'much better as a team'. No permitted outlet has yet published a confirmed line-up for Sunday's trip to Bournemouth, but the trend clearly favours another start - the board's 0.26 availability is well behind where he actually is.",
+      "verdict": "Liverpool's forwards out; may be used up front",
+      "note": "The Premier League has Isak and Gakpo out and Ekitike still sidelined, with Koumas or Barcola as the option up front for City. This contradicts the model's 0.36 availability; the call is not yet a confirmed start.",
       "sources": [
         {
-          "title": "Alexander Isak on his fitness and form, Liverpool fans and Barcola excitement",
-          "url": "https://www.liverpoolfc.com/news/alexander-isak-his-fitness-and-form-liverpool-fans-and-barcola-excitement"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -124,37 +137,31 @@
       "club": "BRE",
       "pos": "MID",
       "status": "likely",
-      "verdict": "No injury flagged; expected at wing-back vs Chelsea",
-      "note": "Brentford's own preview for Friday's west London derby with Chelsea raises no fitness concern over Lewis-Potter. No permitted outlet has yet published the confirmed team sheet ahead of kick-off.",
+      "verdict": "Fit; no concern reported at Brentford",
+      "note": "Keith Andrews's update names Collins, Jensen, Van den Berg and Damsgaard but not Lewis-Potter; Milambo and Dasilva are out. No Brentford XI is published yet.",
       "sources": [
         {
-          "title": "Match previews: Brentford v Chelsea, Premier League, 18/09/2026",
-          "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-chelsea-premier-league-18-09-2026"
+          "title": "Aston Villa v Brentford team news: Nathan Collins, Mathias Jensen, Antoni Milambo and Sepp van den Berg latest",
+          "url": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
     {
-      "name": "Scott",
-      "code": "503139",
-      "club": "BOU",
+      "name": "E.Le Fée",
+      "code": "484420",
+      "club": "SUN",
       "pos": "MID",
       "status": "likely",
-      "verdict": "No injury reported; established Bournemouth starter",
-      "note": "No permitted outlet has reported any fitness concern over Scott this week. No confirmed team news for Sunday's visit of Liverpool has been published yet, but nothing suggests his regular starting role is under threat.",
-      "sources": []
-    },
-    {
-      "name": "Tavernier",
-      "code": "201658",
-      "club": "BOU",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Back from hamstring trouble and scoring again",
-      "note": "Tavernier missed time earlier in the season with a hamstring injury but Sky Sports' own footage shows him back on the scoresheet against Man City since. No permitted outlet has yet confirmed his involvement specifically for Sunday's visit of Liverpool.",
+      "verdict": "Sunderland midfield; not on the injury list",
+      "note": "The Premier League preview lists Ballard and Brobbey as Sunderland's absences and does not mention Le Fée. No Sunderland XI is out yet.",
       "sources": [
         {
-          "title": "Bournemouth: Marcus Tavernier scores against Man City",
-          "url": "https://www.skysports.com/football/video/19530/13576279/goal-m-tavernier-26-man-city-0-1-bournemouth"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -164,27 +171,31 @@
       "club": "BRE",
       "pos": "MID",
       "status": "likely",
-      "verdict": "No injury flagged; expected to start vs Chelsea",
-      "note": "Brentford's own preview for the Chelsea derby makes no mention of any fitness doubt over Schade. No permitted outlet has yet published Friday's confirmed team sheet.",
+      "verdict": "Fit; Brentford front line unaffected",
+      "note": "Brentford's update and the Premier League preview flag Damsgaard as a doubt and Milambo and Dasilva as out; Schade is not mentioned. No XI is published yet.",
       "sources": [
         {
-          "title": "Match previews: Brentford v Chelsea, Premier League, 18/09/2026",
-          "url": "https://www.brentfordfc.com/en/news/article/match-previews-brentford-v-chelsea-premier-league-18-09-2026"
+          "title": "Aston Villa v Brentford team news: Nathan Collins, Mathias Jensen, Antoni Milambo and Sepp van den Berg latest",
+          "url": "https://www.brentfordfc.com/en/news/first-team-news-aston-villa-v-brentford-premier-league-10-10-2026"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
     {
-      "name": "Marmoush",
-      "code": "438234",
-      "club": "TOT",
-      "pos": "FWD",
-      "status": "start",
-      "verdict": "Nailed first-choice striker, still without a league goal",
-      "note": "De Zerbi has started Marmoush in every game since his loan move from City, most recently through Wednesday's Carabao Cup tie, and Marmoush himself said this week the squad are 'working hard' to end their goalless run - his role is not in question even though the goals are not yet coming.",
+      "name": "Tavernier",
+      "code": "201658",
+      "club": "BOU",
+      "pos": "MID",
+      "status": "likely",
+      "verdict": "Bournemouth XI expected unchanged bar Scott",
+      "note": "The Premier League expects Cook to replace the injured Alex Scott with everyone else unchanged from last time out, which implies Tavernier starts. One permitted source only.",
       "sources": [
         {
-          "title": "'All of us are working hard on that' - Marmoush on fixing goalless league start",
-          "url": "https://www.tottenhamhotspur.com/news/1089669/all-of-us-are-working-hard-on-that-marmoush-on-fixing-goalless-league-start"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -193,13 +204,28 @@
       "code": "247412",
       "club": "CRY",
       "pos": "FWD",
-      "status": "start",
-      "verdict": "Undisputed starting striker with Mateta still out",
-      "note": "Strand Larsen scored his first Premier League goal of the season against Ipswich, and Pierre Sage named the same starting side for tonight's Europa League opener against Lech Poznan, with Mateta still unavailable and Nketiah only fit enough for the bench.",
+      "status": "likely",
+      "verdict": "Leads Palace line with Mateta not ready",
+      "note": "The Premier League says Mateta is back in training but not ready to play against Forest, which leaves Strand Larsen as the lead striker. Model avail is 0.80.",
       "sources": [
         {
-          "title": "Sage: It was a hard way to lose the game",
-          "url": "https://www.cpfc.co.uk/news/first-team/sage-reaction-to-ipswich-defeat/"
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+        }
+      ]
+    },
+    {
+      "name": "Marmoush",
+      "code": "438234",
+      "club": "TOT",
+      "pos": "FWD",
+      "status": "likely",
+      "verdict": "Not on Spurs' injury list for Old Trafford",
+      "note": "The Premier League's Spurs preview names Porro and Mudryk out and Maddison with a setback, but not Marmoush. De Zerbi's attacking selection is not clear from permitted sources.",
+      "sources": [
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     },
@@ -208,13 +234,17 @@
       "code": "223094",
       "club": "MCI",
       "pos": "FWD",
-      "status": "start",
-      "verdict": "Rested for tonight's Cup tie, pencilled in for Sunderland",
-      "note": "Man City's own team news confirms Haaland was left out entirely for tonight's Carabao Cup tie with Norwich as pure squad rotation after Sunday's derby, with Maresca's own briefing pointing to him returning for Sunday's league game at home to Sunderland.",
+      "status": "likely",
+      "verdict": "Maresca says he is ready for Anfield",
+      "note": "Sky Sports and the Premier League report Maresca saying Haaland is fit and ready for Anfield after he came off early for Norway. Fit is not the same as confirmed starter.",
       "sources": [
         {
-          "title": "Maresca provides injury update and team news ahead of Canaries clash",
-          "url": "https://www.mancity.com/news/mens/city-v-norwich-enzo-maresca-provides-injury-update-and-team-news-63925149"
+          "title": "Liverpool vs Man City: how to watch, team news and score prediction",
+          "url": "https://skysports.com/football/news/13595453/liverpool-vs-man-city-how-to-watch-tv-channel-live-stream-now-tv-team-news-and-score-prediction"
+        },
+        {
+          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
+          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
         }
       ]
     }
@@ -237,6 +267,12 @@
       "gw": 5,
       "kind": "deep",
       "note": "First deep pass for GW5, run the same day GW5 waivers processed and the squad became final (deadline tomorrow 17:30 UTC). Roughly 25 searches across every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus predicted-lineup and press-conference searches for all eight GW5 fixtures touching the squad. Six of fifteen (Bogle, Vuskovic, Gvardiol, Marmoush, Strand Larsen, Haaland) clear the bar for 'start' on permitted sources; the rest are 'likely' only because no permitted outlet has yet published this weekend's confirmed team news, not because of any real doubt - most searches surfaced only predicted-XI aggregators (Sports Mole, fotmob, RotoWire, Squawka, SI.com and similar), which are not permitted sources and were discarded even where they matched what a permitted source separately confirmed. Genuine finds: Gvardiol and Haaland were both left out entirely for tonight's Carabao Cup tie with Norwich, confirmed on mancity.com as pure rotation with both expected back Sunday against Sunderland - worth flagging since a blank cup appearance could otherwise misread as an injury; Bogle was voted Newcastle's own Hisense Player of the Match after Monday's goal; Vuskovic scored his first Brighton goal against Leeds; and Strand Larsen kept his place for tonight's Europa League opener with Mateta still out. Ajayi's hamstring situation could not be resolved either way on a permitted source - Sky Sports' own 22 August lineup has him starting and scoring, but nothing since has been published on a permitted outlet, so he sits at 'likely' rather than 'start' pending this weekend's actual team news."
+    },
+    {
+      "ts": "2026-10-09T21:30 UTC",
+      "gw": 6,
+      "kind": "deep",
+      "note": "First deep pass for GW6, written after waivers processed. Permitted-outlet coverage was thin: the Premier League's Matchweek 6 predicted line-ups plus Arsenal, Brentford, Brighton and Everton club previews. No XI is published yet, so nobody reaches start. Main finds: Van Hecke doubt (twins), Barcola possibly used up front, White available again."
     }
   ]
 }
