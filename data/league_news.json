@@ -1,16 +1,6 @@
 {
- "generated": "2026-10-09T07:56 UTC",
+ "generated": "2026-10-09T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-23-cherki-quad-tear",
-   "ts": "2026-09-23T22:41",
-   "kind": "news",
-   "text": "Rayan Cherki has torn his left quadriceps, out for what Pep Guardiola called \"seven or eight weeks\" after Manchester City's loss at Brighton, and the injury has also taken him out of France's World Cup qualifiers this month. He was the best thing in Robert's GW5, his 8 points the top score in a squad that still finished the week 89 points off the top - Robert now goes into the international break without him.",
-   "source": {
-    "title": "Liverpool's Ekitike gets first France call-up after Man City's Cherki sidelined",
-    "url": "https://www.espn.com/soccer/story/_/id/46121377/liverpool-hugo-ekitike-gets-first-france-call-man-city-rayan-cherki-sidelined"
-   }
-  },
   {
    "id": "2026-09-23-delap-tzolis-irony",
    "ts": "2026-09-23T22:41",
@@ -719,16 +709,16 @@
     "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
     "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
    }
+  },
+  {
+   "id": "2026-10-09-quantum-of-tzolis",
+   "ts": "2026-10-09T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Big Ben named his team Quantum of Tzolis, and the real Christos Tzolis is in Marcus's squad with a hamstring injury and an expected return of 24 Oct. Big Ben has built an entire identity around a player he does not own, who is not playing, and who is not coming back for a fortnight. Gameweek 6 has ten fixtures and not one has kicked off."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-13T15:01 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "15:30 UTC kick-off Manchester United v Manchester City, second pass ~30 minutes out after the network policy was relaxed. Read Sky Sports' teams page for the match in full (curl; the fetch tool still reported the host blocked) and took both elevens and benches from it: United Lammens; Dalot, Maguire, Martinez, Dorgu; Tielemans, Mainoo; Mbeumo, Fernandes, Rashford; Cunha, subs Darlow, Mazraoui, Mount, Zirkzee, Yoro, Nascimento dos Santos, Heaven, Sesko, Lacey. City Donnarumma; Nunes, Dias, Guehi, Gvardiol; Fernandez, Anderson; Foden, Cherki, Semenyo; Haaland, subs Rulli, Ndiaye, Kovacic, Reis, Bouaddi, O'Reilly, Andrade Elias, Husanov, Lewis. All eighteen league-owned players named once in the item. premierleague.com's line-ups page also returned 200 but renders client-side with no names in the HTML; mancity.com 403'd; espn.com's lineups page returned empty."
-  },
   {
    "ts": "2026-09-13T22:49 UTC",
    "news": 1,
@@ -1141,6 +1131,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Liverpool and Arsenal international-break injuries (Guardian), plus Scott, Sunderland and Konsa. Search tool could not reach BBC/Guardian directly so read articles by curl. Roast archive: both unused suggestions left alone (slur/sexuality and apartheid, outside what the banter rules allow); no opinion on morning runs anyway."
+  },
+  {
+   "ts": "2026-10-09T22:45",
+   "news": 0,
+   "opinion": 1,
+   "matchday": false,
+   "note": "Evening, no fixtures today and no points to quote, so no reported items and one opinion on Quantum of Tzolis. Left both unused roasts alone: the Ben D self-submission is a slur, and the one about Justin is aimed at race. No football research done; nothing had been played."
   }
  ]
 }
