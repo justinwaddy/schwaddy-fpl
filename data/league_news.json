@@ -1,53 +1,6 @@
 {
- "generated": "2026-10-08T22:45 UTC",
+ "generated": "2026-10-09T07:56 UTC",
  "items": [
-  {
-   "id": "2026-09-22-news-wilson-quad",
-   "ts": "2026-09-22T07:47",
-   "kind": "news",
-   "text": "Robert's Harry Wilson, on 0 points so far, has been ruled out with a quad injury picked up in training, and Leeds boss Daniel Farke said he will probably miss Wales duty over the international break too. Joe Rodon is also out for Leeds, though Ilia Gruev is back available after a long-term injury.",
-   "source": {
-    "title": "Daniel Farke discusses fresh injury concerns ahead of Palace",
-    "url": "https://www.leedsunited.com/en/news/daniel-farke-discusses-fresh-injury-concerns-ahead-of-palace"
-   }
-  },
-  {
-   "id": "2026-09-22-opinion-state-of-league",
-   "ts": "2026-09-22T22:43",
-   "kind": "opinion",
-   "text": "Five gameweeks down and the league gets a proper rest before GW6, which does not kick off until October 10 - so whatever table sits tonight is the one getting relitigated at the pub for the better part of three weeks. The top four are squeezed into 13 points - Edward's 259 leads Justin's 252, Marcus's 249 and Ben C's 246 - while the bottom two have already fallen out of range, Ben D 40 back and Robert 89, with nothing but the waiver wire and free agents to shift a gap that size before a ball is kicked again.",
-   "source": null
-  },
-  {
-   "id": "2026-09-23-james-hamstring",
-   "ts": "2026-09-23T07:55",
-   "kind": "news",
-   "text": "Reece James has suffered his 10th hamstring injury since December 2020, pulling up against Newcastle just days after signing a new six-year deal at Chelsea. Head coach Liam Rosenior said the club don't yet know the full extent of the issue, but it rules James out for now. Robert owns James, whose side sits last in the table.",
-   "source": {
-    "title": "Reece James injury: Chelsea captain suffers another hamstring injury just a week after signing new contract",
-    "url": "https://www.skysports.com/football/news/11668/13520551/reece-james-injury-chelsea-captain-suffers-another-hamstring-injury-just-a-week-after-signing-new-contract"
-   }
-  },
-  {
-   "id": "2026-09-23-sesko-shin",
-   "ts": "2026-09-23T07:56",
-   "kind": "news",
-   "text": "Benjamin Sesko has withdrawn from Slovenia's squad for this month's Nations League games with a recurring shin problem, having already missed Sunday's 1-1 draw at Fulham with the same issue. United say he will be tested this week before a recovery plan is set - the fourth international camp he has missed since his move from RB Leipzig. Robert, already last in the table, now has two fresh injury worries in a day.",
-   "source": {
-    "title": "Šeško withdraws from Slovenia squad",
-    "url": "https://www.manutd.com/en/news/sesko-withdraws-from-slovenia-squad"
-   }
-  },
-  {
-   "id": "2026-09-23-kinsky-marmoush-window",
-   "ts": "2026-09-23T07:57",
-   "kind": "news",
-   "text": "Marcus's Antonin Kinsky is back in the senior Czech Republic squad for the first time since 2024, called up for a home Nations League tie with Croatia among others, while Justin's Omar Marmoush is away with Egypt for an Africa Cup of Nations qualifier against Angola. Two more of the league's fringe men swallowed by the same three-week window that has already taken Palmer and Rice off the page.",
-   "source": {
-    "title": "September and October international fixtures for our players",
-    "url": "https://www.tottenhamhotspur.com/news/1091532/september-and-october-international-fixtures-for-our-players"
-   }
-  },
   {
    "id": "2026-09-23-cherki-quad-tear",
    "ts": "2026-09-23T22:41",
@@ -716,16 +669,59 @@
    "kind": "opinion",
    "source": null,
    "text": "Robert is on 170, 89 behind Edward, after a Gameweek 5 of 22 points. None of the ten Gameweek 6 fixtures has kicked off, so for now Pardinho has not been outscored by anyone this week. Enjoy it, Robert; it ends at the first whistle."
+  },
+  {
+   "id": "2026-10-09-liverpool-injuries",
+   "ts": "2026-10-09T07:55",
+   "kind": "news",
+   "text": "Alexander Isak and Cody Gakpo both picked up injuries on international duty with Sweden and the Netherlands, the Guardian reports, ahead of Liverpool's game against Man City. Small Ben owns both, along with Szoboszlai and Virgil.",
+   "source": {
+    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+   }
+  },
+  {
+   "id": "2026-10-09-arsenal-hamstrings",
+   "ts": "2026-10-09T07:55",
+   "kind": "news",
+   "text": "Christos Tzolis injured a hamstring playing for Greece and Kai Havertz suffered a similar problem with Germany, per the Guardian, while Martin Odegaard got 'nothing dramatic' on his X-ray after a heavy challenge with Norway. Marcus owns Tzolis, Ben D owns Havertz and Edward owns Odegaard.",
+   "source": {
+    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+   }
+  },
+  {
+   "id": "2026-10-09-scott-out",
+   "ts": "2026-10-09T07:55",
+   "kind": "news",
+   "text": "Bournemouth's Alex Scott is out for up to two months after getting hurt on England duty, the Guardian reports, a blow to a side still searching for a first Premier League win. Justin owns him.",
+   "source": {
+    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+   }
+  },
+  {
+   "id": "2026-10-09-sunderland-hamstrings",
+   "ts": "2026-10-09T07:55",
+   "kind": "news",
+   "text": "Sunderland will be without Brian Brobbey and Dan Ballard, who both strained hamstrings on international duty, according to the Guardian. Marcus and Robert each have a Sunderland player, and the team face Brighton this weekend.",
+   "source": {
+    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+   }
+  },
+  {
+   "id": "2026-10-09-konsa-niggle",
+   "ts": "2026-10-09T07:55",
+   "kind": "news",
+   "text": "BBC Sport says Ezri Konsa has a slight niggle from England camp, that Cristhian Mosquera is fit and that William Saliba is on the mend with no clear return date. Ben D owns Konsa and Robert owns Mosquera.",
+   "source": {
+    "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-13T14:40 UTC",
-   "news": 0,
-   "opinion": 0,
-   "matchday": true,
-   "note": "15:30 UTC kick-off Manchester United v Manchester City, checked from 80 minutes out to 40, i.e. across the hour the teamsheets are published. Eighteen league-owned players involved: United - Mbeumo (Marcus), Lammens (Edward), Cunha (Small Ben), B.Fernandes (Big Ben), Yoro and Sesko (Robert); City - Gvardiol and Haaland (Justin), Guehi and Foden (Marcus), Semenyo (Edward), Donnarumma and Ruben Dias (Small Ben), Matheus Nunes and Enzo Fernandez (Big Ben), O'Reilly, Cherki and Ndiaye (Robert). No item posted per rule 2: this session's network policy rejects every permitted outlet outright (manutd.com, mancity.com, skysports.com, premierleague.com, espn.com, bbc.co.uk, theguardian.com, theathletic.com, reuters.com all blocked at the proxy), so no page could be read, and searches restricted to Sky Sports, ESPN and premierleague.com returned only the morning's predicted XIs and the Sky live blog with no eleven in the snippet. The only pages calling an XI 'confirmed' were Yahoo, Heavy and Flashscore, unpermitted aggregators that contradicted each other (Cunha v Sesko up front, Foden v Ndiaye wide, Shaw v Dorgu at left-back) and one of which still named Guardiola and the injured Amad, so none was used. The 07:55 derby item on the page already carries the injury picture from ESPN. Confirmed elevens should be posted from a session that can reach the club sites or Sky."
-  },
   {
    "ts": "2026-09-13T15:01 UTC",
    "news": 1,
@@ -1138,6 +1134,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening, no fixtures today (GW6 not started); no football to report, so two opinion pieces off team names and Robert's position. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): both aimed at sexuality/race, out of bounds. No flops today."
+  },
+  {
+   "ts": "2026-10-09T07:55",
+   "news": 5,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Liverpool and Arsenal international-break injuries (Guardian), plus Scott, Sunderland and Konsa. Search tool could not reach BBC/Guardian directly so read articles by curl. Roast archive: both unused suggestions left alone (slur/sexuality and apartheid, outside what the banter rules allow); no opinion on morning runs anyway."
   }
  ]
 }
