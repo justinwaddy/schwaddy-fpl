@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-06T21:10 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made. Corrected the league position again with this run's fresh table: Justin sits fifth of six on 124 points, so his claims process second in the six-team priority order (reverse table order), not fourth. Today's final round of GW3 matches confirmed rather than changed the picture: Garner started the full 90 for Everton (2-2 draw with Man Utd) and Raya started Arsenal's 2-1 comeback win over Chelsea, both exactly as already priced in - no sixth claim opened there. Refreshed model numbers moved further toward the news on Doku (avail down to 0.00, was 0.11) and Collins (avail down to 0.20, was 0.60). Also checked Haaland and Gvardiol (both fit and rated well against Coventry, no concern) and found nothing new on Munoz, Bijol or the free-agent targets."
-    },
-    {
       "ts": "2026-09-07T08:14 UTC",
       "gw": 4,
       "claims": 5,
@@ -952,6 +946,12 @@
       "gw": 7,
       "claims": 5,
       "note": "Rewritten for the GW7 window after GW6 waivers processed; squad changed (Gross, Scott, Bogle gone). Barcola downgraded to a conditional punt on Liverpool's forward injuries."
+    },
+    {
+      "ts": "2026-10-10T08:15 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no new permitted-source news since last run; GW7 claims carried forward."
     }
   ]
 }

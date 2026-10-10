@@ -273,6 +273,12 @@
       "gw": 6,
       "kind": "deep",
       "note": "First deep pass for GW6, written after waivers processed. Permitted-outlet coverage was thin: the Premier League's Matchweek 6 predicted line-ups plus Arsenal, Brentford, Brighton and Everton club previews. No XI is published yet, so nobody reaches start. Main finds: Van Hecke doubt (twins), Barcola possibly used up front, White available again."
+    },
+    {
+      "ts": "2026-10-10T08:15 UTC",
+      "gw": 6,
+      "kind": "light",
+      "note": "no change"
     }
   ]
 }
