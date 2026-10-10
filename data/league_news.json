@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-09T22:45 UTC",
+ "generated": "2026-10-10T07:41 UTC",
  "items": [
-  {
-   "id": "2026-09-23-delap-tzolis-irony",
-   "ts": "2026-09-23T22:41",
-   "kind": "opinion",
-   "text": "With no football to argue about tonight, a word on the two team names that don't survive contact with their own squads: Ben C called his 'Delap Dance' but doesn't own Delap - he sits on Ben D's team for 1 point - and Ben D's 'Quantum of Tzolis' is Tzolis-free too, because Marcus has quietly had him from the start and got 2 out of him in GW5. Two confused branding decisions, and one very smug Marcus.",
-   "source": null
-  },
-  {
-   "id": "2026-09-24-vandijk-100-caps",
-   "ts": "2026-09-24T07:52",
-   "kind": "news",
-   "text": "Virgil van Dijk, owned by Ben C, sits four caps short of a century for the Netherlands and could reach the milestone under new boss Xavi Hernandez when the Dutch host Germany in Amsterdam tonight - Jurgen Klopp's first game in charge of Die Mannschaft, and a reunion with the Liverpool side he used to manage. Ben C's Cody Gakpo is also in the Dutch squad, while Ben D's Florian Wirtz has been left out, held back by Klopp for October's games against Serbia and Greece instead.",
-   "source": {
-    "title": "Dutch Reds v Jurgen Klopp: Liverpool eyes on international meeting in Amsterdam",
-    "url": "https://www.liverpoolfc.com/news/dutch-reds-v-jurgen-klopp-liverpool-eyes-international-meeting-amsterdam"
-   }
-  },
-  {
-   "id": "2026-09-24-havertz-forced-off",
-   "ts": "2026-09-24T22:43",
-   "kind": "news",
-   "text": "Kai Havertz was forced off in the 30th minute of Germany's 1-1 draw with the Netherlands on Thursday night, Sky Sports reported, with the nature of the injury not yet confirmed. Havertz is part of Ben D's fifteen, already 40 points off the league lead, and there is no word yet on whether it threatens his return when the Premier League resumes on 10 October.",
-   "source": {
-    "title": "Netherlands 1-1 Germany: Jurgen Klopp's first game in charge ends all square after late Cody Gakpo equaliser",
-    "url": "https://www.skysports.com/football/news/13591589/netherlands-x-x-germany-report"
-   }
-  },
   {
    "id": "2026-09-24-robert-injury-crisis",
    "ts": "2026-09-24T22:43",
@@ -716,16 +689,39 @@
    "kind": "opinion",
    "source": null,
    "text": "Big Ben named his team Quantum of Tzolis, and the real Christos Tzolis is in Marcus's squad with a hamstring injury and an expected return of 24 Oct. Big Ben has built an entire identity around a player he does not own, who is not playing, and who is not coming back for a fortnight. Gameweek 6 has ten fixtures and not one has kicked off."
+  },
+  {
+   "id": "2026-10-10-baleba-debut",
+   "ts": "2026-10-10T07:41",
+   "kind": "news",
+   "text": "Carlos Baleba, the Brighton midfielder Manchester United signed on 25 August, could make his debut against Tottenham this afternoon, the Guardian reports, with United 12th after one win in their first five games. It touches Edward's Lammens, Marcus's Mbeumo, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko, all in the XI that has to stop the leaking.",
+   "source": {
+    "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
+    "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut"
+   }
+  },
+  {
+   "id": "2026-10-10-joao-pedro-doubt",
+   "ts": "2026-10-10T07:41",
+   "kind": "news",
+   "text": "BBC Sport's FPL writer says Joao Pedro's fitness is in question for Chelsea's home game with Bournemouth, and that the Chelsea attack suffered without him against Brentford in Gameweek 5. Marcus owns him, and Robert has Chelsea's Estevao and James.",
+   "source": {
+    "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
+   }
+  },
+  {
+   "id": "2026-10-10-city-anfield",
+   "ts": "2026-10-10T07:41",
+   "kind": "news",
+   "text": "The Guardian's weekend preview asks whether Manchester City can summon a siege mentality at Anfield, with the club's charges row hanging over the trip. Justin has Haaland and Gvardiol, Edward has Semenyo, and Small Ben's Liverpool players are on the other side of it.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-13T22:49 UTC",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with the Man Utd 0-1 Man City derby (Sky Sports): Haaland's winner off Gvardiol, Pro Ref's admitted offside error, Foden's red - Justin owns both scorer and assister. Rewrote all 5 of today's FLOP lines (all Man Utd derby players plus Enzo) via reflop.py, working the Foden/Bruno Fernandes incident and City's ten men into them. Opinion: Robert's last-place night plus the archived pint roast; Ben C's quiet 35 today plus a trimmed version of the boxing/preparation roast (dropped the Harvey Price line - disability-adjacent); Groß's penalty in Brighton's 5-0 romp at Coventry for Edward. Retired three roast-archive entries outright rather than holding them: Ben D on Ben D (sexuality), Ben D on Justin (race/apartheid), and Justin's three-option Marcus submission (religion, a partner outside the six, and an unverifiable claim stated as fact) - none of these become usable with time, so marked used+retired rather than left in the queue. Used live-feed totals throughout, not the public.json snapshot."
-  },
   {
    "ts": "2026-09-14T07:56 UTC",
    "news": 3,
@@ -1138,6 +1134,13 @@
    "opinion": 1,
    "matchday": false,
    "note": "Evening, no fixtures today and no points to quote, so no reported items and one opinion on Quantum of Tzolis. Left both unused roasts alone: the Ben D self-submission is a slur, and the one about Justin is aimed at race. No football research done; nothing had been played."
+  },
+  {
+   "ts": "2026-10-10T07:41",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Baleba's possible United debut; searches were mostly stale so only three items from Guardian/BBC pages actually read. Roast archive untouched (morning, no opinion): the two unused suggestions are a slur-adjacent self-insult and an apartheid line aimed at a mate, both held back as they fall under the excluded categories."
   }
  ]
 }
