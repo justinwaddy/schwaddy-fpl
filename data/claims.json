@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T08:14 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made. Refreshed Le Fee/Barcola sourcing with a post-debut Iraola quote (ESPN) rather than the pre-match preview used last time. Investigated Crystal Palace confirming Eddie Nketiah, not Strand Larsen, started at Fulham (Strand Larsen on only from half-time) but did not turn it into a claim: the model already rates the two within 0.5 of each other and Palace itself describes a genuine three-way rotation with Mateta, so it is flagged in the summary and as a headline rather than acted on. Also confirmed the model is still overrating Igor Jesus (not even in Forest squad list latest, per Tuesday) and left him out despite the model itself proposing that swap."
-    },
-    {
       "ts": "2026-09-07T14:39 UTC",
       "gw": 4,
       "claims": 5,
@@ -952,6 +946,12 @@
       "gw": 7,
       "claims": 5,
       "note": "No change: no new permitted-source news since last run; GW7 claims carried forward."
+    },
+    {
+      "ts": "2026-10-10T21:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."
     }
   ]
 }

@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-06T21:10 UTC",
-      "published": 0,
-      "note": "Today's final round of GW3 fixtures confirmed everything already on file rather than changing it: Garner started the full 90 for Everton's 2-2 draw with Man Utd (rated 6.14, unremarkable but a nailed starter as reported Thursday) and Raya started Arsenal's 2-1 comeback win over Chelsea with a couple of good saves - neither is new information. Doku still has no permitted-source return date (only unpermitted outlets speculate 13 September); Munoz remains an impact sub rather than a starter at Forest; Bijol remains behind Elvedi/Muharemovic at Leeds; Collins' calf still has no confirmed timeline from Brentford. Also checked Man City's Haaland and Gvardiol (both played and rated well against Coventry, no fitness concern), Bournemouth, Palace, Brighton, Newcastle and rivals Bruno Fernandes/Mbeumo/Palmer - nothing material or citable to a permitted outlet. Nothing published."
-    },
-    {
       "ts": "2026-09-07T08:14 UTC",
       "published": 1,
       "note": "Went back through Saturday's Fulham-Palace match report on cpfc.co.uk while re-checking Strand Larsen for this week's claims and found it reverses last Tuesday's read: Eddie Nketiah started up front with Strand Larsen only on from the bench at half-time, not the other way round. Full club-by-club sweep otherwise (Everton, Arsenal, Forest, Brentford, Man City, Leeds, Liverpool, Bournemouth, Tottenham, Brighton, Sunderland, Newcastle, Man Utd) plus general PL injury and transfer-fallout searches found nothing else new: Collins' calf still has no confirmed timeline, Doku still no permitted return date, Bijol still behind Elvedi/Muharemovic, Barcola still bench-bound (ESPN quotes Iraola calling him 'in a good place' but urging patience - reinforcing rather than changing his status), and a Premier League injury aggregator's claim that Marmoush is out with a knee injury traced back to a stale September 2025 story from his Man City days, not his current Tottenham situation, so it was discarded rather than published."
@@ -621,6 +616,11 @@
       "ts": "2026-10-10T08:15 UTC",
       "published": 0,
       "note": "Morning check ahead of GW6 deadline at 10:00 UTC. Searches returned only 2023 and 2025 pages or off-list fantasy sites; no new material from a permitted outlet. Nothing published."
+    },
+    {
+      "ts": "2026-10-10T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Searches returned only off-list pages (Sportsmole, SI, Express and Star) or stale 2026 pre-season items; nothing from a permitted outlet confirms new news. Nothing published."
     }
   ]
 }
