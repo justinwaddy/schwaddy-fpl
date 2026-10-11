@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T14:39 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Early manual fire ahead of GW4 waivers (Justin choosing today rather than tonight's run). Swapped Botman/Bijol out and Scott/Garner in at rank 4: Garner was subbed off in the 77th minute against Man Utd with an unspecified injury (75% chance of playing), reversing Saturday night's 'played the full 90' read, and the model's own greedy board now proposes this exact swap. Also upgraded Le Fee/Barcola and Gross/Doku to high confidence (Doku's return now pointed to 13 September, after GW4's own deadline) and switched the Munoz swap from Hill to Mitchell, who scored twice in Palace's first win of the season - Hill moves to the Collins hedge at rank 5 instead. Collins and Munoz themselves unchanged: still no Brentford timeline, still an impact sub at Forest, with no fresh GW3 fixtures for either club since Friday/Saturday's already-published results."
-    },
-    {
       "ts": "2026-09-07T14:48 UTC",
       "gw": 4,
       "claims": 5,
@@ -949,6 +943,12 @@
     },
     {
       "ts": "2026-10-10T21:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."
+    },
+    {
+      "ts": "2026-10-11T08:10 UTC",
       "gw": 7,
       "claims": 5,
       "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."

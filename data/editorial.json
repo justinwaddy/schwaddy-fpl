@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T08:14 UTC",
-      "published": 1,
-      "note": "Went back through Saturday's Fulham-Palace match report on cpfc.co.uk while re-checking Strand Larsen for this week's claims and found it reverses last Tuesday's read: Eddie Nketiah started up front with Strand Larsen only on from the bench at half-time, not the other way round. Full club-by-club sweep otherwise (Everton, Arsenal, Forest, Brentford, Man City, Leeds, Liverpool, Bournemouth, Tottenham, Brighton, Sunderland, Newcastle, Man Utd) plus general PL injury and transfer-fallout searches found nothing else new: Collins' calf still has no confirmed timeline, Doku still no permitted return date, Bijol still behind Elvedi/Muharemovic, Barcola still bench-bound (ESPN quotes Iraola calling him 'in a good place' but urging patience - reinforcing rather than changing his status), and a Premier League injury aggregator's claim that Marmoush is out with a knee injury traced back to a stale September 2025 story from his Man City days, not his current Tottenham situation, so it was discarded rather than published."
-    },
-    {
       "ts": "2026-09-07T14:39 UTC",
       "published": 3,
       "note": "Early manual fire at Justin's request ahead of GW4 waivers. Led with Garner: Everton's own lineup page shows he was subbed off in the 77th minute against Man Utd with an injury, not the full 90 reported Saturday night - club status now 'unspecified injury, 75% chance of playing', and the model's own greedy claims list has already picked this up (Scott/Garner, +7.0). Also published Mitchell's brace at Fulham (free agent DEF target, first Palace win of the season) and Doku's calf return being pointed toward 13 September per the Premier League's own tracker - after GW4's own deadline, not just its waivers window. Checked Collins (still no timeline from Brentford's own site, unchanged), Bijol and Munoz (no fresh GW3 fixtures since Friday/Saturday's already-published results), Le Fee (no fitness concern, in form after Saturday's penalty), Barcola (still just the one substitute cameo, no new update), and the other free-agent targets (Gross, Scott, Hill, Maguire, Richards) for this week's claims - all confirmed starting in their most recent match."
@@ -621,6 +616,11 @@
       "ts": "2026-10-10T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches returned only off-list pages (Sportsmole, SI, Express and Star) or stale 2026 pre-season items; nothing from a permitted outlet confirms new news. Nothing published."
+    },
+    {
+      "ts": "2026-10-11T08:10 UTC",
+      "published": 0,
+      "note": "Morning check. Searches returned only old-season or off-list pages; nothing from a permitted outlet. Nothing published."
     }
   ]
 }
