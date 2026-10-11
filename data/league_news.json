@@ -1,36 +1,6 @@
 {
- "generated": "2026-10-10T22:50 UTC",
+ "generated": "2026-10-11T07:50 UTC",
  "items": [
-  {
-   "id": "2026-09-25-estevao-brazil-south-korea",
-   "ts": "2026-09-25T07:49",
-   "kind": "news",
-   "text": "Estevao scored twice, including a 13th-minute opener from Bruno Guimaraes' pass, as Brazil beat South Korea 5-0 on Thursday. The Chelsea winger, owned by Robert, has now scored in three consecutive matches for the Selecao.",
-   "source": {
-    "title": "Internationals: Estevao Willian shines for Brazil",
-    "url": "https://www.chelseafc.com/en/news/article/internationals-estevao-willian-shines-for-brazil"
-   }
-  },
-  {
-   "id": "2026-09-25-palmer-withdraws-england",
-   "ts": "2026-09-25T22:46",
-   "kind": "news",
-   "text": "Cole Palmer has withdrawn from England's Nations League squad through injury, with Thomas Tuchel saying Palmer \"plays with discomfort and pain and cannot play on the highest level\" with it, and that Chelsea informed the FA. It is the second time Palmer has pulled out of an England camp under Tuchel. Palmer is on Edward's fifteen, on top of the table with 259.",
-   "source": {
-    "title": "England vs Spain: Thomas Tuchel says Cole Palmer's injury absences are preventing Chelsea forward from impressing Three Lions boss",
-    "url": "https://www.skysports.com/football/news/13591655/england-vs-spain-thomas-tuchel-says-cole-palmers-injury-absences-are-preventing-chelsea-forward-from-impressing-three-lions-boss"
-   }
-  },
-  {
-   "id": "2026-09-25-vandijk-denies-koeman-claim",
-   "ts": "2026-09-25T22:46",
-   "kind": "news",
-   "text": "Virgil van Dijk has denied Dutch media claims that he forced Ronald Koeman into the back-five switch that preceded Netherlands' round-of-32 World Cup exit to Morocco, calling the suggestion \"utter nonsense\" and saying the call was the coaching staff's, not his. Van Dijk, on Ben C's fifteen, is currently the league's top-scoring defender in that squad with 8 in GW5.",
-   "source": {
-    "title": "Virgil van Dijk: Liverpool captain slams Dutch reporter following claims he forced Ronald Koeman to change World Cup tactics",
-    "url": "https://www.skysports.com/football/news/13591280/virgil-van-dijk-liverpool-captain-slams-dutch-reporter-following-claims-he-forced-ronald-koeman-to-change-world-cup-tactics"
-   }
-  },
   {
    "id": "2026-09-25-vandijk-quiet-earner",
    "ts": "2026-09-25T22:46",
@@ -713,23 +683,39 @@
    "kind": "opinion",
    "text": "Liverpool v Man City is still to come, and it is the one fixture all six managers own a piece of: Haaland and Gvardiol for Justin, Donnarumma and Ruben plus four Liverpool men for Small Ben, Foden and Guehi for Marcus, Semenyo for Edward, Enzo for Big Ben and three City players for Robert. Anfield is effectively playing the whole league, and nobody gets to sit this one out.",
    "source": null
+  },
+  {
+   "id": "2026-10-11-hincapie-injury",
+   "ts": "2026-10-11T07:50",
+   "kind": "news",
+   "text": "Arsenal defender Piero Hincapie was carried off during the warm-down after coming on as a late substitute in the win over Leeds, and BBC Sport says it raises concern he has an injury. All six managers own an Arsenal player, so the club's fitness list is everybody's business.",
+   "source": {
+    "title": "Hincapie injury adds to Arsenal issues after Guimaraes rescue act",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c63r5w20ez3do"
+   }
+  },
+  {
+   "id": "2026-10-11-palmer-contract",
+   "ts": "2026-10-11T07:50",
+   "kind": "news",
+   "text": "Cole Palmer has signed a new Chelsea contract on improved terms until 2034, BBC Sport reports. Edward owns him and Marcus owns Joao Pedro, who the BBC also lists among the few Premier League players contracted to 2034 along with Haaland, who is Justin's.",
+   "source": {
+    "title": "Palmer signs new Chelsea contract until 2034",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cwe9lngxzjpno"
+   }
+  },
+  {
+   "id": "2026-10-11-utd-spurs-draw",
+   "ts": "2026-10-11T07:50",
+   "kind": "news",
+   "text": "Manchester United led Spurs through Bryan Mbeumo's opener and then watched Rodrigo Bentancur get sent off for a headfirst charge at Luke Shaw, only for Spurs to equalise in added time through Solanke, BBC Sport reports. Marcus owns Mbeumo and Robert owns Solanke, so the draw gave each of them something.",
+   "source": {
+    "title": "Boos, anguish & fading belief - 'worrying day' for under-pressure Carrick",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c62e9g09e781o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-14T18:10",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "19:00 slot LEE v NEW: found confirmed line-ups from leedsunited.com and newcastleunited.com"
-  },
-  {
-   "ts": "2026-09-14T22:49",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with the Leeds 4-1 Newcastle report (Sky Sports) - Jaissle's first defeat, Elanga MRI update. Opinion on Small Ben/Big Ben's Newcastle flops in that same match, Justin's league-best day overtaking into 2nd, and a roast on Marcus's Jobacus channel (used the archive's Jobacus angle only; dropped its Catholic/Spotlight suggestion for touching religion and dropped the Chloe-artwork line as aimed at someone outside the six). Also passed over two other unused roast submissions: Ben D on himself used a term aimed at sexuality, and Ben D on Justin invoked apartheid, which reads as aimed at race - both held rather than used. Rewrote all four of today's FLOP lines via reflop.py."
-  },
   {
    "ts": "2026-09-15T08:12 UTC",
    "news": 4,
@@ -1142,6 +1128,13 @@
    "opinion": 3,
    "matchday": true,
    "note": "Evening wrap. Led with Chelsea 5-1 Bournemouth (ESPN); no other match report found at a permitted outlet. Opinions: Marcus, Robert, Anfield-owns-the-league; rewrote today's flop lines. Both unused roast suggestions passed over: one is a sexuality slur, the other is aimed at race. Neither is usable, so they stay unused. Flop rewrite skipped: reflop.py found no flop events from today in data/news.json (they exist only in public.json), so the script refuses; template lines left as they were."
+  },
+  {
+   "ts": "2026-10-11T07:50",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Hincapie carried off at Arsenal, Palmer's new Chelsea deal, and the Man Utd v Spurs draw. Both unused roast suggestions held: one is a slur-adjacent insult and the other alleges a political stance as fact; neither suits a morning run anyway."
   }
  ]
 }
