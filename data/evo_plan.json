@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T08:36",
+ "generated": "2026-10-11T15:04",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 12.26,
+   "gain": 12.21,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,39 +254,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 11.03,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 503,
-    "code": 491279,
-    "name": "Van de Ven",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 279,
-    "code": 146426,
-    "name": "Ajayi",
-    "pos": "DEF",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.949,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 121
-  },
-  {
-   "pos": "DEF",
-   "gain": 6.76,
+   "gain": 6.73,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +286,39 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.03,
+   "gain": 10.95,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 503,
+    "code": 491279,
+    "name": "Van de Ven",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 0.83,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 279,
+    "code": 146426,
+    "name": "Ajayi",
+    "pos": "DEF",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.949,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 120
+  },
+  {
+   "pos": "DEF",
+   "gain": 7.0,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 111
+   "borda": 109
   },
   {
    "pos": "MID",
-   "gain": 11.77,
+   "gain": 11.81,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.1,
+   "gain": 11.14,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.6,
+   "gain": 11.64,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.8,
+   "gain": 9.84,
    "change": 2,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 10.05,
+   "gain": 9.98,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 6.4,
+   "gain": 6.39,
    "change": 3,
    "fallback": true,
    "add": {
@@ -542,7 +542,7 @@
   },
   {
    "pos": "MID",
-   "gain": 3.52,
+   "gain": 3.51,
    "change": 4,
    "fallback": false,
    "add": {
@@ -620,9 +620,9 @@
    "name": "Semenyo",
    "pos": "MID",
    "team": "MCI",
-   "status": "d",
-   "news": "Ankle injury - 75% chance of playing",
-   "p_play": 0.75,
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
    "base": 209.51,
    "ep": 201.86
   },
@@ -704,9 +704,9 @@
    "name": "O'Reilly",
    "pos": "DEF",
    "team": "MCI",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.343,
+   "status": "a",
+   "news": "",
+   "p_play": 0.458,
    "base": 180.77,
    "ep": 177.69
   },
@@ -848,9 +848,9 @@
    "name": "Szoboszlai",
    "pos": "MID",
    "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.981,
+   "status": "d",
+   "news": "Hamstring injury - 75% chance of playing",
+   "p_play": 0.736,
    "base": 150.49,
    "ep": 143.81
   },
