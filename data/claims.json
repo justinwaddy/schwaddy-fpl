@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T14:48 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "Second manual run today, going deeper on the GW4 appearance question. Two changes against the 14:39 board. Dropped the Gross/Doku claim: the model's per-gameweek line for Doku is 0.0, 0.4, 0.6, 0.9, 0.7 over GW4-8, i.e. it never recovers him at all, so its next5 of 2.5 is a floor rather than a forecast for a player the API expects back on 13 September - he misses one gameweek. Restored the Bijol claim at rank 3 against Maguire, sourced to Leeds' own team news naming him on the bench at Brighton, with minutes going 90/45/29; the model's avail 0.75 makes its +3.0 too small. Kept Mitchell/Munoz at 1, Le Fee/Barcola at 2, moved Hill/Collins to 4 and raised it from low to medium (the model already has Collins fit from GW5, so the gap is real, not injury-inflated), and left Scott/Garner at 5 but cut it to low: 75% is not an absence and Garner's minutes have been climbing back from July groin surgery. Also added the caveat that Ben Chilwell has re-signed for Palace and replaced Mitchell on 73 minutes at Fulham."
-    },
-    {
       "ts": "2026-09-07T21:15 UTC",
       "gw": 4,
       "claims": 5,
@@ -949,6 +943,12 @@
     },
     {
       "ts": "2026-10-11T08:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."
+    },
+    {
+      "ts": "2026-10-11T21:10 UTC",
       "gw": 7,
       "claims": 5,
       "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."

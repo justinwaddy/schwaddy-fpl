@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T14:39 UTC",
-      "published": 3,
-      "note": "Early manual fire at Justin's request ahead of GW4 waivers. Led with Garner: Everton's own lineup page shows he was subbed off in the 77th minute against Man Utd with an injury, not the full 90 reported Saturday night - club status now 'unspecified injury, 75% chance of playing', and the model's own greedy claims list has already picked this up (Scott/Garner, +7.0). Also published Mitchell's brace at Fulham (free agent DEF target, first Palace win of the season) and Doku's calf return being pointed toward 13 September per the Premier League's own tracker - after GW4's own deadline, not just its waivers window. Checked Collins (still no timeline from Brentford's own site, unchanged), Bijol and Munoz (no fresh GW3 fixtures since Friday/Saturday's already-published results), Le Fee (no fitness concern, in form after Saturday's penalty), Barcola (still just the one substitute cameo, no new update), and the other free-agent targets (Gross, Scott, Hill, Maguire, Richards) for this week's claims - all confirmed starting in their most recent match."
-    },
-    {
       "ts": "2026-09-07T14:49 UTC",
       "published": 2,
       "note": "Second manual run today, checking this morning's own reporting against the primary team sheets while re-doing the GW4 waiver board. Found one item to correct: Saturday's claim that Igor Jesus was 'not even named among Nottingham Forest's substitutes' is contradicted by Sky's own team sheet, which has him on at 59 minutes - the story is that Liam Delap has taken his starting place, not that he was left out. Also published Ben Chilwell's return to Palace, relevant because he replaced Tyrick Mitchell at Fulham and Mitchell is this week's rank 1 claim. Checked but did not publish: no fresh permitted word on Collins' scan, Doku's return beyond the 13 September date already reported, or Marmoush, whose Spurs have now gone 270 minutes without a goal - a run, not an event."
@@ -621,6 +616,11 @@
       "ts": "2026-10-11T08:10 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only old-season or off-list pages; nothing from a permitted outlet. Nothing published."
+    },
+    {
+      "ts": "2026-10-11T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Searches returned only off-list pages (Sportsmole, Express and Star) or old-season fantasy sites; nothing from a permitted outlet. Nothing published."
     }
   ]
 }
