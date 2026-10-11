@@ -2,16 +2,6 @@
   "generated": "2026-10-11T07:50 UTC",
   "items": [
     {
-      "id": "2026-09-26-mancity-guilty-verdict",
-      "ts": "2026-09-26T07:55",
-      "kind": "news",
-      "text": "Manchester City have been found guilty of the majority of the 115 alleged financial rule breaches against them, with an independent commission's verdict delivered on Friday; the club says it will appeal, and any sanctions - which could include a points deduction or fines - are still to be decided. Between them, five of the six squads carry a City player: Haaland and Gvardiol for Justin, Guehi and Foden for Marcus, Donnarumma and Ruben for Ben C, Matheus Nunes and Enzo for Ben D, and O'Reilly, Cherki and Ndiaye for Robert.",
-      "source": {
-        "title": "Man City fans face up to reality of guilty verdict",
-        "url": "https://www.bbc.com/sport/football/articles/cwy7zzdmn4v7o"
-      }
-    },
-    {
       "id": "2026-09-26-spurs-winless-pressure",
       "ts": "2026-09-26T07:56",
       "kind": "news",
@@ -716,16 +706,19 @@
         "title": "Team News: One change for Palace against Forest",
         "url": "https://www.cpfc.co.uk/news/first-team/team-news-one-change-for-palace-against-forest/"
       }
+    },
+    {
+      "id": "2026-10-11-xi-1530",
+      "ts": "2026-10-11T15:03",
+      "kind": "news",
+      "text": "Team news, Liverpool v Man City (15:30 UTC). Liverpool's confirmed XI: Marcus has Alisson starting, Big Ben has Wirtz, Justin has Barcola, and Small Ben has Van Dijk starting but Gakpo, Szoboszlai and Isak are not in the matchday squad. City's teamsheet could not be read from a permitted source in time, so no City players are covered.",
+      "source": {
+        "title": "Confirmed Liverpool line-up v Manchester City",
+        "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-up-v-manchester-city"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-15T22:56 UTC",
-      "news": 1,
-      "opinion": 3,
-      "matchday": false,
-      "note": "Evening wrap. No fixtures today (GW5 kicks off at the weekend); tonight's refresh finalised GW4 with bonus, so worked from those settled numbers rather than any live action. One news item: Newcastle boss Jaissle confirmed after Monday's 4-1 loss at Leeds that Elanga (Marcus's) is injured, possibly long-term, explaining his GW4 blank - read at Sky Sports, not previously posted. Three opinion pieces off the final GW4 table: Justin's GW4 win plus the biggest bench of the week and a lead cut to 7 over Marcus; Groß's 17 for Edward being the week's top individual haul yet still finishing well behind Justin's total; Robert's tiny 2-point bench proving his last-place 28 was his ceiling, not bad luck. Both unused roast archive entries held again, same reasons as every prior run: the Ben D self-roast uses a term aimed at sexuality, the Ben D-on-Justin line invokes apartheid and reads as aimed at race - both excluded categories under the banter rules, not reused. No FLOP items posted today, so nothing to rewrite via reflop.py."
-    },
     {
       "ts": "2026-09-16T07:46 UTC",
       "news": 3,
@@ -1138,6 +1131,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "13:00 slot: found Crystal Palace sheet (cpfc.co.uk); Forest, Hull, Everton sheets not available"
+    },
+    {
+      "ts": "2026-10-11T15:03",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 UTC slot, LIV v MCI: Liverpool sheet found (liverpoolfc.com); City sheet not readable (mancity.com 403), left out"
     }
   ]
 }
