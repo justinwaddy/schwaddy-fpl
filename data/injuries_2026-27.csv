@@ -34,6 +34,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 78916,1787910473,1787508008,i,,0.0,Ankle injury - Expected back 14 Sep
 78916,1789427800,1789427800,i,0.0,0.0,Ankle injury - Expected back 19 Sep
 78916,1789807008,1789807008,i,0.0,0.0,Ankle injury - Expected back 12 Oct
+78916,1791828669,1791828669,a,0.0,100.0,
 79602,1788894459,1788894459,a,,,
 80178,1785832691,1785832691,a,,,
 80201,1785832691,1785832691,a,,,
@@ -189,6 +190,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 180974,1785832691,1784808084,d,,75.0,Thigh injury - 75% chance of playing
 180974,1787270210,1786867208,i,,0.0,Unspecified injury - Unknown return date
 180974,1791474643,1791474643,d,0.0,75.0,Unspecified injury - 75% chance of playing
+180974,1791828669,1791828669,a,75.0,100.0,
 183015,1785832691,1785832691,a,,,
 183656,1785832691,1785832691,a,,,
 183656,1788894459,1788528608,i,0.0,0.0,Hamstring injury - Expected back 10 Oct
@@ -601,6 +603,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 448089,1789634190,1789587009,d,0.0,75.0,Calf injury - 75% chance of playing
 448089,1789807008,1789807008,a,100.0,100.0,
 448104,1785832691,1785832691,a,,,
+448104,1791828669,1791817208,d,,75.0,Ankle injury - 75% chance of playing
 448514,1785832691,1785832691,a,,,
 449027,1785832691,1785832691,a,,,
 449428,1785832691,1785661211,d,,75.0,Hip injury - 75% chance of playing
@@ -615,6 +618,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 450542,1789045578,1789031567,u,,0.0,has joined  Kasimpasa on loan for the rest of the seaon.
 451284,1785832691,1785832691,a,,,
 451284,1789893388,1789833609,d,,75.0,Hamstring injury - 75% chance of playing
+451284,1791828669,1791828669,a,75.0,100.0,
 451302,1785832691,1785832691,a,,,
 451302,1787270210,1786370549,u,,0.0,Has joined Celta Vigo on loan for the rest of the season
 451340,1785832691,1784917811,i,,0.0,Hamstring injury - Unknown return date
@@ -650,6 +654,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 463726,1789427800,1789427800,a,75.0,100.0,
 463726,1789720597,1789655410,i,75.0,0.0,Unspecified injury - Unknown return date
 463726,1791534974,1791534974,d,0.0,50.0,Unspecified injury - 50% chance of playing
+463726,1791828669,1791828669,a,50.0,100.0,
 463936,1785832691,1785832691,a,,,
 463936,1790411760,1790400609,d,,75.0,Ankle injury - 75% chance of playing
 463936,1791559985,1791559985,i,,0.0,Ankle injury - Unknown return date
@@ -725,6 +730,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 481624,1787910473,1787657408,i,,0.0,Ankle injury - Unknown return date
 481624,1789202150,1789202150,a,0.0,100.0,
 481655,1785832691,1785832691,a,,,
+481655,1791828669,1791817208,d,,75.0,Unspecified injury - 75% chance of playing
 482442,1785832691,1785832691,a,,,
 482442,1787910473,1787322608,i,0.0,0.0,Hamstring injury - Unknown return date
 482442,1788894459,1788364963,u,0.0,0.0,Has joined Juventus on loan for the rest of the season
@@ -933,6 +939,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 538207,1785832691,1785832691,a,,,
 538207,1787910473,1787684408,i,,0.0,Foot injury - Unknown return date
 538207,1791534974,1791534974,d,0.0,50.0,Foot injury - 50% chance of playing
+538207,1791828669,1791828669,a,50.0,100.0,
 538638,1785832691,1785832691,a,,,
 538638,1788894459,1788268565,u,0.0,0.0,Has joined Charlton Athletic on loan for the rest of the season
 539142,1785832691,1785832691,a,,,
@@ -963,6 +970,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 547719,1785832691,1784808084,i,,0.0,Leg injury - Expected back 30 Aug
 547719,1787270210,1787270210,a,,100.0,
 547719,1790869123,1790868610,d,100.0,75.0,Unspecified injury - 75% chance of playing
+547719,1791828669,1791828669,a,75.0,100.0,
 548308,1785832691,1785832691,a,,,
 548308,1787270210,1787062388,u,,0.0,Has joined Middlesbrough permanently
 549067,1785832691,1785832691,a,,,
