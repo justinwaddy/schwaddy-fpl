@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-08T08:10 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~11 hours after last night's sweep. Fresh club-by-club round (Palace, Sunderland, Man Utd, Bournemouth, Brentford, Leeds, Man City among them) confirmed rather than moved anything: Mitchell has no fresh fitness concern beyond an unpermitted preview mentioning an EFL Cup doubt (discarded, wrong competition and not sourced to a permitted outlet), Le Fee remains first-choice at Sunderland with no injury news, Bijol is still behind Elvedi at Leeds with no new Leeds team news since Brighton, Collins' calf still has no confirmed Brentford timeline, and Garner has had no fresh update on his 75% figure. Doku still projected for the 13 September derby, a day after GW4's own deadline, unchanged from last night."
-    },
-    {
       "ts": "2026-09-08T21:12 UTC",
       "gw": 4,
       "claims": 5,
@@ -952,6 +946,12 @@
       "gw": 7,
       "claims": 5,
       "note": "No change: no permitted-outlet news found; claims carried forward."
+    },
+    {
+      "ts": "2026-10-12T21:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no new permitted-outlet news moved any claim; claims carried forward."
     }
   ]
 }
