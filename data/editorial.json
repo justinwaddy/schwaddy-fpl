@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T14:49 UTC",
-      "published": 2,
-      "note": "Second manual run today, checking this morning's own reporting against the primary team sheets while re-doing the GW4 waiver board. Found one item to correct: Saturday's claim that Igor Jesus was 'not even named among Nottingham Forest's substitutes' is contradicted by Sky's own team sheet, which has him on at 59 minutes - the story is that Liam Delap has taken his starting place, not that he was left out. Also published Ben Chilwell's return to Palace, relevant because he replaced Tyrick Mitchell at Fulham and Mitchell is this week's rank 1 claim. Checked but did not publish: no fresh permitted word on Collins' scan, Doku's return beyond the 13 September date already reported, or Marmoush, whose Spurs have now gone 270 minutes without a goal - a run, not an event."
-    },
-    {
       "ts": "2026-09-08T08:10 UTC",
       "published": 0,
       "note": "Full club-by-club sweep (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Palace, Tottenham, Man Utd, Sunderland, Bournemouth) plus general PL injury/transfer and rival-player searches, first run of the day, ~11 hours after last night's 21:15 claims refresh. Nothing moved: Collins' calf still has no confirmed Brentford timeline, Doku still pointed to the 13 September derby (after GW4's own deadline), Bijol still behind Elvedi at Leeds, Munoz still an impact sub at Forest, Barcola still just the one substitute cameo, Raya and the rest of the certain starters unchanged. One search (a general injury-news query) briefly surfaced what looked like a fresh Raya knee injury, but cross-checking arsenal.com and Sky Sports confirmed it was a stale search-index result from a past season (referencing Leicester City and Bolton Wanderers fixtures that do not apply to this Premier League season) - discarded rather than published. Nothing else new or citable to a permitted outlet."
@@ -621,6 +616,11 @@
       "ts": "2026-10-11T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches returned only off-list pages (Sportsmole, Express and Star) or old-season fantasy sites; nothing from a permitted outlet. Nothing published."
+    },
+    {
+      "ts": "2026-10-12T08:10 UTC",
+      "published": 0,
+      "note": "Morning check. Searches returned only off-list pages (Sportsmole, Empire of the Kop, SI) or old-season trackers; nothing from a permitted outlet. Not in the starters window. Nothing published."
     }
   ]
 }

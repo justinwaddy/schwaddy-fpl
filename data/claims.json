@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-07T21:15 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~6.5 hours after the last update. Full club-by-club sweep found nothing that moves any of the five: Collins' calf still has no confirmed timeline from Brentford's own site, Bijol has had no fresh Leeds team news since last week's Brighton bench call, and Munoz remains an impact sub for Forest rather than a confirmed starter (fantasy-site chatter that he is now nailed on did not clear a permitted source, so it changes nothing here). Maresca said today only that City are 'not sure yet' whether Doku is back for the 13 September derby - restates the existing doubt without changing it, since that fixture falls after GW4's own deadline either way. Also checked Le Fee, Barcola, Strand Larsen, Maguire (took a bloody nose against Everton but played on, no fitness concern) and Scott/Hill at Bournemouth - all confirmed exactly as already priced into this file."
-    },
-    {
       "ts": "2026-09-08T08:10 UTC",
       "gw": 4,
       "claims": 5,
@@ -952,6 +946,12 @@
       "gw": 7,
       "claims": 5,
       "note": "No change: no permitted-outlet news found to move the GW7 claims. Starters untouched (not in window)."
+    },
+    {
+      "ts": "2026-10-12T08:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no permitted-outlet news found; claims carried forward."
     }
   ]
 }
