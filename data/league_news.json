@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-11T22:45 UTC",
+ "generated": "2026-10-12T07:55 UTC",
  "items": [
-  {
-   "id": "2026-09-26-quantum-of-tzolis",
-   "ts": "2026-09-26T22:49",
-   "kind": "opinion",
-   "text": "Ben D has spent the season fifth of six, forty points off Edward at the top, running a squad called 'Quantum of Tzolis' - a name built around a player he has never actually owned. Kostas Tzolis sits on Marcus's roster, two places above Ben D in the table, which makes the team name either the longest-running joke at Ben D's own expense or a sign he forgot to draft the guy.",
-   "source": null
-  },
-  {
-   "id": "2026-09-26-robert-blank-bench",
-   "ts": "2026-09-26T22:50",
-   "kind": "opinion",
-   "text": "Robert sits last of six, 89 points off the pace, and his bench column reads a flat zero - the only zero in the whole league table. Every other squad has banked something in reserve this season; Robert's has banked nothing at all, which either means perfect starting picks every week or a bench that has never once been worth picking up.",
-   "source": null
-  },
-  {
-   "id": "2026-09-27-palmer-return",
-   "ts": "2026-09-27T07:49",
-   "kind": "news",
-   "text": "Cole Palmer came back from two months out with groin and toe injuries to play the final half hour of Chelsea's match with Leeds, and head coach Enzo Maresca said on Friday it \"remains to be seen\" whether Palmer features again next time out. Palmer has 2 points on Edward's team this season, banked before the injury took him out of the side.",
-   "source": {
-    "title": "Enzo Maresca confirms Chelsea team news for Bournemouth",
-    "url": "https://www.chelseafc.com/en/news/article/enzo-maresca-confirms-chelsea-team-news-for-bournemouth"
-   }
-  },
   {
    "id": "2026-09-27-semenyo-potm",
    "ts": "2026-09-27T07:50",
@@ -707,6 +683,36 @@
    "kind": "opinion",
    "text": "Robert is on 195, 131 behind Marcus, with 25 for the day: eight of his eleven scored, three played and returned nothing, and none are still to come. Cherki's 10 is 10 of the 25, so the rest of the squad combined for 15. At 131 behind he is no longer chasing the leader, he is chasing the tail lights and the leader has fog lamps.",
    "source": null
+  },
+  {
+   "id": "2026-10-12-city-anfield",
+   "ts": "2026-10-12T07:55",
+   "kind": "news",
+   "text": "Manchester City ran over a ten-man Liverpool at Anfield after Ryan Gravenberch's second yellow card in the 62nd minute, with Rayan Cherki scoring the third, the Guardian reports. City keep their 100% start to the season. Robert owns Cherki, and Small Ben, Marcus, Big Ben and Justin each have a Liverpool player to explain.",
+   "source": {
+    "title": "Cherki cracker caps Manchester City win at Liverpool in face of Anfield taunts",
+    "url": "https://www.theguardian.com/football/2026/oct/11/liverpool-manchester-city-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-12-ipswich-fulham",
+   "ts": "2026-10-12T07:55",
+   "kind": "news",
+   "text": "Ipswich came from behind to beat Fulham, with Abdoul Ouattara levelling in the 88th minute and Dara O'Shea heading the winner in stoppage time, the Guardian reports. Fulham are winless in six and bottom of the table. Marcus, Edward and Big Ben all own Fulham players, and Small Ben has Ipswich's Davis and Enciso.",
+   "source": {
+    "title": "Ipswich stun Fulham with last-gasp comeback to increase heat on Arbeloa",
+    "url": "https://www.theguardian.com/football/2026/oct/10/ipswich-fulham-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-12-hull-everton",
+   "ts": "2026-10-12T07:55",
+   "kind": "news",
+   "text": "Hull and Everton drew in a seesaw game, with Mohamed Belloumi earning Hull the point, the Guardian reports. Everton men on the books: Dewsbury-Hall for Marcus, Tarkowski, Garner and Barry for Edward, Pickford for Justin. Justin also has Hull's Ajayi, so he is on both sides of it.",
+   "source": {
+    "title": "Mohamed Belloumi grabs point for Hull in seesaw draw with Everton",
+    "url": "https://www.theguardian.com/football/2026/oct/11/hull-city-everton-premier-league-match-report"
+   }
   }
  ],
  "runs": [
@@ -1129,6 +1135,13 @@
    "opinion": 3,
    "matchday": true,
    "note": "Evening wrap. No reported items: searches turned up no usable same-day report from a permitted outlet for the three matches (only old-season or undated pages), so nothing was posted rather than guess. Opinion: Marcus lead/Tzolis, Small Ben Liverpool zeros, Robert 131 back. Rewrote the 8 league-scope flop lines; the 3 Justin-only flops (Barcola, Pickford, Ajayi) are stored as 'yours' in news.json and cannot be matched by reflop.py so were left. Roast suggestions left unused: both by Ben D (one a slur, one aimed at race/politics), held out under rule 4, not coming back."
+  },
+  {
+   "ts": "2026-10-12T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with the Anfield result (Guardian), then Ipswich v Fulham and Hull v Everton. Search was thin: only Guardian pages were read; the Newcastle at Coventry team news came only from a fantasy site so was dropped. Roast archive: 2 unused, not touched on a morning run."
   }
  ]
 }
