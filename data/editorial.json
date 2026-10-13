@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-10T08:35 UTC",
-      "published": 1,
-      "note": "Full club-by-club sweep ~11 hours after last night's 21:09 run (Everton, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Sunderland, Brighton) plus general PL injury/transfer searches. Led with a correction: liverpoolfc.com quotes Iraola confirming last night's Barcola calf scare was cramp, not injury - he called the France forward's first start 'very happy'-making, with two clear chances on goal. Investigated but did not publish: Leeds recalled Bijol for Wednesday's Carabao Cup defeat at Chelsea (6-3, eight changes, two debuts) - he's clearly fit but a heavily rotated cup side doesn't tell us anything about his Premier League standing behind Elvedi, so it changes nothing about the existing Bijol read and isn't news on its own. A search for Marmoush injury news returned two ESPN pieces headlined 'Marmoush ruled out of Manchester derby after Egypt injury' - both dated 9-10 September 2025, a full year stale, from before his move from City to Spurs; discarded rather than published. Collins' calf still has no confirmed Brentford timeline, Doku still stuck on Maresca's 'we need to wait' for the 13 September derby (after GW4's own deadline regardless), Munoz still an impact sub rather than confirmed starter at Forest, and Garner unchanged at 75% with no fresh update since Sunday's substitution. Maguire, Mitchell, Le Fee, Hill, Scott and the rest of the squad and free-agent shortlist checked and unchanged."
-    },
-    {
       "ts": "2026-09-10T21:16 UTC",
       "published": 0,
       "note": "Full club-by-club sweep ~12.5 hours after this morning's 08:35 run (Everton, Arsenal, Forest, Brentford, Leeds, Man City, Liverpool, Bournemouth, Palace, Tottenham, Man Utd, Sunderland, Brighton) plus general PL injury/transfer searches. Nothing new to publish: Barcola's cramp-not-injury is already up from this morning, the Munoz-to-Forest move was published on 1 September and Sky Sports' own report on it just resurfaced as a source, and Bijol is still behind Elvedi in Leeds' own team news with no fresh sheet since Brighton. Checked and found nothing to publish: Arsenal's Saliba has a back injury with no return date, but the API already carries this (avail 0.01) so it is not news the model is missing, and he is a free agent nobody in this league can plausibly use. Le Fee's penalty at Brentford (5 Sept) is five days old and already priced into his form. Collins still has no scan result or timeline from Brentford's own site. Maguire signed a United contract extension back in April, not injury or team-news. Also confirmed Man City's dugout is now Enzo Maresca's, not Guardiola's, and Bournemouth's is Marco Rose's - useful for not misattributing quotes, not a headline on its own. Nothing else new or citable to a permitted outlet."
@@ -621,6 +616,11 @@
       "ts": "2026-10-12T21:10 UTC",
       "published": 0,
       "note": "Evening check. Permitted-outlet searches only re-confirmed already-published Liverpool/Barcola and Bournemouth/Scott stories; nothing new. Not in the starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-13T08:10 UTC",
+      "published": 0,
+      "note": "Morning check. Searches returned only old-season pages, off-list fantasy sites or wire reprints; nothing from a permitted outlet. Not in the starters window. Nothing published."
     }
   ]
 }

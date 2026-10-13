@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-08T21:12 UTC",
-      "gw": 4,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~13 hours after this morning's run. Strengthened the Maguire/Bijol reasoning: Elvedi, the man Leeds are now picking ahead of Bijol, is himself only a two-game sample the model rates at 6.5 next5 (avail 0.46) - the model's new-signing blind spot cuts both ways here, and it argues for Maguire's proven number over chasing Elvedi, not against the swap. Investigated but could not confirm on a permitted source: reports that Bijol was seen with Leeds medical staff in the Brighton warm-up (only Yahoo/aggregator reprints of BBC Radio Leeds commentary), and reports that Sage now has Nketiah sidelined with Strand Larsen the clear leader for Ipswich (only Sports Mole/Yahoo/lastwordonsports previews for the Middlesbrough League Cup tie) - neither changes a claim since Bijol is dropped regardless and Strand Larsen is already kept, not added. Everything else (Mitchell/Munoz, Le Fee/Barcola, Hill/Collins, Scott/Garner) reconfirmed exactly as this morning."
-    },
-    {
       "ts": "2026-09-10T08:35 UTC",
       "gw": 4,
       "claims": 5,
@@ -949,6 +943,12 @@
     },
     {
       "ts": "2026-10-12T21:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no new permitted-outlet news moved any claim; claims carried forward."
+    },
+    {
+      "ts": "2026-10-13T08:10 UTC",
       "gw": 7,
       "claims": 5,
       "note": "No change: no new permitted-outlet news moved any claim; claims carried forward."
