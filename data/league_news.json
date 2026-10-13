@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-12T22:45 UTC",
+ "generated": "2026-10-13T07:42 UTC",
  "items": [
-  {
-   "id": "2026-09-28-op-smallben",
-   "ts": "2026-09-28T22:50",
-   "kind": "opinion",
-   "text": "Small Ben scored 56 in gameweek 5, Hall 13 and Cunha 10 among them, and still lost a point to Edward, going from 12 behind to 13. That is a special sort of achievement: a huge week that made things worse. Now Isak and Gakpo are both limping home from international duty to make the rebuild harder.",
-   "source": null
-  },
-  {
-   "id": "2026-09-28-op-bigben-tzolis",
-   "ts": "2026-09-28T22:50",
-   "kind": "opinion",
-   "text": "Big Ben runs a team called Quantum of Tzolis, sits fifth, 40 points off the lead, and does not own Tzolis. Marcus does. Meanwhile Havertz and Bruno Fernandes are both nursing knocks, so the only thing Big Ben has a full grip on this break is the name.",
-   "source": null
-  },
-  {
-   "id": "2026-09-29-oreilly-out-konsa-in",
-   "ts": "2026-09-29T07:41",
-   "kind": "news",
-   "text": "Nico O'Reilly has been ruled out of England's Nations League match against the Czech Republic on Tuesday night, one of only two players to miss training on Monday, while Ezri Konsa is set to be in the squad. That is a knock for Robert's O'Reilly and a shrug for Big Ben's Konsa, and BBC Sport says Newcastle's Lewis Hall, one of Small Ben's, could get a look at left-back.",
-   "source": {
-    "title": "O'Reilly to miss Czech Republic but Konsa in squad",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cj62eyx9grzxo"
-   }
-  },
   {
    "id": "2026-09-29-pickford-trafford-race",
    "ts": "2026-09-29T07:41",
@@ -710,16 +686,39 @@
    "kind": "opinion",
    "text": "Big Ben's team is called Quantum of Tzolis, and the Tzolis in question sits in Marcus's squad. Big Ben is fifth on 254, 72 behind the man who actually owns him. A team name that is mostly a monument to somebody else's player.",
    "source": null
+  },
+  {
+   "id": "2026-10-13-palace-forest",
+   "ts": "2026-10-13T07:42",
+   "kind": "news",
+   "text": "Crystal Palace came from behind to beat Nottingham Forest 3-1 at Selhurst Park, the Guardian reports: Dan Ndoye scored inside three minutes after a weak header by Edward's Anan Khalaili, then Daichi Kamada, Jefferson Lerma and Yeremy Pino turned it round. Edward's Morgan Gibbs-White, Small Ben's Daniel Munoz, Big Ben's Liam Delap and Justin's Jorgen Strand Larsen were all in it; Delap missed a golden chance from three yards at 1-0.",
+   "source": {
+    "title": "Pino finishes off Nottingham Forest on Glasner's unhappy Crystal Palace return",
+    "url": "https://www.theguardian.com/football/2026/oct/11/crystal-palace-nottingham-forest-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-13-brighton-sunderland",
+   "ts": "2026-10-13T07:42",
+   "kind": "news",
+   "text": "Ten-man Brighton won at Sunderland, the Guardian reports, with Maxim De Cuyper (Marcus) sliding in the first goal from a Pascal Gross (Big Ben) through ball in the 53rd minute and Jaouen Hadjam adding a second. Pascal Struijk was sent off after a VAR review, and Brighton stay third on 13 points. Justin's Enzo Le Fee supplied the best deliveries of a cagey first half but faded badly in the second.",
+   "source": {
+    "title": "Ten-man Brighton continue fine form with battling win at Sunderland",
+    "url": "https://www.theguardian.com/football/2026/oct/10/sunderland-brighton-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-13-palmer-groin",
+   "ts": "2026-10-13T07:42",
+   "kind": "news",
+   "text": "Chelsea manager Xabi Alonso admitted that Cole Palmer's decision to sit out the international break was related to last season's groin pain, the Guardian reports. Palmer (Edward) looked free-moving in Saturday's win over Bournemouth, setting up Jordan Henderson's opener inside 68 seconds, and has signed a contract running to 2034.",
+   "source": {
+    "title": "Henderson and Joao Pedro lead Chelsea charge against Bournemouth",
+    "url": "https://www.theguardian.com/football/2026/oct/10/chelsea-bournemouth-premier-league-match-report"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-17T07:59 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news, no PL fixtures today (GW5 runs Thu 18-Sun 20). Spent the bulk of this run trying to clear the sourcing bar and it was brutal: multiple permitted-outlet leads (a Liverpool.com Bournemouth-Tavernier-hamstring story, a Chelsea joao Pedro 'injury blow' line, Elanga's supposed long-term MRI, Foden's suspension length) either had no permitted source that actually stated the detail, or flatly failed a cross-check against fixtures_2627.json (the Tavernier story referenced a Bournemouth v Brighton match that isn't fixture list at all this season) so they were dropped rather than published. Ran with the one story that survived direct reading on the club site (brentfordfc.com) and matched our fixture data exactly on every date checked: Nathan Collins, who Justin owns, still out midweek and now confirmed out for Brentford-Chelsea too. Fewer items than usual on purpose per the sourcing rule rather than pad with anything unverified."
-  },
   {
    "ts": "2026-09-17T22:45 UTC",
    "news": 0,
@@ -1132,6 +1131,13 @@
    "opinion": 3,
    "matchday": true,
    "note": "Evening wrap. Led with Coventry 4-1 Newcastle (ESPN/PA report); Marcus v Edward, Newcastle owners, Big Ben/Tzolis opinions. Left both unused roast suggestions: one is a homophobic slur and the other trades on apartheid/race, both outside the rules (and the first is Big Ben's own, aimed at himself). Reflopped all four of today's FLOP lines."
+  },
+  {
+   "ts": "2026-10-13T07:42",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures today. Led with Palace 3-1 Forest, Brighton at Sunderland and Palmer's groin admission, all read from Guardian pages by curl (search surfaced only aggregators). Skipped Utd v Spurs and Chelsea v Bournemouth results as already posted. No opinion on morning run; roast archive untouched (2 unused: both fail rule 4 - one is a slur-adjacent/apartheid line about a real political regime, one is a slur - left unused)."
   }
  ]
 }
