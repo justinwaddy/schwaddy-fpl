@@ -405,16 +405,14 @@ const EVO_REST_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/m
 let EVO_REST=null;
 fetch(EVO_REST_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{EVO_REST=j;if(DATA)renderNN();}).catch(()=>{});
-// Network 1 on its own (data/evo_models/seed1.npz), both horizons. It led
-// the five on this season's opening gameweeks, so the NN tab leads with its
-// plan and sets the five-model vote after it.
+// Network 1 on its own (data/evo_models/seed1.npz), judging claims on the
+// next five gameweeks - the decisions it was trained on and the ones it
+// was tested on. It led the five on this season's opening gameweeks, so
+// the NN tab leads with its plan and sets the five-model vote after it.
 const NN1_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan_net1.json";
-const NN1_REST_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan_net1_rest.json";
-let NN1=null,NN1_REST=null;
+let NN1=null;
 fetch(NN1_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{NN1=j;if(DATA)renderNN();}).catch(()=>{});
-fetch(NN1_REST_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{NN1_REST=j;if(DATA)renderNN();}).catch(()=>{});
 const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
 let CLAIMS=null;
 fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
@@ -1331,9 +1329,9 @@ function nnPlanHTML(E,by,ps,tag){
 }
 function renderNN(){
   const sec=document.getElementById("nn");if(!sec)return;
-  // the season-horizon plan where the refresh has written it, else the
-  // five-week one; each source falls back on its own
-  const P1=NN1_REST||NN1,A=EVO_REST||EVO,ps=(DATA&&DATA.players)||[];
+  // network 1 on the next five gameweeks, as it was tested; the vote on
+  // the season where the refresh has written it, else its five-week plan
+  const P1=NN1,A=EVO_REST||EVO,ps=(DATA&&DATA.players)||[];
   const E=P1||A;
   if(!E){
     sec.innerHTML=`<div class="card evocard"><b class="h">What the network would do</b><div class="note">No plan yet. The refresh runs the models against the live league each morning and writes data/evo_plan_net1.json and data/evo_plan.json; this tab fills in after that.</div></div>`;
@@ -1342,13 +1340,13 @@ function renderNN(){
   const by={};ps.forEach(p=>{by[String(p.code)]=p;});
   const cur=NEXT+1,gw=E.gw|0;
   const fa=E.window==="free_agency";
-  const season=!!(E&&E.horizon==="rest");
+  const season=!!(A&&A.horizon==="rest");
   let h=`<div class="card evocard"><b class="h">What the network would do · GW${gw||"?"}</b>
   <div class="clsub">${E.window==="waiver"?`waiver window · claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency · deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC</div>`;
   if(gw&&gw<cur)h+=`<div class="stale">Written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
-  h+=`<div class="note">Two plans, each in full and in order, as it would be submitted from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. <b>Network 1 alone</b> comes first: it led the five on this season's opening gameweeks (GW1-6, +21.7 points a league over the heuristic in 200 paired simulated leagues; the next best +10.1, the vote not yet tested). <b>The five-model vote</b> follows. ${season?"Every claim is judged on <b>the rest of the season</b>, the injury return dates included, for a manager who holds what he claims; the five-week version of the vote is on the Waivers tab.":"Claims here are judged on <b>the next five gameweeks</b>; the season-horizon plans appear once the refresh has written them."}</div></div>`;
+  h+=`<div class="note">Two plans, each in full and in order, as it would be submitted from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. <b>Network 1 alone</b> comes first: it led the five on this season's opening gameweeks (GW1-6, +21.7 points a league over the heuristic in 200 paired simulated leagues; the next best +10.1, the vote not yet tested). Its claims are judged on <b>the next five gameweeks</b>, the decisions it was trained on and tested on. <b>The five-model vote</b> follows${season?", with every claim judged on <b>the rest of the season</b>, the injury return dates included, for a manager who holds what he claims; the five-week version of the vote is on the Waivers tab":", judged on the next five gameweeks as well"}.</div></div>`;
   // ---- network 1
-  h+=`<div class="card evocard"><b class="h">Network 1 alone</b><div class="note">One independently trained model, data/evo_models/seed1.npz, with no vote: the most active of the five and the best of them on this season so far. Six gameweeks is a short sample; the vote below is the cautious alternative.</div></div>`;
+  h+=`<div class="card evocard"><b class="h">Network 1 alone</b><div class="note">One independently trained model, data/evo_models/seed1.npz, with no vote, judging every claim on the next five gameweeks: the most active of the five and the best of them on this season so far. Six gameweeks is a short sample; the vote below is the cautious alternative.</div></div>`;
   if(P1){
     if(P1.gw&&A&&A.gw&&P1.gw!==A.gw)h+=`<div class="stale">Network 1's plan is for GW${P1.gw}; the vote's is for GW${A.gw}.</div>`;
     h+=nnPlanHTML(P1,by,ps,"Network 1");
