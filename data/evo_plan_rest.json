@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T01:54",
+ "generated": "2026-10-13T08:37",
  "gw": 7,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 62.05,
+   "gain": 61.89,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 48.16,
+   "gain": 48.19,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 37.98,
+   "gain": 38.22,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 36.54,
+   "gain": 36.44,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 73
+   "borda": 74
   },
   {
    "pos": "FWD",
-   "gain": 84.97,
+   "gain": 85.03,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 77.82,
+   "gain": 77.81,
    "change": 3,
    "fallback": false,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 71.94,
+   "gain": 71.91,
    "change": 3,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "MID",
-   "gain": 61.86,
+   "gain": 61.81,
    "change": 3,
    "fallback": true,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 36.66,
+   "gain": 36.6,
    "change": 4,
    "fallback": false,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 40
+   "borda": 37
   },
   {
    "pos": "MID",
-   "gain": 23.74,
+   "gain": 23.75,
    "change": 4,
    "fallback": true,
    "add": {
@@ -570,7 +570,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 35
+   "borda": 32
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T01:55",
+ "generated": "2026-10-13T08:37",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.975,
    "base": 4.5,
-   "ep": 5.38
+   "ep": 5.39
   },
   {
    "id": 279,
@@ -121,7 +121,7 @@
    "news": "Shoulder injury - 75% chance of playing",
    "p_play": 0.746,
    "base": 3.8,
-   "ep": 4.69
+   "ep": 4.7
   },
   {
    "id": 542,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.79,
-   "ep": 4.7
+   "ep": 4.69
   },
   {
    "id": 401,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "FWD",
-   "gain": 17.68,
+   "gain": 17.7,
    "change": 1,
    "fallback": false,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 16.58,
+   "gain": 16.57,
    "change": 2,
    "fallback": false,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.66,
+   "gain": 12.79,
    "change": 2,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.55,
+   "gain": 12.53,
    "change": 2,
    "fallback": true,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.02,
+   "gain": 11.03,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 15.81,
+   "gain": 15.84,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.95,
+   "gain": 6.9,
    "change": 3,
    "fallback": true,
    "add": {
@@ -533,7 +533,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.38,
+   "gain": 8.52,
    "change": 5,
    "fallback": false,
    "add": {
@@ -563,7 +563,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.25,
+   "gain": 8.23,
    "change": 5,
    "fallback": true,
    "add": {
@@ -653,7 +653,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.97,
+   "gain": 7.96,
    "change": 6,
    "fallback": false,
    "add": {
@@ -713,7 +713,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.0,
+   "gain": 5.99,
    "change": 6,
    "fallback": true,
    "add": {
@@ -743,7 +743,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.79,
+   "gain": 4.78,
    "change": 6,
    "fallback": true,
    "add": {
@@ -773,7 +773,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.81,
+   "gain": 5.72,
    "change": 7,
    "fallback": false,
    "add": {
