@@ -405,6 +405,16 @@ const EVO_REST_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/m
 let EVO_REST=null;
 fetch(EVO_REST_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{EVO_REST=j;if(DATA)renderNN();}).catch(()=>{});
+// Network 1 on its own (data/evo_models/seed1.npz), both horizons. It led
+// the five on this season's opening gameweeks, so the NN tab leads with its
+// plan and sets the five-model vote after it.
+const NN1_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan_net1.json";
+const NN1_REST_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/evo_plan_net1_rest.json";
+let NN1=null,NN1_REST=null;
+fetch(NN1_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{NN1=j;if(DATA)renderNN();}).catch(()=>{});
+fetch(NN1_REST_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{NN1_REST=j;if(DATA)renderNN();}).catch(()=>{});
 const CLAIMS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/claims.json";
 let CLAIMS=null;
 fetch(CLAIMS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
@@ -1254,30 +1264,22 @@ function nnPlayer(x,by){
   const q=x&&x.code?by[String(x.code)]:null;
   return (q?nm(q):esc(x?x.name:""))+` <span class="tm">${esc(x&&x.team||(q?club(q):""))}</span>`+(q?" "+runHTML(q):"");
 }
-function renderNN(){
-  const sec=document.getElementById("nn");if(!sec)return;
-  const E=EVO_REST||EVO,ps=(DATA&&DATA.players)||[];
-  const season=!!(E&&E.horizon==="rest");
-  if(!E){
-    sec.innerHTML=`<div class="card evocard"><b class="h">What the network would do</b><div class="note">No plan yet. The refresh runs the five models against the live league each morning and writes data/evo_plan.json; this tab fills in after that.</div></div>`;
-    return;
-  }
-  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
-  const cur=NEXT+1,gw=E.gw|0,n=E.n_models||1;
+// One plan's moves, the fifteen they leave and its team sheet. The tab
+// draws this twice: network 1 alone, then the five-model vote; tag names
+// whose plan each card belongs to.
+function nnPlanHTML(E,by,ps,tag){
+  const gw=E.gw|0,n=E.n_models||1,season=E.horizon==="rest";
   const fa=E.window==="free_agency",locked=E.window==="locked";
   const cl=Array.isArray(E.claims)?E.claims:[];
   const changes=cl.filter(c=>!c.fallback);
   const votes=c=>(n>1&&c.votes!=null)?` <span class="pill${c.votes*2<n?" warn":""}" title="how many of the ${n} models list this swap">${c.votes}/${n}</span>`:"";
-  let h=`<div class="card evocard"><b class="h">What the network would do · GW${gw||"?"}</b>
-  <div class="clsub">${E.window==="waiver"?`waiver window · claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency · deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC · ${n>1?`${n} models voting`:"one model"}</div>`;
-  if(gw&&gw<cur)h+=`<div class="stale">Written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
-  h+=`<div class="note">Its own decisions, in full and in order, as it would submit them from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. ${season?"Every claim is judged on <b>the rest of the season</b>, the injury return dates included, for a manager who holds what he claims; the five-week version of the same plan is on the Waivers tab.":"Claims here are judged on <b>the next five gameweeks</b>; the season-horizon plan appears once the refresh has written it."}</div></div>`;
+  let h="";
   // ---- 1. the moves
   if(locked){
-    h+=`<div class="card evocard"><b class="h">Nothing to submit</b><div class="note">The team sheet for GW${gw} is locked. The next window opens after the gameweek and the morning refresh writes its claims then.</div></div>`;
+    h+=`<div class="card evocard"><b class="h">${tag}: nothing to submit</b><div class="note">The team sheet for GW${gw} is locked. The next window opens after the gameweek and the morning refresh writes its claims then.</div></div>`;
   }else{
-    const title=!cl.length?"Hold: make no move this week":fa?`Take ${changes.length} free agent${changes.length>1?"s":""}, in this order`:`Submit ${cl.length} waiver claim${cl.length>1?"s":""}, in this order`;
-    h+=`<div class="card evocard"><b class="h">${title}</b>`;
+    const title=!cl.length?"hold: make no move this week":fa?`take ${changes.length} free agent${changes.length>1?"s":""}, in this order`:`submit ${cl.length} waiver claim${cl.length>1?"s":""}, in this order`;
+    h+=`<div class="card evocard"><b class="h">${tag}: ${title}</b>`;
     if(!cl.length)h+=`<div class="note">Nothing on the board clears its switching margin against this squad.</div>`;
     else h+=`<div class="clsub">${changes.length} change${changes.length>1?"s":""}, ${cl.length-changes.length} fallback${cl.length-changes.length!==1?"s":""}. ${fa?"Take the first row that is still free; if he has gone, the next for the same man.":"Enter every row as a claim, in this order: the queue works down the list, and a fallback only fires if the row above it was refused. Each change is scored against the squad the earlier ones leave, so the order is the plan."}</div>`;
     cl.forEach((c,i)=>{
@@ -1292,6 +1294,7 @@ function renderNN(){
         <span class="clarr">add</span> ${nnPlayer(A,by)}
         <span class="clarr">drop</span> ${nnPlayer(D,by)}
         <span class="gain" title="the network's own score for the swap, expected points over ${season?"the rest of the season":"five gameweeks"}${n>1?", the mean over the models that list it":""}">+${Number(c.gain||0).toFixed(1)}${season?` <span class="tm">season</span>`:""}</span>${votes(c)}</div>`;
+      if(A.news)h+=`<div class="clwhy"><span class="flag">${esc(A.name)}: ${esc(A.news)}</span></div>`;
       if(D.news)h+=`<div class="clwhy"><span class="flag">${esc(D.name)}: ${esc(D.news)}</span></div>`;
       if(flags.length)h+=`<div class="clwhy"><span class="flag">${flags.join(" · ")}</span></div>`;
       h+=`</div>`;
@@ -1308,7 +1311,7 @@ function renderNN(){
         squad.push({code:String(A.code),name:A.name,pos:A.pos||c.pos,team:A.team||"",p:by[String(A.code)]||null,in:true});
       }
       squad.sort((x,y)=>posord(x.pos)-posord(y.pos)||(x.in?1:0)-(y.in?1:0)||String(x.name).localeCompare(String(y.name)));
-      h+=`<div class="card evocard"><b class="h">The fifteen it is playing for</b><div class="clsub">if every change lands (fallbacks aside): ${changes.length} in, ${dropped.length} out</div><table>`;
+      h+=`<div class="card evocard"><b class="h">${tag}: the fifteen it is playing for</b><div class="clsub">if every change lands (fallbacks aside): ${changes.length} in, ${dropped.length} out</div><table>`;
       for(const x of squad)h+=`<tr class="${x.in?"mine-row":""}"><td>${x.p?nm(x.p):esc(x.name)} <span class="tm">${esc(x.team)}</span>${x.in?` <span class="pill">in</span>`:""}</td><td><span class="pos ${x.pos}">${x.pos}</span></td><td>${x.p?runHTML(x.p):""}</td></tr>`;
       h+=`</table><div class="note">Out: ${dropped.map(x=>(x.p?nm(x.p):esc(x.name))).join(", ")||"nobody"}.</div></div>`;
     }
@@ -1316,20 +1319,51 @@ function renderNN(){
   // ---- 2. the team sheet
   if(Array.isArray(E.xi)&&E.xi.length){
     const vt=p=>(n>1&&p.votes!=null)?` <span class="pill${p.votes*2<n?" warn":""}" title="how many of the ${n} models start him">${p.votes}/${n}</span>`:"";
-    h+=`<div class="card evocard"><b class="h">Start this eleven · ${esc(E.formation||"")} · ${Number(E.xi_ep||0).toFixed(1)} projected</b><table>
+    h+=`<div class="card evocard"><b class="h">${tag}: start this eleven · ${esc(E.formation||"")} · ${Number(E.xi_ep||0).toFixed(1)} projected</b><table>
     <tr><th>player</th><th></th><th style="text-align:right">E[pts]</th><th style="text-align:right">plays</th></tr>`;
     for(const p of [...E.xi].sort((a,b)=>posord(a.pos)-posord(b.pos)||(b.ep||0)-(a.ep||0)))
       h+=`<tr><td>${nnPlayer(p,by)}${p.news?`<span class="flag">${esc(p.news)}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span>${vt(p)}</td><td class="num">${Number(p.ep||0).toFixed(1)}</td><td class="num">${p.p_play!=null?Number(p.p_play).toFixed(2):"–"}</td></tr>`;
-    h+=`</table></div><div class="card evocard"><b class="h">Bench, in this order</b><table>`;
+    h+=`</table></div><div class="card evocard"><b class="h">${tag}: bench, in this order</b><table>`;
     (E.bench||[]).forEach((p,i)=>{h+=`<tr><td>${i+1}. ${nnPlayer(p,by)}${p.news?`<span class="flag">${esc(p.news)}</span>`:""}</td><td><span class="pos ${p.pos}">${p.pos}</span>${vt(p)}</td><td class="num">${Number(p.ep||0).toFixed(1)}</td><td class="num">${p.p_play!=null?Number(p.p_play).toFixed(2):"–"}</td></tr>`;});
     h+=`</table><div class="note">The eleven is for the squad as it stands this morning; the run after waivers process rewrites it for the squad you end up with. E[pts] is the network's number for this gameweek, <b>plays</b> its probability that he plays.</div></div>`;
   }
-  // ---- 3. the board
-  if(Array.isArray(E.board)&&E.board.length){
-    h+=`<div class="card evocard"><b class="h">Its draft board</b><div class="note">Season projections at pick one, for next August. It has no bearing on this week.</div><div class="note">${E.board.slice(0,40).map((p,i)=>`${i+1}. ${(p.code&&by[String(p.code)])?nm(by[String(p.code)]):esc(p.name)} <span class="tm">${esc(p.team||"")}</span>`).join(" · ")}</div></div>`;
+  return h;
+}
+function renderNN(){
+  const sec=document.getElementById("nn");if(!sec)return;
+  // the season-horizon plan where the refresh has written it, else the
+  // five-week one; each source falls back on its own
+  const P1=NN1_REST||NN1,A=EVO_REST||EVO,ps=(DATA&&DATA.players)||[];
+  const E=P1||A;
+  if(!E){
+    sec.innerHTML=`<div class="card evocard"><b class="h">What the network would do</b><div class="note">No plan yet. The refresh runs the models against the live league each morning and writes data/evo_plan_net1.json and data/evo_plan.json; this tab fills in after that.</div></div>`;
+    return;
+  }
+  const by={};ps.forEach(p=>{by[String(p.code)]=p;});
+  const cur=NEXT+1,gw=E.gw|0;
+  const fa=E.window==="free_agency";
+  const season=!!(E&&E.horizon==="rest");
+  let h=`<div class="card evocard"><b class="h">What the network would do · GW${gw||"?"}</b>
+  <div class="clsub">${E.window==="waiver"?`waiver window · claims process ${esc(whenUK(E.waivers_time))} UK`:fa?`free agency · deadline ${esc(whenUK(E.deadline))} UK`:"team sheet locked"} · written ${esc((E.generated||"").replace("T"," "))} UTC</div>`;
+  if(gw&&gw<cur)h+=`<div class="stale">Written for GW${gw}. The next refresh writes GW${cur}'s.</div>`;
+  h+=`<div class="note">Two plans, each in full and in order, as it would be submitted from this seat: not filtered through the matrix model, Claude's reading of the news, or any limit on how many moves to make. <b>Network 1 alone</b> comes first: it led the five on this season's opening gameweeks (GW1-6, +21.7 points a league over the heuristic in 200 paired simulated leagues; the next best +10.1, the vote not yet tested). <b>The five-model vote</b> follows. ${season?"Every claim is judged on <b>the rest of the season</b>, the injury return dates included, for a manager who holds what he claims; the five-week version of the vote is on the Waivers tab.":"Claims here are judged on <b>the next five gameweeks</b>; the season-horizon plans appear once the refresh has written them."}</div></div>`;
+  // ---- network 1
+  h+=`<div class="card evocard"><b class="h">Network 1 alone</b><div class="note">One independently trained model, data/evo_models/seed1.npz, with no vote: the most active of the five and the best of them on this season so far. Six gameweeks is a short sample; the vote below is the cautious alternative.</div></div>`;
+  if(P1){
+    if(P1.gw&&A&&A.gw&&P1.gw!==A.gw)h+=`<div class="stale">Network 1's plan is for GW${P1.gw}; the vote's is for GW${A.gw}.</div>`;
+    h+=nnPlanHTML(P1,by,ps,"Network 1");
+  }else h+=`<div class="card evocard"><div class="note">Network 1's own plan has not been written yet; the morning refresh writes data/evo_plan_net1.json.</div></div>`;
+  // ---- the vote
+  h+=`<div class="card evocard"><b class="h">The five-model vote</b><div class="note">The same decisions taken by all five models together: the eleven on their median expected points, each change by Borda count over their rankings at that step of the list${A&&A.n_models>1?`, a change needing ${A.majority||"a majority"} of them to agree on the man dropped${A.min_votes>1?` and a listed swap ${A.min_votes}`:""}`:""}. The pill beside each row is how many of the five back it.</div></div>`;
+  if(A)h+=nnPlanHTML(A,by,ps,"Vote");
+  else h+=`<div class="card evocard"><div class="note">The vote's plan has not been written yet; the morning refresh writes data/evo_plan.json.</div></div>`;
+  // ---- 3. the board (the vote's)
+  const B=A||E;
+  if(Array.isArray(B.board)&&B.board.length){
+    h+=`<div class="card evocard"><b class="h">The vote's draft board</b><div class="note">Season projections at pick one, for next August. It has no bearing on this week.</div><div class="note">${B.board.slice(0,40).map((p,i)=>`${i+1}. ${(p.code&&by[String(p.code)])?nm(by[String(p.code)]):esc(p.name)} <span class="tm">${esc(p.team||"")}</span>`).join(" · ")}</div></div>`;
   }
   // ---- 4. how it decides
-  h+=`<div class="card evocard"><b class="h">How it decides</b><div class="note">A policy evolved against itself over five archived seasons, scored against the heuristic it starts from (evo/README.md has the numbers and every caveat). ${season?"Waivers and free agents are judged here over the rest of the season - the remaining fixtures at each man's rate, with the injury return date - from a shortlist of the sixty free agents with the best season number; the policy was trained making five-week decisions, and the same weights are applied to the season baseline.":"Waivers and free agents are judged over the next five gameweeks, from a shortlist of the sixty free agents with the best five-week number."} The eleven is judged on this gameweek alone; the board on the season. Injuries, return dates, prices and the fixture run are inside the features.${n>1?` Five independently trained models vote: the eleven on their median expected points, each change by Borda count over their rankings at that step of the list, with a change needing ${E.majority||"a majority"} of them to agree on the man dropped${E.min_votes>1?` and a listed swap ${E.min_votes}`:""}.`:""}</div></div>`;
+  h+=`<div class="card evocard"><b class="h">How it decides</b><div class="note">A policy evolved against itself over five archived seasons, scored against the heuristic it starts from (evo/README.md has the numbers and every caveat). ${season?"Waivers and free agents are judged here over the rest of the season - the remaining fixtures at each man's rate, with the injury return date - from a shortlist of the sixty free agents with the best season number; the policy was trained making five-week decisions, and the same weights are applied to the season baseline.":"Waivers and free agents are judged over the next five gameweeks, from a shortlist of the sixty free agents with the best five-week number."} The eleven is judged on this gameweek alone; the board on the season. Injuries, return dates, prices and the fixture run are inside the features. Five models were trained from different random seeds; they agree on most moves but weigh different things, which is why one of them alone can play quite differently from their vote.</div></div>`;
   sec.innerHTML=h;
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{

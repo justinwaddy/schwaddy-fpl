@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T22:44",
+ "generated": "2026-10-13T01:46",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -250,7 +250,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 271
+   "borda": 266
   },
   {
    "pos": "MID",
@@ -282,7 +282,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 270
+   "borda": 265
   },
   {
    "pos": "MID",
@@ -314,7 +314,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 262
+   "borda": 257
   },
   {
    "pos": "MID",
@@ -346,7 +346,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 248
+   "borda": 243
   },
   {
    "pos": "DEF",
@@ -378,7 +378,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 185
+   "borda": 180
   },
   {
    "pos": "DEF",
@@ -410,7 +410,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 159
+   "borda": 154
   },
   {
    "pos": "DEF",
@@ -442,7 +442,7 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 135
+   "borda": 131
   },
   {
    "pos": "DEF",
@@ -474,7 +474,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 93
+   "borda": 90
   },
   {
    "pos": "MID",

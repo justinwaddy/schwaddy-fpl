@@ -99,6 +99,31 @@ jobs:
           --horizon rest
           --json data/evo_plan_rest.json
           || echo "neural network season plan skipped"
+      # network 1 on its own, both horizons. It led the five on this
+      # season's GW1-6 (+21.7 +- 2.2 points a league against the baseline
+      # in 200 paired simulated leagues; the next best was +10.1), so the
+      # NN tab leads with its plan and shows the vote after it
+      - name: neural network plan, network 1 alone
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
+        run: >-
+          python -m evo.run live
+          --model data/evo_models/seed1.npz
+          --json data/evo_plan_net1.json
+          || echo "network 1 plan skipped"
+      - name: neural network plan, network 1 alone, season horizon
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
+        run: >-
+          python -m evo.run live
+          --model data/evo_models/seed1.npz
+          --horizon rest
+          --json data/evo_plan_net1_rest.json
+          || echo "network 1 season plan skipped"
 
       # the other crons: the day's matches have wrapped up, so post the
       # matchday recap against the morning run's forecasts without refitting

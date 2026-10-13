@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T22:45",
+ "generated": "2026-10-13T01:46",
  "gw": 7,
  "horizon": "rest",
  "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -478,7 +478,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 53.58,
+   "gain": 53.39,
    "change": 3,
    "fallback": false,
    "add": {
