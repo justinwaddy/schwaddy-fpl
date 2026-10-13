@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-13T07:42 UTC",
+ "generated": "2026-10-13T22:45 UTC",
  "items": [
-  {
-   "id": "2026-09-29-pickford-trafford-race",
-   "ts": "2026-09-29T07:41",
-   "kind": "news",
-   "text": "Thomas Tuchel has said Jordan Pickford and James Trafford get two consecutive matches each this international break, with Trafford making his competitive England debut in Saturday's 3-2 loss to Spain, where he was beaten three times. Justin owns Pickford and Big Ben owns Trafford, so the England number one shirt is now a live argument between the two of them.",
-   "source": {
-    "title": "Pickford or Trafford? The battle to be England's number one is now on",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckm2qqpjv7nro"
-   }
-  },
-  {
-   "id": "2026-09-29-suzuki-rib",
-   "ts": "2026-09-29T22:45",
-   "kind": "news",
-   "text": "Aston Villa goalkeeper Zion Suzuki missed Japan's main training session on September 22 with a rib injury, worked alone, and was left out of the matchday squad for Japan's 3-1 win over Uruguay, according to ESPN's round-up of international-break injuries. Small Ben owns him; there is no word yet on whether he is fit for Villa.",
-   "source": {
-    "title": "Which Premier League players got injured in the international break?",
-    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
-   }
-  },
   {
    "id": "2026-09-29-marcus-zeroes",
    "ts": "2026-09-29T22:45",
@@ -716,16 +696,23 @@
     "title": "Henderson and Joao Pedro lead Chelsea charge against Bournemouth",
     "url": "https://www.theguardian.com/football/2026/oct/10/chelsea-bournemouth-premier-league-match-report"
    }
+  },
+  {
+   "id": "2026-10-13-lead-28",
+   "ts": "2026-10-13T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "GW6 is in the books and Marcus sits on 326, 28 clear of Edward on 298, with Justin a further 8 back on 290. Ten fixtures of GW7 are still to come and nobody has kicked a ball, so for one night only the leader is unbeaten, unbothered and presumably already drafting his acceptance speech."
+  },
+  {
+   "id": "2026-10-13-bench-12",
+   "ts": "2026-10-13T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Big Ben left 12 points on his bench in GW6, against 35 from his eleven, which is a rather large second team for a man on 254 and 72 behind. Robert, meanwhile, is on 205 and 121 off the lead: the gap is now wide enough to have its own postcode."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-17T22:45 UTC",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday - GW5's ten fixtures are all still to come per the live feed, nobody has kicked off, so no hauls or blanks to write up. Roast archive had 2 unused submissions but both stay unused for good, not just tonight: 'Ben D on Ben D' turns on 'gay' as the insult (sexuality) and 'Ben D on Justin' jokes about apartheid (race) - both are in the categories rule 4 puts permanently out of bounds regardless of who they're aimed at, so they are not being held for a fact to land later, they're just not getting used. Spent most of this run chasing club news (Arsenal-Brighton preview, Newcastle-Hull, Everton-Ipswich, Chelsea/Liverpool injury pages) but everything either came from outlets off the permitted list or, on the couple of permitted-source pages I could actually read (arsenal.com), the article text contradicted itself on dates (referencing a 'December 20' match in a September preview), so nothing cleared the bar to publish as news. Wrote one opinion item instead, built entirely off today's automatic waiver MOVE items and the GW4 squad totals already on the page: Edward dropping the very player who put up his best individual score of the week, and Robert being the one manager who made no moves at all while last."
-  },
   {
    "ts": "2026-09-18T08:15 UTC",
    "news": 3,
@@ -1138,6 +1125,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, no fixtures today. Led with Palace 3-1 Forest, Brighton at Sunderland and Palmer's groin admission, all read from Guardian pages by curl (search surfaced only aggregators). Skipped Utd v Spurs and Chelsea v Bournemouth results as already posted. No opinion on morning run; roast archive untouched (2 unused: both fail rule 4 - one is a slur-adjacent/apartheid line about a real political regime, one is a slur - left unused)."
+  },
+  {
+   "ts": "2026-10-13T22:45",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening. No fixtures today and GW7 not started; one search found nothing usable from permitted outlets, so no reported items. Led with the table after GW6. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): they target sexuality/race, which are off limits. No flops today so reflop not run."
   }
  ]
 }
