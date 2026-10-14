@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T08:36",
+ "generated": "2026-10-14T14:00",
  "gw": 7,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 81.57,
+   "gain": 81.85,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 245
+   "borda": 240
   },
   {
    "pos": "MID",
-   "gain": 73.68,
+   "gain": 74.04,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 236
+   "borda": 232
   },
   {
    "pos": "MID",
-   "gain": 75.76,
+   "gain": 75.95,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 235
+   "borda": 230
   },
   {
    "pos": "MID",
-   "gain": 72.44,
+   "gain": 72.63,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 230
+   "borda": 225
   },
   {
    "pos": "DEF",
-   "gain": 60.27,
+   "gain": 60.16,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 147
+   "borda": 142
   },
   {
    "pos": "DEF",
-   "gain": 42.98,
+   "gain": 42.74,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 102
+   "borda": 98
   },
   {
    "pos": "DEF",
-   "gain": 30.86,
+   "gain": 30.7,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 96
+   "borda": 91
   },
   {
    "pos": "DEF",
-   "gain": 34.35,
+   "gain": 34.25,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 67
+   "borda": 64
   },
   {
    "pos": "FWD",
-   "gain": 54.29,
+   "gain": 54.37,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 22.94,
+   "gain": 23.22,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 10
+   "borda": 11
   },
   {
    "pos": "MID",
-   "gain": 38.7,
+   "gain": 38.65,
    "change": 4,
    "fallback": false,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 30
+   "borda": 29
   },
   {
    "pos": "MID",
-   "gain": 23.84,
+   "gain": 23.72,
    "change": 4,
    "fallback": true,
    "add": {
@@ -606,7 +606,7 @@
   },
   {
    "pos": "MID",
-   "gain": 40.34,
+   "gain": 40.21,
    "change": 4,
    "fallback": true,
    "add": {
@@ -638,7 +638,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 36.34,
+   "gain": 36.26,
    "change": 5,
    "fallback": false,
    "add": {
@@ -670,7 +670,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 32.49,
+   "gain": 32.51,
    "change": 5,
    "fallback": true,
    "add": {

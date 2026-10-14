@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T08:36",
+ "generated": "2026-10-14T14:00",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 12.99,
+   "gain": 13.04,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 13.09,
+   "gain": 13.15,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 271
+   "borda": 270
   },
   {
    "pos": "MID",
-   "gain": 12.54,
+   "gain": 12.57,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.07,
+   "gain": 11.1,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 248
+   "borda": 249
   },
   {
    "pos": "DEF",
-   "gain": 11.71,
+   "gain": 11.69,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 175
+   "borda": 180
   },
   {
    "pos": "DEF",
-   "gain": 6.94,
+   "gain": 6.9,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 145
+   "borda": 150
   },
   {
    "pos": "DEF",
-   "gain": 6.87,
+   "gain": 6.85,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 124
+   "borda": 128
   },
   {
    "pos": "DEF",
-   "gain": 6.72,
+   "gain": 6.71,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 86
+   "borda": 89
   },
   {
    "pos": "MID",
-   "gain": 7.35,
+   "gain": 7.34,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 39
+   "borda": 38
   },
   {
    "pos": "MID",
-   "gain": 3.89,
+   "gain": 3.87,
    "change": 3,
    "fallback": true,
    "add": {
@@ -542,7 +542,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.4,
+   "gain": 4.39,
    "change": 4,
    "fallback": false,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 24
+   "borda": 25
   },
   {
    "pos": "MID",
-   "gain": 5.95,
+   "gain": 5.93,
    "change": 4,
    "fallback": true,
    "add": {
@@ -606,7 +606,7 @@
   },
   {
    "pos": "MID",
-   "gain": 2.91,
+   "gain": 2.92,
    "change": 4,
    "fallback": true,
    "add": {
@@ -634,7 +634,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 5
+   "borda": 4
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
