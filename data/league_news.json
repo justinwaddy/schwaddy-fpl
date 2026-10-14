@@ -1,36 +1,6 @@
 {
- "generated": "2026-10-14T07:42 UTC",
+ "generated": "2026-10-14T22:41 UTC",
  "items": [
-  {
-   "id": "2026-09-30-palmer-load",
-   "ts": "2026-09-30T07:55",
-   "kind": "news",
-   "text": "PFA chief executive Maheta Molango has called Cole Palmer a 'victim' of a 'sick' calendar after the Chelsea forward withdrew from England's squad for load management. Declan Rice was one of five players to pull out, so Edward and Small Ben both have a man the international window has been getting at.",
-   "source": {
-    "title": "England's Palmer a 'victim' of 'sick' schedule, says PFA chief",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c68048pynj94o"
-   }
-  },
-  {
-   "id": "2026-09-30-odegaard-training",
-   "ts": "2026-09-30T07:55",
-   "kind": "news",
-   "text": "Sky Sports reports Martin Odegaard missed Norway training on Tuesday after an 'ugly' tackle from Silva. Edward owns him; there is no detail yet on how serious it is.",
-   "source": {
-    "title": "Arsenal latest: Odegaard misses Norway training after 'ugly' Silva tackle",
-    "url": "https://www.skysports.com/football/live-blog/11095/13025486/arsenal-transfer-news-rumours-and-gossip-live-upda"
-   }
-  },
-  {
-   "id": "2026-09-30-havertz-mri",
-   "ts": "2026-09-30T22:45",
-   "kind": "news",
-   "text": "Kai Havertz was forced off after 30 minutes of Germany's 1-1 draw with the Netherlands and the German FA confirmed he has gone home from camp with a muscle strain. Big Ben's Arsenal forward was undergoing an MRI, with the Germany boss hoping it is nothing serious. Premier League matches resume on Oct. 10.",
-   "source": {
-    "title": "Which Premier League players got injured in the international break?",
-    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
-   }
-  },
   {
    "id": "2026-09-30-break-table",
    "ts": "2026-09-30T22:46",
@@ -716,16 +686,30 @@
     "title": "Winless and an 'easy touch' - what's happened to the Anfield fear factor?",
     "url": "https://www.bbc.co.uk/sport/football/articles/ck5yn20wej62o"
    }
+  },
+  {
+   "id": "2026-10-14-delap-dance",
+   "ts": "2026-10-14T22:41",
+   "kind": "opinion",
+   "text": "Small Ben named his team Delap Dance, and Delap is on Big Ben's squad, where he returned 2 in GW6. Small Ben sits on 281, 45 behind Marcus, with Virgil, Gakpo, Szoboszlai and Isak all showing 0 on his squad sheet. It is a team named after a man he does not own, held together by four Liverpool players who did nothing.",
+   "source": null
+  },
+  {
+   "id": "2026-10-14-justin-bench",
+   "ts": "2026-10-14T22:41",
+   "kind": "opinion",
+   "text": "Justin is on 290, 36 behind Marcus, and left 7 points on his bench in GW6 while Haaland returned 6. His bench has therefore out-scored his centre-forward, which is the sort of thing a man with a team called Schwaddy should have noticed before Wednesday night.",
+   "source": null
+  },
+  {
+   "id": "2026-10-14-robert-bottom",
+   "ts": "2026-10-14T22:41",
+   "kind": "opinion",
+   "text": "Robert is on 205, which is 121 behind Marcus and the best part of a whole other league away. Mateta, Sesko, James and Mosquera all show 0 for GW6 on his squad sheet, so at least the zeros have each other for company. The only good news is that none of GW7's ten fixtures has kicked off yet, so he has a full eleven still to disappoint us with.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-18T22:54 UTC",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with Brentford 3-0 Chelsea (brentfordfc.com) - the one match played tonight, and it touched five of six squads: Schade's double assist for Justin, Thiago's goal for Ben C, and Martinez/Rogers/Palmer blanking for Robert/Ben D/Edward. Rewrote all three of today's automatic FLOP lines (Martinez, Rogers, Palmer) via reflop.py rather than leaving the canned 'quiet afternoon' text. Three opinion pieces: Justin's lead resting on one match with most of his eleven still to play and Marcus's own Chelsea asset (Joao Pedro) contributing nothing; the coincidence of three different squads all owning a slice of the same Chelsea non-show; and Ben D's team name still referencing a player Marcus owns, not him. Roast archive's 2 unused submissions stay unused, same as last night - 'Ben D on Ben D' turns on sexuality and 'Ben D on Justin' turns on race (apartheid), both permanently out of bounds under rule 4 regardless of who submitted or who they're about. Held off an Arsenal team-news item (Saka/Odegaard fitness) after arsenal.com's own page contradicted itself on which fixture it was previewing - same staleness problem as last night's run, so it didn't clear the bar."
-  },
   {
    "ts": "2026-09-19T07:58 UTC",
    "news": 4,
@@ -1138,6 +1122,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Sesko's fresh shin injury and Carrick on Fernandes (BBC), then Arsenal training injuries and Liverpool's Anfield form. No opinion on a morning run. Both unused roast suggestions (Ben D on himself; Ben D on Justin) left unused: one is a slur-adjacent self-insult and the other is aimed at a nationality/politics angle that is not a clean joke, so both stay passed over."
+  },
+  {
+   "ts": "2026-10-14T22:41",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening. No fixtures today and GW7 not started, so no flops to rewrite; searches turned up nothing usable from permitted outlets, so no reported items. Opinion built on GW6 table/squad sheets and team names. Passed over both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): one is a slur and the other is aimed at race/politics, neither goes on the page."
   }
  ]
 }
