@@ -158,7 +158,7 @@ def main():
     src = picture(f"{now:%Y-%m-%d}", key)
     item = dict(id=f"{now:%Y-%m-%d}-{key}", key=key,
                 ts=now.strftime("%Y-%m-%dT%H:%M"),
-                frm=frm, about=about or None, text=text, used=False)
+                frm=frm, about=about or None, text=text)
     if src:
         # The feed will not show a picture without alt text, and the
         # sender was not asked for any. The suggestion itself is the best

@@ -6,8 +6,7 @@
    "ts": "2026-09-04T13:35",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Rob\u2019s chances of first place receding more than his hairline. You MUST mention hairline",
-   "used": true
+   "text": "Rob\u2019s chances of first place receding more than his hairline. You MUST mention hairline"
   },
   {
    "id": "2026-09-04-a8bbcabc4b",
@@ -15,8 +14,7 @@
    "ts": "2026-09-04T13:36",
    "frm": "Ben D",
    "about": null,
-   "text": "Ben C\u2019s chance of winning is the same as his height: small",
-   "used": true
+   "text": "Ben C\u2019s chance of winning is the same as his height: small"
   },
   {
    "id": "2026-09-04-b2deb0fb2d",
@@ -24,8 +22,7 @@
    "ts": "2026-09-04T14:15",
    "frm": "Edward",
    "about": "Marcus",
-   "text": "The man relies on luck every week",
-   "used": true
+   "text": "The man relies on luck every week"
   },
   {
    "id": "2026-09-04-127b68bc58",
@@ -34,7 +31,6 @@
    "frm": "Edward",
    "about": "Robert",
    "text": "Mong",
-   "used": true,
    "retired": "disability slur; rule 4 forbids it and it should never have sat in the queue"
   },
   {
@@ -43,8 +39,7 @@
    "ts": "2026-09-04T14:17",
    "frm": "Edward",
    "about": "Ben D",
-   "text": "Classic biased Arsenal fan - has 0 ball knowledge",
-   "used": true
+   "text": "Classic biased Arsenal fan - has 0 ball knowledge"
   },
   {
    "id": "2026-09-06-c592707d77",
@@ -52,8 +47,7 @@
    "ts": "2026-09-06T09:47",
    "frm": "Edward",
    "about": null,
-   "text": "Marcus is mr kneejerk central - take elanga for example. Two good games and he transfers him in",
-   "used": true
+   "text": "Marcus is mr kneejerk central - take elanga for example. Two good games and he transfers him in"
   },
   {
    "id": "2026-09-06-cdaf331443",
@@ -61,8 +55,7 @@
    "ts": "2026-09-06T15:31",
    "frm": "Edward",
    "about": null,
-   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn\u2019t haul his team is awful awful awful",
-   "used": true
+   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn\u2019t haul his team is awful awful awful"
   },
   {
    "id": "2026-09-12-b4e9e2f836",
@@ -70,8 +63,7 @@
    "ts": "2026-09-12T08:42",
    "frm": "Justin",
    "about": "Robert",
-   "text": "Roast rob for not downing his pint last week",
-   "used": true
+   "text": "Roast rob for not downing his pint last week"
   },
   {
    "id": "2026-09-12-7526d15fa8",
@@ -79,8 +71,7 @@
    "ts": "2026-09-12T18:52",
    "frm": "Edward",
    "about": "Robert",
-   "text": "Rob doesn\u2019t respond to anyone and doesn\u2019t make any transfers - explains why his team and hairline is so dreadful",
-   "used": true
+   "text": "Rob doesn\u2019t respond to anyone and doesn\u2019t make any transfers - explains why his team and hairline is so dreadful"
   },
   {
    "id": "2026-09-12-ca1422e269",
@@ -88,8 +79,7 @@
    "ts": "2026-09-12T18:53",
    "frm": "Ben D",
    "about": "Ben D",
-   "text": "Gay pussy bender",
-   "used": false
+   "text": "Gay pussy bender"
   },
   {
    "id": "2026-09-12-bf20ec8856",
@@ -98,7 +88,6 @@
    "frm": "Ben D",
    "about": "Robert",
    "text": "Ignoring FPL bc he\u2019s depressed again (like when he failed his degree)",
-   "used": true,
    "retired": "a real illness and a private failure; rule 4 forbids it"
   },
   {
@@ -107,8 +96,7 @@
    "ts": "2026-09-12T18:54",
    "frm": "Ben D",
    "about": "Justin",
-   "text": "South African apartheid connoisseur",
-   "used": false
+   "text": "South African apartheid connoisseur"
   },
   {
    "id": "2026-09-12-211e2a0b5e",
@@ -117,7 +105,6 @@
    "frm": "Edward",
    "about": "Ben C",
    "text": "The only man that could be mistaken for Harvey price. He\u2019s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
-   "used": true,
    "note": "used the boxing/preparation line; dropped the Harvey Price comparison as disability-adjacent"
   },
   {
@@ -126,8 +113,7 @@
    "ts": "2026-09-13T00:00",
    "frm": "Justin",
    "about": "Marcus",
-   "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork",
-   "used": true
+   "text": "Roast Marcus for either: Jobacus movies (his YouTube channel which features softcore pornography outdoors), being catholic (joke about him being in Spotlight - describe him as a creepy priest), or gifting Chloe artwork"
   },
   {
    "id": "2026-09-20-8e7811d108",
@@ -135,8 +121,7 @@
    "ts": "2026-09-20T15:02",
    "frm": "Ben C",
    "about": "Robert",
-   "text": "Lack of managing his team",
-   "used": true
+   "text": "Lack of managing his team"
   }
  ],
  "runs": [
@@ -257,6 +242,13 @@
    "about": "Robert",
    "chars": 25,
    "img": false
+  },
+  {
+   "ts": "2026-10-14T23:30",
+   "about": null,
+   "chars": 0,
+   "frm": null,
+   "note": "Hand edit at Justin's request: dropped the 'used' marker from every entry. The whole archive is in play every night; only 'retired' takes one out."
   }
  ]
 }
