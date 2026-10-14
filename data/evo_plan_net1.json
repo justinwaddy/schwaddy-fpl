@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T23:13",
+ "generated": "2026-10-14T08:37",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.58,
-   "ep": 7.71
+   "ep": 7.68
   },
   {
    "id": 112,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.44,
-   "ep": 6.37
+   "ep": 6.32
   },
   {
    "id": 504,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.98,
    "base": 4.67,
-   "ep": 5.51
+   "ep": 5.5
   },
   {
    "id": 391,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.871,
    "base": 4.96,
-   "ep": 5.49
+   "ep": 5.48
   },
   {
    "id": 10,
@@ -85,7 +85,7 @@
    "news": "",
    "p_play": 0.957,
    "base": 3.47,
-   "ep": 4.14
+   "ep": 4.11
   },
   {
    "id": 68,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.931,
    "base": 4.93,
-   "ep": 6.02
+   "ep": 5.97
   },
   {
    "id": 542,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.965,
    "base": 3.43,
-   "ep": 4.93
+   "ep": 4.91
   },
   {
    "id": 86,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.74
+   "ep": 3.69
   },
   {
    "id": 401,
@@ -198,12 +198,12 @@
    "ep": 1.56
   }
  ],
- "xi_ep": 62.7,
+ "xi_ep": 62.6,
  "changes": 6,
  "claims": [
   {
    "pos": "MID",
-   "gain": 18.99,
+   "gain": 19.15,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 18.12,
+   "gain": 18.24,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 15.28,
+   "gain": 15.49,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 14.91,
+   "gain": 14.99,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 17.68,
+   "gain": 17.61,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 13.45,
+   "gain": 13.34,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 13.01,
+   "gain": 13.08,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 12.53,
+   "gain": 12.49,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 8.92,
+   "gain": 8.85,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 6.23,
+   "gain": 6.17,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.17,
+   "gain": 8.14,
    "change": 4,
    "fallback": false,
    "add": {
@@ -533,7 +533,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.49,
+   "gain": 5.55,
    "change": 4,
    "fallback": true,
    "add": {
@@ -563,7 +563,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.95,
+   "gain": 4.88,
    "change": 4,
    "fallback": true,
    "add": {
@@ -623,7 +623,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 7.01,
+   "gain": 6.93,
    "change": 5,
    "fallback": false,
    "add": {
@@ -652,8 +652,38 @@
    }
   },
   {
+   "pos": "FWD",
+   "gain": 4.3,
+   "change": 5,
+   "fallback": true,
+   "add": {
+    "id": 316,
+    "code": 543968,
+    "name": "Emersonn",
+    "pos": "FWD",
+    "team": "IPS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.759,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 222,
+    "code": 247412,
+    "name": "Strand Larsen",
+    "pos": "FWD",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.748,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
    "pos": "MID",
-   "gain": 4.64,
+   "gain": 4.61,
    "change": 6,
    "fallback": false,
    "add": {
@@ -665,36 +695,6 @@
     "status": "a",
     "news": "",
     "p_play": 0.995,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
-    "pos": "MID",
-    "team": "SUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.965,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 4.19,
-   "change": 6,
-   "fallback": true,
-   "add": {
-    "id": 286,
-    "code": 540324,
-    "name": "Belloumi",
-    "pos": "MID",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.811,
     "base": null,
     "ep": null
    },
@@ -773,7 +773,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 195.68,
-   "ep": 307.97
+   "ep": 307.8
   },
   {
    "id": 427,
@@ -785,7 +785,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.22,
-   "ep": 283.19
+   "ep": 283.54
   },
   {
    "id": 387,
@@ -812,18 +812,6 @@
    "ep": 278.41
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.932,
-   "base": 155.85,
-   "ep": 277.3
-  },
-  {
    "id": 13,
    "code": 204480,
    "name": "Rice",
@@ -833,7 +821,19 @@
    "news": "",
    "p_play": 0.939,
    "base": 168.32,
-   "ep": 277.03
+   "ep": 277.16
+  },
+  {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.932,
+   "base": 155.85,
+   "ep": 277.13
   },
   {
    "id": 106,
@@ -869,7 +869,7 @@
    "news": "",
    "p_play": 0.767,
    "base": 148.45,
-   "ep": 274.26
+   "ep": 274.25
   },
   {
    "id": 398,
@@ -893,7 +893,7 @@
    "news": "",
    "p_play": 0.942,
    "base": 136.06,
-   "ep": 258.81
+   "ep": 259.34
   },
   {
    "id": 8,
@@ -953,7 +953,7 @@
    "news": "",
    "p_play": 0.284,
    "base": 127.65,
-   "ep": 248.78
+   "ep": 248.7
   },
   {
    "id": 19,
@@ -965,19 +965,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.218,
    "base": 128.05,
-   "ep": 247.39
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.408,
-   "base": 177.01,
-   "ep": 243.59
+   "ep": 246.69
   },
   {
    "id": 390,
@@ -1002,6 +990,18 @@
    "p_play": 0.858,
    "base": 147.35,
    "ep": 240.37
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.408,
+   "base": 177.01,
+   "ep": 240.34
   },
   {
    "id": 384,
@@ -1073,7 +1073,19 @@
    "news": "",
    "p_play": 0.969,
    "base": 176.5,
-   "ep": 230.65
+   "ep": 230.51
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 159.24,
+   "ep": 228.68
   },
   {
    "id": 31,
@@ -1086,18 +1098,6 @@
    "p_play": 0.734,
    "base": 112.56,
    "ep": 228.61
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 159.24,
-   "ep": 227.31
   },
   {
    "id": 346,
@@ -1133,7 +1133,7 @@
    "news": "",
    "p_play": 0.701,
    "base": 165.23,
-   "ep": 218.9
+   "ep": 218.66
   },
   {
    "id": 356,
@@ -1157,7 +1157,7 @@
    "news": "Hamstring injury - 75% chance of playing",
    "p_play": 0.632,
    "base": 150.5,
-   "ep": 215.58
+   "ep": 215.5
   },
   {
    "id": 61,
