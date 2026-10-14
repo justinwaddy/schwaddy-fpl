@@ -1,40 +1,6 @@
 {
- "generated": "2026-10-13T22:45 UTC",
+ "generated": "2026-10-14T07:42 UTC",
  "items": [
-  {
-   "id": "2026-09-29-marcus-zeroes",
-   "ts": "2026-09-29T22:45",
-   "kind": "opinion",
-   "text": "Marcus finished gameweek 5 on 31, the lowest of anyone bar Robert, and four of his fifteen (Mukiele, Joao Pedro, Foden and Palestra) returned exactly nothing. Ten points off the lead is not a disaster. Ten points off the lead with a bench that scored 2 is a man with nowhere left to hide.",
-   "source": null
-  },
-  {
-   "id": "2026-09-29-justin-bench",
-   "ts": "2026-09-29T22:45",
-   "kind": "opinion",
-   "text": "Justin's bench scored 21 in gameweek 5. He is 7 points behind Edward. Nobody is saying the eleven was picked by a man who reads the fixture list upside down, but the numbers are saying it quite loudly, and they do not care about his feelings.",
-   "source": null
-  },
-  {
-   "id": "2026-09-30-city-guilty",
-   "ts": "2026-09-30T07:55",
-   "kind": "news",
-   "text": "An independent commission has found Manchester City guilty of all Premier League financial charges over a nine-year period, citing sham contracts with commercial partners, and City say they will appeal by Friday. Sanctions including points deductions are on the table, which matters to everyone here: Edward has Semenyo, Justin has Haaland and Gvardiol, Marcus has Guehi and Foden, Small Ben has Donnarumma and Ruben, Robert has Cherki, Ndiaye and O'Reilly.",
-   "source": {
-    "title": "Manchester City guilty over Premier League charges after £900m of 'sham' contracts",
-    "url": "https://www.theguardian.com/football/2026/sep/29/manchester-city-found-guilty-all-premier-league-charges-rule-breaches"
-   }
-  },
-  {
-   "id": "2026-09-30-england-czech",
-   "ts": "2026-09-30T07:55",
-   "kind": "news",
-   "text": "England beat the Czech Republic 2-0 in Prague through goals from Anthony Gordon and Harry Kane, with Pavel Sulc sent off in the first half. Small Ben's Lewis Hall was in the side, Marcus's Guehi was in the ratings with a 6, and Edward's Gibbs-White came on as a substitute.",
-   "source": {
-    "title": "Czech Republic 0-2 England: Anthony Gordon, Harry Kane net to give Three Lions first Nations League win",
-    "url": "https://www.skysports.com/football/czech-republic-vs-england/report/554024"
-   }
-  },
   {
    "id": "2026-09-30-palmer-load",
    "ts": "2026-09-30T07:55",
@@ -710,16 +676,49 @@
    "kind": "opinion",
    "source": null,
    "text": "Big Ben left 12 points on his bench in GW6, against 35 from his eleven, which is a rather large second team for a man on 254 and 72 behind. Robert, meanwhile, is on 205 and 121 off the lead: the gap is now wide enough to have its own postcode."
+  },
+  {
+   "id": "2026-10-14-sesko-shin",
+   "ts": "2026-10-14T07:42",
+   "kind": "news",
+   "text": "Manchester United striker Benjamin Sesko has a fresh shin injury with no end date, BBC Sport reports, extending a lack of involvement that the piece says United are keenly feeling. That is Robert's Sesko, who was already left out of the squad against Spurs.",
+   "source": {
+    "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
+   }
+  },
+  {
+   "id": "2026-10-14-fernandes-carrick",
+   "ts": "2026-10-14T07:42",
+   "kind": "news",
+   "text": "Michael Carrick says Bruno Fernandes is \"pretty much over\" the issue he was carrying on international duty and was \"really bright in training\", BBC Sport reports. Fernandes has played every minute of United's six league games, and Big Ben, who owns him, will be hoping the chance creation picks up from the 2.5 per game BBC quotes.",
+   "source": {
+    "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
+   }
+  },
+  {
+   "id": "2026-10-14-arsenal-training-injuries",
+   "ts": "2026-10-14T07:42",
+   "kind": "news",
+   "text": "Mikel Arteta called it \"far from ideal\" that Piero Hincapie and Martin Zubimendi were both hurt in a post-match training session after the win over Leeds, with scans due to give a timeframe, BBC Sport reports. Neither is owned in the league, but all six managers hold Arsenal players.",
+   "source": {
+    "title": "Hincapie and Zubimendi injured in post-match training session",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmq5nzn8ww98o"
+   }
+  },
+  {
+   "id": "2026-10-14-liverpool-anfield",
+   "ts": "2026-10-14T07:42",
+   "kind": "news",
+   "text": "Liverpool are now without a win in five successive Premier League home games (D4 L1) after the 3-0 defeat to Manchester City, BBC Sport reports, with Andoni Iraola saying his side played \"two different games\" either side of the red card. Small Ben owns Virgil, Gakpo, Szoboszlai and Isak, Big Ben has Wirtz, Justin has Barcola and Marcus has Becker.",
+   "source": {
+    "title": "Winless and an 'easy touch' - what's happened to the Anfield fear factor?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ck5yn20wej62o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-18T08:15 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning news. Led with Joao Pedro's doubt for tonight's Brentford trip (Marcus owns him), then two Carabao Cup/Europa League items touching Justin's Bournemouth and Everton assets (Alex Scott's assist, Pickford's save). Skipped a lot of research this run because dates on recycled club-site articles kept turning out stale on inspection (an old Man City/Norwich Foden-suspension story, a months-old Arsenal Saliba/Mosquera update, an April Isak return-to-training piece that's long since resolved) - had to fetch and check publish timestamps by hand since several outlets serve JS shells to curl. No opinion pieces, per the rules, since it's a morning run."
-  },
   {
    "ts": "2026-09-18T22:54 UTC",
    "news": 1,
@@ -1132,6 +1131,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening. No fixtures today and GW7 not started; one search found nothing usable from permitted outlets, so no reported items. Led with the table after GW6. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): they target sexuality/race, which are off limits. No flops today so reflop not run."
+  },
+  {
+   "ts": "2026-10-14T07:42",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Sesko's fresh shin injury and Carrick on Fernandes (BBC), then Arsenal training injuries and Liverpool's Anfield form. No opinion on a morning run. Both unused roast suggestions (Ben D on himself; Ben D on Justin) left unused: one is a slur-adjacent self-insult and the other is aimed at a nationality/politics angle that is not a clean joke, so both stay passed over."
   }
  ]
 }
