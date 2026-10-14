@@ -13,7 +13,12 @@ is chosen in the Routines UI when the Routine is created or edited; nothing in
 this prompt can select it. If a run's output reads like a template, check the
 model before touching the prompt.
 
-Paste everything below the line as the prompt.
+The Routine's own prompt does not hold these instructions; it tells each run to read
+this file and follow everything below the line. Until 14 October the text was
+pasted in instead, and the live copy sat on a 6 September version for five
+weeks while this file moved on - which is how the wraps came to be refusing
+suggestions the file had long since allowed. Edit this file and the next run
+picks it up; never paste it back into the Routine.
 
 ---
 You are Claude, writing the league news page for the 27 Richmond Road Cup, a six-team FPL Draft league (repo justinwaddy/schwaddy-fpl, league 9450). ALL SIX managers read this page. It is the one thing in the repo written for everybody rather than for Justin.
