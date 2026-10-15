@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-12T21:20 UTC",
-      "published": 2,
-      "note": "Club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Nottingham Forest, Man City, Man Utd, Liverpool, Bournemouth, Tottenham, Crystal Palace, Sunderland) plus general PL injury/team-news searches ahead of this afternoon's fixtures. Led with two confirmed-XI items: cpfc.co.uk's own team news has Strand Larsen leading the Palace line again with Nketiah failing a pre-match fitness test (resolving this morning's open question), and Tyrick Mitchell confirmed at wing-back; and liverpoolfc.com confirms Barcola's second start in four days (Tuesday's Champions League tie plus today's Fulham game), while the model still rates him near the bottom of the board. Chased down and discarded a Nottingham Forest story (Milenkovic and Cunha supposedly ruled out of today's Aston Villa game with late hamstring scares) - it traces to Yahoo Sports/hayters.com aggregator copy that also wrongly has Milenkovic scoring the winner (actual scorers per ESPN were Delap and Igor Jesus), and no permitted outlet carried a clean version of the story, so left unpublished per the sources policy even though the confirmed team sheet does appear to be missing him. Also checked and found nothing new: Gvardiol and Haaland both nailed for Sunday's Manchester derby (Man City have a clean bill of health per ESPN); Bogle rested for Wednesday's Carabao Cup defeat but still projected to start Leeds' Monday night trip to Newcastle; Xhaka and Le Fee both confirmed starting and captaining/creating for Sunderland against Arsenal; Truffert, Hill, Scott and Tavernier all still nailed at Bournemouth with no fresh fitness concerns; Collins still has no return timeline from Brentford; Maddison/Kudus situation at Tottenham unchanged since Thursday's report."
-    },
-    {
       "ts": "2026-09-13T09:15 UTC",
       "published": 1,
       "note": "Club-by-club sweep (Brentford, Nottingham Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Everton, Arsenal, Man Utd) plus general PL injury/transfer searches, first run of the GW5 window. Led with Newcastle's Matias Fernandez-Pardo (nufc's own site: Jaissle says the 51m Lille signing is 'getting closer to starting' after his bench debut), a marquee arrival the model still has bottom of the forward pool off zero games - flagged per the standing brief on new signings the model cannot judge. Chased down and discarded three leads: Milenkovic and Cunha again reported missing Saturday's Aston Villa win with fitness concerns, but as last week this traces only to OneFootball/Sports Mole copy with no permitted outlet carrying it, so the Hill/Milenkovic claim stays numbers-only; a Kevin Schade 'suspended' story turned out to be stale coverage of a straight red served back in February 2026, not current; and a Sky Sports headline naming Ruben Amorim as commenting on a Bruno Fernandes injury contradicts this week's own derby preview coverage naming Michael Carrick as United's manager - too inconsistent to stand up, so left unpublished rather than guess which is right. Everything else reconfirmed unchanged: Collins still out until the international break, Barcola's back-to-back starts already up from yesterday, Mitchell and Strand Larsen still nailed at Palace, Maddison/Kudus at Tottenham unchanged since last week, Truffert and Hill both still in Bournemouth's XI."
@@ -621,6 +616,11 @@
       "ts": "2026-10-15T08:10 UTC",
       "published": 0,
       "note": "Morning check. Permitted-outlet searches returned only items already covered (Schade shoulder with no follow-up diagnosis, Haaland fit per City, Liverpool forward injuries). Not in the starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-15T21:05 UTC",
+      "published": 0,
+      "note": "Evening check. Permitted-outlet searches returned only items already covered (Schade shoulder with no diagnosis from Brentford/Premier League, Haaland fit and scored at Liverpool per Man City). Not in the starters window. Nothing published."
     }
   ]
 }

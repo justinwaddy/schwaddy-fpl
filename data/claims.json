@@ -594,12 +594,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-12T08:20 UTC",
-      "gw": 5,
-      "claims": 3,
-      "note": "Dropped the Igor Jesus/Strand Larsen speculative punt, four claims down to three - cpfc.co.uk's own Carabao Cup report has Strand Larsen scoring twice against Middlesbrough, strengthening rather than weakening his case to start over Nketiah at Ipswich this afternoon, while Forest's pecking order for Igor Jesus still can't be pinned to a permitted source. Truffert/Collins, Mitchell/Vuskovic and Hill/Bogle carried forward unchanged after today's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Leeds, Forest, Man City, Liverpool, Bournemouth, Palace, Tottenham) found nothing that moves any of the three. Discarded a stale 2024 arsenal.com article wrongly resurfacing as fresh 'Raya injury' news, a Schade suspension and a Collins-vs-Newcastle preview that both matched a future fixture rather than this week's, and the recurring stale claim that Gvardiol has missed City's whole season, already refuted by Sky Sports' own lineup pages."
-    },
-    {
       "ts": "2026-09-12T21:20 UTC",
       "gw": 5,
       "claims": 4,
@@ -949,6 +943,12 @@
     },
     {
       "ts": "2026-10-15T08:10 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "No change: no new permitted-outlet news altered any claim; carried forward."
+    },
+    {
+      "ts": "2026-10-15T21:05 UTC",
       "gw": 7,
       "claims": 5,
       "note": "No change: no new permitted-outlet news altered any claim; carried forward."
