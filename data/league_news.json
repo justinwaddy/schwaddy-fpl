@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-14T22:41 UTC",
+ "generated": "2026-10-15T07:42 UTC",
  "items": [
-  {
-   "id": "2026-09-30-break-table",
-   "ts": "2026-09-30T22:46",
-   "kind": "opinion",
-   "text": "No football tonight and the table is still cruel: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back, Big Ben 40 back and Robert 89 back. Robert has had an international break to reflect on being 89 points off the lead, and will spend the next ten days doing precisely what everyone else does, which is refreshing the injury list and hoping it is somebody else's player.",
-   "source": null
-  },
-  {
-   "id": "2026-10-01-city-punishment-timing",
-   "ts": "2026-10-01T07:42",
-   "kind": "news",
-   "text": "Senior football figures have told BBC Sport that Manchester City's punishment should be handed down before the end of this season, after the Premier League found them guilty of all charges over financial breaches between 2009-10 and 2017-18. City deny wrongdoing and have signalled an appeal by the end of this week. All six managers own City players, so this is one headline nobody in the league gets to ignore.",
-   "source": {
-    "title": "Manchester City charges: Punishment before end of season, Premier League clubs believe",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6vgyg3zv3kwo"
-   }
-  },
-  {
-   "id": "2026-10-01-van-hecke-foot",
-   "ts": "2026-10-01T07:42",
-   "kind": "news",
-   "text": "Tottenham defender Jan Paul van Hecke has withdrawn from the Netherlands squad with a foot injury picked up in the clash with Serbia, ESPN reports, and is returning to Spurs with no replacement called up. Justin owns him.",
-   "source": {
-    "title": "Which Premier League players got injured in the international break?",
-    "url": "https://www.espn.com/football/story/_/id/50026166/premier-league-international-break-arsenal-chelsea-manchester-united"
-   }
-  },
   {
    "id": "2026-10-01-joao-pedro-knee",
    "ts": "2026-10-01T22:50",
@@ -707,16 +680,39 @@
    "kind": "opinion",
    "text": "Robert is on 205, which is 121 behind Marcus and the best part of a whole other league away. Mateta, Sesko, James and Mosquera all show 0 for GW6 on his squad sheet, so at least the zeros have each other for company. The only good news is that none of GW7's ten fixtures has kicked off yet, so he has a full eleven still to disappoint us with.",
    "source": null
+  },
+  {
+   "id": "2026-10-15-struijk-red-overturned",
+   "ts": "2026-10-15T07:42",
+   "kind": "news",
+   "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he dodges the one-match ban and is available for the visit of Crystal Palace this weekend. He was sent off after 57 minutes on a VAR call for denying Wilson Isidor, and Brighton still won 2-0. Marcus (De Cuyper, Kostoulas), Justin (Vuskovic) and Big Ben (Gross) all own Brighton players and keep their defence at full strength for GW7.",
+   "source": {
+    "title": "Struijk red card after VAR intervention overturned",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
+   }
+  },
+  {
+   "id": "2026-10-15-chelsea-break-caicedo",
+   "ts": "2026-10-15T07:42",
+   "kind": "news",
+   "text": "BBC Sport argues the three-week break did Chelsea more good than anyone: Xabi Alonso reworked a back three that had shipped a league-high 12 goals before the pause, Moises Caicedo returned from his calf problem, and the 5-1 win over Bournemouth followed. Joao Pedro, who scored twice, said the break gave them time to fix the mistakes from the 3-0 loss at Brentford. Edward owns Palmer, Marcus has Joao Pedro and Big Ben has Rogers, and Chelsea go to Everton at 11:30 on Saturday.",
+   "source": {
+    "title": "Did Chelsea benefit most from extended international break?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckwy4nj4842qo"
+   }
+  },
+  {
+   "id": "2026-10-15-martinez-wilcox",
+   "ts": "2026-10-15T07:42",
+   "kind": "news",
+   "text": "Lisandro Martinez publicly questioned Manchester United's summer recruitment after the 2-0 defeat to Atletico Madrid, telling CBS \"we don't have the best squad at the moment compared to other top teams\" and \"I expect more from our technical director\", BBC Sport reports. Director of football Jason Wilcox is the target again. Robert (Yoro, Sesko), Marcus (Mbeumo), Small Ben (Cunha) and Big Ben (Bruno Fernandes) all have United players, and United are at Leeds on Saturday.",
+   "source": {
+    "title": "Wilcox the target again in another damaging Man Utd fallout",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cvp8g57ne53xo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-19T07:58 UTC",
-   "news": 4,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning news, 5-fixture Saturday before the 13:00/14:00/16:30 kickoffs. Four reported items, all club-site sourced: Mosquera in for injured Saliba at Brighton (Robert), Gomez fit again for Liverpool's trip to Bournemouth while Bradley/Chiesa/Ekitike/Leoni stay out (Ben C's four-man Anfield stack unaffected), Elanga and Dedic out for Newcastle v Hull (Ben C's other four Magpies fine), and Rohl out / Armstrong back for Everton v Ipswich (three-a-side split between Edward and Ben D). No opinion pieces - morning run, nothing has kicked off yet. Roast archive's 2 unused submissions (Ben D on Ben D re sexuality, Ben D on Justin re apartheid) both stay out of bounds under rule 4 regardless of author or subject, so nothing to carry tonight from them; tonight's wrap will need fresh material from today's football instead."
-  },
   {
    "ts": "2026-09-19T11:06",
    "news": 1,
@@ -1129,6 +1125,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening. No fixtures today and GW7 not started, so no flops to rewrite; searches turned up nothing usable from permitted outlets, so no reported items. Opinion built on GW6 table/squad sheets and team names. Passed over both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): one is a slur and the other is aimed at race/politics, neither goes on the page."
+  },
+  {
+   "ts": "2026-10-15T07:42",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Struijk's overturned red card (Brighton owners Marcus, Justin, Big Ben). Search tool returned stale results so sourced direct from BBC Sport pages. No evening-only material; roast archive not used on a morning run (all 13 untouched, none passed over for cause)."
   }
  ]
 }
