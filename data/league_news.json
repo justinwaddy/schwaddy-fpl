@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-15T07:42 UTC",
+ "generated": "2026-10-15T22:50 UTC",
  "items": [
-  {
-   "id": "2026-10-01-joao-pedro-knee",
-   "ts": "2026-10-01T22:50",
-   "kind": "news",
-   "text": "Chelsea manager Xabi Alonso says Joao Pedro, who missed the Brentford match with a knee problem, is expected back for the next game against Bournemouth after the international break. He is Marcus's, and he returned 0 in gameweek 5.",
-   "source": {
-    "title": "Why FPL managers need to monitor injury CHAOS",
-    "url": "https://www.premierleague.com/en/news/4727332"
-   }
-  },
-  {
-   "id": "2026-10-01-tzolis-name",
-   "ts": "2026-10-01T22:50",
-   "kind": "opinion",
-   "text": "Big Ben is 40 points behind Edward and calls his team Quantum of Tzolis. Tzolis, per the squad lists, sits in Marcus's fifteen. It is the only quantum of anything Big Ben has managed this season: a tiny, unobservable amount of ownership.",
-   "source": null
-  },
-  {
-   "id": "2026-10-01-robert-gap",
-   "ts": "2026-10-01T22:50",
-   "kind": "opinion",
-   "text": "No football tonight, so Robert's 89 points behind Edward will have to sit and think about itself until the weekend. Pardinho has Mosquera, Seseko, Mateta, Roefs, Wilson and James on zero for gameweek 5, which is not so much a squad as a witness protection programme.",
-   "source": null
-  },
   {
    "id": "2026-10-02-tzolis-greece",
    "ts": "2026-10-02T08:10",
@@ -710,16 +686,30 @@
     "title": "Wilcox the target again in another damaging Man Utd fallout",
     "url": "https://www.bbc.co.uk/sport/football/articles/cvp8g57ne53xo"
    }
+  },
+  {
+   "id": "2026-10-15-marcus-swing",
+   "ts": "2026-10-15T22:50",
+   "kind": "opinion",
+   "text": "Marcus started GW6 ten points behind Edward and finished it 28 clear, a 38-point swing built on 77 to Edward's 39. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 supplied 40 of them, and a left-back on 15 is the sort of thing people call luck right up until he is in their own team.",
+   "source": null
+  },
+  {
+   "id": "2026-10-15-robert-recede",
+   "ts": "2026-10-15T22:50",
+   "kind": "opinion",
+   "text": "Robert was 89 behind the leader when GW6 began and is 121 behind now, having scored 35, exactly what Small Ben and Big Ben scored. Thirty-two points of ground gone in a week on a perfectly respectable return is the first thing to recede that fast in that part of the league since his hairline.",
+   "source": null
+  },
+  {
+   "id": "2026-10-15-smallben-looking-up",
+   "ts": "2026-10-15T22:50",
+   "kind": "opinion",
+   "text": "Small Ben began GW6 13 points off the top and ended it 45 off, with Cunha on 10, Donnarumma on 9 and Rice on 7 not nearly enough to stop it. For a man who is always looking up at somebody, the leader is now a very long way up.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-19T11:06",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "11:30 KO TOT v AVL: found confirmed line-ups via tottenhamhotspur.com (both clubs' XIs); all 6 league-owned players (Van Hecke, Marmoush, Solanke, Kinsky, Suzuki, N.Jackson) confirmed starting."
-  },
   {
    "ts": "2026-09-19T13:10",
    "news": 1,
@@ -1132,6 +1122,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Struijk's overturned red card (Brighton owners Marcus, Justin, Big Ben). Search tool returned stale results so sourced direct from BBC Sport pages. No evening-only material; roast archive not used on a morning run (all 13 untouched, none passed over for cause)."
+  },
+  {
+   "ts": "2026-10-15T22:50",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening. No fixtures today, GW7 not started, so no flops to rewrite. Search was blocked for BBC/Guardian and a direct BBC fetch returned nothing usable, so no reported items. Opinion on the GW6 swing between Marcus and Edward, Robert's gap and Small Ben's gap, using the 'relies on luck', hairline and height suggestions as angles. Passed over 2026-09-12-ca1422e269 (slur), 2026-09-12-d9048f2afb (nationality/politics) and 2026-09-13-f263c0fa06 (needs facts not in the feed); 2026-09-12-b4e9e2f836 and 09-20 and others untouched this run."
   }
  ]
 }
