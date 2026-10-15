@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T14:00",
+ "generated": "2026-10-15T08:36",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.957,
    "base": 3.47,
-   "ep": 3.42,
+   "ep": 3.41,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.983,
    "base": 8.72,
-   "ep": 8.79,
+   "ep": 8.78,
    "votes": 5
   }
  ],
@@ -213,7 +213,7 @@
    "news": "",
    "p_play": 0.551,
    "base": 1.25,
-   "ep": 1.19,
+   "ep": 1.18,
    "votes": 1
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.04,
+   "gain": 13.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 272
+   "borda": 277
   },
   {
    "pos": "MID",
-   "gain": 13.15,
+   "gain": 13.41,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 270
+   "borda": 275
   },
   {
    "pos": "MID",
-   "gain": 12.57,
+   "gain": 12.74,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 263
+   "borda": 268
   },
   {
    "pos": "MID",
-   "gain": 11.1,
+   "gain": 11.27,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 249
+   "borda": 256
   },
   {
    "pos": "DEF",
-   "gain": 11.69,
+   "gain": 11.62,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 180
+   "borda": 185
   },
   {
    "pos": "DEF",
-   "gain": 6.9,
+   "gain": 6.79,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 150
+   "borda": 155
   },
   {
    "pos": "DEF",
-   "gain": 6.85,
+   "gain": 6.75,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 128
+   "borda": 134
   },
   {
    "pos": "DEF",
-   "gain": 6.71,
+   "gain": 6.68,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 89
+   "borda": 93
   },
   {
    "pos": "MID",
-   "gain": 7.34,
+   "gain": 7.29,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 3.87,
+   "gain": 3.8,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 35
+   "borda": 33
   },
   {
    "pos": "MID",
-   "gain": 4.39,
+   "gain": 4.37,
    "change": 4,
    "fallback": false,
    "add": {
@@ -574,7 +574,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.93,
+   "gain": 5.88,
    "change": 4,
    "fallback": true,
    "add": {
@@ -606,7 +606,7 @@
   },
   {
    "pos": "MID",
-   "gain": 2.92,
+   "gain": 2.95,
    "change": 4,
    "fallback": true,
    "add": {
