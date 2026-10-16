@@ -1,8 +1,8 @@
 {
  "gw": 7,
  "deadline": "2026-10-17T10:00:00Z",
- "ts": "2026-10-16T11:30 UTC",
- "summary": "Squad after GW7 waivers: Bogle, Stach and Brobbey in, for Ajayi, Le Fee and Strand Larsen. No XI is published yet, so nobody is a confirmed start. Two doubts: Schade (shoulder) and Brobbey (hamstring, unused sub on Thursday). Barcola looks more secure than the model's 0.70 with Isak and Gakpo still out.",
+ "ts": "2026-10-16T21:30",
+ "summary": "No XI published yet. Doubts are Schade (shoulder), Brobbey (returning from hamstring) and now Gvardiol (City rotation). Barcola stays likely while Isak, Gakpo and Szoboszlai are out.",
  "players": [
   {
    "name": "Pickford",
@@ -89,10 +89,15 @@
    "code": "477424",
    "club": "MCI",
    "pos": "DEF",
-   "status": "likely",
-   "verdict": "No news; City host Ipswich",
-   "note": "No permitted outlet reports a problem. Some rotation risk around midweek Europe.",
-   "sources": []
+   "status": "doubt",
+   "verdict": "Left-back dilemma with O'Reilly, rotation likely",
+   "note": "The Premier League calls Gvardiol or O'Reilly a regular dilemma for Maresca and says rotation is highly likely against Ipswich. The model's 0.85 is probably fair, no more.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+    }
+   ]
   },
   {
    "name": "Stach",
@@ -146,8 +151,13 @@
    "pos": "MID",
    "status": "likely",
    "verdict": "No concern reported at Brentford",
-   "note": "Not named in any Brentford injury update. Brentford host Liverpool.",
-   "sources": []
+   "note": "No fitness concern reported, and Andrews expects Collins, Damsgaard and van den Berg back involved, which may squeeze midfield minutes.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+    }
+   ]
   },
   {
    "name": "Schade",
@@ -156,11 +166,11 @@
    "pos": "MID",
    "status": "doubt",
    "verdict": "Shoulder injury at Villa; Andrews unsure",
-   "note": "He came off seven minutes into the second half of the 2-2 at Villa Park. Andrews said 'Just a shoulder injury... I'm not totally sure how he is.' FPL lists him at 75%. Nothing newer has been published.",
+   "note": "Andrews said \"we'll have to see how much\" he can play after the Villa shoulder injury; Brentford's own report says he was in pain. No XI yet.",
    "sources": [
     {
-     "title": "Keith Andrews provides Kevin Schade and Jannik Schuster injury update",
-     "url": "https://www.brentfordfc.com/en/news/first-team-keith-andrews-kevin-schade-jannik-schuster-injury-update-brentford"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
     }
    ]
   },
@@ -195,16 +205,12 @@
    "club": "SUN",
    "pos": "FWD",
    "status": "doubt",
-   "verdict": "New in. Unused sub on Thursday after a hamstring injury",
-   "note": "Picked up a hamstring injury on Netherlands duty and missed Brighton. Le Bris called it 'short-term'. He travelled to Torreense but did not come off the bench in Thursday's 2-1 win. Sunderland are away at Bournemouth.",
+   "verdict": "Le Bris says ready; Isidor also doubtful",
+   "note": "Stayed on the bench in Europe but is 'ready' per Le Bris, and Isidor is being assessed day by day, so a start is plausible. The model's 0.90 availability is about right but fitness after the hamstring is unproven.",
    "sources": [
     {
-     "title": "Brobbey and Diarra travel with Sunderland squad for Torreense test",
-     "url": "https://www.safc.com/news/2026/october/14/brobbey-and-diarra-travel-with-sunderland-squad-for-torreense-test/"
-    },
-    {
-     "title": "Torreense 1-2 Sunderland",
-     "url": "https://www.skysports.com/football/torreense-vs-sunderland/report/577775"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
     }
    ]
   }
@@ -245,6 +251,12 @@
    "gw": 7,
    "kind": "deep",
    "note": "First deep pass for GW7, written after waivers processed at 10:00 UTC (in Stach, Bogle, Brobbey; out Le Fee, Ajayi, Strand Larsen). Sources: Leeds' Arsenal teamsheet, Brentford's Schade update, Sunderland's Torreense coverage, Sky on Liverpool's injuries, and Spurs' and Arsenal's team news. No XI is published for Saturday yet."
+  },
+  {
+   "ts": "2026-10-16T21:30 UTC",
+   "gw": 7,
+   "kind": "light",
+   "note": "Amended Schade (PL presser quote), Brobbey (ready, Isidor doubtful, now doubt), Gvardiol (rotation risk, now doubt), Lewis-Potter note; others unchanged."
   }
  ]
 }
