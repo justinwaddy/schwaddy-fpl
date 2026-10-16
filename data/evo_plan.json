@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T11:15",
+ "generated": "2026-10-16T13:30",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.42,
+   "ep": 3.41,
    "votes": 0
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 12.86,
+   "gain": 12.92,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 140
+   "borda": 145
   },
   {
    "pos": "MID",
-   "gain": 11.38,
+   "gain": 11.44,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 125
+   "borda": 130
   },
   {
    "pos": "MID",
-   "gain": 11.37,
+   "gain": 11.42,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 124
+   "borda": 129
   },
   {
    "pos": "MID",
-   "gain": 10.0,
+   "gain": 10.06,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 120
+   "borda": 126
   },
   {
    "pos": "MID",
-   "gain": 3.8,
+   "gain": 3.79,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 31
+   "borda": 34
   },
   {
    "pos": "MID",
-   "gain": 4.83,
+   "gain": 4.81,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 18
+   "borda": 20
   },
   {
    "pos": "MID",
-   "gain": 3.23,
+   "gain": 3.24,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,7 +442,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 10
+   "borda": 12
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

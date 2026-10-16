@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T11:16",
+ "generated": "2026-10-16T13:31",
  "gw": 7,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.42,
+   "ep": 3.41,
    "votes": 0
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 77.74,
+   "gain": 78.08,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 77.66,
+   "gain": 77.99,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 74.3,
+   "gain": 74.65,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,19 +314,19 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 140
+   "borda": 139
   },
   {
    "pos": "MID",
-   "gain": 59.66,
+   "gain": 67.51,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
     "pos": "MID",
-    "team": "AVL",
+    "team": "BOU",
     "status": "a",
     "news": "",
     "p_play": 0.975,
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 127
+   "borda": 131
   },
   {
    "pos": "GKP",
-   "gain": 36.3,
+   "gain": 36.24,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 32.6,
+   "gain": 32.52,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,7 +410,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 20
+   "borda": 19
   },
   {
    "pos": "MID",
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 22.97,
+   "gain": 23.04,
    "change": 4,
    "fallback": false,
    "add": {
