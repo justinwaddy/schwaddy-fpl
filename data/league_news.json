@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-15T22:50 UTC",
+ "generated": "2026-10-16T07:41 UTC",
  "items": [
-  {
-   "id": "2026-10-02-tzolis-greece",
-   "ts": "2026-10-02T08:10",
-   "kind": "news",
-   "text": "Christos Tzolis was substituted in the 18th minute of Greece's 2-2 Nations League draw with the Netherlands on Thursday with an apparent injury, and ESPN says his availability for Greece's rematch with Germany on Sunday is unknown. He is Marcus's, and Arsenal host Leeds at 11:30 today.",
-   "source": {
-    "title": "Arsenal's Christos Tzolis limps off in Greece, Netherlands draw",
-    "url": "https://www.espn.com/soccer/story/_/id/50079534/arsenal-christos-tzolis-limps-greece-netherlands-draw"
-   }
-  },
-  {
-   "id": "2026-10-02-wirtz-vandijk",
-   "ts": "2026-10-02T08:12",
-   "kind": "news",
-   "text": "Florian Wirtz scored Germany's second in the 61st minute and helped set up the first as Jurgen Klopp won his first game in charge, 2-0 against Serbia, while Virgil van Dijk headed in for the Netherlands against Greece. Wirtz is Big Ben's, Van Dijk Small Ben's, and Liverpool host Man City at 15:30 today.",
-   "source": {
-    "title": "Thursday's internationals: Van Dijk and Wirtz score as Liverpool teammates meet",
-    "url": "https://liverpoolfc.com/news/thursdays-internationals-van-dijk-and-wirtz-score-liverpool-teammates-meet"
-   }
-  },
-  {
-   "id": "2026-10-02-gw6-eve",
-   "ts": "2026-10-02T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Edward sits on 259 with Justin 7 back, Marcus 10 back and Small Ben 13 back, and Return of the Djedi has not played a minute of Gameweek 6. Neither has anyone else: all ten fixtures are still to come, starting with Arsenal v Leeds. Nobody has hauled, nobody has blanked, and Edward gets one more night of being right about everything."
-  },
   {
    "id": "2026-10-02-marcus-arsenal",
    "ts": "2026-10-02T22:46",
@@ -707,6 +680,36 @@
    "kind": "opinion",
    "text": "Small Ben began GW6 13 points off the top and ended it 45 off, with Cunha on 10, Donnarumma on 9 and Rice on 7 not nearly enough to stop it. For a man who is always looking up at somebody, the leader is now a very long way up.",
    "source": null
+  },
+  {
+   "id": "2026-10-16-martinez-apology",
+   "ts": "2026-10-16T07:41",
+   "kind": "news",
+   "text": "Lisandro Martinez has apologised and been fined by Manchester United after criticising the club's hierarchy following the Atletico Madrid defeat, BBC Sport reports. He met the club's leadership and Michael Carrick on Thursday and said he spoke out of frustration. It remains to be seen whether Carrick picks him for Leeds on Sunday at 14:00 BST. Robert has Yoro, Ben D has Bruno Fernandes, Small Ben has Cunha and Marcus has Mbeumo, so four of the six have a stake in how this dressing room feels.",
+   "source": {
+    "title": "Martinez apologises for outburst and fined by Man Utd",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw77p152jz64o"
+   }
+  },
+  {
+   "id": "2026-10-16-henderson-chelsea-everton",
+   "ts": "2026-10-16T07:41",
+   "kind": "news",
+   "text": "The Guardian's weekend preview picks out Jordan Henderson, who at 36 became the oldest player to contribute directly to three goals in a Premier League game against Bournemouth, as the man who may dictate Chelsea's trip to unbeaten Everton. His partnership with Moises Caicedo is what lets Morgan Rogers, Joao Pedro and Cole Palmer flourish: Rogers is Big Ben's, Joao Pedro is Marcus's and Palmer is Edward's. Everton's defence, in the Guardian's words, littered the draw at Hull with costly mistakes, and Tarkowski, Branthwaite and Pickford belong to Edward, Big Ben and Justin.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-16-gonzalo-fulham-hull",
+   "ts": "2026-10-16T07:41",
+   "kind": "news",
+   "text": "Gonzalo Garcia has one league goal from 18 shots this season and has not scored since his debut against Chelsea, the Guardian notes ahead of bottom club Fulham hosting Hull City. Fulham have six goals in six games and head coach Alvaro Arbeloa is under increasing pressure. Garcia is Big Ben's, and on the Guardian's numbers his expected goals tally of 3.60 says the finishing is due to turn.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
+   }
   }
  ],
  "runs": [
@@ -1129,6 +1132,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening. No fixtures today, GW7 not started, so no flops to rewrite. Search was blocked for BBC/Guardian and a direct BBC fetch returned nothing usable, so no reported items. Opinion on the GW6 swing between Marcus and Edward, Robert's gap and Small Ben's gap, using the 'relies on luck', hairline and height suggestions as angles. Passed over 2026-09-12-ca1422e269 (slur), 2026-09-12-d9048f2afb (nationality/politics) and 2026-09-13-f263c0fa06 (needs facts not in the feed); 2026-09-12-b4e9e2f836 and 09-20 and others untouched this run."
+  },
+  {
+   "ts": "2026-10-16T07:41",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures today. Led with Martinez's apology and fine at Man Utd (BBC), then Guardian weekend preview items on Chelsea at Everton and Gonzalo Garcia at Fulham. Opinion not run in the morning, so no roast suggestions used or passed over."
   }
  ]
 }
