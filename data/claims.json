@@ -1,7 +1,7 @@
 {
   "gw": 7,
   "waivers_close": "2026-10-16T10:00:00Z",
-  "ts": "2026-10-14T21:10",
+  "ts": "2026-10-16T08:15",
   "summary": "Waivers for GW6 have processed; these claims target the GW7 window closing 16 October. News changed little against the model: Stach and Truffert are backed, but I am treating Barcola as a hold until Sunday because Liverpool's forwards are injured, and the model cannot see that. Justin is 2nd on points so claims fifth of six in waiver order, ahead of only Edward.",
   "claims": [
     {
@@ -108,13 +108,17 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "A conditional punt. Barcola's model value is poor, but Liverpool have Isak, Gakpo and Ekitike out so he could be used up front against City on Sunday. Waivers close on 16 October, after that game, so only submit this if he fails to start or return anything.",
-      "model": "Model has Anderson 18.2 vs Barcola 4.8 (avail 0.36, +13.4); I am overruling it for now because it cannot see Liverpool's forward injuries.",
+      "why": "Barcola did start up front at Anfield and played until the 88th minute in the 0-3 loss to City (Liverpool FC match report), so the condition for this claim has not been met. Iraola said Thursday that Isak, Gakpo and Szoboszlai are still doubts for Brentford, with Friday training decisive. Only submit this if you prefer Anderson's City minutes to a possible returning-forwards squeeze on Barcola.",
+      "model": "Model has Anderson 18.2 next5 vs Barcola 8.9 (+9.3), driven by Barcola's 0.70 availability and thin career sample; the news says he is playing, so I would rank this a speculative fixture-value swap rather than a rescue.",
       "confidence": "low",
       "sources": [
         {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 6",
-          "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+          "title": "Match report: Liverpool beaten by Manchester City in PL clash at Anfield",
+          "url": "https://www.liverpoolfc.com/news/match-report-liverpool-man-city-premier-league-anfield"
+        },
+        {
+          "title": "Fitness update: Andoni Iraola on Gakpo, Isak, Szoboszlai and changes v Brentford",
+          "url": "https://www.liverpoolfc.com/news/fitness-update-andoni-iraola-gakpo-isak-szoboszlai-changes-brentford"
         }
       ]
     }
@@ -594,12 +598,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-12T21:20 UTC",
-      "gw": 5,
-      "claims": 4,
-      "note": "Redirected the weakest defensive claim from Hill-for-Bogle to Hill-for-Milenkovic after today's model re-ranking (Milenkovic's own avail figure dropped to 0.60); could not confirm the underlying story to any permitted source (a widely-repeated Milenkovic/Cunha hamstring tale traced back to Yahoo Sports/hayters.com aggregator copy that also wrongly credited Milenkovic with a goal actually scored in a real December 2024 match), so the claim rests on the model's numbers alone rather than the injury story. Upgraded the Mitchell-for-Vuskovic claim with a fresh cpfc.co.uk citation confirming Mitchell nailed at wing-back for today's Ipswich game. Confirmed Truffert/Collins and Maguire/Bogle unchanged. Kept Barcola over Stach for a third straight week - liverpoolfc.com confirms his second start in four days (Tuesday's Champions League tie plus today's Fulham game) while the model still rates him near the bottom of the board."
-    },
-    {
       "ts": "2026-09-13T09:15 UTC",
       "gw": 5,
       "claims": 5,
@@ -952,6 +950,12 @@
       "gw": 7,
       "claims": 5,
       "note": "No change: no new permitted-outlet news altered any claim; carried forward."
+    },
+    {
+      "ts": "2026-10-16T08:15 UTC",
+      "gw": 7,
+      "claims": 5,
+      "note": "Rank 5 reworded: Barcola started and played 88 minutes v City, so the conditional trigger did not fire; Isak/Gakpo/Szoboszlai still doubts for Brentford. Other claims unchanged."
     }
   ]
 }
