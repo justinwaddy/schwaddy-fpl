@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T13:40",
+ "generated": "2026-10-16T08:36",
  "gw": 7,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.44,
-   "ep": 5.3,
+   "ep": 5.31,
    "votes": 5
   },
   {
@@ -111,19 +111,6 @@
    "votes": 5
   },
   {
-   "id": 542,
-   "code": 484420,
-   "name": "E.Le F\u00e9e",
-   "pos": "MID",
-   "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.965,
-   "base": 3.43,
-   "ep": 3.26,
-   "votes": 5
-  },
-  {
    "id": 94,
    "code": 513418,
    "name": "Schade",
@@ -133,8 +120,21 @@
    "news": "Shoulder injury - 75% chance of playing",
    "p_play": 0.7,
    "base": 3.39,
-   "ep": 3.24,
+   "ep": 3.28,
    "votes": 4
+  },
+  {
+   "id": 542,
+   "code": 484420,
+   "name": "E.Le F\u00e9e",
+   "pos": "MID",
+   "team": "SUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.965,
+   "base": 3.43,
+   "ep": 3.27,
+   "votes": 5
   },
   {
    "id": 86,
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.893,
    "base": 3.25,
-   "ep": 3.16,
+   "ep": 3.17,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.983,
    "base": 8.72,
-   "ep": 8.78,
+   "ep": 8.76,
    "votes": 5
   }
  ],
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.41,
+   "ep": 3.42,
    "votes": 0
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.551,
    "base": 1.25,
-   "ep": 1.18,
+   "ep": 1.17,
    "votes": 1
   }
  ],
- "xi_ep": 52.5,
+ "xi_ep": 52.6,
  "changes": 5,
  "claims": [
   {
    "pos": "MID",
-   "gain": 83.2,
+   "gain": 84.33,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 75.87,
+   "gain": 77.09,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 228
+   "borda": 231
   },
   {
    "pos": "MID",
-   "gain": 77.02,
+   "gain": 77.59,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 226
+   "borda": 229
   },
   {
    "pos": "MID",
-   "gain": 72.9,
+   "gain": 73.45,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 220
+   "borda": 223
   },
   {
    "pos": "DEF",
-   "gain": 59.61,
+   "gain": 58.79,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 143
+   "borda": 132
   },
   {
    "pos": "DEF",
-   "gain": 41.78,
+   "gain": 40.27,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 99
+   "borda": 90
   },
   {
    "pos": "DEF",
-   "gain": 29.91,
+   "gain": 29.12,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 90
+   "borda": 83
   },
   {
    "pos": "DEF",
-   "gain": 34.0,
+   "gain": 32.97,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 65
+   "borda": 60
   },
   {
    "pos": "FWD",
-   "gain": 54.63,
+   "gain": 37.12,
    "change": 3,
    "fallback": false,
    "add": {
@@ -487,9 +487,9 @@
     "name": "Brobbey",
     "pos": "FWD",
     "team": "SUN",
-    "status": "i",
-    "news": "Hamstring injury - Expected back 25 Oct",
-    "p_play": 0.0,
+    "status": "a",
+    "news": "",
+    "p_play": 0.778,
     "base": null,
     "ep": null
    },
@@ -505,12 +505,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 39
+   "votes": 4,
+   "borda": 37
   },
   {
    "pos": "FWD",
-   "gain": 24.22,
+   "gain": 25.43,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,12 +538,76 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 10
+   "borda": 8
+  },
+  {
+   "pos": "GKP",
+   "gain": 34.91,
+   "change": 4,
+   "fallback": false,
+   "add": {
+    "id": 571,
+    "code": 473284,
+    "name": "Tzolakis",
+    "pos": "GKP",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 26
+  },
+  {
+   "pos": "GKP",
+   "gain": 31.55,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 109,
+    "code": 489639,
+    "name": "Verbruggen",
+    "pos": "GKP",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 12
   },
   {
    "pos": "MID",
-   "gain": 38.67,
-   "change": 4,
+   "gain": 38.21,
+   "change": 5,
    "fallback": false,
    "add": {
     "id": 481,
@@ -570,12 +634,12 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 23
+   "borda": 22
   },
   {
    "pos": "MID",
-   "gain": 23.39,
-   "change": 4,
+   "gain": 22.77,
+   "change": 5,
    "fallback": true,
    "add": {
     "id": 453,
@@ -602,12 +666,12 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 20
+   "borda": 21
   },
   {
    "pos": "MID",
-   "gain": 38.75,
-   "change": 4,
+   "gain": 38.07,
+   "change": 5,
    "fallback": true,
    "add": {
     "id": 127,
@@ -635,70 +699,6 @@
    },
    "votes": 2,
    "borda": 16
-  },
-  {
-   "pos": "GKP",
-   "gain": 35.86,
-   "change": 5,
-   "fallback": false,
-   "add": {
-    "id": 571,
-    "code": 473284,
-    "name": "Tzolakis",
-    "pos": "GKP",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 29
-  },
-  {
-   "pos": "GKP",
-   "gain": 32.37,
-   "change": 5,
-   "fallback": true,
-   "add": {
-    "id": 109,
-    "code": 489639,
-    "name": "Verbruggen",
-    "pos": "GKP",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 18
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

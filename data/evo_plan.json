@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T13:40",
+ "generated": "2026-10-16T08:36",
  "gw": 7,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.44,
-   "ep": 5.3,
+   "ep": 5.31,
    "votes": 5
   },
   {
@@ -111,19 +111,6 @@
    "votes": 5
   },
   {
-   "id": 542,
-   "code": 484420,
-   "name": "E.Le F\u00e9e",
-   "pos": "MID",
-   "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.965,
-   "base": 3.43,
-   "ep": 3.26,
-   "votes": 5
-  },
-  {
    "id": 94,
    "code": 513418,
    "name": "Schade",
@@ -133,8 +120,21 @@
    "news": "Shoulder injury - 75% chance of playing",
    "p_play": 0.7,
    "base": 3.39,
-   "ep": 3.24,
+   "ep": 3.28,
    "votes": 4
+  },
+  {
+   "id": 542,
+   "code": 484420,
+   "name": "E.Le F\u00e9e",
+   "pos": "MID",
+   "team": "SUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.965,
+   "base": 3.43,
+   "ep": 3.27,
+   "votes": 5
   },
   {
    "id": 86,
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.893,
    "base": 3.25,
-   "ep": 3.16,
+   "ep": 3.17,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.983,
    "base": 8.72,
-   "ep": 8.78,
+   "ep": 8.76,
    "votes": 5
   }
  ],
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.61,
-   "ep": 3.41,
+   "ep": 3.42,
    "votes": 0
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.551,
    "base": 1.25,
-   "ep": 1.18,
+   "ep": 1.17,
    "votes": 1
   }
  ],
- "xi_ep": 52.5,
+ "xi_ep": 52.6,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.26,
+   "gain": 13.45,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 272
+   "borda": 283
   },
   {
    "pos": "MID",
-   "gain": 13.45,
+   "gain": 13.65,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 271
+   "borda": 280
   },
   {
    "pos": "MID",
-   "gain": 12.75,
+   "gain": 12.84,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 263
+   "borda": 273
   },
   {
    "pos": "MID",
-   "gain": 11.15,
+   "gain": 11.24,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 252
+   "borda": 265
   },
   {
    "pos": "DEF",
-   "gain": 11.6,
+   "gain": 11.44,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 185
+   "borda": 189
   },
   {
    "pos": "DEF",
-   "gain": 6.76,
+   "gain": 6.54,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 155
+   "borda": 157
   },
   {
    "pos": "DEF",
-   "gain": 6.71,
+   "gain": 6.57,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 134
+   "borda": 135
   },
   {
    "pos": "DEF",
-   "gain": 6.66,
+   "gain": 6.46,
    "change": 2,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.34,
+   "gain": 6.37,
    "change": 3,
    "fallback": false,
    "add": {
@@ -505,12 +505,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 39
+   "votes": 4,
+   "borda": 55
   },
   {
    "pos": "MID",
-   "gain": 3.81,
+   "gain": 3.68,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 34
+   "borda": 35
   },
   {
    "pos": "MID",
-   "gain": 4.33,
+   "gain": 4.3,
    "change": 4,
    "fallback": false,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 25
+   "borda": 27
   },
   {
    "pos": "MID",
-   "gain": 5.83,
+   "gain": 5.8,
    "change": 4,
    "fallback": true,
    "add": {
@@ -602,11 +602,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 17
+   "borda": 18
   },
   {
    "pos": "MID",
-   "gain": 2.8,
+   "gain": 2.76,
    "change": 4,
    "fallback": true,
    "add": {
@@ -634,7 +634,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 4
+   "borda": 5
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
