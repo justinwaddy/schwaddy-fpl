@@ -1,37 +1,6 @@
 {
- "generated": "2026-10-16T07:41 UTC",
+ "generated": "2026-10-16T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-02-marcus-arsenal",
-   "ts": "2026-10-02T22:46",
-   "kind": "opinion",
-   "source": null,
-   "text": "Marcus, 10 points off the lead, has Calafiori and Tzolis in his Arsenal corner, and the page is currently flagging Tzolis with a hamstring injury at 75% to play. Haramball Enthusiast kicks off Gameweek 6 hoping a hamstring reads the fixture list as generously as he does."
-  },
-  {
-   "id": "2026-10-03-city-appeal",
-   "ts": "2026-10-03T07:50",
-   "kind": "news",
-   "text": "Manchester City have lodged an appeal against the independent commission's guilty verdict, calling it unsafe, and BBC Sport reports that without clarity on sanctions their ability to retain players and make signings is uncertain. City players with owners in this league: Edward has Semenyo, Justin has Haaland and Gvardiol, Marcus has Guehi and Foden, Small Ben has Donnarumma, Ben D has Matheus Nunes and Robert has Cherki, Ndiaye and O'Reilly. BBC Sport notes Nunes is one of four City players with a contract expiring within two summers.",
-   "source": {
-    "title": "What does Man City guilty verdict mean for their squad?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c68jdjdz32n3o"
-   }
-  },
-  {
-   "id": "2026-10-03-derby-split",
-   "ts": "2026-10-03T22:41",
-   "kind": "opinion",
-   "source": null,
-   "text": "Liverpool v Man City is still to come, and it is a neat way to see who is exposed. Small Ben has Szoboszlai, Isak, Gakpo and Virgil on one side and Donnarumma and Ruben on the other, so he cannot lose the afternoon and cannot win it either, which is the only kind of hedging this league allows. Justin has Haaland and Gvardiol over there, and Big Ben has Wirtz facing Enzo and Matheus N., so he can at least cheer for himself."
-  },
-  {
-   "id": "2026-10-03-robert-weekend",
-   "ts": "2026-10-03T22:41",
-   "kind": "opinion",
-   "source": null,
-   "text": "Ten fixtures are still to come, nobody in the league has kicked a ball in the new gameweek, and Robert is 89 behind Edward. That makes this the one weekend where his team name, Pardinho, gets to be a joke and not a cry for help. He has Cherki and Ndiaye lined up against Liverpool and a whole lot of Arsenal and Chelsea waiting on a result, so there is a plot. It is a long way from a plot that gets him to the top."
-  },
   {
    "id": "2026-10-04-haaland-isak",
    "ts": "2026-10-04T07:42",
@@ -710,23 +679,37 @@
     "title": "Premier League: 10 things to look out for this weekend",
     "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
    }
+  },
+  {
+   "id": "2026-10-16-small-ben-waivers",
+   "ts": "2026-10-16T22:45",
+   "kind": "opinion",
+   "text": "Small Ben cut Gakpo for Anderson of Man City in the latest waivers, and Gakpo is now flagged at 25% to play, so the timing was perfect for once. The trouble is Isak and Szoboszlai, still his, both flagged at 25% and both on 0 in GW6 alongside Virgil. He got rid of the one Liverpool player who was no use to him and kept the two who may not be fit, which is a long way from the training camp a man with a boxing match coming should be running.",
+   "source": null
+  },
+  {
+   "id": "2026-10-16-justin-waivers",
+   "ts": "2026-10-16T22:45",
+   "kind": "opinion",
+   "text": "Justin dropped Strand Larsen a week after he returned 5, signed Brobbey of Sunderland, and then dropped E.Le Fee of Sunderland for Stach of Leeds, so he has swapped one Sunderland player for another and called it a plan. Ajayi went for Bogle, also Leeds. Three claims, no recognisable name in any of them, from a manager who left 7 points on his bench in GW6 and decided the fix was at the other end of the pitch.",
+   "source": null
+  },
+  {
+   "id": "2026-10-16-big-ben-bench",
+   "ts": "2026-10-16T22:45",
+   "kind": "opinion",
+   "text": "Big Ben left 12 points on his bench in GW6, the most in the league and a third of what his eleven managed (35). Robert left 1. His Arsenal are Konsa on 4 and Havertz on 2, fewer than Edward or Robert hold, which is a thin return for the league's loudest Arsenal voice. Thiaw, who returned 0, went out for Ajer of Brentford in the waivers, so at least the bench is learning to rotate.",
+   "source": null
+  },
+  {
+   "id": "2026-10-16-marcus-luck",
+   "ts": "2026-10-16T22:45",
+   "kind": "opinion",
+   "text": "Marcus scored 77 in GW6 and 40 of it came from De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12: a Brighton left-back, an Everton midfielder and a Chelsea forward, none of whom anyone else would have named. He leads Edward by 28 with Foden and Tzolis both on 0. Anybody can call that luck, but a man who has been on the right side of it three weeks running is just a different kind of planner.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-19T13:10",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "14:00 UTC (15:00 BST) slot: BHA v ARS, EVE v IPS, NEW v HUL. Confirmed NEW lineup found at newcastleunited.com. BHA, ARS, EVE, IPS and HUL sheets not available at a permitted outlet in time."
-  },
-  {
-   "ts": "2026-09-19T16:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 slot: NFO v COV. NFO confirmed XI found at skysports.com. COV sheet not needed (no league-owned players)."
-  },
   {
    "ts": "2026-09-19T22:52",
    "news": 2,
@@ -1139,6 +1122,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, no fixtures today. Led with Martinez's apology and fine at Man Utd (BBC), then Guardian weekend preview items on Chelsea at Everton and Gonzalo Garcia at Fulham. Opinion not run in the morning, so no roast suggestions used or passed over."
+  },
+  {
+   "ts": "2026-10-16T22:45",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, no fixtures today and GW7 not kicked off, so no football to wrap. No reported items (morning run covered the news). Four opinion pieces from the latest waivers and GW6 figures (Small Ben, Justin, Big Ben bench, Marcus). Live feed totals were pre-GW6 settled so I quoted public.json GW6 figures only. Archive used: Ben C boxing line, Edward on Ben D Arsenal, Edward on Marcus luck. Passed over for now: hairline lines on Robert (no fresh Robert fact), the Ben D self-roast and the Justin nationality line (not fit to land), Jobacus/Catholic line on Marcus (nothing to hang it on tonight), Justin pint line on Robert (nothing true to hang it on). No flops to rewrite today."
   }
  ]
 }
