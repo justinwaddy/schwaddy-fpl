@@ -2,16 +2,6 @@
   "generated": "2026-10-17T07:50 UTC",
   "items": [
     {
-      "id": "2026-10-05-isak-gakpo",
-      "ts": "2026-10-05T07:55",
-      "kind": "news",
-      "text": "Alexander Isak left the Sweden squad with what Liverpool called a minor injury, and Cody Gakpo's break ended after 17 minutes against Serbia with an ankle problem, per the Dutch FA. Both are Small Ben's, and Liverpool host Manchester City on 11 October.",
-      "source": {
-        "title": "Cody Gakpo returns to Liverpool after injury for Netherlands",
-        "url": "https://www.espn.com/soccer/story/_/id/50051618/netherlands-cody-gakpo-nations-league-liverpool"
-      }
-    },
-    {
       "id": "2026-10-05-havertz-strain",
       "ts": "2026-10-05T07:55",
       "kind": "news",
@@ -710,16 +700,19 @@
         "title": "Team news: Confirmed Liverpool line-up v Brentford",
         "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-brentford"
       }
+    },
+    {
+      "id": "2026-10-17-xi-1630",
+      "ts": "2026-10-17T16:07",
+      "kind": "news",
+      "text": "Team news, Newcastle v Aston Villa (17:30 BST): Newcastle's confirmed XI is out. Edward's Horníček starts in goal; Small Ben's Hall and Wissa both start. Aston Villa's confirmed XI was not available when checked, so Edward's Manzambi and N.Jackson and Small Ben's Suzuki are not counted either way.",
+      "source": {
+        "title": "Confirmed line-up: Joelinton in for first start of season",
+        "url": "https://www.newcastleunited.com/en/news/aston-villa-h-team-news-26-27"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-20T15:07",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "15:30 KO FUL v MUN: confirmed both squads via Sky Sports teams page (read as raw page data, id 6387779637306466232). Lammens (Edward), Mbeumo/King (Marcus), Cunha (Ben C) and B.Fernandes (Ben D) all start; Yoro (Robert) is a Man Utd substitute; Gonzalo (Ben D, Fulham) and Sesko (Robert, Man Utd) are both left out of their matchday squads entirely. manutd.com's own team-news article for this fixture stayed behind a Cloudflare 403 all run, same as this morning."
-    },
     {
       "ts": "2026-09-20T22:48",
       "news": 2,
@@ -1132,6 +1125,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "2026-10-17 14:00 UTC slot (BRE v LIV, FUL v HUL, MCI v IPS): Liverpool sheet found on liverpoolfc.com; Brentford, Fulham, Man City sheets not found"
+    },
+    {
+      "ts": "2026-10-17T16:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "16:30 UTC slot, NEW v AVL: found Newcastle confirmed XI (newcastleunited.com); Aston Villa sheet not found"
     }
   ]
 }
