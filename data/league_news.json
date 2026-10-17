@@ -1,1134 +1,1137 @@
 {
- "generated": "2026-10-17T07:50 UTC",
- "items": [
-  {
-   "id": "2026-10-04-leader-no-strikers",
-   "ts": "2026-10-04T22:45",
-   "kind": "opinion",
-   "text": "Edward leads on 259 and owns neither of the league's two leading scorers: Haaland is Justin's, 7 back, and Isak is Small Ben's, 13 back. Return of the Djedi is top of the table with Semenyo and a lot of defenders, which is either a masterclass or the longest-running bit of luck in the league, and the six of you get to find out which when the break ends.",
-   "source": null
-  },
-  {
-   "id": "2026-10-05-haaland-subbed",
-   "ts": "2026-10-05T07:55",
-   "kind": "news",
-   "text": "Erling Haaland asked to be substituted after 67 minutes of Norway's 2-1 Nations League defeat by Portugal on Sunday, with no word afterwards on his fitness. He was replaced by Jorgen Strand Larsen, so both are Justin's, and Manchester City visit Anfield on Sunday 11 October.",
-   "source": {
-    "title": "Erling Haaland injury fear after asking to be substituted for Norway",
-    "url": "https://www.espn.com/soccer/story/_/id/50107853/erling-haaland-injury-fear-asked-substituted-norway"
-   }
-  },
-  {
-   "id": "2026-10-05-isak-gakpo",
-   "ts": "2026-10-05T07:55",
-   "kind": "news",
-   "text": "Alexander Isak left the Sweden squad with what Liverpool called a minor injury, and Cody Gakpo's break ended after 17 minutes against Serbia with an ankle problem, per the Dutch FA. Both are Small Ben's, and Liverpool host Manchester City on 11 October.",
-   "source": {
-    "title": "Cody Gakpo returns to Liverpool after injury for Netherlands",
-    "url": "https://www.espn.com/soccer/story/_/id/50051618/netherlands-cody-gakpo-nations-league-liverpool"
-   }
-  },
-  {
-   "id": "2026-10-05-havertz-strain",
-   "ts": "2026-10-05T07:55",
-   "kind": "news",
-   "text": "Kai Havertz went off in Germany's 1-1 draw with the Netherlands and has gone back to Arsenal for treatment, the knock understood to be a minor muscle strain. Big Ben owns him, and Arsenal are at home to Leeds on Saturday 10 October.",
-   "source": {
-    "title": "Kai Havertz returning to Arsenal to be assessed after suffering injury for Germany against Netherlands",
-    "url": "https://www.skysports.com/football/news/13591713/kai-havertz-returning-to-arsenal-to-be-assessed-after-suffering-injury-for-germany-against-netherlands"
-   }
-  },
-  {
-   "id": "2026-10-05-scott-quad",
-   "ts": "2026-10-05T22:50",
-   "kind": "news",
-   "text": "Bournemouth's Alex Scott picked up a quad injury on his first England start in the 7-0 win in Croatia and has gone back to his club, with media reports suggesting he could be out for up to two months. Justin owns Scott. Ezri Konsa, Ben D's, also withdrew from the England squad with what is believed to be a minor issue.",
-   "source": {
-    "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
-    "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
-   }
-  },
-  {
-   "id": "2026-10-05-oreilly-saka",
-   "ts": "2026-10-05T22:50",
-   "kind": "news",
-   "text": "Man City's Nico O'Reilly withdrew from the England squad after playing just one match, while Arsenal's Bukayo Saka scored twice in the 7-0 win in Croatia. Robert owns both.",
-   "source": {
-    "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
-    "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
-   }
-  },
-  {
-   "id": "2026-10-05-benD-quantum",
-   "ts": "2026-10-05T22:50",
-   "kind": "opinion",
-   "text": "Ben D is 40 off the lead in a team called Quantum of Tzolis, and Tzolis plays for Marcus. Ben D himself owns Havertz, reportedly out for four weeks, and Konsa, who has pulled out of England duty. Bold branding for a man who cannot keep his own Arsenal players upright.",
-   "source": null
-  },
-  {
-   "id": "2026-10-05-smallben-delap",
-   "ts": "2026-10-05T22:50",
-   "kind": "opinion",
-   "text": "Small Ben runs a team called Delap Dance, and Delap is in Ben D's squad. Small Ben owns Isak and Gakpo, both sent home from international duty with injuries, and he is 13 off the lead with Liverpool v Man City to come. The dance is looking like a limp.",
-   "source": null
-  },
-  {
-   "id": "2026-10-05-robert-saka",
-   "ts": "2026-10-05T22:50",
-   "kind": "opinion",
-   "text": "Saka scored twice for England and Robert owns him. Robert is still 89 points off the lead on 170, because England goals score nothing in this league, and O'Reilly has gone home after one match. Pardinho: a fine name for a team whose best week happened somewhere it cannot score.",
-   "source": null
-  },
-  {
-   "id": "2026-10-06-city-appeal",
-   "ts": "2026-10-06T07:50",
-   "kind": "news",
-   "text": "Man City have lodged their appeal against the independent commission's guilty verdict on Premier League financial rule breaches, saying the ruling contains \"clear material errors, of law, principle and fact and is unsafe\". All six managers own City players, from Haaland (Justin) to Cherki (Robert), so nobody in this league is a neutral.",
-   "source": {
-    "title": "Man City confirm appeal against guilty verdict",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqn7470513n0o"
-   }
-  },
-  {
-   "id": "2026-10-06-liv-city-sunday",
-   "ts": "2026-10-06T07:50",
-   "kind": "news",
-   "text": "Liverpool host Man City on Super Sunday, with Sky Sports assessing new Reds boss Andoni Iraola's early impact at Anfield ahead of it. Small Ben has the most riding on both sides of it, with Isak, Gakpo, Szoboszlai and Virgil for Liverpool and Donnarumma and Ruben for City.",
-   "source": {
-    "title": "Liverpool: Andoni Iraola's early impact at Anfield assessed ahead of huge Super Sunday showdown with Man City",
-    "url": "https://www.skysports.com/football/news/13595435/liverpool-andoni-iraolas-early-impact-at-anfield-assessed-ahead-of"
-   }
-  },
-  {
-   "id": "2026-10-06-nothing-kicked-off",
-   "ts": "2026-10-06T22:45",
-   "kind": "opinion",
-   "text": "Gameweek 6 has ten fixtures and not one has kicked off, so tonight's table is the last honest one for a while: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back. Four managers inside 13 points, which is the most fragile kind of peace, and Robert is 89 behind on 170 and watching it from a different postcode.",
-   "source": null
-  },
-  {
-   "id": "2026-10-07-fernandes-pain",
-   "ts": "2026-10-07T07:55",
-   "kind": "news",
-   "text": "Portugal boss Jorge Jesus revealed that Bruno Fernandes had been playing through pain during the international break. That is Ben D's Manchester United man, and nothing in the report says he is out of Saturday's game.",
-   "source": {
-    "title": "Player welfare, injury worries & boredom - has extended break worked?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq8jz7verm24o"
-   }
-  },
-  {
-   "id": "2026-10-07-palmer-gibbs-white",
-   "ts": "2026-10-07T07:55",
-   "kind": "news",
-   "text": "Cole Palmer withdrew from the England squad, and BBC Sport says that has let others cement their place in front of him, with Morgan Gibbs-White cutting short a family holiday to join up after initially being left out. Edward owns both of them.",
-   "source": {
-    "title": "Midfield options and a fab front four - what we've learned about England",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
-   }
-  },
-  {
-   "id": "2026-10-07-rogers-rice",
-   "ts": "2026-10-07T07:55",
-   "kind": "news",
-   "text": "Chelsea's Morgan Rogers is part of the England front four BBC Sport rates after the break, while Declan Rice is out of the side as his load is managed after injury. Rogers is Ben D's; Rice is Small Ben's.",
-   "source": {
-    "title": "Midfield options and a fab front four - what we've learned about England",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
-   }
-  },
-  {
-   "id": "2026-10-07-top-four-bunched",
-   "ts": "2026-10-07T22:41",
-   "kind": "opinion",
-   "text": "Edward leads on 259 with Justin on 252, Marcus on 249 and Small Ben on 246: thirteen points separate first from fourth, and ten fixtures kick off tomorrow with nobody having scored a thing. Robert is 89 back, which is nearly seven times that gap, so he is not so much in the title race as watching it from the car park.",
-   "source": null
-  },
-  {
-   "id": "2026-10-07-bench-ledger",
-   "ts": "2026-10-07T22:41",
-   "kind": "opinion",
-   "text": "Gameweek 5 left Justin's bench on 21 against 41 from his eleven, which is half a second team doing the work of the first. Robert's bench scored 0, so at least one of them is consistent. Both have the same ten fixtures to fix it tomorrow.",
-   "source": null
-  },
-  {
-   "id": "2026-10-08-rice-contract",
-   "ts": "2026-10-08T07:50",
-   "kind": "news",
-   "text": "Declan Rice is close to agreeing a new long-term Arsenal contract, BBC Sport reports, and is expected to be involved when Arsenal host Leeds on Saturday at 12:30 BST. He is in Small Ben's squad; Edward has Calvert-Lewin on the Leeds side of that fixture.",
-   "source": {
-    "title": "Rice close to agreeing new Arsenal deal",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c9gkvx74je7do"
-   }
-  },
-  {
-   "id": "2026-10-08-arteta-contract",
-   "ts": "2026-10-08T07:50",
-   "kind": "news",
-   "text": "Mikel Arteta has signed a new contract with Arsenal running until 2030, calling it 'only the beginning' of what the club can achieve. Every one of the six squads holds an Arsenal player, so nobody in this league gets to be neutral about it.",
-   "source": {
-    "title": "Arteta signs new contract with champions Arsenal",
-    "url": "https://www.bbc.co.uk/sport/football/articles/crz65j5p8l57o"
-   }
-  },
-  {
-   "id": "2026-10-08-rogers-bournemouth",
-   "ts": "2026-10-08T07:50",
-   "kind": "news",
-   "text": "Chelsea's Morgan Rogers, on Ben D's squad, faces Bournemouth at Stamford Bridge on Saturday, the club where BBC Sport says he had an underwhelming Championship loan. Justin (Scott, Tavernier) and Marcus (Evanilson) own Bournemouth players in the same fixture.",
-   "source": {
-    "title": "£117m Rogers failed at Bournemouth - and feared he may not make it",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckp84r967d3go"
-   }
-  },
-  {
-   "id": "2026-10-08-name-game",
-   "ts": "2026-10-08T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Small Ben runs a team called Delap Dance, and Delap is in Big Ben's squad, where he returned 1 point in Gameweek 5. Big Ben's team is Quantum of Tzolis, and Tzolis sits in Marcus's squad on 2. Between them the two Bens have named their teams after footballers they do not own."
-  },
-  {
-   "id": "2026-10-08-robert-gw6",
-   "ts": "2026-10-08T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Robert is on 170, 89 behind Edward, after a Gameweek 5 of 22 points. None of the ten Gameweek 6 fixtures has kicked off, so for now Pardinho has not been outscored by anyone this week. Enjoy it, Robert; it ends at the first whistle."
-  },
-  {
-   "id": "2026-10-09-liverpool-injuries",
-   "ts": "2026-10-09T07:55",
-   "kind": "news",
-   "text": "Alexander Isak and Cody Gakpo both picked up injuries on international duty with Sweden and the Netherlands, the Guardian reports, ahead of Liverpool's game against Man City. Small Ben owns both, along with Szoboszlai and Virgil.",
-   "source": {
-    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
-    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
-   }
-  },
-  {
-   "id": "2026-10-09-arsenal-hamstrings",
-   "ts": "2026-10-09T07:55",
-   "kind": "news",
-   "text": "Christos Tzolis injured a hamstring playing for Greece and Kai Havertz suffered a similar problem with Germany, per the Guardian, while Martin Odegaard got 'nothing dramatic' on his X-ray after a heavy challenge with Norway. Marcus owns Tzolis, Ben D owns Havertz and Edward owns Odegaard.",
-   "source": {
-    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
-    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
-   }
-  },
-  {
-   "id": "2026-10-09-scott-out",
-   "ts": "2026-10-09T07:55",
-   "kind": "news",
-   "text": "Bournemouth's Alex Scott is out for up to two months after getting hurt on England duty, the Guardian reports, a blow to a side still searching for a first Premier League win. Justin owns him.",
-   "source": {
-    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
-    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
-   }
-  },
-  {
-   "id": "2026-10-09-sunderland-hamstrings",
-   "ts": "2026-10-09T07:55",
-   "kind": "news",
-   "text": "Sunderland will be without Brian Brobbey and Dan Ballard, who both strained hamstrings on international duty, according to the Guardian. Marcus and Robert each have a Sunderland player, and the team face Brighton this weekend.",
-   "source": {
-    "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
-    "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
-   }
-  },
-  {
-   "id": "2026-10-09-konsa-niggle",
-   "ts": "2026-10-09T07:55",
-   "kind": "news",
-   "text": "BBC Sport says Ezri Konsa has a slight niggle from England camp, that Cristhian Mosquera is fit and that William Saliba is on the mend with no clear return date. Ben D owns Konsa and Robert owns Mosquera.",
-   "source": {
-    "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
-   }
-  },
-  {
-   "id": "2026-10-09-quantum-of-tzolis",
-   "ts": "2026-10-09T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Big Ben named his team Quantum of Tzolis, and the real Christos Tzolis is in Marcus's squad with a hamstring injury and an expected return of 24 Oct. Big Ben has built an entire identity around a player he does not own, who is not playing, and who is not coming back for a fortnight. Gameweek 6 has ten fixtures and not one has kicked off."
-  },
-  {
-   "id": "2026-10-10-baleba-debut",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "Carlos Baleba, the Brighton midfielder Manchester United signed on 25 August, could make his debut against Tottenham this afternoon, the Guardian reports, with United 12th after one win in their first five games. It touches Edward's Lammens, Marcus's Mbeumo, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko, all in the XI that has to stop the leaking.",
-   "source": {
-    "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
-    "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut"
-   }
-  },
-  {
-   "id": "2026-10-10-joao-pedro-doubt",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "BBC Sport's FPL writer says Joao Pedro's fitness is in question for Chelsea's home game with Bournemouth, and that the Chelsea attack suffered without him against Brentford in Gameweek 5. Marcus owns him, and Robert has Chelsea's Estevao and James.",
-   "source": {
-    "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
-   }
-  },
-  {
-   "id": "2026-10-10-city-anfield",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "The Guardian's weekend preview asks whether Manchester City can summon a siege mentality at Anfield, with the club's charges row hanging over the trip. Justin has Haaland and Gvardiol, Edward has Semenyo, and Small Ben's Liverpool players are on the other side of it.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-10-xi-1630",
-   "ts": "2026-10-10T16:03",
-   "kind": "news",
-   "text": "Team news, Man United v Spurs (17:30 BST): Robert has Yoro and Solanke starting, but Sesko is not in the squad. Justin has Van Hecke starting, Marmoush on the bench. Marcus has Mbeumo and Kinsky starting. Big Ben has Fernandes starting. Small Ben has Cunha starting.",
-   "source": {
-    "title": "Confirmed line-ups | Man United vs Spurs",
-    "url": "https://www.tottenhamhotspur.com/news/1176226/confirmed-line-ups-man-united-vs-spurs"
-   }
-  },
-  {
-   "id": "2026-10-10-chelsea-bournemouth",
-   "ts": "2026-10-10T22:50",
-   "kind": "news",
-   "text": "Chelsea led Bournemouth 2-0 after three minutes through Jordan Henderson and Morgan Rogers, then added João Pedro after the break, and Evanilson got the consolation, ESPN reports. That is Rogers for Big Ben and Joao Pedro and Evanilson for Marcus, who had both sides of the one game.",
-   "source": {
-    "title": "Chelsea 5-1 Bournemouth: Premier League result, goals and reaction - as it happened",
-    "url": "https://www.espn.com/soccer/story/_/id/50146916/chelsea-bournemouth-live-premier-league-latest-updates-commentary-score-result"
-   }
-  },
-  {
-   "id": "2026-10-10-marcus-lead",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Marcus is on 57 for the gameweek with three of his eleven still to play, and De Cuyper's 15 and Joao Pedro's 12 are doing the heavy lifting. Haramball Enthusiast sounds like a man who likes his football ugly, and he is winning it the pretty way, 28 clear of Edward.",
-   "source": null
-  },
-  {
-   "id": "2026-10-10-robert-gap",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Robert is on 9 for the gameweek and 127 behind the leader on the live feed, a gap you could park a whole Pardinho in. Saka and Gabriel played 90 minutes each for 2 points apiece, so his Arsenal contingent has been purely decorative. Four of his eleven have not kicked off, which is the only reason this is not yet an obituary.",
-   "source": null
-  },
-  {
-   "id": "2026-10-10-anfield-six",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Liverpool v Man City is still to come, and it is the one fixture all six managers own a piece of: Haaland and Gvardiol for Justin, Donnarumma and Ruben plus four Liverpool men for Small Ben, Foden and Guehi for Marcus, Semenyo for Edward, Enzo for Big Ben and three City players for Robert. Anfield is effectively playing the whole league, and nobody gets to sit this one out.",
-   "source": null
-  },
-  {
-   "id": "2026-10-11-hincapie-injury",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Arsenal defender Piero Hincapie was carried off during the warm-down after coming on as a late substitute in the win over Leeds, and BBC Sport says it raises concern he has an injury. All six managers own an Arsenal player, so the club's fitness list is everybody's business.",
-   "source": {
-    "title": "Hincapie injury adds to Arsenal issues after Guimaraes rescue act",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c63r5w20ez3do"
-   }
-  },
-  {
-   "id": "2026-10-11-palmer-contract",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Cole Palmer has signed a new Chelsea contract on improved terms until 2034, BBC Sport reports. Edward owns him and Marcus owns Joao Pedro, who the BBC also lists among the few Premier League players contracted to 2034 along with Haaland, who is Justin's.",
-   "source": {
-    "title": "Palmer signs new Chelsea contract until 2034",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cwe9lngxzjpno"
-   }
-  },
-  {
-   "id": "2026-10-11-utd-spurs-draw",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Manchester United led Spurs through Bryan Mbeumo's opener and then watched Rodrigo Bentancur get sent off for a headfirst charge at Luke Shaw, only for Spurs to equalise in added time through Solanke, BBC Sport reports. Marcus owns Mbeumo and Robert owns Solanke, so the draw gave each of them something.",
-   "source": {
-    "title": "Boos, anguish & fading belief - 'worrying day' for under-pressure Carrick",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c62e9g09e781o"
-   }
-  },
-  {
-   "id": "2026-10-11-xi-1300",
-   "ts": "2026-10-11T12:03",
-   "kind": "news",
-   "text": "Team news, 13:00 kick-offs: Crystal Palace's confirmed eleven is out. Justin's Strand Larsen and Edward's Khalaili both start; Robert's Mateta is not in the matchday squad. Teamsheets for Forest, Hull and Everton were not available when checked, so Ben D, Small Ben, Marcus and the rest of Edward's and Justin's players are not covered yet.",
-   "source": {
-    "title": "Team News: One change for Palace against Forest",
-    "url": "https://www.cpfc.co.uk/news/first-team/team-news-one-change-for-palace-against-forest/"
-   }
-  },
-  {
-   "id": "2026-10-11-xi-1530",
-   "ts": "2026-10-11T15:03",
-   "kind": "news",
-   "text": "Team news, Liverpool v Man City (15:30 UTC). Liverpool's confirmed XI: Marcus has Alisson starting, Big Ben has Wirtz, Justin has Barcola, and Small Ben has Van Dijk starting but Gakpo, Szoboszlai and Isak are not in the matchday squad. City's teamsheet could not be read from a permitted source in time, so no City players are covered.",
-   "source": {
-    "title": "Confirmed Liverpool line-up v Manchester City",
-    "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-up-v-manchester-city"
-   }
-  },
-  {
-   "id": "2026-10-11-marcus-lead",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Marcus went into the day on 249, ten behind Edward on 259. All eleven of his starters have now played and none has blanked: De Cuyper 15, Dewsbury-Hall 13, Joao Pedro 12. He is on 326 to Edward's 298, 28 clear, with Edward holding one yet to kick off. Meanwhile Big Ben's team is called Quantum of Tzolis and Tzolis is on Marcus's list, on 0. Marcus will be mentioning all of this by breakfast.",
-   "source": null
-  },
-  {
-   "id": "2026-10-11-small-ben-liverpool",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Small Ben owns Szoboszlai, Isak, Gakpo and Virgil, and the squad list has all four on 0. Cunha's 10 and Rice's 7 are carrying a 27-point day, he is on 273 and 53 behind Marcus, and two of his eleven have not kicked off yet. That is not a Liverpool stack, it is a charity subscription.",
-   "source": null
-  },
-  {
-   "id": "2026-10-11-robert-131",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Robert is on 195, 131 behind Marcus, with 25 for the day: eight of his eleven scored, three played and returned nothing, and none are still to come. Cherki's 10 is 10 of the 25, so the rest of the squad combined for 15. At 131 behind he is no longer chasing the leader, he is chasing the tail lights and the leader has fog lamps.",
-   "source": null
-  },
-  {
-   "id": "2026-10-12-city-anfield",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Manchester City ran over a ten-man Liverpool at Anfield after Ryan Gravenberch's second yellow card in the 62nd minute, with Rayan Cherki scoring the third, the Guardian reports. City keep their 100% start to the season. Robert owns Cherki, and Small Ben, Marcus, Big Ben and Justin each have a Liverpool player to explain.",
-   "source": {
-    "title": "Cherki cracker caps Manchester City win at Liverpool in face of Anfield taunts",
-    "url": "https://www.theguardian.com/football/2026/oct/11/liverpool-manchester-city-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-12-ipswich-fulham",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Ipswich came from behind to beat Fulham, with Abdoul Ouattara levelling in the 88th minute and Dara O'Shea heading the winner in stoppage time, the Guardian reports. Fulham are winless in six and bottom of the table. Marcus, Edward and Big Ben all own Fulham players, and Small Ben has Ipswich's Davis and Enciso.",
-   "source": {
-    "title": "Ipswich stun Fulham with last-gasp comeback to increase heat on Arbeloa",
-    "url": "https://www.theguardian.com/football/2026/oct/10/ipswich-fulham-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-12-hull-everton",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Hull and Everton drew in a seesaw game, with Mohamed Belloumi earning Hull the point, the Guardian reports. Everton men on the books: Dewsbury-Hall for Marcus, Tarkowski, Garner and Barry for Edward, Pickford for Justin. Justin also has Hull's Ajayi, so he is on both sides of it.",
-   "source": {
-    "title": "Mohamed Belloumi grabs point for Hull in seesaw draw with Everton",
-    "url": "https://www.theguardian.com/football/2026/oct/11/hull-city-everton-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-12-xi-1900",
-   "ts": "2026-10-12T18:04",
-   "kind": "news",
-   "text": "Team news, Coventry v Newcastle (20:00 BST): all four league players are starting. Edward: Hornicek. Big Ben: Thiaw. Small Ben: Hall and Wissa. Nobody in the league owns a Coventry player.",
-   "source": {
-    "title": "Confirmed line-up: One change for Coventry clash",
-    "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-one-change-for-coventry-clash"
-   }
-  },
-  {
-   "id": "2026-10-12-cov-new",
-   "ts": "2026-10-12T22:45",
-   "kind": "news",
-   "text": "Coventry beat Newcastle 4-1, with Newcastle goalkeeper Lukas Hornicek spilling a ball and giving away a penalty in the fourth minute, which Jack Rudoni scored, ESPN reports. Edward owns Hornicek, Big Ben has Thiaw, Small Ben has Hall and Wissa.",
-   "source": {
-    "title": "Coventry put four past Newcastle to climb out of relegation zone",
-    "url": "https://www.espn.com/soccer/report/_/gameId/401879267"
-   }
-  },
-  {
-   "id": "2026-10-12-op-marcus-edward",
-   "ts": "2026-10-12T22:45",
-   "kind": "opinion",
-   "text": "Marcus 77, Edward 39 for the week, and the lead is now 28. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 did most of that for Marcus, while the best Edward could find was Jackson's 9. Edward went into Monday ahead by ten. Bonus points are still to be added, but nobody is expecting a rescue.",
-   "source": null
-  },
-  {
-   "id": "2026-10-12-op-newcastle",
-   "ts": "2026-10-12T22:45",
-   "kind": "opinion",
-   "text": "Newcastle lost 4-1 and managed to splash the misery across three squads: Edward's goalkeeper gifted a penalty, Big Ben's Thiaw and Small Ben's Hall played 90 minutes between them for nothing, and Wissa's 2 is the only thing resembling a return. A rare league-wide act of unity, and nobody wanted to be part of it.",
-   "source": null
-  },
-  {
-   "id": "2026-10-12-op-bend",
-   "ts": "2026-10-12T22:45",
-   "kind": "opinion",
-   "text": "Big Ben's team is called Quantum of Tzolis, and the Tzolis in question sits in Marcus's squad. Big Ben is fifth on 254, 72 behind the man who actually owns him. A team name that is mostly a monument to somebody else's player.",
-   "source": null
-  },
-  {
-   "id": "2026-10-13-palace-forest",
-   "ts": "2026-10-13T07:42",
-   "kind": "news",
-   "text": "Crystal Palace came from behind to beat Nottingham Forest 3-1 at Selhurst Park, the Guardian reports: Dan Ndoye scored inside three minutes after a weak header by Edward's Anan Khalaili, then Daichi Kamada, Jefferson Lerma and Yeremy Pino turned it round. Edward's Morgan Gibbs-White, Small Ben's Daniel Munoz, Big Ben's Liam Delap and Justin's Jorgen Strand Larsen were all in it; Delap missed a golden chance from three yards at 1-0.",
-   "source": {
-    "title": "Pino finishes off Nottingham Forest on Glasner's unhappy Crystal Palace return",
-    "url": "https://www.theguardian.com/football/2026/oct/11/crystal-palace-nottingham-forest-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-13-brighton-sunderland",
-   "ts": "2026-10-13T07:42",
-   "kind": "news",
-   "text": "Ten-man Brighton won at Sunderland, the Guardian reports, with Maxim De Cuyper (Marcus) sliding in the first goal from a Pascal Gross (Big Ben) through ball in the 53rd minute and Jaouen Hadjam adding a second. Pascal Struijk was sent off after a VAR review, and Brighton stay third on 13 points. Justin's Enzo Le Fee supplied the best deliveries of a cagey first half but faded badly in the second.",
-   "source": {
-    "title": "Ten-man Brighton continue fine form with battling win at Sunderland",
-    "url": "https://www.theguardian.com/football/2026/oct/10/sunderland-brighton-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-13-palmer-groin",
-   "ts": "2026-10-13T07:42",
-   "kind": "news",
-   "text": "Chelsea manager Xabi Alonso admitted that Cole Palmer's decision to sit out the international break was related to last season's groin pain, the Guardian reports. Palmer (Edward) looked free-moving in Saturday's win over Bournemouth, setting up Jordan Henderson's opener inside 68 seconds, and has signed a contract running to 2034.",
-   "source": {
-    "title": "Henderson and Joao Pedro lead Chelsea charge against Bournemouth",
-    "url": "https://www.theguardian.com/football/2026/oct/10/chelsea-bournemouth-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-13-lead-28",
-   "ts": "2026-10-13T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "GW6 is in the books and Marcus sits on 326, 28 clear of Edward on 298, with Justin a further 8 back on 290. Ten fixtures of GW7 are still to come and nobody has kicked a ball, so for one night only the leader is unbeaten, unbothered and presumably already drafting his acceptance speech."
-  },
-  {
-   "id": "2026-10-13-bench-12",
-   "ts": "2026-10-13T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Big Ben left 12 points on his bench in GW6, against 35 from his eleven, which is a rather large second team for a man on 254 and 72 behind. Robert, meanwhile, is on 205 and 121 off the lead: the gap is now wide enough to have its own postcode."
-  },
-  {
-   "id": "2026-10-14-sesko-shin",
-   "ts": "2026-10-14T07:42",
-   "kind": "news",
-   "text": "Manchester United striker Benjamin Sesko has a fresh shin injury with no end date, BBC Sport reports, extending a lack of involvement that the piece says United are keenly feeling. That is Robert's Sesko, who was already left out of the squad against Spurs.",
-   "source": {
-    "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
-   }
-  },
-  {
-   "id": "2026-10-14-fernandes-carrick",
-   "ts": "2026-10-14T07:42",
-   "kind": "news",
-   "text": "Michael Carrick says Bruno Fernandes is \"pretty much over\" the issue he was carrying on international duty and was \"really bright in training\", BBC Sport reports. Fernandes has played every minute of United's six league games, and Big Ben, who owns him, will be hoping the chance creation picks up from the 2.5 per game BBC quotes.",
-   "source": {
-    "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
-   }
-  },
-  {
-   "id": "2026-10-14-arsenal-training-injuries",
-   "ts": "2026-10-14T07:42",
-   "kind": "news",
-   "text": "Mikel Arteta called it \"far from ideal\" that Piero Hincapie and Martin Zubimendi were both hurt in a post-match training session after the win over Leeds, with scans due to give a timeframe, BBC Sport reports. Neither is owned in the league, but all six managers hold Arsenal players.",
-   "source": {
-    "title": "Hincapie and Zubimendi injured in post-match training session",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmq5nzn8ww98o"
-   }
-  },
-  {
-   "id": "2026-10-14-liverpool-anfield",
-   "ts": "2026-10-14T07:42",
-   "kind": "news",
-   "text": "Liverpool are now without a win in five successive Premier League home games (D4 L1) after the 3-0 defeat to Manchester City, BBC Sport reports, with Andoni Iraola saying his side played \"two different games\" either side of the red card. Small Ben owns Virgil, Gakpo, Szoboszlai and Isak, Big Ben has Wirtz, Justin has Barcola and Marcus has Becker.",
-   "source": {
-    "title": "Winless and an 'easy touch' - what's happened to the Anfield fear factor?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ck5yn20wej62o"
-   }
-  },
-  {
-   "id": "2026-10-14-delap-dance",
-   "ts": "2026-10-14T22:41",
-   "kind": "opinion",
-   "text": "Small Ben named his team Delap Dance, and Delap is on Big Ben's squad, where he returned 2 in GW6. Small Ben sits on 281, 45 behind Marcus, with Virgil, Gakpo, Szoboszlai and Isak all showing 0 on his squad sheet. It is a team named after a man he does not own, held together by four Liverpool players who did nothing.",
-   "source": null
-  },
-  {
-   "id": "2026-10-14-justin-bench",
-   "ts": "2026-10-14T22:41",
-   "kind": "opinion",
-   "text": "Justin is on 290, 36 behind Marcus, and left 7 points on his bench in GW6 while Haaland returned 6. His bench has therefore out-scored his centre-forward, which is the sort of thing a man with a team called Schwaddy should have noticed before Wednesday night.",
-   "source": null
-  },
-  {
-   "id": "2026-10-14-robert-bottom",
-   "ts": "2026-10-14T22:41",
-   "kind": "opinion",
-   "text": "Robert is on 205, which is 121 behind Marcus and the best part of a whole other league away. Mateta, Sesko, James and Mosquera all show 0 for GW6 on his squad sheet, so at least the zeros have each other for company. The only good news is that none of GW7's ten fixtures has kicked off yet, so he has a full eleven still to disappoint us with.",
-   "source": null
-  },
-  {
-   "id": "2026-10-15-struijk-red-overturned",
-   "ts": "2026-10-15T07:42",
-   "kind": "news",
-   "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he dodges the one-match ban and is available for the visit of Crystal Palace this weekend. He was sent off after 57 minutes on a VAR call for denying Wilson Isidor, and Brighton still won 2-0. Marcus (De Cuyper, Kostoulas), Justin (Vuskovic) and Big Ben (Gross) all own Brighton players and keep their defence at full strength for GW7.",
-   "source": {
-    "title": "Struijk red card after VAR intervention overturned",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
-   }
-  },
-  {
-   "id": "2026-10-15-chelsea-break-caicedo",
-   "ts": "2026-10-15T07:42",
-   "kind": "news",
-   "text": "BBC Sport argues the three-week break did Chelsea more good than anyone: Xabi Alonso reworked a back three that had shipped a league-high 12 goals before the pause, Moises Caicedo returned from his calf problem, and the 5-1 win over Bournemouth followed. Joao Pedro, who scored twice, said the break gave them time to fix the mistakes from the 3-0 loss at Brentford. Edward owns Palmer, Marcus has Joao Pedro and Big Ben has Rogers, and Chelsea go to Everton at 11:30 on Saturday.",
-   "source": {
-    "title": "Did Chelsea benefit most from extended international break?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckwy4nj4842qo"
-   }
-  },
-  {
-   "id": "2026-10-15-martinez-wilcox",
-   "ts": "2026-10-15T07:42",
-   "kind": "news",
-   "text": "Lisandro Martinez publicly questioned Manchester United's summer recruitment after the 2-0 defeat to Atletico Madrid, telling CBS \"we don't have the best squad at the moment compared to other top teams\" and \"I expect more from our technical director\", BBC Sport reports. Director of football Jason Wilcox is the target again. Robert (Yoro, Sesko), Marcus (Mbeumo), Small Ben (Cunha) and Big Ben (Bruno Fernandes) all have United players, and United are at Leeds on Saturday.",
-   "source": {
-    "title": "Wilcox the target again in another damaging Man Utd fallout",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cvp8g57ne53xo"
-   }
-  },
-  {
-   "id": "2026-10-15-marcus-swing",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Marcus started GW6 ten points behind Edward and finished it 28 clear, a 38-point swing built on 77 to Edward's 39. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 supplied 40 of them, and a left-back on 15 is the sort of thing people call luck right up until he is in their own team.",
-   "source": null
-  },
-  {
-   "id": "2026-10-15-robert-recede",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Robert was 89 behind the leader when GW6 began and is 121 behind now, having scored 35, exactly what Small Ben and Big Ben scored. Thirty-two points of ground gone in a week on a perfectly respectable return is the first thing to recede that fast in that part of the league since his hairline.",
-   "source": null
-  },
-  {
-   "id": "2026-10-15-smallben-looking-up",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Small Ben began GW6 13 points off the top and ended it 45 off, with Cunha on 10, Donnarumma on 9 and Rice on 7 not nearly enough to stop it. For a man who is always looking up at somebody, the leader is now a very long way up.",
-   "source": null
-  },
-  {
-   "id": "2026-10-16-martinez-apology",
-   "ts": "2026-10-16T07:41",
-   "kind": "news",
-   "text": "Lisandro Martinez has apologised and been fined by Manchester United after criticising the club's hierarchy following the Atletico Madrid defeat, BBC Sport reports. He met the club's leadership and Michael Carrick on Thursday and said he spoke out of frustration. It remains to be seen whether Carrick picks him for Leeds on Sunday at 14:00 BST. Robert has Yoro, Ben D has Bruno Fernandes, Small Ben has Cunha and Marcus has Mbeumo, so four of the six have a stake in how this dressing room feels.",
-   "source": {
-    "title": "Martinez apologises for outburst and fined by Man Utd",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cw77p152jz64o"
-   }
-  },
-  {
-   "id": "2026-10-16-henderson-chelsea-everton",
-   "ts": "2026-10-16T07:41",
-   "kind": "news",
-   "text": "The Guardian's weekend preview picks out Jordan Henderson, who at 36 became the oldest player to contribute directly to three goals in a Premier League game against Bournemouth, as the man who may dictate Chelsea's trip to unbeaten Everton. His partnership with Moises Caicedo is what lets Morgan Rogers, Joao Pedro and Cole Palmer flourish: Rogers is Big Ben's, Joao Pedro is Marcus's and Palmer is Edward's. Everton's defence, in the Guardian's words, littered the draw at Hull with costly mistakes, and Tarkowski, Branthwaite and Pickford belong to Edward, Big Ben and Justin.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-16-gonzalo-fulham-hull",
-   "ts": "2026-10-16T07:41",
-   "kind": "news",
-   "text": "Gonzalo Garcia has one league goal from 18 shots this season and has not scored since his debut against Chelsea, the Guardian notes ahead of bottom club Fulham hosting Hull City. Fulham have six goals in six games and head coach Alvaro Arbeloa is under increasing pressure. Garcia is Big Ben's, and on the Guardian's numbers his expected goals tally of 3.60 says the finishing is due to turn.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-16-small-ben-waivers",
-   "ts": "2026-10-16T22:45",
-   "kind": "opinion",
-   "text": "Small Ben cut Gakpo for Anderson of Man City in the latest waivers, and Gakpo is now flagged at 25% to play, so the timing was perfect for once. The trouble is Isak and Szoboszlai, still his, both flagged at 25% and both on 0 in GW6 alongside Virgil. He got rid of the one Liverpool player who was no use to him and kept the two who may not be fit, which is a long way from the training camp a man with a boxing match coming should be running.",
-   "source": null
-  },
-  {
-   "id": "2026-10-16-justin-waivers",
-   "ts": "2026-10-16T22:45",
-   "kind": "opinion",
-   "text": "Justin dropped Strand Larsen a week after he returned 5, signed Brobbey of Sunderland, and then dropped E.Le Fee of Sunderland for Stach of Leeds, so he has swapped one Sunderland player for another and called it a plan. Ajayi went for Bogle, also Leeds. Three claims, no recognisable name in any of them, from a manager who left 7 points on his bench in GW6 and decided the fix was at the other end of the pitch.",
-   "source": null
-  },
-  {
-   "id": "2026-10-16-big-ben-bench",
-   "ts": "2026-10-16T22:45",
-   "kind": "opinion",
-   "text": "Big Ben left 12 points on his bench in GW6, the most in the league and a third of what his eleven managed (35). Robert left 1. His Arsenal are Konsa on 4 and Havertz on 2, fewer than Edward or Robert hold, which is a thin return for the league's loudest Arsenal voice. Thiaw, who returned 0, went out for Ajer of Brentford in the waivers, so at least the bench is learning to rotate.",
-   "source": null
-  },
-  {
-   "id": "2026-10-16-marcus-luck",
-   "ts": "2026-10-16T22:45",
-   "kind": "opinion",
-   "text": "Marcus scored 77 in GW6 and 40 of it came from De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12: a Brighton left-back, an Everton midfielder and a Chelsea forward, none of whom anyone else would have named. He leads Edward by 28 with Foden and Tzolis both on 0. Anybody can call that luck, but a man who has been on the right side of it three weeks running is just a different kind of planner.",
-   "source": null
-  },
-  {
-   "id": "2026-10-17-james-surgery",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Reece James is out for around three months after knee surgery, BBC Sport reports, the problem picked up in training before Chelsea's 5-1 win over Bournemouth. Xabi Alonso says it is not a two or three week job and expects him back before January. James sits in Robert's squad, which had a quiet Gameweek 6 to forget and now has a Chelsea defender to carry through to Christmas.",
-   "source": {
-    "title": "Chelsea's James out for three months after knee surgery",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
-   }
-  },
-  {
-   "id": "2026-10-17-emegha-everton",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Chelsea go to Everton at 12.30 today without Emmanuel Emegha, still waiting on his debut, with Alonso confirming he is not fit enough for the trip. The Chelsea players the league holds are Joao Pedro and Palestra for Marcus, Palmer for Edward, Rogers for Big Ben and Estevao for Robert, and they meet an Everton that has Dewsbury-Hall for Marcus and Tarkowski, Garner and Barry for Edward.",
-   "source": {
-    "title": "Chelsea's James out for three months after knee surgery",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
-   }
-  },
-  {
-   "id": "2026-10-17-struijk-appeal",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he avoids the one-match ban and is available for the trip to Crystal Palace this weekend. Brighton are third, five points behind Manchester City. Marcus has De Cuyper and Kostoulas there, Justin has Vuskovic and Big Ben has Gross, with Palace's Strand Larsen, Khalaili and Mateta on the other side of the derby for Justin, Edward and Robert.",
-   "source": {
-    "title": "Struijk red card shown after VAR intervention is overturned",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
-   }
-  }
- ],
- "runs": [
-  {
-   "ts": "2026-09-20T07:44",
-   "news": 4,
-   "opinion": 0,
-   "matchday": true,
-   "note": "morning news, 4 fixtures today (BOU-LIV, LEE-CRY, MCI-SUN, FUL-MUN). Led with Odegaard's MCL knee injury (Edward) and Rice's back injury forcing him off at half-time (Ben C), then Foden's suspension for today's City-Sunderland game plus Reinildo's own ban (both touch Marcus), then Liverpool's clean bill of health ahead of Bournemouth (Ben C's four-man Liverpool stack). No opinion pieces on a morning run. Couldn't get a permitted source through Man Utd's Cloudflare wall for Fulham team news, so left that out rather than cite an aggregator."
-  },
-  {
-   "ts": "2026-09-20T12:16",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "13:00 slot: confirmed BOU-LIV and MCI-SUN sheets via Sky Sports live blogs (read as raw page data, not search snippets) - all league-owned starters at those four clubs listed, Foden (Marcus) and O'Reilly (Robert) the only ones left out. LEE-CRY sheet was not out at any permitted outlet by kick-off minus ~45 (tried leedsunited.com, cpfc.co.uk, Sky Sports live blog - lineup was image-only graphic with no extractable text); leedsunited.com's own preview did confirm Wilson (Robert) ruled out with a quad injury, so included that fact and left the rest of Leeds/Palace out of the counts rather than guess. BBC domains were unreachable from this session's fetcher throughout."
-  },
-  {
-   "ts": "2026-09-20T15:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "15:30 KO FUL v MUN: confirmed both squads via Sky Sports teams page (read as raw page data, id 6387779637306466232). Lammens (Edward), Mbeumo/King (Marcus), Cunha (Ben C) and B.Fernandes (Ben D) all start; Yoro (Robert) is a Man Utd substitute; Gonzalo (Ben D, Fulham) and Sesko (Robert, Man Utd) are both left out of their matchday squads entirely. manutd.com's own team-news article for this fixture stayed behind a Cloudflare 403 all run, same as this morning."
-  },
-  {
-   "ts": "2026-09-20T22:48",
-   "news": 2,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap, GW5 done. Led with Isak's winner at Bournemouth (Ben C's Isak/Gakpo, Ben D's Wirtz in the build-up, Alisson v Evanilson both Marcus's) and the City 5-3 Sunderland thriller (Semenyo/Edward, Haaland/Justin, Brobbey hat-trick unowned). Opinion: used Ben C's unused roast about Robert's team management, tied to tonight's four blanks and 91-point gap; wrote up Marcus owning both ends of the Alisson-Evanilson save; and a team-name piece on Ben C's Delap Dance and Ben D's Quantum of Tzolis both being named for rivals' players. Passed over the two other unused roast submissions (Ben D on Ben D, Ben D on Justin) - both hit categories (sexuality, race) that stay off this page regardless of target, so they are not going up any week. Rewrote all 9 of today's FLOP lines via reflop.py."
-  },
-  {
-   "ts": "2026-09-21T07:46",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news, no fixtures today (int'l break starts). GW5 wrap-up: covered the two Sunday matches the evening wrap missed - Fulham 1-1 Man Utd (Lammens/Martinez own goal, Cunha's late equaliser, touching Edward/Ben C/Ben D) and Leeds 0-0 Crystal Palace (Khalaili's disallowed assist and Calvert-Lewin's miss both Edward's, Trafford's saves for Ben D). Also reported Tuchel's England squad, which calls up players from all six squads. Roast archive unchanged - the two unused submissions are the slur/race ones flagged off-limits on 20 Sept, nothing new submitted since."
-  },
-  {
-   "ts": "2026-09-21T22:55 UTC",
-   "news": 2,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday - international break, GW6's ten fixtures all still to come per the live feed. This session started with a stale local checkout (three commits behind main) and drafted a full set of items on Man City 5-3 Sunderland, Arsenal 3-0 at Brighton and Robert's Roefs/Cherki split before the rebase conflict surfaced that all of it, plus a near-identical state-of-the-table opinion, had already been posted by two runs earlier today and yesterday evening. Aborted that rebase, reset to origin/main, and re-read the actual current page before writing anything - the GW5 story is thoroughly told already. What was left: Cole Palmer and Declan Rice, named in this morning's England call-up post, withdrew from the Nations League squad this afternoon (confirmed via BBC, updated 16:06 UTC, after our 07:55 post) with Edward's Gibbs-White and Garner drafted in as replacements; and Enzo Fernandez's first City goal in the already-reported 5-3 win, a detail that hadn't been mentioned. Two opinion pieces off previously-unused angles in the now-final GW5 numbers: Edward's one gameweek win from five yet leading the table, and Robert's Cherki (8) and Roefs (0) landing at opposite ends of the same match. Roast archive unchanged - the two unused submissions are the same sexuality and race jokes flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
-  },
-  {
-   "ts": "2026-09-22T07:47 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning news. GW6's ten fixtures are today (the last round before the September/October international break), all still to kick off per the live feed, so nothing on the pitch to report yet - focused research on pre-break team news instead. Verified three items by reading the club pages directly rather than trusting search summaries, several of which were unreliable or stale (a mancity.com snippet crediting Enzo Maresca as City boss did not hold up on inspection and was dropped; an old NUFC piece from Dec 25 and JS-rendered Everton/Villa/Man City pages could not be read and were skipped). Used: Lewis Hall's England call-up (Ben C's top scorer), Cole Palmer's return from injury alongside Caicedo's suspension (Edward), and Harry Wilson's quad injury (Robert, currently on 0). No roast pieces today - this is the news run; the two unused archive submissions remain the sexuality/race-adjacent ones flagged out of bounds on 17 and 20 September and stay unused."
-  },
-  {
-   "ts": "2026-09-22T22:43 UTC",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday - deep in the international break, confirmed the GW6 fixture list itself (kicks off 10 October, not today despite an earlier run's note to the contrary) rather than trusting that note. Live feed shows all ten GW6 fixtures still to come, nothing scored, so no points-dependent items. The only automatic posts today were two free-agent injury notes (Dunk, Struijk) touching none of the six squads, and nothing new turned up in research that cleared the permitted-source bar and wasn't already covered. Roast archive still has just the same two unused submissions (Ben D on himself, Ben D on Justin) flagged out of bounds on 17/20 September for sexuality and race content respectively - left unused again, permanently rather than pending a fact. Wrote one state-of-the-league opinion instead: the top four bunched inside 13 points, the bottom two already out of range, three weeks until any of it can move."
-  },
-  {
-   "ts": "2026-09-23T07:58 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Deep in the international break - GW6 doesn't kick off until 10 October, confirmed against fixtures_2627.json rather than trusting the live feed's bare kickoff times, which lacked dates and briefly looked like a same-day GW6. No opinion pieces, per the morning rule. Verified every fact by fetching the actual outlet rather than trusting search summaries, which disagreed with each other on basic things like who manages Man City and Chelsea this season (one summary wrongly had Maresca at City; the directly-fetched mancity.com and skysports.com pages settled it as Guardiola and Rosenior respectively) - dropped anything I couldn't pin to a primary source. Used: Reece James's 10th hamstring injury (Robert), Benjamin Sesko's shin withdrawal from the Slovenia squad (also Robert - a rough morning for the bottom side), and Kinsky's Czech recall plus Marmoush's Egypt AFCON-qualifier duty (Marcus and Justin) off the Tottenham international-fixtures roundup. Passed over: Antoine Semenyo's Ghana ankle withdrawal (Edward) and Lewis Hall's new Newcastle contract (Ben C) - both real and fresh but never turned up on a permitted outlet despite repeated searches, only aggregators. The Garner/Gibbs-White England replacement call-ups looked promising but turned out to already be posted on 21 September. Roast archive unchanged - the two unused submissions are the sexuality and race-adjacent ones flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
-  },
-  {
-   "ts": "2026-09-23T22:41 UTC",
-   "news": 1,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Deep in the international break, no fixtures today (fixtures_2627.json confirms 0 today; the live feed's GAMEWEEK 6 listing with bare kickoff times is upcoming, not tonight - matches an earlier run's finding that GW6 doesn't start until 10 October). Nothing to rewrite for FLOPs since no automatic items posted today. Led with Rayan Cherki's torn quad (ESPN, read directly, quoting Guardiola's own 'seven or eight weeks'), which matters because he was Robert's best GW5 scorer in a squad already 89 off the pace. One opinion piece per the no-football/no-archive-material rule, built on a verifiable oddity in the standings printout: neither Ben's team name matches a player he actually owns. Roast archive: both unused submissions (Ben D on Ben D, Ben D on Justin) remain unused - one invokes sexuality, the other race via apartheid, both excluded outright by rule 4 regardless of who they target or who submitted them; consistent with the 17/20 September calls, they are not pending a fact and will not be used."
-  },
-  {
-   "ts": "2026-09-24T07:52 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Still deep in the international break (fixtures_2627.json confirms GW6 doesn't kick off until 10 October); the live feed's GW6 listing has bare kickoff times with no date and briefly looked like a same-day fixture list again, same trap as two days ago - ignored it. Checked every candidate against the full 80-item archive before writing anything, not just the last 12: Cole Palmer's withdrawal and Morgan Gibbs-White/James Garner's call-ups (21 Sept), Jarrad Branthwaite and Jordan Pickford's England call-ups (21 Sept squad list), and Declan Rice's withdrawal were all already posted, so despite a dozen searches turning them up as if fresh, none of it was usable. Led instead with something genuinely new: Virgil van Dijk closing in on his 100th Dutch cap and Cody Gakpo alongside him as Jurgen Klopp takes his first game in charge of Germany tonight in Amsterdam, with Florian Wirtz held back until October - read directly off liverpoolfc.com. Passed over: a Bukayo Saka goal at Aston Villa (arsenal.com match report) because the exact date within the season couldn't be pinned down with confidence; Nottingham Forest's Milenkovic/Savona injuries pulling Murillo into a back three, since every write-up sat on unpermitted sites and Forest's real site is nottinghamforest.co.uk, not the .com on the sources list; Wissa's recovery update, which turned out to be dated to last season; and Gabriel's Brazil call-up and Mateta's injury at Palace, neither of which I could pin to a permitted source I'd actually read. Roast archive untouched - no opinion pieces on a morning run, and both unused submissions remain out of bounds regardless."
-  },
-  {
-   "ts": "2026-09-24T22:43 UTC",
-   "news": 1,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday and deep in the international break - fixtures_2627.json and the live feed both confirm GW6 doesn't kick off until 10 October, so no points moved today and no FLOP lines to rewrite. Led with Kai Havertz being forced off for Germany against the Netherlands (Sky Sports, read directly - the article names an injury for Brobbey but not for Havertz, so left the type unconfirmed rather than borrow the hamstring diagnosis from unpermitted sites); he's on Ben D's fifteen, already 40 back. Passed over Antoine Semenyo's Ghana ankle withdrawal (Edward's squad) and Brian Brobbey's own hamstring knock (a free-agent waiver target) - both real and reported everywhere, but every write-up I could find sat on aggregators or non-permitted sites; will keep checking for a permitted source. One opinion piece per the no-football/no-archive-material rule: Robert's fifteen has now had four different players (Cherki, Sesko, James, Wilson) flagged with injuries in the same week, all already reported, tied to his 89-point deficit. Roast archive: the same two submissions remain unused (Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid), both excluded outright by rule 4 regardless of who they target - not pending a fact, permanently unused."
-  },
-  {
-   "ts": "2026-09-25T07:49 UTC",
-   "news": 5,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Still deep in the international break - fixtures_2627.json confirms no fixtures today (GW6 kicks off 10 October); the live feed's kickoff times for GW6 are time-of-day only and belong to that same 10 October slate, not today, so this is not a matchday. Five items, all from club/broadcaster sites read directly: Alisson's Save of the Month nomination (Marcus); Gakpo's stoppage-time equaliser and Van Dijk's disallowed header for the Netherlands against Germany, Klopp's first match in charge of the Germans, plus Wirtz being rested from that game (Ben C x2, Ben D); Bruno Fernandes in an unfamiliar left-midfield role as Portugal beat Wales (Ben D); Pickford and Branthwaite both called into England's squad, Branthwaite's first under Tuchel, ahead of Saturday's Spain game (Justin, Ben D); Estevao's brace for Brazil against South Korea (Robert). Passed over Semenyo's ankle injury on Ghana duty (Edward's squad, genuinely reported) and an Odegaard-to-Haaland international goal (Edward and Justin) - both real but every write-up I found sat on aggregators, fan sites or SI/Yardbarker, none on the permitted list; will keep checking. No opinion pieces - morning run."
-  },
-  {
-   "ts": "2026-09-25T22:46 UTC",
-   "news": 2,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Still deep in the international break - fixtures_2627.json shows no fixtures today and the live feed confirms GW6 doesn't kick off until 10 October (its kickoff times are time-of-day only, for that slate, not today), so no points moved and there were no FLOP lines to rewrite. Two news items, both read directly and dated today: Cole Palmer's withdrawal from England's squad through injury (Sky Sports; Edward's) and Virgil van Dijk denying Dutch reports that he forced Koeman's back-five switch at the World Cup (Sky Sports; Ben C's). One opinion piece, built on the Van Dijk story rather than restating the table again - the standings (259/252/249/246/219/170) haven't moved since they were last reported on 22 and 24 September, so a third recap would just repeat itself; this instead pairs the reported news with Van Dijk's actual GW5 return. Roast archive: the same two submissions remain unused and stay that way - Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid - both barred outright by rule 4, not waiting on a fact."
-  },
-  {
-   "ts": "2026-09-26T07:48",
-   "news": 2,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning run, GW6 matchday (10 fixtures from 11:30 UTC, none kicked off yet). Led with Man City's guilty verdict on the majority of the 115 charges (BBC, Fri) - touches every squad but Edward's - and Tottenham's winless start amid De Zerbi's international-break squad disruption (BBC). No opinion pieces on a morning run. Research was heavy on stale/mis-dated search results (years-old press conferences and FA Cup-era injury stories resurfacing for Arsenal, Liverpool, Man City, Everton, Newcastle, Chelsea, Man Utd and Brighton), so kept to two items I could verify by reading the primary source rather than pad the count. Two roast-archive submissions remain unused (Ben D on Ben D; Ben D on Justin) - held for tonight's wrap, not used on a news-only morning run."
-  },
-  {
-   "ts": "2026-09-26T22:51 UTC",
-   "news": 2,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday and not even close: fixtures_2627.json confirms 0 fixtures today, and cross-checking the live feed's GW6 entries against fixtures_2627.json shows that gameweek doesn't start until 10-12 October - the live feed only prints kickoff time-of-day, which makes an upcoming slate look like 'today' if you don't check the date underneath, so no points moved and there was nothing to build a hauls/blanks piece on. Two news items, both read directly and dated within the international break: Isak's goal for Sweden plus Szoboszlai and Barcola's international minutes (Liverpool FC; Ben C and Justin), and the Guinness Goal of the Month shortlist naming Barnes, Mbeumo and Jackson (Newcastle United; Ben C, Marcus, Edward). Two opinion pieces since there was no day of football to roast: Ben D's team name 'Quantum of Tzolis' naming a player who actually plays for Marcus, and Robert's bench sitting on the only zero in the table while he's last by 89. Roast archive unchanged - the same two submissions (Ben D on Ben D; Ben D on Justin) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
-  },
-  {
-   "ts": "2026-09-27T07:50 UTC",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning run. fixtures_2627.json confirms 0 fixtures today (next GW6 kickoffs aren't until 10-12 October per yesterday's run note; the live feed's HH:MM-only kickoff times keep making that slate look same-day). Two news items, both read at the primary source and dated this week: Cole Palmer's return from a two-month groin/toe injury for a 30-minute cameo against Leeds, with Maresca noncommittal on his next start (Chelsea FC; touches Edward, who has Palmer on 2 points); and Antoine Semenyo's Premier League Player of the Month nomination for September (Man City; Edward's top scorer on 17 points, voting closes Monday). Research was heavy going for the rest: repeated searches on Arsenal, Man City, Newcastle, Everton, Liverpool, Nottingham Forest, Man Utd, Tottenham, Villa, Brighton and Ipswich mostly surfaced press conferences and injury pieces from February, April and last September that Google is resurfacing as if current, or results scattered across different fictional-calendar match dates - each was checked against the page's own datePublished and dropped when it didn't hold up, rather than published on a stale date. nottinghamforest.com is not the club's real site (redirects to a placeholder; the genuine site is .co.uk and isn't on the permitted list), so a live Gibbs-White/Murillo story had to be dropped for lack of a citable source. No opinion pieces on a morning run. No FLOP lines to rewrite. Roast archive unchanged: the same two unused submissions (Ben D on Ben D; Ben D on Justin) wait for tonight's wrap."
-  },
-  {
-   "ts": "2026-09-27T22:41 UTC",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. fixtures_2627.json confirms 0 fixtures today (GW6 still doesn't start until 10-12 October); the live feed's HH:MM-only kickoff times keep making that slate look same-day, but 0 of 10 fixtures had kicked off and every manager's live total equalled their pre-kickoff total, so no hauls/blanks piece was possible. Research this evening: confirmed via Sky Sports that Isak (thigh, out of Sweden's remaining games) and via multiple non-permitted outlets that Gakpo (ankle, hurt in today's Serbia 1-2 defeat) are fresh injury concerns for Ben C, but both are already on the page today as automatic INJURY items, so neither became a news item of mine - and no permitted outlet (BBC/Sky/Guardian/PL/ESPN/Reuters/AP/Athletic/club site) carried the Gakpo detail, so it would have been unsourceable anyway. Checked Havertz (hamstring, Germany, already posted 24 Sept), Van Dijk (nearing 100 caps, but no permitted outlet confirms today's Serbia involvement), Man City's verdict (already posted 26 Sept) and tomorrow's Belgium-France game (hasn't been played yet) - all either duplicates or unconfirmable, so zero news items tonight rather than padding the count. One opinion piece: seven of Robert's fifteen sit on zero points for the season, a fresh angle off the printout's own squad list, closing on his top scorer Cherki's torn quad. Roast archive unchanged - the same two submissions (Ben D on Ben D, touching sexuality; Ben D on Justin, hung on apartheid) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
-  },
-  {
-   "ts": "2026-09-28T22:50",
-   "news": 2,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Evening, no fixtures (international break, GW6 starts 10 Oct). Led with Isak/Gakpo and Havertz/Fernandes injuries from ESPN. Passed over both unused roast suggestions: one is a sexuality slur, the other is race-related; neither is used. No flops today so no reflop. Opinions built on GW5 final numbers only."
-  },
-  {
-   "ts": "2026-09-29T07:41",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with O'Reilly ruled out/Konsa in and the Pickford v Trafford England race, both BBC Sport. Fewer items than quota: search tool returned mostly fantasy/aggregator sites and the City verdict was already posted 26 Sep. Roast archive: 2 unused (Ben D on himself, Ben D on Justin) both left unused: slur/race-adjacent and not fit to publish; morning run has no opinion anyway. Note: BBC copy says the league resumes 11 Oct while the live feed lists GW6 fixtures today, so I asserted nothing about fixture dates."
-  },
-  {
-   "ts": "2026-09-29T22:45",
-   "news": 1,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures today and GW6 not yet started, so no points-dependent claims beyond settled GW5. Led with Suzuki rib doubt (ESPN). Two roast suggestions left unused: one is a homophobic slur, the other is aimed at race/politics - both out of bounds under the rules. No flops today, nothing to reflop."
-  },
-  {
-   "ts": "2026-09-30T07:55",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with the Man City guilty verdict and who owns City players. Roast suggestions left unused: both unused entries are unusable (one is a slur, the other alleges something serious as fact about a real person), so not written."
-  },
-  {
-   "ts": "2026-09-30T22:46",
-   "news": 1,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap, no fixtures (international break, GW6 has not kicked off). Led with Havertz muscle strain (ESPN) and a state-of-the-table piece. Both unused roast suggestions passed over: one is a slur, the other is aimed at race/politics; neither is usable. No flops today."
-  },
-  {
-   "ts": "2026-10-01T07:42",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with BBC on Man City punishment timing; Van Hecke foot injury via ESPN tracker. Most other break injuries (Isak, Gakpo, Havertz, Fernandes, Suzuki, O'Reilly) already posted; Dorgu/Mazraoui/Brobbey not owned in the league. Fewer than quota: nothing else found on permitted outlets. No roast suggestions used (morning)."
-  },
-  {
-   "ts": "2026-10-01T22:50",
-   "news": 1,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures (GW6 not started). Led with Alonso on Joao Pedro's knee (PL site, read directly; Marcus). Opinion: Big Ben's team name v Tzolis being Marcus's, and Robert's zero-scorers. Both unused roast suggestions held: one is a sexuality slur, the other an apartheid reference aimed at race/politics, so neither is going on the page. Passed over Isak/Gakpo/Semenyo/Palmer injuries as already posted. Note: Robert's zero-list is from the gameweek 5 squad line in public.json."
-  },
-  {
-   "ts": "2026-10-02T08:15",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Tzolis injury (ESPN) and Wirtz/Van Dijk internationals (liverpoolfc.com). Only two items: other searches returned stale or off-list sources (Sesko story dated 21 Sept, Sky blogs unreadable). Passed over both unused roasts: one is a slur and one is aimed at race, so neither is used."
-  },
-  {
-   "ts": "2026-10-02T22:47",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures today, GW6 not started. Zero reported items: search only surfaced off-list or unreadable pages (ESPN injuries piece would not load, Tzolis detail only via Yahoo/TeamTalk/Metro), so nothing was cited. Opinion on the table and Marcus's Arsenal exposure. Held both unused roasts: one is a slur, the other is aimed at race. No flops today so reflop not run."
-  },
-  {
-   "ts": "2026-10-03T07:50",
-   "news": 1,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. One item: Man City appeal and what the verdict means for their squad (BBC), because it touches all six squads. Search tooling returned mostly stale or off-list results and bbc/guardian domains are blocked from WebSearch, so I published fewer, better-sourced items rather than fill the quota. Roast archive untouched on a morning run; the two unused suggestions stay held (one about a slur-adjacent insult and one referencing apartheid, both outside the banter rules)."
-  },
-  {
-   "ts": "2026-10-03T22:41",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening. No matchday and no fixture of GW6 kicked off, so no wrap material. Search returned only stale or unverifiable articles, so no reported items rather than an uncited one. Opinion: the Liverpool v Man City split across squads, and Robert's 89-point gap. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over: one is a slur and the other is aimed at race. Neither is used. No flop lines to rewrite."
-  },
-  {
-   "ts": "2026-10-04T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. International break, no fixtures until 10 Oct. Most searches returned only off-list or already-posted stories (Havertz, Isak, Gakpo, Suzuki, O'Reilly already covered); Semenyo's Ghana withdrawal and Arsenal return-to-training news only found on non-permitted sites so dropped. Led with the premierleague.com return-of-the-league piece: Haaland v Isak, Arsenal v Leeds and Man Utd v Spurs, Coventry v Newcastle. No opinion on a morning run; roast archive untouched."
-  },
-  {
-   "ts": "2026-10-04T22:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening, international break, no fixtures today and all ten GW6 fixtures still to come, so no points-based pieces and no flops to rewrite. No reported items: nothing new worth citing since the morning run. One opinion on the leader owning neither Haaland nor Isak. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over and left unused: one is a slur, the other is aimed at race/politics, neither is publishable."
-  },
-  {
-   "ts": "2026-10-05T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with the international-break injury scares: Haaland, Isak/Gakpo, Havertz. Roast archive: both unused suggestions passed over (slur/sexuality-and-race territory); no opinion on a morning run anyway."
-  },
-  {
-   "ts": "2026-10-05T22:50",
-   "news": 2,
-   "opinion": 3,
-   "matchday": false,
-   "note": "evening wrap, no fixtures today (international break, GW6 starts Saturday). Led with Scott quad/Konsa and O'Reilly/Saka from the PL internationals round-up. No flops to rewrite. Both unused roast suggestions passed over: one is a slur aimed at the submitter, the other is aimed at race; neither used."
-  },
-  {
-   "ts": "2026-10-06T07:50",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Man City's appeal and Liverpool v Man City. Only two items: most search results were off-list outlets, so I held back anything I could not source to a permitted outlet I had read. Unused roast suggestions (2) passed over: one is a slur and the other is aimed at race/politics, neither used."
-  },
-  {
-   "ts": "2026-10-06T22:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW6 not started, so no wrap on hauls. Searches found nothing new at a permitted outlet beyond Isak/Gakpo/Havertz items already posted, so no reported items. Led with the table before GW6. Passed over both unused roast suggestions: one is a homophobic slur and the other an apartheid jibe that is a claim aimed at race, both outside the line. Both left unused. No flops today so reflop not run."
-  },
-  {
-   "ts": "2026-10-07T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with the BBC international-break injury round-up (Bruno Fernandes playing through pain) and BBC's England takeaways (Palmer/Gibbs-White, Rogers, Rice). Search tool could not query BBC/Guardian, so read their pages directly; Man City legal stories skipped as already covered. Both unused roast suggestions passed over: one is a slur aimed at the sender himself, the other rests on a race-adjacent charge and is not a joke about anything in the table."
-  },
-  {
-   "ts": "2026-10-07T22:41",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap, non-matchday with GW6 not yet kicked off. One search found no usable current reports from permitted outlets, so no news. Led with the bunched top four and the bench ledger. Passed over both unused roast entries (2026-09-12-ca1422e269 and 2026-09-12-d9048f2afb): both hang on slurs or sexuality/race-adjacent material, outside the rules. No flops to rewrite."
-  },
-  {
-   "ts": "2026-10-08T07:50",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Rice's new Arsenal deal (BBC), then Arteta's contract and Rogers v Bournemouth. Search engine returned mostly fantasy sites so only BBC pieces read in full. Roast archive: 2 unused, both passed over - one is an insult at a slur level, the other aimed at race/politics; neither is fit to publish and it's a morning run anyway."
-  },
-  {
-   "ts": "2026-10-08T22:45",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures today (GW6 not started); no football to report, so two opinion pieces off team names and Robert's position. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): both aimed at sexuality/race, out of bounds. No flops today."
-  },
-  {
-   "ts": "2026-10-09T07:55",
-   "news": 5,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Liverpool and Arsenal international-break injuries (Guardian), plus Scott, Sunderland and Konsa. Search tool could not reach BBC/Guardian directly so read articles by curl. Roast archive: both unused suggestions left alone (slur/sexuality and apartheid, outside what the banter rules allow); no opinion on morning runs anyway."
-  },
-  {
-   "ts": "2026-10-09T22:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening, no fixtures today and no points to quote, so no reported items and one opinion on Quantum of Tzolis. Left both unused roasts alone: the Ben D self-submission is a slur, and the one about Justin is aimed at race. No football research done; nothing had been played."
-  },
-  {
-   "ts": "2026-10-10T07:41",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with Baleba's possible United debut; searches were mostly stale so only three items from Guardian/BBC pages actually read. Roast archive untouched (morning, no opinion): the two unused suggestions are a slur-adjacent self-insult and an apartheid line aimed at a mate, both held back as they fall under the excluded categories."
-  },
-  {
-   "ts": "2026-10-10T16:03",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 UTC slot: MUN v TOT, both sheets found on tottenhamhotspur.com"
-  },
-  {
-   "ts": "2026-10-10T22:50",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with Chelsea 5-1 Bournemouth (ESPN); no other match report found at a permitted outlet. Opinions: Marcus, Robert, Anfield-owns-the-league; rewrote today's flop lines. Both unused roast suggestions passed over: one is a sexuality slur, the other is aimed at race. Neither is usable, so they stay unused. Flop rewrite skipped: reflop.py found no flop events from today in data/news.json (they exist only in public.json), so the script refuses; template lines left as they were."
-  },
-  {
-   "ts": "2026-10-11T07:50",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with Hincapie carried off at Arsenal, Palmer's new Chelsea deal, and the Man Utd v Spurs draw. Both unused roast suggestions held: one is a slur-adjacent insult and the other alleges a political stance as fact; neither suits a morning run anyway."
-  },
-  {
-   "ts": "2026-10-11T12:03",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "13:00 slot: found Crystal Palace sheet (cpfc.co.uk); Forest, Hull, Everton sheets not available"
-  },
-  {
-   "ts": "2026-10-11T15:03",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "15:30 UTC slot, LIV v MCI: Liverpool sheet found (liverpoolfc.com); City sheet not readable (mancity.com 403), left out"
-  },
-  {
-   "ts": "2026-10-11T22:45",
-   "news": 0,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. No reported items: searches turned up no usable same-day report from a permitted outlet for the three matches (only old-season or undated pages), so nothing was posted rather than guess. Opinion: Marcus lead/Tzolis, Small Ben Liverpool zeros, Robert 131 back. Rewrote the 8 league-scope flop lines; the 3 Justin-only flops (Barcola, Pickford, Ajayi) are stored as 'yours' in news.json and cannot be matched by reflop.py so were left. Roast suggestions left unused: both by Ben D (one a slur, one aimed at race/politics), held out under rule 4, not coming back."
-  },
-  {
-   "ts": "2026-10-12T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with the Anfield result (Guardian), then Ipswich v Fulham and Hull v Everton. Search was thin: only Guardian pages were read; the Newcastle at Coventry team news came only from a fantasy site so was dropped. Roast archive: 2 unused, not touched on a morning run."
-  },
-  {
-   "ts": "2026-10-12T18:04",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "19:00 UTC slot: Newcastle sheet found on newcastleunited.com; Coventry has no league-owned players"
-  },
-  {
-   "ts": "2026-10-12T22:45",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with Coventry 4-1 Newcastle (ESPN/PA report); Marcus v Edward, Newcastle owners, Big Ben/Tzolis opinions. Left both unused roast suggestions: one is a homophobic slur and the other trades on apartheid/race, both outside the rules (and the first is Big Ben's own, aimed at himself). Reflopped all four of today's FLOP lines."
-  },
-  {
-   "ts": "2026-10-13T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, no fixtures today. Led with Palace 3-1 Forest, Brighton at Sunderland and Palmer's groin admission, all read from Guardian pages by curl (search surfaced only aggregators). Skipped Utd v Spurs and Chelsea v Bournemouth results as already posted. No opinion on morning run; roast archive untouched (2 unused: both fail rule 4 - one is a slur-adjacent/apartheid line about a real political regime, one is a slur - left unused)."
-  },
-  {
-   "ts": "2026-10-13T22:45",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW7 not started; one search found nothing usable from permitted outlets, so no reported items. Led with the table after GW6. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): they target sexuality/race, which are off limits. No flops today so reflop not run."
-  },
-  {
-   "ts": "2026-10-14T07:42",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Sesko's fresh shin injury and Carrick on Fernandes (BBC), then Arsenal training injuries and Liverpool's Anfield form. No opinion on a morning run. Both unused roast suggestions (Ben D on himself; Ben D on Justin) left unused: one is a slur-adjacent self-insult and the other is aimed at a nationality/politics angle that is not a clean joke, so both stay passed over."
-  },
-  {
-   "ts": "2026-10-14T22:41",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW7 not started, so no flops to rewrite; searches turned up nothing usable from permitted outlets, so no reported items. Opinion built on GW6 table/squad sheets and team names. Passed over both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): one is a slur and the other is aimed at race/politics, neither goes on the page."
-  },
-  {
-   "ts": "2026-10-15T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Struijk's overturned red card (Brighton owners Marcus, Justin, Big Ben). Search tool returned stale results so sourced direct from BBC Sport pages. No evening-only material; roast archive not used on a morning run (all 13 untouched, none passed over for cause)."
-  },
-  {
-   "ts": "2026-10-15T22:50",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Evening. No fixtures today, GW7 not started, so no flops to rewrite. Search was blocked for BBC/Guardian and a direct BBC fetch returned nothing usable, so no reported items. Opinion on the GW6 swing between Marcus and Edward, Robert's gap and Small Ben's gap, using the 'relies on luck', hairline and height suggestions as angles. Passed over 2026-09-12-ca1422e269 (slur), 2026-09-12-d9048f2afb (nationality/politics) and 2026-09-13-f263c0fa06 (needs facts not in the feed); 2026-09-12-b4e9e2f836 and 09-20 and others untouched this run."
-  },
-  {
-   "ts": "2026-10-16T07:41",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, no fixtures today. Led with Martinez's apology and fine at Man Utd (BBC), then Guardian weekend preview items on Chelsea at Everton and Gonzalo Garcia at Fulham. Opinion not run in the morning, so no roast suggestions used or passed over."
-  },
-  {
-   "ts": "2026-10-16T22:45",
-   "news": 0,
-   "opinion": 4,
-   "matchday": false,
-   "note": "Evening, no fixtures today and GW7 not kicked off, so no football to wrap. No reported items (morning run covered the news). Four opinion pieces from the latest waivers and GW6 figures (Small Ben, Justin, Big Ben bench, Marcus). Live feed totals were pre-GW6 settled so I quoted public.json GW6 figures only. Archive used: Ben C boxing line, Edward on Ben D Arsenal, Edward on Marcus luck. Passed over for now: hairline lines on Robert (no fresh Robert fact), the Ben D self-roast and the Justin nationality line (not fit to land), Jobacus/Catholic line on Marcus (nothing to hang it on tonight), Justin pint line on Robert (nothing true to hang it on). No flops to rewrite today."
-  },
-  {
-   "ts": "2026-10-17T07:50",
-   "news": 3,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with Reece James's three-month injury (Robert's) off BBC Sport, then Emegha ruled out at Everton and Struijk's red overturned. Guardian and Sky were not usable for detail; WebSearch returned only off-list or stale results so BBC pages were read directly. Roast archive untouched (morning, no opinion)."
-  }
- ]
+  "generated": "2026-10-17T07:50 UTC",
+  "items": [
+    {
+      "id": "2026-10-05-haaland-subbed",
+      "ts": "2026-10-05T07:55",
+      "kind": "news",
+      "text": "Erling Haaland asked to be substituted after 67 minutes of Norway's 2-1 Nations League defeat by Portugal on Sunday, with no word afterwards on his fitness. He was replaced by Jorgen Strand Larsen, so both are Justin's, and Manchester City visit Anfield on Sunday 11 October.",
+      "source": {
+        "title": "Erling Haaland injury fear after asking to be substituted for Norway",
+        "url": "https://www.espn.com/soccer/story/_/id/50107853/erling-haaland-injury-fear-asked-substituted-norway"
+      }
+    },
+    {
+      "id": "2026-10-05-isak-gakpo",
+      "ts": "2026-10-05T07:55",
+      "kind": "news",
+      "text": "Alexander Isak left the Sweden squad with what Liverpool called a minor injury, and Cody Gakpo's break ended after 17 minutes against Serbia with an ankle problem, per the Dutch FA. Both are Small Ben's, and Liverpool host Manchester City on 11 October.",
+      "source": {
+        "title": "Cody Gakpo returns to Liverpool after injury for Netherlands",
+        "url": "https://www.espn.com/soccer/story/_/id/50051618/netherlands-cody-gakpo-nations-league-liverpool"
+      }
+    },
+    {
+      "id": "2026-10-05-havertz-strain",
+      "ts": "2026-10-05T07:55",
+      "kind": "news",
+      "text": "Kai Havertz went off in Germany's 1-1 draw with the Netherlands and has gone back to Arsenal for treatment, the knock understood to be a minor muscle strain. Big Ben owns him, and Arsenal are at home to Leeds on Saturday 10 October.",
+      "source": {
+        "title": "Kai Havertz returning to Arsenal to be assessed after suffering injury for Germany against Netherlands",
+        "url": "https://www.skysports.com/football/news/13591713/kai-havertz-returning-to-arsenal-to-be-assessed-after-suffering-injury-for-germany-against-netherlands"
+      }
+    },
+    {
+      "id": "2026-10-05-scott-quad",
+      "ts": "2026-10-05T22:50",
+      "kind": "news",
+      "text": "Bournemouth's Alex Scott picked up a quad injury on his first England start in the 7-0 win in Croatia and has gone back to his club, with media reports suggesting he could be out for up to two months. Justin owns Scott. Ezri Konsa, Ben D's, also withdrew from the England squad with what is believed to be a minor issue.",
+      "source": {
+        "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+        "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+      }
+    },
+    {
+      "id": "2026-10-05-oreilly-saka",
+      "ts": "2026-10-05T22:50",
+      "kind": "news",
+      "text": "Man City's Nico O'Reilly withdrew from the England squad after playing just one match, while Arsenal's Bukayo Saka scored twice in the 7-0 win in Croatia. Robert owns both.",
+      "source": {
+        "title": "Internationals: Which Premier League stars are shining - and who's got injured?",
+        "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+      }
+    },
+    {
+      "id": "2026-10-05-benD-quantum",
+      "ts": "2026-10-05T22:50",
+      "kind": "opinion",
+      "text": "Ben D is 40 off the lead in a team called Quantum of Tzolis, and Tzolis plays for Marcus. Ben D himself owns Havertz, reportedly out for four weeks, and Konsa, who has pulled out of England duty. Bold branding for a man who cannot keep his own Arsenal players upright.",
+      "source": null
+    },
+    {
+      "id": "2026-10-05-smallben-delap",
+      "ts": "2026-10-05T22:50",
+      "kind": "opinion",
+      "text": "Small Ben runs a team called Delap Dance, and Delap is in Ben D's squad. Small Ben owns Isak and Gakpo, both sent home from international duty with injuries, and he is 13 off the lead with Liverpool v Man City to come. The dance is looking like a limp.",
+      "source": null
+    },
+    {
+      "id": "2026-10-05-robert-saka",
+      "ts": "2026-10-05T22:50",
+      "kind": "opinion",
+      "text": "Saka scored twice for England and Robert owns him. Robert is still 89 points off the lead on 170, because England goals score nothing in this league, and O'Reilly has gone home after one match. Pardinho: a fine name for a team whose best week happened somewhere it cannot score.",
+      "source": null
+    },
+    {
+      "id": "2026-10-06-city-appeal",
+      "ts": "2026-10-06T07:50",
+      "kind": "news",
+      "text": "Man City have lodged their appeal against the independent commission's guilty verdict on Premier League financial rule breaches, saying the ruling contains \"clear material errors, of law, principle and fact and is unsafe\". All six managers own City players, from Haaland (Justin) to Cherki (Robert), so nobody in this league is a neutral.",
+      "source": {
+        "title": "Man City confirm appeal against guilty verdict",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cqn7470513n0o"
+      }
+    },
+    {
+      "id": "2026-10-06-liv-city-sunday",
+      "ts": "2026-10-06T07:50",
+      "kind": "news",
+      "text": "Liverpool host Man City on Super Sunday, with Sky Sports assessing new Reds boss Andoni Iraola's early impact at Anfield ahead of it. Small Ben has the most riding on both sides of it, with Isak, Gakpo, Szoboszlai and Virgil for Liverpool and Donnarumma and Ruben for City.",
+      "source": {
+        "title": "Liverpool: Andoni Iraola's early impact at Anfield assessed ahead of huge Super Sunday showdown with Man City",
+        "url": "https://www.skysports.com/football/news/13595435/liverpool-andoni-iraolas-early-impact-at-anfield-assessed-ahead-of"
+      }
+    },
+    {
+      "id": "2026-10-06-nothing-kicked-off",
+      "ts": "2026-10-06T22:45",
+      "kind": "opinion",
+      "text": "Gameweek 6 has ten fixtures and not one has kicked off, so tonight's table is the last honest one for a while: Edward on 259, Justin 7 back, Marcus 10 back, Small Ben 13 back. Four managers inside 13 points, which is the most fragile kind of peace, and Robert is 89 behind on 170 and watching it from a different postcode.",
+      "source": null
+    },
+    {
+      "id": "2026-10-07-fernandes-pain",
+      "ts": "2026-10-07T07:55",
+      "kind": "news",
+      "text": "Portugal boss Jorge Jesus revealed that Bruno Fernandes had been playing through pain during the international break. That is Ben D's Manchester United man, and nothing in the report says he is out of Saturday's game.",
+      "source": {
+        "title": "Player welfare, injury worries & boredom - has extended break worked?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq8jz7verm24o"
+      }
+    },
+    {
+      "id": "2026-10-07-palmer-gibbs-white",
+      "ts": "2026-10-07T07:55",
+      "kind": "news",
+      "text": "Cole Palmer withdrew from the England squad, and BBC Sport says that has let others cement their place in front of him, with Morgan Gibbs-White cutting short a family holiday to join up after initially being left out. Edward owns both of them.",
+      "source": {
+        "title": "Midfield options and a fab front four - what we've learned about England",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
+      }
+    },
+    {
+      "id": "2026-10-07-rogers-rice",
+      "ts": "2026-10-07T07:55",
+      "kind": "news",
+      "text": "Chelsea's Morgan Rogers is part of the England front four BBC Sport rates after the break, while Declan Rice is out of the side as his load is managed after injury. Rogers is Ben D's; Rice is Small Ben's.",
+      "source": {
+        "title": "Midfield options and a fab front four - what we've learned about England",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
+      }
+    },
+    {
+      "id": "2026-10-07-top-four-bunched",
+      "ts": "2026-10-07T22:41",
+      "kind": "opinion",
+      "text": "Edward leads on 259 with Justin on 252, Marcus on 249 and Small Ben on 246: thirteen points separate first from fourth, and ten fixtures kick off tomorrow with nobody having scored a thing. Robert is 89 back, which is nearly seven times that gap, so he is not so much in the title race as watching it from the car park.",
+      "source": null
+    },
+    {
+      "id": "2026-10-07-bench-ledger",
+      "ts": "2026-10-07T22:41",
+      "kind": "opinion",
+      "text": "Gameweek 5 left Justin's bench on 21 against 41 from his eleven, which is half a second team doing the work of the first. Robert's bench scored 0, so at least one of them is consistent. Both have the same ten fixtures to fix it tomorrow.",
+      "source": null
+    },
+    {
+      "id": "2026-10-08-rice-contract",
+      "ts": "2026-10-08T07:50",
+      "kind": "news",
+      "text": "Declan Rice is close to agreeing a new long-term Arsenal contract, BBC Sport reports, and is expected to be involved when Arsenal host Leeds on Saturday at 12:30 BST. He is in Small Ben's squad; Edward has Calvert-Lewin on the Leeds side of that fixture.",
+      "source": {
+        "title": "Rice close to agreeing new Arsenal deal",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c9gkvx74je7do"
+      }
+    },
+    {
+      "id": "2026-10-08-arteta-contract",
+      "ts": "2026-10-08T07:50",
+      "kind": "news",
+      "text": "Mikel Arteta has signed a new contract with Arsenal running until 2030, calling it 'only the beginning' of what the club can achieve. Every one of the six squads holds an Arsenal player, so nobody in this league gets to be neutral about it.",
+      "source": {
+        "title": "Arteta signs new contract with champions Arsenal",
+        "url": "https://www.bbc.co.uk/sport/football/articles/crz65j5p8l57o"
+      }
+    },
+    {
+      "id": "2026-10-08-rogers-bournemouth",
+      "ts": "2026-10-08T07:50",
+      "kind": "news",
+      "text": "Chelsea's Morgan Rogers, on Ben D's squad, faces Bournemouth at Stamford Bridge on Saturday, the club where BBC Sport says he had an underwhelming Championship loan. Justin (Scott, Tavernier) and Marcus (Evanilson) own Bournemouth players in the same fixture.",
+      "source": {
+        "title": "£117m Rogers failed at Bournemouth - and feared he may not make it",
+        "url": "https://www.bbc.co.uk/sport/football/articles/ckp84r967d3go"
+      }
+    },
+    {
+      "id": "2026-10-08-name-game",
+      "ts": "2026-10-08T22:45",
+      "kind": "opinion",
+      "source": null,
+      "text": "Small Ben runs a team called Delap Dance, and Delap is in Big Ben's squad, where he returned 1 point in Gameweek 5. Big Ben's team is Quantum of Tzolis, and Tzolis sits in Marcus's squad on 2. Between them the two Bens have named their teams after footballers they do not own."
+    },
+    {
+      "id": "2026-10-08-robert-gw6",
+      "ts": "2026-10-08T22:45",
+      "kind": "opinion",
+      "source": null,
+      "text": "Robert is on 170, 89 behind Edward, after a Gameweek 5 of 22 points. None of the ten Gameweek 6 fixtures has kicked off, so for now Pardinho has not been outscored by anyone this week. Enjoy it, Robert; it ends at the first whistle."
+    },
+    {
+      "id": "2026-10-09-liverpool-injuries",
+      "ts": "2026-10-09T07:55",
+      "kind": "news",
+      "text": "Alexander Isak and Cody Gakpo both picked up injuries on international duty with Sweden and the Netherlands, the Guardian reports, ahead of Liverpool's game against Man City. Small Ben owns both, along with Szoboszlai and Virgil.",
+      "source": {
+        "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+      }
+    },
+    {
+      "id": "2026-10-09-arsenal-hamstrings",
+      "ts": "2026-10-09T07:55",
+      "kind": "news",
+      "text": "Christos Tzolis injured a hamstring playing for Greece and Kai Havertz suffered a similar problem with Germany, per the Guardian, while Martin Odegaard got 'nothing dramatic' on his X-ray after a heavy challenge with Norway. Marcus owns Tzolis, Ben D owns Havertz and Edward owns Odegaard.",
+      "source": {
+        "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+      }
+    },
+    {
+      "id": "2026-10-09-scott-out",
+      "ts": "2026-10-09T07:55",
+      "kind": "news",
+      "text": "Bournemouth's Alex Scott is out for up to two months after getting hurt on England duty, the Guardian reports, a blow to a side still searching for a first Premier League win. Justin owns him.",
+      "source": {
+        "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+      }
+    },
+    {
+      "id": "2026-10-09-sunderland-hamstrings",
+      "ts": "2026-10-09T07:55",
+      "kind": "news",
+      "text": "Sunderland will be without Brian Brobbey and Dan Ballard, who both strained hamstrings on international duty, according to the Guardian. Marcus and Robert each have a Sunderland player, and the team face Brighton this weekend.",
+      "source": {
+        "title": "Havertz, Isak, Dorgu ... spate of injuries with national teams leaves sour taste for top clubs",
+        "url": "https://www.theguardian.com/football/2026/oct/08/premier-league-injuries-kai-havertz-alexander-isak-patrick-dorgu"
+      }
+    },
+    {
+      "id": "2026-10-09-konsa-niggle",
+      "ts": "2026-10-09T07:55",
+      "kind": "news",
+      "text": "BBC Sport says Ezri Konsa has a slight niggle from England camp, that Cristhian Mosquera is fit and that William Saliba is on the mend with no clear return date. Ben D owns Konsa and Robert owns Mosquera.",
+      "source": {
+        "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
+      }
+    },
+    {
+      "id": "2026-10-09-quantum-of-tzolis",
+      "ts": "2026-10-09T22:45",
+      "kind": "opinion",
+      "source": null,
+      "text": "Big Ben named his team Quantum of Tzolis, and the real Christos Tzolis is in Marcus's squad with a hamstring injury and an expected return of 24 Oct. Big Ben has built an entire identity around a player he does not own, who is not playing, and who is not coming back for a fortnight. Gameweek 6 has ten fixtures and not one has kicked off."
+    },
+    {
+      "id": "2026-10-10-baleba-debut",
+      "ts": "2026-10-10T07:41",
+      "kind": "news",
+      "text": "Carlos Baleba, the Brighton midfielder Manchester United signed on 25 August, could make his debut against Tottenham this afternoon, the Guardian reports, with United 12th after one win in their first five games. It touches Edward's Lammens, Marcus's Mbeumo, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko, all in the XI that has to stop the leaking.",
+      "source": {
+        "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
+        "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut"
+      }
+    },
+    {
+      "id": "2026-10-10-joao-pedro-doubt",
+      "ts": "2026-10-10T07:41",
+      "kind": "news",
+      "text": "BBC Sport's FPL writer says Joao Pedro's fitness is in question for Chelsea's home game with Bournemouth, and that the Chelsea attack suffered without him against Brentford in Gameweek 5. Marcus owns him, and Robert has Chelsea's Estevao and James.",
+      "source": {
+        "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
+      }
+    },
+    {
+      "id": "2026-10-10-city-anfield",
+      "ts": "2026-10-10T07:41",
+      "kind": "news",
+      "text": "The Guardian's weekend preview asks whether Manchester City can summon a siege mentality at Anfield, with the club's charges row hanging over the trip. Justin has Haaland and Gvardiol, Edward has Semenyo, and Small Ben's Liverpool players are on the other side of it.",
+      "source": {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend"
+      }
+    },
+    {
+      "id": "2026-10-10-xi-1630",
+      "ts": "2026-10-10T16:03",
+      "kind": "news",
+      "text": "Team news, Man United v Spurs (17:30 BST): Robert has Yoro and Solanke starting, but Sesko is not in the squad. Justin has Van Hecke starting, Marmoush on the bench. Marcus has Mbeumo and Kinsky starting. Big Ben has Fernandes starting. Small Ben has Cunha starting.",
+      "source": {
+        "title": "Confirmed line-ups | Man United vs Spurs",
+        "url": "https://www.tottenhamhotspur.com/news/1176226/confirmed-line-ups-man-united-vs-spurs"
+      }
+    },
+    {
+      "id": "2026-10-10-chelsea-bournemouth",
+      "ts": "2026-10-10T22:50",
+      "kind": "news",
+      "text": "Chelsea led Bournemouth 2-0 after three minutes through Jordan Henderson and Morgan Rogers, then added João Pedro after the break, and Evanilson got the consolation, ESPN reports. That is Rogers for Big Ben and Joao Pedro and Evanilson for Marcus, who had both sides of the one game.",
+      "source": {
+        "title": "Chelsea 5-1 Bournemouth: Premier League result, goals and reaction - as it happened",
+        "url": "https://www.espn.com/soccer/story/_/id/50146916/chelsea-bournemouth-live-premier-league-latest-updates-commentary-score-result"
+      }
+    },
+    {
+      "id": "2026-10-10-marcus-lead",
+      "ts": "2026-10-10T22:50",
+      "kind": "opinion",
+      "text": "Marcus is on 57 for the gameweek with three of his eleven still to play, and De Cuyper's 15 and Joao Pedro's 12 are doing the heavy lifting. Haramball Enthusiast sounds like a man who likes his football ugly, and he is winning it the pretty way, 28 clear of Edward.",
+      "source": null
+    },
+    {
+      "id": "2026-10-10-robert-gap",
+      "ts": "2026-10-10T22:50",
+      "kind": "opinion",
+      "text": "Robert is on 9 for the gameweek and 127 behind the leader on the live feed, a gap you could park a whole Pardinho in. Saka and Gabriel played 90 minutes each for 2 points apiece, so his Arsenal contingent has been purely decorative. Four of his eleven have not kicked off, which is the only reason this is not yet an obituary.",
+      "source": null
+    },
+    {
+      "id": "2026-10-10-anfield-six",
+      "ts": "2026-10-10T22:50",
+      "kind": "opinion",
+      "text": "Liverpool v Man City is still to come, and it is the one fixture all six managers own a piece of: Haaland and Gvardiol for Justin, Donnarumma and Ruben plus four Liverpool men for Small Ben, Foden and Guehi for Marcus, Semenyo for Edward, Enzo for Big Ben and three City players for Robert. Anfield is effectively playing the whole league, and nobody gets to sit this one out.",
+      "source": null
+    },
+    {
+      "id": "2026-10-11-hincapie-injury",
+      "ts": "2026-10-11T07:50",
+      "kind": "news",
+      "text": "Arsenal defender Piero Hincapie was carried off during the warm-down after coming on as a late substitute in the win over Leeds, and BBC Sport says it raises concern he has an injury. All six managers own an Arsenal player, so the club's fitness list is everybody's business.",
+      "source": {
+        "title": "Hincapie injury adds to Arsenal issues after Guimaraes rescue act",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c63r5w20ez3do"
+      }
+    },
+    {
+      "id": "2026-10-11-palmer-contract",
+      "ts": "2026-10-11T07:50",
+      "kind": "news",
+      "text": "Cole Palmer has signed a new Chelsea contract on improved terms until 2034, BBC Sport reports. Edward owns him and Marcus owns Joao Pedro, who the BBC also lists among the few Premier League players contracted to 2034 along with Haaland, who is Justin's.",
+      "source": {
+        "title": "Palmer signs new Chelsea contract until 2034",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cwe9lngxzjpno"
+      }
+    },
+    {
+      "id": "2026-10-11-utd-spurs-draw",
+      "ts": "2026-10-11T07:50",
+      "kind": "news",
+      "text": "Manchester United led Spurs through Bryan Mbeumo's opener and then watched Rodrigo Bentancur get sent off for a headfirst charge at Luke Shaw, only for Spurs to equalise in added time through Solanke, BBC Sport reports. Marcus owns Mbeumo and Robert owns Solanke, so the draw gave each of them something.",
+      "source": {
+        "title": "Boos, anguish & fading belief - 'worrying day' for under-pressure Carrick",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c62e9g09e781o"
+      }
+    },
+    {
+      "id": "2026-10-11-xi-1300",
+      "ts": "2026-10-11T12:03",
+      "kind": "news",
+      "text": "Team news, 13:00 kick-offs: Crystal Palace's confirmed eleven is out. Justin's Strand Larsen and Edward's Khalaili both start; Robert's Mateta is not in the matchday squad. Teamsheets for Forest, Hull and Everton were not available when checked, so Ben D, Small Ben, Marcus and the rest of Edward's and Justin's players are not covered yet.",
+      "source": {
+        "title": "Team News: One change for Palace against Forest",
+        "url": "https://www.cpfc.co.uk/news/first-team/team-news-one-change-for-palace-against-forest/"
+      }
+    },
+    {
+      "id": "2026-10-11-xi-1530",
+      "ts": "2026-10-11T15:03",
+      "kind": "news",
+      "text": "Team news, Liverpool v Man City (15:30 UTC). Liverpool's confirmed XI: Marcus has Alisson starting, Big Ben has Wirtz, Justin has Barcola, and Small Ben has Van Dijk starting but Gakpo, Szoboszlai and Isak are not in the matchday squad. City's teamsheet could not be read from a permitted source in time, so no City players are covered.",
+      "source": {
+        "title": "Confirmed Liverpool line-up v Manchester City",
+        "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-up-v-manchester-city"
+      }
+    },
+    {
+      "id": "2026-10-11-marcus-lead",
+      "ts": "2026-10-11T22:45",
+      "kind": "opinion",
+      "text": "Marcus went into the day on 249, ten behind Edward on 259. All eleven of his starters have now played and none has blanked: De Cuyper 15, Dewsbury-Hall 13, Joao Pedro 12. He is on 326 to Edward's 298, 28 clear, with Edward holding one yet to kick off. Meanwhile Big Ben's team is called Quantum of Tzolis and Tzolis is on Marcus's list, on 0. Marcus will be mentioning all of this by breakfast.",
+      "source": null
+    },
+    {
+      "id": "2026-10-11-small-ben-liverpool",
+      "ts": "2026-10-11T22:45",
+      "kind": "opinion",
+      "text": "Small Ben owns Szoboszlai, Isak, Gakpo and Virgil, and the squad list has all four on 0. Cunha's 10 and Rice's 7 are carrying a 27-point day, he is on 273 and 53 behind Marcus, and two of his eleven have not kicked off yet. That is not a Liverpool stack, it is a charity subscription.",
+      "source": null
+    },
+    {
+      "id": "2026-10-11-robert-131",
+      "ts": "2026-10-11T22:45",
+      "kind": "opinion",
+      "text": "Robert is on 195, 131 behind Marcus, with 25 for the day: eight of his eleven scored, three played and returned nothing, and none are still to come. Cherki's 10 is 10 of the 25, so the rest of the squad combined for 15. At 131 behind he is no longer chasing the leader, he is chasing the tail lights and the leader has fog lamps.",
+      "source": null
+    },
+    {
+      "id": "2026-10-12-city-anfield",
+      "ts": "2026-10-12T07:55",
+      "kind": "news",
+      "text": "Manchester City ran over a ten-man Liverpool at Anfield after Ryan Gravenberch's second yellow card in the 62nd minute, with Rayan Cherki scoring the third, the Guardian reports. City keep their 100% start to the season. Robert owns Cherki, and Small Ben, Marcus, Big Ben and Justin each have a Liverpool player to explain.",
+      "source": {
+        "title": "Cherki cracker caps Manchester City win at Liverpool in face of Anfield taunts",
+        "url": "https://www.theguardian.com/football/2026/oct/11/liverpool-manchester-city-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-12-ipswich-fulham",
+      "ts": "2026-10-12T07:55",
+      "kind": "news",
+      "text": "Ipswich came from behind to beat Fulham, with Abdoul Ouattara levelling in the 88th minute and Dara O'Shea heading the winner in stoppage time, the Guardian reports. Fulham are winless in six and bottom of the table. Marcus, Edward and Big Ben all own Fulham players, and Small Ben has Ipswich's Davis and Enciso.",
+      "source": {
+        "title": "Ipswich stun Fulham with last-gasp comeback to increase heat on Arbeloa",
+        "url": "https://www.theguardian.com/football/2026/oct/10/ipswich-fulham-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-12-hull-everton",
+      "ts": "2026-10-12T07:55",
+      "kind": "news",
+      "text": "Hull and Everton drew in a seesaw game, with Mohamed Belloumi earning Hull the point, the Guardian reports. Everton men on the books: Dewsbury-Hall for Marcus, Tarkowski, Garner and Barry for Edward, Pickford for Justin. Justin also has Hull's Ajayi, so he is on both sides of it.",
+      "source": {
+        "title": "Mohamed Belloumi grabs point for Hull in seesaw draw with Everton",
+        "url": "https://www.theguardian.com/football/2026/oct/11/hull-city-everton-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-12-xi-1900",
+      "ts": "2026-10-12T18:04",
+      "kind": "news",
+      "text": "Team news, Coventry v Newcastle (20:00 BST): all four league players are starting. Edward: Hornicek. Big Ben: Thiaw. Small Ben: Hall and Wissa. Nobody in the league owns a Coventry player.",
+      "source": {
+        "title": "Confirmed line-up: One change for Coventry clash",
+        "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-one-change-for-coventry-clash"
+      }
+    },
+    {
+      "id": "2026-10-12-cov-new",
+      "ts": "2026-10-12T22:45",
+      "kind": "news",
+      "text": "Coventry beat Newcastle 4-1, with Newcastle goalkeeper Lukas Hornicek spilling a ball and giving away a penalty in the fourth minute, which Jack Rudoni scored, ESPN reports. Edward owns Hornicek, Big Ben has Thiaw, Small Ben has Hall and Wissa.",
+      "source": {
+        "title": "Coventry put four past Newcastle to climb out of relegation zone",
+        "url": "https://www.espn.com/soccer/report/_/gameId/401879267"
+      }
+    },
+    {
+      "id": "2026-10-12-op-marcus-edward",
+      "ts": "2026-10-12T22:45",
+      "kind": "opinion",
+      "text": "Marcus 77, Edward 39 for the week, and the lead is now 28. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 did most of that for Marcus, while the best Edward could find was Jackson's 9. Edward went into Monday ahead by ten. Bonus points are still to be added, but nobody is expecting a rescue.",
+      "source": null
+    },
+    {
+      "id": "2026-10-12-op-newcastle",
+      "ts": "2026-10-12T22:45",
+      "kind": "opinion",
+      "text": "Newcastle lost 4-1 and managed to splash the misery across three squads: Edward's goalkeeper gifted a penalty, Big Ben's Thiaw and Small Ben's Hall played 90 minutes between them for nothing, and Wissa's 2 is the only thing resembling a return. A rare league-wide act of unity, and nobody wanted to be part of it.",
+      "source": null
+    },
+    {
+      "id": "2026-10-12-op-bend",
+      "ts": "2026-10-12T22:45",
+      "kind": "opinion",
+      "text": "Big Ben's team is called Quantum of Tzolis, and the Tzolis in question sits in Marcus's squad. Big Ben is fifth on 254, 72 behind the man who actually owns him. A team name that is mostly a monument to somebody else's player.",
+      "source": null
+    },
+    {
+      "id": "2026-10-13-palace-forest",
+      "ts": "2026-10-13T07:42",
+      "kind": "news",
+      "text": "Crystal Palace came from behind to beat Nottingham Forest 3-1 at Selhurst Park, the Guardian reports: Dan Ndoye scored inside three minutes after a weak header by Edward's Anan Khalaili, then Daichi Kamada, Jefferson Lerma and Yeremy Pino turned it round. Edward's Morgan Gibbs-White, Small Ben's Daniel Munoz, Big Ben's Liam Delap and Justin's Jorgen Strand Larsen were all in it; Delap missed a golden chance from three yards at 1-0.",
+      "source": {
+        "title": "Pino finishes off Nottingham Forest on Glasner's unhappy Crystal Palace return",
+        "url": "https://www.theguardian.com/football/2026/oct/11/crystal-palace-nottingham-forest-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-13-brighton-sunderland",
+      "ts": "2026-10-13T07:42",
+      "kind": "news",
+      "text": "Ten-man Brighton won at Sunderland, the Guardian reports, with Maxim De Cuyper (Marcus) sliding in the first goal from a Pascal Gross (Big Ben) through ball in the 53rd minute and Jaouen Hadjam adding a second. Pascal Struijk was sent off after a VAR review, and Brighton stay third on 13 points. Justin's Enzo Le Fee supplied the best deliveries of a cagey first half but faded badly in the second.",
+      "source": {
+        "title": "Ten-man Brighton continue fine form with battling win at Sunderland",
+        "url": "https://www.theguardian.com/football/2026/oct/10/sunderland-brighton-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-13-palmer-groin",
+      "ts": "2026-10-13T07:42",
+      "kind": "news",
+      "text": "Chelsea manager Xabi Alonso admitted that Cole Palmer's decision to sit out the international break was related to last season's groin pain, the Guardian reports. Palmer (Edward) looked free-moving in Saturday's win over Bournemouth, setting up Jordan Henderson's opener inside 68 seconds, and has signed a contract running to 2034.",
+      "source": {
+        "title": "Henderson and Joao Pedro lead Chelsea charge against Bournemouth",
+        "url": "https://www.theguardian.com/football/2026/oct/10/chelsea-bournemouth-premier-league-match-report"
+      }
+    },
+    {
+      "id": "2026-10-13-lead-28",
+      "ts": "2026-10-13T22:45",
+      "kind": "opinion",
+      "source": null,
+      "text": "GW6 is in the books and Marcus sits on 326, 28 clear of Edward on 298, with Justin a further 8 back on 290. Ten fixtures of GW7 are still to come and nobody has kicked a ball, so for one night only the leader is unbeaten, unbothered and presumably already drafting his acceptance speech."
+    },
+    {
+      "id": "2026-10-13-bench-12",
+      "ts": "2026-10-13T22:45",
+      "kind": "opinion",
+      "source": null,
+      "text": "Big Ben left 12 points on his bench in GW6, against 35 from his eleven, which is a rather large second team for a man on 254 and 72 behind. Robert, meanwhile, is on 205 and 121 off the lead: the gap is now wide enough to have its own postcode."
+    },
+    {
+      "id": "2026-10-14-sesko-shin",
+      "ts": "2026-10-14T07:42",
+      "kind": "news",
+      "text": "Manchester United striker Benjamin Sesko has a fresh shin injury with no end date, BBC Sport reports, extending a lack of involvement that the piece says United are keenly feeling. That is Robert's Sesko, who was already left out of the squad against Spurs.",
+      "source": {
+        "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
+      }
+    },
+    {
+      "id": "2026-10-14-fernandes-carrick",
+      "ts": "2026-10-14T07:42",
+      "kind": "news",
+      "text": "Michael Carrick says Bruno Fernandes is \"pretty much over\" the issue he was carrying on international duty and was \"really bright in training\", BBC Sport reports. Fernandes has played every minute of United's six league games, and Big Ben, who owns him, will be hoping the chance creation picks up from the 2.5 per game BBC quotes.",
+      "source": {
+        "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
+      }
+    },
+    {
+      "id": "2026-10-14-arsenal-training-injuries",
+      "ts": "2026-10-14T07:42",
+      "kind": "news",
+      "text": "Mikel Arteta called it \"far from ideal\" that Piero Hincapie and Martin Zubimendi were both hurt in a post-match training session after the win over Leeds, with scans due to give a timeframe, BBC Sport reports. Neither is owned in the league, but all six managers hold Arsenal players.",
+      "source": {
+        "title": "Hincapie and Zubimendi injured in post-match training session",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cmq5nzn8ww98o"
+      }
+    },
+    {
+      "id": "2026-10-14-liverpool-anfield",
+      "ts": "2026-10-14T07:42",
+      "kind": "news",
+      "text": "Liverpool are now without a win in five successive Premier League home games (D4 L1) after the 3-0 defeat to Manchester City, BBC Sport reports, with Andoni Iraola saying his side played \"two different games\" either side of the red card. Small Ben owns Virgil, Gakpo, Szoboszlai and Isak, Big Ben has Wirtz, Justin has Barcola and Marcus has Becker.",
+      "source": {
+        "title": "Winless and an 'easy touch' - what's happened to the Anfield fear factor?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/ck5yn20wej62o"
+      }
+    },
+    {
+      "id": "2026-10-14-delap-dance",
+      "ts": "2026-10-14T22:41",
+      "kind": "opinion",
+      "text": "Small Ben named his team Delap Dance, and Delap is on Big Ben's squad, where he returned 2 in GW6. Small Ben sits on 281, 45 behind Marcus, with Virgil, Gakpo, Szoboszlai and Isak all showing 0 on his squad sheet. It is a team named after a man he does not own, held together by four Liverpool players who did nothing.",
+      "source": null
+    },
+    {
+      "id": "2026-10-14-justin-bench",
+      "ts": "2026-10-14T22:41",
+      "kind": "opinion",
+      "text": "Justin is on 290, 36 behind Marcus, and left 7 points on his bench in GW6 while Haaland returned 6. His bench has therefore out-scored his centre-forward, which is the sort of thing a man with a team called Schwaddy should have noticed before Wednesday night.",
+      "source": null
+    },
+    {
+      "id": "2026-10-14-robert-bottom",
+      "ts": "2026-10-14T22:41",
+      "kind": "opinion",
+      "text": "Robert is on 205, which is 121 behind Marcus and the best part of a whole other league away. Mateta, Sesko, James and Mosquera all show 0 for GW6 on his squad sheet, so at least the zeros have each other for company. The only good news is that none of GW7's ten fixtures has kicked off yet, so he has a full eleven still to disappoint us with.",
+      "source": null
+    },
+    {
+      "id": "2026-10-15-struijk-red-overturned",
+      "ts": "2026-10-15T07:42",
+      "kind": "news",
+      "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he dodges the one-match ban and is available for the visit of Crystal Palace this weekend. He was sent off after 57 minutes on a VAR call for denying Wilson Isidor, and Brighton still won 2-0. Marcus (De Cuyper, Kostoulas), Justin (Vuskovic) and Big Ben (Gross) all own Brighton players and keep their defence at full strength for GW7.",
+      "source": {
+        "title": "Struijk red card after VAR intervention overturned",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
+      }
+    },
+    {
+      "id": "2026-10-15-chelsea-break-caicedo",
+      "ts": "2026-10-15T07:42",
+      "kind": "news",
+      "text": "BBC Sport argues the three-week break did Chelsea more good than anyone: Xabi Alonso reworked a back three that had shipped a league-high 12 goals before the pause, Moises Caicedo returned from his calf problem, and the 5-1 win over Bournemouth followed. Joao Pedro, who scored twice, said the break gave them time to fix the mistakes from the 3-0 loss at Brentford. Edward owns Palmer, Marcus has Joao Pedro and Big Ben has Rogers, and Chelsea go to Everton at 11:30 on Saturday.",
+      "source": {
+        "title": "Did Chelsea benefit most from extended international break?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/ckwy4nj4842qo"
+      }
+    },
+    {
+      "id": "2026-10-15-martinez-wilcox",
+      "ts": "2026-10-15T07:42",
+      "kind": "news",
+      "text": "Lisandro Martinez publicly questioned Manchester United's summer recruitment after the 2-0 defeat to Atletico Madrid, telling CBS \"we don't have the best squad at the moment compared to other top teams\" and \"I expect more from our technical director\", BBC Sport reports. Director of football Jason Wilcox is the target again. Robert (Yoro, Sesko), Marcus (Mbeumo), Small Ben (Cunha) and Big Ben (Bruno Fernandes) all have United players, and United are at Leeds on Saturday.",
+      "source": {
+        "title": "Wilcox the target again in another damaging Man Utd fallout",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cvp8g57ne53xo"
+      }
+    },
+    {
+      "id": "2026-10-15-marcus-swing",
+      "ts": "2026-10-15T22:50",
+      "kind": "opinion",
+      "text": "Marcus started GW6 ten points behind Edward and finished it 28 clear, a 38-point swing built on 77 to Edward's 39. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 supplied 40 of them, and a left-back on 15 is the sort of thing people call luck right up until he is in their own team.",
+      "source": null
+    },
+    {
+      "id": "2026-10-15-robert-recede",
+      "ts": "2026-10-15T22:50",
+      "kind": "opinion",
+      "text": "Robert was 89 behind the leader when GW6 began and is 121 behind now, having scored 35, exactly what Small Ben and Big Ben scored. Thirty-two points of ground gone in a week on a perfectly respectable return is the first thing to recede that fast in that part of the league since his hairline.",
+      "source": null
+    },
+    {
+      "id": "2026-10-15-smallben-looking-up",
+      "ts": "2026-10-15T22:50",
+      "kind": "opinion",
+      "text": "Small Ben began GW6 13 points off the top and ended it 45 off, with Cunha on 10, Donnarumma on 9 and Rice on 7 not nearly enough to stop it. For a man who is always looking up at somebody, the leader is now a very long way up.",
+      "source": null
+    },
+    {
+      "id": "2026-10-16-martinez-apology",
+      "ts": "2026-10-16T07:41",
+      "kind": "news",
+      "text": "Lisandro Martinez has apologised and been fined by Manchester United after criticising the club's hierarchy following the Atletico Madrid defeat, BBC Sport reports. He met the club's leadership and Michael Carrick on Thursday and said he spoke out of frustration. It remains to be seen whether Carrick picks him for Leeds on Sunday at 14:00 BST. Robert has Yoro, Ben D has Bruno Fernandes, Small Ben has Cunha and Marcus has Mbeumo, so four of the six have a stake in how this dressing room feels.",
+      "source": {
+        "title": "Martinez apologises for outburst and fined by Man Utd",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cw77p152jz64o"
+      }
+    },
+    {
+      "id": "2026-10-16-henderson-chelsea-everton",
+      "ts": "2026-10-16T07:41",
+      "kind": "news",
+      "text": "The Guardian's weekend preview picks out Jordan Henderson, who at 36 became the oldest player to contribute directly to three goals in a Premier League game against Bournemouth, as the man who may dictate Chelsea's trip to unbeaten Everton. His partnership with Moises Caicedo is what lets Morgan Rogers, Joao Pedro and Cole Palmer flourish: Rogers is Big Ben's, Joao Pedro is Marcus's and Palmer is Edward's. Everton's defence, in the Guardian's words, littered the draw at Hull with costly mistakes, and Tarkowski, Branthwaite and Pickford belong to Edward, Big Ben and Justin.",
+      "source": {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
+      }
+    },
+    {
+      "id": "2026-10-16-gonzalo-fulham-hull",
+      "ts": "2026-10-16T07:41",
+      "kind": "news",
+      "text": "Gonzalo Garcia has one league goal from 18 shots this season and has not scored since his debut against Chelsea, the Guardian notes ahead of bottom club Fulham hosting Hull City. Fulham have six goals in six games and head coach Alvaro Arbeloa is under increasing pressure. Garcia is Big Ben's, and on the Guardian's numbers his expected goals tally of 3.60 says the finishing is due to turn.",
+      "source": {
+        "title": "Premier League: 10 things to look out for this weekend",
+        "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
+      }
+    },
+    {
+      "id": "2026-10-16-small-ben-waivers",
+      "ts": "2026-10-16T22:45",
+      "kind": "opinion",
+      "text": "Small Ben cut Gakpo for Anderson of Man City in the latest waivers, and Gakpo is now flagged at 25% to play, so the timing was perfect for once. The trouble is Isak and Szoboszlai, still his, both flagged at 25% and both on 0 in GW6 alongside Virgil. He got rid of the one Liverpool player who was no use to him and kept the two who may not be fit, which is a long way from the training camp a man with a boxing match coming should be running.",
+      "source": null
+    },
+    {
+      "id": "2026-10-16-justin-waivers",
+      "ts": "2026-10-16T22:45",
+      "kind": "opinion",
+      "text": "Justin dropped Strand Larsen a week after he returned 5, signed Brobbey of Sunderland, and then dropped E.Le Fee of Sunderland for Stach of Leeds, so he has swapped one Sunderland player for another and called it a plan. Ajayi went for Bogle, also Leeds. Three claims, no recognisable name in any of them, from a manager who left 7 points on his bench in GW6 and decided the fix was at the other end of the pitch.",
+      "source": null
+    },
+    {
+      "id": "2026-10-16-big-ben-bench",
+      "ts": "2026-10-16T22:45",
+      "kind": "opinion",
+      "text": "Big Ben left 12 points on his bench in GW6, the most in the league and a third of what his eleven managed (35). Robert left 1. His Arsenal are Konsa on 4 and Havertz on 2, fewer than Edward or Robert hold, which is a thin return for the league's loudest Arsenal voice. Thiaw, who returned 0, went out for Ajer of Brentford in the waivers, so at least the bench is learning to rotate.",
+      "source": null
+    },
+    {
+      "id": "2026-10-16-marcus-luck",
+      "ts": "2026-10-16T22:45",
+      "kind": "opinion",
+      "text": "Marcus scored 77 in GW6 and 40 of it came from De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12: a Brighton left-back, an Everton midfielder and a Chelsea forward, none of whom anyone else would have named. He leads Edward by 28 with Foden and Tzolis both on 0. Anybody can call that luck, but a man who has been on the right side of it three weeks running is just a different kind of planner.",
+      "source": null
+    },
+    {
+      "id": "2026-10-17-james-surgery",
+      "ts": "2026-10-17T07:50",
+      "kind": "news",
+      "text": "Reece James is out for around three months after knee surgery, BBC Sport reports, the problem picked up in training before Chelsea's 5-1 win over Bournemouth. Xabi Alonso says it is not a two or three week job and expects him back before January. James sits in Robert's squad, which had a quiet Gameweek 6 to forget and now has a Chelsea defender to carry through to Christmas.",
+      "source": {
+        "title": "Chelsea's James out for three months after knee surgery",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
+      }
+    },
+    {
+      "id": "2026-10-17-emegha-everton",
+      "ts": "2026-10-17T07:50",
+      "kind": "news",
+      "text": "Chelsea go to Everton at 12.30 today without Emmanuel Emegha, still waiting on his debut, with Alonso confirming he is not fit enough for the trip. The Chelsea players the league holds are Joao Pedro and Palestra for Marcus, Palmer for Edward, Rogers for Big Ben and Estevao for Robert, and they meet an Everton that has Dewsbury-Hall for Marcus and Tarkowski, Garner and Barry for Edward.",
+      "source": {
+        "title": "Chelsea's James out for three months after knee surgery",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
+      }
+    },
+    {
+      "id": "2026-10-17-struijk-appeal",
+      "ts": "2026-10-17T07:50",
+      "kind": "news",
+      "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he avoids the one-match ban and is available for the trip to Crystal Palace this weekend. Brighton are third, five points behind Manchester City. Marcus has De Cuyper and Kostoulas there, Justin has Vuskovic and Big Ben has Gross, with Palace's Strand Larsen, Khalaili and Mateta on the other side of the derby for Justin, Edward and Robert.",
+      "source": {
+        "title": "Struijk red card shown after VAR intervention is overturned",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
+      }
+    },
+    {
+      "id": "2026-10-17-xi-1130",
+      "ts": "2026-10-17T11:03",
+      "kind": "news",
+      "text": "Team news, Everton v Chelsea (11:30 UTC). Chelsea sheet confirmed. Marcus: Joao Pedro starts, Palestra on the bench. Edward: Palmer starts. Big Ben: Rogers starts. Robert: Martinez starts, Estevao on the bench, James not in the squad. Everton's eleven was not available at a permitted outlet, so Dewsbury-Hall, Tarkowski, Barry, Pickford and Branthwaite are left out of this report.",
+      "source": {
+        "title": "Confirmed Chelsea line up vs Everton",
+        "url": "https://www.chelseafc.com/en/news/article/confirmed-chelsea-line-up-vs-everton-171026"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "ts": "2026-09-20T12:16",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "13:00 slot: confirmed BOU-LIV and MCI-SUN sheets via Sky Sports live blogs (read as raw page data, not search snippets) - all league-owned starters at those four clubs listed, Foden (Marcus) and O'Reilly (Robert) the only ones left out. LEE-CRY sheet was not out at any permitted outlet by kick-off minus ~45 (tried leedsunited.com, cpfc.co.uk, Sky Sports live blog - lineup was image-only graphic with no extractable text); leedsunited.com's own preview did confirm Wilson (Robert) ruled out with a quad injury, so included that fact and left the rest of Leeds/Palace out of the counts rather than guess. BBC domains were unreachable from this session's fetcher throughout."
+    },
+    {
+      "ts": "2026-09-20T15:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 KO FUL v MUN: confirmed both squads via Sky Sports teams page (read as raw page data, id 6387779637306466232). Lammens (Edward), Mbeumo/King (Marcus), Cunha (Ben C) and B.Fernandes (Ben D) all start; Yoro (Robert) is a Man Utd substitute; Gonzalo (Ben D, Fulham) and Sesko (Robert, Man Utd) are both left out of their matchday squads entirely. manutd.com's own team-news article for this fixture stayed behind a Cloudflare 403 all run, same as this morning."
+    },
+    {
+      "ts": "2026-09-20T22:48",
+      "news": 2,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap, GW5 done. Led with Isak's winner at Bournemouth (Ben C's Isak/Gakpo, Ben D's Wirtz in the build-up, Alisson v Evanilson both Marcus's) and the City 5-3 Sunderland thriller (Semenyo/Edward, Haaland/Justin, Brobbey hat-trick unowned). Opinion: used Ben C's unused roast about Robert's team management, tied to tonight's four blanks and 91-point gap; wrote up Marcus owning both ends of the Alisson-Evanilson save; and a team-name piece on Ben C's Delap Dance and Ben D's Quantum of Tzolis both being named for rivals' players. Passed over the two other unused roast submissions (Ben D on Ben D, Ben D on Justin) - both hit categories (sexuality, race) that stay off this page regardless of target, so they are not going up any week. Rewrote all 9 of today's FLOP lines via reflop.py."
+    },
+    {
+      "ts": "2026-09-21T07:46",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news, no fixtures today (int'l break starts). GW5 wrap-up: covered the two Sunday matches the evening wrap missed - Fulham 1-1 Man Utd (Lammens/Martinez own goal, Cunha's late equaliser, touching Edward/Ben C/Ben D) and Leeds 0-0 Crystal Palace (Khalaili's disallowed assist and Calvert-Lewin's miss both Edward's, Trafford's saves for Ben D). Also reported Tuchel's England squad, which calls up players from all six squads. Roast archive unchanged - the two unused submissions are the slur/race ones flagged off-limits on 20 Sept, nothing new submitted since."
+    },
+    {
+      "ts": "2026-09-21T22:55 UTC",
+      "news": 2,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday - international break, GW6's ten fixtures all still to come per the live feed. This session started with a stale local checkout (three commits behind main) and drafted a full set of items on Man City 5-3 Sunderland, Arsenal 3-0 at Brighton and Robert's Roefs/Cherki split before the rebase conflict surfaced that all of it, plus a near-identical state-of-the-table opinion, had already been posted by two runs earlier today and yesterday evening. Aborted that rebase, reset to origin/main, and re-read the actual current page before writing anything - the GW5 story is thoroughly told already. What was left: Cole Palmer and Declan Rice, named in this morning's England call-up post, withdrew from the Nations League squad this afternoon (confirmed via BBC, updated 16:06 UTC, after our 07:55 post) with Edward's Gibbs-White and Garner drafted in as replacements; and Enzo Fernandez's first City goal in the already-reported 5-3 win, a detail that hadn't been mentioned. Two opinion pieces off previously-unused angles in the now-final GW5 numbers: Edward's one gameweek win from five yet leading the table, and Robert's Cherki (8) and Roefs (0) landing at opposite ends of the same match. Roast archive unchanged - the two unused submissions are the same sexuality and race jokes flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
+    },
+    {
+      "ts": "2026-09-22T07:47 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning news. GW6's ten fixtures are today (the last round before the September/October international break), all still to kick off per the live feed, so nothing on the pitch to report yet - focused research on pre-break team news instead. Verified three items by reading the club pages directly rather than trusting search summaries, several of which were unreliable or stale (a mancity.com snippet crediting Enzo Maresca as City boss did not hold up on inspection and was dropped; an old NUFC piece from Dec 25 and JS-rendered Everton/Villa/Man City pages could not be read and were skipped). Used: Lewis Hall's England call-up (Ben C's top scorer), Cole Palmer's return from injury alongside Caicedo's suspension (Edward), and Harry Wilson's quad injury (Robert, currently on 0). No roast pieces today - this is the news run; the two unused archive submissions remain the sexuality/race-adjacent ones flagged out of bounds on 17 and 20 September and stay unused."
+    },
+    {
+      "ts": "2026-09-22T22:43 UTC",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday - deep in the international break, confirmed the GW6 fixture list itself (kicks off 10 October, not today despite an earlier run's note to the contrary) rather than trusting that note. Live feed shows all ten GW6 fixtures still to come, nothing scored, so no points-dependent items. The only automatic posts today were two free-agent injury notes (Dunk, Struijk) touching none of the six squads, and nothing new turned up in research that cleared the permitted-source bar and wasn't already covered. Roast archive still has just the same two unused submissions (Ben D on himself, Ben D on Justin) flagged out of bounds on 17/20 September for sexuality and race content respectively - left unused again, permanently rather than pending a fact. Wrote one state-of-the-league opinion instead: the top four bunched inside 13 points, the bottom two already out of range, three weeks until any of it can move."
+    },
+    {
+      "ts": "2026-09-23T07:58 UTC",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. Deep in the international break - GW6 doesn't kick off until 10 October, confirmed against fixtures_2627.json rather than trusting the live feed's bare kickoff times, which lacked dates and briefly looked like a same-day GW6. No opinion pieces, per the morning rule. Verified every fact by fetching the actual outlet rather than trusting search summaries, which disagreed with each other on basic things like who manages Man City and Chelsea this season (one summary wrongly had Maresca at City; the directly-fetched mancity.com and skysports.com pages settled it as Guardiola and Rosenior respectively) - dropped anything I couldn't pin to a primary source. Used: Reece James's 10th hamstring injury (Robert), Benjamin Sesko's shin withdrawal from the Slovenia squad (also Robert - a rough morning for the bottom side), and Kinsky's Czech recall plus Marmoush's Egypt AFCON-qualifier duty (Marcus and Justin) off the Tottenham international-fixtures roundup. Passed over: Antoine Semenyo's Ghana ankle withdrawal (Edward) and Lewis Hall's new Newcastle contract (Ben C) - both real and fresh but never turned up on a permitted outlet despite repeated searches, only aggregators. The Garner/Gibbs-White England replacement call-ups looked promising but turned out to already be posted on 21 September. Roast archive unchanged - the two unused submissions are the sexuality and race-adjacent ones flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
+    },
+    {
+      "ts": "2026-09-23T22:41 UTC",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Deep in the international break, no fixtures today (fixtures_2627.json confirms 0 today; the live feed's GAMEWEEK 6 listing with bare kickoff times is upcoming, not tonight - matches an earlier run's finding that GW6 doesn't start until 10 October). Nothing to rewrite for FLOPs since no automatic items posted today. Led with Rayan Cherki's torn quad (ESPN, read directly, quoting Guardiola's own 'seven or eight weeks'), which matters because he was Robert's best GW5 scorer in a squad already 89 off the pace. One opinion piece per the no-football/no-archive-material rule, built on a verifiable oddity in the standings printout: neither Ben's team name matches a player he actually owns. Roast archive: both unused submissions (Ben D on Ben D, Ben D on Justin) remain unused - one invokes sexuality, the other race via apartheid, both excluded outright by rule 4 regardless of who they target or who submitted them; consistent with the 17/20 September calls, they are not pending a fact and will not be used."
+    },
+    {
+      "ts": "2026-09-24T07:52 UTC",
+      "news": 1,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. Still deep in the international break (fixtures_2627.json confirms GW6 doesn't kick off until 10 October); the live feed's GW6 listing has bare kickoff times with no date and briefly looked like a same-day fixture list again, same trap as two days ago - ignored it. Checked every candidate against the full 80-item archive before writing anything, not just the last 12: Cole Palmer's withdrawal and Morgan Gibbs-White/James Garner's call-ups (21 Sept), Jarrad Branthwaite and Jordan Pickford's England call-ups (21 Sept squad list), and Declan Rice's withdrawal were all already posted, so despite a dozen searches turning them up as if fresh, none of it was usable. Led instead with something genuinely new: Virgil van Dijk closing in on his 100th Dutch cap and Cody Gakpo alongside him as Jurgen Klopp takes his first game in charge of Germany tonight in Amsterdam, with Florian Wirtz held back until October - read directly off liverpoolfc.com. Passed over: a Bukayo Saka goal at Aston Villa (arsenal.com match report) because the exact date within the season couldn't be pinned down with confidence; Nottingham Forest's Milenkovic/Savona injuries pulling Murillo into a back three, since every write-up sat on unpermitted sites and Forest's real site is nottinghamforest.co.uk, not the .com on the sources list; Wissa's recovery update, which turned out to be dated to last season; and Gabriel's Brazil call-up and Mateta's injury at Palace, neither of which I could pin to a permitted source I'd actually read. Roast archive untouched - no opinion pieces on a morning run, and both unused submissions remain out of bounds regardless."
+    },
+    {
+      "ts": "2026-09-24T22:43 UTC",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday and deep in the international break - fixtures_2627.json and the live feed both confirm GW6 doesn't kick off until 10 October, so no points moved today and no FLOP lines to rewrite. Led with Kai Havertz being forced off for Germany against the Netherlands (Sky Sports, read directly - the article names an injury for Brobbey but not for Havertz, so left the type unconfirmed rather than borrow the hamstring diagnosis from unpermitted sites); he's on Ben D's fifteen, already 40 back. Passed over Antoine Semenyo's Ghana ankle withdrawal (Edward's squad) and Brian Brobbey's own hamstring knock (a free-agent waiver target) - both real and reported everywhere, but every write-up I could find sat on aggregators or non-permitted sites; will keep checking for a permitted source. One opinion piece per the no-football/no-archive-material rule: Robert's fifteen has now had four different players (Cherki, Sesko, James, Wilson) flagged with injuries in the same week, all already reported, tied to his 89-point deficit. Roast archive: the same two submissions remain unused (Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid), both excluded outright by rule 4 regardless of who they target - not pending a fact, permanently unused."
+    },
+    {
+      "ts": "2026-09-25T07:49 UTC",
+      "news": 5,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning news. Still deep in the international break - fixtures_2627.json confirms no fixtures today (GW6 kicks off 10 October); the live feed's kickoff times for GW6 are time-of-day only and belong to that same 10 October slate, not today, so this is not a matchday. Five items, all from club/broadcaster sites read directly: Alisson's Save of the Month nomination (Marcus); Gakpo's stoppage-time equaliser and Van Dijk's disallowed header for the Netherlands against Germany, Klopp's first match in charge of the Germans, plus Wirtz being rested from that game (Ben C x2, Ben D); Bruno Fernandes in an unfamiliar left-midfield role as Portugal beat Wales (Ben D); Pickford and Branthwaite both called into England's squad, Branthwaite's first under Tuchel, ahead of Saturday's Spain game (Justin, Ben D); Estevao's brace for Brazil against South Korea (Robert). Passed over Semenyo's ankle injury on Ghana duty (Edward's squad, genuinely reported) and an Odegaard-to-Haaland international goal (Edward and Justin) - both real but every write-up I found sat on aggregators, fan sites or SI/Yardbarker, none on the permitted list; will keep checking. No opinion pieces - morning run."
+    },
+    {
+      "ts": "2026-09-25T22:46 UTC",
+      "news": 2,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. Still deep in the international break - fixtures_2627.json shows no fixtures today and the live feed confirms GW6 doesn't kick off until 10 October (its kickoff times are time-of-day only, for that slate, not today), so no points moved and there were no FLOP lines to rewrite. Two news items, both read directly and dated today: Cole Palmer's withdrawal from England's squad through injury (Sky Sports; Edward's) and Virgil van Dijk denying Dutch reports that he forced Koeman's back-five switch at the World Cup (Sky Sports; Ben C's). One opinion piece, built on the Van Dijk story rather than restating the table again - the standings (259/252/249/246/219/170) haven't moved since they were last reported on 22 and 24 September, so a third recap would just repeat itself; this instead pairs the reported news with Van Dijk's actual GW5 return. Roast archive: the same two submissions remain unused and stay that way - Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid - both barred outright by rule 4, not waiting on a fact."
+    },
+    {
+      "ts": "2026-09-26T07:48",
+      "news": 2,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning run, GW6 matchday (10 fixtures from 11:30 UTC, none kicked off yet). Led with Man City's guilty verdict on the majority of the 115 charges (BBC, Fri) - touches every squad but Edward's - and Tottenham's winless start amid De Zerbi's international-break squad disruption (BBC). No opinion pieces on a morning run. Research was heavy on stale/mis-dated search results (years-old press conferences and FA Cup-era injury stories resurfacing for Arsenal, Liverpool, Man City, Everton, Newcastle, Chelsea, Man Utd and Brighton), so kept to two items I could verify by reading the primary source rather than pad the count. Two roast-archive submissions remain unused (Ben D on Ben D; Ben D on Justin) - held for tonight's wrap, not used on a news-only morning run."
+    },
+    {
+      "ts": "2026-09-26T22:51 UTC",
+      "news": 2,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap. Not a matchday and not even close: fixtures_2627.json confirms 0 fixtures today, and cross-checking the live feed's GW6 entries against fixtures_2627.json shows that gameweek doesn't start until 10-12 October - the live feed only prints kickoff time-of-day, which makes an upcoming slate look like 'today' if you don't check the date underneath, so no points moved and there was nothing to build a hauls/blanks piece on. Two news items, both read directly and dated within the international break: Isak's goal for Sweden plus Szoboszlai and Barcola's international minutes (Liverpool FC; Ben C and Justin), and the Guinness Goal of the Month shortlist naming Barnes, Mbeumo and Jackson (Newcastle United; Ben C, Marcus, Edward). Two opinion pieces since there was no day of football to roast: Ben D's team name 'Quantum of Tzolis' naming a player who actually plays for Marcus, and Robert's bench sitting on the only zero in the table while he's last by 89. Roast archive unchanged - the same two submissions (Ben D on Ben D; Ben D on Justin) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
+    },
+    {
+      "ts": "2026-09-27T07:50 UTC",
+      "news": 2,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning run. fixtures_2627.json confirms 0 fixtures today (next GW6 kickoffs aren't until 10-12 October per yesterday's run note; the live feed's HH:MM-only kickoff times keep making that slate look same-day). Two news items, both read at the primary source and dated this week: Cole Palmer's return from a two-month groin/toe injury for a 30-minute cameo against Leeds, with Maresca noncommittal on his next start (Chelsea FC; touches Edward, who has Palmer on 2 points); and Antoine Semenyo's Premier League Player of the Month nomination for September (Man City; Edward's top scorer on 17 points, voting closes Monday). Research was heavy going for the rest: repeated searches on Arsenal, Man City, Newcastle, Everton, Liverpool, Nottingham Forest, Man Utd, Tottenham, Villa, Brighton and Ipswich mostly surfaced press conferences and injury pieces from February, April and last September that Google is resurfacing as if current, or results scattered across different fictional-calendar match dates - each was checked against the page's own datePublished and dropped when it didn't hold up, rather than published on a stale date. nottinghamforest.com is not the club's real site (redirects to a placeholder; the genuine site is .co.uk and isn't on the permitted list), so a live Gibbs-White/Murillo story had to be dropped for lack of a citable source. No opinion pieces on a morning run. No FLOP lines to rewrite. Roast archive unchanged: the same two unused submissions (Ben D on Ben D; Ben D on Justin) wait for tonight's wrap."
+    },
+    {
+      "ts": "2026-09-27T22:41 UTC",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap. fixtures_2627.json confirms 0 fixtures today (GW6 still doesn't start until 10-12 October); the live feed's HH:MM-only kickoff times keep making that slate look same-day, but 0 of 10 fixtures had kicked off and every manager's live total equalled their pre-kickoff total, so no hauls/blanks piece was possible. Research this evening: confirmed via Sky Sports that Isak (thigh, out of Sweden's remaining games) and via multiple non-permitted outlets that Gakpo (ankle, hurt in today's Serbia 1-2 defeat) are fresh injury concerns for Ben C, but both are already on the page today as automatic INJURY items, so neither became a news item of mine - and no permitted outlet (BBC/Sky/Guardian/PL/ESPN/Reuters/AP/Athletic/club site) carried the Gakpo detail, so it would have been unsourceable anyway. Checked Havertz (hamstring, Germany, already posted 24 Sept), Van Dijk (nearing 100 caps, but no permitted outlet confirms today's Serbia involvement), Man City's verdict (already posted 26 Sept) and tomorrow's Belgium-France game (hasn't been played yet) - all either duplicates or unconfirmable, so zero news items tonight rather than padding the count. One opinion piece: seven of Robert's fifteen sit on zero points for the season, a fresh angle off the printout's own squad list, closing on his top scorer Cherki's torn quad. Roast archive unchanged - the same two submissions (Ben D on Ben D, touching sexuality; Ben D on Justin, hung on apartheid) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
+    },
+    {
+      "ts": "2026-09-28T22:50",
+      "news": 2,
+      "opinion": 3,
+      "matchday": false,
+      "note": "Evening, no fixtures (international break, GW6 starts 10 Oct). Led with Isak/Gakpo and Havertz/Fernandes injuries from ESPN. Passed over both unused roast suggestions: one is a sexuality slur, the other is race-related; neither is used. No flops today so no reflop. Opinions built on GW5 final numbers only."
+    },
+    {
+      "ts": "2026-09-29T07:41",
+      "news": 2,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with O'Reilly ruled out/Konsa in and the Pickford v Trafford England race, both BBC Sport. Fewer items than quota: search tool returned mostly fantasy/aggregator sites and the City verdict was already posted 26 Sep. Roast archive: 2 unused (Ben D on himself, Ben D on Justin) both left unused: slur/race-adjacent and not fit to publish; morning run has no opinion anyway. Note: BBC copy says the league resumes 11 Oct while the live feed lists GW6 fixtures today, so I asserted nothing about fixture dates."
+    },
+    {
+      "ts": "2026-09-29T22:45",
+      "news": 1,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening, no fixtures today and GW6 not yet started, so no points-dependent claims beyond settled GW5. Led with Suzuki rib doubt (ESPN). Two roast suggestions left unused: one is a homophobic slur, the other is aimed at race/politics - both out of bounds under the rules. No flops today, nothing to reflop."
+    },
+    {
+      "ts": "2026-09-30T07:55",
+      "news": 4,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with the Man City guilty verdict and who owns City players. Roast suggestions left unused: both unused entries are unusable (one is a slur, the other alleges something serious as fact about a real person), so not written."
+    },
+    {
+      "ts": "2026-09-30T22:46",
+      "news": 1,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening wrap, no fixtures (international break, GW6 has not kicked off). Led with Havertz muscle strain (ESPN) and a state-of-the-table piece. Both unused roast suggestions passed over: one is a slur, the other is aimed at race/politics; neither is usable. No flops today."
+    },
+    {
+      "ts": "2026-10-01T07:42",
+      "news": 2,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with BBC on Man City punishment timing; Van Hecke foot injury via ESPN tracker. Most other break injuries (Isak, Gakpo, Havertz, Fernandes, Suzuki, O'Reilly) already posted; Dorgu/Mazraoui/Brobbey not owned in the league. Fewer than quota: nothing else found on permitted outlets. No roast suggestions used (morning)."
+    },
+    {
+      "ts": "2026-10-01T22:50",
+      "news": 1,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening, no fixtures (GW6 not started). Led with Alonso on Joao Pedro's knee (PL site, read directly; Marcus). Opinion: Big Ben's team name v Tzolis being Marcus's, and Robert's zero-scorers. Both unused roast suggestions held: one is a sexuality slur, the other an apartheid reference aimed at race/politics, so neither is going on the page. Passed over Isak/Gakpo/Semenyo/Palmer injuries as already posted. Note: Robert's zero-list is from the gameweek 5 squad line in public.json."
+    },
+    {
+      "ts": "2026-10-02T08:15",
+      "news": 2,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Tzolis injury (ESPN) and Wirtz/Van Dijk internationals (liverpoolfc.com). Only two items: other searches returned stale or off-list sources (Sesko story dated 21 Sept, Sky blogs unreadable). Passed over both unused roasts: one is a slur and one is aimed at race, so neither is used."
+    },
+    {
+      "ts": "2026-10-02T22:47",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening, no fixtures today, GW6 not started. Zero reported items: search only surfaced off-list or unreadable pages (ESPN injuries piece would not load, Tzolis detail only via Yahoo/TeamTalk/Metro), so nothing was cited. Opinion on the table and Marcus's Arsenal exposure. Held both unused roasts: one is a slur, the other is aimed at race. No flops today so reflop not run."
+    },
+    {
+      "ts": "2026-10-03T07:50",
+      "news": 1,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. One item: Man City appeal and what the verdict means for their squad (BBC), because it touches all six squads. Search tooling returned mostly stale or off-list results and bbc/guardian domains are blocked from WebSearch, so I published fewer, better-sourced items rather than fill the quota. Roast archive untouched on a morning run; the two unused suggestions stay held (one about a slur-adjacent insult and one referencing apartheid, both outside the banter rules)."
+    },
+    {
+      "ts": "2026-10-03T22:41",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening. No matchday and no fixture of GW6 kicked off, so no wrap material. Search returned only stale or unverifiable articles, so no reported items rather than an uncited one. Opinion: the Liverpool v Man City split across squads, and Robert's 89-point gap. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over: one is a slur and the other is aimed at race. Neither is used. No flop lines to rewrite."
+    },
+    {
+      "ts": "2026-10-04T07:42",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. International break, no fixtures until 10 Oct. Most searches returned only off-list or already-posted stories (Havertz, Isak, Gakpo, Suzuki, O'Reilly already covered); Semenyo's Ghana withdrawal and Arsenal return-to-training news only found on non-permitted sites so dropped. Led with the premierleague.com return-of-the-league piece: Haaland v Isak, Arsenal v Leeds and Man Utd v Spurs, Coventry v Newcastle. No opinion on a morning run; roast archive untouched."
+    },
+    {
+      "ts": "2026-10-04T22:45",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening, international break, no fixtures today and all ten GW6 fixtures still to come, so no points-based pieces and no flops to rewrite. No reported items: nothing new worth citing since the morning run. One opinion on the leader owning neither Haaland nor Isak. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over and left unused: one is a slur, the other is aimed at race/politics, neither is publishable."
+    },
+    {
+      "ts": "2026-10-05T07:55",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with the international-break injury scares: Haaland, Isak/Gakpo, Havertz. Roast archive: both unused suggestions passed over (slur/sexuality-and-race territory); no opinion on a morning run anyway."
+    },
+    {
+      "ts": "2026-10-05T22:50",
+      "news": 2,
+      "opinion": 3,
+      "matchday": false,
+      "note": "evening wrap, no fixtures today (international break, GW6 starts Saturday). Led with Scott quad/Konsa and O'Reilly/Saka from the PL internationals round-up. No flops to rewrite. Both unused roast suggestions passed over: one is a slur aimed at the submitter, the other is aimed at race; neither used."
+    },
+    {
+      "ts": "2026-10-06T07:50",
+      "news": 2,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Man City's appeal and Liverpool v Man City. Only two items: most search results were off-list outlets, so I held back anything I could not source to a permitted outlet I had read. Unused roast suggestions (2) passed over: one is a slur and the other is aimed at race/politics, neither used."
+    },
+    {
+      "ts": "2026-10-06T22:45",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening. No fixtures today and GW6 not started, so no wrap on hauls. Searches found nothing new at a permitted outlet beyond Isak/Gakpo/Havertz items already posted, so no reported items. Led with the table before GW6. Passed over both unused roast suggestions: one is a homophobic slur and the other an apartheid jibe that is a claim aimed at race, both outside the line. Both left unused. No flops today so reflop not run."
+    },
+    {
+      "ts": "2026-10-07T07:55",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with the BBC international-break injury round-up (Bruno Fernandes playing through pain) and BBC's England takeaways (Palmer/Gibbs-White, Rogers, Rice). Search tool could not query BBC/Guardian, so read their pages directly; Man City legal stories skipped as already covered. Both unused roast suggestions passed over: one is a slur aimed at the sender himself, the other rests on a race-adjacent charge and is not a joke about anything in the table."
+    },
+    {
+      "ts": "2026-10-07T22:41",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening wrap, non-matchday with GW6 not yet kicked off. One search found no usable current reports from permitted outlets, so no news. Led with the bunched top four and the bench ledger. Passed over both unused roast entries (2026-09-12-ca1422e269 and 2026-09-12-d9048f2afb): both hang on slurs or sexuality/race-adjacent material, outside the rules. No flops to rewrite."
+    },
+    {
+      "ts": "2026-10-08T07:50",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Rice's new Arsenal deal (BBC), then Arteta's contract and Rogers v Bournemouth. Search engine returned mostly fantasy sites so only BBC pieces read in full. Roast archive: 2 unused, both passed over - one is an insult at a slur level, the other aimed at race/politics; neither is fit to publish and it's a morning run anyway."
+    },
+    {
+      "ts": "2026-10-08T22:45",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening, no fixtures today (GW6 not started); no football to report, so two opinion pieces off team names and Robert's position. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): both aimed at sexuality/race, out of bounds. No flops today."
+    },
+    {
+      "ts": "2026-10-09T07:55",
+      "news": 5,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Liverpool and Arsenal international-break injuries (Guardian), plus Scott, Sunderland and Konsa. Search tool could not reach BBC/Guardian directly so read articles by curl. Roast archive: both unused suggestions left alone (slur/sexuality and apartheid, outside what the banter rules allow); no opinion on morning runs anyway."
+    },
+    {
+      "ts": "2026-10-09T22:45",
+      "news": 0,
+      "opinion": 1,
+      "matchday": false,
+      "note": "Evening, no fixtures today and no points to quote, so no reported items and one opinion on Quantum of Tzolis. Left both unused roasts alone: the Ben D self-submission is a slur, and the one about Justin is aimed at race. No football research done; nothing had been played."
+    },
+    {
+      "ts": "2026-10-10T07:41",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning. Led with Baleba's possible United debut; searches were mostly stale so only three items from Guardian/BBC pages actually read. Roast archive untouched (morning, no opinion): the two unused suggestions are a slur-adjacent self-insult and an apartheid line aimed at a mate, both held back as they fall under the excluded categories."
+    },
+    {
+      "ts": "2026-10-10T16:03",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "16:30 UTC slot: MUN v TOT, both sheets found on tottenhamhotspur.com"
+    },
+    {
+      "ts": "2026-10-10T22:50",
+      "news": 1,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap. Led with Chelsea 5-1 Bournemouth (ESPN); no other match report found at a permitted outlet. Opinions: Marcus, Robert, Anfield-owns-the-league; rewrote today's flop lines. Both unused roast suggestions passed over: one is a sexuality slur, the other is aimed at race. Neither is usable, so they stay unused. Flop rewrite skipped: reflop.py found no flop events from today in data/news.json (they exist only in public.json), so the script refuses; template lines left as they were."
+    },
+    {
+      "ts": "2026-10-11T07:50",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning. Led with Hincapie carried off at Arsenal, Palmer's new Chelsea deal, and the Man Utd v Spurs draw. Both unused roast suggestions held: one is a slur-adjacent insult and the other alleges a political stance as fact; neither suits a morning run anyway."
+    },
+    {
+      "ts": "2026-10-11T12:03",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "13:00 slot: found Crystal Palace sheet (cpfc.co.uk); Forest, Hull, Everton sheets not available"
+    },
+    {
+      "ts": "2026-10-11T15:03",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:30 UTC slot, LIV v MCI: Liverpool sheet found (liverpoolfc.com); City sheet not readable (mancity.com 403), left out"
+    },
+    {
+      "ts": "2026-10-11T22:45",
+      "news": 0,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap. No reported items: searches turned up no usable same-day report from a permitted outlet for the three matches (only old-season or undated pages), so nothing was posted rather than guess. Opinion: Marcus lead/Tzolis, Small Ben Liverpool zeros, Robert 131 back. Rewrote the 8 league-scope flop lines; the 3 Justin-only flops (Barcola, Pickford, Ajayi) are stored as 'yours' in news.json and cannot be matched by reflop.py so were left. Roast suggestions left unused: both by Ben D (one a slur, one aimed at race/politics), held out under rule 4, not coming back."
+    },
+    {
+      "ts": "2026-10-12T07:55",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning. Led with the Anfield result (Guardian), then Ipswich v Fulham and Hull v Everton. Search was thin: only Guardian pages were read; the Newcastle at Coventry team news came only from a fantasy site so was dropped. Roast archive: 2 unused, not touched on a morning run."
+    },
+    {
+      "ts": "2026-10-12T18:04",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "19:00 UTC slot: Newcastle sheet found on newcastleunited.com; Coventry has no league-owned players"
+    },
+    {
+      "ts": "2026-10-12T22:45",
+      "news": 1,
+      "opinion": 3,
+      "matchday": true,
+      "note": "Evening wrap. Led with Coventry 4-1 Newcastle (ESPN/PA report); Marcus v Edward, Newcastle owners, Big Ben/Tzolis opinions. Left both unused roast suggestions: one is a homophobic slur and the other trades on apartheid/race, both outside the rules (and the first is Big Ben's own, aimed at himself). Reflopped all four of today's FLOP lines."
+    },
+    {
+      "ts": "2026-10-13T07:42",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning, no fixtures today. Led with Palace 3-1 Forest, Brighton at Sunderland and Palmer's groin admission, all read from Guardian pages by curl (search surfaced only aggregators). Skipped Utd v Spurs and Chelsea v Bournemouth results as already posted. No opinion on morning run; roast archive untouched (2 unused: both fail rule 4 - one is a slur-adjacent/apartheid line about a real political regime, one is a slur - left unused)."
+    },
+    {
+      "ts": "2026-10-13T22:45",
+      "news": 0,
+      "opinion": 2,
+      "matchday": false,
+      "note": "Evening. No fixtures today and GW7 not started; one search found nothing usable from permitted outlets, so no reported items. Led with the table after GW6. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): they target sexuality/race, which are off limits. No flops today so reflop not run."
+    },
+    {
+      "ts": "2026-10-14T07:42",
+      "news": 4,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Sesko's fresh shin injury and Carrick on Fernandes (BBC), then Arsenal training injuries and Liverpool's Anfield form. No opinion on a morning run. Both unused roast suggestions (Ben D on himself; Ben D on Justin) left unused: one is a slur-adjacent self-insult and the other is aimed at a nationality/politics angle that is not a clean joke, so both stay passed over."
+    },
+    {
+      "ts": "2026-10-14T22:41",
+      "news": 0,
+      "opinion": 3,
+      "matchday": false,
+      "note": "Evening. No fixtures today and GW7 not started, so no flops to rewrite; searches turned up nothing usable from permitted outlets, so no reported items. Opinion built on GW6 table/squad sheets and team names. Passed over both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): one is a slur and the other is aimed at race/politics, neither goes on the page."
+    },
+    {
+      "ts": "2026-10-15T07:42",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning. Led with Struijk's overturned red card (Brighton owners Marcus, Justin, Big Ben). Search tool returned stale results so sourced direct from BBC Sport pages. No evening-only material; roast archive not used on a morning run (all 13 untouched, none passed over for cause)."
+    },
+    {
+      "ts": "2026-10-15T22:50",
+      "news": 0,
+      "opinion": 3,
+      "matchday": false,
+      "note": "Evening. No fixtures today, GW7 not started, so no flops to rewrite. Search was blocked for BBC/Guardian and a direct BBC fetch returned nothing usable, so no reported items. Opinion on the GW6 swing between Marcus and Edward, Robert's gap and Small Ben's gap, using the 'relies on luck', hairline and height suggestions as angles. Passed over 2026-09-12-ca1422e269 (slur), 2026-09-12-d9048f2afb (nationality/politics) and 2026-09-13-f263c0fa06 (needs facts not in the feed); 2026-09-12-b4e9e2f836 and 09-20 and others untouched this run."
+    },
+    {
+      "ts": "2026-10-16T07:41",
+      "news": 3,
+      "opinion": 0,
+      "matchday": false,
+      "note": "Morning, no fixtures today. Led with Martinez's apology and fine at Man Utd (BBC), then Guardian weekend preview items on Chelsea at Everton and Gonzalo Garcia at Fulham. Opinion not run in the morning, so no roast suggestions used or passed over."
+    },
+    {
+      "ts": "2026-10-16T22:45",
+      "news": 0,
+      "opinion": 4,
+      "matchday": false,
+      "note": "Evening, no fixtures today and GW7 not kicked off, so no football to wrap. No reported items (morning run covered the news). Four opinion pieces from the latest waivers and GW6 figures (Small Ben, Justin, Big Ben bench, Marcus). Live feed totals were pre-GW6 settled so I quoted public.json GW6 figures only. Archive used: Ben C boxing line, Edward on Ben D Arsenal, Edward on Marcus luck. Passed over for now: hairline lines on Robert (no fresh Robert fact), the Ben D self-roast and the Justin nationality line (not fit to land), Jobacus/Catholic line on Marcus (nothing to hang it on tonight), Justin pint line on Robert (nothing true to hang it on). No flops to rewrite today."
+    },
+    {
+      "ts": "2026-10-17T07:50",
+      "news": 3,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning. Led with Reece James's three-month injury (Robert's) off BBC Sport, then Emegha ruled out at Everton and Struijk's red overturned. Guardian and Sky were not usable for detail; WebSearch returned only off-list or stale results so BBC pages were read directly. Roast archive untouched (morning, no opinion)."
+    },
+    {
+      "ts": "2026-10-17T11:03",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "2026-10-17 11:30 slot: Chelsea sheet found (chelseafc.com); Everton sheet not found"
+    }
+  ]
 }
