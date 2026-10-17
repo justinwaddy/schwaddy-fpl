@@ -2,16 +2,6 @@
   "generated": "2026-10-17T07:50 UTC",
   "items": [
     {
-      "id": "2026-10-05-haaland-subbed",
-      "ts": "2026-10-05T07:55",
-      "kind": "news",
-      "text": "Erling Haaland asked to be substituted after 67 minutes of Norway's 2-1 Nations League defeat by Portugal on Sunday, with no word afterwards on his fitness. He was replaced by Jorgen Strand Larsen, so both are Justin's, and Manchester City visit Anfield on Sunday 11 October.",
-      "source": {
-        "title": "Erling Haaland injury fear after asking to be substituted for Norway",
-        "url": "https://www.espn.com/soccer/story/_/id/50107853/erling-haaland-injury-fear-asked-substituted-norway"
-      }
-    },
-    {
       "id": "2026-10-05-isak-gakpo",
       "ts": "2026-10-05T07:55",
       "kind": "news",
@@ -710,16 +700,19 @@
         "title": "Confirmed Chelsea line up vs Everton",
         "url": "https://www.chelseafc.com/en/news/article/confirmed-chelsea-line-up-vs-everton-171026"
       }
+    },
+    {
+      "id": "2026-10-17-xi-1400",
+      "ts": "2026-10-17T13:07",
+      "kind": "news",
+      "text": "Team news, 15:00 kick-offs: Liverpool's confirmed XI at Brentford has all six league players starting - Marcus (Alisson), Small Ben (Van Dijk, Szoboszlai, Isak), Big Ben (Wirtz) and Justin (Barcola). Teamsheets for Brentford, Fulham and Man City were not available at time of writing, so league players at those clubs are not counted yet.",
+      "source": {
+        "title": "Team news: Confirmed Liverpool line-up v Brentford",
+        "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-brentford"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-20T12:16",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "13:00 slot: confirmed BOU-LIV and MCI-SUN sheets via Sky Sports live blogs (read as raw page data, not search snippets) - all league-owned starters at those four clubs listed, Foden (Marcus) and O'Reilly (Robert) the only ones left out. LEE-CRY sheet was not out at any permitted outlet by kick-off minus ~45 (tried leedsunited.com, cpfc.co.uk, Sky Sports live blog - lineup was image-only graphic with no extractable text); leedsunited.com's own preview did confirm Wilson (Robert) ruled out with a quad injury, so included that fact and left the rest of Leeds/Palace out of the counts rather than guess. BBC domains were unreachable from this session's fetcher throughout."
-    },
     {
       "ts": "2026-09-20T15:07",
       "news": 1,
@@ -1132,6 +1125,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "2026-10-17 11:30 slot: Chelsea sheet found (chelseafc.com); Everton sheet not found"
+    },
+    {
+      "ts": "2026-10-17T13:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "2026-10-17 14:00 UTC slot (BRE v LIV, FUL v HUL, MCI v IPS): Liverpool sheet found on liverpoolfc.com; Brentford, Fulham, Man City sheets not found"
     }
   ]
 }
