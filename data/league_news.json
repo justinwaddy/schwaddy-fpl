@@ -1,36 +1,6 @@
 {
- "generated": "2026-10-16T22:45 UTC",
+ "generated": "2026-10-17T07:50 UTC",
  "items": [
-  {
-   "id": "2026-10-04-haaland-isak",
-   "ts": "2026-10-04T07:42",
-   "kind": "news",
-   "text": "The Premier League says its two leading scorers, Erling Haaland on five goals and Alexander Isak on four, go head-to-head when leaders Manchester City visit Liverpool on Sunday 11 October. Haaland is Justin's and Isak is Small Ben's, so the two of them will be watching the same match for different reasons.",
-   "source": {
-    "title": "When does the Premier League return?",
-    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
-   }
-  },
-  {
-   "id": "2026-10-04-arsenal-leeds-united-spurs",
-   "ts": "2026-10-04T07:42",
-   "kind": "news",
-   "text": "The league resumes on Saturday 10 October with Arsenal, beaten 3-0 at Brighton before the break, at home to unbeaten Leeds, and Manchester United hosting bottom club Tottenham in the late game, the Premier League reports. At Old Trafford, Justin's Van Hecke and Marcus's Kinsky are in the Tottenham camp, with Edward's Lammens, Small Ben's Cunha and Big Ben's Bruno Fernandes among the United owners.",
-   "source": {
-    "title": "When does the Premier League return?",
-    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
-   }
-  },
-  {
-   "id": "2026-10-04-coventry-forest",
-   "ts": "2026-10-04T07:42",
-   "kind": "news",
-   "text": "Coventry City, who recorded their first win and points of the season at Nottingham Forest, host Newcastle on Monday 12 October, the Premier League notes. Edward owns Forest's Murillo, Williams and Gibbs-White; Small Ben owns Newcastle's Hall, Barnes and Botman, and Big Ben has Thiaw.",
-   "source": {
-    "title": "When does the Premier League return?",
-    "url": "https://www.premierleague.com/en/news/4726845/when-does-the-premier-league-return"
-   }
-  },
   {
    "id": "2026-10-04-leader-no-strikers",
    "ts": "2026-10-04T22:45",
@@ -707,16 +677,39 @@
    "kind": "opinion",
    "text": "Marcus scored 77 in GW6 and 40 of it came from De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12: a Brighton left-back, an Everton midfielder and a Chelsea forward, none of whom anyone else would have named. He leads Edward by 28 with Foden and Tzolis both on 0. Anybody can call that luck, but a man who has been on the right side of it three weeks running is just a different kind of planner.",
    "source": null
+  },
+  {
+   "id": "2026-10-17-james-surgery",
+   "ts": "2026-10-17T07:50",
+   "kind": "news",
+   "text": "Reece James is out for around three months after knee surgery, BBC Sport reports, the problem picked up in training before Chelsea's 5-1 win over Bournemouth. Xabi Alonso says it is not a two or three week job and expects him back before January. James sits in Robert's squad, which had a quiet Gameweek 6 to forget and now has a Chelsea defender to carry through to Christmas.",
+   "source": {
+    "title": "Chelsea's James out for three months after knee surgery",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
+   }
+  },
+  {
+   "id": "2026-10-17-emegha-everton",
+   "ts": "2026-10-17T07:50",
+   "kind": "news",
+   "text": "Chelsea go to Everton at 12.30 today without Emmanuel Emegha, still waiting on his debut, with Alonso confirming he is not fit enough for the trip. The Chelsea players the league holds are Joao Pedro and Palestra for Marcus, Palmer for Edward, Rogers for Big Ben and Estevao for Robert, and they meet an Everton that has Dewsbury-Hall for Marcus and Tarkowski, Garner and Barry for Edward.",
+   "source": {
+    "title": "Chelsea's James out for three months after knee surgery",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
+   }
+  },
+  {
+   "id": "2026-10-17-struijk-appeal",
+   "ts": "2026-10-17T07:50",
+   "kind": "news",
+   "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he avoids the one-match ban and is available for the trip to Crystal Palace this weekend. Brighton are third, five points behind Manchester City. Marcus has De Cuyper and Kostoulas there, Justin has Vuskovic and Big Ben has Gross, with Palace's Strand Larsen, Khalaili and Mateta on the other side of the derby for Justin, Edward and Robert.",
+   "source": {
+    "title": "Struijk red card shown after VAR intervention is overturned",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-19T22:52",
-   "news": 2,
-   "opinion": 3,
-   "matchday": true,
-   "note": "evening wrap: led with Arsenal's 3-0 loss at Brighton (ESPN) and Everton's 1-0 win over 10-man Ipswich with the Fatawu red card (ESPN), both tying into league squads. Opinions: Edward's overtake into 1st off Tarkowski/Barry/Garner, Small Ben's Newcastle stack, Justin's bench tying his XI 19-19 with big names blanking. Rewrote today's 13 FLOP lines via reflop.py. Both unused roast-archive suggestions passed over, not held for later: one targets sexuality, the other frames a real historical atrocity as a personal accusation - both fall outside the protected-categories rule regardless of who submitted them."
-  },
   {
    "ts": "2026-09-20T07:44",
    "news": 4,
@@ -1129,6 +1122,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, no fixtures today and GW7 not kicked off, so no football to wrap. No reported items (morning run covered the news). Four opinion pieces from the latest waivers and GW6 figures (Small Ben, Justin, Big Ben bench, Marcus). Live feed totals were pre-GW6 settled so I quoted public.json GW6 figures only. Archive used: Ben C boxing line, Edward on Ben D Arsenal, Edward on Marcus luck. Passed over for now: hairline lines on Robert (no fresh Robert fact), the Ben D self-roast and the Justin nationality line (not fit to land), Jobacus/Catholic line on Marcus (nothing to hang it on tonight), Justin pint line on Robert (nothing true to hang it on). No flops to rewrite today."
+  },
+  {
+   "ts": "2026-10-17T07:50",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Reece James's three-month injury (Robert's) off BBC Sport, then Emegha ruled out at Everton and Struijk's red overturned. Guardian and Sky were not usable for detail; WebSearch returned only off-list or stale results so BBC pages were read directly. Roast archive untouched (morning, no opinion)."
   }
  ]
 }
