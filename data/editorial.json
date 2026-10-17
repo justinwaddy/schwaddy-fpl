@@ -323,11 +323,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-09-14T08:11 UTC",
-   "published": 1,
-   "note": "Club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Newcastle) plus general PL injury/team-news searches ahead of Monday night's Leeds-Newcastle game, first run of the day. Led with a correction to last night's own error: read the actual ESPN match page (not just a search summary) and found its live commentary states plainly that Milenkovic and Cunha 'both drop out of the squad due to injury, so Munoz makes his full debut and Diomande is handed his first Premier League start' - directly contradicting last night's published claim that they started the full 90. Further searches confirm Glasner found the hamstring tightness in Friday's final training session, scans came back worse than hoped, and he expects Milenkovic to also miss the Coventry game with a return targeted for the fixture after. This also fixes claims.json's claim 3, which had wrongly downgraded to low confidence on the same bad information; restored to medium and re-sourced to the correct ESPN URL. Also checked and confirmed unchanged: Vuskovic started Brighton's Coventry win and is in Sky/local predicted XIs for Arsenal, so no threat to Mitchell/Vuskovic's fixture logic; Collins still out until after the international break per Brentford's own site; Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth; Maddison and Kudus both closing in on returns at Tottenham per the club's own site, no change to Marmoush's standing; Fernandez-Pardo still 'getting closer to starting' at Newcastle with no fresher quote than yesterday's. Also resolved a standing question from Saturday's run: Michael Carrick, not Ruben Amorim, has been Man Utd's manager since May 2026 - a clarification, not news, since it changes no player's status."
-  },
-  {
    "ts": "2026-09-14T21:45 UTC",
    "published": 2,
    "note": "Club-by-club sweep (Leeds, Newcastle, Nottingham Forest, Brentford, Brighton, Everton, Arsenal, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Fulham) plus general PL injury news, still in the GW5 window (waivers close Thursday 17:30 UTC). Led with two items out of Monday night's Leeds 4-1 Newcastle game, confirmed directly off newcastleunited.com's own match centre rather than aggregator copy: Bogle scored in the first half (34'), a genuine plus for a player the model rates as the squad's weakest defender on fixtures alone; and Newcastle's 51m Fernandez-Pardo finally got his full debut in the same game but was hooked at 57' down 3-0, giving the model its first real data point on a player it has been scoring off zero games for two weeks. Chased down and left unpublished: a Yahoo Sports story describing James Maddison as still sidelined with his August shoulder fracture reads inconsistently against Sky Sports' own report that he returned to training and was pushing for involvement against Everton - too contradictory to state either way, and it doesn't affect any current claim since Marmoush (not Maddison) is the Tottenham player in play. Also confirmed but not news: Milenkovic and Cunha both still out for Saturday's Coventry game per Forest's own line, matching this morning's report; Vuskovic played the full 90 in Brighton's 5-0 win at Coventry with nothing threatening his standing; Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth ahead of Sunday's Liverpool visit; Maguire still a fixture in Man Utd's back line. Nothing else new or citable to a permitted outlet."
@@ -621,6 +616,11 @@
    "ts": "2026-10-16T21:30 UTC",
    "published": 2,
    "note": "Schade/Schuster Friday presser and Brobbey ready with Isidor doubtful; both from the Premier League Matchweek 7 predicted line-ups. Light starters update."
+  },
+  {
+   "ts": "2026-10-17T08:10 UTC",
+   "published": 0,
+   "note": "Morning check on GW7 deadline day. Searches returned only prior-season pages and no permitted-outlet news newer than what is already published. Nothing published."
   }
  ]
 }

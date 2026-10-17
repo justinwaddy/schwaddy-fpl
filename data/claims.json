@@ -714,12 +714,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-09-13T21:10 UTC",
-   "gw": 5,
-   "claims": 5,
-   "note": "Downgraded Hill/Milenkovic from medium to low confidence: ESPN's match report confirms Milenkovic and Cunha both played the full 90 in Forest's 2-1 win at Villa Park, resolving the recurring hamstring-doubt story in his favour, so the claim now rests on fixture numbers alone with the fitness angle gone. Truffert/Collins, Mitchell/Vuskovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all carry forward unchanged after tonight's club-by-club sweep (Everton, Arsenal, Brentford, Brighton, Forest, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Sunderland, Newcastle). Two other stories were chased down and discarded as stale: a Raya knee-injury story traced to a 27 September 2024 arsenal.com article, and a Schade red-card suspension traced to a 1 February 2026 incident already served."
-  },
-  {
    "ts": "2026-09-14T08:11 UTC",
    "gw": 5,
    "claims": 5,
@@ -1072,6 +1066,12 @@
    "gw": 8,
    "claims": 5,
    "note": "Rolled to GW8 window. Leeds continuity from PL MW7 predicted line-ups moves Muharemovic to rank 1; Stach, Truffert, Anderson claims dropped as GW7 processed."
+  },
+  {
+   "ts": "2026-10-17T08:10Z",
+   "gw": 8,
+   "claims": 5,
+   "note": "No new permitted-source news; GW8 claims unchanged."
   }
  ]
 }
