@@ -714,12 +714,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-15T08:20 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Palace, Man Utd, Newcastle, Sunderland) reconfirmed Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush exactly as last night. Investigated but could not use: reports that Milenkovic is out past Coventry into the international break, sourced only to Yahoo/OneFootball/a Forest fan site, not a permitted outlet - changes nothing anyway since the model already has him at 0.00 availability. Brobbey (free agent FWD, not currently claimed) reconfirmed a nailed Sunderland starter with nothing to change the model's read on him."
-    },
-    {
       "ts": "2026-09-15T21:20 UTC",
       "gw": 5,
       "claims": 5,
@@ -1072,6 +1066,12 @@
       "gw": 8,
       "claims": 5,
       "note": "no change; no new permitted-outlet news, claims carried forward"
+    },
+    {
+      "ts": "2026-10-18T21:10 UTC",
+      "gw": 8,
+      "claims": 5,
+      "note": "No change: no new permitted-outlet news; claims carried forward."
     }
   ]
 }
