@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T12:23",
+ "generated": "2026-10-18T08:36",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -94,8 +94,21 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.38,
-   "ep": 3.28,
+   "ep": 3.27,
    "votes": 4
+  },
+  {
+   "id": 94,
+   "code": 513418,
+   "name": "Schade",
+   "pos": "MID",
+   "team": "BRE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.934,
+   "base": 4.28,
+   "ep": 4.22,
+   "votes": 5
   },
   {
    "id": 335,
@@ -124,19 +137,6 @@
    "votes": 5
   },
   {
-   "id": 94,
-   "code": 513418,
-   "name": "Schade",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "d",
-   "news": "Shoulder injury - 75% chance of playing",
-   "p_play": 0.7,
-   "base": 3.21,
-   "ep": 3.17,
-   "votes": 4
-  },
-  {
    "id": 411,
    "code": 223094,
    "name": "Haaland",
@@ -160,7 +160,7 @@
    "p_play": 0.778,
    "base": 3.0,
    "ep": 2.97,
-   "votes": 3
+   "votes": 2
   }
  ],
  "bench": [
@@ -200,7 +200,7 @@
    "news": "",
    "p_play": 0.721,
    "base": 1.72,
-   "ep": 1.64,
+   "ep": 1.62,
    "votes": 0
   },
   {
@@ -213,18 +213,50 @@
    "news": "",
    "p_play": 0.551,
    "base": 1.41,
-   "ep": 1.35,
+   "ep": 1.36,
    "votes": 1
   }
  ],
- "xi_ep": 46.6,
+ "xi_ep": 47.6,
  "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 8.66,
+   "gain": 10.05,
    "change": 1,
    "fallback": false,
+   "add": {
+    "id": 367,
+    "code": 243298,
+    "name": "Gakpo",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.732,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.551,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 181
+  },
+  {
+   "pos": "MID",
+   "gain": 8.65,
+   "change": 1,
+   "fallback": true,
    "add": {
     "id": 542,
     "code": 484420,
@@ -250,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 205
+   "borda": 178
   },
   {
    "pos": "MID",
-   "gain": 7.48,
+   "gain": 7.03,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,22 +314,22 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 193
+   "borda": 157
   },
   {
    "pos": "MID",
-   "gain": 7.03,
+   "gain": 8.63,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 367,
-    "code": 243298,
-    "name": "Gakpo",
+    "id": 286,
+    "code": 540324,
+    "name": "Belloumi",
     "pos": "MID",
-    "team": "LIV",
-    "status": "d",
-    "news": "Ankle injury - 25% chance of playing",
-    "p_play": 0.183,
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.811,
     "base": null,
     "ep": null
    },
@@ -313,46 +345,46 @@
     "base": null,
     "ep": null
    },
-   "votes": 5,
-   "borda": 178
+   "votes": 4,
+   "borda": 133
   },
   {
    "pos": "MID",
-   "gain": 6.47,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.975,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.551,
-    "base": null,
-    "ep": null
-   },
-   "votes": 5,
-   "borda": 176
-  },
-  {
-   "pos": "MID",
-   "gain": 5.1,
+   "gain": 5.83,
    "change": 2,
    "fallback": false,
+   "add": {
+    "id": 542,
+    "code": 484420,
+    "name": "E.Le F\u00e9e",
+    "pos": "MID",
+    "team": "SUN",
+    "status": "a",
+    "news": "",
+    "p_play": 0.965,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 86,
+    "code": 249231,
+    "name": "Lewis-Potter",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.893,
+    "base": null,
+    "ep": null
+   },
+   "votes": 4,
+   "borda": 88
+  },
+  {
+   "pos": "MID",
+   "gain": 5.52,
+   "change": 2,
+   "fallback": true,
    "add": {
     "id": 453,
     "code": 201666,
@@ -378,43 +410,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 65
+   "borda": 62
   },
   {
    "pos": "MID",
-   "gain": 3.3,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.802,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.893,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 61
-  },
-  {
-   "pos": "MID",
-   "gain": 4.8,
+   "gain": 5.14,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,22 +442,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 60
+   "borda": 55
   },
   {
    "pos": "MID",
-   "gain": 3.8,
+   "gain": 4.02,
    "change": 2,
    "fallback": true,
    "add": {
-    "id": 367,
-    "code": 243298,
-    "name": "Gakpo",
+    "id": 45,
+    "code": 122806,
+    "name": "McGinn",
     "pos": "MID",
-    "team": "LIV",
-    "status": "d",
-    "news": "Ankle injury - 25% chance of playing",
-    "p_play": 0.183,
+    "team": "AVL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.975,
     "base": null,
     "ep": null
    },
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 52
+   "borda": 43
   },
   {
    "pos": "GKP",
-   "gain": 5.94,
+   "gain": 5.85,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 43
+   "borda": 26
   },
   {
    "pos": "GKP",
-   "gain": 10.65,
+   "gain": 10.47,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 36
+   "borda": 25
   },
   {
    "pos": "GKP",
-   "gain": 7.22,
+   "gain": 7.25,
    "change": 3,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 32
+   "borda": 23
   },
   {
    "pos": "GKP",
-   "gain": 4.59,
+   "gain": 4.62,
    "change": 3,
    "fallback": true,
    "add": {
@@ -602,7 +602,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 23
+   "borda": 13
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -652,9 +652,9 @@
    "name": "Semenyo",
    "pos": "MID",
    "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
+   "status": "d",
+   "news": "Knee injury - 75% chance of playing",
+   "p_play": 0.75,
    "base": 209.52,
    "ep": 201.87
   },
@@ -880,9 +880,9 @@
    "name": "Szoboszlai",
    "pos": "MID",
    "team": "LIV",
-   "status": "d",
-   "news": "Hamstring injury - 25% chance of playing",
-   "p_play": 0.211,
+   "status": "i",
+   "news": "Hamstring injury - Unknown return date",
+   "p_play": 0.0,
    "base": 150.5,
    "ep": 143.9
   },
@@ -952,9 +952,9 @@
    "name": "Gakpo",
    "pos": "MID",
    "team": "LIV",
-   "status": "d",
-   "news": "Ankle injury - 25% chance of playing",
-   "p_play": 0.183,
+   "status": "a",
+   "news": "",
+   "p_play": 0.732,
    "base": 139.29,
    "ep": 132.91
   },
