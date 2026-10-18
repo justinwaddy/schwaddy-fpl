@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-15T08:20 UTC",
-      "published": 0,
-      "note": "Club-by-club sweep ~10.5 hours after last night's 21:45 run (Everton, Arsenal, Brentford, Nottingham Forest, Brighton, Leeds, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Newcastle, Sunderland, Coventry, Hull) plus general PL injury/transfer searches. Nothing survived that both moves a verdict and clears a permitted source. Chased down the most promising lead - multiple outlets (Yahoo, OneFootball, nottinghamforest.news) now say Milenkovic's hamstring means he is out well beyond Saturday's Coventry game, targeted for a return only after the international break - but no permitted outlet (BBC, Sky, Guardian, ESPN, premierleague.com or the club's own site under the domain on file) carried that specific detail, so it stays unpublished; it changes nothing about his status anyway, since the API already has him at 0.00 availability. Also checked and discarded: a Leeds/Ampadu 'suspension' story that traces to a stale gameweek-19 reference from a prior season, not this one (Leeds have only played 4-5 games so far); a reported Man Utd interest in Truffert and Rayan with no permitted sourcing; and Bogle/Ampadu, Vuskovic, Mitchell, Strand Larsen, Maguire, Barcola and the rest of the squad and free-agent shortlist, all confirmed exactly as already reported. Brobbey (free agent FWD target) reconfirmed a nailed starter at Sunderland, no change to his model rating. Nothing published."
-    },
-    {
       "ts": "2026-09-15T21:20 UTC",
       "published": 0,
       "note": "Club-by-club sweep ~13 hours after this morning's 08:20 run (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus site-specific Sky Sports/BBC injury searches and general PL team-news searches. Nothing new and citable turned up: Milenkovic's hamstring timeline (out past Saturday's Coventry game, targeted for after the international break) is confirmed again via Forest's own reporting but is already fully reflected in the API's own availability figure, so not news; Fernandez-Pardo's next Newcastle start is at Hull on the 19th with no fresh team news published yet; a predicted Tottenham XI naming Marmoush to start Sunday against Villa traces only to fotmob/Goal.com predicted-lineup pieces, not a permitted outlet, so left unpublished; Yahoo speculation about Pickford 'moving gingerly' does not amount to a reported injury and is not on the permitted list regardless. Everything else in the squad and free-agent shortlist reconfirmed unchanged from last night: Collins still out until after the international break, Truffert/Hill/Scott/Tavernier all still nailed at Bournemouth, Mitchell and Strand Larsen still nailed at Palace, Bogle/Ampadu/Vuskovic all fit and playing. Nothing published; next team news expected from Thursday/Friday pre-match pressers, ahead of Thursday's 17:30 UTC waiver close."
@@ -621,6 +616,11 @@
       "ts": "2026-10-17T21:10 UTC",
       "published": 0,
       "note": "Evening check after GW7 deadline. Searches returned only prior-season pages and no permitted-outlet news newer than already published. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-18T08:20 UTC",
+      "published": 0,
+      "note": "Morning check. Searches returned only the 11 Oct ESPN roundup and already-covered Schade shoulder items; no fresh permitted-outlet news. Not in starters window. Nothing published."
     }
   ]
 }

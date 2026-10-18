@@ -714,12 +714,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-14T21:45 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Updated claims 4 and 5 on hard evidence from tonight's Leeds 4-1 Newcastle game: Bogle scored (weakens the case for dropping him for Maguire, now the shakiest claim on the board) and Fernandez-Pardo got his full debut but struggled, hooked at 3-0 (a real data point at last, tempering but not killing the case for picking him up). Truffert/Collins, Mitchell/Vuskovic and Hill/Milenkovic carry forward unchanged - Milenkovic confirmed out for Coventry too. Also noted: Justin's win this week moved him up to 2nd in the table, which paradoxically drops him to 5th of 6 in the reversed GW5 waiver order, worse than this morning's 4th."
-    },
-    {
       "ts": "2026-09-15T08:20 UTC",
       "gw": 5,
       "claims": 5,
@@ -1072,6 +1066,12 @@
       "gw": 8,
       "claims": 5,
       "note": "no change; evening searches found no new permitted-outlet news, claims carried forward"
+    },
+    {
+      "ts": "2026-10-18T08:20 UTC",
+      "gw": 8,
+      "claims": 5,
+      "note": "no change; no new permitted-outlet news, claims carried forward"
     }
   ]
 }
