@@ -6,7 +6,7 @@
    "ts": "2026-09-04T13:35",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Rob\u2019s chances of first place receding more than his hairline. You MUST mention hairline"
+   "text": "Rob’s chances of first place receding more than his hairline. You MUST mention hairline"
   },
   {
    "id": "2026-09-04-a8bbcabc4b",
@@ -14,7 +14,7 @@
    "ts": "2026-09-04T13:36",
    "frm": "Ben D",
    "about": null,
-   "text": "Ben C\u2019s chance of winning is the same as his height: small"
+   "text": "Ben C’s chance of winning is the same as his height: small"
   },
   {
    "id": "2026-09-04-b2deb0fb2d",
@@ -55,7 +55,7 @@
    "ts": "2026-09-06T15:31",
    "frm": "Edward",
    "about": null,
-   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn\u2019t haul his team is awful awful awful"
+   "text": "Big Ben relies on Bruno to get bailed out as usual. When he doesn’t haul his team is awful awful awful"
   },
   {
    "id": "2026-09-12-b4e9e2f836",
@@ -71,7 +71,7 @@
    "ts": "2026-09-12T18:52",
    "frm": "Edward",
    "about": "Robert",
-   "text": "Rob doesn\u2019t respond to anyone and doesn\u2019t make any transfers - explains why his team and hairline is so dreadful"
+   "text": "Rob doesn’t respond to anyone and doesn’t make any transfers - explains why his team and hairline is so dreadful"
   },
   {
    "id": "2026-09-12-ca1422e269",
@@ -87,7 +87,7 @@
    "ts": "2026-09-12T18:53",
    "frm": "Ben D",
    "about": "Robert",
-   "text": "Ignoring FPL bc he\u2019s depressed again (like when he failed his degree)",
+   "text": "Ignoring FPL bc he’s depressed again (like when he failed his degree)",
    "retired": "a real illness and a private failure; rule 4 forbids it"
   },
   {
@@ -104,7 +104,7 @@
    "ts": "2026-09-12T18:54",
    "frm": "Edward",
    "about": "Ben C",
-   "text": "The only man that could be mistaken for Harvey price. He\u2019s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
+   "text": "The only man that could be mistaken for Harvey price. He’s going to get knocked out in his upcoming boxing due to lack of preparation and foresight. This is evident when looking at his fantasy team as well",
    "note": "used the boxing/preparation line; dropped the Harvey Price comparison as disability-adjacent"
   },
   {
@@ -122,6 +122,14 @@
    "frm": "Ben C",
    "about": "Robert",
    "text": "Lack of managing his team"
+  },
+  {
+   "id": "2026-10-18-bee1862693",
+   "key": "bee1862693",
+   "ts": "2026-10-18T11:29",
+   "frm": "Justin",
+   "about": "Ben C",
+   "text": "Small Ben left 21 points on his bench. Twenty-one. His best XI this week was sitting in the dugout watching the worst one play. The man picks his starters like he's drawing names out of a hat with his eyes shut."
   }
  ],
  "runs": [
@@ -249,6 +257,13 @@
    "chars": 0,
    "frm": null,
    "note": "Hand edit at Justin's request: dropped the 'used' marker from every entry. The whole archive is in play every night; only 'retired' takes one out."
+  },
+  {
+   "ts": "2026-10-18T11:29",
+   "frm": "Justin",
+   "about": "Ben C",
+   "chars": 211,
+   "img": false
   }
  ]
 }
