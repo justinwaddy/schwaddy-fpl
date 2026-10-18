@@ -1,40 +1,6 @@
 {
- "generated": "2026-10-17T22:50 UTC",
+ "generated": "2026-10-18T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-05-smallben-delap",
-   "ts": "2026-10-05T22:50",
-   "kind": "opinion",
-   "text": "Small Ben runs a team called Delap Dance, and Delap is in Ben D's squad. Small Ben owns Isak and Gakpo, both sent home from international duty with injuries, and he is 13 off the lead with Liverpool v Man City to come. The dance is looking like a limp.",
-   "source": null
-  },
-  {
-   "id": "2026-10-05-robert-saka",
-   "ts": "2026-10-05T22:50",
-   "kind": "opinion",
-   "text": "Saka scored twice for England and Robert owns him. Robert is still 89 points off the lead on 170, because England goals score nothing in this league, and O'Reilly has gone home after one match. Pardinho: a fine name for a team whose best week happened somewhere it cannot score.",
-   "source": null
-  },
-  {
-   "id": "2026-10-06-city-appeal",
-   "ts": "2026-10-06T07:50",
-   "kind": "news",
-   "text": "Man City have lodged their appeal against the independent commission's guilty verdict on Premier League financial rule breaches, saying the ruling contains \"clear material errors, of law, principle and fact and is unsafe\". All six managers own City players, from Haaland (Justin) to Cherki (Robert), so nobody in this league is a neutral.",
-   "source": {
-    "title": "Man City confirm appeal against guilty verdict",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqn7470513n0o"
-   }
-  },
-  {
-   "id": "2026-10-06-liv-city-sunday",
-   "ts": "2026-10-06T07:50",
-   "kind": "news",
-   "text": "Liverpool host Man City on Super Sunday, with Sky Sports assessing new Reds boss Andoni Iraola's early impact at Anfield ahead of it. Small Ben has the most riding on both sides of it, with Isak, Gakpo, Szoboszlai and Virgil for Liverpool and Donnarumma and Ruben for City.",
-   "source": {
-    "title": "Liverpool: Andoni Iraola's early impact at Anfield assessed ahead of huge Super Sunday showdown with Man City",
-    "url": "https://www.skysports.com/football/news/13595435/liverpool-andoni-iraolas-early-impact-at-anfield-assessed-ahead-of"
-   }
-  },
   {
    "id": "2026-10-06-nothing-kicked-off",
    "ts": "2026-10-06T22:45",
@@ -701,16 +667,49 @@
    "kind": "opinion",
    "text": "Robert has 15 on the day and 13 of it is Martinez 8 and Ndiaye 5. Two of his eleven have played and returned nothing, six have not kicked off, and he is 115 behind Marcus, which makes first place the only thing in his life receding faster than his hairline. There is still time for him to get closer, which is the sort of thing he says before every gameweek.",
    "source": null
+  },
+  {
+   "id": "2026-10-18-martinez-concussion",
+   "ts": "2026-10-18T07:55",
+   "kind": "news",
+   "text": "Chelsea beat Everton 2-0 on Saturday but lost Robert's Martinez for the afternoon: the goalkeeper was carried off with his neck in a brace after a collision with Big Ben's Branthwaite and taken to hospital with suspected concussion, the Guardian reports. Alonso said only that Martinez was conscious leaving the ground and the club need to wait. Robert has no other goalkeeper on his squad but Roefs, and Chelsea's next fixture will say whether he has a decision to make.",
+   "source": {
+    "title": "Neto double at Everton leads Chelsea to victory marred by Martinez head injury",
+    "url": "https://www.theguardian.com/football/2026/oct/17/everton-chelsea-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-18-brentford-liverpool",
+   "ts": "2026-10-18T07:55",
+   "kind": "news",
+   "text": "Liverpool came from behind to win 2-1 at Brentford once Yehor Yarmolyuk was sent off for a headbutt on Jacquet, with Isak scoring the 70th-minute winner from Barcola's header, the Guardian reports. That is Small Ben's Isak and Justin's Barcola on the same goal, and Big Ben's Wirtz supplied the pass for Munoz's equaliser. Small Ben also lost Szoboszlai to injury in the first half, and Brentford ended with nine after Janelt's second yellow, which Big Ben (Kelleher, Ajer) and Justin (Lewis-Potter, Schade) will be reading with interest.",
+   "source": {
+    "title": "Isak completes Liverpool's comeback win as Brentford finish with nine",
+    "url": "https://www.theguardian.com/football/2026/oct/17/brentford-liverpool-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-18-villa-newcastle",
+   "ts": "2026-10-18T07:55",
+   "kind": "news",
+   "text": "Johan Manzambi headed Aston Villa in front on 36 minutes at Newcastle, ghosting away from Thiaw to meet Joao Gomes's cross, and that was the only goal, the Guardian reports. It was Edward's Manzambi doing it to Edward's own goalkeeper Hornicek, who was also bailed out when a Buendia shot hit the post and deflected off his back before Small Ben's Hall cleared; the report calls Hall Newcastle's best player again.",
+   "source": {
+    "title": "Manzambi maintains Aston Villa progress with win to seal dismal week for Newcastle",
+    "url": "https://www.theguardian.com/football/2026/oct/17/newcastle-aston-villa-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-18-everton-pickford",
+   "ts": "2026-10-18T07:55",
+   "kind": "news",
+   "text": "Everton lost for the first time this season, and Justin's Pickford was unconvincing for a second week running: Neto scored 44 seconds after the restart, beating Pickford low to his left with a shot the Guardian calls a weak attempt to save, the ball having taken a touch off Edward's Tarkowski on the way. Big Ben's Rogers survived a second-yellow challenge on Garner just before half-time for Chelsea.",
+   "source": {
+    "title": "Neto double at Everton leads Chelsea to victory marred by Martinez head injury",
+    "url": "https://www.theguardian.com/football/2026/oct/17/everton-chelsea-premier-league-match-report"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-21T07:46",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news, no fixtures today (int'l break starts). GW5 wrap-up: covered the two Sunday matches the evening wrap missed - Fulham 1-1 Man Utd (Lammens/Martinez own goal, Cunha's late equaliser, touching Edward/Ben C/Ben D) and Leeds 0-0 Crystal Palace (Khalaili's disallowed assist and Calvert-Lewin's miss both Edward's, Trafford's saves for Ben D). Also reported Tuchel's England squad, which calls up players from all six squads. Roast archive unchanged - the two unused submissions are the slur/race ones flagged off-limits on 20 Sept, nothing new submitted since."
-  },
   {
    "ts": "2026-09-21T22:55 UTC",
    "news": 2,
@@ -1123,6 +1122,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "evening wrap. Led with the table race (Marcus 28/36 clear on Friday, 13/19 now), Marcus and Small Ben bench stories, Big Ben team name v Tzolis, Robert hairline. No reported items: BBC scores page not readable, nothing sourced. Rewrote all 13 FLOP lines via reflop.py. Used 2026-09-04-9b7835c402 (hairline), 2026-09-04-a8bbcabc4b (height, via boxing), 2026-09-06-cdaf331443 (Bruno), 2026-09-12-211e2a0b5e (boxing). Passed over: Ben D on Ben D and Ben D on Justin (self-submission, and a nationality/history gag aimed at Justin - Justin to say if he wants it run), Justin on Marcus (needs facts not in feed), Edward on Marcus luck, Edward on Ben D Arsenal (Arsenal yet to play), Robert pint, Elanga (no data), Ben C lack of managing."
+  },
+  {
+   "ts": "2026-10-18T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "morning. Led with Martinez concussion, then Brentford 1-2 Liverpool, Newcastle 0-1 Villa, Everton 0-2 Chelsea, all Guardian match reports (only readable outlet; WebSearch could not return permitted outlets). No team-news items for today's kick-offs: nothing sourced. No roast submissions used (morning)."
   }
  ]
 }
