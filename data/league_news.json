@@ -1,26 +1,6 @@
 {
-  "generated": "2026-10-18T07:55 UTC",
+  "generated": "2026-10-18T12:39 UTC",
   "items": [
-    {
-      "id": "2026-10-07-fernandes-pain",
-      "ts": "2026-10-07T07:55",
-      "kind": "news",
-      "text": "Portugal boss Jorge Jesus revealed that Bruno Fernandes had been playing through pain during the international break. That is Ben D's Manchester United man, and nothing in the report says he is out of Saturday's game.",
-      "source": {
-        "title": "Player welfare, injury worries & boredom - has extended break worked?",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cq8jz7verm24o"
-      }
-    },
-    {
-      "id": "2026-10-07-palmer-gibbs-white",
-      "ts": "2026-10-07T07:55",
-      "kind": "news",
-      "text": "Cole Palmer withdrew from the England squad, and BBC Sport says that has let others cement their place in front of him, with Morgan Gibbs-White cutting short a family holiday to join up after initially being left out. Edward owns both of them.",
-      "source": {
-        "title": "Midfield options and a fab front four - what we've learned about England",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cq62y431dj8vo"
-      }
-    },
     {
       "id": "2026-10-07-rogers-rice",
       "ts": "2026-10-07T07:55",
@@ -710,6 +690,20 @@
         "title": "Team news: Sage makes three changes; Mateta returns",
         "url": "https://www.cpfc.co.uk/news/first-team/team-news-brighton-palace-sage-names-xi/"
       }
+    },
+    {
+      "id": "2026-10-18-delap-dance",
+      "ts": "2026-10-18T12:39",
+      "kind": "opinion",
+      "source": null,
+      "text": "Small Ben named his team Delap Dance and owns nobody called Delap: that Delap is Big Ben's, in the last slot of his squad, on 0. What Small Ben does own is Isak, who scored Liverpool's 70th-minute winner at Brentford and then took his 9 points to the bench, where Suzuki was already sitting on 8. Those two have 17 between them. The eleven Small Ben actually picked has 12, with five of them still to play."
+    },
+    {
+      "id": "2026-10-18-marcus-foden",
+      "ts": "2026-10-18T12:39",
+      "kind": "opinion",
+      "source": null,
+      "text": "Marcus leads by 13 on a day when his eleven has 9 points and his bench has 10, because Foden's 9 for Man City are sitting in a bench slot while Becker, Dewsbury-Hall, King and Joao Pedro are on 2 each. Six of his eleven have not kicked off, so he has not wrecked anything yet. But a man in front of the whole league with his best player of the day on the bench is the nearest thing to proof that it is luck."
     }
   ],
   "runs": [
@@ -1132,6 +1126,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "13:00 slot: found Crystal Palace sheet (cpfc.co.uk); could not find confirmed sheets for Bournemouth, Sunderland, Brighton, Leeds, Man Utd"
+    },
+    {
+      "ts": "2026-10-18T12:39",
+      "news": 0,
+      "opinion": 2,
+      "matchday": true,
+      "note": "Evening wrap run by hand at 12:38 UTC, early, five of ten GW7 fixtures still to play (13:00 x3, 15:30, Mon TOT v COV). All finished fixtures had bonus_in true. Led with the Small Ben bench roast Justin asked for; his entry said 21 on the bench but the printout and live feed say 22 (Isak 9, Suzuki 8, Hall 4, Szoboszlai 1), so I wrote on 22 and the 'drawing names from a hat' line was reworked as a fresh angle (Delap Dance team name, Delap is Ben D's) because last night's boxing/bench piece already ran. Second piece: Marcus, bench 10 v eleven 9 (Foden 9), used Edward's 'relies on luck' entry. Passed over: Ben D hairline/height/Arsenal (Konsa, Havertz yet to play), Robert hairline/pint (already ran 17 Oct, Roefs yet to play), Jobacus/Chloe entry (no hook), Harvey Price likeness (left alone, no good fact), Elanga, Big Ben/Bruno, ID ca1422e269 and d9048f2afb (nothing today to hang them on). No reported items: nothing new since the 12:08 team news. No flops yet to rewrite."
     }
   ]
 }
