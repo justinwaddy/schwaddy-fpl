@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T12:47",
+ "generated": "2026-10-19T08:36",
  "gw": 8,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.56,
-   "ep": 5.4,
+   "ep": 5.41,
    "votes": 5
   },
   {
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.858,
    "base": 4.81,
-   "ep": 4.69,
+   "ep": 4.71,
    "votes": 5
   },
   {
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.934,
    "base": 4.28,
-   "ep": 4.22,
+   "ep": 4.23,
    "votes": 5
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.931,
    "base": 3.89,
-   "ep": 3.84,
+   "ep": 3.82,
    "votes": 5
   },
   {
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.893,
    "base": 3.07,
-   "ep": 2.93,
+   "ep": 2.92,
    "votes": 3
   },
   {
@@ -218,11 +218,11 @@
   }
  ],
  "xi_ep": 47.6,
- "changes": 2,
+ "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 64.59,
+   "gain": 65.3,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,43 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 191
+   "borda": 196
   },
   {
    "pos": "MID",
-   "gain": 49.79,
+   "gain": 48.91,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 453,
+    "code": 201666,
+    "name": "Barnes",
+    "pos": "MID",
+    "team": "NEW",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.551,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 183
+  },
+  {
+   "pos": "MID",
+   "gain": 50.87,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,43 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 144
+   "borda": 148
   },
   {
    "pos": "MID",
-   "gain": 54.51,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 453,
-    "code": 201666,
-    "name": "Barnes",
-    "pos": "MID",
-    "team": "NEW",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.551,
-    "base": null,
-    "ep": null
-   },
-   "votes": 4,
-   "borda": 143
-  },
-  {
-   "pos": "MID",
-   "gain": 52.73,
+   "gain": 52.95,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 142
+   "borda": 143
   },
   {
    "pos": "MID",
-   "gain": 31.91,
+   "gain": 35.03,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 66
+   "borda": 58
   },
   {
    "pos": "MID",
-   "gain": 34.51,
+   "gain": 37.14,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 41
+   "borda": 36
   },
   {
    "pos": "MID",
-   "gain": 32.09,
+   "gain": 34.09,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 38
+   "borda": 31
   },
   {
    "pos": "MID",
-   "gain": 21.89,
+   "gain": 24.57,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,7 +474,103 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 25
+   "borda": 23
+  },
+  {
+   "pos": "GKP",
+   "gain": 65.43,
+   "change": 3,
+   "fallback": false,
+   "add": {
+    "id": 571,
+    "code": 473284,
+    "name": "Tzolakis",
+    "pos": "GKP",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 22
+  },
+  {
+   "pos": "GKP",
+   "gain": 37.46,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 109,
+    "code": 489639,
+    "name": "Verbruggen",
+    "pos": "GKP",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 20
+  },
+  {
+   "pos": "GKP",
+   "gain": 32.26,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 199,
+    "code": 121709,
+    "name": "Benitez",
+    "pos": "GKP",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.575,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 17
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

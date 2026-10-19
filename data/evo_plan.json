@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T12:47",
+ "generated": "2026-10-19T08:36",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.56,
-   "ep": 5.4,
+   "ep": 5.41,
    "votes": 5
   },
   {
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.858,
    "base": 4.81,
-   "ep": 4.69,
+   "ep": 4.71,
    "votes": 5
   },
   {
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.934,
    "base": 4.28,
-   "ep": 4.22,
+   "ep": 4.23,
    "votes": 5
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.931,
    "base": 3.89,
-   "ep": 3.84,
+   "ep": 3.82,
    "votes": 5
   },
   {
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.893,
    "base": 3.07,
-   "ep": 2.93,
+   "ep": 2.92,
    "votes": 3
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 10.06,
+   "gain": 10.17,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 181
+   "borda": 191
   },
   {
    "pos": "MID",
-   "gain": 8.63,
+   "gain": 8.73,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 176
+   "borda": 184
   },
   {
    "pos": "MID",
-   "gain": 8.62,
+   "gain": 8.66,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,22 +314,22 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 132
+   "borda": 142
   },
   {
    "pos": "MID",
-   "gain": 7.76,
+   "gain": 8.55,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
+    "id": 453,
+    "code": 201666,
+    "name": "Barnes",
     "pos": "MID",
-    "team": "CHE",
+    "team": "NEW",
     "status": "a",
     "news": "",
-    "p_play": 0.802,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    },
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 126
+   "borda": 142
   },
   {
    "pos": "MID",
-   "gain": 5.87,
+   "gain": 6.24,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 88
+   "borda": 99
   },
   {
    "pos": "MID",
-   "gain": 5.59,
+   "gain": 6.09,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 63
+   "borda": 69
   },
   {
    "pos": "MID",
-   "gain": 5.2,
+   "gain": 5.56,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,22 +442,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 56
+   "borda": 63
   },
   {
    "pos": "MID",
-   "gain": 4.11,
+   "gain": 5.23,
    "change": 2,
    "fallback": true,
    "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
+    "id": 544,
+    "code": 84450,
+    "name": "Xhaka",
     "pos": "MID",
-    "team": "AVL",
+    "team": "SUN",
     "status": "a",
     "news": "",
-    "p_play": 0.975,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    },
@@ -473,46 +473,14 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 44
+   "votes": 2,
+   "borda": 32
   },
   {
    "pos": "GKP",
-   "gain": 10.42,
+   "gain": 5.72,
    "change": 3,
    "fallback": false,
-   "add": {
-    "id": 571,
-    "code": 473284,
-    "name": "Tzolakis",
-    "pos": "GKP",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 23
-  },
-  {
-   "pos": "GKP",
-   "gain": 5.82,
-   "change": 3,
-   "fallback": true,
    "add": {
     "id": 109,
     "code": 489639,
@@ -538,11 +506,43 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 23
+   "borda": 28
   },
   {
    "pos": "GKP",
-   "gain": 7.24,
+   "gain": 10.18,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 571,
+    "code": 473284,
+    "name": "Tzolakis",
+    "pos": "GKP",
+    "team": "HUL",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 226,
+    "code": 111234,
+    "name": "Pickford",
+    "pos": "GKP",
+    "team": "EVE",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 27
+  },
+  {
+   "pos": "GKP",
+   "gain": 7.23,
    "change": 3,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 21
+   "borda": 25
   },
   {
    "pos": "GKP",
-   "gain": 4.68,
+   "gain": 4.59,
    "change": 3,
    "fallback": true,
    "add": {
@@ -602,7 +602,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 12
+   "borda": 16
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
