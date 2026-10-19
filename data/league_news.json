@@ -1,40 +1,6 @@
 {
- "generated": "2026-10-18T22:43 UTC",
+ "generated": "2026-10-19T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-08-arteta-contract",
-   "ts": "2026-10-08T07:50",
-   "kind": "news",
-   "text": "Mikel Arteta has signed a new contract with Arsenal running until 2030, calling it 'only the beginning' of what the club can achieve. Every one of the six squads holds an Arsenal player, so nobody in this league gets to be neutral about it.",
-   "source": {
-    "title": "Arteta signs new contract with champions Arsenal",
-    "url": "https://www.bbc.co.uk/sport/football/articles/crz65j5p8l57o"
-   }
-  },
-  {
-   "id": "2026-10-08-rogers-bournemouth",
-   "ts": "2026-10-08T07:50",
-   "kind": "news",
-   "text": "Chelsea's Morgan Rogers, on Ben D's squad, faces Bournemouth at Stamford Bridge on Saturday, the club where BBC Sport says he had an underwhelming Championship loan. Justin (Scott, Tavernier) and Marcus (Evanilson) own Bournemouth players in the same fixture.",
-   "source": {
-    "title": "£117m Rogers failed at Bournemouth - and feared he may not make it",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckp84r967d3go"
-   }
-  },
-  {
-   "id": "2026-10-08-name-game",
-   "ts": "2026-10-08T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Small Ben runs a team called Delap Dance, and Delap is in Big Ben's squad, where he returned 1 point in Gameweek 5. Big Ben's team is Quantum of Tzolis, and Tzolis sits in Marcus's squad on 2. Between them the two Bens have named their teams after footballers they do not own."
-  },
-  {
-   "id": "2026-10-08-robert-gw6",
-   "ts": "2026-10-08T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Robert is on 170, 89 behind Edward, after a Gameweek 5 of 22 points. None of the ten Gameweek 6 fixtures has kicked off, so for now Pardinho has not been outscored by anyone this week. Enjoy it, Robert; it ends at the first whistle."
-  },
   {
    "id": "2026-10-09-liverpool-injuries",
    "ts": "2026-10-09T07:55",
@@ -698,16 +664,49 @@
    "kind": "opinion",
    "text": "Small Ben owns three Manchester City players and all three returned a point: Donnarumma 1, Ruben 1, Anderson 1. Haaland's 13 went to Justin and Foden's 9 went to Marcus's bench, so the City points were there and he picked up the wrong ones. He has 34 for the gameweek with one of his eleven still to play, and he is 67 behind Marcus after starting 45 back.",
    "source": null
+  },
+  {
+   "id": "2026-10-19-bournemouth-sunderland",
+   "ts": "2026-10-19T07:55",
+   "kind": "news",
+   "text": "Evanilson had a hand in both Bournemouth goals against Sunderland: he squared for Tavernier to head the first rather than shoot, then won the red card when Danso fouled him in the 17th minute, then sat Roefs down for the second, the Guardian reports. Marcus has the man who did it, Justin has the header, and Robert has the goalkeeper. Brobbey, Justin's, was left out of the Sunderland squad altogether, Le Bris saying they decided not to rush the process after his injury on international duty.",
+   "source": {
+    "title": "Evanilson swivels his hips to seal Bournemouth win against 10-man Sunderland",
+    "url": "https://www.theguardian.com/football/2026/oct/18/bournemouth-sunderland-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-19-brighton-palace",
+   "ts": "2026-10-19T07:55",
+   "kind": "news",
+   "text": "Brighton beat Crystal Palace 5-0 and Marcus had two in it: Kostoulas scored the fourth after setting up Ayari for the third, the Guardian reports. Big Ben's Gross started it all, his free-kick headed past Benitez by Palace's own Canvot inside the first ten minutes, and Diego Gomez's 51-metre strike made it 2-0 before Palace were three down. Pierre Sage said his feeling after the game was shame, and the report notes two of his predecessors lost their jobs not long after losing to Brighton.",
+   "source": {
+    "title": "Gomez halfway-line wondergoal sparks Brighton's 5-0 thrashing of sorry Crystal Palace",
+    "url": "https://www.theguardian.com/football/2026/oct/18/brighton-crystal-palace-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-19-leeds-united",
+   "ts": "2026-10-19T07:55",
+   "kind": "news",
+   "text": "Manchester United's seventh league game brought a seventh point from a draw, Mbeumo's first-half opener cancelled out at Elland Road by Calvert-Lewin, who outmuscled Mbeumo at a corner for his fifth goal in ten Leeds outings, the Guardian reports. That is Edward's striker scoring against Marcus's winger. Bogle's cross and Stach's free-kick, both Justin's, supplied Leeds's best moments, and Big Ben's Bruno Fernandes was booked while playing as a nominal centre-forward in Carrick's 3-4-3.",
+   "source": {
+    "title": "Manchester United held as Calvert-Lewin's Leeds leveller keeps pressure on Carrick",
+    "url": "https://www.theguardian.com/football/2026/oct/18/leeds-manchester-united-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-10-19-forest-arsenal",
+   "ts": "2026-10-19T07:55",
+   "kind": "news",
+   "text": "Arsenal won 1-0 at Nottingham Forest through Madueke's 80th-minute shot, deflected off Cunha after a pass from Rice, the Guardian reports, and it was Small Ben's Rice who made it. Big Ben had both sides of the late drama: his Delap was a full-throttle presence for Forest, whose manager Glasner is still waiting for a home goal this season, and his Konsa made the thunderous block that denied Delap at the death. Arsenal managed one shot on target all game.",
+   "source": {
+    "title": "Madueke breaks Nottingham Forest's resistance as dogged Arsenal edge to victory",
+    "url": "https://www.theguardian.com/football/2026/oct/18/nottingham-forest-arsenal-premier-league-match-report"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-23T07:58 UTC",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Deep in the international break - GW6 doesn't kick off until 10 October, confirmed against fixtures_2627.json rather than trusting the live feed's bare kickoff times, which lacked dates and briefly looked like a same-day GW6. No opinion pieces, per the morning rule. Verified every fact by fetching the actual outlet rather than trusting search summaries, which disagreed with each other on basic things like who manages Man City and Chelsea this season (one summary wrongly had Maresca at City; the directly-fetched mancity.com and skysports.com pages settled it as Guardiola and Rosenior respectively) - dropped anything I couldn't pin to a primary source. Used: Reece James's 10th hamstring injury (Robert), Benjamin Sesko's shin withdrawal from the Slovenia squad (also Robert - a rough morning for the bottom side), and Kinsky's Czech recall plus Marmoush's Egypt AFCON-qualifier duty (Marcus and Justin) off the Tottenham international-fixtures roundup. Passed over: Antoine Semenyo's Ghana ankle withdrawal (Edward) and Lewis Hall's new Newcastle contract (Ben C) - both real and fresh but never turned up on a permitted outlet despite repeated searches, only aggregators. The Garner/Gibbs-White England replacement call-ups looked promising but turned out to already be posted on 21 September. Roast archive unchanged - the two unused submissions are the sexuality and race-adjacent ones flagged out of bounds on 17 and 20 September; they stay unused permanently, not pending a fact."
-  },
   {
    "ts": "2026-09-23T22:41 UTC",
    "news": 1,
@@ -1120,6 +1119,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening wrap, 22:40 UTC, bonus settled after the 22:20 refresh; only TOT v COV (19:00) still to come. No reported items: search turned up no match reports for today's four fixtures from any permitted outlet, so nothing was cited. Led with the Justin 60 v Marcus 56 table piece, then Big Ben (Havertz and Delap in the one game, 4 pts off 155 minutes; used the Arsenal-fan/ball-knowledge entry), Robert (27 against 56, gap 121 to 150), Small Ben (three Man City players on 1 each v Haaland and Foden elsewhere). Rewrote all 7 of today's flop lines via reflop.py; the two Justin lines read '(yours)' in news.json and '(Justin's)' in public.json, so I matched on news.json and patched public.json by hand. Passed over: hairline and height lines (ran 17 Oct, nothing new to hang them on), Harvey Price likeness (a disability-adjacent comparison, left alone), Elanga, Jobacus/Chloe entry, pint, apartheid and sexuality entries (no hook tonight), 2026-10-18-bee1862693 (Small Ben bench already ran twice)."
+  },
+  {
+   "ts": "2026-10-19T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning, 07:55 UTC. Led with Sunday's four Guardian match reports (Bournemouth-Sunderland, Brighton-Palace, Leeds-Man Utd, Forest-Arsenal) angled at the squads, since Sunday had no reported items. Search surfaced no usable Tottenham v Coventry (19:00) team news from a permitted source, so no preview. Roast archive untouched: opinion is evening-only."
   }
  ]
 }
