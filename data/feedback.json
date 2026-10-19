@@ -1,13 +1,3 @@
 {
- "items": [
-  {
-   "id": "2026-10-19-ee5597042d",
-   "key": "ee5597042d",
-   "ts": "2026-10-19T08:32",
-   "kind": "bug",
-   "frm": "Justin",
-   "text": "pipeline test from Claude, diagnosing the roast box - delete me",
-   "state": "open"
-  }
- ]
+ "items": []
 }

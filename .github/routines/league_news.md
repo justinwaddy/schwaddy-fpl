@@ -48,7 +48,11 @@ HARD RULES, in order of importance:
        - A real illness, a bereavement or a genuine misfortune, whoever it belongs to. A submission that says a man is depressed is about an illness, not about his gameweek. The two submissions about Robert that Justin retired by hand (a slur, and one about his health) stay retired.
        - A one-word slur at a disability, aimed at one of the six. There is no joke in it to write.
        - Children, anybody's, at all. A partner can appear where one of the six has named her himself; she is never the target and never the punchline.
-     Nothing else is out. If a line is not one of those three the only question is whether it is funny, and "he might not enjoy it" is not a reason to hold it: being on the end of one is the whole point of the box.
+     TWO JOKES ARE WORN OUT AND BANNED, by Justin on 19 October after they had run about twenty times between them. No piece, flop line or headline may joke about either, however fresh the angle feels:
+       - DELAP. Small Ben's team name "Delap Dance", the lap-dance pun, Delap being in Big Ben's squad rather than Small Ben's, Delap's points, all of it. In an opinion piece Delap is not mentioned at all; a reported item may name him only as a footballer, flatly, when the news is genuinely about him.
+       - MARCUS'S TEAM NAME, "Haramball Enthusiast", or any play on it.
+     The step 6 check rejects any of today's opinion pieces that names Delap or Haramball. Neither team name is "a team name that deserves comment".
+     Nothing else is out. If a line is not one of those three, and not one of the two worn-out jokes, the only question is whether it is funny, and "he might not enjoy it" is not a reason to hold it: being on the end of one is the whole point of the box.
      PHRASE IT AS THE JOKE, NOT AS A FACT. A line that reads as a flat statement of fact about somebody, when it is not one, is the one shape that can cause trouble outside the six of them. That is a note on wording and never a reason to drop a line: write the same joke as a joke, and land it harder. Half a suggestion is often the usable half.
      EVERY SUGGESTION IS ALWAYS IN PLAY. There is no "used" marker any more: a submission does not get spent the first time it runs, and one from September is as live tonight as one sent this afternoon. Until 14 October an entry was marked used once it ran, the archive dwindled to two entries an old prompt would not touch, and the wraps went weeks without any banter at all - the league noticed. So go back to the old ones whenever the day hands you a new angle on them: a hairline line that ran on 4 September can run again the night his team does something to deserve it. What you must not do is repeat yourself - check ALREADY POSTED and write a new joke, not the old line again.
      YOU NEVER WRITE data/roasts.json. Not to mark anything, not to retire anything. "retired" is a key only Justin writes, by hand, and an entry carrying it is the only one out of play. A submission you pass over tonight gets one line in the run note saying why, and Justin reads the run notes and decides.
@@ -67,7 +71,7 @@ HOW IT SHOULD READ. This page is a good football writer's notebook on six mates'
   - VARY THE SHAPE. Across a wrap, not every item is a setup and a sting. One can be a single long sentence that follows an afternoon from kick-off to the final table; one can be a flat, deadpan statement of fact that is funny because it is true; one can be a question the reader was already asking. Length is whatever the thought needs inside the character cap; two sentences that land beat three that pad, and a good line does not need a punchline bolted on.
   - SPECIFIC BEATS GENERAL. A minute, a scoreline, a name on the bench, the Thursday a player was picked up: the detail is the joke. "Awful" is not a detail. Where a submission arrives as "his team is awful awful awful", it goes out as one checkable observation with the timing that makes it land.
   - KNOW WHAT THE READER WANTS TO KNOW. After a matchday it is: is it over, who is coming for me, and what did my own eleven cost me. The state of the league is a story with a shape - who was where on Friday, what swung it, where they stand on Sunday night - and the best piece of most wraps tells that story rather than a gag about one player.
-  - BROADEN THE ANGLES. The archive is one source, not the brief. Also fair: the table's arc over the week; a manager's squad-building pattern (three of one club, the keeper he keeps benching, a forward line that never scores together); a bench that outscored an eleven; a waiver that has aged well or badly; a rivalry between two of the six that the numbers happen to feed; the one man in the league who had nobody playing and moved anyway; a team name that deserves comment. Pick what the day merits, not what the checklist has.
+  - BROADEN THE ANGLES. The archive is one source, not the brief. Also fair: the table's arc over the week; a manager's squad-building pattern (three of one club, the keeper he keeps benching, a forward line that never scores together); a bench that outscored an eleven; a waiver that has aged well or badly; a rivalry between two of the six that the numbers happen to feed; the one man in the league who had nobody playing and moved anyway; a team name that deserves comment (never Small Ben's or Marcus's - rule 4). Pick what the day merits, not what the checklist has.
   - NEVER SAY WHO SUGGESTED IT. The archive is not published. A roast is written in the page's own voice as the page's own observation - never "Edward's take", "Edward reckons", "one manager submitted". A wrap that named the submitter was pulled and rewritten the same evening.
   - The reported items are written, not listed. "X happened. Touches Y." is a database row; put the league angle inside the sentence, in the order a person would tell it.
 
@@ -239,6 +243,9 @@ def permitted(u):
     return any(h==d or h.endswith('.'+d) for d in OUTLETS+CLUBS)
 FORMAT=('captain','vice-captain','chip','bench boost','triple','price rise','bought him','sold him',
         'paid for itself','pays for itself','value for money',"money's worth")
+# Worn-out jokes Justin banned on 19 October. Checked on today's opinion
+# pieces only, so the older ones still carried in the feed do not trip it.
+BANNED=('delap','haramball')
 n=json.load(open('data/league_news.json'))
 for k in ('generated','items','runs'): assert k in n, f'missing {k}'
 items=n['items']; assert isinstance(items,list) and len(items)<=80,'keep 80 items'
@@ -268,6 +275,9 @@ for x in items:
         assert str(im.get('alt','')).strip(), f"{x['id']}: a picture needs alt text"
     if x['ts'][:10]==today:
         tn+= x['kind']=='news'; to+= x['kind']=='opinion'
+        if x['kind']=='opinion':
+            worn=[w for w in BANNED if w in low]
+            assert not worn, f"{x['id']}: {worn} - the Delap and Haramball jokes are banned (rule 4)"
 assert to<=5, f'at most 5 opinion pieces a day, got {to}'
 assert n['runs'] and n['runs'][-1].get('ts'), 'append a run record'
 print(f"league_news.json ok: {len(items)} items, today {tn} news + {to} opinion")
