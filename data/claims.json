@@ -714,12 +714,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-16T21:13 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "No change to which five claims are made, ~23.5 hours after last night's board, with tomorrow's 17:30 UTC waiver close now under a day away. Full club-by-club sweep (Everton, Arsenal, Brentford, Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland, Man Utd) plus a dedicated freshness check found nothing that clears the sourcing bar. Chased down and discarded a Tottenham team-news piece on Maddison/Kudus that read live on tottenhamhotspur.com turned out to be the same 11 September article already used for an earlier headline, not new, and it never mentions Marmoush at all - no change to claim 5's reasoning. Milenkovic's hamstring timeline and Palace's Nketiah/Sarr fitness doubts both resurfaced only via unofficial fan sites (nottinghamforest.news, Yorkshire Evening Post, Sports Mole), not a permitted outlet. Truffert/Collins, Mitchell/Vuskovic, Hill/Milenkovic, Maguire/Bogle and Fernandez-Pardo/Marmoush all reconfirmed exactly as last night. Thursday and Friday's pre-match pressers, which land after the waiver close, remain the likely source of the next material change - if nothing further comes in before then, this board stands as final."
-    },
-    {
       "ts": "2026-09-17T08:12 UTC",
       "gw": 5,
       "claims": 5,
@@ -1069,6 +1063,12 @@
     },
     {
       "ts": "2026-10-19T08:15 UTC",
+      "gw": 8,
+      "claims": 5,
+      "note": "No fresh permitted-outlet news found; claims carried forward unchanged."
+    },
+    {
+      "ts": "2026-10-19T21:10 UTC",
       "gw": 8,
       "claims": 5,
       "note": "No fresh permitted-outlet news found; claims carried forward unchanged."

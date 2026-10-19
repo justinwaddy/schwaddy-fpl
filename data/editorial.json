@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-17T08:12 UTC",
-      "published": 1,
-      "note": "Final sweep before today's 17:30 UTC waiver close, ~11 hours after last night's 21:13 run. Club-by-club pass (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Man Utd, Newcastle) plus Thursday-presser-focused searches and two general PL sweeps. Published one item: Kudus made his first Tottenham start since January in Wednesday's Carabao Cup tie at Liverpool, confirmed on tottenhamhotspur.com's own line-ups page, but Marmoush also started and played the full 90 in a 10-outfield-change rotated XI, so nothing yet threatens his spot despite Kudus's return. Chased down and discarded a Sky Sports 'Pickford out for a month with thigh injury' story - the search's own summary flagged it as dated September 2022, not this season, so left unpublished. Also confirmed but not news: Milenkovic still out past Saturday's Coventry game per Forest's own line, Collins still out at Brentford with no fresher timeline, Truffert/Hill/Scott/Tavernier all still nailed after Saturday's 2-2 draw with Brentford (Tavernier's fourth goal in five games), Bogle and Ampadu both fit for Sunday's Crystal Palace trip, Mitchell and Strand Larsen still nailed at Palace, and Fernandez-Pardo's next start is still an open question with no fresh Newcastle presser for Saturday's Hull game published yet. Nothing else cleared the sourcing bar."
-    },
-    {
       "ts": "2026-09-18T21:11 UTC",
       "published": 1,
       "note": "Club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Newcastle, Nottingham Forest) plus two general PL sweeps, ~13 hours after this morning's 08:10 claims refresh. Published one item: Truffert's first France call-up (afcb.co.uk), reinforcing rather than changing his case as claim 2's target. Chased down and discarded a wave of hits that read as fresh news but checked out as stale against this season's own minutes data: a Brentford story on Kevin Schade requiring surgery after 'Brentford's 3-1 defeat to Everton' traces to a January 2026 fixture - Brentford haven't played Everton yet this season and Schade has started all four league games; an Arsenal story of Raya 'limping with knee bandaged' at the Etihad is contradicted by Raya's own full 90 minutes played through GW4; a Hull/Ajayi hamstring complaint traces to the season-opening win over Man Utd on 22 August, with no games missed since; and a Man City story that Gvardiol 'is expected to miss the rest of the season with a broken leg' is flatly contradicted by his own full 90 minutes played in three of the last four gameweeks. Also confirmed but not news: Milenkovic still out past Saturday's Coventry game and Cunha a fitness assessment away per Forest's own presser on the 17th; Maddison/Kudus/Marmoush unchanged at Tottenham (the 'edging closer to a start' piece re-surfacing is the same 11 September article already published); Vuskovic fine after a described knock; and Timber started Palace's Europa League tie on the 17th on top of his Ipswich start, nothing changing claim 5's reasoning. Nothing else cleared the sourcing bar."
@@ -621,6 +616,11 @@
       "ts": "2026-10-19T08:15 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only prior-season pages and fantasy sites; no fresh permitted-outlet news on Haaland, Barcola or GW8 injuries. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-19T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Searches returned only prior-season pages, fantasy sites and unverified aggregators; no fresh permitted-outlet news. Not in starters window. Nothing published."
     }
   ]
 }
