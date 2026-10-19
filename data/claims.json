@@ -1,7 +1,7 @@
 {
   "gw": 8,
   "waivers_close": "2026-10-22T17:30:00Z",
-  "ts": "2026-10-16T21:30",
+  "ts": "2026-10-19T08:15 UTC",
   "summary": "GW7 waivers have processed; these claims are for the GW8 window closing 22 October. The Premier League preview backs Leeds continuity (Muharemovic, Ampadu) but the Le Fee and Barcola call rests on the model. Justin is 3rd on points so claims fourth of six, ahead of Edward and Marcus.",
   "claims": [
     {
@@ -714,12 +714,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-15T21:20 UTC",
-      "gw": 5,
-      "claims": 5,
-      "note": "Evening sweep (Everton, Arsenal, Brentford, Nottingham Forest, Leeds, Brighton, Man City, Liverpool, Bournemouth, Tottenham, Crystal Palace, Hull, Newcastle, Sunderland) plus general PL injury/lineup searches. Nothing cleared the sourcing bar for a change: Milenkovic's extended hamstring timeline is now already reflected in the model's own avail/next5 figures, so refreshed claim 3's model line and lifted it to high confidence rather than treating it as new news. Checked and found unmoved: Marmoush is being previewed as a likely Spurs starter for Sunday's Villa game by unpermitted predicted-XI sites only, no permitted outlet has confirmed it, so no change to claim 5's reasoning; Fernandez-Pardo's next Newcastle game is away at Hull on the 19th with no fresh team news yet; Bogle, Mitchell, Vuskovic, Truffert, Collins and Hill all reconfirmed exactly as already reported. Next scheduled team-news pressers land Thu/Fri before Thursday's waiver close, so expect the next material change then."
-    },
-    {
       "ts": "2026-09-16T21:13 UTC",
       "gw": 5,
       "claims": 5,
@@ -1072,6 +1066,12 @@
       "gw": 8,
       "claims": 5,
       "note": "No change: no new permitted-outlet news; claims carried forward."
+    },
+    {
+      "ts": "2026-10-19T08:15 UTC",
+      "gw": 8,
+      "claims": 5,
+      "note": "No fresh permitted-outlet news found; claims carried forward unchanged."
     }
   ]
 }
