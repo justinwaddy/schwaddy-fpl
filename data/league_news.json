@@ -1,43 +1,6 @@
 {
- "generated": "2026-10-20T07:55 UTC",
+ "generated": "2026-10-20T22:55 UTC",
  "items": [
-  {
-   "id": "2026-10-10-city-anfield",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "The Guardian's weekend preview asks whether Manchester City can summon a siege mentality at Anfield, with the club's charges row hanging over the trip. Justin has Haaland and Gvardiol, Edward has Semenyo, and Small Ben's Liverpool players are on the other side of it.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-10-xi-1630",
-   "ts": "2026-10-10T16:03",
-   "kind": "news",
-   "text": "Team news, Man United v Spurs (17:30 BST): Robert has Yoro and Solanke starting, but Sesko is not in the squad. Justin has Van Hecke starting, Marmoush on the bench. Marcus has Mbeumo and Kinsky starting. Big Ben has Fernandes starting. Small Ben has Cunha starting.",
-   "source": {
-    "title": "Confirmed line-ups | Man United vs Spurs",
-    "url": "https://www.tottenhamhotspur.com/news/1176226/confirmed-line-ups-man-united-vs-spurs"
-   }
-  },
-  {
-   "id": "2026-10-10-chelsea-bournemouth",
-   "ts": "2026-10-10T22:50",
-   "kind": "news",
-   "text": "Chelsea led Bournemouth 2-0 after three minutes through Jordan Henderson and Morgan Rogers, then added João Pedro after the break, and Evanilson got the consolation, ESPN reports. That is Rogers for Big Ben and Joao Pedro and Evanilson for Marcus, who had both sides of the one game.",
-   "source": {
-    "title": "Chelsea 5-1 Bournemouth: Premier League result, goals and reaction - as it happened",
-    "url": "https://www.espn.com/soccer/story/_/id/50146916/chelsea-bournemouth-live-premier-league-latest-updates-commentary-score-result"
-   }
-  },
-  {
-   "id": "2026-10-10-marcus-lead",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Marcus is on 57 for the gameweek with three of his eleven still to play, and De Cuyper's 15 and Joao Pedro's 12 are doing the heavy lifting. Haramball Enthusiast sounds like a man who likes his football ugly, and he is winning it the pretty way, 28 clear of Edward.",
-   "source": null
-  },
   {
    "id": "2026-10-10-robert-gap",
    "ts": "2026-10-10T22:50",
@@ -695,16 +658,37 @@
     "title": "Spurs 3-1 Coventry: James Maddison shines on Tottenham return",
     "url": "https://www.bbc.co.uk/sport/football/articles/cwz0v8le7y3eo"
    }
+  },
+  {
+   "id": "2026-10-20-small-ben-spare-keeper",
+   "ts": "2026-10-20T22:55",
+   "kind": "opinion",
+   "text": "Small Ben's spare goalkeeper Suzuki scored 8 from the bench while Donnarumma, the one he actually picked, scored 1, and Isak sat next to him on 9. That is two weeks running that the best part of his team has been somewhere he could not see it, and with Small Ben that is usually the explanation: the bench is a shelf, the shelf is high, and he has never once been able to reach the top of it.",
+   "source": null
+  },
+  {
+   "id": "2026-10-20-robert-six-zeros",
+   "ts": "2026-10-20T22:55",
+   "kind": "opinion",
+   "text": "Six of Robert's fifteen scored nothing in GW7, Wilson, Estevao, Sesko, Cherki, James and Mosquera among them. It would be a crisis for a man who ever opened the waiver page, and since Robert treats the waiver page the way he treats the group chat, it is a lifestyle. The squad is a museum of purchases from September that nobody has been back to look at.",
+   "source": null
+  },
+  {
+   "id": "2026-10-20-edward-semenyo",
+   "ts": "2026-10-20T22:55",
+   "kind": "opinion",
+   "text": "Edward's Semenyo is out for eight weeks with a knee, and the sad part is that he scored 1 in the last gameweek, so what the league is losing is mostly the idea of a Semenyo. Edward will be along to call it a blow to the squad. It is a blow to a lot of confident messages in the group chat, and the squad barely noticed.",
+   "source": null
+  },
+  {
+   "id": "2026-10-20-big-ben-bruno",
+   "ts": "2026-10-20T22:55",
+   "kind": "opinion",
+   "text": "Bruno Fernandes played up front for United, got booked for his trouble and returned 1 point, and Big Ben's other fourteen did exactly what they always do when Bruno does not haul. That is a fifth-place team built on one man's good mood, and on Saturday the mood is a nominal centre-forward again.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-25T07:49 UTC",
-   "news": 5,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Still deep in the international break - fixtures_2627.json confirms no fixtures today (GW6 kicks off 10 October); the live feed's kickoff times for GW6 are time-of-day only and belong to that same 10 October slate, not today, so this is not a matchday. Five items, all from club/broadcaster sites read directly: Alisson's Save of the Month nomination (Marcus); Gakpo's stoppage-time equaliser and Van Dijk's disallowed header for the Netherlands against Germany, Klopp's first match in charge of the Germans, plus Wirtz being rested from that game (Ben C x2, Ben D); Bruno Fernandes in an unfamiliar left-midfield role as Portugal beat Wales (Ben D); Pickford and Branthwaite both called into England's squad, Branthwaite's first under Tuchel, ahead of Saturday's Spain game (Justin, Ben D); Estevao's brace for Brazil against South Korea (Robert). Passed over Semenyo's ankle injury on Ghana duty (Edward's squad, genuinely reported) and an Odegaard-to-Haaland international goal (Edward and Justin) - both real but every write-up I found sat on aggregators, fan sites or SI/Yardbarker, none on the permitted list; will keep checking. No opinion pieces - morning run."
-  },
   {
    "ts": "2026-09-25T22:46 UTC",
    "news": 2,
@@ -1117,6 +1101,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, no fixtures today. Led with Semenyo's eight-week knee injury (Edward) and Haaland's foot doubt for tonight's Champions League game (Justin), then Spurs 3-1 Coventry with Marmoush's first goal. BBC/Guardian read in full. Martinez jaw-break (BBC, 18 Oct) not reported: article could not be fetched and it is more than 24h old. Gibbs-White fine for running a red light left out as not bearing on points. No opinion on a morning run; roast archive not used."
+  },
+  {
+   "ts": "2026-10-20T22:55",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "evening, no fixtures today and GW8 not kicked off. No reported items: man City v AEK had no report found at a permitted outlet and the team-news search returned only stale pieces. Opinion: Small Ben's bench (Suzuki/Isak, height), Robert's six zeros and no transfers, Edward's Semenyo, Big Ben and Bruno (ball-knowledge line). No flops today so no reflop. Passed over: Ben D on Justin (apartheid line, nothing to hang it on and no sign Justin wants it run), Ben D on himself (his own entry, left to Justin), Marcus Jobacus/priest and Harvey Price lines (no hook; Price is a child), Elanga line (no hook), Rob's pint (engine ran it), hairline (ran last night)."
   }
  ]
 }
