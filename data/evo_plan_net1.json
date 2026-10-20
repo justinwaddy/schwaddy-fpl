@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-20T08:08",
+ "generated": "2026-10-20T08:37",
  "gw": 8,
  "horizon": "next5",
- "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz"
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz"
  ],
  "n_models": 1,
  "vote": null,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.69
+   "ep": 4.7
   },
   {
    "id": 391,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.04,
+   "gain": 13.03,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.47,
+   "gain": 12.48,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,18 +293,18 @@
   },
   {
    "pos": "MID",
-   "gain": 11.93,
+   "gain": 11.97,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 453,
-    "code": 201666,
-    "name": "Barnes",
+    "id": 542,
+    "code": 484420,
+    "name": "E.Le F\u00e9e",
     "pos": "MID",
-    "team": "NEW",
+    "team": "SUN",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.97,
     "base": null,
     "ep": null
    },
@@ -413,7 +413,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.64,
+   "gain": 7.65,
    "change": 3,
    "fallback": false,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.23,
+   "gain": 7.24,
    "change": 3,
    "fallback": true,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.09,
+   "gain": 7.14,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.08,
+   "gain": 7.09,
    "change": 3,
    "fallback": true,
    "add": {
@@ -683,7 +683,7 @@
    "news": "Muscular injury - 75% chance of playing",
    "p_play": 0.659,
    "base": 195.57,
-   "ep": 307.8
+   "ep": 307.63
   },
   {
    "id": 427,
@@ -695,7 +695,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.11,
-   "ep": 283.06
+   "ep": 283.41
   },
   {
    "id": 387,
@@ -722,18 +722,6 @@
    "ep": 278.42
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.829,
-   "base": 155.74,
-   "ep": 277.16
-  },
-  {
    "id": 13,
    "code": 204480,
    "name": "Rice",
@@ -743,7 +731,19 @@
    "news": "",
    "p_play": 0.947,
    "base": 168.22,
-   "ep": 276.89
+   "ep": 277.02
+  },
+  {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.829,
+   "base": 155.74,
+   "ep": 276.99
   },
   {
    "id": 106,
@@ -779,7 +779,7 @@
    "news": "",
    "p_play": 0.679,
    "base": 148.35,
-   "ep": 274.13
+   "ep": 274.12
   },
   {
    "id": 398,
@@ -803,7 +803,7 @@
    "news": "",
    "p_play": 0.846,
    "base": 135.95,
-   "ep": 258.66
+   "ep": 259.19
   },
   {
    "id": 8,
@@ -863,7 +863,7 @@
    "news": "",
    "p_play": 0.325,
    "base": 127.55,
-   "ep": 248.67
+   "ep": 248.59
   },
   {
    "id": 19,
@@ -875,19 +875,7 @@
    "news": "",
    "p_play": 0.27,
    "base": 127.94,
-   "ep": 247.27
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.371,
-   "base": 176.9,
-   "ep": 243.45
+   "ep": 246.56
   },
   {
    "id": 390,
@@ -912,6 +900,18 @@
    "p_play": 0.879,
    "base": 147.4,
    "ep": 240.39
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.371,
+   "base": 176.9,
+   "ep": 240.2
   },
   {
    "id": 384,
@@ -983,7 +983,7 @@
    "news": "",
    "p_play": 0.973,
    "base": 176.39,
-   "ep": 230.54
+   "ep": 230.39
   },
   {
    "id": 31,
@@ -1007,7 +1007,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.14,
-   "ep": 227.17
+   "ep": 228.54
   },
   {
    "id": 346,
@@ -1043,7 +1043,7 @@
    "news": "",
    "p_play": 0.676,
    "base": 165.13,
-   "ep": 218.8
+   "ep": 218.55
   },
   {
    "id": 356,
@@ -1067,7 +1067,7 @@
    "news": "Hamstring injury - Unknown return date",
    "p_play": 0.0,
    "base": 150.4,
-   "ep": 215.46
+   "ep": 215.38
   },
   {
    "id": 61,
