@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T08:37",
+ "generated": "2026-10-20T13:51",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.84,
-   "ep": 6.2
+   "ep": 6.18
   },
   {
    "id": 330,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.7
+   "ep": 4.69
   },
   {
    "id": 391,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.746,
    "base": 3.96,
-   "ep": 4.04
+   "ep": 4.05
   },
   {
    "id": 112,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.924,
    "base": 4.13,
-   "ep": 4.54
+   "ep": 4.55
   },
   {
    "id": 94,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 2.98,
-   "ep": 3.12
+   "ep": 3.1
   },
   {
    "id": 628,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.63,
-   "ep": 2.07
+   "ep": 2.06
   },
   {
    "id": 552,
@@ -183,7 +183,7 @@
    "news": "Hamstring injury - 75% chance of playing",
    "p_play": 0.516,
    "base": 1.99,
-   "ep": 2.01
+   "ep": 2.0
   },
   {
    "id": 401,
@@ -198,12 +198,12 @@
    "ep": 1.08
   }
  ],
- "xi_ep": 51.8,
+ "xi_ep": 51.7,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.03,
+   "gain": 13.08,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.48,
+   "gain": 12.63,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.06,
+   "gain": 12.18,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.97,
+   "gain": 12.07,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 11.07,
+   "gain": 10.97,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 9.2,
+   "gain": 9.17,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 4.95,
+   "gain": 4.85,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.65,
+   "gain": 7.68,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.14,
+   "gain": 7.12,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.09,
+   "gain": 7.07,
    "change": 3,
    "fallback": true,
    "add": {
@@ -563,7 +563,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.04,
+   "gain": 5.03,
    "change": 4,
    "fallback": true,
    "add": {
@@ -593,7 +593,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 4.49,
+   "gain": 4.41,
    "change": 4,
    "fallback": true,
    "add": {
@@ -683,7 +683,7 @@
    "news": "Muscular injury - 75% chance of playing",
    "p_play": 0.659,
    "base": 195.57,
-   "ep": 307.63
+   "ep": 307.8
   },
   {
    "id": 427,
@@ -695,7 +695,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.11,
-   "ep": 283.41
+   "ep": 283.06
   },
   {
    "id": 387,
@@ -722,18 +722,6 @@
    "ep": 278.42
   },
   {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.947,
-   "base": 168.22,
-   "ep": 277.02
-  },
-  {
    "id": 428,
    "code": 430871,
    "name": "Cunha",
@@ -743,7 +731,19 @@
    "news": "",
    "p_play": 0.829,
    "base": 155.74,
-   "ep": 276.99
+   "ep": 277.16
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.947,
+   "base": 168.22,
+   "ep": 276.89
   },
   {
    "id": 106,
@@ -779,7 +779,7 @@
    "news": "",
    "p_play": 0.679,
    "base": 148.35,
-   "ep": 274.12
+   "ep": 274.13
   },
   {
    "id": 398,
@@ -803,7 +803,7 @@
    "news": "",
    "p_play": 0.846,
    "base": 135.95,
-   "ep": 259.19
+   "ep": 258.66
   },
   {
    "id": 8,
@@ -863,7 +863,7 @@
    "news": "",
    "p_play": 0.325,
    "base": 127.55,
-   "ep": 248.59
+   "ep": 248.67
   },
   {
    "id": 19,
@@ -875,7 +875,19 @@
    "news": "",
    "p_play": 0.27,
    "base": 127.94,
-   "ep": 246.56
+   "ep": 247.27
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.371,
+   "base": 176.9,
+   "ep": 243.45
   },
   {
    "id": 390,
@@ -900,18 +912,6 @@
    "p_play": 0.879,
    "base": 147.4,
    "ep": 240.39
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.371,
-   "base": 176.9,
-   "ep": 240.2
   },
   {
    "id": 384,
@@ -983,7 +983,7 @@
    "news": "",
    "p_play": 0.973,
    "base": 176.39,
-   "ep": 230.39
+   "ep": 230.54
   },
   {
    "id": 31,
@@ -1007,7 +1007,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 159.14,
-   "ep": 228.54
+   "ep": 227.17
   },
   {
    "id": 346,
@@ -1043,7 +1043,7 @@
    "news": "",
    "p_play": 0.676,
    "base": 165.13,
-   "ep": 218.55
+   "ep": 218.8
   },
   {
    "id": 356,
@@ -1067,7 +1067,7 @@
    "news": "Hamstring injury - Unknown return date",
    "p_play": 0.0,
    "base": 150.4,
-   "ep": 215.38
+   "ep": 215.46
   },
   {
    "id": 61,
