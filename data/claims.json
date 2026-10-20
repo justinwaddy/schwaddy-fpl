@@ -1,7 +1,7 @@
 {
  "gw": 8,
  "waivers_close": "2026-10-22T17:30:00Z",
- "ts": "2026-10-20T08:20 UTC",
+ "ts": "2026-10-20T21:20 UTC",
  "summary": "GW7 waivers have processed; these claims are for the GW8 window closing 22 October. The Premier League preview backs Leeds continuity (Muharemovic, Ampadu) but the Le Fee and Barcola call rests on the model. Justin is 3rd on points so claims fourth of six, ahead of Edward and Marcus.",
  "claims": [
   {
@@ -714,12 +714,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-09-18T21:11 UTC",
-   "gw": 6,
-   "claims": 5,
-   "note": "No change to which five claims are made or their order. Full club-by-club sweep found nothing that clears the sourcing bar: Truffert's first France call-up is a positive but incremental confirmation of claim 2, not new information about his standing at Bournemouth. Investigated and discarded several stale-dated stories that would otherwise have looked like fresh injury news - Schade/surgery (traces to a January 2026 Everton fixture that hasn't happened yet this season), Raya/knee (contradicted by his own four full 90s), Ajayi/hamstring (traces to the 22 August season opener) and Gvardiol/broken leg (contradicted by his own recent minutes) - none of which are squad or shortlist players whose claim status would change anyway. Marmoush/Kudus/Maddison at Tottenham unchanged; Timber started Palace's Europa League tie on top of his Ipswich start, no change to claim 5's reasoning."
-  },
-  {
    "ts": "2026-09-19T21:14 UTC",
    "gw": 6,
    "claims": 5,
@@ -1072,6 +1066,12 @@
    "gw": 8,
    "claims": 5,
    "note": "Claims carried forward unchanged; only new fact is Haaland knock (Maresca: nothing serious), not enough to change a claim."
+  },
+  {
+   "ts": "2026-10-20T21:20 UTC",
+   "gw": 8,
+   "claims": 5,
+   "note": "Claims carried forward unchanged; Brobbey missed Bournemouth but is training, no change to ranks."
   }
  ]
 }
