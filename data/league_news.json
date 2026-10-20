@@ -1,33 +1,6 @@
 {
- "generated": "2026-10-19T22:50 UTC",
+ "generated": "2026-10-20T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-09-quantum-of-tzolis",
-   "ts": "2026-10-09T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Big Ben named his team Quantum of Tzolis, and the real Christos Tzolis is in Marcus's squad with a hamstring injury and an expected return of 24 Oct. Big Ben has built an entire identity around a player he does not own, who is not playing, and who is not coming back for a fortnight. Gameweek 6 has ten fixtures and not one has kicked off."
-  },
-  {
-   "id": "2026-10-10-baleba-debut",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "Carlos Baleba, the Brighton midfielder Manchester United signed on 25 August, could make his debut against Tottenham this afternoon, the Guardian reports, with United 12th after one win in their first five games. It touches Edward's Lammens, Marcus's Mbeumo, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko, all in the XI that has to stop the leaking.",
-   "source": {
-    "title": "Will Carlos Baleba fix Manchester United? Three big questions ahead of potential debut",
-    "url": "https://www.theguardian.com/football/2026/oct/09/carlos-baleba-manchester-united-debut"
-   }
-  },
-  {
-   "id": "2026-10-10-joao-pedro-doubt",
-   "ts": "2026-10-10T07:41",
-   "kind": "news",
-   "text": "BBC Sport's FPL writer says Joao Pedro's fitness is in question for Chelsea's home game with Bournemouth, and that the Chelsea attack suffered without him against Brentford in Gameweek 5. Marcus owns him, and Robert has Chelsea's Estevao and James.",
-   "source": {
-    "title": "What to do with Joao Pedro? FPL gameweek six dilemmas",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq4g1pk9w8y0o"
-   }
-  },
   {
    "id": "2026-10-10-city-anfield",
    "ts": "2026-10-10T07:41",
@@ -692,23 +665,39 @@
    "kind": "opinion",
    "text": "Big Ben, Arsenal to the bone, owns Konsa and Havertz and was still passed tonight by Small Ben, whose eleven gave Cunha, Wissa and Anderson a point each while Isak and Suzuki, 17 between them, watched from the bench. Fifth place behind a man who picks like that is a ball-knowledge result, and a lifetime of Arsenal has not taught him to read one.",
    "source": null
+  },
+  {
+   "id": "2026-10-20-semenyo-eight-weeks",
+   "ts": "2026-10-20T07:55",
+   "kind": "news",
+   "text": "Antoine Semenyo limped off against Ipswich on Saturday and has been ruled out for eight weeks with a knee injury, the Guardian reports. Edward owns him, and Manchester City, who had been treating him as the natural cover up front, now have one fewer option behind Erling Haaland. BBC Sport says he could miss up to 13 matches.",
+   "source": {
+    "title": "Semenyo's eight-week injury absence leaves Manchester City short on cover for Haaland",
+    "url": "https://www.theguardian.com/football/2026/oct/19/antoine-semenyo-eight-week-knee-injury-absence-manchester-city-short-cover-erling-haaland"
+   }
+  },
+  {
+   "id": "2026-10-20-haaland-doubt",
+   "ts": "2026-10-20T07:55",
+   "kind": "news",
+   "text": "Justin's Haaland scored twice in Saturday's 3-2 win over Ipswich and hobbled off at full time with a blow to the foot, which makes him a doubt for City's Champions League game against AEK Athens tonight, BBC Sport reports. Maresca said he 'can be available' but the striker was missing from the training session open to the media. If he sits, Maresca has mentioned Foden (Marcus) as a false nine and Ndiaye (Robert) as another option. It is a European tie, so nothing in it counts here.",
+   "source": {
+    "title": "Haaland a doubt, Semenyo out - what are Man City's options?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5djv21rkekwo"
+   }
+  },
+  {
+   "id": "2026-10-20-spurs-coventry",
+   "ts": "2026-10-20T07:55",
+   "kind": "news",
+   "text": "Tottenham beat Coventry 3-1 on Monday night for their first league win of the season, and Justin's Marmoush scored the second with a curling finish, his first goal for the club, BBC Sport reports. James Maddison opened the scoring on his first start in 18 months, Jack Rudoni pulled one back past Marcus's Kinsky, and Ben Davies added the third in stoppage time. Spurs are off the bottom and travel to Chelsea on Saturday, where the league holds Chelsea players on four different squads.",
+   "source": {
+    "title": "Spurs 3-1 Coventry: James Maddison shines on Tottenham return",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cwz0v8le7y3eo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-24T07:52 UTC",
-   "news": 1,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning news. Still deep in the international break (fixtures_2627.json confirms GW6 doesn't kick off until 10 October); the live feed's GW6 listing has bare kickoff times with no date and briefly looked like a same-day fixture list again, same trap as two days ago - ignored it. Checked every candidate against the full 80-item archive before writing anything, not just the last 12: Cole Palmer's withdrawal and Morgan Gibbs-White/James Garner's call-ups (21 Sept), Jarrad Branthwaite and Jordan Pickford's England call-ups (21 Sept squad list), and Declan Rice's withdrawal were all already posted, so despite a dozen searches turning them up as if fresh, none of it was usable. Led instead with something genuinely new: Virgil van Dijk closing in on his 100th Dutch cap and Cody Gakpo alongside him as Jurgen Klopp takes his first game in charge of Germany tonight in Amsterdam, with Florian Wirtz held back until October - read directly off liverpoolfc.com. Passed over: a Bukayo Saka goal at Aston Villa (arsenal.com match report) because the exact date within the season couldn't be pinned down with confidence; Nottingham Forest's Milenkovic/Savona injuries pulling Murillo into a back three, since every write-up sat on unpermitted sites and Forest's real site is nottinghamforest.co.uk, not the .com on the sources list; Wissa's recovery update, which turned out to be dated to last season; and Gabriel's Brazil call-up and Mateta's injury at Palace, neither of which I could pin to a permitted source I'd actually read. Roast archive untouched - no opinion pieces on a morning run, and both unused submissions remain out of bounds regardless."
-  },
-  {
-   "ts": "2026-09-24T22:43 UTC",
-   "news": 1,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday and deep in the international break - fixtures_2627.json and the live feed both confirm GW6 doesn't kick off until 10 October, so no points moved today and no FLOP lines to rewrite. Led with Kai Havertz being forced off for Germany against the Netherlands (Sky Sports, read directly - the article names an injury for Brobbey but not for Havertz, so left the type unconfirmed rather than borrow the hamstring diagnosis from unpermitted sites); he's on Ben D's fifteen, already 40 back. Passed over Antoine Semenyo's Ghana ankle withdrawal (Edward's squad) and Brian Brobbey's own hamstring knock (a free-agent waiver target) - both real and reported everywhere, but every write-up I could find sat on aggregators or non-permitted sites; will keep checking for a permitted source. One opinion piece per the no-football/no-archive-material rule: Robert's fifteen has now had four different players (Cherki, Sesko, James, Wilson) flagged with injuries in the same week, all already reported, tied to his 89-point deficit. Roast archive: the same two submissions remain unused (Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid), both excluded outright by rule 4 regardless of who they target - not pending a fact, permanently unused."
-  },
   {
    "ts": "2026-09-25T07:49 UTC",
    "news": 5,
@@ -1121,6 +1110,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "evening: Spurs v Coventry report not found at a permitted outlet, so no reported items. Opinion: Justin 73 and the cut to Marcus's lead, Marcus's two 12s and luck (Edward's archive line), Robert's bench outscoring his forwards with the hairline, Big Ben passed by Small Ben (ball-knowledge/Arsenal line). Rewrote the Kinsky flop. Passed over: Ben D on Justin (apartheid line) and Ben D on himself (slur on his own sexuality, his own entry, left to Justin), Marcus Jobacus/priest line (nothing to hang it on tonight), Harvey Price/boxing line (no fact), Rob's pint (the engine's PINT item already ran it), Elanga/Bruno lines (no hook)."
+  },
+  {
+   "ts": "2026-10-20T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures today. Led with Semenyo's eight-week knee injury (Edward) and Haaland's foot doubt for tonight's Champions League game (Justin), then Spurs 3-1 Coventry with Marmoush's first goal. BBC/Guardian read in full. Martinez jaw-break (BBC, 18 Oct) not reported: article could not be fetched and it is more than 24h old. Gibbs-White fine for running a red light left out as not bearing on points. No opinion on a morning run; roast archive not used."
   }
  ]
 }
