@@ -1,20 +1,6 @@
 {
- "generated": "2026-10-20T22:55 UTC",
+ "generated": "2026-10-21T07:42 UTC",
  "items": [
-  {
-   "id": "2026-10-10-robert-gap",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Robert is on 9 for the gameweek and 127 behind the leader on the live feed, a gap you could park a whole Pardinho in. Saka and Gabriel played 90 minutes each for 2 points apiece, so his Arsenal contingent has been purely decorative. Four of his eleven have not kicked off, which is the only reason this is not yet an obituary.",
-   "source": null
-  },
-  {
-   "id": "2026-10-10-anfield-six",
-   "ts": "2026-10-10T22:50",
-   "kind": "opinion",
-   "text": "Liverpool v Man City is still to come, and it is the one fixture all six managers own a piece of: Haaland and Gvardiol for Justin, Donnarumma and Ruben plus four Liverpool men for Small Ben, Foden and Guehi for Marcus, Semenyo for Edward, Enzo for Big Ben and three City players for Robert. Anfield is effectively playing the whole league, and nobody gets to sit this one out.",
-   "source": null
-  },
   {
    "id": "2026-10-11-hincapie-injury",
    "ts": "2026-10-11T07:50",
@@ -686,16 +672,29 @@
    "kind": "opinion",
    "text": "Bruno Fernandes played up front for United, got booked for his trouble and returned 1 point, and Big Ben's other fourteen did exactly what they always do when Bruno does not haul. That is a fifth-place team built on one man's good mood, and on Saturday the mood is a nominal centre-forward again.",
    "source": null
+  },
+  {
+   "id": "2026-10-21-wirtz-no10",
+   "ts": "2026-10-21T07:42",
+   "kind": "news",
+   "text": "Florian Wirtz created nine chances in Liverpool's 2-1 comeback at Brentford, the Guardian reports, and on a night Brentford were down to ten men he finally looked like the No 10 Liverpool paid for. Both of his league assists this season have gone to Victor Munoz, and the one on Saturday was the pass that released Munoz for the equaliser. Big Ben has Wirtz; the Guardian's own line is that he has struggled with the job since joining, so Big Ben may be holding a player who is only now starting to arrive.",
+   "source": {
+    "title": "Premier League: 10 talking points from the weekend's action",
+    "url": "https://www.theguardian.com/football/2026/oct/19/premier-league-10-talking-points-from-the-weekends-action"
+   }
+  },
+  {
+   "id": "2026-10-21-city-regulator",
+   "ts": "2026-10-21T07:42",
+   "kind": "news",
+   "text": "The chair of the Independent Football Regulator, David Kogan, says it has \"absolute power\" to force Manchester City's owners to sell if the club is ultimately found to have been run improperly, the Guardian reports. City have appealed the commission verdict and Kogan would not say whether the IFR will open its own investigation until the appeal is settled, so nothing changes this gameweek. It does touch every manager in the league: City players sit in all six squads, from Haaland and Gvardiol with Justin to Foden with Marcus, Semenyo with Edward, Donnarumma and Ruben with Small Ben, Enzo with Big Ben and Cherki with Robert.",
+   "source": {
+    "title": "Football regulator has 'absolute power' to force Manchester City sale if verdict upheld",
+    "url": "https://www.theguardian.com/football/2026/oct/21/manchester-city-david-kogan-independent-football-regulator"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-25T22:46 UTC",
-   "news": 2,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. Still deep in the international break - fixtures_2627.json shows no fixtures today and the live feed confirms GW6 doesn't kick off until 10 October (its kickoff times are time-of-day only, for that slate, not today), so no points moved and there were no FLOP lines to rewrite. Two news items, both read directly and dated today: Cole Palmer's withdrawal from England's squad through injury (Sky Sports; Edward's) and Virgil van Dijk denying Dutch reports that he forced Koeman's back-five switch at the World Cup (Sky Sports; Ben C's). One opinion piece, built on the Van Dijk story rather than restating the table again - the standings (259/252/249/246/219/170) haven't moved since they were last reported on 22 and 24 September, so a third recap would just repeat itself; this instead pairs the reported news with Van Dijk's actual GW5 return. Roast archive: the same two submissions remain unused and stay that way - Ben D on himself invokes sexuality, Ben D on Justin invokes race via apartheid - both barred outright by rule 4, not waiting on a fact."
-  },
   {
    "ts": "2026-09-26T07:48",
    "news": 2,
@@ -1108,6 +1107,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "evening, no fixtures today and GW8 not kicked off. No reported items: man City v AEK had no report found at a permitted outlet and the team-news search returned only stale pieces. Opinion: Small Ben's bench (Suzuki/Isak, height), Robert's six zeros and no transfers, Edward's Semenyo, Big Ben and Bruno (ball-knowledge line). No flops today so no reflop. Passed over: Ben D on Justin (apartheid line, nothing to hang it on and no sign Justin wants it run), Ben D on himself (his own entry, left to Justin), Marcus Jobacus/priest and Harvey Price lines (no hook; Price is a child), Elanga line (no hook), Rob's pint (engine ran it), hairline (ran last night)."
+  },
+  {
+   "ts": "2026-10-21T07:42",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "morning, no fixtures today. Led with Wirtz creating nine chances v Brentford (Big Ben) and the IFR 'absolute power' comment on Man City (touches all six squads). Calvert-Lewin and Manzambi stories already posted so skipped; Lisandro Martinez thigh has no owner here. Web search tool returned only stale/fantasy pages so sources came from the Guardian directly. No opinion on morning runs; no roast suggestions used or passed over."
   }
  ]
 }
