@@ -77,6 +77,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 106760,1789807008,1789807008,d,50.0,50.0,Unspecified injury - 50% chance of playing
 106760,1789979793,1789979793,a,50.0,100.0,
 106760,1791844773,1791840609,d,100.0,75.0,Unspecified injury - 75% chance of playing
+106760,1792571741,1792571741,i,75.0,0.0,Unspecified injury - Unknown return date
 106921,1787270210,1787270210,a,,,
 108413,1785832691,1785832691,a,,,
 108416,1785832691,1785832691,a,,,
@@ -194,6 +195,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 176297,1785832691,1785832691,a,,,
 176297,1789998835,1789986609,d,,75.0,Unspecified injury - 75% chance of playing
 176297,1791707768,1791707768,a,75.0,100.0,
+176297,1792571741,1792526410,d,100.0,75.0,Hip injury - 75% chance of playing
 176412,1785832691,1785832691,a,,,
 176412,1787270210,1786744807,i,,0.0,Thigh injury - Unknown return date
 176420,1785832691,1785832691,a,,,
@@ -322,6 +324,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 214572,1785832691,1785832691,a,,,
 214590,1787910473,1787910473,a,,,
 214590,1792312553,1792265410,d,,75.0,Hamstring injury - 75% chance of playing
+214590,1792571741,1792571741,i,,0.0,Hamstring injury - Expected back 21 Nov
 215059,1785832691,1785832691,a,,,
 215059,1788894459,1788366042,u,0.0,0.0,Has joined Como on loan for the rest of the season
 215136,1785832691,1785832691,a,,,
@@ -392,6 +395,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 222694,1792226142,1792171809,d,75.0,75.0,Hamstring injury - 75% chance of playing
 223094,1785832691,1785832691,a,,,
 223094,1792425094,1792414811,d,,75.0,Unspecified injury - 75% chance of playing
+223094,1792571741,1792571741,a,,100.0,
 223340,1785832691,1785832691,a,,,
 223434,1785832691,1785832691,a,,,
 223434,1788894459,1788363496,u,0.0,0.0,Has joined Burnley permanently
@@ -628,6 +632,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441302,1785832691,1785832691,a,,,
 441302,1789288550,1789236009,d,,25.0,Ankle injury - 25% chance of playing
 441302,1789807008,1789807008,i,0.0,0.0,Ankle injury - Unknown return date
+441302,1792571741,1792571741,d,0.0,75.0,Ankle injury - 75% chance of playing
 442299,1788894459,1788894459,a,,,
 442967,1785832691,1785832691,a,,,
 443261,1785832691,1785832691,a,,,
@@ -672,6 +677,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 448104,1785832691,1785832691,a,,,
 448104,1791828669,1791817208,d,,75.0,Ankle injury - 75% chance of playing
 448104,1792226142,1792226142,i,,0.0,Ankle injury - Expected back 24 Oct
+448104,1792571741,1792571741,d,0.0,75.0,Ankle injury - 75% chance of playing
 448514,1785832691,1785832691,a,,,
 449027,1785832691,1785832691,a,,,
 449428,1785832691,1785661211,d,,75.0,Hip injury - 75% chance of playing
@@ -992,6 +998,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 516895,1789998835,1789995609,d,,75.0,Unspecified injury - 75% chance of playing
 516895,1791707768,1791707768,a,75.0,100.0,
 516895,1791844773,1791840609,d,75.0,75.0,Unspecified injury - 75% chance of playing
+516895,1792571741,1792571741,i,75.0,0.0,Unspecified injury - Expected back 8 Nov
 517052,1785832691,1785832691,a,,,
 519324,1788894459,1788363496,u,0.0,0.0,Has joined Middlesbrough on loan for the rest of the season
 519440,1785832691,1785832691,a,,,
@@ -1091,6 +1098,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 551262,1787270210,1786974836,u,,0.0,Has joined Shabab Al-Ahli Dubai permanently
 551466,1787270210,1787270210,a,,,
 551499,1785832691,1785832691,a,,,
+551499,1792571741,1792521010,d,,75.0,Knee injury - 75% chance of playing
 552946,1787270210,1787270210,a,,,
 553746,1787910473,1787910473,a,,,
 553746,1789202150,1789137717,u,,0.0,has joined Arouca on loan for the rest of the seaon.
@@ -1192,6 +1200,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 606702,1791275765,1791246610,d,100.0,75.0,Hamstring injury - 75% chance of playing
 606702,1791621375,1791621375,a,100.0,100.0,
 606745,1785832691,1785832691,a,,,
+606745,1792571741,1792526410,d,,75.0,Illness - 75% chance of playing
 606798,1785832691,1785832691,a,,,
 606921,1785832691,1785832691,a,,,
 606921,1788894459,1788363667,u,0.0,0.0,Has joined Millwall on loan for the rest of the season
