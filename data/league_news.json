@@ -1,26 +1,6 @@
 {
- "generated": "2026-10-21T07:42 UTC",
+ "generated": "2026-10-21T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-11-hincapie-injury",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Arsenal defender Piero Hincapie was carried off during the warm-down after coming on as a late substitute in the win over Leeds, and BBC Sport says it raises concern he has an injury. All six managers own an Arsenal player, so the club's fitness list is everybody's business.",
-   "source": {
-    "title": "Hincapie injury adds to Arsenal issues after Guimaraes rescue act",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c63r5w20ez3do"
-   }
-  },
-  {
-   "id": "2026-10-11-palmer-contract",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Cole Palmer has signed a new Chelsea contract on improved terms until 2034, BBC Sport reports. Edward owns him and Marcus owns Joao Pedro, who the BBC also lists among the few Premier League players contracted to 2034 along with Haaland, who is Justin's.",
-   "source": {
-    "title": "Palmer signs new Chelsea contract until 2034",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cwe9lngxzjpno"
-   }
-  },
   {
    "id": "2026-10-11-utd-spurs-draw",
    "ts": "2026-10-11T07:50",
@@ -692,16 +672,23 @@
     "title": "Football regulator has 'absolute power' to force Manchester City sale if verdict upheld",
     "url": "https://www.theguardian.com/football/2026/oct/21/manchester-city-david-kogan-independent-football-regulator"
    }
+  },
+  {
+   "id": "2026-10-21-marcus-lead-halved",
+   "ts": "2026-10-21T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Marcus went into GW7 36 clear and came out 19 clear, with Justin's whole squad chewing through the gap while two forwards carried most of his own week. A lead built on two men having a good Saturday gets spent the same way, and GW8 has not even kicked off. Marcus would like you to know that 19 is still a lead."
+  },
+  {
+   "id": "2026-10-21-robert-hairline-table",
+   "ts": "2026-10-21T22:45",
+   "kind": "opinion",
+   "source": null,
+   "text": "Robert is 121 behind the leader, with Saka a coin-flip for the weekend and Sesko out with a shin injury and no return date, which means the only thing in his squad moving as slowly as the transfer wire is the one thing leaving at pace: his hairline, which at least has a direction. His title chances are going the same way, minus the dignity of a comb-over."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-26T07:48",
-   "news": 2,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning run, GW6 matchday (10 fixtures from 11:30 UTC, none kicked off yet). Led with Man City's guilty verdict on the majority of the 115 charges (BBC, Fri) - touches every squad but Edward's - and Tottenham's winless start amid De Zerbi's international-break squad disruption (BBC). No opinion pieces on a morning run. Research was heavy on stale/mis-dated search results (years-old press conferences and FA Cup-era injury stories resurfacing for Arsenal, Liverpool, Man City, Everton, Newcastle, Chelsea, Man Utd and Brighton), so kept to two items I could verify by reading the primary source rather than pad the count. Two roast-archive submissions remain unused (Ben D on Ben D; Ben D on Justin) - held for tonight's wrap, not used on a news-only morning run."
-  },
   {
    "ts": "2026-09-26T22:51 UTC",
    "news": 2,
@@ -1114,6 +1101,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "morning, no fixtures today. Led with Wirtz creating nine chances v Brentford (Big Ben) and the IFR 'absolute power' comment on Man City (touches all six squads). Calvert-Lewin and Manzambi stories already posted so skipped; Lisandro Martinez thigh has no owner here. Web search tool returned only stale/fantasy pages so sources came from the Guardian directly. No opinion on morning runs; no roast suggestions used or passed over."
+  },
+  {
+   "ts": "2026-10-21T22:45",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "evening, non-matchday, GW8 yet to kick off. Searches returned only stale or off-list results so no reported items. Led with Marcus's lead halving 36 to 19 and Robert's table position/hairline (archive 2026-09-04-9b7835c402, 2026-09-12-7526d15fa8). Reflop skipped: no FLOP lines today. Passed over: Ben D self-roast (slur-adjacent, own submission about himself, not football-hung), apartheid line (no football hook), Jobacus (no hook), Harvey Price (no hook), others waiting on a fact."
   }
  ]
 }
