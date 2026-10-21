@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T08:36",
+ "generated": "2026-10-21T14:06",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.33,
+   "ep": 4.32,
    "votes": 4
   },
   {
@@ -187,7 +187,7 @@
    "news": "Hamstring injury - 75% chance of playing",
    "p_play": 0.516,
    "base": 1.99,
-   "ep": 1.91,
+   "ep": 1.92,
    "votes": 1
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 9.05,
+   "gain": 9.0,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 149
+   "borda": 147
   },
   {
    "pos": "MID",
-   "gain": 8.3,
+   "gain": 8.33,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.38,
+   "gain": 8.44,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.29,
+   "gain": 7.34,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.52,
+   "gain": 5.53,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.22,
+   "gain": 5.26,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.64,
+   "gain": 5.66,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.06,
+   "gain": 5.1,
    "change": 2,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 8.96,
+   "gain": 8.9,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 6.38,
+   "gain": 6.34,
    "change": 3,
    "fallback": true,
    "add": {
@@ -542,7 +542,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 8.16,
+   "gain": 8.11,
    "change": 3,
    "fallback": true,
    "add": {
@@ -574,7 +574,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 3.07,
+   "gain": 3.09,
    "change": 4,
    "fallback": false,
    "add": {
@@ -602,7 +602,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 22
+   "borda": 20
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

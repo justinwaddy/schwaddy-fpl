@@ -769,6 +769,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 469247,1787270210,1786974749,u,,0.0,Has joined Bolton Wanderers on loan for the rest of the season
 469266,1787270210,1787270210,a,,,
 469266,1792157428,1792155608,i,,0.0,Calf injury - Expected back 25 Oct
+469266,1792591565,1792591565,d,0.0,50.0,Calf injury - 50% chance of playing
 469272,1785832691,1785832691,a,,,
 470294,1785832691,1785832691,a,,,
 470294,1787270210,1785868211,i,,0.0,Thigh injury - Unknown return date
@@ -827,6 +828,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 483067,1785832691,1785832691,a,,,
 484389,1785832691,1785832691,a,,,
 484389,1788894459,1788363855,u,0.0,0.0,Has joined Leyton Orient on loan for the rest of the season
+484389,1792591565,1792591565,u,0.0,0.0,not included in squad.
 484420,1785832691,1785832691,a,,,
 485047,1785832691,1785832691,a,,,
 485047,1788894459,1788365995,u,0.0,0.0,Has joined West Ham on loan for the rest of the season
@@ -887,6 +889,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 490881,1788894459,1788268609,u,0.0,0.0,Has joined West Brom permanently
 490884,1788894459,1788894459,a,,,
 490884,1792226142,1792171810,i,,0.0,Unspecified injury - Expected back 25 Oct
+490884,1792591565,1792591565,d,0.0,50.0,Unspecified injury - 50% chance of playing
 491007,1785832691,1785832691,a,,,
 491007,1788894459,1788366042,u,0.0,0.0,Has joined RC Strasbourg on loan for the rest of the season
 491279,1785832691,1785832691,a,,,
@@ -957,6 +960,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 503139,1785832691,1785832691,a,,,
 503139,1791220971,1791192610,d,,50.0,Thigh injury - 50% chance of playing
 503139,1791474643,1791474643,i,,0.0,Thigh injury - Unknown return date
+503139,1792591565,1792591565,i,0.0,0.0,Thigh injury - Expected back 8 Nov
 503301,1785832691,1785832691,a,,,
 503301,1788894459,1788269032,u,0.0,0.0,Has joined AC Milan on loan for the rest of the season
 505079,1785832691,1785832691,a,,,
@@ -1115,6 +1119,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 559152,1787270210,1787270210,a,,,
 560262,1785832691,1785346210,i,,0.0,Foot injury - Unknown return date
 560262,1789115764,1789115764,i,0.0,0.0,Foot injury - Expected back 7 Nov
+560262,1792591565,1792591565,d,0.0,50.0,Foot injury - 50% chance of playing
 560552,1785832691,1785832691,a,,,
 561245,1785832691,1785832691,a,,,
 561245,1787270210,1786811407,d,,75.0,Unspecified injury - 75% chance of playing
@@ -1202,6 +1207,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 606745,1785832691,1785832691,a,,,
 606745,1792571741,1792526410,d,,75.0,Illness - 75% chance of playing
 606798,1785832691,1785832691,a,,,
+606798,1792591565,1792589089,u,,0.0,Has joined Getafe on loan for the rest of the season
 606921,1785832691,1785832691,a,,,
 606921,1788894459,1788363667,u,0.0,0.0,Has joined Millwall on loan for the rest of the season
 606930,1787270210,1787270210,a,,,
@@ -1251,6 +1257,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 620487,1785832691,1785832691,a,,,
 620487,1787270210,1786010410,i,,0.0,Unspecified injury - Unknown return date
 620487,1789202150,1789202150,i,0.0,0.0,Thigh injury - Unknown return date
+620487,1792591565,1792591565,i,0.0,0.0,Thigh injury - Expected back 8 Nov
 622758,1785832691,1785832691,a,,,
 622758,1787910473,1787910473,a,,100.0,
 624773,1785832691,1785832691,a,,,
@@ -1264,6 +1271,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 629397,1788894459,1787963760,u,0.0,0.0,Has joined Oxford United on loan for the rest of the season
 631000,1788894459,1788894459,a,,,
 631000,1792312553,1792256408,d,,50.0,Achilles injury - 50% chance of playing
+631000,1792591565,1792591565,d,,75.0,Achilles injury - 75% chance of playing
 631786,1785832691,1785832691,a,,,
 632794,1785832691,1785832691,a,,,
 636846,1789807008,1789807008,a,,,

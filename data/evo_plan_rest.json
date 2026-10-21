@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T08:36",
+ "generated": "2026-10-21T14:06",
  "gw": 8,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.33,
+   "ep": 4.32,
    "votes": 4
   },
   {
@@ -187,7 +187,7 @@
    "news": "Hamstring injury - 75% chance of playing",
    "p_play": 0.516,
    "base": 1.99,
-   "ep": 1.91,
+   "ep": 1.92,
    "votes": 1
   },
   {
@@ -218,11 +218,11 @@
   }
  ],
  "xi_ep": 48.2,
- "changes": 4,
+ "changes": 5,
  "claims": [
   {
    "pos": "MID",
-   "gain": 52.96,
+   "gain": 53.15,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 146
+   "borda": 156
   },
   {
    "pos": "MID",
-   "gain": 52.2,
+   "gain": 52.45,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 119
+   "borda": 127
   },
   {
    "pos": "MID",
-   "gain": 46.22,
+   "gain": 46.54,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 101
+   "borda": 111
   },
   {
    "pos": "MID",
-   "gain": 64.42,
+   "gain": 64.16,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 96
+   "borda": 101
   },
   {
    "pos": "MID",
-   "gain": 26.26,
+   "gain": 25.87,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 54
+   "borda": 58
   },
   {
    "pos": "MID",
-   "gain": 29.16,
+   "gain": 29.39,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 37
+   "borda": 41
   },
   {
    "pos": "MID",
-   "gain": 22.51,
+   "gain": 22.84,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 32
+   "borda": 36
   },
   {
    "pos": "MID",
-   "gain": 32.81,
+   "gain": 32.9,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 28
+   "borda": 32
   },
   {
    "pos": "GKP",
-   "gain": 59.08,
+   "gain": 58.73,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 39
+   "borda": 48
   },
   {
    "pos": "GKP",
-   "gain": 43.4,
+   "gain": 43.37,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 25
+   "borda": 31
   },
   {
    "pos": "GKP",
-   "gain": 39.24,
+   "gain": 38.97,
    "change": 3,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 22
+   "borda": 27
   },
   {
    "pos": "DEF",
-   "gain": 21.99,
+   "gain": 21.64,
    "change": 4,
    "fallback": false,
    "add": {
@@ -602,11 +602,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 18
+   "borda": 23
   },
   {
    "pos": "DEF",
-   "gain": 25.96,
+   "gain": 25.85,
    "change": 4,
    "fallback": true,
    "add": {
@@ -634,7 +634,39 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 17
+   "borda": 19
+  },
+  {
+   "pos": "MID",
+   "gain": 25.63,
+   "change": 5,
+   "fallback": false,
+   "add": {
+    "id": 453,
+    "code": 201666,
+    "name": "Barnes",
+    "pos": "MID",
+    "team": "NEW",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
+    "pos": "MID",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.996,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 13
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

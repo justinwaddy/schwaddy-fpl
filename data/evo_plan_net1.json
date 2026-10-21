@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T08:37",
+ "generated": "2026-10-21T14:07",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.84,
-   "ep": 6.18
+   "ep": 6.16
   },
   {
    "id": 330,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 4.78,
-   "ep": 6.08
+   "ep": 6.07
   },
   {
    "id": 504,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.76
+   "ep": 4.75
   },
   {
    "id": 391,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.996,
    "base": 4.11,
-   "ep": 5.0
+   "ep": 4.99
   },
   {
    "id": 68,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.924,
    "base": 4.13,
-   "ep": 4.65
+   "ep": 4.66
   },
   {
    "id": 94,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.17,
-   "ep": 7.35
+   "ep": 7.34
   }
  ],
  "bench": [
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 2.98,
-   "ep": 3.02
+   "ep": 2.99
   },
   {
    "id": 628,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.63,
-   "ep": 2.13
+   "ep": 2.12
   },
   {
    "id": 552,
@@ -198,44 +198,14 @@
    "ep": 0.97
   }
  ],
- "xi_ep": 54.3,
+ "xi_ep": 54.2,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.23,
+   "gain": 13.32,
    "change": 1,
    "fallback": false,
-   "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 13.17,
-   "change": 1,
-   "fallback": true,
    "add": {
     "id": 261,
     "code": 153133,
@@ -263,7 +233,37 @@
   },
   {
    "pos": "MID",
-   "gain": 12.71,
+   "gain": 13.24,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
+    "pos": "MID",
+    "team": "CHE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.83,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.615,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 12.87,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.66,
+   "gain": 12.78,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 10.9,
+   "gain": 10.79,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 9.27,
+   "gain": 9.22,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 4.58,
+   "gain": 4.49,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,18 +413,18 @@
   },
   {
    "pos": "MID",
-   "gain": 7.89,
+   "gain": 7.84,
    "change": 3,
    "fallback": false,
    "add": {
-    "id": 261,
-    "code": 153133,
-    "name": "Iwobi",
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
     "pos": "MID",
-    "team": "FUL",
+    "team": "CHE",
     "status": "a",
     "news": "",
-    "p_play": 0.938,
+    "p_play": 0.83,
     "base": null,
     "ep": null
    },
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.43,
+   "gain": 7.46,
    "change": 3,
    "fallback": true,
    "add": {
@@ -563,7 +563,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.11,
+   "gain": 5.09,
    "change": 4,
    "fallback": true,
    "add": {
@@ -575,36 +575,6 @@
     "status": "a",
     "news": "",
     "p_play": 0.984,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 112,
-    "code": 469142,
-    "name": "Van Hecke",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 4.31,
-   "change": 4,
-   "fallback": true,
-   "add": {
-    "id": 176,
-    "code": 173878,
-    "name": "Dasilva",
-    "pos": "DEF",
-    "team": "COV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.992,
     "base": null,
     "ep": null
    },
