@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T08:36",
+ "generated": "2026-10-22T14:05",
  "gw": 8,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.924,
    "base": 4.13,
-   "ep": 4.09,
+   "ep": 4.08,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 58.23,
+   "gain": 58.14,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 51.1,
+   "gain": 51.14,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 109
+   "borda": 108
   },
   {
    "pos": "MID",
-   "gain": 48.69,
+   "gain": 48.82,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 44.71,
+   "gain": 45.7,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,7 +346,7 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 100
+   "borda": 101
   },
   {
    "pos": "GKP",
@@ -382,7 +382,7 @@
   },
   {
    "pos": "GKP",
-   "gain": 38.74,
+   "gain": 38.72,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 30.53,
+   "gain": 30.69,
    "change": 3,
    "fallback": false,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "MID",
-   "gain": 23.52,
+   "gain": 23.67,
    "change": 3,
    "fallback": true,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 19.97,
+   "gain": 20.95,
    "change": 3,
    "fallback": true,
    "add": {
@@ -537,8 +537,8 @@
     "base": null,
     "ep": null
    },
-   "votes": 2,
-   "borda": 8
+   "votes": 3,
+   "borda": 14
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -604,7 +604,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 195.59,
-   "ep": 194.72
+   "ep": 194.83
   },
   {
    "id": 106,
@@ -652,7 +652,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.13,
-   "ep": 165.96
+   "ep": 165.9
   },
   {
    "id": 387,
@@ -676,7 +676,7 @@
    "news": "",
    "p_play": 0.371,
    "base": 176.92,
-   "ep": 165.9
+   "ep": 164.58
   },
   {
    "id": 40,
@@ -688,7 +688,7 @@
    "news": "",
    "p_play": 0.973,
    "base": 176.41,
-   "ep": 164.03
+   "ep": 163.71
   },
   {
    "id": 428,
@@ -700,7 +700,19 @@
    "news": "",
    "p_play": 0.829,
    "base": 155.76,
-   "ep": 158.37
+   "ep": 158.31
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.947,
+   "base": 168.23,
+   "ep": 161.46
   },
   {
    "id": 388,
@@ -713,18 +725,6 @@
    "p_play": 1.0,
    "base": 179.79,
    "ep": 173.03
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.947,
-   "base": 168.23,
-   "ep": 161.56
   },
   {
    "id": 12,
@@ -787,6 +787,18 @@
    "ep": 149.55
   },
   {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 159.15,
+   "ep": 146.85
+  },
+  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -797,18 +809,6 @@
    "p_play": 0.0,
    "base": 150.41,
    "ep": 143.78
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 159.15,
-   "ep": 146.41
   },
   {
    "id": 201,
@@ -856,7 +856,7 @@
    "news": "",
    "p_play": 0.679,
    "base": 148.36,
-   "ep": 145.47
+   "ep": 145.4
   },
   {
    "id": 8,
@@ -880,7 +880,7 @@
    "news": "",
    "p_play": 0.649,
    "base": 139.2,
-   "ep": 132.94
+   "ep": 132.9
   },
   {
    "id": 61,
@@ -916,7 +916,7 @@
    "news": "",
    "p_play": 0.902,
    "base": 136.81,
-   "ep": 131.97
+   "ep": 132.13
   },
   {
    "id": 398,
@@ -928,7 +928,7 @@
    "news": "",
    "p_play": 0.545,
    "base": 140.35,
-   "ep": 136.94
+   "ep": 136.64
   },
   {
    "id": 208,
@@ -940,7 +940,19 @@
    "news": "",
    "p_play": 0.17,
    "base": 140.15,
-   "ep": 127.83
+   "ep": 128.48
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.846,
+   "base": 135.96,
+   "ep": 133.96
   },
   {
    "id": 154,
@@ -979,18 +991,6 @@
    "ep": 142.64
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.846,
-   "base": 135.96,
-   "ep": 133.02
-  },
-  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1003,18 +1003,6 @@
    "ep": 127.48
   },
   {
-   "id": 95,
-   "code": 533463,
-   "name": "O.Dango",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.483,
-   "base": 147.81,
-   "ep": 126.38
-  },
-  {
    "id": 371,
    "code": 441266,
    "name": "Gravenberch",
@@ -1024,7 +1012,19 @@
    "news": "",
    "p_play": 0.489,
    "base": 140.22,
-   "ep": 127.85
+   "ep": 128.16
+  },
+  {
+   "id": 95,
+   "code": 533463,
+   "name": "O.Dango",
+   "pos": "MID",
+   "team": "BRE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.483,
+   "base": 147.81,
+   "ep": 125.9
   }
  ]
 }
