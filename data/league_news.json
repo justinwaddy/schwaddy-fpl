@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-22T07:55 UTC",
+ "generated": "2026-10-22T22:50 UTC",
  "items": [
-  {
-   "id": "2026-10-11-small-ben-liverpool",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Small Ben owns Szoboszlai, Isak, Gakpo and Virgil, and the squad list has all four on 0. Cunha's 10 and Rice's 7 are carrying a 27-point day, he is on 273 and 53 behind Marcus, and two of his eleven have not kicked off yet. That is not a Liverpool stack, it is a charity subscription.",
-   "source": null
-  },
-  {
-   "id": "2026-10-11-robert-131",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Robert is on 195, 131 behind Marcus, with 25 for the day: eight of his eleven scored, three played and returned nothing, and none are still to come. Cherki's 10 is 10 of the 25, so the rest of the squad combined for 15. At 131 behind he is no longer chasing the leader, he is chasing the tail lights and the leader has fog lamps.",
-   "source": null
-  },
-  {
-   "id": "2026-10-12-city-anfield",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Manchester City ran over a ten-man Liverpool at Anfield after Ryan Gravenberch's second yellow card in the 62nd minute, with Rayan Cherki scoring the third, the Guardian reports. City keep their 100% start to the season. Robert owns Cherki, and Small Ben, Marcus, Big Ben and Justin each have a Liverpool player to explain.",
-   "source": {
-    "title": "Cherki cracker caps Manchester City win at Liverpool in face of Anfield taunts",
-    "url": "https://www.theguardian.com/football/2026/oct/11/liverpool-manchester-city-premier-league-match-report"
-   }
-  },
   {
    "id": "2026-10-12-ipswich-fulham",
    "ts": "2026-10-12T07:55",
@@ -689,6 +665,27 @@
     "title": "How England hopeful Acheampong is giving Chelsea a big decision to make",
     "url": "https://www.bbc.co.uk/sport/football/articles/ck4g10n56jzqo"
    }
+  },
+  {
+   "id": "2026-10-22-justin-73",
+   "ts": "2026-10-22T22:50",
+   "kind": "opinion",
+   "text": "Justin posted the biggest week in the league, 73, with Haaland, Vuskovic and Tavernier all in double figures, and it earned him second place and a view of Marcus's back. It is the most productive way anybody has found of finishing exactly where they started. Next week he gets to do it again, this time with Pickford and Van Hecke gone and a new keeper nobody has heard of.",
+   "source": null
+  },
+  {
+   "id": "2026-10-22-big-ben-name",
+   "ts": "2026-10-22T22:50",
+   "kind": "opinion",
+   "text": "Big Ben named his team Quantum of Tzolis, which is a fine thing to put on a badge until you look at the squad sheet and find Tzolis at Marcus's, injured, on nothing. Big Ben's best Arsenal contribution of the week was Konsa on 9, with Havertz alongside him on 2, which is about the right amount of ball knowledge for a man who christened his club after somebody else's player.",
+   "source": null
+  },
+  {
+   "id": "2026-10-22-edward-doku",
+   "ts": "2026-10-22T22:50",
+   "kind": "opinion",
+   "text": "Edward dropped Semenyo, who is out for eight weeks with a knee, and signed Doku, so the one waiver move of the week doubles as a medical. It was also the right call, and he took it on a night when his own week was 43 with Tarkowski, Gibbs-White and Saliba all on nothing. Nobody who has read the group chat since August will let him call it foresight.",
+   "source": null
   }
  ],
  "runs": [
@@ -1111,6 +1108,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, no fixtures. Led with Saka's quad injury at Bayern (BBC), then Rice's equaliser, Fernandes v Carrick after Como, Chelsea's back three. No roast suggestions used (morning run, no opinion)."
+  },
+  {
+   "ts": "2026-10-22T22:50",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "evening, non-matchday, GW8 yet to kick off. Searches returned no usable permitted-outlet articles (BBC/Guardian blocked from search, Sky results were schedule pages) so no reported items. Pieces: Justin's 73 vs second place, Big Ben's team name vs Tzolis being Marcus's (archive 2026-09-04-1594fc4a80 ball knowledge), Edward's Semenyo-for-Doku waiver. No FLOP lines today, reflop skipped. Passed over: Ben D self-roast and apartheid line (no football hook), Jobacus, Harvey Price, pint, Bruno (covered Tuesday), height (waiting on a Ben C hook). Note: live feed totals lag public.json settled by a gameweek; I quoted none."
   }
  ]
 }
