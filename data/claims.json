@@ -1,7 +1,7 @@
 {
   "gw": 8,
   "waivers_close": "2026-10-22T17:30:00Z",
-  "ts": "2026-10-21T21:10 UTC",
+  "ts": "2026-10-22T08:20 UTC",
   "summary": "GW7 waivers have processed; these claims are for the GW8 window closing 22 October. The Premier League preview backs Leeds continuity (Muharemovic, Ampadu) but the Le Fee and Barcola call rests on the model. Justin is 3rd on points so claims fourth of six, ahead of Edward and Marcus.",
   "claims": [
     {
@@ -714,12 +714,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-21T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Investigated and discarded a Brentford 'Lewis-Potter facing two months out' story that traced to a stale, years-old page (Thomas Frank era) rather than current news - Brentford's own archive under Keith Andrews confirms he is fit and starting, so claim 3 stands on fixture/production grounds only, now more firmly. Barcola started and was subbed again in Sunday's Bournemouth defeat, reinforcing rather than changing the decision to decline the model's own Gross-for-Barcola suggestion. Everton, and most of the division, now enter a three-week gap for the international break; the next material team news is likely to come from pressers in the run-up to games resuming around 11 October, well before this window's 9 October waiver close."
-    },
-    {
       "ts": "2026-09-21T21:08 UTC",
       "gw": 6,
       "claims": 5,
@@ -1072,6 +1066,12 @@
       "gw": 8,
       "claims": 5,
       "note": "No new permitted-source news; claims carried forward unchanged."
+    },
+    {
+      "ts": "2026-10-22T08:20 UTC",
+      "gw": 8,
+      "claims": 5,
+      "note": "Claims carried forward unchanged; Schade news does not affect them. No fresh permitted-source news on other targets."
     }
   ]
 }
