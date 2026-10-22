@@ -1,31 +1,26 @@
 {
-  "gw": 8,
-  "waivers_close": "2026-10-22T17:30:00Z",
-  "ts": "2026-10-22T08:20 UTC",
-  "summary": "GW7 waivers have processed; these claims are for the GW8 window closing 22 October. The Premier League preview backs Leeds continuity (Muharemovic, Ampadu) but the Le Fee and Barcola call rests on the model. Justin is 3rd on points so claims fourth of six, ahead of Edward and Marcus.",
+  "gw": 9,
+  "waivers_close": "2026-10-30T11:00:00Z",
+  "ts": "2026-10-22T21:20 UTC",
+  "summary": "GW8 waivers have processed (Neto, Tzolakis and Boscagli are in), so these are for the GW9 window closing 30 October. Research added little to the model's board this week; the main overrule is caution on Ampadu for Neto. Justin is 2nd on points so claims fifth of six, ahead of Marcus only.",
   "claims": [
     {
       "rank": 1,
       "pos": "DEF",
       "add": {
-        "name": "Muharemović",
-        "code": "522047",
-        "club": "LEE"
+        "name": "Van Hecke",
+        "code": "469142",
+        "club": "TOT"
       },
       "drop": {
         "name": "White",
         "code": "198869",
         "club": "ARS"
       },
-      "why": "The Premier League expects Farke to retain the same Leeds XI for United, with Jaka Bijol out of favour on the bench, which leaves Muharemović in the back three alongside Bogle's side of the pitch. White is back from the groin problem but Arsenal's defensive places are contested, so his start is a rotation call.",
-      "model": "Model has Muharemović 17.6 next5 vs White 12.7 (avail 0.73, +4.9); I agree, and the Leeds news backs his minutes.",
+      "why": "Van Hecke is a regular in Spurs' back line while White is rotating with Timber at right-back, so the swap buys minutes certainty. No new permitted-outlet article this week; this rests on the model and the GW8 squad check.",
+      "model": "Model next5 18.3 vs 13.1 (+5.2); I agree.",
       "confidence": "medium",
-      "sources": [
-        {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-          "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
-        }
-      ]
+      "sources": []
     },
     {
       "rank": 2,
@@ -40,59 +35,36 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "Barcola played 88 minutes at Anfield, but Isak, Gakpo and Szoboszlai are only unavailable for now and the Premier League already lists them as possible returners, which would squeeze him. Sunderland's attack is short of numbers with Isidor doubtful, so Le Fee's role looks safer. No permitted outlet has written specifically on Le Fee, so this rests on the model.",
-      "model": "Model has Le Fee 18.0 vs Barcola 9.4 (+8.6), the biggest gap on the board; I agree on direction but the gap is inflated by Barcola's four-game sample.",
-      "confidence": "low",
+      "why": "Barcola is a rotation risk with Isak and Gakpo back in training, while Le Fee is a settled Sunderland creator. Sunderland's own site says Brobbey is ready for Leeds, so their attack stays intact.",
+      "model": "Model next5 18.1 vs 9.4 (+8.6); I agree, though Barcola's ceiling is higher than his number.",
+      "confidence": "medium",
       "sources": [
         {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-          "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+          "title": "Le Bris confirms Brobbey timeline",
+          "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
         }
       ]
     },
     {
       "rank": 3,
-      "pos": "MID",
+      "pos": "DEF",
       "add": {
-        "name": "Ampadu",
-        "code": "199598",
+        "name": "Muharemović",
+        "code": "522047",
         "club": "LEE"
       },
       "drop": {
-        "name": "Lewis-Potter",
-        "code": "249231",
-        "club": "BRE"
+        "name": "Gvardiol",
+        "code": "477424",
+        "club": "MCI"
       },
-      "why": "Same Leeds-continuity story: the Premier League has Farke keeping last week's XI, with Aaronson and Wilson on the bench, so Ampadu is a settled starter. Lewis-Potter is fit but Brentford face Liverpool with a squad full of fitness questions around Schade and Schuster.",
-      "model": "Model has Ampadu 17.9 vs Lewis-Potter 14.4 (+3.5); I agree, though it is a value swap, not a rescue.",
-      "confidence": "low",
-      "sources": [
-        {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-          "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "pos": "GKP",
-      "add": {
-        "name": "Tzolakis",
-        "code": "473284",
-        "club": "HUL"
-      },
-      "drop": {
-        "name": "Pickford",
-        "code": "111234",
-        "club": "EVE"
-      },
-      "why": "Both keepers are fit and nailed on, so this is a fixture-value swap only and the first claim to drop if you would rather not churn the position. Rests purely on the model's numbers.",
-      "model": "Model has Tzolakis 19.8 vs Pickford 17.9 (+1.9, below the +2 rule); I agree only weakly.",
+      "why": "Gvardiol was benched in GW6 and GW7 and may only return if O'Reilly's back keeps him out. Muharemovic sits in a Leeds side with an unchanged XI and a fixture run of SUN, BOU, TOT.",
+      "model": "Model next5 18.0 vs 15.8 (+2.2); I agree, mainly on Gvardiol's selection risk.",
       "confidence": "low",
       "sources": []
     },
     {
-      "rank": 5,
+      "rank": 4,
       "pos": "FWD",
       "add": {
         "name": "McBurnie",
@@ -100,22 +72,156 @@
         "club": "HUL"
       },
       "drop": {
-        "name": "Marmoush",
-        "code": "438234",
-        "club": "TOT"
+        "name": "Brobbey",
+        "code": "441264",
+        "club": "SUN"
       },
-      "why": "Marmoush has no fitness issue but his starting role at Spurs is unclear, and the model prices him at 0.78 availability. McBurnie leads Hull's line, though the Premier League's Fulham preview names Belloumi and Gelhardt rather than him, so this is a punt.",
-      "model": "Model has McBurnie 13.2 vs Marmoush 11.8 (+1.4); I am going slightly beyond the model on the strength of minutes uncertainty.",
+      "why": "Brobbey is back from his hamstring but Sunderland say they will stay cautious, and he may start on the bench. McBurnie leads Hull's line. Only worth it if Brobbey is not ready on Sunday.",
+      "model": "Model next5 13.5 vs 11.2 (+2.3); I agree but treat it as a punt.",
       "confidence": "low",
       "sources": [
         {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-          "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+          "title": "Le Bris confirms Brobbey timeline",
+          "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
         }
       ]
+    },
+    {
+      "rank": 5,
+      "pos": "MID",
+      "add": {
+        "name": "Ampadu",
+        "code": "199598",
+        "club": "LEE"
+      },
+      "drop": {
+        "name": "Neto",
+        "code": "247632",
+        "club": "CHE"
+      },
+      "why": "Speculative: Ampadu is a Leeds regular. Neto only just arrived and scored twice at Everton, so I would only run this one if I wanted to double up on Leeds. No fresh news behind it.",
+      "model": "Model next5 17.6 vs 14.9 (+2.7); I am less keen than the model because Neto is in form.",
+      "confidence": "low",
+      "sources": []
     }
   ],
   "previous": [
+    {
+      "gw": 8,
+      "ts": "2026-10-22T08:20 UTC",
+      "claims": [
+        {
+          "rank": 1,
+          "pos": "DEF",
+          "add": {
+            "name": "Muharemović",
+            "code": "522047",
+            "club": "LEE"
+          },
+          "drop": {
+            "name": "White",
+            "code": "198869",
+            "club": "ARS"
+          },
+          "why": "The Premier League expects Farke to retain the same Leeds XI for United, with Jaka Bijol out of favour on the bench, which leaves Muharemović in the back three alongside Bogle's side of the pitch. White is back from the groin problem but Arsenal's defensive places are contested, so his start is a rotation call.",
+          "model": "Model has Muharemović 17.6 next5 vs White 12.7 (avail 0.73, +4.9); I agree, and the Leeds news backs his minutes.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+              "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "pos": "MID",
+          "add": {
+            "name": "E.Le Fée",
+            "code": "484420",
+            "club": "SUN"
+          },
+          "drop": {
+            "name": "Barcola",
+            "code": "482616",
+            "club": "LIV"
+          },
+          "why": "Barcola played 88 minutes at Anfield, but Isak, Gakpo and Szoboszlai are only unavailable for now and the Premier League already lists them as possible returners, which would squeeze him. Sunderland's attack is short of numbers with Isidor doubtful, so Le Fee's role looks safer. No permitted outlet has written specifically on Le Fee, so this rests on the model.",
+          "model": "Model has Le Fee 18.0 vs Barcola 9.4 (+8.6), the biggest gap on the board; I agree on direction but the gap is inflated by Barcola's four-game sample.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+              "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "pos": "MID",
+          "add": {
+            "name": "Ampadu",
+            "code": "199598",
+            "club": "LEE"
+          },
+          "drop": {
+            "name": "Lewis-Potter",
+            "code": "249231",
+            "club": "BRE"
+          },
+          "why": "Same Leeds-continuity story: the Premier League has Farke keeping last week's XI, with Aaronson and Wilson on the bench, so Ampadu is a settled starter. Lewis-Potter is fit but Brentford face Liverpool with a squad full of fitness questions around Schade and Schuster.",
+          "model": "Model has Ampadu 17.9 vs Lewis-Potter 14.4 (+3.5); I agree, though it is a value swap, not a rescue.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+              "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "pos": "GKP",
+          "add": {
+            "name": "Tzolakis",
+            "code": "473284",
+            "club": "HUL"
+          },
+          "drop": {
+            "name": "Pickford",
+            "code": "111234",
+            "club": "EVE"
+          },
+          "why": "Both keepers are fit and nailed on, so this is a fixture-value swap only and the first claim to drop if you would rather not churn the position. Rests purely on the model's numbers.",
+          "model": "Model has Tzolakis 19.8 vs Pickford 17.9 (+1.9, below the +2 rule); I agree only weakly.",
+          "confidence": "low",
+          "sources": []
+        },
+        {
+          "rank": 5,
+          "pos": "FWD",
+          "add": {
+            "name": "McBurnie",
+            "code": "169432",
+            "club": "HUL"
+          },
+          "drop": {
+            "name": "Marmoush",
+            "code": "438234",
+            "club": "TOT"
+          },
+          "why": "Marmoush has no fitness issue but his starting role at Spurs is unclear, and the model prices him at 0.78 availability. McBurnie leads Hull's line, though the Premier League's Fulham preview names Belloumi and Gelhardt rather than him, so this is a punt.",
+          "model": "Model has McBurnie 13.2 vs Marmoush 11.8 (+1.4); I am going slightly beyond the model on the strength of minutes uncertainty.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Predicted line-ups for Premier League teams in Matchweek 7",
+              "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+            }
+          ]
+        }
+      ]
+    },
     {
       "gw": 7,
       "ts": "2026-10-16T08:15",
@@ -714,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-21T21:08 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "First sweep after the international break began. No change to which players are targeted, but two fixes to the file itself: claims 1 and 3 had grown past this file's 700-character limit on 'why' and are trimmed to the same substance; and claim 5 (Le Fée-for-Lewis-Potter) was an illegal duplicate of claim 2's drop, so it is replaced with Truffert-for-Ajayi, a model-only, low-confidence punt on Justin's thinnest defensive slot once Bogle is set aside. Research turned up nothing that changes a target: England's official squad leaves Bogle out despite pre-announcement speculation, not a claims matter since he was never a target; Stach is away with Germany, already known; Groß, Brobbey and Tzolakis unaffected by anything the international window has produced so far; Nketiah's brief fitness issue at Palace (since resolved) does not touch claim 3, since Strand Larsen is Justin's own player and Mateta/Henderson remain out past the break regardless. League position unchanged: Justin sits 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. This board stands with 18 days and no squad-club football left before the 9 October waiver close."
-    },
-    {
       "ts": "2026-09-22T08:06 UTC",
       "gw": 6,
       "claims": 5,
@@ -1072,6 +1172,12 @@
       "gw": 8,
       "claims": 5,
       "note": "Claims carried forward unchanged; Schade news does not affect them. No fresh permitted-source news on other targets."
+    },
+    {
+      "ts": "2026-10-22T21:20 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "Rolled to the GW9 window; carried the model's five with updated reasoning, dropped the old Pickford and Lewis-Potter ideas"
     }
   ]
 }
