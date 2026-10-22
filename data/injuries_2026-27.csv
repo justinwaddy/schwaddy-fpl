@@ -2,6 +2,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 17761,1785832691,1785832691,a,,,
 21205,1785832691,1785832691,a,,,
 21205,1787270210,1786809608,i,,0.0,Hamstring injury - Unknown return date
+21205,1792658140,1792658140,a,0.0,100.0,
 40383,1785832691,1785832691,a,,,
 49262,1785832691,1785832691,a,,,
 50093,1785832691,1785832691,a,,,
@@ -183,6 +184,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 172780,1789202150,1789202150,a,75.0,100.0,
 172850,1788894459,1788894459,a,,,
 172850,1792139751,1792096209,i,,0.0,Unspecified injury - Unknown return date
+172850,1792658140,1792658140,a,0.0,100.0,
 173774,1787270210,1787270210,a,,,
 173878,1785832691,1785832691,a,,,
 173879,1785832691,1784808083,i,,0.0,Shoulder injury - Expected back 23 Aug
@@ -380,6 +382,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 222531,1785832691,1785832691,a,,,
 222531,1787910473,1787910473,a,,100.0,
 222531,1792226142,1792171810,d,100.0,75.0,Muscular injury - 75% chance of playing
+222531,1792658140,1792658140,a,75.0,100.0,
 222625,1785832691,1785832691,a,,,
 222625,1787910473,1787317569,u,0.0,0.0,Has joined Stoke City permanently
 222683,1785832691,1785832691,a,,,
@@ -397,6 +400,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 223094,1792425094,1792414811,d,,75.0,Unspecified injury - 75% chance of playing
 223094,1792571741,1792571741,a,,100.0,
 223340,1785832691,1785832691,a,,,
+223340,1792658140,1792614610,d,,50.0,Thigh injury - 50% chance of playing
 223434,1785832691,1785832691,a,,,
 223434,1788894459,1788363496,u,0.0,0.0,Has joined Burnley permanently
 223541,1785832691,1785832691,a,,,
@@ -407,6 +411,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 223723,1789998835,1789997409,d,,75.0,Calf injury - 75% chance of playing
 223723,1791559985,1791559985,i,,0.0,Calf injury - Expected back 18 Oct
 223723,1792483660,1792483660,i,0.0,0.0,Calf injury - Expected back 25 Oct
+223723,1792658140,1792658140,i,0.0,0.0,Calf injury - Expected back 8 Nov
 223827,1785832691,1785832691,a,,,
 223827,1790411760,1790371810,d,,75.0,Hamstring injury - 75% chance of playing
 223827,1791474643,1791474643,i,,0.0,Hamstring injury - Unknown return date
@@ -621,6 +626,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441191,1789893388,1789826409,d,100.0,75.0,Unspecified injury - 75% chance of playing
 441191,1791534974,1791534974,d,100.0,50.0,Unspecified injury - 50% chance of playing
 441191,1792226142,1792226142,i,50.0,0.0,Unspecified injury - Expected back 2 Nov
+441191,1792658140,1792658140,i,0.0,0.0,Knee injury - Expected back 7 Nov
 441264,1785832691,1785832691,a,,,
 441264,1790325402,1790285410,d,,75.0,Hamstring injury - 75% chance of playing
 441264,1791474643,1791474643,i,,0.0,Hamstring injury - Expected back 25 Oct
@@ -633,6 +639,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441302,1789288550,1789236009,d,,25.0,Ankle injury - 25% chance of playing
 441302,1789807008,1789807008,i,0.0,0.0,Ankle injury - Unknown return date
 441302,1792571741,1792571741,d,0.0,75.0,Ankle injury - 75% chance of playing
+441302,1792658140,1792658140,a,0.0,100.0,
 442299,1788894459,1788894459,a,,,
 442967,1785832691,1785832691,a,,,
 443261,1785832691,1785832691,a,,,
@@ -689,6 +696,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 449434,1792149312,1792149312,i,0.0,0.0,Unspecified injury - Expected back 25 Oct
 449871,1785832691,1784808083,i,,0.0,Knee injury - Unknown return date
 450063,1788894459,1788894459,a,,,
+450063,1792658140,1792620010,d,,75.0,Hamstring injury - 75% chance of playing
 450542,1785832691,1785832691,a,,,
 450542,1789045578,1789031567,u,,0.0,has joined  Kasimpasa on loan for the rest of the seaon.
 451284,1785832691,1785832691,a,,,
@@ -840,6 +848,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 485711,1789998835,1789998835,d,100.0,75.0,Shin injury - 75% chance of playing
 485711,1791559985,1791559985,i,100.0,0.0,Shin injury - Expected back 18 Oct
 485711,1792483660,1792483660,i,0.0,0.0,Shin injury - Expected back 31 Oct
+485711,1792658140,1792658140,i,0.0,0.0,Shin injury - Unknown return date
 486385,1785832691,1785832691,a,,,
 486385,1788894459,1788365123,u,0.0,0.0,Has joined Fiorentina permanently
 486520,1785832691,1785832691,a,,,
@@ -1159,6 +1168,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 577016,1785832691,1785832691,a,,,
 577285,1785832691,1785832691,a,,,
 577285,1791707768,1791655210,d,,75.0,Knee injury - 75% chance of playing
+577285,1792658140,1792658140,a,75.0,100.0,
 577411,1785832691,1785832691,a,,,
 577411,1788894459,1787963760,u,0.0,0.0,Has joined Academico de Viseu on loan for the rest of the season
 577669,1785832691,1785832691,a,,,
