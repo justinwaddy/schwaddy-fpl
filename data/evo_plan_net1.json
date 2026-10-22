@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T01:37",
+ "generated": "2026-10-22T18:46",
  "gw": 8,
  "horizon": "next5",
  "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -10,7 +10,7 @@
  "vote": null,
  "league": 9450,
  "offline": false,
- "window": "waiver",
+ "window": "free_agency",
  "waivers_time": "2026-10-22T17:30:00Z",
  "deadline": "2026-10-23T17:30:00Z",
  "formation": "5-4-1",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.84,
-   "ep": 6.11
+   "ep": 6.04
   },
   {
    "id": 330,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 4.78,
-   "ep": 6.05
+   "ep": 5.99
   },
   {
    "id": 504,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.74
+   "ep": 4.72
   },
   {
    "id": 391,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.807,
    "base": 4.07,
-   "ep": 4.25
+   "ep": 4.26
   },
   {
    "id": 10,
@@ -73,19 +73,19 @@
    "news": "",
    "p_play": 0.746,
    "base": 3.96,
-   "ep": 4.08
+   "ep": 4.09
   },
   {
-   "id": 112,
-   "code": 469142,
-   "name": "Van Hecke",
+   "id": 114,
+   "code": 204120,
+   "name": "Boscagli",
    "pos": "DEF",
-   "team": "TOT",
+   "team": "BHA",
    "status": "a",
    "news": "",
-   "p_play": 1.0,
-   "base": 3.3,
-   "ep": 3.67
+   "p_play": 0.938,
+   "base": 3.91,
+   "ep": 4.04
   },
   {
    "id": 335,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.996,
    "base": 4.11,
-   "ep": 4.98
+   "ep": 4.93
   },
   {
    "id": 68,
@@ -109,7 +109,19 @@
    "news": "",
    "p_play": 0.924,
    "base": 4.13,
-   "ep": 4.65
+   "ep": 4.63
+  },
+  {
+   "id": 156,
+   "code": 247632,
+   "name": "Neto",
+   "pos": "MID",
+   "team": "CHE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.83,
+   "base": 3.9,
+   "ep": 4.47
   },
   {
    "id": 94,
@@ -121,19 +133,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 3.85,
-   "ep": 4.28
-  },
-  {
-   "id": 86,
-   "code": 249231,
-   "name": "Lewis-Potter",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.889,
-   "base": 3.36,
-   "ep": 3.99
+   "ep": 4.27
   },
   {
    "id": 411,
@@ -145,21 +145,21 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.17,
-   "ep": 7.32
+   "ep": 7.29
   }
  ],
  "bench": [
   {
-   "id": 226,
-   "code": 111234,
-   "name": "Pickford",
+   "id": 571,
+   "code": 473284,
+   "name": "Tzolakis",
    "pos": "GKP",
-   "team": "EVE",
+   "team": "HUL",
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 2.98,
-   "ep": 2.93
+   "base": 4.43,
+   "ep": 4.92
   },
   {
    "id": 628,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.63,
-   "ep": 2.11
+   "ep": 2.09
   },
   {
    "id": 552,
@@ -183,7 +183,7 @@
    "news": "Hamstring injury - 75% chance of playing",
    "p_play": 0.516,
    "base": 1.99,
-   "ep": 1.98
+   "ep": 1.99
   },
   {
    "id": 401,
@@ -195,17 +195,47 @@
    "news": "Calf injury - 75% chance of playing",
    "p_play": 0.567,
    "base": 1.57,
-   "ep": 0.97
+   "ep": 0.98
   }
  ],
- "xi_ep": 54.1,
- "changes": 4,
+ "xi_ep": 54.7,
+ "changes": 5,
  "claims": [
   {
    "pos": "MID",
-   "gain": 13.38,
+   "gain": 14.8,
    "change": 1,
    "fallback": false,
+   "add": {
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
+    "pos": "MID",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.9,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.615,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 13.36,
+   "change": 1,
+   "fallback": true,
    "add": {
     "id": 261,
     "code": 153133,
@@ -233,37 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 13.34,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 13.15,
+   "gain": 12.97,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,218 +293,8 @@
   },
   {
    "pos": "MID",
-   "gain": 13.04,
+   "gain": 12.72,
    "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "GKP",
-   "gain": 10.56,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 571,
-    "code": 473284,
-    "name": "Tzolakis",
-    "pos": "GKP",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "GKP",
-   "gain": 9.11,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 199,
-    "code": 121709,
-    "name": "Benitez",
-    "pos": "GKP",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.636,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "GKP",
-   "gain": 4.33,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 109,
-    "code": 489639,
-    "name": "Verbruggen",
-    "pos": "GKP",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.71,
-   "change": 3,
-   "fallback": false,
-   "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.889,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.5,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
-    "pos": "MID",
-    "team": "SUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.97,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.889,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.4,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.889,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.17,
-   "change": 3,
    "fallback": true,
    "add": {
     "id": 453,
@@ -519,22 +309,22 @@
     "ep": null
    },
    "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
     "pos": "MID",
-    "team": "BRE",
+    "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.889,
+    "p_play": 0.615,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 5.92,
-   "change": 4,
+   "gain": 6.1,
+   "change": 2,
    "fallback": false,
    "add": {
     "id": 204,
@@ -549,22 +339,22 @@
     "ep": null
    },
    "drop": {
-    "id": 112,
-    "code": 469142,
-    "name": "Van Hecke",
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
     "pos": "DEF",
-    "team": "TOT",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.938,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 5.07,
-   "change": 4,
+   "gain": 5.25,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 332,
@@ -579,21 +369,111 @@
     "ep": null
    },
    "drop": {
-    "id": 112,
-    "code": 469142,
-    "name": "Van Hecke",
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
     "pos": "DEF",
-    "team": "TOT",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.938,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 5.56,
+   "change": 3,
+   "fallback": false,
+   "add": {
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
+    "pos": "MID",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.9,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
+    "pos": "MID",
+    "team": "CHE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.83,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 5.21,
+   "change": 4,
+   "fallback": false,
+   "add": {
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
+    "pos": "MID",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.9,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
+    "pos": "MID",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.996,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 4.61,
+   "change": 5,
+   "fallback": false,
+   "add": {
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
+    "pos": "MID",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.9,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 94,
+    "code": 513418,
+    "name": "Schade",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.883,
     "base": null,
     "ep": null
    }
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks",
- "claims_are": "waiver claims, in submission order",
+ "claims_are": "free agents, first come first served",
  "board": [
   {
    "id": 411,
