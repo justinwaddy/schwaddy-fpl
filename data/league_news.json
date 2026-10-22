@@ -690,13 +690,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-09-27T07:50 UTC",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning run. fixtures_2627.json confirms 0 fixtures today (next GW6 kickoffs aren't until 10-12 October per yesterday's run note; the live feed's HH:MM-only kickoff times keep making that slate look same-day). Two news items, both read at the primary source and dated this week: Cole Palmer's return from a two-month groin/toe injury for a 30-minute cameo against Leeds, with Maresca noncommittal on his next start (Chelsea FC; touches Edward, who has Palmer on 2 points); and Antoine Semenyo's Premier League Player of the Month nomination for September (Man City; Edward's top scorer on 17 points, voting closes Monday). Research was heavy going for the rest: repeated searches on Arsenal, Man City, Newcastle, Everton, Liverpool, Nottingham Forest, Man Utd, Tottenham, Villa, Brighton and Ipswich mostly surfaced press conferences and injury pieces from February, April and last September that Google is resurfacing as if current, or results scattered across different fictional-calendar match dates - each was checked against the page's own datePublished and dropped when it didn't hold up, rather than published on a stale date. nottinghamforest.com is not the club's real site (redirects to a placeholder; the genuine site is .co.uk and isn't on the permitted list), so a live Gibbs-White/Murillo story had to be dropped for lack of a citable source. No opinion pieces on a morning run. No FLOP lines to rewrite. Roast archive unchanged: the same two unused submissions (Ben D on Ben D; Ben D on Justin) wait for tonight's wrap."
-  },
-  {
    "ts": "2026-09-27T22:41 UTC",
    "news": 0,
    "opinion": 1,
