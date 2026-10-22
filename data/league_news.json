@@ -1,43 +1,6 @@
 {
- "generated": "2026-10-21T22:45 UTC",
+ "generated": "2026-10-22T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-11-utd-spurs-draw",
-   "ts": "2026-10-11T07:50",
-   "kind": "news",
-   "text": "Manchester United led Spurs through Bryan Mbeumo's opener and then watched Rodrigo Bentancur get sent off for a headfirst charge at Luke Shaw, only for Spurs to equalise in added time through Solanke, BBC Sport reports. Marcus owns Mbeumo and Robert owns Solanke, so the draw gave each of them something.",
-   "source": {
-    "title": "Boos, anguish & fading belief - 'worrying day' for under-pressure Carrick",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c62e9g09e781o"
-   }
-  },
-  {
-   "id": "2026-10-11-xi-1300",
-   "ts": "2026-10-11T12:03",
-   "kind": "news",
-   "text": "Team news, 13:00 kick-offs: Crystal Palace's confirmed eleven is out. Justin's Strand Larsen and Edward's Khalaili both start; Robert's Mateta is not in the matchday squad. Teamsheets for Forest, Hull and Everton were not available when checked, so Ben D, Small Ben, Marcus and the rest of Edward's and Justin's players are not covered yet.",
-   "source": {
-    "title": "Team News: One change for Palace against Forest",
-    "url": "https://www.cpfc.co.uk/news/first-team/team-news-one-change-for-palace-against-forest/"
-   }
-  },
-  {
-   "id": "2026-10-11-xi-1530",
-   "ts": "2026-10-11T15:03",
-   "kind": "news",
-   "text": "Team news, Liverpool v Man City (15:30 UTC). Liverpool's confirmed XI: Marcus has Alisson starting, Big Ben has Wirtz, Justin has Barcola, and Small Ben has Van Dijk starting but Gakpo, Szoboszlai and Isak are not in the matchday squad. City's teamsheet could not be read from a permitted source in time, so no City players are covered.",
-   "source": {
-    "title": "Confirmed Liverpool line-up v Manchester City",
-    "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-up-v-manchester-city"
-   }
-  },
-  {
-   "id": "2026-10-11-marcus-lead",
-   "ts": "2026-10-11T22:45",
-   "kind": "opinion",
-   "text": "Marcus went into the day on 249, ten behind Edward on 259. All eleven of his starters have now played and none has blanked: De Cuyper 15, Dewsbury-Hall 13, Joao Pedro 12. He is on 326 to Edward's 298, 28 clear, with Edward holding one yet to kick off. Meanwhile Big Ben's team is called Quantum of Tzolis and Tzolis is on Marcus's list, on 0. Marcus will be mentioning all of this by breakfast.",
-   "source": null
-  },
   {
    "id": "2026-10-11-small-ben-liverpool",
    "ts": "2026-10-11T22:45",
@@ -686,16 +649,49 @@
    "kind": "opinion",
    "source": null,
    "text": "Robert is 121 behind the leader, with Saka a coin-flip for the weekend and Sesko out with a shin injury and no return date, which means the only thing in his squad moving as slowly as the transfer wire is the one thing leaving at pace: his hairline, which at least has a direction. His title chances are going the same way, minus the dignity of a comb-over."
+  },
+  {
+   "id": "2026-10-22-saka-quad",
+   "ts": "2026-10-22T07:55",
+   "kind": "news",
+   "text": "Bukayo Saka went down after ten minutes of Arsenal's 2-2 Champions League draw at Bayern Munich with what Mikel Arteta says 'does not look good at all', a sharp quadriceps pain with nobody near him. Robert owns him and has Saka down as a weekend coin-flip already; Marcus, who also has Arsenal's Tzolis, is told by the BBC that Tzolis is out with a hamstring injury of his own. Eberechi Eze replaced Saka and scored.",
+   "source": {
+    "title": "Saka injury 'does not look good' - how will Arsenal cope?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o"
+   }
+  },
+  {
+   "id": "2026-10-22-rice-bayern",
+   "ts": "2026-10-22T07:55",
+   "kind": "news",
+   "text": "Declan Rice scored Arsenal's late equaliser at Bayern Munich in a 2-2 draw that the BBC says Arsenal could have won, the one piece of good news for Small Ben out of a night that cost Robert his winger. Eze came on for Saka and scored the opener, and Noni Madueke moved over to the right and looked bright.",
+   "source": {
+    "title": "Saka injury 'does not look good' - how will Arsenal cope?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o"
+   }
+  },
+  {
+   "id": "2026-10-22-bruno-carrick",
+   "ts": "2026-10-22T07:55",
+   "kind": "news",
+   "text": "Bruno Fernandes, Big Ben's, told TNT Sports after Manchester United's 4-1 Champions League defeat at Como that the decision 'from the staff' not to press man to man left too much space behind, and that sometimes 'you have to be more brave'. Michael Carrick answered that if you do not run forward and back 'you aren't going to win'. Marcus has Mbeumo and Robert has Sesko and Yoro in the same dressing room.",
+   "source": {
+    "title": "Fernandes rounds on Carrick after Man Utd humiliation",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq74pjn80x4wo"
+   }
+  },
+  {
+   "id": "2026-10-22-chelsea-back-three",
+   "ts": "2026-10-22T07:55",
+   "kind": "news",
+   "text": "Chelsea have conceded one league goal since the international break after letting in a league-high 12 before it, and kept their first clean sheet of the season at Everton on Saturday, with Josh Acheampong a regular in Xabi Alonso's back three. For Robert, who owns Martinez, James and Estevao, and Marcus, who has Joao Pedro, that is the best Chelsea news of the autumn.",
+   "source": {
+    "title": "How England hopeful Acheampong is giving Chelsea a big decision to make",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ck4g10n56jzqo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-26T22:51 UTC",
-   "news": 2,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap. Not a matchday and not even close: fixtures_2627.json confirms 0 fixtures today, and cross-checking the live feed's GW6 entries against fixtures_2627.json shows that gameweek doesn't start until 10-12 October - the live feed only prints kickoff time-of-day, which makes an upcoming slate look like 'today' if you don't check the date underneath, so no points moved and there was nothing to build a hauls/blanks piece on. Two news items, both read directly and dated within the international break: Isak's goal for Sweden plus Szoboszlai and Barcola's international minutes (Liverpool FC; Ben C and Justin), and the Guinness Goal of the Month shortlist naming Barnes, Mbeumo and Jackson (Newcastle United; Ben C, Marcus, Edward). Two opinion pieces since there was no day of football to roast: Ben D's team name 'Quantum of Tzolis' naming a player who actually plays for Marcus, and Robert's bench sitting on the only zero in the table while he's last by 89. Roast archive unchanged - the same two submissions (Ben D on Ben D; Ben D on Justin) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
-  },
   {
    "ts": "2026-09-27T07:50 UTC",
    "news": 2,
@@ -1108,6 +1104,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "evening, non-matchday, GW8 yet to kick off. Searches returned only stale or off-list results so no reported items. Led with Marcus's lead halving 36 to 19 and Robert's table position/hairline (archive 2026-09-04-9b7835c402, 2026-09-12-7526d15fa8). Reflop skipped: no FLOP lines today. Passed over: Ben D self-roast (slur-adjacent, own submission about himself, not football-hung), apartheid line (no football hook), Jobacus (no hook), Harvey Price (no hook), others waiting on a fact."
+  },
+  {
+   "ts": "2026-10-22T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures. Led with Saka's quad injury at Bayern (BBC), then Rice's equaliser, Fernandes v Carrick after Como, Chelsea's back three. No roast suggestions used (morning run, no opinion)."
   }
  ]
 }
