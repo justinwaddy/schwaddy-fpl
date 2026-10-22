@@ -1,20 +1,20 @@
 {
- "generated": "2026-10-22T14:04",
+ "generated": "2026-10-22T18:57",
  "gw": 8,
  "horizon": "next5",
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
  "league": 9450,
  "offline": false,
- "window": "waiver",
+ "window": "free_agency",
  "waivers_time": "2026-10-22T17:30:00Z",
  "deadline": "2026-10-23T17:30:00Z",
  "formation": "5-4-1",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.982,
    "base": 4.35,
-   "ep": 4.33,
+   "ep": 4.32,
    "votes": 5
   },
   {
@@ -72,6 +72,19 @@
    "votes": 5
   },
   {
+   "id": 114,
+   "code": 204120,
+   "name": "Boscagli",
+   "pos": "DEF",
+   "team": "BHA",
+   "status": "a",
+   "news": "",
+   "p_play": 0.938,
+   "base": 3.91,
+   "ep": 3.85,
+   "votes": 4
+  },
+  {
    "id": 10,
    "code": 198869,
    "name": "White",
@@ -83,19 +96,6 @@
    "base": 3.96,
    "ep": 3.82,
    "votes": 4
-  },
-  {
-   "id": 112,
-   "code": 469142,
-   "name": "Van Hecke",
-   "pos": "DEF",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 3.3,
-   "ep": 3.31,
-   "votes": 5
   },
   {
    "id": 68,
@@ -124,6 +124,19 @@
    "votes": 5
   },
   {
+   "id": 156,
+   "code": 247632,
+   "name": "Neto",
+   "pos": "MID",
+   "team": "CHE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.83,
+   "base": 3.9,
+   "ep": 3.88,
+   "votes": 5
+  },
+  {
    "id": 94,
    "code": 513418,
    "name": "Schade",
@@ -137,19 +150,6 @@
    "votes": 5
   },
   {
-   "id": 86,
-   "code": 249231,
-   "name": "Lewis-Potter",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.889,
-   "base": 3.36,
-   "ep": 3.19,
-   "votes": 3
-  },
-  {
    "id": 411,
    "code": 223094,
    "name": "Haaland",
@@ -159,22 +159,22 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.17,
-   "ep": 7.77,
+   "ep": 7.75,
    "votes": 5
   }
  ],
  "bench": [
   {
-   "id": 226,
-   "code": 111234,
-   "name": "Pickford",
+   "id": 571,
+   "code": 473284,
+   "name": "Tzolakis",
    "pos": "GKP",
-   "team": "EVE",
+   "team": "HUL",
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 2.98,
-   "ep": 2.84,
+   "base": 4.43,
+   "ep": 4.34,
    "votes": 0
   },
   {
@@ -214,26 +214,26 @@
    "p_play": 0.615,
    "base": 1.63,
    "ep": 1.62,
-   "votes": 1
+   "votes": 0
   }
  ],
- "xi_ep": 48.8,
- "changes": 4,
+ "xi_ep": 50.0,
+ "changes": 6,
  "claims": [
   {
    "pos": "MID",
-   "gain": 10.55,
+   "gain": 10.6,
    "change": 1,
    "fallback": false,
    "add": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
     "pos": "MID",
-    "team": "CHE",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.83,
+    "p_play": 0.9,
     "base": null,
     "ep": null
    },
@@ -249,44 +249,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 4,
-   "borda": 139
+   "votes": 5,
+   "borda": 113
   },
   {
    "pos": "MID",
-   "gain": 8.0,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 367,
-    "code": 243298,
-    "name": "Gakpo",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.649,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   },
-   "votes": 4,
-   "borda": 121
-  },
-  {
-   "pos": "MID",
-   "gain": 7.74,
+   "gain": 7.8,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 118
+   "borda": 76
   },
   {
    "pos": "MID",
-   "gain": 7.21,
+   "gain": 6.76,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,140 +314,12 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 111
-  },
-  {
-   "pos": "GKP",
-   "gain": 8.52,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 571,
-    "code": 473284,
-    "name": "Tzolakis",
-    "pos": "GKP",
-    "team": "HUL",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 57
-  },
-  {
-   "pos": "GKP",
-   "gain": 8.06,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 199,
-    "code": 121709,
-    "name": "Benitez",
-    "pos": "GKP",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.636,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 35
-  },
-  {
-   "pos": "GKP",
-   "gain": 7.59,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 109,
-    "code": 489639,
-    "name": "Verbruggen",
-    "pos": "GKP",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 226,
-    "code": 111234,
-    "name": "Pickford",
-    "pos": "GKP",
-    "team": "EVE",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 32
+   "borda": 69
   },
   {
    "pos": "MID",
-   "gain": 5.8,
-   "change": 3,
-   "fallback": false,
-   "add": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
-    "pos": "MID",
-    "team": "SUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.97,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.889,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 43
-  },
-  {
-   "pos": "MID",
-   "gain": 5.25,
-   "change": 3,
+   "gain": 10.21,
+   "change": 1,
    "fallback": true,
    "add": {
     "id": 261,
@@ -494,87 +334,87 @@
     "ep": null
    },
    "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
     "pos": "MID",
-    "team": "BRE",
+    "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.889,
+    "p_play": 0.615,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 43
+   "borda": 65
   },
   {
    "pos": "MID",
-   "gain": 6.2,
-   "change": 3,
-   "fallback": true,
+   "gain": 5.31,
+   "change": 2,
+   "fallback": false,
    "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
     "pos": "MID",
-    "team": "BHA",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.825,
+    "p_play": 0.9,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
     "pos": "MID",
-    "team": "BRE",
+    "team": "LEE",
     "status": "a",
     "news": "",
-    "p_play": 0.889,
+    "p_play": 0.996,
     "base": null,
     "ep": null
    },
-   "votes": 2,
-   "borda": 30
+   "votes": 3,
+   "borda": 44
   },
   {
    "pos": "MID",
-   "gain": 5.64,
+   "gain": 5.29,
    "change": 3,
-   "fallback": true,
+   "fallback": false,
    "add": {
-    "id": 286,
-    "code": 540324,
-    "name": "Belloumi",
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
     "pos": "MID",
-    "team": "HUL",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.838,
+    "p_play": 0.9,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
+    "id": 156,
+    "code": 247632,
+    "name": "Neto",
     "pos": "MID",
-    "team": "BRE",
+    "team": "CHE",
     "status": "a",
     "news": "",
-    "p_play": 0.889,
+    "p_play": 0.83,
     "base": null,
     "ep": null
    },
-   "votes": 2,
-   "borda": 29
+   "votes": 3,
+   "borda": 41
   },
   {
    "pos": "FWD",
-   "gain": 6.86,
+   "gain": 6.98,
    "change": 4,
    "fallback": false,
    "add": {
@@ -602,7 +442,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 21
+   "borda": 36
   },
   {
    "pos": "FWD",
@@ -634,13 +474,109 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 20
+   "borda": 22
+  },
+  {
+   "pos": "MID",
+   "gain": 4.53,
+   "change": 5,
+   "fallback": false,
+   "add": {
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
+    "pos": "MID",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.9,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 94,
+    "code": 513418,
+    "name": "Schade",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.883,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 35
+  },
+  {
+   "pos": "DEF",
+   "gain": 4.46,
+   "change": 6,
+   "fallback": false,
+   "add": {
+    "id": 204,
+    "code": 244723,
+    "name": "Mitchell",
+    "pos": "DEF",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.958,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.938,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 32
+  },
+  {
+   "pos": "DEF",
+   "gain": 3.11,
+   "change": 6,
+   "fallback": true,
+   "add": {
+    "id": 332,
+    "code": 220627,
+    "name": "Justin",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.984,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.938,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 7
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
  "min_votes": 2,
  "majority": 3,
- "claims_are": "waiver claims, in submission order",
+ "claims_are": "free agents, first come first served",
  "board": [
   {
    "id": 411,
@@ -700,7 +636,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 195.59,
-   "ep": 194.83
+   "ep": 194.72
   },
   {
    "id": 106,
@@ -748,7 +684,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.13,
-   "ep": 165.9
+   "ep": 165.96
   },
   {
    "id": 387,
@@ -772,7 +708,7 @@
    "news": "",
    "p_play": 0.371,
    "base": 176.92,
-   "ep": 164.58
+   "ep": 165.9
   },
   {
    "id": 40,
@@ -784,7 +720,7 @@
    "news": "",
    "p_play": 0.973,
    "base": 176.41,
-   "ep": 163.71
+   "ep": 164.03
   },
   {
    "id": 428,
@@ -796,19 +732,7 @@
    "news": "",
    "p_play": 0.829,
    "base": 155.76,
-   "ep": 158.31
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.947,
-   "base": 168.23,
-   "ep": 161.46
+   "ep": 158.37
   },
   {
    "id": 388,
@@ -821,6 +745,18 @@
    "p_play": 1.0,
    "base": 179.79,
    "ep": 173.03
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.947,
+   "base": 168.23,
+   "ep": 161.56
   },
   {
    "id": 12,
@@ -883,18 +819,6 @@
    "ep": 149.55
   },
   {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 159.15,
-   "ep": 146.85
-  },
-  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -905,6 +829,18 @@
    "p_play": 0.0,
    "base": 150.41,
    "ep": 143.78
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 159.15,
+   "ep": 146.41
   },
   {
    "id": 201,
@@ -952,7 +888,7 @@
    "news": "",
    "p_play": 0.679,
    "base": 148.36,
-   "ep": 145.4
+   "ep": 145.47
   },
   {
    "id": 8,
@@ -976,7 +912,7 @@
    "news": "",
    "p_play": 0.649,
    "base": 139.2,
-   "ep": 132.9
+   "ep": 132.94
   },
   {
    "id": 61,
@@ -1012,7 +948,7 @@
    "news": "",
    "p_play": 0.902,
    "base": 136.81,
-   "ep": 132.13
+   "ep": 131.97
   },
   {
    "id": 398,
@@ -1024,7 +960,7 @@
    "news": "",
    "p_play": 0.545,
    "base": 140.35,
-   "ep": 136.64
+   "ep": 136.94
   },
   {
    "id": 208,
@@ -1036,19 +972,7 @@
    "news": "",
    "p_play": 0.17,
    "base": 140.15,
-   "ep": 128.48
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.846,
-   "base": 135.96,
-   "ep": 133.96
+   "ep": 127.83
   },
   {
    "id": 154,
@@ -1087,6 +1011,18 @@
    "ep": 142.64
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.846,
+   "base": 135.96,
+   "ep": 133.02
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1099,18 +1035,6 @@
    "ep": 127.48
   },
   {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.489,
-   "base": 140.22,
-   "ep": 128.16
-  },
-  {
    "id": 95,
    "code": 533463,
    "name": "O.Dango",
@@ -1120,7 +1044,19 @@
    "news": "",
    "p_play": 0.483,
    "base": 147.81,
-   "ep": 125.9
+   "ep": 126.38
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.489,
+   "base": 140.22,
+   "ep": 127.85
   }
  ]
 }
