@@ -1,46 +1,21 @@
 {
- "gw": 7,
- "deadline": "2026-10-17T10:00:00Z",
- "ts": "2026-10-16T21:30",
- "summary": "No XI published yet. Doubts are Schade (shoulder), Brobbey (returning from hamstring) and now Gvardiol (City rotation). Barcola stays likely while Isak, Gakpo and Szoboszlai are out.",
+ "gw": 8,
+ "deadline": "2026-10-23T17:30:00Z",
+ "ts": "2026-10-22T19:30",
+ "summary": "No XI published yet and Friday's press conferences are still to come. Doubts: Schade (shoulder, bench-fit only last week), Brobbey (back from a hamstring, may start on the bench), Gvardiol (benched twice; O'Reilly's back injury may let him in) and Barcola (recovery plan, Isak and Gakpo back). Marmoush's calf looks like cramp.",
  "players": [
-  {
-   "name": "Pickford",
-   "code": "111234",
-   "club": "EVE",
-   "pos": "GKP",
-   "status": "likely",
-   "verdict": "Fit; Everton host Chelsea in the 12:30 opener",
-   "note": "No goalkeeper concern reported at Everton. No XI published yet.",
-   "sources": []
-  },
   {
    "name": "Raya",
    "code": "154561",
    "club": "ARS",
    "pos": "GKP",
    "status": "likely",
-   "verdict": "No issue on Arsenal's injury list",
-   "note": "Arsenal's latest injury update does not name him. Away at Forest, who have not scored at home this season.",
+   "verdict": "Undisputed No.1; started GW7 and at Bayern midweek",
+   "note": "Started the 1-0 win at Forest and the 2-2 at Bayern on Wednesday. No fitness concern reported. Arsenal host Everton.",
    "sources": [
     {
-     "title": "Injury latest on Havertz, Tzolis, Rice, Konsa and White",
-     "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
-    }
-   ]
-  },
-  {
-   "name": "White",
-   "code": "198869",
-   "club": "ARS",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Available after the groin issue, rotation risk",
-   "note": "Fit again per Arsenal's site, but not certain of his place; the model's 0.73 reflects the rotation.",
-   "sources": [
-    {
-     "title": "Injury latest on Havertz, Tzolis, Rice, Konsa and White",
-     "url": "https://www.arsenal.com/news/injury-latest-on-havertz-tzolis-rice-konsa-and-white-a5Pwa1R5zpMU"
+     "title": "Arsenal vs Everton preview",
+     "url": "https://www.sportsmole.co.uk/football/arsenal/preview/arsenal-vs-everton-prediction-team-news-lineups_607422.html"
     }
    ]
   },
@@ -50,27 +25,12 @@
    "club": "LEE",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "New in. Started at Arsenal last week",
-   "note": "Leeds' own teamsheet had him at right-back in the 2-1 defeat at the Emirates on 10 October. No injury reported since. Leeds are away at Man Utd.",
+   "verdict": "Regular in an unchanged Leeds XI; no midweek game",
+   "note": "Started the 1-1 with Man Utd in an unchanged eleven. No injury news. Leeds are away at Sunderland.",
    "sources": [
     {
-     "title": "Line-ups announced at the Emirates Stadium",
-     "url": "https://www.leedsunited.com/en/news/line-ups-announced-at-the-emirates-stadium"
-    }
-   ]
-  },
-  {
-   "name": "Van Hecke",
-   "code": "469142",
-   "club": "TOT",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Available. Spurs host Coventry",
-   "note": "De Zerbi declared him available after the international break despite a knock and the twins' birth. Nothing new reported since.",
-   "sources": [
-    {
-     "title": "Team news: Van de Ven, Van Hecke available for Old Trafford",
-     "url": "https://tottenhamhotspur.com/news/1175437/team-news-van-de-ven-van-hecke-available-for-old-trafford"
+     "title": "Farke names his team to face Man Utd",
+     "url": "https://www.leedsunited.com/en/news/daniel-farke-names-his-team-to-face-rivals-manchester-united"
     }
    ]
   },
@@ -80,9 +40,14 @@
    "club": "BHA",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "No fresh Brighton injury reported",
-   "note": "Nothing on a permitted outlet suggests a change at Brighton for Crystal Palace at home.",
-   "sources": []
+   "verdict": "Rested in Thursday's Europa game; set to start at Anfield",
+   "note": "Started next to Dunk in the 5-0 win over Palace. He was on the bench at Jablonec on Thursday when Brighton made eight changes, so he should be fresh. No injury news.",
+   "sources": [
+    {
+     "title": "Brighton confirmed lineup vs Jablonec",
+     "url": "https://dave.sport/news/brighton-jablonec-confirmed-lineup/"
+    }
+   ]
   },
   {
    "name": "Gvardiol",
@@ -90,12 +55,46 @@
    "club": "MCI",
    "pos": "DEF",
    "status": "doubt",
-   "verdict": "Left-back dilemma with O'Reilly, rotation likely",
-   "note": "The Premier League calls Gvardiol or O'Reilly a regular dilemma for Maresca and says rotation is highly likely against Ipswich. The model's 0.85 is probably fair, no more.",
+   "verdict": "Benched in GW6 and GW7; O'Reilly back injury may reopen LB",
+   "note": "O'Reilly started at left-back at Liverpool and against Ipswich. Gvardiol then played about 72 minutes against AEK on Tuesday despite a minor back twinge. O'Reilly is now a major doubt, which is Gvardiol's route back in at Villa.",
    "sources": [
     {
-     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+     "title": "Scout Notes, Man City v Ipswich",
+     "url": "https://www.fantasyfootballscout.co.uk/2026/10/17/fpl-notes-haaland-semenyo-oreilly-injury-latest"
+    },
+    {
+     "title": "Maresca Haaland & Gvardiol update",
+     "url": "https://www.tribalfootball.com/article/soccer-premier-league-maresca-confirms-haaland-gvardiol-injury-update-ahead-of-aston-villa-trip-b752daf1-0298-406e-82da-f94bfce3cdfa"
+    }
+   ]
+  },
+  {
+   "name": "White",
+   "code": "198869",
+   "club": "ARS",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Started GW7, rotating with Timber at right-back",
+   "note": "Started at Forest and was replaced by Timber on 67'. Timber started at Bayern, so White is the fresher of the two for Saturday. No injury news, but Timber is a real rotation threat.",
+   "sources": [
+    {
+     "title": "Forest 0-1 Arsenal recap",
+     "url": "https://www.nbcsports.com/soccer/live/nottingham-forest-vs-arsenal-live-updates-score-goals-highlights-stats-2026-october-18"
+    }
+   ]
+  },
+  {
+   "name": "Boscagli",
+   "code": "204120",
+   "club": "BHA",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "New in. Started GW7 and again in Europe on Thursday",
+   "note": "Started on the left of the back four against Palace. He was one of three kept from that eleven to start at Jablonec on Thursday, so tired legs are a small concern for Sunday. Struijk and Wieffer are still out, which keeps him in the side.",
+   "sources": [
+    {
+     "title": "Brighton confirmed lineup vs Jablonec",
+     "url": "https://dave.sport/news/brighton-jablonec-confirmed-lineup/"
     }
    ]
   },
@@ -105,12 +104,12 @@
    "club": "LEE",
    "pos": "MID",
    "status": "likely",
-   "verdict": "New in. Started at Arsenal last week",
-   "note": "Leeds' teamsheet at the Emirates had him starting in the front three with Calvert-Lewin and Okafor. No injury reported.",
+   "verdict": "Started GW7 at attacking midfield; no injury news",
+   "note": "Started behind Calvert-Lewin against Man Utd. Leeds have no midweek game, and the only XI talk is about Okafor, not Stach.",
    "sources": [
     {
-     "title": "Line-ups announced at the Emirates Stadium",
-     "url": "https://www.leedsunited.com/en/news/line-ups-announced-at-the-emirates-stadium"
+     "title": "Farke names his team to face Man Utd",
+     "url": "https://www.leedsunited.com/en/news/daniel-farke-names-his-team-to-face-rivals-manchester-united"
     }
    ]
   },
@@ -120,42 +119,31 @@
    "club": "BOU",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Tipped by the PL Scout v Sunderland",
-   "note": "The Premier League's Scout picks him against a Sunderland side that has conceded 12 in six. No injury news.",
+   "verdict": "Scored in GW7; started Thursday against Milan",
+   "note": "Scored in the 2-0 win over Sunderland, then started against AC Milan in the Europa League on Thursday night, 66 hours before Old Trafford. That is some rotation risk, but predicted XIs still have him.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 7",
-     "url": "https://www.premierleague.com/en/news/4737338/scout-selection-best-fantasy-team-for-gameweek-7"
+     "title": "Bournemouth 2-0 Sunderland",
+     "url": "https://www.skysports.com/football/news/13598866/bournemouth-2-0-sunderland-marcus-tavernier-and-evanilson-score-either-side-of-kevin-dansos-red-card-as-cherries-pick-up-first-league-win-of-season"
+    },
+    {
+     "title": "Bournemouth vs Milan line-ups",
+     "url": "https://football-italia.net/europa-league-line-ups-bournemouth-vs-milan/"
     }
    ]
   },
   {
-   "name": "Barcola",
-   "code": "482616",
-   "club": "LIV",
+   "name": "Neto",
+   "code": "247632",
+   "club": "CHE",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Hat-trick at LASK; Isak and Gakpo still out",
-   "note": "Iraola backed him '100 per cent' and he scored a Champions League hat-trick on Wednesday. Isak, Gakpo and Szoboszlai are doubts for Brentford, which should keep him in the side. The model's 0.70 likely undersells it.",
+   "verdict": "New in. Scored twice at Everton; set for right wing-back",
+   "note": "Scored both goals in the 2-0 win at Everton. With Reece James out for the season he is projected at right wing-back. Chelsea had no midweek game. Chelsea host Spurs.",
    "sources": [
     {
-     "title": "Andoni Iraola: Liverpool boss has '100 per cent' trust in Florian Wirtz and Bradley Barcola",
-     "url": "https://www.skysports.com/football/news/13598938/andoni-iraola-liverpool-boss-has-100-per-cent-trust-in-florian-wirtz-and-bradley-barcola"
-    }
-   ]
-  },
-  {
-   "name": "Lewis-Potter",
-   "code": "249231",
-   "club": "BRE",
-   "pos": "MID",
-   "status": "likely",
-   "verdict": "No concern reported at Brentford",
-   "note": "No fitness concern reported, and Andrews expects Collins, Damsgaard and van den Berg back involved, which may squeeze midfield minutes.",
-   "sources": [
-    {
-     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+     "title": "Chelsea vs Tottenham preview",
+     "url": "https://rotowire.com/soccer/article/chelsea-vs-tottenham-prediction-predicted-lineups-team-news-142672"
     }
    ]
   },
@@ -165,12 +153,16 @@
    "club": "BRE",
    "pos": "MID",
    "status": "doubt",
-   "verdict": "Shoulder injury at Villa; Andrews unsure",
-   "note": "Andrews said \"we'll have to see how much\" he can play after the Villa shoulder injury; Brentford's own report says he was in pain. No XI yet.",
+   "verdict": "Shoulder: only fit for the bench in GW7",
+   "note": "Hurt his shoulder against Villa. Against Liverpool he was only fit enough for the bench and came on at half-time. No update since, and Andrews' Hull press conference is still to come.",
    "sources": [
     {
-     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+     "title": "Brentford v Liverpool team news",
+     "url": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+    },
+    {
+     "title": "Brentford vs Liverpool live",
+     "url": "https://www.nbcsports.com/soccer/live/brentford-vs-liverpool-live-updates-score-goals-highlights-stats-2026-october-17"
     }
    ]
   },
@@ -180,22 +172,31 @@
    "club": "MCI",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "No issue; City host Ipswich",
-   "note": "No fitness concern reported on a permitted outlet.",
-   "sources": []
-  },
-  {
-   "name": "Marmoush",
-   "code": "438234",
-   "club": "TOT",
-   "pos": "FWD",
-   "status": "likely",
-   "verdict": "Not on the Spurs injury list, starting role unclear",
-   "note": "Spurs' latest team news names Porro and Mudryk out, not Marmoush. Whether he starts against Coventry is unclear.",
+   "verdict": "Maresca: 'Haaland will be OK to start on Saturday'",
+   "note": "Scored twice against Ipswich, then limped off with a knock. He was an unused sub against AEK, so he is rested, and Maresca says he is OK to start at Villa.",
    "sources": [
     {
-     "title": "Team news: Van de Ven, Van Hecke available for Old Trafford",
-     "url": "https://tottenhamhotspur.com/news/1175437/team-news-van-de-ven-van-hecke-available-for-old-trafford"
+     "title": "Maresca delivers Haaland injury update",
+     "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/news/maresca-delivers-haaland-injury-update-ahead-of-aston-villa-pl-showdown_607344.html"
+    }
+   ]
+  },
+  {
+   "name": "Tzolakis",
+   "code": "473284",
+   "club": "HUL",
+   "pos": "GKP",
+   "status": "likely",
+   "verdict": "New in. Hull's first choice; Butland is the back-up",
+   "note": "Jakirovic: 'He's our first choice.' He was in goal for the 1-0 defeat at Fulham. No injury news. Hull host Brentford.",
+   "sources": [
+    {
+     "title": "Will Tzolakis or Butland start for Hull",
+     "url": "https://www.fantasyfootballscout.co.uk/2026/08/06/will-tzolakis-or-butland-start-in-goal-for-hull"
+    },
+    {
+     "title": "Fulham 1-0 Hull City",
+     "url": "https://www.skysports.com/football/news/13598860/fulham-1-0-hull-city-alvaro-arbeloa-earns-first-premier-league-win-as-cottagers-climb-out-of-relegation-zone"
     }
    ]
   },
@@ -205,12 +206,46 @@
    "club": "SUN",
    "pos": "FWD",
    "status": "doubt",
-   "verdict": "Le Bris says ready; Isidor also doubtful",
-   "note": "Stayed on the bench in Europe but is 'ready' per Le Bris, and Isidor is being assessed day by day, so a start is plausible. The model's 0.90 availability is about right but fitness after the hamstring is unproven.",
+   "verdict": "'Will be ready for Leeds' but may start on the bench",
+   "note": "Hamstring from international duty. He missed GW7 and was held out of the Europa game in Poznan. Le Bris: 'It is important not to rush... he will be ready for Leeds.' Tutierov has led the line meanwhile.",
    "sources": [
     {
-     "title": "Predicted line-ups for Premier League teams in Matchweek 7",
-     "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+     "title": "Le Bris Brobbey injury update",
+     "url": "https://sports.yahoo.com/articles/regis-le-bris-issues-brian-094014955.html"
+    }
+   ]
+  },
+  {
+   "name": "Barcola",
+   "code": "482616",
+   "club": "LIV",
+   "pos": "MID",
+   "status": "doubt",
+   "verdict": "Recovery plan Thursday; Isak and Gakpo back in training",
+   "note": "Started GW7 at Brentford and came on at 74' against Villarreal. He missed Thursday training on an individual recovery programme, with no injury reported, and is expected to play. Isak and Gakpo are back in full training, so his place is less safe.",
+   "sources": [
+    {
+     "title": "Four Liverpool stars miss training",
+     "url": "https://sports.yahoo.com/articles/four-liverpool-stars-miss-training-134312219.html"
+    },
+    {
+     "title": "Liverpool 4-3 Villarreal",
+     "url": "https://www.skysports.com/football/news/13600900/liverpool-4-3-villarreal-rio-ngumoha-stars-and-florian-wirtz-scores-as-reds-come-from-two-down-to-win-in-europe"
+    }
+   ]
+  },
+  {
+   "name": "Marmoush",
+   "code": "438234",
+   "club": "TOT",
+   "pos": "FWD",
+   "status": "doubt",
+   "verdict": "Calf scare looks like cramp; De Zerbi: 'nothing important'",
+   "note": "Scored against Coventry on Monday, then held his calf after going off. De Zerbi: 'I think there are no injuries, nothing important.' FPL still shows 75%. Spurs had no midweek game.",
+   "sources": [
+    {
+     "title": "De Zerbi injury update after Coventry",
+     "url": "https://sportsmole.co.uk/football/spurs/injury-news/news/de-zerbi-provides-latest-spurs-injury-update-after-triple-injury-scare-vs-coventry_607272.html"
     }
    ]
   }
@@ -263,6 +298,12 @@
    "gw": 7,
    "kind": "light",
    "note": "no change"
+  },
+  {
+   "ts": "2026-10-22T19:30Z",
+   "gw": 8,
+   "kind": "deep",
+   "note": "post-waiver squad (Neto, Tzolakis, Boscagli in); full sweep of all 15"
   }
  ]
 }
