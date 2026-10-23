@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-22T08:06 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Full sweep (16 searches) found nothing that touches a target: Stach's Germany call-up and clean bill of health reconfirmed in detail via leedsunited.com's own feature (old ankle injury from May, fully healed, playing every league game since); Truffert, Tavernier, Scott, Bogle, Ajayi, Vuskovic, Marmoush, Van Hecke, Gvardiol, Haaland, Barcola, Lewis-Potter and Schade all reconfirmed fit with nothing citable that changes a status. One bad lead caught and discarded before use: a search result describing a Bournemouth Europa League game at Real Sociedad does not check out against afcb.co.uk's own news feed and was not used for anything. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order. No PL fixtures have been played since last night's run; the division stays idle for the international break until around 11 October, well ahead of the 9 October waiver close."
-    },
-    {
       "ts": "2026-09-22T21:12 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "Rolled to the GW9 window; carried the model's five with updated reasoning, dropped the old Pickford and Lewis-Potter ideas"
+    },
+    {
+      "ts": "2026-10-23T08:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "Claims carried forward unchanged; no new permitted-source news on targets."
     }
   ]
 }

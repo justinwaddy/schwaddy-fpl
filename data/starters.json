@@ -256,6 +256,12 @@
       "gw": 8,
       "kind": "light",
       "note": "removed off-list citations (fantasy/aggregator sites) left by the earlier deep run; affected players now uncited and none rated start"
+    },
+    {
+      "ts": "2026-10-23T08:10 UTC",
+      "gw": 8,
+      "kind": "light",
+      "note": "no change"
     }
   ]
 }
