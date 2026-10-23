@@ -85,6 +85,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 108813,1785832691,1785832691,a,,,
 109646,1785832691,1785832691,a,,,
 109646,1792483660,1792449009,d,,75.0,Calf injury - 75% chance of playing
+109646,1792763234,1792763234,a,,100.0,
 109745,1785832691,1785832691,a,,,
 110690,1785832691,1785832691,a,,,
 111234,1785832691,1785832691,a,,,
@@ -107,6 +108,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 122074,1785832691,1785832691,a,,,
 122798,1785832691,1785832691,a,,,
 122798,1792483660,1792449009,d,,75.0,Foot injury - 75% chance of playing
+122798,1792763234,1792763234,a,,100.0,
 122806,1785832691,1785832691,a,,,
 128295,1785832691,1785832691,a,,,
 128295,1787270210,1786824007,d,,25.0,Unspecified injury - 25% chance of playing
@@ -202,6 +204,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 176412,1787270210,1786744807,i,,0.0,Thigh injury - Unknown return date
 176420,1785832691,1785832691,a,,,
 177815,1785832691,1785832691,a,,,
+177815,1792763234,1792760409,d,,50.0,Foot injury - 50% chance of playing
 178301,1785832691,1785832691,a,,,
 178301,1788894459,1788268517,u,0.0,0.0,Has joined Al Hilal permanently
 180135,1785832691,1785832691,a,,,
@@ -304,6 +307,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 209244,1789346400,1789318809,s,,0.0,Suspended until 17 Oct
 209244,1791794177,1791794177,a,0.0,100.0,
 209289,1785832691,1785832691,a,,,
+209289,1792763234,1792755009,d,,75.0,Knock - 75% chance of playing
 209365,1785832691,1784808084,i,,0.0,Back injury - Unknown return date
 209365,1791908648,1791908648,d,0.0,75.0,Back injury - 75% chance of playing
 209365,1791933157,1791933157,a,0.0,100.0,
@@ -402,6 +406,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 223094,1792571741,1792571741,a,,100.0,
 223340,1785832691,1785832691,a,,,
 223340,1792658140,1792614610,d,,50.0,Thigh injury - 50% chance of playing
+223340,1792763234,1792763234,i,,0.0,Thigh injury - Unknown return date
 223434,1785832691,1785832691,a,,,
 223434,1788894459,1788363496,u,0.0,0.0,Has joined Burnley permanently
 223541,1785832691,1785832691,a,,,
@@ -580,6 +585,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 434399,1789979793,1789979793,a,0.0,100.0,
 434752,1785832691,1785832691,a,,,
 435997,1785832691,1785832691,a,,,
+435997,1792763234,1792760409,d,,50.0,Thigh injury - 50% chance of playing
 436761,1785832691,1785832691,a,,,
 436761,1788894459,1788366064,u,0.0,0.0,Has joined Sheffield United on loan for the rest of the season
 436893,1785832691,1785832691,a,,,
@@ -600,6 +606,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 438098,1788894459,1788364828,u,0.0,0.0,Has joined Hamburger SV permanently
 438234,1785832691,1785832691,a,,,
 438234,1792483660,1792449009,d,,75.0,Calf injury - 75% chance of playing
+438234,1792763234,1792763234,a,,100.0,
 438464,1785832691,1785832691,a,,,
 439509,1785832691,1785832691,a,,,
 439509,1791016546,1790953211,d,,75.0,Hamstring injury - 75% chance of playing
@@ -621,6 +628,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441164,1789893388,1789893388,d,100.0,75.0,Hamstring injury - 75% chance of playing
 441164,1791559985,1791559985,i,100.0,0.0,Hamstring injury - Unknown return date
 441164,1792398950,1792398950,i,0.0,0.0,Hamstring injury - Expected back 24 Oct
+441164,1792763234,1792763234,a,0.0,100.0,
 441191,1785832691,1784808084,d,,75.0,Calf injury - 75% chance of playing
 441191,1787270210,1787270210,i,,0.0,Calf injury - Unknown return date
 441191,1788894459,1788894459,a,0.0,100.0,
@@ -769,8 +777,10 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 466052,1785832691,1785832691,a,,,
 466075,1785832691,1785832691,a,,,
 466525,1785832691,1785832691,a,,,
+466525,1792763234,1792760409,d,,50.0,Foot injury - 50% chance of playing
 467779,1785832691,1785832691,a,,,
 467779,1788894459,1788514209,i,0.0,0.0,Knee injury - Unknown return date
+467779,1792763234,1792763234,d,0.0,25.0,Knee injury - 25% chance of playing
 469142,1785832691,1785832691,a,,,
 469142,1790843748,1790784010,d,,75.0,Foot injury - 75% chance of playing
 469142,1791559985,1791559985,a,,100.0,
@@ -779,6 +789,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 469266,1787270210,1787270210,a,,,
 469266,1792157428,1792155608,i,,0.0,Calf injury - Expected back 25 Oct
 469266,1792591565,1792591565,d,0.0,50.0,Calf injury - 50% chance of playing
+469266,1792763234,1792763234,d,0.0,75.0,Calf injury - 75% chance of playing
 469272,1785832691,1785832691,a,,,
 470294,1785832691,1785832691,a,,,
 470294,1787270210,1785868211,i,,0.0,Thigh injury - Unknown return date
@@ -831,6 +842,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 482442,1788894459,1788364963,u,0.0,0.0,Has joined Juventus on loan for the rest of the season
 482609,1785832691,1785832691,a,,,
 482609,1792312553,1792261810,d,,75.0,Illness - 75% chance of playing
+482609,1792763234,1792763234,a,,100.0,
 482616,1788894459,1788894459,a,,,
 482973,1785832691,1785832691,a,,,
 482973,1791559985,1791556211,i,,0.0,Calf injury - Unknown return date
@@ -866,6 +878,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 487053,1789202150,1789149609,d,,75.0,Unspecified injury - 75% chance of playing
 487053,1789427800,1789427800,a,75.0,100.0,
 487053,1792483660,1792449009,d,100.0,75.0,Knee injury - 75% chance of playing
+487053,1792763234,1792763234,i,100.0,0.0,Knee injury - Unknown return date
 487117,1785832691,1784808083,i,,0.0,Ankle injury - Expected back 10 Oct
 487117,1791643316,1791643316,i,0.0,0.0,Ankle injury - Expected back 18 Oct
 487117,1792398950,1792398950,i,0.0,0.0,Ankle injury - Unknown return date
@@ -900,6 +913,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 490884,1788894459,1788894459,a,,,
 490884,1792226142,1792171810,i,,0.0,Unspecified injury - Expected back 25 Oct
 490884,1792591565,1792591565,d,0.0,50.0,Unspecified injury - 50% chance of playing
+490884,1792763234,1792763234,d,0.0,75.0,Unspecified injury - 75% chance of playing
 491007,1785832691,1785832691,a,,,
 491007,1788894459,1788366042,u,0.0,0.0,Has joined RC Strasbourg on loan for the rest of the season
 491279,1785832691,1785832691,a,,,
@@ -933,6 +947,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 498016,1785832691,1785832691,a,,,
 498444,1787270210,1787270210,a,,,
 498444,1792239806,1792238410,d,,75.0,Unspecified injury - 75% chance of playing
+498444,1792763234,1792763234,i,,0.0,Unspecified injury - Expected back 31 Oct
 499169,1785832691,1785832691,a,,,
 499175,1785832691,1785832691,a,,,
 499175,1788894459,1788364867,u,0.0,0.0,Has joined Borussia Dortmund on loan for the rest of the season
@@ -1106,6 +1121,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 550864,1785832691,1785832691,a,,,
 551050,1788894459,1788894459,a,,,
 551050,1792226142,1792171810,d,,25.0,Groin injury - 25% chance of playing
+551050,1792763234,1792763234,a,25.0,100.0,
 551210,1785832691,1785832691,a,,,
 551226,1785832691,1785832691,a,,,
 551262,1785832691,1785832691,a,,,
@@ -1113,6 +1129,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 551466,1787270210,1787270210,a,,,
 551499,1785832691,1785832691,a,,,
 551499,1792571741,1792521010,d,,75.0,Knee injury - 75% chance of playing
+551499,1792763234,1792763234,d,,25.0,Knee injury - 25% chance of playing
 552946,1787270210,1787270210,a,,,
 553746,1787910473,1787910473,a,,,
 553746,1789202150,1789137717,u,,0.0,has joined Arouca on loan for the rest of the seaon.
@@ -1130,6 +1147,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 560262,1785832691,1785346210,i,,0.0,Foot injury - Unknown return date
 560262,1789115764,1789115764,i,0.0,0.0,Foot injury - Expected back 7 Nov
 560262,1792591565,1792591565,d,0.0,50.0,Foot injury - 50% chance of playing
+560262,1792763234,1792763234,d,0.0,75.0,Foot injury - 75% chance of playing
 560552,1785832691,1785832691,a,,,
 561245,1785832691,1785832691,a,,,
 561245,1787270210,1786811407,d,,75.0,Unspecified injury - 75% chance of playing
@@ -1192,6 +1210,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 591386,1785832691,1785832691,a,,,
 592031,1785832691,1785832691,a,,,
 592031,1787270210,1786730406,i,,0.0,Leg injury - Expected back 28 Nov
+592031,1792763234,1792763234,d,0.0,50.0,Leg injury - 50% chance of playing
 592740,1787910473,1787910473,a,,,
 592984,1788894459,1788894459,a,,,
 593117,1785832691,1784925011,d,,75.0,Unspecified injury - 75% chance of playing
@@ -1252,6 +1271,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 614071,1789230234,1789230234,a,50.0,100.0,
 614071,1792312553,1792265410,d,100.0,75.0,Calf injury - 75% chance of playing
 614574,1785832691,1785832691,a,,,
+614574,1792763234,1792755009,i,,0.0,Hamstring injury - Unknown return date
 616069,1788894459,1788894459,a,,,
 616077,1785832691,1785832691,a,,,
 616077,1791275765,1791226810,d,,75.0,Unspecified injury - 75% chance of playing
@@ -1269,6 +1289,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 620487,1787270210,1786010410,i,,0.0,Unspecified injury - Unknown return date
 620487,1789202150,1789202150,i,0.0,0.0,Thigh injury - Unknown return date
 620487,1792591565,1792591565,i,0.0,0.0,Thigh injury - Expected back 8 Nov
+620487,1792763234,1792763234,i,0.0,0.0,Thigh injury - Expected back 31 Oct
 622758,1785832691,1785832691,a,,,
 622758,1787910473,1787910473,a,,100.0,
 624773,1785832691,1785832691,a,,,
