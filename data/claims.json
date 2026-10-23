@@ -1,7 +1,7 @@
 {
   "gw": 9,
   "waivers_close": "2026-10-30T11:00:00Z",
-  "ts": "2026-10-22T21:20 UTC",
+  "ts": "2026-10-23T21:10 UTC",
   "summary": "GW8 waivers have processed (Neto, Tzolakis and Boscagli are in), so these are for the GW9 window closing 30 October. Research added little to the model's board this week; the main overrule is caution on Ampadu for Neto. Justin is 2nd on points so claims fifth of six, ahead of Marcus only.",
   "claims": [
     {
@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-22T21:12 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Evening sweep found nothing that touches a target: the recurring Sky Sports 'Pickford out for a month' story resurfaced again and was re-confirmed as the same 7 September 2022 piece, not current; Gross's own club news feed (brightonandhovealbion.com) carries no injury story, so an unpermitted claim that he was ruled out v Newcastle is not used and claim 1 stands; Sunderland's own news feed (safc.com) has nothing on Brobbey either way, so claim 3 stands unchanged; Truffert's France recall and Stach's clean bill of health with Germany both reconfirmed but already priced into this board since earlier in the week. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order behind Robert, Ben D, Ben C and Marcus, with only Edward claiming after him. The international break continues with no squad-club football until around 11 October, well ahead of the 9 October waiver close."
-    },
-    {
       "ts": "2026-09-23T08:30 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "Claims carried forward unchanged; no new permitted-source news on targets."
+    },
+    {
+      "ts": "2026-10-23T21:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change: evening searches returned only old-season or unrelated permitted-outlet items, nothing new on claim targets."
     }
   ]
 }

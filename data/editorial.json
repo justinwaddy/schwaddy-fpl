@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-23T08:30 UTC",
-      "published": 0,
-      "note": "First run ~11.5 hours after last night's 21:12 sweep, during the international break with no squad-club football since GW5 ended 20 September and none resuming until around 11 October. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent-target clubs (Sunderland, Leeds again for Stach) and two general PL sweeps, about 16 searches. Nothing survived that both moves a verdict and clears a permitted source. Chased down one lead in depth: cpfc.co.uk's own 'Sage on facing Leeds & international break plans' has the manager differentiate Henderson ('more sure') from Mateta ('more uncertain... best answer in two weeks') for the first time on the post-break return - genuine new detail, but it only restates the existing 'both out past the international break' story with more precision, not a reversal, so left unpublished rather than padding a headline that changes nothing for Strand Larsen. Also checked: Garner (England Nations League call-up, no fitness angle), Raya (Player of the Matchweek for a derby-defining penalty save, plus Spain duty), Stach (clean bill of health on Germany duty), Groß and Kostoulas (both scored again for Brighton against Arsenal on 19 September, already reflected in the 19 September items), Barcola (Iraola praised him ahead of the Bournemouth game but offered no new fact), and Lewis-Potter's wing-back competition with Aaron Hickey (no confirmed change to his starting role). Rayan Cherki's quad injury at Man City is real but he is not a squad or shortlist player. Nothing published."
-    },
-    {
       "ts": "2026-09-23T21:05 UTC",
       "published": 0,
       "note": "Second run today, ~12.5 hours after this morning's 08:30 sweep, still inside the international break with no squad-club football since GW5 ended 20 September. Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Hull, Brighton, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent-target club Sunderland and three general PL sweeps (injuries, transfers, Nations League withdrawals), 19 searches. Chased down three leads that looked like fresh injuries but all traced to stale, already-resolved dates once read in full: a Tavernier hamstring story traces to an afcb.co.uk article dated 23 January 2026, a prior-season injury long since recovered from (he's started all five league games this season with no fitness question); a Bogle 'foot injury' story traces to a Wolves match and subsequent Chelsea FA Cup semi-final references, both from last season, resolved before this campaign began; and Stach's 'foot/ankle injury' coverage traces to a laceration sustained against Brighton in May 2026, pre-season, with Leeds' own reporting saying it kept him out only two-three weeks and he has played every league game since. None of the three is current. Also checked and found nothing citable: Brobbey's Man City hat-trick and the Arsenal/Chelsea transfer interest around him (Yahoo, not permitted, and the window closed 1 September regardless); Gvardiol's recurring 'broken leg' story surfaced again and is the same discredited item; a Marmoush/Savinho ESPN piece reads as pre-transfer chatter from before his move actually completed, not current; Van Hecke and Garner both confirmed away with their countries (Netherlands, England) with no injury; Mateta/Strand Larsen coverage on wearepalace.uk is not a permitted source and, read closely, describes pre-season friendlies, not the current hamstring situation already published. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-10-23T08:10 UTC",
       "published": 0,
       "note": "Morning check. Searches returned no permitted-outlet news beyond what is already published; Spurs' own team-news page for Chelsea was a shell with no text. Nothing published."
+    },
+    {
+      "ts": "2026-10-23T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Permitted-outlet searches returned nothing new on Stach, Haaland, Marmoush or Barcola. Not in starters window (GW8 deadline passed). Nothing published."
     }
   ]
 }
