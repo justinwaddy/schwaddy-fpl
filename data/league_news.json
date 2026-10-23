@@ -1,46 +1,6 @@
 {
- "generated": "2026-10-22T22:50 UTC",
+ "generated": "2026-10-23T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-12-ipswich-fulham",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Ipswich came from behind to beat Fulham, with Abdoul Ouattara levelling in the 88th minute and Dara O'Shea heading the winner in stoppage time, the Guardian reports. Fulham are winless in six and bottom of the table. Marcus, Edward and Big Ben all own Fulham players, and Small Ben has Ipswich's Davis and Enciso.",
-   "source": {
-    "title": "Ipswich stun Fulham with last-gasp comeback to increase heat on Arbeloa",
-    "url": "https://www.theguardian.com/football/2026/oct/10/ipswich-fulham-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-12-hull-everton",
-   "ts": "2026-10-12T07:55",
-   "kind": "news",
-   "text": "Hull and Everton drew in a seesaw game, with Mohamed Belloumi earning Hull the point, the Guardian reports. Everton men on the books: Dewsbury-Hall for Marcus, Tarkowski, Garner and Barry for Edward, Pickford for Justin. Justin also has Hull's Ajayi, so he is on both sides of it.",
-   "source": {
-    "title": "Mohamed Belloumi grabs point for Hull in seesaw draw with Everton",
-    "url": "https://www.theguardian.com/football/2026/oct/11/hull-city-everton-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-12-xi-1900",
-   "ts": "2026-10-12T18:04",
-   "kind": "news",
-   "text": "Team news, Coventry v Newcastle (20:00 BST): all four league players are starting. Edward: Hornicek. Big Ben: Thiaw. Small Ben: Hall and Wissa. Nobody in the league owns a Coventry player.",
-   "source": {
-    "title": "Confirmed line-up: One change for Coventry clash",
-    "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-one-change-for-coventry-clash"
-   }
-  },
-  {
-   "id": "2026-10-12-cov-new",
-   "ts": "2026-10-12T22:45",
-   "kind": "news",
-   "text": "Coventry beat Newcastle 4-1, with Newcastle goalkeeper Lukas Hornicek spilling a ball and giving away a penalty in the fourth minute, which Jack Rudoni scored, ESPN reports. Edward owns Hornicek, Big Ben has Thiaw, Small Ben has Hall and Wissa.",
-   "source": {
-    "title": "Coventry put four past Newcastle to climb out of relegation zone",
-    "url": "https://www.espn.com/soccer/report/_/gameId/401879267"
-   }
-  },
   {
    "id": "2026-10-12-op-marcus-edward",
    "ts": "2026-10-12T22:45",
@@ -686,16 +646,49 @@
    "kind": "opinion",
    "text": "Edward dropped Semenyo, who is out for eight weeks with a knee, and signed Doku, so the one waiver move of the week doubles as a medical. It was also the right call, and he took it on a night when his own week was 43 with Tarkowski, Gibbs-White and Saliba all on nothing. Nobody who has read the group chat since August will let him call it foresight.",
    "source": null
+  },
+  {
+   "id": "2026-10-23-dowman-everton",
+   "ts": "2026-10-23T07:55",
+   "kind": "news",
+   "text": "With Bukayo Saka's suspected quad injury leaving Mikel Arteta short of attacking options, the Guardian expects 16-year-old Max Dowman to get his chance on the right at home to Everton on Saturday. He has played only nine Premier League minutes this season. Robert owns Saka, so the wait for a scan result now includes a teenager who is not on any of the six squads taking his shirt.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-23-ipswich-forest-friday",
+   "ts": "2026-10-23T07:55",
+   "kind": "news",
+   "text": "Ipswich host Nottingham Forest tonight at 8pm BST, and Forest, the league's lowest scorers with five goals in seven games, get Morgan Gibbs-White back after he missed the defeat by Arsenal. Edward owns him. Oliver Glasner called Liam Delap one of his best finishers and wants to get him into better positions, with 12 of Delap's 14 Premier League goals coming for Ipswich, per the Guardian.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-23-villa-city-saturday",
+   "ts": "2026-10-23T07:55",
+   "kind": "news",
+   "text": "Manchester City go to Aston Villa on Saturday at 12.30pm BST needing a win to become just the third side to take maximum points from their first eight Premier League games, according to the Guardian. Villa have recovered from a single point in their first four league games. Justin has Haaland and Gvardiol in the City camp and Edward has Manzambi at Villa, so somebody gets a bad lunchtime.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-23-united-bournemouth-sunday",
+   "ts": "2026-10-23T07:55",
+   "kind": "news",
+   "text": "The Guardian reckons Michael Carrick will surely follow if Manchester United lose to Bournemouth on Sunday, after Bruno Fernandes accused his manager of tactical failings following the 4-1 loss at Como. Big Ben owns Fernandes, Marcus has Mbeumo, and Justin has Tavernier and Marcus has Evanilson on the Bournemouth side of it.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-09-27T22:41 UTC",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening wrap. fixtures_2627.json confirms 0 fixtures today (GW6 still doesn't start until 10-12 October); the live feed's HH:MM-only kickoff times keep making that slate look same-day, but 0 of 10 fixtures had kicked off and every manager's live total equalled their pre-kickoff total, so no hauls/blanks piece was possible. Research this evening: confirmed via Sky Sports that Isak (thigh, out of Sweden's remaining games) and via multiple non-permitted outlets that Gakpo (ankle, hurt in today's Serbia 1-2 defeat) are fresh injury concerns for Ben C, but both are already on the page today as automatic INJURY items, so neither became a news item of mine - and no permitted outlet (BBC/Sky/Guardian/PL/ESPN/Reuters/AP/Athletic/club site) carried the Gakpo detail, so it would have been unsourceable anyway. Checked Havertz (hamstring, Germany, already posted 24 Sept), Van Dijk (nearing 100 caps, but no permitted outlet confirms today's Serbia involvement), Man City's verdict (already posted 26 Sept) and tomorrow's Belgium-France game (hasn't been played yet) - all either duplicates or unconfirmable, so zero news items tonight rather than padding the count. One opinion piece: seven of Robert's fifteen sit on zero points for the season, a fresh angle off the printout's own squad list, closing on his top scorer Cherki's torn quad. Roast archive unchanged - the same two submissions (Ben D on Ben D, touching sexuality; Ben D on Justin, hung on apartheid) stay unused, barred outright by rule 4 rather than waiting on a fact. No FLOP lines were posted today to rewrite."
-  },
   {
    "ts": "2026-09-28T22:50",
    "news": 2,
@@ -1108,6 +1101,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "evening, non-matchday, GW8 yet to kick off. Searches returned no usable permitted-outlet articles (BBC/Guardian blocked from search, Sky results were schedule pages) so no reported items. Pieces: Justin's 73 vs second place, Big Ben's team name vs Tzolis being Marcus's (archive 2026-09-04-1594fc4a80 ball knowledge), Edward's Semenyo-for-Doku waiver. No FLOP lines today, reflop skipped. Passed over: Ben D self-roast and apartheid line (no football hook), Jobacus, Harvey Price, pint, Bruno (covered Tuesday), height (waiting on a Ben C hook). Note: live feed totals lag public.json settled by a gameweek; I quoted none."
+  },
+  {
+   "ts": "2026-10-23T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "morning; led with Dowman/Saka at Arsenal v Everton, Ipswich v Forest tonight, Villa v City, Man Utd v Bournemouth, all from the Guardian weekend preview which I read in full. Web search returned mostly stale or off-list results so I stuck to one well-read source. No roast suggestions used (morning)."
   }
  ]
 }
