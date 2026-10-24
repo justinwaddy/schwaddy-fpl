@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T08:36",
+ "generated": "2026-10-24T12:55",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 8.31,
+   "gain": 8.3,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,7 +250,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 251
+   "borda": 241
   },
   {
    "pos": "MID",
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 246
+   "borda": 235
   },
   {
    "pos": "MID",
-   "gain": 8.38,
+   "gain": 8.36,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,7 +314,7 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 195
+   "borda": 187
   },
   {
    "pos": "MID",
@@ -346,7 +346,7 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 179
+   "borda": 171
   },
   {
    "pos": "MID",
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 145
+   "borda": 135
   },
   {
    "pos": "MID",
-   "gain": 7.62,
+   "gain": 7.63,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 61
+   "borda": 58
   },
   {
    "pos": "MID",
-   "gain": 7.49,
+   "gain": 7.47,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 61
+   "borda": 57
   },
   {
    "pos": "MID",
-   "gain": 5.51,
+   "gain": 5.5,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 50
+   "borda": 46
   },
   {
    "pos": "DEF",
-   "gain": 5.47,
+   "gain": 5.46,
    "change": 3,
    "fallback": false,
    "add": {
@@ -506,11 +506,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 115
+   "borda": 111
   },
   {
    "pos": "FWD",
-   "gain": 5.4,
+   "gain": 5.42,
    "change": 4,
    "fallback": false,
    "add": {
@@ -660,9 +660,9 @@
    "name": "O'Reilly",
    "pos": "DEF",
    "team": "MCI",
-   "status": "d",
-   "news": "Back injury - 75% chance of playing",
-   "p_play": 0.404,
+   "status": "a",
+   "news": "",
+   "p_play": 0.539,
    "base": 180.84,
    "ep": 177.76
   },

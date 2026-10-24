@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T08:36",
+ "generated": "2026-10-24T12:55",
  "gw": 9,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -218,11 +218,11 @@
   }
  ],
  "xi_ep": 45.1,
- "changes": 4,
+ "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 108.2,
+   "gain": 108.19,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 290
+   "borda": 285
   },
   {
    "pos": "MID",
-   "gain": 59.63,
+   "gain": 59.6,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 262
+   "borda": 257
   },
   {
    "pos": "MID",
-   "gain": 49.85,
+   "gain": 49.8,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 251
+   "borda": 246
   },
   {
    "pos": "MID",
-   "gain": 48.06,
+   "gain": 53.98,
    "change": 1,
    "fallback": true,
    "add": {
@@ -345,12 +345,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 5,
-   "borda": 248
+   "votes": 4,
+   "borda": 195
   },
   {
    "pos": "MID",
-   "gain": 35.46,
+   "gain": 32.65,
    "change": 2,
    "fallback": false,
    "add": {
@@ -366,38 +366,6 @@
     "ep": null
    },
    "drop": {
-    "id": 156,
-    "code": 247632,
-    "name": "Neto",
-    "pos": "MID",
-    "team": "CHE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.83,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 85
-  },
-  {
-   "pos": "MID",
-   "gain": 35.62,
-   "change": 3,
-   "fallback": false,
-   "add": {
-    "id": 86,
-    "code": 249231,
-    "name": "Lewis-Potter",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.889,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
     "id": 335,
     "code": 466525,
     "name": "Stach",
@@ -409,13 +377,13 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 100
+   "votes": 4,
+   "borda": 98
   },
   {
    "pos": "MID",
-   "gain": 44.95,
-   "change": 3,
+   "gain": 44.63,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 67,
@@ -442,12 +410,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 69
+   "borda": 54
   },
   {
    "pos": "MID",
-   "gain": 35.84,
-   "change": 3,
+   "gain": 35.6,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 542,
@@ -474,44 +442,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 67
-  },
-  {
-   "pos": "MID",
-   "gain": 31.88,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.918,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "d",
-    "news": "Foot injury - 50% chance of playing",
-    "p_play": 0.498,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 61
+   "borda": 50
   },
   {
    "pos": "DEF",
-   "gain": 27.59,
-   "change": 4,
+   "gain": 27.29,
+   "change": 3,
    "fallback": false,
    "add": {
     "id": 112,
@@ -538,7 +474,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 60
+   "borda": 63
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -660,9 +596,9 @@
    "name": "O'Reilly",
    "pos": "DEF",
    "team": "MCI",
-   "status": "d",
-   "news": "Back injury - 75% chance of playing",
-   "p_play": 0.404,
+   "status": "a",
+   "news": "",
+   "p_play": 0.539,
    "base": 180.84,
    "ep": 177.76
   },
