@@ -2,16 +2,6 @@
   "generated": "2026-10-24T07:42 UTC",
   "items": [
     {
-      "id": "2026-10-14-liverpool-anfield",
-      "ts": "2026-10-14T07:42",
-      "kind": "news",
-      "text": "Liverpool are now without a win in five successive Premier League home games (D4 L1) after the 3-0 defeat to Manchester City, BBC Sport reports, with Andoni Iraola saying his side played \"two different games\" either side of the red card. Small Ben owns Virgil, Gakpo, Szoboszlai and Isak, Big Ben has Wirtz, Justin has Barcola and Marcus has Becker.",
-      "source": {
-        "title": "Winless and an 'easy touch' - what's happened to the Anfield fear factor?",
-        "url": "https://www.bbc.co.uk/sport/football/articles/ck5yn20wej62o"
-      }
-    },
-    {
       "id": "2026-10-14-delap-dance",
       "ts": "2026-10-14T22:41",
       "kind": "opinion",
@@ -689,16 +679,19 @@
         "title": "Everton Starting XI Confirmed For Arsenal Clash",
         "url": "https://www.evertonfc.com/news/2026/october/24/everton-starting-xi-confirmed-for-arsenal-clash/"
       }
+    },
+    {
+      "id": "2026-10-24-xi-1630",
+      "ts": "2026-10-24T16:07",
+      "kind": "news",
+      "text": "Team news, Chelsea v Tottenham (16:30): Edward's Palmer starts. Marcus: Kinsky starts, Palestra on the bench, Joao Pedro not in the squad. Robert: Estevao and Solanke on the bench, Martinez and James not in the squad. Justin: Neto and Marmoush both start. Small Ben's Lacroix starts. Big Ben's Rogers starts.",
+      "source": {
+        "title": "Confirmed line-ups: Chelsea vs Spurs",
+        "url": "https://www.tottenhamhotspur.com/news/1180783/confirmed-line-ups-chelsea-vs-tottenham-hotspur-premier-league-october-2026"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-30T22:46",
-      "news": 1,
-      "opinion": 1,
-      "matchday": false,
-      "note": "Evening wrap, no fixtures (international break, GW6 has not kicked off). Led with Havertz muscle strain (ESPN) and a state-of-the-table piece. Both unused roast suggestions passed over: one is a slur, the other is aimed at race/politics; neither is usable. No flops today."
-    },
     {
       "ts": "2026-10-01T07:42",
       "news": 2,
@@ -1111,6 +1104,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "14:00 UTC slot (ARS v EVE, COV v FUL): Everton sheet found (evertonfc.com); Arsenal and Fulham sheets not found at a permitted readable source; Coventry unowned."
+    },
+    {
+      "ts": "2026-10-24T16:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "16:30 slot CHE v TOT; both sheets confirmed via tottenhamhotspur.com page (full XIs and subs for both clubs)"
     }
   ]
 }
