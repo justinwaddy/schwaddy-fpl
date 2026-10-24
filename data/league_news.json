@@ -2,16 +2,6 @@
   "generated": "2026-10-24T07:42 UTC",
   "items": [
     {
-      "id": "2026-10-14-fernandes-carrick",
-      "ts": "2026-10-14T07:42",
-      "kind": "news",
-      "text": "Michael Carrick says Bruno Fernandes is \"pretty much over\" the issue he was carrying on international duty and was \"really bright in training\", BBC Sport reports. Fernandes has played every minute of United's six league games, and Big Ben, who owns him, will be hoping the chance creation picks up from the 2.5 per game BBC quotes.",
-      "source": {
-        "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
-      }
-    },
-    {
       "id": "2026-10-14-arsenal-training-injuries",
       "ts": "2026-10-14T07:42",
       "kind": "news",
@@ -689,16 +679,19 @@
         "title": "Premier League team news: predicted lineups for the weekend action",
         "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
       }
+    },
+    {
+      "id": "2026-10-24-xi-1130",
+      "ts": "2026-10-24T11:07",
+      "kind": "news",
+      "text": "Team news, Aston Villa v Man City (11:30 UTC): Edward has Manzambi, Jackson and Doku starting. Small Ben has Suzuki and Donnarumma starting but Rúben is out of the eleven. Marcus has Guéhi starting, Foden on the bench. Justin has Gvardiol and Haaland starting. Robert has Cherki and Ndiaye starting, O'Reilly not in the eleven. Big Ben has Matheus N. and Enzo both out of the eleven.",
+      "source": {
+        "title": "City make four changes for trip to Aston Villa",
+        "url": "https://www.mancity.com/news/mens/aston-villa-v-city-premier-league-team-news-63928427"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-29T22:45",
-      "news": 1,
-      "opinion": 2,
-      "matchday": false,
-      "note": "Evening, no fixtures today and GW6 not yet started, so no points-dependent claims beyond settled GW5. Led with Suzuki rib doubt (ESPN). Two roast suggestions left unused: one is a homophobic slur, the other is aimed at race/politics - both out of bounds under the rules. No flops today, nothing to reflop."
-    },
     {
       "ts": "2026-09-30T07:55",
       "news": 4,
@@ -1111,6 +1104,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "Morning. Led with Saturday injury/team news from the Guardian's predicted lineups (Chelsea, Arsenal, Villa v City, Sesko). Search tool mostly returned stale pieces and bbc/guardian were blocked for it, so read the Guardian pages directly via curl; only that outlet was usable. No roast suggestions used (morning, no opinion)."
+    },
+    {
+      "ts": "2026-10-24T11:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "2026-10-24T11:30 slot: Villa and City confirmed XIs found (mancity.com via search; page itself blocked to direct fetch)"
     }
   ]
 }
