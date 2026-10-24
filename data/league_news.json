@@ -1,40 +1,6 @@
 {
-  "generated": "2026-10-23T22:42 UTC",
+  "generated": "2026-10-24T07:42 UTC",
   "items": [
-    {
-      "id": "2026-10-13-palmer-groin",
-      "ts": "2026-10-13T07:42",
-      "kind": "news",
-      "text": "Chelsea manager Xabi Alonso admitted that Cole Palmer's decision to sit out the international break was related to last season's groin pain, the Guardian reports. Palmer (Edward) looked free-moving in Saturday's win over Bournemouth, setting up Jordan Henderson's opener inside 68 seconds, and has signed a contract running to 2034.",
-      "source": {
-        "title": "Henderson and Joao Pedro lead Chelsea charge against Bournemouth",
-        "url": "https://www.theguardian.com/football/2026/oct/10/chelsea-bournemouth-premier-league-match-report"
-      }
-    },
-    {
-      "id": "2026-10-13-lead-28",
-      "ts": "2026-10-13T22:45",
-      "kind": "opinion",
-      "source": null,
-      "text": "GW6 is in the books and Marcus sits on 326, 28 clear of Edward on 298, with Justin a further 8 back on 290. Ten fixtures of GW7 are still to come and nobody has kicked a ball, so for one night only the leader is unbeaten, unbothered and presumably already drafting his acceptance speech."
-    },
-    {
-      "id": "2026-10-13-bench-12",
-      "ts": "2026-10-13T22:45",
-      "kind": "opinion",
-      "source": null,
-      "text": "Big Ben left 12 points on his bench in GW6, against 35 from his eleven, which is a rather large second team for a man on 254 and 72 behind. Robert, meanwhile, is on 205 and 121 off the lead: the gap is now wide enough to have its own postcode."
-    },
-    {
-      "id": "2026-10-14-sesko-shin",
-      "ts": "2026-10-14T07:42",
-      "kind": "news",
-      "text": "Manchester United striker Benjamin Sesko has a fresh shin injury with no end date, BBC Sport reports, extending a lack of involvement that the piece says United are keenly feeling. That is Robert's Sesko, who was already left out of the squad against Spurs.",
-      "source": {
-        "title": "Is Man Utd's Fernandes issue a symptom or reason for their form?",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cr4g10nz0593o"
-      }
-    },
     {
       "id": "2026-10-14-fernandes-carrick",
       "ts": "2026-10-14T07:42",
@@ -683,16 +649,49 @@
       "kind": "opinion",
       "text": "Robert's season is an exercise in watching things leave: Saka's thigh has no return date, the leader has 142 points on him, and his hairline, the only one of the three that was never coming back anyway, is the one holding up best.",
       "source": null
+    },
+    {
+      "id": "2026-10-24-chelsea-injuries",
+      "ts": "2026-10-24T07:42",
+      "kind": "news",
+      "text": "Chelsea host Tottenham at 5.30pm BST without Emiliano Martinez, who the Guardian lists with a jaw problem until 21 November, and Reece James is out with a knee until January. Mike Penders is expected in goal. Robert owns both of them, so his Chelsea corner starts the evening with a stand-in keeper and no right-back.",
+      "source": {
+        "title": "Premier League team news: predicted lineups for the weekend action",
+        "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+      }
+    },
+    {
+      "id": "2026-10-24-arsenal-everton-absentees",
+      "ts": "2026-10-24T07:42",
+      "kind": "news",
+      "text": "Arsenal's injury list for Everton reads Tzolis (hamstring, back on 7 November), Saka (thigh, no return date), Saliba (back, no date) and Mosquera (hamstring, no date), the Guardian says. Marcus has Tzolis for a fortnight and a bit; Robert has Saka and Mosquera with nothing to count down to.",
+      "source": {
+        "title": "Premier League team news: predicted lineups for the weekend action",
+        "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+      }
+    },
+    {
+      "id": "2026-10-24-villa-city-lineups",
+      "ts": "2026-10-24T07:42",
+      "kind": "news",
+      "text": "Aston Villa v Manchester City kicks off at 12.30pm BST with Robert's O'Reilly listed as doubtful with a back problem, and Nunes and Kovacic carrying knocks too, per the Guardian. At the other end, Manzambi and Jackson are Villa's joint leading scorers on two goals each, and Edward owns both.",
+      "source": {
+        "title": "Premier League team news: predicted lineups for the weekend action",
+        "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+      }
+    },
+    {
+      "id": "2026-10-24-sesko-shin",
+      "ts": "2026-10-24T07:42",
+      "kind": "news",
+      "text": "Benjamin Sesko is on Manchester United's injury list with a shin problem and no return date, the Guardian's team news shows, ahead of Sunday's game with Bournemouth. He is Robert's striker, and United's other absentees listed there are Rashford, Dorgu and Ugarte.",
+      "source": {
+        "title": "Premier League team news: predicted lineups for the weekend action",
+        "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-29T07:41",
-      "news": 2,
-      "opinion": 0,
-      "matchday": false,
-      "note": "Morning. Led with O'Reilly ruled out/Konsa in and the Pickford v Trafford England race, both BBC Sport. Fewer items than quota: search tool returned mostly fantasy/aggregator sites and the City verdict was already posted 26 Sep. Roast archive: 2 unused (Ben D on himself, Ben D on Justin) both left unused: slur/race-adjacent and not fit to publish; morning run has no opinion anyway. Note: BBC copy says the league resumes 11 Oct while the live feed lists GW6 fixtures today, so I asserted nothing about fixture dates."
-    },
     {
       "ts": "2026-09-29T22:45",
       "news": 1,
@@ -1105,6 +1104,13 @@
       "opinion": 4,
       "matchday": true,
       "note": "Evening wrap, thin night: only Ipswich v Forest played (1-1), so the wrap leans on the table with nine fixtures still to come. Led with the ESPN report. Used archive: Ben D on Ben C's height (Small Ben), Edward on Marcus relying on luck, Ben D/Edward on Robert's hairline. Passed over: Ben D's two submissions about himself and Justin and the Justin/Marcus one and Justin/Robert pint line - nothing in tonight's football to hang them on (or they sit outside what I would write unprompted); Ben D bias line waits for Arsenal's game. Delap and Haramball avoided. Flops rewritten via reflop.py. Note: ESPN page header and shot map disagreed on scorers; used the header, which matches the live feed (Williams 8, Enciso 10)."
+    },
+    {
+      "ts": "2026-10-24T07:42",
+      "news": 4,
+      "opinion": 0,
+      "matchday": true,
+      "note": "Morning. Led with Saturday injury/team news from the Guardian's predicted lineups (Chelsea, Arsenal, Villa v City, Sesko). Search tool mostly returned stale pieces and bbc/guardian were blocked for it, so read the Guardian pages directly via curl; only that outlet was usable. No roast suggestions used (morning, no opinion)."
     }
   ]
 }
