@@ -49,17 +49,17 @@
       "rank": 3,
       "pos": "DEF",
       "add": {
-        "name": "Muharemović",
-        "code": "522047",
-        "club": "LEE"
+        "name": "Mitchell",
+        "code": "244723",
+        "club": "CRY"
       },
       "drop": {
         "name": "Gvardiol",
         "code": "477424",
         "club": "MCI"
       },
-      "why": "Gvardiol was benched in GW6 and GW7 and may only return if O'Reilly's back keeps him out. Muharemovic sits in a Leeds side with an unchanged XI and a fixture run of SUN, BOU, TOT.",
-      "model": "Model next5 18.0 vs 15.8 (+2.2); I agree, mainly on Gvardiol's selection risk.",
+      "why": "Muharemovic has been picked up by another manager since the last run, so this slot moves to Mitchell on the model's numbers alone: no permitted-outlet article found either way. Gvardiol was benched in GW6 and GW7, which is why he is the drop.",
+      "model": "Model has Mitchell at next5 17.4 against Gvardiol 15.8; I agree on the numbers but have no news behind it.",
       "confidence": "low",
       "sources": []
     },
@@ -1177,7 +1177,7 @@
       "ts": "2026-10-24T08:10 UTC",
       "gw": 9,
       "claims": 5,
-      "note": "No change: research found nothing new from permitted outlets, claims carried forward."
+      "note": "Muharemovic now owned elsewhere; claim 3 replaced with Mitchell (model-only, low confidence). Otherwise carried forward."
     }
   ]
 }
