@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-23T08:30 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. International break sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland) plus general PL injury/transfer searches, ~16 queries. Found and verified on cpfc.co.uk a fresh Sage quote differentiating Henderson ('more sure') from Mateta ('more uncertain... I maybe can give you the best answer in two weeks') on their post-break return - reinforces rather than changes claim 3, since it is Strand Larsen who is being dropped from this board, not added. Checked and found nothing citable that changes a status: Kostoulas and Groß both scored again in the EFL Cup and against Arsenal respectively but both are already fully priced (Groß already claim 1, Kostoulas not a squad or shortlist player); Iraola called Barcola's Bournemouth start (his third) 'the best is still to come' but offered no new fact beyond what is already on the board; Raya was named the league's Player of the Matchweek for his derby-defining penalty save, no fitness angle; Lewis-Potter's wing-back competition with Aaron Hickey checked directly and found no confirmed change to his starting role. Rayan Cherki's quad tear (7-8 weeks) is a Man City new-signing story but he is neither a squad nor shortlist player. League position unchanged: Justin 2nd of 6 on 252 points."
-    },
-    {
       "ts": "2026-09-23T21:05 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change: evening searches returned only old-season or unrelated permitted-outlet items, nothing new on claim targets."
+    },
+    {
+      "ts": "2026-10-24T08:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change: research found nothing new from permitted outlets, claims carried forward."
     }
   ]
 }
