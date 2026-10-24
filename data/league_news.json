@@ -2,16 +2,6 @@
   "generated": "2026-10-24T07:42 UTC",
   "items": [
     {
-      "id": "2026-10-14-arsenal-training-injuries",
-      "ts": "2026-10-14T07:42",
-      "kind": "news",
-      "text": "Mikel Arteta called it \"far from ideal\" that Piero Hincapie and Martin Zubimendi were both hurt in a post-match training session after the win over Leeds, with scans due to give a timeframe, BBC Sport reports. Neither is owned in the league, but all six managers hold Arsenal players.",
-      "source": {
-        "title": "Hincapie and Zubimendi injured in post-match training session",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cmq5nzn8ww98o"
-      }
-    },
-    {
       "id": "2026-10-14-liverpool-anfield",
       "ts": "2026-10-14T07:42",
       "kind": "news",
@@ -689,16 +679,19 @@
         "title": "City make four changes for trip to Aston Villa",
         "url": "https://www.mancity.com/news/mens/aston-villa-v-city-premier-league-team-news-63928427"
       }
+    },
+    {
+      "id": "2026-10-24-xi-1400",
+      "ts": "2026-10-24T13:07",
+      "kind": "news",
+      "text": "Team news, 15:00 kick-offs: Everton's XI at Arsenal is confirmed. Starting: Tarkowski and Barry (Edward), Dewsbury-Hall (Marcus). Not in the matchday squad: Branthwaite (Big Ben). Arsenal's and Fulham's teamsheets were not available at a permitted source, so their players are not reported here.",
+      "source": {
+        "title": "Everton Starting XI Confirmed For Arsenal Clash",
+        "url": "https://www.evertonfc.com/news/2026/october/24/everton-starting-xi-confirmed-for-arsenal-clash/"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-30T07:55",
-      "news": 4,
-      "opinion": 0,
-      "matchday": false,
-      "note": "Morning. Led with the Man City guilty verdict and who owns City players. Roast suggestions left unused: both unused entries are unusable (one is a slur, the other alleges something serious as fact about a real person), so not written."
-    },
     {
       "ts": "2026-09-30T22:46",
       "news": 1,
@@ -1111,6 +1104,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "2026-10-24T11:30 slot: Villa and City confirmed XIs found (mancity.com via search; page itself blocked to direct fetch)"
+    },
+    {
+      "ts": "2026-10-24T13:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "14:00 UTC slot (ARS v EVE, COV v FUL): Everton sheet found (evertonfc.com); Arsenal and Fulham sheets not found at a permitted readable source; Coventry unowned."
     }
   ]
 }
