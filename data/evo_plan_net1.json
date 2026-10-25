@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T08:37",
+ "generated": "2026-10-25T13:22",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 4.08,
-   "ep": 5.18
+   "ep": 5.17
   },
   {
    "id": 391,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.924,
    "base": 5.18,
-   "ep": 6.54
+   "ep": 6.53
   },
   {
    "id": 94,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 4.18,
-   "ep": 5.31
+   "ep": 5.3
   },
   {
    "id": 156,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.83,
    "base": 3.7,
-   "ep": 4.22
+   "ep": 4.21
   },
   {
    "id": 411,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.34,
-   "ep": 8.06
+   "ep": 8.05
   },
   {
    "id": 401,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.43,
-   "ep": 3.62
+   "ep": 3.6
   }
  ],
  "bench": [
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.27,
-   "ep": 4.85
+   "ep": 4.84
   },
   {
    "id": 335,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.52,
-   "ep": 2.03
+   "ep": 2.02
   },
   {
    "id": 552,
@@ -198,12 +198,12 @@
    "ep": 1.73
   }
  ],
- "xi_ep": 52.9,
+ "xi_ep": 52.8,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 14.83,
+   "gain": 14.85,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 12.91,
+   "gain": 12.95,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.09,
+   "gain": 10.16,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.7,
+   "gain": 9.69,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.13,
+   "gain": 10.11,
    "change": 2,
    "fallback": false,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.93,
+   "gain": 6.86,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.35,
+   "gain": 6.31,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.18,
+   "gain": 7.07,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 6.43,
+   "gain": 6.52,
    "change": 4,
    "fallback": false,
    "add": {

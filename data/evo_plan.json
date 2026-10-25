@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T08:36",
+ "generated": "2026-10-25T13:21",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.34,
-   "ep": 7.74,
+   "ep": 7.73,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.43,
-   "ep": 2.36,
+   "ep": 2.37,
    "votes": 4
   }
  ],
@@ -222,9 +222,41 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 8.6,
+   "gain": 8.24,
    "change": 1,
    "fallback": false,
+   "add": {
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "a",
+    "news": "",
+    "p_play": 0.976,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.615,
+    "base": null,
+    "ep": null
+   },
+   "votes": 5,
+   "borda": 236
+  },
+  {
+   "pos": "MID",
+   "gain": 8.6,
+   "change": 1,
+   "fallback": true,
    "add": {
     "id": 15,
     "code": 184029,
@@ -254,39 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.18,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   },
-   "votes": 4,
-   "borda": 188
-  },
-  {
-   "pos": "MID",
-   "gain": 8.27,
+   "gain": 8.26,
    "change": 1,
    "fallback": true,
    "add": {
@@ -349,51 +349,19 @@
    "borda": 166
   },
   {
-   "pos": "DEF",
-   "gain": 7.28,
+   "pos": "MID",
+   "gain": 5.81,
    "change": 2,
    "fallback": false,
    "add": {
-    "id": 112,
-    "code": 469142,
-    "name": "Van Hecke",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.938,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 110
-  },
-  {
-   "pos": "MID",
-   "gain": 8.99,
-   "change": 3,
-   "fallback": false,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
+    "id": 15,
+    "code": 184029,
+    "name": "\u00d8degaard",
     "pos": "MID",
-    "team": "BOU",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.976,
+    "p_play": 0.9,
     "base": null,
     "ep": null
    },
@@ -409,13 +377,13 @@
     "base": null,
     "ep": null
    },
-   "votes": 2,
-   "borda": 49
+   "votes": 4,
+   "borda": 99
   },
   {
    "pos": "MID",
-   "gain": 7.69,
-   "change": 3,
+   "gain": 7.7,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 542,
@@ -442,12 +410,12 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 46
+   "borda": 57
   },
   {
    "pos": "MID",
-   "gain": 7.36,
-   "change": 3,
+   "gain": 7.34,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 45,
@@ -474,22 +442,22 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 44
+   "borda": 53
   },
   {
    "pos": "MID",
-   "gain": 6.24,
-   "change": 3,
+   "gain": 5.23,
+   "change": 2,
    "fallback": true,
    "add": {
-    "id": 261,
-    "code": 153133,
-    "name": "Iwobi",
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
     "pos": "MID",
-    "team": "FUL",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.938,
+    "p_play": 0.825,
     "base": null,
     "ep": null
    },
@@ -506,11 +474,43 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 36
+   "borda": 43
+  },
+  {
+   "pos": "DEF",
+   "gain": 7.72,
+   "change": 3,
+   "fallback": false,
+   "add": {
+    "id": 112,
+    "code": 469142,
+    "name": "Van Hecke",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 1.0,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.938,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 77
   },
   {
    "pos": "FWD",
-   "gain": 5.52,
+   "gain": 5.53,
    "change": 4,
    "fallback": false,
    "add": {
