@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-25T08:35 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Fetched Sky Sports' own Netherlands 1-1 Germany match report directly, which firms up claim 3's sourcing by confirming in the outlet's own words that Brobbey was 'taken off with what appeared to be a hamstring injury' - previously only cited via a live blog. Still no diagnosis or timeline from Sunderland, so confidence stays low rather than moving either way. Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland, Hull for Tzolakis) and general PL sweeps, 20 searches. Investigated and discarded: a Pascal Gross 'ruled out, undisclosed injury' story quoting Fabian Hurzeler, who is not Brighton's manager, and directly contradicted by Gross scoring and starting against Arsenal five days ago; Stach came on for 26 minutes off the bench for Germany against the Netherlands, fit but a squad option internationally, no change to his Leeds status; Gvardiol's recurring 'broken leg' story resurfaced again and is again the same discredited item. Everything else reconfirmed unchanged: Pickford, Raya, Bogle, Ajayi, Van Hecke, Marmoush, Vuskovic, Haaland, Barcola, Lewis-Potter, Scott, Tavernier and Truffert. League position and waiver order unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
       "ts": "2026-09-25T21:06 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change: no new permitted-source news; claims carried forward unchanged."
+    },
+    {
+      "ts": "2026-10-25T21:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change: research surfaced no permitted-outlet news; claims carried forward."
     }
   ]
 }
