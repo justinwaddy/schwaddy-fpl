@@ -1,47 +1,6 @@
 {
- "generated": "2026-10-24T22:45 UTC",
+ "generated": "2026-10-25T07:50 UTC",
  "items": [
-  {
-   "id": "2026-10-15-chelsea-break-caicedo",
-   "ts": "2026-10-15T07:42",
-   "kind": "news",
-   "text": "BBC Sport argues the three-week break did Chelsea more good than anyone: Xabi Alonso reworked a back three that had shipped a league-high 12 goals before the pause, Moises Caicedo returned from his calf problem, and the 5-1 win over Bournemouth followed. Joao Pedro, who scored twice, said the break gave them time to fix the mistakes from the 3-0 loss at Brentford. Edward owns Palmer, Marcus has Joao Pedro and Big Ben has Rogers, and Chelsea go to Everton at 11:30 on Saturday.",
-   "source": {
-    "title": "Did Chelsea benefit most from extended international break?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckwy4nj4842qo"
-   }
-  },
-  {
-   "id": "2026-10-15-martinez-wilcox",
-   "ts": "2026-10-15T07:42",
-   "kind": "news",
-   "text": "Lisandro Martinez publicly questioned Manchester United's summer recruitment after the 2-0 defeat to Atletico Madrid, telling CBS \"we don't have the best squad at the moment compared to other top teams\" and \"I expect more from our technical director\", BBC Sport reports. Director of football Jason Wilcox is the target again. Robert (Yoro, Sesko), Marcus (Mbeumo), Small Ben (Cunha) and Big Ben (Bruno Fernandes) all have United players, and United are at Leeds on Saturday.",
-   "source": {
-    "title": "Wilcox the target again in another damaging Man Utd fallout",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cvp8g57ne53xo"
-   }
-  },
-  {
-   "id": "2026-10-15-marcus-swing",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Marcus started GW6 ten points behind Edward and finished it 28 clear, a 38-point swing built on 77 to Edward's 39. De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12 supplied 40 of them, and a left-back on 15 is the sort of thing people call luck right up until he is in their own team.",
-   "source": null
-  },
-  {
-   "id": "2026-10-15-robert-recede",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Robert was 89 behind the leader when GW6 began and is 121 behind now, having scored 35, exactly what Small Ben and Big Ben scored. Thirty-two points of ground gone in a week on a perfectly respectable return is the first thing to recede that fast in that part of the league since his hairline.",
-   "source": null
-  },
-  {
-   "id": "2026-10-15-smallben-looking-up",
-   "ts": "2026-10-15T22:50",
-   "kind": "opinion",
-   "text": "Small Ben began GW6 13 points off the top and ended it 45 off, with Cunha on 10, Donnarumma on 9 and Rice on 7 not nearly enough to stop it. For a man who is always looking up at somebody, the leader is now a very long way up.",
-   "source": null
-  },
   {
    "id": "2026-10-16-martinez-apology",
    "ts": "2026-10-16T07:41",
@@ -686,16 +645,59 @@
    "kind": "opinion",
    "text": "Edward had the best day in the league, and the part he will replay is Palmer, who lasted 79 minutes, was sent off, and finished on -1. Jackson hauled 13 and Williams and Leno got 8 each, and still the headline from Return of the Djedi's day is the red card, which tells you how a man who takes the lead at lunchtime ends up third on the night.",
    "source": null
+  },
+  {
+   "id": "2026-10-25-brobbey-doubtful",
+   "ts": "2026-10-25T07:50",
+   "kind": "news",
+   "text": "Justin's Brobbey is the one name the Guardian's team-news guide lists as doubtful for Sunderland, with a hamstring problem, ahead of the 4.30pm kick-off against Leeds. Sunderland are also without Danso, who is suspended for the match. Leeds is the other half of that fixture for the league: Justin has Bogle and Stach there, Edward has Muharemovic and Calvert-Lewin, Big Ben has Trafford and Robert has Wilson.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+   }
+  },
+  {
+   "id": "2026-10-25-kroupi-doubtful",
+   "ts": "2026-10-25T07:50",
+   "kind": "news",
+   "text": "Bournemouth go to Old Trafford at 2pm with Kroupi doubtful with a foot problem, according to the Guardian's team-news guide, which means Edward's Kroupi.Jr may not make the trip at all. Tavernier, Justin's full-back, is Bournemouth's joint-top scorer on four and is not listed with any problem. United's absentees are Rashford, Dorgu, Ugarte and Sesko, so Robert's striker is still out with the shin problem.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+   }
+  },
+  {
+   "id": "2026-10-25-liverpool-brighton",
+   "ts": "2026-10-25T07:50",
+   "kind": "news",
+   "text": "Liverpool host Brighton at 2pm without Szoboszlai, Frimpong, Bradley, Leoni and Ekitike, with Munoz doubtful with a muscle problem, the Guardian's guide says. Isak leads Liverpool's scorers on five, which is Small Ben's problem and opportunity at once, and Gakpo is listed among the possible substitutes rather than the probable starters. Brighton have Struijk, Minteh and Wieffer doubtful, which touches Big Ben's Gross and Marcus's De Cuyper and Kostoulas.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+   }
+  },
+  {
+   "id": "2026-10-25-hull-brentford",
+   "ts": "2026-10-25T07:50",
+   "kind": "news",
+   "text": "Brentford are short in midfield at Hull at 2pm: Janelt serves a one-match ban and Yarmoliuk begins a three-match one, with Dasilva and Milambo still injured, according to the Guardian's team-news guide. Schade, Justin's forward, is the club's joint-leading scorer on three. Hull have Cho and Gourna-Douath doubtful, and Tzolakis is Justin's keeper at the MKM.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
+   }
+  },
+  {
+   "id": "2026-10-25-palace-newcastle-mateta",
+   "ts": "2026-10-25T07:50",
+   "kind": "news",
+   "text": "Crystal Palace's Pierre Sage has been warned after the defeat at Brighton that results must improve quickly, and the Guardian reports Sunday's visit of Newcastle is seen as crucial to his future. Mateta, Robert's forward, scored in midweek against Besiktas on his first start since the opening day, and Palace have not lost at home to Newcastle since November 2020. At the other end, Edward's Hornicek and Small Ben's Wissa are in a Newcastle side that has not kept a league clean sheet in 13 games.",
+   "source": {
+    "title": "Crystal Palace and Newcastle face off with both in search of season kickstart",
+    "url": "https://www.theguardian.com/football/2026/oct/23/crystal-palace-and-newcastle-face-off-with-both-in-search-of-season-kickstart"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-01T22:50",
-   "news": 1,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures (GW6 not started). Led with Alonso on Joao Pedro's knee (PL site, read directly; Marcus). Opinion: Big Ben's team name v Tzolis being Marcus's, and Robert's zero-scorers. Both unused roast suggestions held: one is a sexuality slur, the other an apartheid reference aimed at race/politics, so neither is going on the page. Passed over Isak/Gakpo/Semenyo/Palmer injuries as already posted. Note: Robert's zero-list is from the gameweek 5 squad line in public.json."
-  },
   {
    "ts": "2026-10-02T08:15",
    "news": 2,
@@ -1108,6 +1110,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening wrap. No reported items: the searches returned only older seasons' reports and nothing from a permitted outlet I could read for today's matches, so I published none rather than assert unread detail. Led with Marcus losing the lead (Justin top by 8 on the live feed). Used archive lines on Marcus luck, Ben C height, Robert hairline. Passed over: Ben D on Justin (apartheid line) and the Ben D self-roast - no hook worth the risk tonight, left for Justin to rule; Ben D Arsenal/ball-knowledge held back, Konsa's 15 is a good hook for tomorrow; Harvey Price/boxing line needs a fact not yet there; Marcus Jobacus/Catholic line no hook. Rewrote all 12 of today's flop lines via reflop.py."
+  },
+  {
+   "ts": "2026-10-25T07:50",
+   "news": 5,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Sunday's five fixtures from the Guardian's Friday team-news guide (Brobbey doubtful, Kroupi doubtful, Liverpool/Brighton and Brentford absentees) plus the Palace v Newcastle preview. No opinion on a morning run; no roast archive suggestions used or passed over. Sources limited to Guardian: BBC/Sky not fetchable from this environment; the guide is dated 23 October so late changes are not captured."
   }
  ]
 }
