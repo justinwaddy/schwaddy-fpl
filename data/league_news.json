@@ -2,16 +2,6 @@
   "generated": "2026-10-25T07:50 UTC",
   "items": [
     {
-      "id": "2026-10-16-henderson-chelsea-everton",
-      "ts": "2026-10-16T07:41",
-      "kind": "news",
-      "text": "The Guardian's weekend preview picks out Jordan Henderson, who at 36 became the oldest player to contribute directly to three goals in a Premier League game against Bournemouth, as the man who may dictate Chelsea's trip to unbeaten Everton. His partnership with Moises Caicedo is what lets Morgan Rogers, Joao Pedro and Cole Palmer flourish: Rogers is Big Ben's, Joao Pedro is Marcus's and Palmer is Edward's. Everton's defence, in the Guardian's words, littered the draw at Hull with costly mistakes, and Tarkowski, Branthwaite and Pickford belong to Edward, Big Ben and Justin.",
-      "source": {
-        "title": "Premier League: 10 things to look out for this weekend",
-        "url": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend"
-      }
-    },
-    {
       "id": "2026-10-16-gonzalo-fulham-hull",
       "ts": "2026-10-16T07:41",
       "kind": "news",
@@ -695,16 +685,19 @@
         "title": "Team news: Confirmed Liverpool line-up v Brighton & Hove Albion",
         "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-brighton-and-hove-albion"
       }
+    },
+    {
+      "id": "2026-10-25-xi-1630",
+      "ts": "2026-10-25T16:07",
+      "kind": "news",
+      "text": "Team news, Sunderland v Leeds (16:30): Leeds' eleven is confirmed. Edward has Muharemovic and Calvert-Lewin starting; Justin has Bogle starting but Stach on the bench; Big Ben's Trafford starts; Robert's Wilson starts. Sunderland's eleven was not available, so Justin's Brobbey, Robert's Roefs and Marcus's Mukiele are not counted.",
+      "source": {
+        "title": "Daniel Farke makes three changes made for Sunderland clash",
+        "url": "https://www.leedsunited.com/en/news/daniel-farke-makes-three-changes-made-for-sunderland-clash"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-02T22:47",
-      "news": 0,
-      "opinion": 2,
-      "matchday": false,
-      "note": "Evening, no fixtures today, GW6 not started. Zero reported items: search only surfaced off-list or unreadable pages (ESPN injuries piece would not load, Tzolis detail only via Yahoo/TeamTalk/Metro), so nothing was cited. Opinion on the table and Marcus's Arsenal exposure. Held both unused roasts: one is a slur, the other is aimed at race. No flops today so reflop not run."
-    },
     {
       "ts": "2026-10-03T07:50",
       "news": 1,
@@ -1117,6 +1110,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "14:00 slot; sheets found (club sites): Crystal Palace, Newcastle, Liverpool; not found: Hull, Brentford, Brighton, Man Utd, Bournemouth"
+    },
+    {
+      "ts": "2026-10-25T16:07",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "16:30 slot SUN v LEE: Leeds sheet found (leedsunited.com); Sunderland sheet not found"
     }
   ]
 }
