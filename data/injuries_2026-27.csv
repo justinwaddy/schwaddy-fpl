@@ -97,6 +97,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 114243,1785832691,1785832691,a,,,
 114283,1785832691,1785319210,d,,75.0,Foot injury - 75% chance of playing
 114283,1787270210,1787270210,a,,100.0,
+114283,1792917355,1792852210,d,100.0,75.0,Illness - 75% chance of playing
 115556,1785832691,1785832691,a,,,
 116535,1785832691,1785832691,a,,,
 119090,1788894459,1788894459,a,,,
@@ -186,6 +187,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 172780,1787910473,1787668208,d,,75.0,Shoulder injury - 75% chance of playing
 172780,1789202150,1789202150,a,75.0,100.0,
 172780,1792830948,1792765810,d,75.0,75.0,Unspecified injury - 75% chance of playing
+172780,1792917355,1792868410,d,75.0,75.0,Groin injury - 75% chance of playing
 172850,1788894459,1788894459,a,,,
 172850,1792139751,1792096209,i,,0.0,Unspecified injury - Unknown return date
 172850,1792658140,1792658140,a,0.0,100.0,
@@ -431,6 +433,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 224967,1790930148,1790883009,d,,75.0,Leg injury - 75% chance of playing
 224967,1792226142,1792226142,d,75.0,50.0,Leg injury - 50% chance of playing
 224967,1792239806,1792239806,a,50.0,100.0,
+224967,1792917355,1792868410,d,100.0,75.0,Unspecified injury - 75% chance of playing
 225796,1785832691,1785832691,a,,,
 225796,1789736901,1789727410,d,,75.0,Unspecified injury - 75% chance of playing
 225796,1789807008,1789807008,d,75.0,75.0,Hamstring injury - 75% chance of playing
@@ -555,6 +558,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 248875,1789979793,1789979793,a,75.0,100.0,
 249231,1785832691,1785832691,a,,,
 250199,1785832691,1785832691,a,,,
+250199,1792917355,1792846809,d,,75.0,Muscular injury - 75% chance of playing
 424876,1785832691,1785832691,a,,,
 424876,1791731026,1791730809,d,,75.0,Hamstring injury - 75% chance of playing
 424876,1792149312,1792149312,d,,25.0,Hamstring injury - 25% chance of playing
@@ -700,6 +704,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 448104,1791828669,1791817208,d,,75.0,Ankle injury - 75% chance of playing
 448104,1792226142,1792226142,i,,0.0,Ankle injury - Expected back 24 Oct
 448104,1792571741,1792571741,d,0.0,75.0,Ankle injury - 75% chance of playing
+448104,1792917355,1792917355,a,75.0,100.0,
 448514,1785832691,1785832691,a,,,
 449027,1785832691,1785832691,a,,,
 449428,1785832691,1785661211,d,,75.0,Hip injury - 75% chance of playing
@@ -735,6 +740,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 460842,1787910473,1787910473,d,25.0,50.0,Thigh injury - 50% chance of playing
 460842,1788894459,1788894459,a,100.0,100.0,
 461102,1785832691,1785832691,a,,,
+461102,1792917355,1792861209,d,,75.0,Unspecified injury - 75% chance of playing
 461199,1785832691,1785832691,a,,,
 461199,1788963289,1788962408,i,,0.0,Knee injury - Unknown return date
 461587,1785832691,1785832691,a,,,
@@ -783,6 +789,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 465920,1789202150,1789149609,i,,0.0,Ankle injury - Unknown return date
 466052,1785832691,1785832691,a,,,
 466075,1785832691,1785832691,a,,,
+466075,1792917355,1792866609,d,,75.0,Hip injury - 75% chance of playing
 466525,1785832691,1785832691,a,,,
 466525,1792763234,1792760409,d,,50.0,Foot injury - 50% chance of playing
 467779,1785832691,1785832691,a,,,
@@ -826,6 +833,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 475168,1789634190,1789585210,d,,75.0,Unspecified injury - 75% chance of playing
 475168,1789821645,1789821645,d,75.0,75.0,Knee injury - 75% chance of playing
 475168,1791559985,1791559985,a,75.0,100.0,
+475168,1792917355,1792859410,d,100.0,75.0,Unspecified injury - 75% chance of playing
 476887,1785832691,1785832691,a,,,
 476887,1787910473,1787842383,u,,0.0,Has joined Lille on loan for the rest of the season
 477064,1785832691,1785832691,a,,,
@@ -968,6 +976,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 499721,1785832691,1785832691,a,,,
 499721,1788894459,1788525588,u,0.0,0.0,Has joined FC Köln on loan for the rest of the season
 499726,1785832691,1785832691,a,,,
+499857,1792917355,1792917355,a,,,
 500033,1788894459,1788894459,a,,,
 500040,1785832691,1785832691,a,,,
 500040,1788894459,1788530408,d,75.0,75.0,Muscular injury - 75% chance of playing

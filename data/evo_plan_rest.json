@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T12:55",
+ "generated": "2026-10-25T08:36",
  "gw": 9,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.807,
    "base": 3.76,
-   "ep": 3.7,
+   "ep": 3.71,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 4.18,
-   "ep": 4.1,
+   "ep": 4.11,
    "votes": 5
   },
   {
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.34,
-   "ep": 7.75,
+   "ep": 7.74,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.43,
-   "ep": 2.37,
+   "ep": 2.36,
    "votes": 4
   }
  ],
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.27,
-   "ep": 4.16,
+   "ep": 4.17,
    "votes": 1
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.52,
-   "ep": 1.5,
+   "ep": 1.49,
    "votes": 1
   }
  ],
  "xi_ep": 45.1,
- "changes": 3,
+ "changes": 2,
  "claims": [
   {
    "pos": "MID",
-   "gain": 108.19,
+   "gain": 108.01,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 285
+   "borda": 275
   },
   {
    "pos": "MID",
-   "gain": 59.6,
+   "gain": 59.49,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,43 +282,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 257
+   "borda": 247
   },
   {
    "pos": "MID",
-   "gain": 49.8,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   },
-   "votes": 5,
-   "borda": 246
-  },
-  {
-   "pos": "MID",
-   "gain": 53.98,
+   "gain": 53.9,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +314,43 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 195
+   "borda": 190
   },
   {
    "pos": "MID",
-   "gain": 32.65,
+   "gain": 55.2,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "a",
+    "news": "",
+    "p_play": 0.976,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.615,
+    "base": null,
+    "ep": null
+   },
+   "votes": 4,
+   "borda": 188
+  },
+  {
+   "pos": "MID",
+   "gain": 37.34,
    "change": 2,
    "fallback": false,
    "add": {
@@ -377,12 +377,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 4,
-   "borda": 98
+   "votes": 3,
+   "borda": 72
   },
   {
    "pos": "MID",
-   "gain": 44.63,
+   "gain": 44.51,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 54
+   "borda": 56
   },
   {
    "pos": "MID",
-   "gain": 35.6,
+   "gain": 35.86,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,39 +442,39 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 50
+   "borda": 52
   },
   {
-   "pos": "DEF",
-   "gain": 27.29,
-   "change": 3,
-   "fallback": false,
+   "pos": "MID",
+   "gain": 25.2,
+   "change": 2,
+   "fallback": true,
    "add": {
-    "id": 112,
-    "code": 469142,
-    "name": "Van Hecke",
-    "pos": "DEF",
-    "team": "TOT",
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
+    "pos": "MID",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.825,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.938,
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
+    "pos": "MID",
+    "team": "LEE",
+    "status": "d",
+    "news": "Foot injury - 50% chance of playing",
+    "p_play": 0.498,
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 63
+   "votes": 2,
+   "borda": 31
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -560,9 +560,9 @@
    "name": "Jo\u00e3o Pedro",
    "pos": "FWD",
    "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.853,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.64,
    "base": 182.74,
    "ep": 185.08
   },
@@ -800,9 +800,9 @@
    "name": "Calafiori",
    "pos": "DEF",
    "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.942,
+   "status": "d",
+   "news": "Hip injury - 75% chance of playing",
+   "p_play": 0.706,
    "base": 141.14,
    "ep": 140.07
   },
