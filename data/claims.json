@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-26T08:07 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made. Deep club-by-club sweep of every squad club plus the free-agent shortlist clubs (Brighton, Leeds, Sunderland) found nothing that clears the sourcing bar for a change. Chased Brobbey's injury status in depth: ESPN (permitted) confirms Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, but a 'two to four weeks' timeline circulating on non-permitted sites (TeamTalk, Sunderland Echo, LiveScore) could not be traced to safc.com or any permitted outlet, and one version of the quote misattributes the injury to the wrong game - discarded as unreliable, so claim 3's why was refreshed with the confirmed detail but its confidence is unchanged."
-    },
-    {
       "ts": "2026-09-27T08:35 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change: no new permitted-source news affecting the claims; carried forward."
+    },
+    {
+      "ts": "2026-10-26T21:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change: no new dated permitted-source news affecting the claims; carried forward."
     }
   ]
 }

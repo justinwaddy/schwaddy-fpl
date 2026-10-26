@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-26T21:18 UTC",
-      "published": 0,
-      "note": "Evening sweep ~13 hours after this morning's 08:07 run, still the international break (GW6 fixtures resume 10 October, waivers close 9 October). Club-by-club pass on every squad club plus free-agent shortlist clubs (Sunderland for Brobbey, Brighton for Gross, Leeds for Stach, Bournemouth for Truffert, Hull for Tzolakis) and general sweeps on De Zerbi's position at Tottenham, Mateta's return timeline at Palace and Man City internationals, 12 searches plus three direct-fetch verifications (safc.com news index, ESPN's international-break injury roundup, leedsunited.com's Bournemouth-clash presser). Chased Brobbey again: Sky/ESPN's own reporting is unchanged since this morning - Xavi Hernandez's 'indeed injured' quote and the Zirkzee call-up, still no diagnosis or return date from Sunderland itself, and safc.com's own news index carries no new article on him since January. A leedsunited.com press-conference page calling Bogle 'back in team training' after a bruise looked promising but is dated 25 Sep 25, a year stale, and Leeds do not play Wolves this season - discarded. Also discarded on inspection: a recurring Gvardiol 'broken leg' story mixing in an old rehab timeline (same one flagged stale on 24 September) and a De Zerbi sack-pressure story that changes nothing about Marmoush's role since no permitted outlet reports a change to Tottenham's forward line. Everything else reconfirmed unchanged: Pickford, Raya, Bogle, Ajayi, Van Hecke, Vuskovic, Haaland, Barcola, Groß, Stach, Lewis-Potter, Scott, Schade, Tavernier and Truffert. Nothing published."
-    },
-    {
       "ts": "2026-09-27T08:35 UTC",
       "published": 1,
       "note": "Led with Jayden Bogle's September Player of the Month nomination, confirmed via premierleague.com's own nominee article (goal at Brighton, starring role in the 4-1 demolition of Newcastle, joint-tightest PL defence with Everton) - the strongest evidence yet for keeping him over the Truffert swap. Pascal Gross also nominated on the same page, reinforcing claim 1's Gross-for-Barcola case. Full club-by-club sweep across all 11 squad clubs (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland for Brobbey, Brighton for Gross, Leeds for Stach, Bournemouth for Truffert, Hull for Tzolakis), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full, all resurfacing stale articles rather than fresh news: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date coincidence); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, from before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023, from the Thomas Frank era; the same outlet's Kevin Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Checked safc.com directly for a Brobbey update - its 24 September international round-up carries no mention of him, and no permitted outlet has published a diagnosis since Netherlands duty on the 24th, though the model's own news field has now caught up with a 'hamstring injury, 75% chance of playing' note and cut his availability from 0.90 to 0.68 this week. Everything else reconfirmed unchanged: Pickford, Raya, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
@@ -621,6 +616,11 @@
       "ts": "2026-10-26T08:10 UTC",
       "published": 0,
       "note": "Morning check. Only new permitted-source items were Chelsea 0-2 Spurs (Palmer sent off, Joao Pedro out) and Maddison/Wirtz knocks, none touching claims or his squad verdicts; nothing new on Stach, Brobbey, Haaland or Barcola. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-26T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Searches returned only undated or pre-GW8 items from permitted outlets; nothing new on his squad. Not in starters window. Nothing published."
     }
   ]
 }
