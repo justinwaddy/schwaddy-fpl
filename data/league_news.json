@@ -1,53 +1,6 @@
 {
- "generated": "2026-10-25T22:43 UTC",
+ "generated": "2026-10-26T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-16-marcus-luck",
-   "ts": "2026-10-16T22:45",
-   "kind": "opinion",
-   "text": "Marcus scored 77 in GW6 and 40 of it came from De Cuyper 15, Dewsbury-Hall 13 and Joao Pedro 12: a Brighton left-back, an Everton midfielder and a Chelsea forward, none of whom anyone else would have named. He leads Edward by 28 with Foden and Tzolis both on 0. Anybody can call that luck, but a man who has been on the right side of it three weeks running is just a different kind of planner.",
-   "source": null
-  },
-  {
-   "id": "2026-10-17-james-surgery",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Reece James is out for around three months after knee surgery, BBC Sport reports, the problem picked up in training before Chelsea's 5-1 win over Bournemouth. Xabi Alonso says it is not a two or three week job and expects him back before January. James sits in Robert's squad, which had a quiet Gameweek 6 to forget and now has a Chelsea defender to carry through to Christmas.",
-   "source": {
-    "title": "Chelsea's James out for three months after knee surgery",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
-   }
-  },
-  {
-   "id": "2026-10-17-emegha-everton",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Chelsea go to Everton at 12.30 today without Emmanuel Emegha, still waiting on his debut, with Alonso confirming he is not fit enough for the trip. The Chelsea players the league holds are Joao Pedro and Palestra for Marcus, Palmer for Edward, Rogers for Big Ben and Estevao for Robert, and they meet an Everton that has Dewsbury-Hall for Marcus and Tarkowski, Garner and Barry for Edward.",
-   "source": {
-    "title": "Chelsea's James out for three months after knee surgery",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o"
-   }
-  },
-  {
-   "id": "2026-10-17-struijk-appeal",
-   "ts": "2026-10-17T07:50",
-   "kind": "news",
-   "text": "Brighton's Pascal Struijk has had his red card at Sunderland overturned on appeal, BBC Sport reports, so he avoids the one-match ban and is available for the trip to Crystal Palace this weekend. Brighton are third, five points behind Manchester City. Marcus has De Cuyper and Kostoulas there, Justin has Vuskovic and Big Ben has Gross, with Palace's Strand Larsen, Khalaili and Mateta on the other side of the derby for Justin, Edward and Robert.",
-   "source": {
-    "title": "Struijk red card shown after VAR intervention is overturned",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cv4g18gk8xzgo"
-   }
-  },
-  {
-   "id": "2026-10-17-xi-1130",
-   "ts": "2026-10-17T11:03",
-   "kind": "news",
-   "text": "Team news, Everton v Chelsea (11:30 UTC). Chelsea sheet confirmed. Marcus: Joao Pedro starts, Palestra on the bench. Edward: Palmer starts. Big Ben: Rogers starts. Robert: Martinez starts, Estevao on the bench, James not in the squad. Everton's eleven was not available at a permitted outlet, so Dewsbury-Hall, Tarkowski, Barry, Pickford and Branthwaite are left out of this report.",
-   "source": {
-    "title": "Confirmed Chelsea line up vs Everton",
-    "url": "https://www.chelseafc.com/en/news/article/confirmed-chelsea-line-up-vs-everton-171026"
-   }
-  },
   {
    "id": "2026-10-17-xi-1400",
    "ts": "2026-10-17T13:07",
@@ -692,16 +645,59 @@
    "kind": "opinion",
    "text": "Konsa gave Big Ben 14 and Gross gave him an own goal, so the self-appointed Arsenal man gets to take the first as proof of his ball knowledge and will describe the second as a Brighton problem.",
    "source": null
+  },
+  {
+   "id": "2026-10-26-isak-six",
+   "ts": "2026-10-26T07:55",
+   "kind": "news",
+   "text": "Isak scored the second at Anfield against Brighton, taking him to six Premier League goals this season, more than half of Liverpool's league total and behind only Haaland's nine, the BBC reports. Small Ben has him, and Liverpool host nobody easier next: it is Arsenal.",
+   "source": {
+    "title": "Isak finally living up to price tag as Liverpool patience rewarded",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmj47lq7e5e7o"
+   }
+  },
+  {
+   "id": "2026-10-26-city-back-line",
+   "ts": "2026-10-26T07:55",
+   "kind": "news",
+   "text": "Manchester City's perfect start ended at Villa Park and the BBC's verdict is that the back line is the problem: one clean sheet in their last six, and Donnarumma and Guehi have three errors leading to Premier League goals each since the start of last season. Small Ben has the keeper and Marcus has the centre-back.",
+   "source": {
+    "title": "Man City's leaky defence highlights Donnarumma & Guehi struggles",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6kg7z700k7jo"
+   }
+  },
+  {
+   "id": "2026-10-26-jackson-villa",
+   "ts": "2026-10-26T07:55",
+   "kind": "news",
+   "text": "Nicolas Jackson now has seven goals in his first 11 appearances for Villa, six of them in the last six, after both of his shots on target beat City on Saturday, the BBC notes. Edward has him, and the 13 he took from the weekend is what the numbers look like when the underlying ones are real: Jackson is outscoring his expected goals by exactly two.",
+   "source": {
+    "title": "From Chelsea reject to Watkins 'upgrade' - Jackson makes fast Villa start",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6p9gkdzzpnro"
+   }
+  },
+  {
+   "id": "2026-10-26-carrick-brink",
+   "ts": "2026-10-26T07:55",
+   "kind": "news",
+   "text": "Michael Carrick is on the brink at Manchester United after the 3-0 home defeat by Bournemouth, with senior figures in serious talks about his future, the BBC reports. He dropped captain Bruno Fernandes to the bench for it, after Fernandes questioned his tactics following the 4-1 loss at Como. Big Ben has Fernandes, Marcus has Mbeumo, Small Ben has Cunha, Robert has Sesko and Yoro.",
+   "source": {
+    "title": "Highlights: Pressure grows on Carrick as Man United lose at home to Bournemouth",
+    "url": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo"
+   }
+  },
+  {
+   "id": "2026-10-26-branthwaite-gossip",
+   "ts": "2026-10-26T07:55",
+   "kind": "news",
+   "text": "Gossip, not confirmed: the BBC's Monday column carries a Football Insider claim that Manchester United are targeting Everton's Jarrad Branthwaite as they look to rebuild their defence. Big Ben owns him, and he returned nothing at Arsenal on Saturday.",
+   "source": {
+    "title": "Howe open to Man Utd talks - Monday's gossip",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq1j3e889rg8o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-03T22:41",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening. No matchday and no fixture of GW6 kicked off, so no wrap material. Search returned only stale or unverifiable articles, so no reported items rather than an uncited one. Opinion: the Liverpool v Man City split across squads, and Robert's 89-point gap. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over: one is a slur and the other is aimed at race. Neither is used. No flop lines to rewrite."
-  },
   {
    "ts": "2026-10-04T07:42",
    "news": 3,
@@ -1114,6 +1110,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening wrap, GW8 done. Led with Marcus losing the lead to Justin, then Robert's six blanks, Edward's best-in-league 56, Ben D's Konsa/Gross. No reported items: only search hit was last season's Sunderland v Leeds report, nothing usable. Rewrote all 7 flop lines (Brobbey's public.json copy still says Justin's vs news.json 'yours', so left for next refresh). Archive used: Edward on Marcus (luck), Ben D/Edward on Robert (hairline), Edward on Ben D (Arsenal ball knowledge). Passed over: Ben C height, Harvey Price, Marcus Jobacus/catholic, Justin on Rob's pint, Ben C bench (Oct 18), South Africa/self-sexuality entries - no fresh hook or not needed tonight, and I did not use the Ben D self-submission."
+  },
+  {
+   "ts": "2026-10-26T07:55",
+   "news": 5,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, Monday after GW8, no fixtures today. Led with Isak (BBC), the Man City back line, Jackson at Villa, Carrick on the brink, Branthwaite gossip. Opinion is evening only; no roast suggestions used or passed over."
   }
  ]
 }
