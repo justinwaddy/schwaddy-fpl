@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-26T16:49 UTC",
+ "generated": "2026-10-26T22:50 UTC",
  "items": [
-  {
-   "id": "2026-10-17-big-ben-tzolis",
-   "ts": "2026-10-17T22:50",
-   "kind": "opinion",
-   "text": "Big Ben named his team Quantum of Tzolis, and Tzolis is on Marcus's squad, on 0, not yet played. Big Ben himself is 63 behind the man who owns his namesake, with 18 so far from Affengruber's 6 and Wirtz's 5. Bruno, Konsa and Havertz are all still to play, so the question is not whether the rest of his weekend is a bailout but which of the three gets to be the one he waits on.",
-   "source": null
-  },
-  {
-   "id": "2026-10-17-robert-receding",
-   "ts": "2026-10-17T22:50",
-   "kind": "opinion",
-   "text": "Robert has 15 on the day and 13 of it is Martinez 8 and Ndiaye 5. Two of his eleven have played and returned nothing, six have not kicked off, and he is 115 behind Marcus, which makes first place the only thing in his life receding faster than his hairline. There is still time for him to get closer, which is the sort of thing he says before every gameweek.",
-   "source": null
-  },
-  {
-   "id": "2026-10-18-martinez-concussion",
-   "ts": "2026-10-18T07:55",
-   "kind": "news",
-   "text": "Chelsea beat Everton 2-0 on Saturday but lost Robert's Martinez for the afternoon: the goalkeeper was carried off with his neck in a brace after a collision with Big Ben's Branthwaite and taken to hospital with suspected concussion, the Guardian reports. Alonso said only that Martinez was conscious leaving the ground and the club need to wait. Robert has no other goalkeeper on his squad but Roefs, and Chelsea's next fixture will say whether he has a decision to make.",
-   "source": {
-    "title": "Neto double at Everton leads Chelsea to victory marred by Martinez head injury",
-    "url": "https://www.theguardian.com/football/2026/oct/17/everton-chelsea-premier-league-match-report"
-   }
-  },
   {
    "id": "2026-10-18-brentford-liverpool",
    "ts": "2026-10-18T07:55",
@@ -695,6 +671,27 @@
    "kind": "opinion",
    "source": null,
    "text": "Small Ben left 14 on his bench again, and the pick of it was Zion Suzuki, who made the BBC's team of the week from the dugout while Donnarumma started in goal for 1. Silva sat beside him on 8. Every week Small Ben looks at fifteen players and picks the wrong eleven, which is less a selection policy than an eye test, and from down there it is only fair to point out that most of the squad is above his line of sight."
+  },
+  {
+   "id": "2026-10-26-marcus-luck-bench",
+   "ts": "2026-10-26T22:50",
+   "kind": "opinion",
+   "text": "Marcus's best score of the weekend was nine points from Kinsky, who spent it on the bench, which is the only place in the squad that luck could not find him. The man who leans on it every week had it walk out on him, and he went from leading the league to 8 behind Justin on the lowest eleven of the six. Expect a panicked waiver claim on a player with two good games by Tuesday.",
+   "source": null
+  },
+  {
+   "id": "2026-10-26-bigben-bruno-bench",
+   "ts": "2026-10-26T22:50",
+   "kind": "opinion",
+   "text": "Michael Carrick dropped Bruno Fernandes to the bench for the Bournemouth game, and Big Ben, unprompted, had already put him on his own bench. Two men reached the same verdict independently and Bruno returned nothing for either. Meanwhile Trafford sat there on 10 while Kelleher started on 2, so the self-appointed man of ball knowledge picked the wrong goalkeeper and the right midfielder to leave out, entirely by accident.",
+   "source": null
+  },
+  {
+   "id": "2026-10-26-robert-bench-nothing",
+   "ts": "2026-10-26T22:50",
+   "kind": "opinion",
+   "text": "Robert's bench scored nothing at all, Saka and James and the others, which makes it the only part of the squad that is consistent with the rest of it. He is 139 off the lead and the league still cannot tell whether the plan is patience or whether somebody has forgotten his password. The hairline retreats at a similar pace and with the same lack of resistance.",
+   "source": null
   }
  ],
  "runs": [
@@ -1117,6 +1114,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening, Monday after GW8 (run by hand, no fixtures today, GW9 not started). Week wrap: led with Justin top by 8 after starting GW8 19 behind, then Small Ben's 14-point bench with Suzuki in the BBC team of the week. Reported: Palmer's red served in the League Cup not v Man Utd (BBC); Deeney team of the week (BBC). Corrected two figures in last night's pieces against settled totals: Marcus is 8 behind Justin (was written as 14), Robert is 139 off the lead (was 150). Archive used: Ben D on Ben C (height). Passed over: Ben D on Justin (apartheid) - no football hook tonight; Ben C Harvey Price/boxing - the boxing fact is unverified and the likeness leans on a disabled man; Marcus Jobacus/catholic, Rob pint/transfers, Ben D self-submission - their men were roasted last night, one piece per manager. Also reworded this morning's Carrick item ('captain' -> 'skipper') so the step 6 format check passes."
+  },
+  {
+   "ts": "2026-10-26T22:50",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, Monday after GW8, no fixtures today, GW9 not started (live feed all zeros, so nothing depends on today's points; quoted settled GW8 figures). No new reported items: WebSearch refused bbc/guardian domains and two news rounds already ran today. Opinion: Marcus (28, Kinsky on bench, luck line + kneejerk submission), Big Ben (Bruno on bench alongside Carrick's decision, Trafford 10 on bench; archive Bruno line), Robert (empty bench, no-transfers/hairline submissions). No FLOP lines today, so no reflop. Passed over: Ben D on Justin (apartheid), no football hook; Ben C Harvey Price/boxing, boxing fact unverified; Marcus Jobacus/catholic/gifting, no hook tonight; Ben D self-submission; Justin pint line, no verifiable hook."
   }
  ]
 }
