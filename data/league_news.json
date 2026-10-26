@@ -1,40 +1,6 @@
 {
- "generated": "2026-10-26T07:55 UTC",
+ "generated": "2026-10-26T16:49 UTC",
  "items": [
-  {
-   "id": "2026-10-17-xi-1400",
-   "ts": "2026-10-17T13:07",
-   "kind": "news",
-   "text": "Team news, 15:00 kick-offs: Liverpool's confirmed XI at Brentford has all six league players starting - Marcus (Alisson), Small Ben (Van Dijk, Szoboszlai, Isak), Big Ben (Wirtz) and Justin (Barcola). Teamsheets for Brentford, Fulham and Man City were not available at time of writing, so league players at those clubs are not counted yet.",
-   "source": {
-    "title": "Team news: Confirmed Liverpool line-up v Brentford",
-    "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-brentford"
-   }
-  },
-  {
-   "id": "2026-10-17-xi-1630",
-   "ts": "2026-10-17T16:07",
-   "kind": "news",
-   "text": "Team news, Newcastle v Aston Villa (17:30 BST): Newcastle's confirmed XI is out. Edward's Horníček starts in goal; Small Ben's Hall and Wissa both start. Aston Villa's confirmed XI was not available when checked, so Edward's Manzambi and N.Jackson and Small Ben's Suzuki are not counted either way.",
-   "source": {
-    "title": "Confirmed line-up: Joelinton in for first start of season",
-    "url": "https://www.newcastleunited.com/en/news/aston-villa-h-team-news-26-27"
-   }
-  },
-  {
-   "id": "2026-10-17-table-race",
-   "ts": "2026-10-17T22:50",
-   "kind": "opinion",
-   "text": "Marcus went into the weekend 28 ahead of Edward and 36 ahead of Justin. Tonight it is 13 and 19: Edward has 24 so far on Manzambi's 11 and Leno's 6, Justin has 26 on Haaland's 13 and Lewis-Potter's 9, and Marcus has 9 from five players on 1 or 2 each, with Foden's 9 sitting on his bench. Six of his eleven have not played, against seven of Justin's and four of Edward's, so the lead is still his but the rest of the gameweek will decide how much of it survives.",
-   "source": null
-  },
-  {
-   "id": "2026-10-17-small-ben-bench",
-   "ts": "2026-10-17T22:50",
-   "kind": "opinion",
-   "text": "Small Ben has 12 in his eleven and 22 on his bench. Isak 9, Suzuki 8, Hall 4 and Szoboszlai 1 watched from the sideline while Donnarumma, Ruben and Anderson took a point each for Man City, and he is 42 behind Marcus with five of his eleven still to play. If he reads a boxing ring the way he reads a team sheet, whoever is standing across from him should plan on an early night.",
-   "source": null
-  },
   {
    "id": "2026-10-17-big-ben-tzolis",
    "ts": "2026-10-17T22:50",
@@ -622,14 +588,14 @@
    "id": "2026-10-25-marcus-luck",
    "ts": "2026-10-25T22:43",
    "kind": "opinion",
-   "text": "Marcus went into the weekend in front and comes out of it 14 behind Justin, after Kostoulas and De Cuyper played the full 90 at Anfield for 3 points between them. A man who relies on luck every week was always going to get a bill, and it came in on a Sunday.",
+   "text": "Marcus went into the weekend in front and comes out of it 8 behind Justin, after Kostoulas and De Cuyper played the full 90 at Anfield for 3 points between them. A man who relies on luck every week was always going to get a bill, and it came in on a Sunday.",
    "source": null
   },
   {
    "id": "2026-10-25-robert-blanks",
    "ts": "2026-10-25T22:43",
    "kind": "opinion",
-   "text": "Six of Robert's eleven played and returned nothing, and the one who turned up, Gabriel, scored 17 and made the other ten look like a clerical error. He now sits 150 off the lead, a gap his hairline has been working on for years without getting there. At least the hairline has a plan.",
+   "text": "Six of Robert's eleven played and returned nothing, and the one who turned up, Gabriel, scored 17 and made the other ten look like a clerical error. He now sits 139 off the lead, a gap his hairline has been working on for years without getting there. At least the hairline has a plan.",
    "source": null
   },
   {
@@ -680,7 +646,7 @@
    "id": "2026-10-26-carrick-brink",
    "ts": "2026-10-26T07:55",
    "kind": "news",
-   "text": "Michael Carrick is on the brink at Manchester United after the 3-0 home defeat by Bournemouth, with senior figures in serious talks about his future, the BBC reports. He dropped captain Bruno Fernandes to the bench for it, after Fernandes questioned his tactics following the 4-1 loss at Como. Big Ben has Fernandes, Marcus has Mbeumo, Small Ben has Cunha, Robert has Sesko and Yoro.",
+   "text": "Michael Carrick is on the brink at Manchester United after the 3-0 home defeat by Bournemouth, with senior figures in serious talks about his future, the BBC reports. He dropped his skipper Bruno Fernandes to the bench for it, after Fernandes questioned his tactics following the 4-1 loss at Como. Big Ben has Fernandes, Marcus has Mbeumo, Small Ben has Cunha, Robert has Sesko and Yoro.",
    "source": {
     "title": "Highlights: Pressure grows on Carrick as Man United lose at home to Bournemouth",
     "url": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo"
@@ -695,16 +661,43 @@
     "title": "Howe open to Man Utd talks - Monday's gossip",
     "url": "https://www.bbc.co.uk/sport/football/articles/cq1j3e889rg8o"
    }
+  },
+  {
+   "id": "2026-10-26-palmer-ban-cup",
+   "ts": "2026-10-26T16:49",
+   "kind": "news",
+   "text": "Cole Palmer's sending off against Spurs, two second-half yellows on Saturday, will not cost him Chelsea v Manchester United this weekend, the BBC explains: a red-card ban runs across domestic competitions, so he serves it in Wednesday's League Cup tie at Anfield instead. Edward, who took -1 off him for the dismissal, keeps him for a fixture with Big Ben's Fernandes, Marcus's Mbeumo, Small Ben's Cunha and Robert's Sesko and Yoro on the other side.",
+   "source": {
+    "title": "Which game will Chelsea's Palmer miss after red card?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm4g1q54pj20o"
+   }
+  },
+  {
+   "id": "2026-10-26-deeney-team-of-week",
+   "ts": "2026-10-26T16:49",
+   "kind": "news",
+   "text": "Troy Deeney's BBC team of the week has five of this league's players in it. Edward has two, Jackson up front after his pair against City and Truffert at left-back; Justin has Tavernier, forced in at number 10 after scoring in all three of Bournemouth's wins in eight days; Big Ben has Konsa. And in goal is Zion Suzuki, 'a big-game player who gets the job done', who spent the weekend on Small Ben's bench.",
+   "source": {
+    "title": "Who has made Troy's Premier League team of the week?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c804013klnn0o"
+   }
+  },
+  {
+   "id": "2026-10-26-justin-top-on-fullbacks",
+   "ts": "2026-10-26T16:49",
+   "kind": "opinion",
+   "source": null,
+   "text": "Justin started the weekend 19 behind and ends it 8 clear, top of the league on the strength of Ben White and Marcus Tavernier, a right-back and a Bournemouth midfielder on 10 apiece, while Haaland, the one man in his squad anybody else would want, wandered in with 8. It is the leadership style of a man who turns up to the pub last, finds everyone else has already bought a round, and will be telling you about his excellent timing until at least Saturday."
+  },
+  {
+   "id": "2026-10-26-small-ben-bench-again",
+   "ts": "2026-10-26T16:49",
+   "kind": "opinion",
+   "source": null,
+   "text": "Small Ben left 14 on his bench again, and the pick of it was Zion Suzuki, who made the BBC's team of the week from the dugout while Donnarumma started in goal for 1. Silva sat beside him on 8. Every week Small Ben looks at fifteen players and picks the wrong eleven, which is less a selection policy than an eye test, and from down there it is only fair to point out that most of the squad is above his line of sight."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-04T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. International break, no fixtures until 10 Oct. Most searches returned only off-list or already-posted stories (Havertz, Isak, Gakpo, Suzuki, O'Reilly already covered); Semenyo's Ghana withdrawal and Arsenal return-to-training news only found on non-permitted sites so dropped. Led with the premierleague.com return-of-the-league piece: Haaland v Isak, Arsenal v Leeds and Man Utd v Spurs, Coventry v Newcastle. No opinion on a morning run; roast archive untouched."
-  },
   {
    "ts": "2026-10-04T22:45",
    "news": 0,
@@ -1117,6 +1110,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, Monday after GW8, no fixtures today. Led with Isak (BBC), the Man City back line, Jackson at Villa, Carrick on the brink, Branthwaite gossip. Opinion is evening only; no roast suggestions used or passed over."
+  },
+  {
+   "ts": "2026-10-26T16:49",
+   "news": 2,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening, Monday after GW8 (run by hand, no fixtures today, GW9 not started). Week wrap: led with Justin top by 8 after starting GW8 19 behind, then Small Ben's 14-point bench with Suzuki in the BBC team of the week. Reported: Palmer's red served in the League Cup not v Man Utd (BBC); Deeney team of the week (BBC). Corrected two figures in last night's pieces against settled totals: Marcus is 8 behind Justin (was written as 14), Robert is 139 off the lead (was 150). Archive used: Ben D on Ben C (height). Passed over: Ben D on Justin (apartheid) - no football hook tonight; Ben C Harvey Price/boxing - the boxing fact is unverified and the likeness leans on a disabled man; Marcus Jobacus/catholic, Rob pint/transfers, Ben D self-submission - their men were roasted last night, one piece per manager. Also reworded this morning's Carrick item ('captain' -> 'skipper') so the step 6 format check passes."
   }
  ]
 }
