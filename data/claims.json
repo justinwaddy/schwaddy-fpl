@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-25T21:06 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Evening sweep (18 searches) re-confirmed Brobbey's injury via Sky Sports and Sunderland's own reporting on last Thursday's Netherlands 1-1 Germany draw - Xavi Hernandez has confirmed he is injured and back on Wearside, but neither Sunderland nor any permitted outlet has given a diagnosis or return date yet, so claim 3 holds at low confidence rather than moving either way. Stach reconfirmed fit via Sky Sports' own recent Forest match report (matchwinner with a late free-kick), no ankle issue. Gross's 'ruled out by Fabian Hurzeler' story resurfaced again in search results and was discarded again - contradicted by his own goal and start against Arsenal on the 19th, with nothing from a permitted outlet since. Tzolakis and Truffert both reconfirmed fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
       "ts": "2026-09-26T08:07 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change: research surfaced no permitted-outlet news; claims carried forward."
+    },
+    {
+      "ts": "2026-10-26T08:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change: no new permitted-source news affecting the claims; carried forward."
     }
   ]
 }
