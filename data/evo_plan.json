@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T13:21",
+ "generated": "2026-10-26T08:35",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -17,7 +17,7 @@
  "window": "waiver",
  "waivers_time": "2026-10-30T11:00:00Z",
  "deadline": "2026-10-31T11:00:00Z",
- "formation": "5-3-2",
+ "formation": "5-4-1",
  "xi": [
   {
    "id": 1,
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.97,
-   "ep": 4.88,
+   "ep": 4.89,
    "votes": 4
   },
   {
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 4.08,
-   "ep": 4.11,
+   "ep": 4.1,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.746,
    "base": 3.38,
-   "ep": 3.23,
+   "ep": 3.24,
    "votes": 5
   },
   {
@@ -94,8 +94,8 @@
    "news": "",
    "p_play": 0.938,
    "base": 3.02,
-   "ep": 2.83,
-   "votes": 4
+   "ep": 2.85,
+   "votes": 2
   },
   {
    "id": 68,
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.924,
    "base": 5.18,
-   "ep": 5.17,
+   "ep": 5.15,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 4.18,
-   "ep": 4.11,
+   "ep": 4.12,
    "votes": 5
   },
   {
@@ -137,6 +137,19 @@
    "votes": 5
   },
   {
+   "id": 335,
+   "code": 466525,
+   "name": "Stach",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.996,
+   "base": 3.72,
+   "ep": 3.63,
+   "votes": 5
+  },
+  {
    "id": 411,
    "code": 223094,
    "name": "Haaland",
@@ -146,21 +159,8 @@
    "news": "",
    "p_play": 0.985,
    "base": 7.34,
-   "ep": 7.73,
+   "ep": 7.69,
    "votes": 5
-  },
-  {
-   "id": 401,
-   "code": 438234,
-   "name": "Marmoush",
-   "pos": "FWD",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 0.756,
-   "base": 2.43,
-   "ep": 2.37,
-   "votes": 4
   }
  ],
  "bench": [
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.27,
-   "ep": 4.17,
+   "ep": 4.18,
    "votes": 1
   },
   {
@@ -183,25 +183,25 @@
    "name": "Brobbey",
    "pos": "FWD",
    "team": "SUN",
-   "status": "d",
-   "news": "Hamstring injury - 75% chance of playing",
-   "p_play": 0.516,
-   "base": 2.08,
-   "ep": 1.97,
+   "status": "a",
+   "news": "",
+   "p_play": 0.688,
+   "base": 2.77,
+   "ep": 2.77,
    "votes": 1
   },
   {
-   "id": 335,
-   "code": 466525,
-   "name": "Stach",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "d",
-   "news": "Foot injury - 50% chance of playing",
-   "p_play": 0.498,
-   "base": 1.86,
-   "ep": 1.82,
-   "votes": 1
+   "id": 401,
+   "code": 438234,
+   "name": "Marmoush",
+   "pos": "FWD",
+   "team": "TOT",
+   "status": "a",
+   "news": "",
+   "p_play": 0.756,
+   "base": 2.43,
+   "ep": 2.37,
+   "votes": 2
   },
   {
    "id": 628,
@@ -213,50 +213,18 @@
    "news": "",
    "p_play": 0.615,
    "base": 1.52,
-   "ep": 1.49,
+   "ep": 1.48,
    "votes": 1
   }
  ],
- "xi_ep": 45.1,
- "changes": 4,
+ "xi_ep": 46.3,
+ "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 8.24,
+   "gain": 7.81,
    "change": 1,
    "fallback": false,
-   "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
-    "pos": "MID",
-    "team": "BOU",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.615,
-    "base": null,
-    "ep": null
-   },
-   "votes": 5,
-   "borda": 236
-  },
-  {
-   "pos": "MID",
-   "gain": 8.6,
-   "change": 1,
-   "fallback": true,
    "add": {
     "id": 15,
     "code": 184029,
@@ -282,11 +250,43 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 230
+   "borda": 171
   },
   {
    "pos": "MID",
-   "gain": 8.26,
+   "gain": 8.1,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
+    "pos": "MID",
+    "team": "BOU",
+    "status": "a",
+    "news": "",
+    "p_play": 0.976,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.615,
+    "base": null,
+    "ep": null
+   },
+   "votes": 4,
+   "borda": 138
+  },
+  {
+   "pos": "MID",
+   "gain": 6.76,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 183
+   "borda": 126
   },
   {
    "pos": "MID",
-   "gain": 7.3,
+   "gain": 5.7,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,140 +346,12 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 166
-  },
-  {
-   "pos": "MID",
-   "gain": 5.81,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 15,
-    "code": 184029,
-    "name": "\u00d8degaard",
-    "pos": "MID",
-    "team": "ARS",
-    "status": "a",
-    "news": "",
-    "p_play": 0.9,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "d",
-    "news": "Foot injury - 50% chance of playing",
-    "p_play": 0.498,
-    "base": null,
-    "ep": null
-   },
-   "votes": 4,
-   "borda": 99
-  },
-  {
-   "pos": "MID",
-   "gain": 7.7,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 542,
-    "code": 484420,
-    "name": "E.Le F\u00e9e",
-    "pos": "MID",
-    "team": "SUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.97,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "d",
-    "news": "Foot injury - 50% chance of playing",
-    "p_play": 0.498,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 57
-  },
-  {
-   "pos": "MID",
-   "gain": 7.34,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.918,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "d",
-    "news": "Foot injury - 50% chance of playing",
-    "p_play": 0.498,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 53
-  },
-  {
-   "pos": "MID",
-   "gain": 5.23,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.825,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "d",
-    "news": "Foot injury - 50% chance of playing",
-    "p_play": 0.498,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 43
+   "borda": 116
   },
   {
    "pos": "DEF",
-   "gain": 7.72,
-   "change": 3,
+   "gain": 5.88,
+   "change": 2,
    "fallback": false,
    "add": {
     "id": 112,
@@ -494,51 +366,51 @@
     "ep": null
    },
    "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
     "pos": "DEF",
-    "team": "BHA",
+    "team": "LEE",
     "status": "a",
     "news": "",
-    "p_play": 0.938,
+    "p_play": 0.879,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 77
+   "borda": 86
   },
   {
-   "pos": "FWD",
-   "gain": 5.53,
-   "change": 4,
+   "pos": "MID",
+   "gain": 4.16,
+   "change": 3,
    "fallback": false,
    "add": {
-    "id": 295,
-    "code": 169432,
-    "name": "McBurnie",
-    "pos": "FWD",
-    "team": "HUL",
+    "id": 67,
+    "code": 499604,
+    "name": "Rayan",
+    "pos": "MID",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.988,
+    "p_play": 0.976,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 552,
-    "code": 441264,
-    "name": "Brobbey",
-    "pos": "FWD",
-    "team": "SUN",
-    "status": "d",
-    "news": "Hamstring injury - 75% chance of playing",
-    "p_play": 0.516,
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
+    "pos": "MID",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.996,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 24
+   "borda": 46
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -604,7 +476,7 @@
    "news": "",
    "p_play": 0.879,
    "base": 195.59,
-   "ep": 194.83
+   "ep": 194.72
   },
   {
    "id": 106,
@@ -652,7 +524,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.13,
-   "ep": 165.9
+   "ep": 165.96
   },
   {
    "id": 387,
@@ -676,7 +548,7 @@
    "news": "",
    "p_play": 0.371,
    "base": 176.92,
-   "ep": 164.58
+   "ep": 165.9
   },
   {
    "id": 40,
@@ -688,7 +560,7 @@
    "news": "",
    "p_play": 0.973,
    "base": 176.41,
-   "ep": 163.71
+   "ep": 164.03
   },
   {
    "id": 428,
@@ -700,19 +572,7 @@
    "news": "",
    "p_play": 0.829,
    "base": 155.76,
-   "ep": 158.31
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.947,
-   "base": 168.23,
-   "ep": 161.46
+   "ep": 158.37
   },
   {
    "id": 388,
@@ -725,6 +585,18 @@
    "p_play": 1.0,
    "base": 179.79,
    "ep": 173.03
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.947,
+   "base": 168.23,
+   "ep": 161.56
   },
   {
    "id": 12,
@@ -787,18 +659,6 @@
    "ep": 149.55
   },
   {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 159.15,
-   "ep": 146.85
-  },
-  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -809,6 +669,18 @@
    "p_play": 0.0,
    "base": 150.41,
    "ep": 143.78
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 159.15,
+   "ep": 146.41
   },
   {
    "id": 201,
@@ -840,9 +712,9 @@
    "name": "Calvert-Lewin",
    "pos": "FWD",
    "team": "LEE",
-   "status": "d",
-   "news": "Foot injury - 50% chance of playing",
-   "p_play": 0.479,
+   "status": "a",
+   "news": "",
+   "p_play": 0.958,
    "base": 148.27,
    "ep": 142.06
   },
@@ -856,7 +728,7 @@
    "news": "",
    "p_play": 0.679,
    "base": 148.36,
-   "ep": 145.4
+   "ep": 145.47
   },
   {
    "id": 8,
@@ -880,7 +752,7 @@
    "news": "",
    "p_play": 0.649,
    "base": 139.2,
-   "ep": 132.9
+   "ep": 132.94
   },
   {
    "id": 61,
@@ -912,11 +784,11 @@
    "name": "Wirtz",
    "pos": "MID",
    "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.902,
+   "status": "d",
+   "news": "Ankle injury - 75% chance of playing",
+   "p_play": 0.676,
    "base": 136.81,
-   "ep": 132.13
+   "ep": 131.97
   },
   {
    "id": 398,
@@ -928,7 +800,7 @@
    "news": "",
    "p_play": 0.545,
    "base": 140.35,
-   "ep": 136.64
+   "ep": 136.94
   },
   {
    "id": 208,
@@ -940,19 +812,7 @@
    "news": "",
    "p_play": 0.17,
    "base": 140.15,
-   "ep": 128.48
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.846,
-   "base": 135.96,
-   "ep": 133.96
+   "ep": 127.83
   },
   {
    "id": 154,
@@ -991,6 +851,18 @@
    "ep": 142.64
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.846,
+   "base": 135.96,
+   "ep": 133.02
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1003,18 +875,6 @@
    "ep": 127.48
   },
   {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.489,
-   "base": 140.22,
-   "ep": 128.16
-  },
-  {
    "id": 95,
    "code": 533463,
    "name": "O.Dango",
@@ -1024,7 +884,19 @@
    "news": "",
    "p_play": 0.483,
    "base": 147.81,
-   "ep": 125.9
+   "ep": 126.38
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.489,
+   "base": 140.22,
+   "ep": 127.85
   }
  ]
 }
