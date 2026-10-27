@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-27T21:11 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Kevin Schade's September Player of the Month nomination (brentfordfc.com) adds to Bogle's and Gross's from this morning - all three fit and undisturbed, so no claim moves on it. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Coventry, Ipswich), ~20 searches. A 'Brobbey out 2-4 weeks, injured against Fulham' result contradicted the established Netherlands-Germany hamstring story and could not be verified at safc.com or any permitted outlet, so not used - claim 3 unchanged at low confidence. Discarded as stale on direct check: Gvardiol 'broken leg, out for the season' (last season's January-May injury, long recovered), Tavernier and Bogle 'injury' stories (old leedsunited.com/afcb.co.uk pieces from last season or before, contradicted by this year's own minutes and today's Bogle nomination). Truffert's full 90 and clean sheet on his France debut only reached non-permitted outlets, so held rather than published, though it reinforces his fitness. Emersonn's two goals in his last two Ipswich starts are real (ESPN) but both games are over a week old, so not fresh enough to publish. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
       "ts": "2026-09-28T08:20 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change; no new permitted-source news, claims carried forward."
+    },
+    {
+      "ts": "2026-10-27T21:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change; no new dated permitted-source news, claims carried forward."
     }
   ]
 }

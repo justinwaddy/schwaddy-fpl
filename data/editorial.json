@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-27T21:11 UTC",
-      "published": 1,
-      "note": "Second run today, ~12.5 hours after this morning's 08:35 sweep, still inside the international break (GW6 fixtures resume 10 October, waivers close 9 October). Club-by-club pass on every squad club (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus free-agent shortlist clubs (Sunderland, Coventry, Ipswich) and general PL/rival sweeps, about 20 searches. Led with brentfordfc.com's own confirmation that Kevin Schade is nominated for September's Player of the Month (two goals in three unbeaten games), a third of Justin's/his targets' players up for the award this month alongside Bogle and Gross. Chased down and discarded several leads that read as fresh but traced to stale or superseded stories on direct fetch: a 'Gvardiol expected to miss the rest of the season with a broken leg' result is last season's January-to-May injury, long since recovered (mancity.com's own reporting has him scoring and assisting again this month); a Tavernier hamstring story traces to an afcb.co.uk piece dated January 2026 and is contradicted by ESPN's own player stats showing him playing 75 minutes in the 20 September Liverpool game; a Bogle 'foot injury, just a bruise' story and a Stach 'ankle injury' story both trace to old leedsunited.com pieces (last season and pre-season respectively), contradicted by today's own Bogle Player of the Month nomination and Stach's ever-present league minutes this season. A 'Brobbey out 2-4 weeks, injured against Fulham' result does not match the established Netherlands-Germany hamstring story and could not be verified at safc.com or any permitted outlet, so not used - claim 3 stays at low confidence with no firmer timeline than already on file. Also checked: Truffert played the full 90 and kept a clean sheet on his France debut in Zidane's first game in charge (reported only via non-permitted outlets so not published, though it reinforces his fitness case); Emersonn's Ipswich form (2 goals in his last two starts, confirmed via ESPN) is real but both games are more than a week old, so held rather than published as news; Alex Scott an unused England substitute against Spain, no fitness concern; Coventry's four free-agent shortlist names (Rushworth, Thomas, Dasilva, Thomas-Asante) are untouched by the club's current injury list. Nothing else moved. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
       "ts": "2026-09-28T08:20 UTC",
       "published": 0,
       "note": "Morning sweep ~11 hours after last night's 21:11 run, still inside the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland, Coventry, Fulham, Nottingham Forest) plus today's international-duty injuries, ~25 searches. Nothing cleared the bar. A 'Tavernier hamstring, out at Brighton' story recurred again and was traced directly to afcb.co.uk's own URL date (23 January 2026, last season, a Liverpool-fixture piece) - stale, discarded again. Brobbey's return timeline is now actively contradictory across search results (2-4 weeks vs 6-8 weeks, neither traceable to safc.com or a permitted outlet's own reporting of a Le Bris quote), so still no usable diagnosis - claim 3 stays as is. A Lewis-Potter 'lost his starting spot to Aaron Hickey' item could not be confirmed at brentfordfc.com, Sky Sports, the Guardian or the BBC and is not used. Everything else reconfirmed unchanged: Pickford, Raya, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Bogle, Stach, Scott, Schade, Tavernier, Strand Larsen and Marmoush."
@@ -621,6 +616,11 @@
       "ts": "2026-10-27T08:15 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-27T21:10 UTC",
+      "published": 0,
+      "note": "Evening check. Searches returned only undated or older permitted-source items (Matchweek 8 previews, Carabao Cup notes); nothing new on his squad or claims. Not in starters window. Nothing published."
     }
   ]
 }
