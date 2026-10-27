@@ -1,46 +1,6 @@
 {
- "generated": "2026-10-26T22:50 UTC",
+ "generated": "2026-10-27T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-18-brentford-liverpool",
-   "ts": "2026-10-18T07:55",
-   "kind": "news",
-   "text": "Liverpool came from behind to win 2-1 at Brentford once Yehor Yarmolyuk was sent off for a headbutt on Jacquet, with Isak scoring the 70th-minute winner from Barcola's header, the Guardian reports. That is Small Ben's Isak and Justin's Barcola on the same goal, and Big Ben's Wirtz supplied the pass for Munoz's equaliser. Small Ben also lost Szoboszlai to injury in the first half, and Brentford ended with nine after Janelt's second yellow, which Big Ben (Kelleher, Ajer) and Justin (Lewis-Potter, Schade) will be reading with interest.",
-   "source": {
-    "title": "Isak completes Liverpool's comeback win as Brentford finish with nine",
-    "url": "https://www.theguardian.com/football/2026/oct/17/brentford-liverpool-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-18-villa-newcastle",
-   "ts": "2026-10-18T07:55",
-   "kind": "news",
-   "text": "Johan Manzambi headed Aston Villa in front on 36 minutes at Newcastle, ghosting away from Thiaw to meet Joao Gomes's cross, and that was the only goal, the Guardian reports. It was Edward's Manzambi doing it to Edward's own goalkeeper Hornicek, who was also bailed out when a Buendia shot hit the post and deflected off his back before Small Ben's Hall cleared; the report calls Hall Newcastle's best player again.",
-   "source": {
-    "title": "Manzambi maintains Aston Villa progress with win to seal dismal week for Newcastle",
-    "url": "https://www.theguardian.com/football/2026/oct/17/newcastle-aston-villa-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-18-everton-pickford",
-   "ts": "2026-10-18T07:55",
-   "kind": "news",
-   "text": "Everton lost for the first time this season, and Justin's Pickford was unconvincing for a second week running: Neto scored 44 seconds after the restart, beating Pickford low to his left with a shot the Guardian calls a weak attempt to save, the ball having taken a touch off Edward's Tarkowski on the way. Big Ben's Rogers survived a second-yellow challenge on Garner just before half-time for Chelsea.",
-   "source": {
-    "title": "Neto double at Everton leads Chelsea to victory marred by Martinez head injury",
-    "url": "https://www.theguardian.com/football/2026/oct/17/everton-chelsea-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-18-xi-1300",
-   "ts": "2026-10-18T12:08",
-   "kind": "news",
-   "text": "Team news, 13:00 UTC kick-offs: Crystal Palace's confirmed eleven is out and Mateta (Robert) is on the bench, not starting at Brighton. Teamsheets for Bournemouth v Sunderland, Brighton and Leeds v Man Utd were not available at a permitted source, so Tavernier, Truffert, Silva, Evanilson, Brobbey, Roefs, Mukiele, Vuskovic, Gross, Kadioglu, De Cuyper, Kostoulas, Bogle, Stach, Calvert-Lewin, Trafford, Wilson, Fernandes, Yoro, Seško, Cunha and Mbeumo are not counted.",
-   "source": {
-    "title": "Team news: Sage makes three changes; Mateta returns",
-    "url": "https://www.cpfc.co.uk/news/first-team/team-news-brighton-palace-sage-names-xi/"
-   }
-  },
   {
    "id": "2026-10-18-delap-dance",
    "ts": "2026-10-18T12:39",
@@ -692,23 +652,49 @@
    "kind": "opinion",
    "text": "Robert's bench scored nothing at all, Saka and James and the others, which makes it the only part of the squad that is consistent with the rest of it. He is 139 off the lead and the league still cannot tell whether the plan is patience or whether somebody has forgotten his password. The hairline retreats at a similar pace and with the same lack of resistance.",
    "source": null
+  },
+  {
+   "id": "2026-10-27-konsa-arsenal",
+   "ts": "2026-10-27T07:55",
+   "kind": "news",
+   "text": "Ezri Konsa has not just replaced the injured William Saliba at Arsenal, he has Arsenal conceding the fewest goals in the league, and the BBC's piece on him lands the day after he scored his first goal for the club against Everton. It is Big Ben's best outcome of the lot: Konsa was the 14 in his eleven last weekend, and the pair of him and Gabriel, who is Robert's, is now being talked about as the best partnership in the world.",
+   "source": {
+    "title": "BBC Sport: No Saliba, no problem - Konsa stepping up for Arsenal",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw5ynr87jdr0o"
+   }
+  },
+  {
+   "id": "2026-10-27-carrick-successor",
+   "ts": "2026-10-27T07:55",
+   "kind": "news",
+   "text": "Michael Carrick left Manchester United's training ground at about 5pm on Monday after talks over his future, and BBC Sport says Eddie Howe and Julian Nagelsmann are the early names on the list if he is sacked, with Antonio Conte interested too. For this league it is a lot of cargo: Marcus has Mbeumo, Small Ben has Cunha, Big Ben has Fernandes and Robert has Yoro and Sesko.",
+   "source": {
+    "title": "BBC Sport: Howe and Nagelsmann high on Man Utd's list if Carrick sacked",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqdr8zv5dg42o"
+   }
+  },
+  {
+   "id": "2026-10-27-spurs-revival",
+   "ts": "2026-10-27T07:55",
+   "kind": "news",
+   "text": "Spurs beat Chelsea 2-0 on Saturday to go 12th, their highest league position since 2 January, and Roberto de Zerbi puts it down to a players-only meeting where they 'removed the masks'. James Maddison went off injured and is a question mark for the next few weeks. Spurs players on league rosters: Marmoush for Justin, Kinsky for Marcus, Solanke for Robert.",
+   "source": {
+    "title": "BBC Sport: The candid meeting that 'changed' Spurs - are they finally on way back?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqev38dz34vxo"
+   }
+  },
+  {
+   "id": "2026-10-27-vuskovic-gossip",
+   "ts": "2026-10-27T07:55",
+   "kind": "news",
+   "text": "Gossip, not confirmed: the BBC's Tuesday column says Brighton's 19-year-old centre-back Luka Vuskovic is drawing interest from Liverpool, Real Madrid and Barcelona, with the claim credited to Teamtalk. Vuskovic is Justin's, and nothing about a January move changes what he does for Brighton this month.",
+   "source": {
+    "title": "BBC Sport: Arsenal eye Monza striker Varela - Tuesday's gossip",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cj3vq7l22yk9o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-04T22:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening, international break, no fixtures today and all ten GW6 fixtures still to come, so no points-based pieces and no flops to rewrite. No reported items: nothing new worth citing since the morning run. One opinion on the leader owning neither Haaland nor Isak. Both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb) passed over and left unused: one is a slur, the other is aimed at race/politics, neither is publishable."
-  },
-  {
-   "ts": "2026-10-05T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with the international-break injury scares: Haaland, Isak/Gakpo, Havertz. Roast archive: both unused suggestions passed over (slur/sexuality-and-race territory); no opinion on a morning run anyway."
-  },
   {
    "ts": "2026-10-05T22:50",
    "news": 2,
@@ -1121,6 +1107,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, Monday after GW8, no fixtures today, GW9 not started (live feed all zeros, so nothing depends on today's points; quoted settled GW8 figures). No new reported items: WebSearch refused bbc/guardian domains and two news rounds already ran today. Opinion: Marcus (28, Kinsky on bench, luck line + kneejerk submission), Big Ben (Bruno on bench alongside Carrick's decision, Trafford 10 on bench; archive Bruno line), Robert (empty bench, no-transfers/hairline submissions). No FLOP lines today, so no reflop. Passed over: Ben D on Justin (apartheid), no football hook; Ben C Harvey Price/boxing, boxing fact unverified; Marcus Jobacus/catholic/gifting, no hook tonight; Ben D self-submission; Justin pint line, no verifiable hook."
+  },
+  {
+   "ts": "2026-10-27T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Konsa at Arsenal (Big Ben), then the Carrick succession shortlist, the Spurs revival and a flagged Vuskovic rumour. No opinion on a morning run. Roast archive untouched; nothing passed over, nothing used."
   }
  ]
 }
