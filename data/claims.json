@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-27T08:35 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change to which five claims are made or their order. Bogle and Gross both nominated for the Premier League's own September Player of the Month award (premierleague.com) - reinforcing claim 5's case for keeping Bogle over Truffert and claim 1's Gross-for-Barcola swap. Full club-by-club sweep across all 11 squad clubs plus free-agent shortlist clubs (Sunderland, Brighton, Leeds, Bournemouth, Hull), ~30 searches plus direct-fetch verification on a dozen pages. Several leads chased and discarded once read in full: an arsenal.com 'Raya thigh issue, doubtful for Leicester' story dated 27 Sep 2024 (two years stale, same calendar date); a Sky Sports 'Guardiola unsure when Haaland will return' story dated 28 Feb 2026, before this season's transfer window even opened; a brentfordfc.com 'Lewis-Potter out two months, knee injury' story dated 9 Mar 2023 from the Thomas Frank era; the same outlet's Schade adductor-surgery story, also Thomas Frank-era, already flagged stale on 24 September. Brobbey's availability dropped from 0.90 to 0.68 in the model's own numbers this week as its news field picked up the hamstring doubt, but no permitted outlet has published a diagnosis or timeline, so claim 3 stays at low confidence. Everything else reconfirmed unchanged: Pickford, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Stach, Scott, Schade, Tavernier and Truffert all fit and undisturbed. League position unchanged: Justin 2nd of 6 on 252 points, 5th of 6 in the reversed GW6 waiver order."
-    },
-    {
       "ts": "2026-09-27T21:11 UTC",
       "gw": 6,
       "claims": 5,
@@ -1178,6 +1172,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change: no new dated permitted-source news affecting the claims; carried forward."
+    },
+    {
+      "ts": "2026-10-27T08:15 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change; no new permitted-source news, claims carried forward."
     }
   ]
 }
