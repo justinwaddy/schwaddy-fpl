@@ -1,34 +1,6 @@
 {
- "generated": "2026-10-27T07:55 UTC",
+ "generated": "2026-10-27T22:50 UTC",
  "items": [
-  {
-   "id": "2026-10-18-delap-dance",
-   "ts": "2026-10-18T12:39",
-   "kind": "opinion",
-   "source": null,
-   "text": "Small Ben named his team Delap Dance and owns nobody called Delap: that Delap is Big Ben's, in the last slot of his squad, on 0. What Small Ben does own is Isak, who scored Liverpool's 70th-minute winner at Brentford and then took his 9 points to the bench, where Suzuki was already sitting on 8. Those two have 17 between them. The eleven Small Ben actually picked has 12, with five of them still to play."
-  },
-  {
-   "id": "2026-10-18-marcus-foden",
-   "ts": "2026-10-18T12:39",
-   "kind": "opinion",
-   "source": null,
-   "text": "Marcus leads by 13 on a day when his eleven has 9 points and his bench has 10, because Foden's 9 for Man City are sitting in a bench slot while Becker, Dewsbury-Hall, King and Joao Pedro are on 2 each. Six of his eleven have not kicked off, so he has not wrecked anything yet. But a man in front of the whole league with his best player of the day on the bench is the nearest thing to proof that it is luck."
-  },
-  {
-   "id": "2026-10-18-justin-sixty",
-   "ts": "2026-10-18T22:43",
-   "kind": "opinion",
-   "text": "Justin had the biggest gameweek of the six, 60 to Marcus's 56, and it cut the gap to the top from 36 to 32. Haaland 13, Vuskovic 11, Tavernier 10, Raya 9 and Lewis-Potter 9 is 52 of it. Marcus got 12 each from Kostoulas and Evanilson and has nobody left to play, so Justin's only road is two of his eleven and Tottenham v Coventry at 19:00. Everybody else lost ground to Marcus too: Edward started the weekend 28 behind and is 41 behind.",
-   "source": null
-  },
-  {
-   "id": "2026-10-18-big-ben-same-game",
-   "ts": "2026-10-18T22:43",
-   "kind": "opinion",
-   "text": "Big Ben owned Havertz and Delap, so he had a man on each side of Forest v Arsenal and took 4 points off 155 minutes of them. Konsa's 9 kept it respectable, and he is still 91 behind Marcus after starting the weekend 72 back. The league calls him an Arsenal fan with no ball knowledge to speak of, and picking both strikers from the one game for 2 points each is at least consistent.",
-   "source": null
-  },
   {
    "id": "2026-10-18-robert-150",
    "ts": "2026-10-18T22:43",
@@ -692,16 +664,37 @@
     "title": "BBC Sport: Arsenal eye Monza striker Varela - Tuesday's gossip",
     "url": "https://www.bbc.co.uk/sport/football/articles/cj3vq7l22yk9o"
    }
+  },
+  {
+   "id": "2026-10-27-justin-brighton-defence",
+   "ts": "2026-10-27T22:50",
+   "kind": "opinion",
+   "text": "Justin leads by 8 and has built it on a back line that has been busy making a point of its own: Gvardiol, Vuskovic and Boscagli returned 1 between them last week, and next they get to meet, because Manchester City host Brighton in GW9 and the leader has put his own defenders on both sides of the same corner. He is top of the table and he has arranged to be marking himself.",
+   "source": null
+  },
+  {
+   "id": "2026-10-27-robert-both-sides",
+   "ts": "2026-10-27T22:50",
+   "kind": "opinion",
+   "text": "Robert has Martinez, Estevao and James at Chelsea and Yoro and Sesko at Manchester United, so in GW9 he gets to watch his own team play itself and, going by form, find a way to lose both halves. He is 139 off the lead and has never finished anything he started, ask the pint.",
+   "source": null
+  },
+  {
+   "id": "2026-10-27-bend-no-tzolis",
+   "ts": "2026-10-27T22:50",
+   "kind": "opinion",
+   "text": "Quantum of Tzolis is the name on Big Ben's team sheet, and the only Tzolis in the whole league is in Marcus's squad, where he returned 0 last week. The man who keeps telling everyone about his ball knowledge named his side after a player he could not be bothered to pick up, and sits 89 behind with an Arsenal pair for company.",
+   "source": null
+  },
+  {
+   "id": "2026-10-27-marcus-pedro-thigh",
+   "ts": "2026-10-27T22:50",
+   "kind": "opinion",
+   "text": "Joao Pedro has a thigh injury and no return date, which is the first thing in months that Marcus's luck has not been able to do anything about. He returned 0 last week while healthy, so the injury is mostly a formality, and the man leaning on fortune every week is now 8 behind with a forward line that has taken the hint and gone home.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-05T22:50",
-   "news": 2,
-   "opinion": 3,
-   "matchday": false,
-   "note": "evening wrap, no fixtures today (international break, GW6 starts Saturday). Led with Scott quad/Konsa and O'Reilly/Saka from the PL internationals round-up. No flops to rewrite. Both unused roast suggestions passed over: one is a slur aimed at the submitter, the other is aimed at race; neither used."
-  },
   {
    "ts": "2026-10-06T07:50",
    "news": 2,
@@ -1114,6 +1107,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Konsa at Arsenal (Big Ben), then the Carrick succession shortlist, the Spurs revival and a flagged Vuskovic rumour. No opinion on a morning run. Roast archive untouched; nothing passed over, nothing used."
+  },
+  {
+   "ts": "2026-10-27T22:50",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening wrap on a non-matchday (GW8 closed, GW9 yet to kick off). No reported items: searches turned up nothing at a permitted outlet beyond what this morning already carried. Four roasts off the final GW8 figures and GW9 fixtures: Justin's Brighton/City defenders, Robert owning both sides of Chelsea v United, Big Ben's team name vs Tzolis on Marcus's squad, Marcus's Joao Pedro injury. Used archive: Robert pint (2026-09-12-b4e9e2f836), Ben D ball knowledge (2026-09-04-1594fc4a80), Marcus luck (2026-09-04-b2deb0fb2d). Passed over, waiting on a hook: hairline/height lines and the Ben D/Justin personal submissions - nothing wrong with them, the day just gave no hook. No flop lines today."
   }
  ]
 }
