@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-28T08:20 UTC",
-      "published": 0,
-      "note": "Morning sweep ~11 hours after last night's 21:11 run, still inside the international break (GW6 fixtures resume 10 October, waivers close 9 October). Full club-by-club sweep (Everton, Arsenal, Leeds, Hull, Tottenham, Brighton, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Sunderland, Coventry, Fulham, Nottingham Forest) plus today's international-duty injuries, ~25 searches. Nothing cleared the bar. A 'Tavernier hamstring, out at Brighton' story recurred again and was traced directly to afcb.co.uk's own URL date (23 January 2026, last season, a Liverpool-fixture piece) - stale, discarded again. Brobbey's return timeline is now actively contradictory across search results (2-4 weeks vs 6-8 weeks, neither traceable to safc.com or a permitted outlet's own reporting of a Le Bris quote), so still no usable diagnosis - claim 3 stays as is. A Lewis-Potter 'lost his starting spot to Aaron Hickey' item could not be confirmed at brentfordfc.com, Sky Sports, the Guardian or the BBC and is not used. Everything else reconfirmed unchanged: Pickford, Raya, Ajayi, Van Hecke, Vuskovic, Gvardiol, Haaland, Barcola, Bogle, Stach, Scott, Schade, Tavernier, Strand Larsen and Marmoush."
-    },
-    {
       "ts": "2026-09-28T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 resumes 10 October, waivers close 9 October). Searched premierleague.com and Sky Sports injury round-ups and Barcola team news. Only new items were Isak (Liverpool) and Havertz injuries on international duty, neither on Justin's squad or the claims board, and Brobbey's hamstring remains without a permitted-outlet diagnosis. Nothing material; claims unchanged."
@@ -621,6 +616,11 @@
       "ts": "2026-10-27T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches returned only undated or older permitted-source items (Matchweek 8 previews, Carabao Cup notes); nothing new on his squad or claims. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-28T08:15 UTC",
+      "published": 0,
+      "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
     }
   ]
 }
