@@ -1,46 +1,6 @@
 {
- "generated": "2026-10-28T07:55 UTC",
+ "generated": "2026-10-28T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-19-brighton-palace",
-   "ts": "2026-10-19T07:55",
-   "kind": "news",
-   "text": "Brighton beat Crystal Palace 5-0 and Marcus had two in it: Kostoulas scored the fourth after setting up Ayari for the third, the Guardian reports. Big Ben's Gross started it all, his free-kick headed past Benitez by Palace's own Canvot inside the first ten minutes, and Diego Gomez's 51-metre strike made it 2-0 before Palace were three down. Pierre Sage said his feeling after the game was shame, and the report notes two of his predecessors lost their jobs not long after losing to Brighton.",
-   "source": {
-    "title": "Gomez halfway-line wondergoal sparks Brighton's 5-0 thrashing of sorry Crystal Palace",
-    "url": "https://www.theguardian.com/football/2026/oct/18/brighton-crystal-palace-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-19-leeds-united",
-   "ts": "2026-10-19T07:55",
-   "kind": "news",
-   "text": "Manchester United's seventh league game brought a seventh point from a draw, Mbeumo's first-half opener cancelled out at Elland Road by Calvert-Lewin, who outmuscled Mbeumo at a corner for his fifth goal in ten Leeds outings, the Guardian reports. That is Edward's striker scoring against Marcus's winger. Bogle's cross and Stach's free-kick, both Justin's, supplied Leeds's best moments, and Big Ben's Bruno Fernandes was booked while playing as a nominal centre-forward in Carrick's 3-4-3.",
-   "source": {
-    "title": "Manchester United held as Calvert-Lewin's Leeds leveller keeps pressure on Carrick",
-    "url": "https://www.theguardian.com/football/2026/oct/18/leeds-manchester-united-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-19-forest-arsenal",
-   "ts": "2026-10-19T07:55",
-   "kind": "news",
-   "text": "Arsenal won 1-0 at Nottingham Forest through Madueke's 80th-minute shot, deflected off Cunha after a pass from Rice, the Guardian reports, and it was Small Ben's Rice who made it. Big Ben had both sides of the late drama: his Delap was a full-throttle presence for Forest, whose manager Glasner is still waiting for a home goal this season, and his Konsa made the thunderous block that denied Delap at the death. Arsenal managed one shot on target all game.",
-   "source": {
-    "title": "Madueke breaks Nottingham Forest's resistance as dogged Arsenal edge to victory",
-    "url": "https://www.theguardian.com/football/2026/oct/18/nottingham-forest-arsenal-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-10-19-xi-1900",
-   "ts": "2026-10-19T18:07",
-   "kind": "news",
-   "text": "Team news, Tottenham v Coventry (19:00 UTC): Justin has Van Hecke and Marmoush both starting. Marcus's Kinsky starts in goal. Robert's Solanke starts. Small Ben's Savio is out injured and not in the matchday squad. Nobody in the league owns a Coventry player.",
-   "source": {
-    "title": "Confirmed line-ups: Spurs vs Coventry",
-    "url": "https://www.tottenhamhotspur.com/news/1179147/confirmed-line-ups-spurs-vs-coventry-premier-league-october-2026"
-   }
-  },
   {
    "id": "2026-10-19-justin-73",
    "ts": "2026-10-19T22:50",
@@ -698,16 +658,37 @@
     "title": "BBC Sport: Wednesday's full gossip column",
     "url": "https://www.bbc.co.uk/sport/football/articles/ck7vpjqyd4pmo"
    }
+  },
+  {
+   "id": "2026-10-28-edward-best-week",
+   "ts": "2026-10-28T22:45",
+   "kind": "opinion",
+   "text": "Edward had the best eleven of the six last week, one point clear of Justin's, with Jackson on 13, Truffert on 10 and Muharemovic on 9, and it moved him nowhere: third on Friday, third tonight, the same distance from the lead as a man gets from a bus he watched leave. The Return of the Djedi has so far been all return and no Jedi.",
+   "source": null
+  },
+  {
+   "id": "2026-10-28-smallben-seventy-five",
+   "ts": "2026-10-28T22:45",
+   "kind": "opinion",
+   "text": "Small Ben has Rice and Madueke both listed at a 75 percent chance of playing for Arsenal, which is the best odds anyone has offered him all season. The best score in his eleven last week came from an Ipswich player, he is 48 off the top, and his chance of winning the league is still the same size as the man himself, which on current form is a generous reading of the chance.",
+   "source": null
+  },
+  {
+   "id": "2026-10-28-robert-saka-treatment",
+   "ts": "2026-10-28T22:45",
+   "kind": "opinion",
+   "text": "Saka is in the treatment room, Saka is in Robert's squad, and Saka will still be in Robert's squad when he comes back, because the last transfer Robert made is a story nobody can date and he does not answer when the group chat asks. It is the only squad in the league that can be summed up in a message that went unread. The hairline, at least, has the decency to move on.",
+   "source": null
+  },
+  {
+   "id": "2026-10-28-bigben-fleetwood",
+   "ts": "2026-10-28T22:45",
+   "kind": "opinion",
+   "text": "Arsenal lost a League Cup tie to Fleetwood on penalties this week, and Big Ben's entire stake in the club is Konsa, who was excellent, and Havertz, who returned 1. Two Arsenal players is a modest return on a lifetime of shouting about them. On Saturday he gets to watch Wirtz play against his own Arsenal, so for once he cannot lose by default.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-06T22:45",
-   "news": 0,
-   "opinion": 1,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW6 not started, so no wrap on hauls. Searches found nothing new at a permitted outlet beyond Isak/Gakpo/Havertz items already posted, so no reported items. Led with the table before GW6. Passed over both unused roast suggestions: one is a homophobic slur and the other an apartheid jibe that is a claim aimed at race, both outside the line. Both left unused. No flops today so reflop not run."
-  },
   {
    "ts": "2026-10-07T07:55",
    "news": 3,
@@ -1120,6 +1101,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, no fixtures. Led with Arsenal's cup exit to Fleetwood and the injured wingers, then Carrick staying for Chelsea, then Sage gossip. Roast archive not used (morning run); nothing passed over."
+  },
+  {
+   "ts": "2026-10-28T22:45",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening wrap on a non-matchday (GW8 closed, GW9 yet to kick off; live feed shows 0 of 10 fixtures started). No reported items: searches for permitted-outlet news today returned nothing usable beyond what this morning already carried. Four roasts off the final GW8 figures: Edward's best-in-league week that moved him nowhere, Small Ben's 75 percent Arsenal pair and height line (hook: 48 off the lead), Robert's injured Saka plus the no-transfers/no-replies/hairline submission, Big Ben's Arsenal loyalty after the Fleetwood exit. Used archive: 2026-09-04-a8bbcabc4b (Ben C height), 2026-09-12-7526d15fa8 (Robert), 2026-09-04-1594fc4a80 (Ben D ball knowledge). Passed over, waiting on a hook: the Ben C boxing/Harvey Price line, Marcus's Jobacus/Spotlight line, the Elanga kneejerk line, and the Ben D/Justin personal submissions - nothing wrong with them, no hook tonight. No flop lines today."
   }
  ]
 }
