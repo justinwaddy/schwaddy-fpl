@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-28T15:25",
+ "generated": "2026-10-28T23:05",
  "gw": 9,
  "horizon": "next5",
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz"
  ],
  "n_models": 1,
  "vote": null,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 4.19,
-   "ep": 5.62
+   "ep": 5.6
   },
   {
    "id": 10,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.778,
    "base": 3.72,
-   "ep": 3.97
+   "ep": 3.96
   },
   {
    "id": 391,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.831,
    "base": 3.88,
-   "ep": 3.93
+   "ep": 3.91
   },
   {
    "id": 504,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 3.24,
-   "ep": 3.48
+   "ep": 3.47
   },
   {
    "id": 68,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.863,
    "base": 3.96,
-   "ep": 4.97
+   "ep": 4.94
   },
   {
    "id": 156,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.919,
    "base": 3.3,
-   "ep": 3.61
+   "ep": 3.6
   },
   {
    "id": 411,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 7.52,
-   "ep": 8.16
+   "ep": 8.15
   },
   {
    "id": 552,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.697,
    "base": 2.66,
-   "ep": 3.22
+   "ep": 3.18
   }
  ],
  "bench": [
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.22,
-   "ep": 4.72
+   "ep": 4.7
   },
   {
    "id": 114,
@@ -195,15 +195,15 @@
    "news": "",
    "p_play": 0.647,
    "base": 1.72,
-   "ep": 2.12
+   "ep": 2.09
   }
  ],
- "xi_ep": 53.5,
+ "xi_ep": 53.3,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 14.69,
+   "gain": 14.91,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.51,
+   "gain": 10.78,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.94,
+   "gain": 10.59,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.51,
+   "gain": 9.97,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.12,
+   "gain": 10.16,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,37 +353,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.49,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 176,
-    "code": 173878,
-    "name": "Dasilva",
-    "pos": "DEF",
-    "team": "COV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.993,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.893,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 6.44,
+   "gain": 6.7,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +383,37 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.26,
+   "gain": 6.68,
+   "change": 2,
+   "fallback": true,
+   "add": {
+    "id": 176,
+    "code": 173878,
+    "name": "Dasilva",
+    "pos": "DEF",
+    "team": "COV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.993,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.893,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 6.35,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.3,
+   "gain": 6.05,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.71,
+   "gain": 5.83,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.28,
+   "gain": 5.21,
    "change": 3,
    "fallback": true,
    "add": {
@@ -533,7 +533,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 5.11,
+   "gain": 5.28,
    "change": 4,
    "fallback": false,
    "add": {
