@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T14:53",
+ "generated": "2026-10-28T08:36",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,7 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.0,
-   "ep": 4.84,
+   "ep": 4.86,
    "votes": 4
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 3.24,
-   "ep": 3.23,
+   "ep": 3.21,
    "votes": 4
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.848,
    "base": 3.63,
-   "ep": 3.6,
+   "ep": 3.61,
    "votes": 5
   },
   {
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.919,
    "base": 3.3,
-   "ep": 3.24,
+   "ep": 3.25,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 7.52,
-   "ep": 7.45,
+   "ep": 7.46,
    "votes": 5
   }
  ],
@@ -200,7 +200,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.29,
+   "ep": 2.28,
    "votes": 2
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.05,
+   "gain": 10.07,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 206
+   "borda": 201
   },
   {
    "pos": "DEF",
-   "gain": 5.92,
+   "gain": 6.02,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 100
+   "borda": 102
   },
   {
    "pos": "DEF",
-   "gain": 5.16,
+   "gain": 5.12,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,22 +314,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 90
+   "borda": 87
   },
   {
    "pos": "DEF",
-   "gain": 4.22,
+   "gain": 5.06,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 358,
-    "code": 544877,
-    "name": "Kerkez",
+    "id": 503,
+    "code": 491279,
+    "name": "Van de Ven",
     "pos": "DEF",
-    "team": "LIV",
+    "team": "TOT",
     "status": "a",
     "news": "",
-    "p_play": 0.92,
+    "p_play": 0.806,
     "base": null,
     "ep": null
    },
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 70
+   "borda": 76
   },
   {
    "pos": "MID",
-   "gain": 7.65,
+   "gain": 7.77,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.25,
+   "gain": 6.35,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 74
+   "borda": 73
   },
   {
    "pos": "MID",
-   "gain": 7.39,
+   "gain": 7.43,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.68,
+   "gain": 6.81,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 51
+   "borda": 50
   },
   {
    "pos": "MID",
-   "gain": 5.47,
+   "gain": 5.22,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.99,
+   "gain": 4.87,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,11 +538,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 49
+   "borda": 48
   },
   {
    "pos": "MID",
-   "gain": 4.74,
+   "gain": 4.54,
    "change": 3,
    "fallback": true,
    "add": {
@@ -569,12 +569,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 45
+   "votes": 2,
+   "borda": 34
   },
   {
    "pos": "MID",
-   "gain": 4.34,
+   "gain": 4.43,
    "change": 3,
    "fallback": true,
    "add": {
@@ -688,9 +688,9 @@
    "name": "Jo\u00e3o Pedro",
    "pos": "FWD",
    "team": "CHE",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.574,
+   "status": "i",
+   "news": "Thigh injury - Unknown return date",
+   "p_play": 0.0,
    "base": 182.73,
    "ep": 185.07
   },
@@ -772,9 +772,9 @@
    "name": "Rice",
    "pos": "MID",
    "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.941,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.706,
    "base": 168.26,
    "ep": 161.49
   },
