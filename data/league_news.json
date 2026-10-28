@@ -1,30 +1,6 @@
 {
- "generated": "2026-10-27T22:50 UTC",
+ "generated": "2026-10-28T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-18-robert-150",
-   "ts": "2026-10-18T22:43",
-   "kind": "opinion",
-   "text": "Robert took 27 from the weekend, 16 of it from Martinez and Gabriel on 8 each, and five of his eleven played and returned nothing. Marcus took 56, so the gap to first went from 121 to 150 in one gameweek. A number like 150 is usually the sort of thing a man mentions in the group chat, and Robert, who has never been known to reply to it, will let it speak for itself.",
-   "source": null
-  },
-  {
-   "id": "2026-10-18-small-ben-city",
-   "ts": "2026-10-18T22:43",
-   "kind": "opinion",
-   "text": "Small Ben owns three Manchester City players and all three returned a point: Donnarumma 1, Ruben 1, Anderson 1. Haaland's 13 went to Justin and Foden's 9 went to Marcus's bench, so the City points were there and he picked up the wrong ones. He has 34 for the gameweek with one of his eleven still to play, and he is 67 behind Marcus after starting 45 back.",
-   "source": null
-  },
-  {
-   "id": "2026-10-19-bournemouth-sunderland",
-   "ts": "2026-10-19T07:55",
-   "kind": "news",
-   "text": "Evanilson had a hand in both Bournemouth goals against Sunderland: he squared for Tavernier to head the first rather than shoot, then won the red card when Danso fouled him in the 17th minute, then sat Roefs down for the second, the Guardian reports. Marcus has the man who did it, Justin has the header, and Robert has the goalkeeper. Brobbey, Justin's, was left out of the Sunderland squad altogether, Le Bris saying they decided not to rush the process after his injury on international duty.",
-   "source": {
-    "title": "Evanilson swivels his hips to seal Bournemouth win against 10-man Sunderland",
-    "url": "https://www.theguardian.com/football/2026/oct/18/bournemouth-sunderland-premier-league-match-report"
-   }
-  },
   {
    "id": "2026-10-19-brighton-palace",
    "ts": "2026-10-19T07:55",
@@ -692,16 +668,39 @@
    "kind": "opinion",
    "text": "Joao Pedro has a thigh injury and no return date, which is the first thing in months that Marcus's luck has not been able to do anything about. He returned 0 last week while healthy, so the injury is mostly a formality, and the man leaning on fortune every week is now 8 behind with a forward line that has taken the hint and gone home.",
    "source": null
+  },
+  {
+   "id": "2026-10-28-arsenal-fleetwood",
+   "ts": "2026-10-28T07:55",
+   "kind": "news",
+   "text": "Arsenal lost to Fleetwood on penalties in the League Cup last night after a 1-1 draw, and the BBC's report lists Bukayo Saka, Christos Tzolis and Noni Madueke as the injured wingers Mikel Arteta had to pick around, which is how a 16-year-old Max Dowman ended up starting and getting sent off. Saka is Robert's, Tzolis is Marcus's and Madueke is Small Ben's, so three of the six are waiting on the same treatment room.",
+   "source": {
+    "title": "Dowman sees red as Arsenal dumped out, but did Arteta go too far?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmg47g7dngxlo"
+   }
+  },
+  {
+   "id": "2026-10-28-carrick-chelsea",
+   "ts": "2026-10-28T07:55",
+   "kind": "news",
+   "text": "Michael Carrick will take charge of Manchester United at Chelsea on Saturday, BBC Sport reports, after the hierarchy looked at Eddie Howe and Julian Nagelsmann and decided to give him the chance to turn it around. United are one place above the relegation zone with one win in eight league games. For this league it means Big Ben's Bruno Fernandes, benched on Sunday, and Marcus's Mbeumo, Robert's Yoro and Sesko and Small Ben's Cunha all go to Stamford Bridge with the coach who is meant to be on his way out.",
+   "source": {
+    "title": "Carrick to stay in charge of Man Utd for Chelsea game",
+    "url": "https://www.bbc.co.uk/sport/football/articles/crlykgeqzypyo"
+   }
+  },
+  {
+   "id": "2026-10-28-sage-palace",
+   "ts": "2026-10-28T07:55",
+   "kind": "news",
+   "text": "Gossip, not confirmed: the BBC's Wednesday gossip column carries a Guardian claim that Crystal Palace's Pierre Sage could be sacked if they lose to Tottenham on Saturday. Robert has Mateta, who scores for Palace when anybody does, and Justin has Marmoush on the Spurs side of it, so the manager's afternoon is also two of the six's afternoon.",
+   "source": {
+    "title": "BBC Sport: Wednesday's full gossip column",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ck7vpjqyd4pmo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-06T07:50",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Man City's appeal and Liverpool v Man City. Only two items: most search results were off-list outlets, so I held back anything I could not source to a permitted outlet I had read. Unused roast suggestions (2) passed over: one is a slur and the other is aimed at race/politics, neither used."
-  },
   {
    "ts": "2026-10-06T22:45",
    "news": 0,
@@ -1114,6 +1113,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening wrap on a non-matchday (GW8 closed, GW9 yet to kick off). No reported items: searches turned up nothing at a permitted outlet beyond what this morning already carried. Four roasts off the final GW8 figures and GW9 fixtures: Justin's Brighton/City defenders, Robert owning both sides of Chelsea v United, Big Ben's team name vs Tzolis on Marcus's squad, Marcus's Joao Pedro injury. Used archive: Robert pint (2026-09-12-b4e9e2f836), Ben D ball knowledge (2026-09-04-1594fc4a80), Marcus luck (2026-09-04-b2deb0fb2d). Passed over, waiting on a hook: hairline/height lines and the Ben D/Justin personal submissions - nothing wrong with them, the day just gave no hook. No flop lines today."
+  },
+  {
+   "ts": "2026-10-28T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures. Led with Arsenal's cup exit to Fleetwood and the injured wingers, then Carrick staying for Chelsea, then Sage gossip. Roast archive not used (morning run); nothing passed over."
   }
  ]
 }
