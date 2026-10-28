@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T08:37",
+ "generated": "2026-10-28T15:25",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.85
+   "ep": 2.84
   },
   {
    "id": 628,
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.55,
+   "gain": 10.51,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.99,
+   "gain": 9.94,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.53,
+   "gain": 9.51,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.14,
+   "gain": 10.12,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.5,
+   "gain": 6.49,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.43,
+   "gain": 6.44,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.27,
+   "gain": 6.26,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.34,
+   "gain": 6.3,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.76,
+   "gain": 5.71,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.3,
+   "gain": 5.28,
    "change": 3,
    "fallback": true,
    "add": {
@@ -532,38 +532,8 @@
    }
   },
   {
-   "pos": "MID",
-   "gain": 4.82,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 453,
-    "code": 201666,
-    "name": "Barnes",
-    "pos": "MID",
-    "team": "NEW",
-    "status": "a",
-    "news": "",
-    "p_play": 0.983,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 335,
-    "code": 466525,
-    "name": "Stach",
-    "pos": "MID",
-    "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.919,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
    "pos": "FWD",
-   "gain": 5.04,
+   "gain": 5.11,
    "change": 4,
    "fallback": false,
    "add": {
@@ -653,7 +623,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 308.02
+   "ep": 307.67
   },
   {
    "id": 155,
@@ -677,7 +647,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 283.26
+   "ep": 283.44
   },
   {
    "id": 387,
@@ -704,18 +674,6 @@
    "ep": 278.34
   },
   {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.706,
-   "base": 168.26,
-   "ep": 277.05
-  },
-  {
    "id": 428,
    "code": 430871,
    "name": "Cunha",
@@ -725,7 +683,19 @@
    "news": "",
    "p_play": 0.797,
    "base": 155.78,
-   "ep": 276.85
+   "ep": 277.02
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.706,
+   "base": 168.26,
+   "ep": 276.86
   },
   {
    "id": 106,
@@ -761,7 +731,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 274.13
+   "ep": 274.14
   },
   {
    "id": 398,
@@ -773,7 +743,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 264.84
+   "ep": 264.87
   },
   {
    "id": 201,
@@ -797,7 +767,7 @@
    "news": "",
    "p_play": 0.865,
    "base": 135.99,
-   "ep": 259.18
+   "ep": 258.69
   },
   {
    "id": 8,
@@ -857,7 +827,7 @@
    "news": "",
    "p_play": 0.397,
    "base": 127.59,
-   "ep": 248.45
+   "ep": 248.63
   },
   {
    "id": 19,
@@ -869,7 +839,19 @@
    "news": "",
    "p_play": 0.267,
    "base": 127.98,
-   "ep": 245.42
+   "ep": 246.8
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.42,
+   "base": 176.94,
+   "ep": 243.49
   },
   {
    "id": 390,
@@ -894,18 +876,6 @@
    "p_play": 0.848,
    "base": 147.46,
    "ep": 240.46
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.42,
-   "base": 176.94,
-   "ep": 240.02
   },
   {
    "id": 384,
@@ -965,7 +935,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 229.99
+   "ep": 230.72
   },
   {
    "id": 236,
@@ -977,7 +947,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.18,
-   "ep": 228.4
+   "ep": 227.54
   },
   {
    "id": 31,

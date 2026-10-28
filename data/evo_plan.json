@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T08:36",
+ "generated": "2026-10-28T15:25",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.831,
    "base": 3.88,
-   "ep": 3.83,
+   "ep": 3.82,
    "votes": 5
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.863,
    "base": 3.96,
-   "ep": 3.92,
+   "ep": 3.93,
    "votes": 5
   },
   {
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.848,
    "base": 3.63,
-   "ep": 3.61,
+   "ep": 3.6,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.07,
+   "gain": 10.06,
    "change": 1,
    "fallback": false,
    "add": {
@@ -314,7 +314,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 87
+   "borda": 86
   },
   {
    "pos": "DEF",
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.77,
+   "gain": 7.76,
    "change": 2,
    "fallback": false,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.43,
+   "gain": 7.41,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.81,
+   "gain": 6.77,
    "change": 2,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 50
+   "borda": 51
   },
   {
    "pos": "MID",
-   "gain": 5.22,
+   "gain": 5.21,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.87,
+   "gain": 4.89,
    "change": 3,
    "fallback": true,
    "add": {
@@ -537,12 +537,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 48
+   "votes": 2,
+   "borda": 37
   },
   {
    "pos": "MID",
-   "gain": 4.54,
+   "gain": 4.49,
    "change": 3,
    "fallback": true,
    "add": {
@@ -570,11 +570,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 34
+   "borda": 35
   },
   {
    "pos": "MID",
-   "gain": 4.43,
+   "gain": 4.41,
    "change": 3,
    "fallback": true,
    "add": {
@@ -668,7 +668,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 194.86
+   "ep": 194.75
   },
   {
    "id": 106,
@@ -716,7 +716,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 165.93
+   "ep": 165.98
   },
   {
    "id": 387,
@@ -740,7 +740,7 @@
    "news": "",
    "p_play": 0.42,
    "base": 176.94,
-   "ep": 164.61
+   "ep": 165.92
   },
   {
    "id": 40,
@@ -752,7 +752,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 163.73
+   "ep": 164.06
   },
   {
    "id": 428,
@@ -764,19 +764,7 @@
    "news": "",
    "p_play": 0.797,
    "base": 155.78,
-   "ep": 158.34
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.706,
-   "base": 168.26,
-   "ep": 161.49
+   "ep": 158.4
   },
   {
    "id": 388,
@@ -789,6 +777,18 @@
    "p_play": 0.947,
    "base": 179.86,
    "ep": 173.08
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.706,
+   "base": 168.26,
+   "ep": 161.59
   },
   {
    "id": 12,
@@ -851,18 +851,6 @@
    "ep": 149.55
   },
   {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.994,
-   "base": 159.18,
-   "ep": 146.87
-  },
-  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -873,6 +861,18 @@
    "p_play": 0.0,
    "base": 150.44,
    "ep": 143.8
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.994,
+   "base": 159.18,
+   "ep": 146.43
   },
   {
    "id": 201,
@@ -920,7 +920,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 145.42
+   "ep": 145.49
   },
   {
    "id": 8,
@@ -944,7 +944,7 @@
    "news": "",
    "p_play": 0.693,
    "base": 139.23,
-   "ep": 132.92
+   "ep": 132.96
   },
   {
    "id": 61,
@@ -980,7 +980,7 @@
    "news": "Ankle injury - 75% chance of playing",
    "p_play": 0.662,
    "base": 136.83,
-   "ep": 132.15
+   "ep": 132.0
   },
   {
    "id": 398,
@@ -992,7 +992,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 136.66
+   "ep": 136.96
   },
   {
    "id": 208,
@@ -1004,19 +1004,7 @@
    "news": "Groin injury - 75% chance of playing",
    "p_play": 0.126,
    "base": 140.17,
-   "ep": 128.51
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.865,
-   "base": 135.99,
-   "ep": 133.98
+   "ep": 127.85
   },
   {
    "id": 154,
@@ -1043,6 +1031,18 @@
    "ep": 129.5
   },
   {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.865,
+   "base": 135.99,
+   "ep": 133.04
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -1067,18 +1067,6 @@
    "ep": 142.63
   },
   {
-   "id": 371,
-   "code": 441266,
-   "name": "Gravenberch",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.553,
-   "base": 140.24,
-   "ep": 128.19
-  },
-  {
    "id": 95,
    "code": 533463,
    "name": "O.Dango",
@@ -1088,7 +1076,19 @@
    "news": "",
    "p_play": 0.533,
    "base": 147.83,
-   "ep": 125.92
+   "ep": 126.4
+  },
+  {
+   "id": 371,
+   "code": 441266,
+   "name": "Gravenberch",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.553,
+   "base": 140.24,
+   "ep": 127.88
   }
  ]
 }
