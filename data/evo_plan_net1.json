@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T08:38",
+ "generated": "2026-10-29T15:31",
  "gw": 9,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -13,7 +13,7 @@
  "window": "waiver",
  "waivers_time": "2026-10-30T11:00:00Z",
  "deadline": "2026-10-31T11:00:00Z",
- "formation": "4-4-2",
+ "formation": "5-3-2",
  "xi": [
   {
    "id": 1,
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 5.0,
-   "ep": 5.29
+   "ep": 5.31
   },
   {
    "id": 330,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 4.19,
-   "ep": 5.59
+   "ep": 5.68
   },
   {
    "id": 10,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.778,
    "base": 3.72,
-   "ep": 3.96
+   "ep": 3.97
   },
   {
    "id": 391,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.831,
    "base": 3.88,
-   "ep": 3.91
+   "ep": 3.9
   },
   {
    "id": 504,
@@ -73,7 +73,19 @@
    "news": "",
    "p_play": 0.985,
    "base": 3.24,
-   "ep": 3.47
+   "ep": 3.49
+  },
+  {
+   "id": 114,
+   "code": 204120,
+   "name": "Boscagli",
+   "pos": "DEF",
+   "team": "BHA",
+   "status": "a",
+   "news": "",
+   "p_play": 0.893,
+   "base": 2.69,
+   "ep": 2.95
   },
   {
    "id": 68,
@@ -85,7 +97,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 5.5,
-   "ep": 6.93
+   "ep": 7.03
   },
   {
    "id": 94,
@@ -97,7 +109,7 @@
    "news": "",
    "p_play": 0.863,
    "base": 3.96,
-   "ep": 4.93
+   "ep": 4.99
   },
   {
    "id": 156,
@@ -109,19 +121,7 @@
    "news": "",
    "p_play": 0.848,
    "base": 3.63,
-   "ep": 4.28
-  },
-  {
-   "id": 335,
-   "code": 466525,
-   "name": "Stach",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.919,
-   "base": 3.3,
-   "ep": 3.6
+   "ep": 4.32
   },
   {
    "id": 411,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 7.52,
-   "ep": 8.15
+   "ep": 8.19
   },
   {
    "id": 552,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.697,
    "base": 2.66,
-   "ep": 3.15
+   "ep": 3.16
   }
  ],
  "bench": [
@@ -159,19 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.22,
-   "ep": 4.69
-  },
-  {
-   "id": 114,
-   "code": 204120,
-   "name": "Boscagli",
-   "pos": "DEF",
-   "team": "BHA",
-   "status": "a",
-   "news": "",
-   "p_play": 0.893,
-   "base": 2.69,
-   "ep": 2.93
+   "ep": 4.71
   },
   {
    "id": 401,
@@ -183,7 +171,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.82
+   "ep": 2.84
   },
   {
    "id": 628,
@@ -196,14 +184,26 @@
    "p_play": 0.647,
    "base": 1.72,
    "ep": 2.07
+  },
+  {
+   "id": 335,
+   "code": 466525,
+   "name": "Stach",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "d",
+   "news": "Foot injury - 50% chance of playing",
+   "p_play": 0.459,
+   "base": 1.65,
+   "ep": 1.62
   }
  ],
- "xi_ep": 53.2,
+ "xi_ep": 53.0,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 15.07,
+   "gain": 15.17,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.04,
+   "gain": 11.3,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.83,
+   "gain": 10.84,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.25,
+   "gain": 10.46,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.17,
+   "gain": 10.08,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.89,
+   "gain": 6.92,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.79,
+   "gain": 6.77,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.4,
+   "gain": 6.34,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.94,
+   "gain": 9.99,
    "change": 3,
    "fallback": false,
    "add": {
@@ -464,16 +464,16 @@
     "name": "Stach",
     "pos": "MID",
     "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.919,
+    "status": "d",
+    "news": "Foot injury - 50% chance of playing",
+    "p_play": 0.459,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 5.77,
+   "gain": 9.57,
    "change": 3,
    "fallback": true,
    "add": {
@@ -494,16 +494,16 @@
     "name": "Stach",
     "pos": "MID",
     "team": "LEE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.919,
+    "status": "d",
+    "news": "Foot injury - 50% chance of playing",
+    "p_play": 0.459,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 5.15,
+   "gain": 9.15,
    "change": 3,
    "fallback": true,
    "add": {
@@ -524,16 +524,46 @@
     "name": "Stach",
     "pos": "MID",
     "team": "LEE",
+    "status": "d",
+    "news": "Foot injury - 50% chance of playing",
+    "p_play": 0.459,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 8.55,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 453,
+    "code": 201666,
+    "name": "Barnes",
+    "pos": "MID",
+    "team": "NEW",
     "status": "a",
     "news": "",
-    "p_play": 0.919,
+    "p_play": 0.983,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 335,
+    "code": 466525,
+    "name": "Stach",
+    "pos": "MID",
+    "team": "LEE",
+    "status": "d",
+    "news": "Foot injury - 50% chance of playing",
+    "p_play": 0.459,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "FWD",
-   "gain": 5.5,
+   "gain": 5.65,
    "change": 4,
    "fallback": false,
    "add": {
@@ -623,7 +653,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 308.02
+   "ep": 307.67
   },
   {
    "id": 155,
@@ -647,7 +677,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 283.26
+   "ep": 283.44
   },
   {
    "id": 387,
@@ -674,18 +704,6 @@
    "ep": 278.34
   },
   {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.706,
-   "base": 168.26,
-   "ep": 277.05
-  },
-  {
    "id": 428,
    "code": 430871,
    "name": "Cunha",
@@ -695,7 +713,19 @@
    "news": "",
    "p_play": 0.797,
    "base": 155.78,
-   "ep": 276.85
+   "ep": 277.02
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.706,
+   "base": 168.26,
+   "ep": 276.86
   },
   {
    "id": 106,
@@ -731,7 +761,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 274.13
+   "ep": 274.14
   },
   {
    "id": 398,
@@ -743,7 +773,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 264.84
+   "ep": 264.87
   },
   {
    "id": 201,
@@ -767,7 +797,7 @@
    "news": "",
    "p_play": 0.865,
    "base": 135.99,
-   "ep": 259.18
+   "ep": 258.69
   },
   {
    "id": 8,
@@ -827,7 +857,7 @@
    "news": "",
    "p_play": 0.397,
    "base": 127.59,
-   "ep": 248.45
+   "ep": 248.63
   },
   {
    "id": 19,
@@ -839,7 +869,19 @@
    "news": "",
    "p_play": 0.267,
    "base": 127.98,
-   "ep": 245.42
+   "ep": 246.8
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.42,
+   "base": 176.94,
+   "ep": 243.49
   },
   {
    "id": 390,
@@ -864,18 +906,6 @@
    "p_play": 0.848,
    "base": 147.46,
    "ep": 240.46
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.42,
-   "base": 176.94,
-   "ep": 240.02
   },
   {
    "id": 384,
@@ -935,7 +965,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 229.99
+   "ep": 230.72
   },
   {
    "id": 236,
@@ -947,7 +977,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.18,
-   "ep": 228.4
+   "ep": 227.54
   },
   {
    "id": 31,
@@ -1027,9 +1057,9 @@
    "name": "N.Williams",
    "pos": "DEF",
    "team": "NFO",
-   "status": "d",
-   "news": "Arm injury - 75% chance of playing",
-   "p_play": 0.744,
+   "status": "a",
+   "news": "",
+   "p_play": 0.992,
    "base": 136.75,
    "ep": 210.2
   },
