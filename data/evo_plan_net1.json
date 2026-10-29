@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-29T15:31",
+ "generated": "2026-10-29T23:58",
  "gw": 9,
  "horizon": "next5",
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz"
  ],
  "n_models": 1,
  "vote": null,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 4.19,
-   "ep": 5.68
+   "ep": 5.67
   },
   {
    "id": 10,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.778,
    "base": 3.72,
-   "ep": 3.97
+   "ep": 3.96
   },
   {
    "id": 391,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 3.24,
-   "ep": 3.49
+   "ep": 3.48
   },
   {
    "id": 114,
@@ -85,7 +85,7 @@
    "news": "",
    "p_play": 0.893,
    "base": 2.69,
-   "ep": 2.95
+   "ep": 2.94
   },
   {
    "id": 68,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.863,
    "base": 3.96,
-   "ep": 4.99
+   "ep": 4.97
   },
   {
    "id": 156,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.697,
    "base": 2.66,
-   "ep": 3.16
+   "ep": 3.13
   }
  ],
  "bench": [
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.22,
-   "ep": 4.71
+   "ep": 4.7
   },
   {
    "id": 401,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.647,
    "base": 1.72,
-   "ep": 2.07
+   "ep": 2.05
   },
   {
    "id": 335,
@@ -198,12 +198,12 @@
    "ep": 1.62
   }
  ],
- "xi_ep": 53.0,
+ "xi_ep": 52.9,
  "changes": 4,
  "claims": [
   {
    "pos": "MID",
-   "gain": 15.17,
+   "gain": 15.27,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.3,
+   "gain": 11.67,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.84,
+   "gain": 11.03,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.46,
+   "gain": 10.73,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 10.08,
+   "gain": 10.12,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.92,
+   "gain": 7.07,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.77,
+   "gain": 6.86,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.34,
+   "gain": 6.39,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.99,
+   "gain": 10.11,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.57,
+   "gain": 9.5,
    "change": 3,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.15,
+   "gain": 9.18,
    "change": 3,
    "fallback": true,
    "add": {
@@ -533,7 +533,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.55,
+   "gain": 8.54,
    "change": 3,
    "fallback": true,
    "add": {
@@ -563,7 +563,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 5.65,
+   "gain": 5.76,
    "change": 4,
    "fallback": false,
    "add": {
@@ -901,9 +901,9 @@
    "name": "Mukiele",
    "pos": "DEF",
    "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.848,
+   "status": "d",
+   "news": "Knock - 75% chance of playing",
+   "p_play": 0.636,
    "base": 147.46,
    "ep": 240.46
   },

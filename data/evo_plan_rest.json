@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-29T15:31",
+ "generated": "2026-10-29T23:57",
  "gw": 9,
  "horizon": "rest",
- "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.848,
    "base": 3.63,
-   "ep": 3.6,
+   "ep": 3.61,
    "votes": 5
   },
   {
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.27,
+   "ep": 2.26,
    "votes": 2
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 92.28,
+   "gain": 92.76,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 56.16,
+   "gain": 56.61,
    "change": 1,
    "fallback": true,
    "add": {
@@ -286,7 +286,7 @@
   },
   {
    "pos": "MID",
-   "gain": 46.32,
+   "gain": 46.74,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 45.26,
+   "gain": 45.77,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 49.36,
+   "gain": 49.43,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 169
+   "borda": 170
   },
   {
    "pos": "MID",
-   "gain": 48.85,
+   "gain": 48.64,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 55.83,
+   "gain": 55.59,
    "change": 2,
    "fallback": true,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 50.96,
+   "gain": 51.19,
    "change": 2,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 43.48,
+   "gain": 43.57,
    "change": 3,
    "fallback": false,
    "add": {
@@ -510,7 +510,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 33.51,
+   "gain": 33.64,
    "change": 3,
    "fallback": true,
    "add": {
@@ -538,22 +538,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 67
+   "borda": 68
   },
   {
    "pos": "DEF",
-   "gain": 35.58,
+   "gain": 38.2,
    "change": 3,
    "fallback": true,
    "add": {
-    "id": 60,
-    "code": 463981,
-    "name": "Hill",
+    "id": 449,
+    "code": 487838,
+    "name": "Hall",
     "pos": "DEF",
-    "team": "BOU",
+    "team": "NEW",
     "status": "a",
     "news": "",
-    "p_play": 1.0,
+    "p_play": 0.999,
     "base": null,
     "ep": null
    },
@@ -570,22 +570,22 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 44
+   "borda": 43
   },
   {
    "pos": "DEF",
-   "gain": 38.36,
+   "gain": 35.21,
    "change": 3,
    "fallback": true,
    "add": {
-    "id": 449,
-    "code": 487838,
-    "name": "Hall",
+    "id": 60,
+    "code": 463981,
+    "name": "Hill",
     "pos": "DEF",
-    "team": "NEW",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.999,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    },
@@ -820,9 +820,9 @@
    "name": "Mukiele",
    "pos": "DEF",
    "team": "SUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.848,
+   "status": "d",
+   "news": "Knock - 75% chance of playing",
+   "p_play": 0.636,
    "base": 147.46,
    "ep": 152.26
   },
@@ -965,8 +965,8 @@
    "pos": "DEF",
    "team": "CHE",
    "status": "d",
-   "news": "Hamstring injury - 75% chance of playing",
-   "p_play": 0.674,
+   "news": "Hamstring injury - 50% chance of playing",
+   "p_play": 0.449,
    "base": 133.5,
    "ep": 131.31
   },
