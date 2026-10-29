@@ -1,43 +1,6 @@
 {
- "generated": "2026-10-29T07:55 UTC",
+ "generated": "2026-10-29T22:50 UTC",
  "items": [
-  {
-   "id": "2026-10-20-semenyo-eight-weeks",
-   "ts": "2026-10-20T07:55",
-   "kind": "news",
-   "text": "Antoine Semenyo limped off against Ipswich on Saturday and has been ruled out for eight weeks with a knee injury, the Guardian reports. Edward owns him, and Manchester City, who had been treating him as the natural cover up front, now have one fewer option behind Erling Haaland. BBC Sport says he could miss up to 13 matches.",
-   "source": {
-    "title": "Semenyo's eight-week injury absence leaves Manchester City short on cover for Haaland",
-    "url": "https://www.theguardian.com/football/2026/oct/19/antoine-semenyo-eight-week-knee-injury-absence-manchester-city-short-cover-erling-haaland"
-   }
-  },
-  {
-   "id": "2026-10-20-haaland-doubt",
-   "ts": "2026-10-20T07:55",
-   "kind": "news",
-   "text": "Justin's Haaland scored twice in Saturday's 3-2 win over Ipswich and hobbled off at full time with a blow to the foot, which makes him a doubt for City's Champions League game against AEK Athens tonight, BBC Sport reports. Maresca said he 'can be available' but the striker was missing from the training session open to the media. If he sits, Maresca has mentioned Foden (Marcus) as a false nine and Ndiaye (Robert) as another option. It is a European tie, so nothing in it counts here.",
-   "source": {
-    "title": "Haaland a doubt, Semenyo out - what are Man City's options?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c5djv21rkekwo"
-   }
-  },
-  {
-   "id": "2026-10-20-spurs-coventry",
-   "ts": "2026-10-20T07:55",
-   "kind": "news",
-   "text": "Tottenham beat Coventry 3-1 on Monday night for their first league win of the season, and Justin's Marmoush scored the second with a curling finish, his first goal for the club, BBC Sport reports. James Maddison opened the scoring on his first start in 18 months, Jack Rudoni pulled one back past Marcus's Kinsky, and Ben Davies added the third in stoppage time. Spurs are off the bottom and travel to Chelsea on Saturday, where the league holds Chelsea players on four different squads.",
-   "source": {
-    "title": "Spurs 3-1 Coventry: James Maddison shines on Tottenham return",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cwz0v8le7y3eo"
-   }
-  },
-  {
-   "id": "2026-10-20-small-ben-spare-keeper",
-   "ts": "2026-10-20T22:55",
-   "kind": "opinion",
-   "text": "Small Ben's spare goalkeeper Suzuki scored 8 from the bench while Donnarumma, the one he actually picked, scored 1, and Isak sat next to him on 9. That is two weeks running that the best part of his team has been somewhere he could not see it, and with Small Ben that is usually the explanation: the bench is a shelf, the shelf is high, and he has never once been able to reach the top of it.",
-   "source": null
-  },
   {
    "id": "2026-10-20-robert-six-zeros",
    "ts": "2026-10-20T22:55",
@@ -698,16 +661,37 @@
     "title": "No Saliba, no problem - Konsa stepping up for Arsenal",
     "url": "https://www.bbc.co.uk/sport/football/articles/cw5ynr87jdr0o"
    }
+  },
+  {
+   "id": "2026-10-29-marcus-worst-eleven",
+   "ts": "2026-10-29T22:50",
+   "kind": "opinion",
+   "text": "Marcus put out the lowest-scoring eleven in the league last week, 28, and the best score he owned all week was Kinsky's 9, from the bench, while the keeper he actually started, Becker, got 6. A week ago he led. Tonight he is 8 back, and the man who sells a winger after two good games has just discovered what it feels like to hold the wrong one.",
+   "source": null
+  },
+  {
+   "id": "2026-10-29-bigben-trafford-bench",
+   "ts": "2026-10-29T22:50",
+   "kind": "opinion",
+   "text": "Big Ben started Kelleher, who returned 2, and left Trafford on the bench for 10, which is about what you would expect from a man with this much to say about ball knowledge. The Bruno bail-out never arrived either: Fernandes was left out by Manchester United and then found himself on Big Ben's bench, dropped by the club and by the fan. He is 89 off the lead and on Saturday he gets to be wrong about it live.",
+   "source": null
+  },
+  {
+   "id": "2026-10-29-smallben-silva-bench",
+   "ts": "2026-10-29T22:50",
+   "kind": "opinion",
+   "text": "Small Ben left 14 points on his bench last week, Silva's 8 among them, while Cunha started and returned 1. There is a fight coming, and this is the best evidence going of how he prepares for one: the right man was in the building all along, in a tracksuit, and never got the call. Foresight, as advertised.",
+   "source": null
+  },
+  {
+   "id": "2026-10-29-robert-gabriel-two-thirds",
+   "ts": "2026-10-29T22:50",
+   "kind": "opinion",
+   "text": "Gabriel gave Robert 17 of his 39 last week and Roefs added 9, so two players did two thirds of the work while the other nine shared 13 and a sincere effort at looking busy. It is the squad of a man whose whole strategy is to touch nothing and answer nobody, and like the hairline, the part that is left is doing everything it can.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-07T22:41",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening wrap, non-matchday with GW6 not yet kicked off. One search found no usable current reports from permitted outlets, so no news. Led with the bunched top four and the bench ledger. Passed over both unused roast entries (2026-09-12-ca1422e269 and 2026-09-12-d9048f2afb): both hang on slurs or sexuality/race-adjacent material, outside the rules. No flops to rewrite."
-  },
   {
    "ts": "2026-10-08T07:50",
    "news": 3,
@@ -1120,6 +1104,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning run, no fixtures today (GW9 starts Saturday 12:30 with Chelsea v Man Utd). Searches were thin; read the BBC Premier League page directly and used four BBC articles read in full: Carrick/Fernandes talks (Big Ben), Palmer's ban served in the League Cup (Edward), Muharemovic and Leeds interest (Edward), Konsa at Arsenal (Big Ben). Dropped the Isak and Sage pieces as already covered or old. No opinion on a morning run; archive untouched."
+  },
+  {
+   "ts": "2026-10-29T22:50",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening wrap on a non-matchday (GW9 yet to kick off, 0 of 10 started). No reported items: a single standard search for weekend team news returned only old-season pages and nothing from a permitted outlet, and this morning's run already carried four BBC items. Four roasts off final GW8 figures, none repeating last night's angles: Marcus's lowest eleven of the six with Kinsky scoring on the bench (used 2026-09-06-c592707d77 kneejerk line), Big Ben's Trafford on the bench and Bruno bail-out (2026-09-06-cdaf331443), Small Ben's 14 bench points set against the boxing-preparation submission (2026-09-12-211e2a0b5e; the Harvey Price likeness left out, since it compares him to a disabled man, which I judged to be the disability floor, flagging for Justin), Robert's Gabriel-dominated week and hairline (2026-09-12-7526d15fa8 / 2026-09-04-9b7835c402 flavour). Passed over: Ben D on Justin (apartheid line) - no football hook, Justin to say if he wants it run; Ben D on himself - self-target, not run; Marcus Jobacus/Spotlight and Edward's luck line - no hook tonight; Justin's pint line on Robert - no new hook. No flop lines today (no football)."
   }
  ]
 }
