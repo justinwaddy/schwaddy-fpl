@@ -1,34 +1,6 @@
 {
- "generated": "2026-10-28T22:45 UTC",
+ "generated": "2026-10-29T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-19-justin-73",
-   "ts": "2026-10-19T22:50",
-   "kind": "opinion",
-   "text": "Justin put 73 on the board, with Haaland's 13 sitting on top of it, and took Marcus's lead down to 19. The injury feed is still calling Haaland a doubt, so the best night anybody has had all season rests on a man the league's own list says might not have been there. Second place has never sounded so much like a personality, and the Tuesday messages are already being drafted.",
-   "source": null
-  },
-  {
-   "id": "2026-10-19-marcus-twelves",
-   "ts": "2026-10-19T22:50",
-   "kind": "opinion",
-   "text": "Kostoulas and Evanilson scored 12 apiece, which is 24 of Marcus's 56 from two players he cannot honestly say he planned around, and the lead still lost ground. It is the shape of a week where a man calls it process and everybody else calls it the usual. Kinsky stood in goal for the full 90 minutes and returned two, so the luck had a limit, and Justin found it.",
-   "source": null
-  },
-  {
-   "id": "2026-10-19-robert-bench",
-   "ts": "2026-10-19T22:50",
-   "kind": "opinion",
-   "text": "Robert started Mateta, Wilson and Estevao and got one point between the three of them, while Solanke and Yoro scored four each on his bench. Sesko is injured until the end of the month and contributed exactly what an injured man contributes. The gap to Marcus is 150 now, and it is receding faster than anything on Robert's head, which is saying something.",
-   "source": null
-  },
-  {
-   "id": "2026-10-19-bigben-fifth",
-   "ts": "2026-10-19T22:50",
-   "kind": "opinion",
-   "text": "Big Ben, Arsenal to the bone, owns Konsa and Havertz and was still passed tonight by Small Ben, whose eleven gave Cunha, Wissa and Anderson a point each while Isak and Suzuki, 17 between them, watched from the bench. Fifth place behind a man who picks like that is a ball-knowledge result, and a lifetime of Arsenal has not taught him to read one.",
-   "source": null
-  },
   {
    "id": "2026-10-20-semenyo-eight-weeks",
    "ts": "2026-10-20T07:55",
@@ -686,16 +658,49 @@
    "kind": "opinion",
    "text": "Arsenal lost a League Cup tie to Fleetwood on penalties this week, and Big Ben's entire stake in the club is Konsa, who was excellent, and Havertz, who returned 1. Two Arsenal players is a modest return on a lifetime of shouting about them. On Saturday he gets to watch Wirtz play against his own Arsenal, so for once he cannot lose by default.",
    "source": null
+  },
+  {
+   "id": "2026-10-29-fernandes-talks",
+   "ts": "2026-10-29T07:55",
+   "kind": "news",
+   "text": "Bruno Fernandes and Michael Carrick held a private clear-the-air talk at the training ground on Tuesday, BBC Sport reports, after Fernandes criticised the tactics following the 4-1 Champions League loss at Como and was left an unused substitute in the 3-0 defeat by Bournemouth. He could return to the starting line-up at Chelsea on Saturday (12:30). Fernandes is Big Ben's, and Big Ben had 0 from him last week, so a reconciliation would help.",
+   "source": {
+    "title": "Carrick and Fernandes hold clear-the-air talks",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cje36dn5nx36o"
+   }
+  },
+  {
+   "id": "2026-10-29-palmer-available",
+   "ts": "2026-10-29T07:55",
+   "kind": "news",
+   "text": "Cole Palmer's red card against Spurs does not cost him Saturday's game against Manchester United: BBC Sport explains that a red-card ban is served across domestic competitions, so the one-match suspension fell on Chelsea's League Cup tie at Liverpool instead. Palmer is Edward's, and he is free to play at Stamford Bridge.",
+   "source": {
+    "title": "Which game will Chelsea's Palmer miss after red card?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm4g1q54pj20o"
+   }
+  },
+  {
+   "id": "2026-10-29-muharemovic",
+   "ts": "2026-10-29T07:55",
+   "kind": "news",
+   "text": "Leeds centre-back Tarik Muharemovic, signed from Sassuolo for 34.1m pounds in the summer, has helped Leeds to the second-meanest defence in the Premier League behind Arsenal, and BBC Sport says Barcelona, Liverpool, Bayern Munich and Inter Milan are reported to be interested. Edward owns him, and 9 of Edward's GW8 points came off him.",
+   "source": {
+    "title": "Chiellini guidance to Leeds 'rock' - could Muharemovic be signing of season?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cx05487d6r9vo"
+   }
+  },
+  {
+   "id": "2026-10-29-konsa-stepping-up",
+   "ts": "2026-10-29T07:55",
+   "kind": "news",
+   "text": "Ezri Konsa, signed from Aston Villa for 55m pounds in August, has started six of Arsenal's eight league games in William Saliba's absence, tops the Premier League for pass completion at 96 percent, and Arsenal have kept five clean sheets, more than any other side. Mikel Arteta calls his start 'unbelievable'. Konsa is Big Ben's, which makes him the one part of that Arsenal stake that is working.",
+   "source": {
+    "title": "No Saliba, no problem - Konsa stepping up for Arsenal",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw5ynr87jdr0o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-07T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with the BBC international-break injury round-up (Bruno Fernandes playing through pain) and BBC's England takeaways (Palmer/Gibbs-White, Rogers, Rice). Search tool could not query BBC/Guardian, so read their pages directly; Man City legal stories skipped as already covered. Both unused roast suggestions passed over: one is a slur aimed at the sender himself, the other rests on a race-adjacent charge and is not a joke about anything in the table."
-  },
   {
    "ts": "2026-10-07T22:41",
    "news": 0,
@@ -1108,6 +1113,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening wrap on a non-matchday (GW8 closed, GW9 yet to kick off; live feed shows 0 of 10 fixtures started). No reported items: searches for permitted-outlet news today returned nothing usable beyond what this morning already carried. Four roasts off the final GW8 figures: Edward's best-in-league week that moved him nowhere, Small Ben's 75 percent Arsenal pair and height line (hook: 48 off the lead), Robert's injured Saka plus the no-transfers/no-replies/hairline submission, Big Ben's Arsenal loyalty after the Fleetwood exit. Used archive: 2026-09-04-a8bbcabc4b (Ben C height), 2026-09-12-7526d15fa8 (Robert), 2026-09-04-1594fc4a80 (Ben D ball knowledge). Passed over, waiting on a hook: the Ben C boxing/Harvey Price line, Marcus's Jobacus/Spotlight line, the Elanga kneejerk line, and the Ben D/Justin personal submissions - nothing wrong with them, no hook tonight. No flop lines today."
+  },
+  {
+   "ts": "2026-10-29T07:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning run, no fixtures today (GW9 starts Saturday 12:30 with Chelsea v Man Utd). Searches were thin; read the BBC Premier League page directly and used four BBC articles read in full: Carrick/Fernandes talks (Big Ben), Palmer's ban served in the League Cup (Edward), Muharemovic and Leeds interest (Edward), Konsa at Arsenal (Big Ben). Dropped the Isak and Sage pieces as already covered or old. No opinion on a morning run; archive untouched."
   }
  ]
 }
