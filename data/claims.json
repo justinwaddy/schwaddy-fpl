@@ -820,12 +820,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-30T08:20 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break injury round-ups found nothing affecting squad or claim targets."
-    },
-    {
       "ts": "2026-09-30T21:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -1175,6 +1169,12 @@
     },
     {
       "ts": "2026-10-29T21:10 UTC",
+      "gw": 9,
+      "claims": 5,
+      "note": "No change; no new dated permitted-source news, claims carried forward."
+    },
+    {
+      "ts": "2026-10-30T08:20 UTC",
       "gw": 9,
       "claims": 5,
       "note": "No change; no new dated permitted-source news, claims carried forward."

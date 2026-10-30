@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-09-30T08:20 UTC",
-      "published": 0,
-      "note": "Morning check inside the international break (GW6 waivers close 9 October). Searched premierleague.com and Sky Sports injury round-ups and Barcola. Only Havertz, Gakpo, Dorgu and Brobbey knocks surfaced, none on Justin's squad or shortlist beyond Brobbey's already-known hamstring. Nothing material; claims unchanged."
-    },
-    {
       "ts": "2026-09-30T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 waivers close 9 October). Searched Brobbey and the premierleague.com/Sky injury round-ups; only the already-known Havertz, Gakpo, Isak, Dorgu and Brobbey knocks surfaced, none new for Justin's squad. Nothing material; claims unchanged."
@@ -621,6 +616,11 @@
       "ts": "2026-10-29T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches on Leeds/Stach, Sunderland and GW9 injuries returned only fantasy/aggregator/regional pages or last season's items; nothing from a permitted outlet. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-30T08:20 UTC",
+      "published": 0,
+      "note": "Morning check, waivers close 11:00 UTC. Searches returned only undated or stale permitted-source items and non-permitted outlets; nothing verifiable on his squad or claims. Not in starters window. Nothing published."
     }
   ]
 }
