@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-30T13:53",
+ "generated": "2026-10-30T15:19",
  "gw": 9,
  "horizon": "next5",
- "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz"
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz"
  ],
  "n_models": 1,
  "vote": null,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 5.5,
-   "ep": 7.1
+   "ep": 7.11
   },
   {
    "id": 94,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.913,
    "base": 3.27,
-   "ep": 4.42
+   "ep": 4.41
   },
   {
    "id": 156,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.848,
    "base": 3.63,
-   "ep": 4.34
+   "ep": 4.35
   },
   {
    "id": 411,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.82
+   "ep": 2.79
   },
   {
    "id": 628,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 15.47,
+   "gain": 15.57,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 11.25,
+   "gain": 11.36,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 10.67,
+   "gain": 10.5,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 9.99,
+   "gain": 10.04,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.05,
+   "gain": 8.14,
    "change": 2,
    "fallback": false,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.43,
+   "gain": 7.51,
    "change": 3,
    "fallback": false,
    "add": {
@@ -383,39 +383,9 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.18,
+   "gain": 7.48,
    "change": 4,
    "fallback": false,
-   "add": {
-    "id": 204,
-    "code": 244723,
-    "name": "Mitchell",
-    "pos": "DEF",
-    "team": "CRY",
-    "status": "a",
-    "news": "",
-    "p_play": 0.963,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
-    "pos": "DEF",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.893,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 7.04,
-   "change": 4,
-   "fallback": true,
    "add": {
     "id": 60,
     "code": 463981,
@@ -443,7 +413,37 @@
   },
   {
    "pos": "DEF",
-   "gain": 7.0,
+   "gain": 7.26,
+   "change": 4,
+   "fallback": true,
+   "add": {
+    "id": 204,
+    "code": 244723,
+    "name": "Mitchell",
+    "pos": "DEF",
+    "team": "CRY",
+    "status": "a",
+    "news": "",
+    "p_play": 0.963,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.893,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 7.02,
    "change": 4,
    "fallback": true,
    "add": {
@@ -503,7 +503,7 @@
   },
   {
    "pos": "MID",
-   "gain": 6.12,
+   "gain": 6.17,
    "change": 5,
    "fallback": false,
    "add": {
@@ -593,7 +593,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 307.67
+   "ep": 308.02
   },
   {
    "id": 155,
@@ -617,7 +617,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 283.44
+   "ep": 283.26
   },
   {
    "id": 387,
@@ -644,18 +644,6 @@
    "ep": 278.34
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.797,
-   "base": 155.78,
-   "ep": 277.02
-  },
-  {
    "id": 13,
    "code": 204480,
    "name": "Rice",
@@ -665,7 +653,19 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.706,
    "base": 168.26,
-   "ep": 276.86
+   "ep": 277.05
+  },
+  {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.797,
+   "base": 155.78,
+   "ep": 276.85
   },
   {
    "id": 106,
@@ -701,7 +701,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 274.14
+   "ep": 274.13
   },
   {
    "id": 398,
@@ -713,7 +713,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 264.87
+   "ep": 264.84
   },
   {
    "id": 201,
@@ -737,7 +737,7 @@
    "news": "",
    "p_play": 0.865,
    "base": 135.99,
-   "ep": 258.69
+   "ep": 259.18
   },
   {
    "id": 8,
@@ -797,7 +797,7 @@
    "news": "",
    "p_play": 0.397,
    "base": 127.59,
-   "ep": 248.63
+   "ep": 248.45
   },
   {
    "id": 19,
@@ -809,19 +809,7 @@
    "news": "",
    "p_play": 0.267,
    "base": 127.98,
-   "ep": 246.8
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.42,
-   "base": 176.94,
-   "ep": 243.49
+   "ep": 245.42
   },
   {
    "id": 390,
@@ -846,6 +834,18 @@
    "p_play": 0.636,
    "base": 147.46,
    "ep": 240.46
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.42,
+   "base": 176.94,
+   "ep": 240.02
   },
   {
    "id": 384,
@@ -905,7 +905,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 230.72
+   "ep": 229.99
   },
   {
    "id": 236,
@@ -917,7 +917,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.18,
-   "ep": 227.54
+   "ep": 228.4
   },
   {
    "id": 31,
@@ -973,8 +973,8 @@
    "name": "Szoboszlai",
    "pos": "MID",
    "team": "LIV",
-   "status": "i",
-   "news": "Hamstring injury - Unknown return date",
+   "status": "d",
+   "news": "Hamstring injury - 50% chance of playing",
    "p_play": 0.0,
    "base": 150.44,
    "ep": 215.47

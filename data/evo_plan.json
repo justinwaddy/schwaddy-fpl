@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-30T13:52",
+ "generated": "2026-10-30T15:18",
  "gw": 9,
  "horizon": "next5",
- "model": "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
+ "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
  "models": [
-  "/home/user/schwaddy-fpl/data/evo_models/seed1.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed2.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed3.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed4.npz",
-  "/home/user/schwaddy-fpl/data/evo_models/seed5.npz"
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed2.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed3.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed4.npz",
+  "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed5.npz"
  ],
  "n_models": 5,
  "vote": "median expected points for the eleven, Borda count over each model's ranking for claims and the board",
@@ -187,7 +187,7 @@
    "news": "",
    "p_play": 0.756,
    "base": 2.38,
-   "ep": 2.26,
+   "ep": 2.25,
    "votes": 2
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 6.65,
+   "gain": 6.66,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,7 +250,7 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 149
+   "borda": 142
   },
   {
    "pos": "MID",
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 121
+   "borda": 115
   },
   {
    "pos": "MID",
-   "gain": 7.54,
+   "gain": 7.53,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 95
+   "borda": 92
   },
   {
    "pos": "MID",
-   "gain": 6.97,
+   "gain": 6.98,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 90
+   "borda": 88
   },
   {
    "pos": "DEF",
-   "gain": 6.3,
+   "gain": 6.34,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 86
+   "borda": 83
   },
   {
    "pos": "DEF",
-   "gain": 5.12,
+   "gain": 5.11,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 68
+   "borda": 63
   },
   {
    "pos": "DEF",
-   "gain": 4.59,
+   "gain": 4.62,
    "change": 2,
    "fallback": true,
    "add": {
@@ -442,22 +442,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 62
+   "borda": 57
   },
   {
    "pos": "DEF",
-   "gain": 5.36,
+   "gain": 6.56,
    "change": 2,
    "fallback": true,
    "add": {
-    "id": 503,
-    "code": 491279,
-    "name": "Van de Ven",
+    "id": 60,
+    "code": 463981,
+    "name": "Hill",
     "pos": "DEF",
-    "team": "TOT",
+    "team": "BOU",
     "status": "a",
     "news": "",
-    "p_play": 0.806,
+    "p_play": 1.0,
     "base": null,
     "ep": null
    },
@@ -474,7 +474,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 58
+   "borda": 48
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -540,7 +540,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 194.75
+   "ep": 194.86
   },
   {
    "id": 106,
@@ -588,7 +588,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 165.98
+   "ep": 165.93
   },
   {
    "id": 387,
@@ -612,7 +612,7 @@
    "news": "",
    "p_play": 0.42,
    "base": 176.94,
-   "ep": 165.92
+   "ep": 164.61
   },
   {
    "id": 40,
@@ -624,7 +624,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 164.06
+   "ep": 163.73
   },
   {
    "id": 428,
@@ -636,7 +636,19 @@
    "news": "",
    "p_play": 0.797,
    "base": 155.78,
-   "ep": 158.4
+   "ep": 158.34
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.706,
+   "base": 168.26,
+   "ep": 161.49
   },
   {
    "id": 388,
@@ -649,18 +661,6 @@
    "p_play": 0.947,
    "base": 179.86,
    "ep": 173.08
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.706,
-   "base": 168.26,
-   "ep": 161.59
   },
   {
    "id": 12,
@@ -723,18 +723,6 @@
    "ep": 149.55
   },
   {
-   "id": 368,
-   "code": 424876,
-   "name": "Szoboszlai",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "i",
-   "news": "Hamstring injury - Unknown return date",
-   "p_play": 0.0,
-   "base": 150.44,
-   "ep": 143.8
-  },
-  {
    "id": 236,
    "code": 215413,
    "name": "Dewsbury-Hall",
@@ -744,7 +732,19 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.18,
-   "ep": 146.43
+   "ep": 146.87
+  },
+  {
+   "id": 368,
+   "code": 424876,
+   "name": "Szoboszlai",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "d",
+   "news": "Hamstring injury - 50% chance of playing",
+   "p_play": 0.0,
+   "base": 150.44,
+   "ep": 143.8
   },
   {
    "id": 201,
@@ -792,7 +792,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 145.49
+   "ep": 145.42
   },
   {
    "id": 8,
@@ -816,7 +816,7 @@
    "news": "",
    "p_play": 0.693,
    "base": 139.23,
-   "ep": 132.96
+   "ep": 132.92
   },
   {
    "id": 61,
@@ -836,8 +836,8 @@
    "name": "Lacroix",
    "pos": "DEF",
    "team": "CHE",
-   "status": "d",
-   "news": "Hamstring injury - 50% chance of playing",
+   "status": "i",
+   "news": "Hamstring injury - Unknown return date",
    "p_play": 0.449,
    "base": 133.5,
    "ep": 131.31
@@ -852,7 +852,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 136.83,
-   "ep": 132.0
+   "ep": 132.15
   },
   {
    "id": 398,
@@ -864,7 +864,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 136.96
+   "ep": 136.66
   },
   {
    "id": 208,
@@ -876,7 +876,19 @@
    "news": "Groin injury - Expected back 8 Nov",
    "p_play": 0.0,
    "base": 140.17,
-   "ep": 127.85
+   "ep": 128.51
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.865,
+   "base": 135.99,
+   "ep": 133.98
   },
   {
    "id": 154,
@@ -903,18 +915,6 @@
    "ep": 129.5
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.865,
-   "base": 135.99,
-   "ep": 133.04
-  },
-  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -939,18 +939,6 @@
    "ep": 142.63
   },
   {
-   "id": 95,
-   "code": 533463,
-   "name": "O.Dango",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.533,
-   "base": 147.83,
-   "ep": 126.4
-  },
-  {
    "id": 371,
    "code": 441266,
    "name": "Gravenberch",
@@ -960,7 +948,19 @@
    "news": "",
    "p_play": 0.553,
    "base": 140.24,
-   "ep": 127.88
+   "ep": 128.19
+  },
+  {
+   "id": 95,
+   "code": 533463,
+   "name": "O.Dango",
+   "pos": "MID",
+   "team": "BRE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.533,
+   "base": 147.83,
+   "ep": 125.92
   }
  ]
 }
