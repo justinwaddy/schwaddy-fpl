@@ -1,40 +1,6 @@
 {
- "generated": "2026-10-30T07:42 UTC",
+ "generated": "2026-10-30T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-21-city-regulator",
-   "ts": "2026-10-21T07:42",
-   "kind": "news",
-   "text": "The chair of the Independent Football Regulator, David Kogan, says it has \"absolute power\" to force Manchester City's owners to sell if the club is ultimately found to have been run improperly, the Guardian reports. City have appealed the verdict and Kogan would not say whether the IFR will open its own investigation until that is settled, so nothing changes this gameweek. It touches all six of you: City players sit in every squad, Haaland and Gvardiol with Justin, Foden with Marcus, Semenyo with Edward, Ruben with Small Ben, Enzo with Big Ben, Cherki with Robert.",
-   "source": {
-    "title": "Football regulator has 'absolute power' to force Manchester City sale if verdict upheld",
-    "url": "https://www.theguardian.com/football/2026/oct/21/manchester-city-david-kogan-independent-football-regulator"
-   }
-  },
-  {
-   "id": "2026-10-21-marcus-lead-halved",
-   "ts": "2026-10-21T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Marcus went into GW7 36 clear and came out 19 clear, with Justin's whole squad chewing through the gap while two forwards carried most of his own week. A lead built on two men having a good Saturday gets spent the same way, and GW8 has not even kicked off. Marcus would like you to know that 19 is still a lead."
-  },
-  {
-   "id": "2026-10-21-robert-hairline-table",
-   "ts": "2026-10-21T22:45",
-   "kind": "opinion",
-   "source": null,
-   "text": "Robert is 121 behind the leader, with Saka a coin-flip for the weekend and Sesko out with a shin injury and no return date, which means the only thing in his squad moving as slowly as the transfer wire is the one thing leaving at pace: his hairline, which at least has a direction. His title chances are going the same way, minus the dignity of a comb-over."
-  },
-  {
-   "id": "2026-10-22-saka-quad",
-   "ts": "2026-10-22T07:55",
-   "kind": "news",
-   "text": "Bukayo Saka went down after ten minutes of Arsenal's 2-2 Champions League draw at Bayern Munich with what Mikel Arteta says 'does not look good at all', a sharp quadriceps pain with nobody near him. Robert owns him and has Saka down as a weekend coin-flip already; Marcus, who also has Arsenal's Tzolis, is told by the BBC that Tzolis is out with a hamstring injury of his own. Eberechi Eze replaced Saka and scored.",
-   "source": {
-    "title": "Saka injury 'does not look good' - how will Arsenal cope?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o"
-   }
-  },
   {
    "id": "2026-10-22-rice-bayern",
    "ts": "2026-10-22T07:55",
@@ -698,6 +664,34 @@
     "title": "Premier League: 10 things to look out for this weekend",
     "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
    }
+  },
+  {
+   "id": "2026-10-30-edward-waivers",
+   "ts": "2026-10-30T22:45",
+   "kind": "opinion",
+   "text": "Edward spent the day binning Leno, Williams and Horníček, who returned 8 apiece in the best eleven of the week, and took Pickford, Porro and Verbruggen on the strength of nothing anyone has seen yet. The Return of the Djedi has found a way to be kneejerk without any help from Marcus.",
+   "source": null
+  },
+  {
+   "id": "2026-10-30-bigben-five",
+   "ts": "2026-10-30T22:45",
+   "kind": "opinion",
+   "text": "Big Ben made five waiver claims today and one of them is McBurnie, of Hull, which is a lot of new names for the man who sells himself as the last word on ball knowledge. He is 89 off the lead and has apparently decided the answer was never at Arsenal after all, only that nobody told the Arsenal fan.",
+   "source": null
+  },
+  {
+   "id": "2026-10-30-justin-arsenal",
+   "ts": "2026-10-30T22:45",
+   "kind": "opinion",
+   "text": "Justin, 8 clear, spent the day adding Odegaard and Gyokeres to a squad that already held Raya and White, so tomorrow's Liverpool v Arsenal puts four of his men on one side of it. Stach and Brobbey went out to make room, and neither will be missed by anyone, least of all the scoreboard. It is a lead protected the traditional way: by owning the whole of one club and then hoping.",
+   "source": null
+  },
+  {
+   "id": "2026-10-30-marcus-no-moves",
+   "ts": "2026-10-30T22:45",
+   "kind": "opinion",
+   "text": "The page logged thirteen waiver moves today and none of them were Marcus's, the same Marcus who sold a winger the day after two good games, and who is 8 behind with Tzolis at a 75 percent chance of playing. Either the kneejerk has been put to bed, or the luck has told him to sit tight, and for Marcus it has never been easy to tell which of the two is doing the talking.",
+   "source": null
   }
  ],
  "runs": [
@@ -1120,6 +1114,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Chelsea finishing (Guardian/Opta), then Evanilson, Jackson v Garcia, Forest from the Guardian weekend preview. Web search returned only stale or off-list results, so sourced from Guardian pages read directly. Opinion: none (morning). No roast suggestions used."
+  },
+  {
+   "ts": "2026-10-30T22:45",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, no fixtures today (GW9 starts tomorrow). Live feed totals reflect GW9 pre-kickoff and lag a week, so quoted only the 8-point lead from the settled GW8 table. Led with today's waiver moves: Edward binning three 8s, Big Ben's five claims, Justin loading Arsenal ahead of Liverpool v Arsenal, Marcus making no moves. No flops today. Roast archive: used the Marcus kneejerk and Big Ben ball-knowledge themes in the page's own voice. Passed over the Marcus priest/Jobacus suggestion (the Spotlight framing runs into the children line), the Ben D on Justin and Ben D on himself submissions (slur / politics, not tonight's football), and left the hairline, Small Ben boxing and Robert pint ones for a night with a hook (Robert made no move today, GW9 he owns both sides of Chelsea v Man Utd already ran). Reported items none: morning run already posted four."
   }
  ]
 }
