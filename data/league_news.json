@@ -1,37 +1,6 @@
 {
- "generated": "2026-10-29T22:50 UTC",
+ "generated": "2026-10-30T07:42 UTC",
  "items": [
-  {
-   "id": "2026-10-20-robert-six-zeros",
-   "ts": "2026-10-20T22:55",
-   "kind": "opinion",
-   "text": "Six of Robert's fifteen scored nothing in GW7, Wilson, Estevao, Sesko, Cherki, James and Mosquera among them. It would be a crisis for a man who ever opened the waiver page, and since Robert treats the waiver page the way he treats the group chat, it is a lifestyle. The squad is a museum of purchases from September that nobody has been back to look at.",
-   "source": null
-  },
-  {
-   "id": "2026-10-20-edward-semenyo",
-   "ts": "2026-10-20T22:55",
-   "kind": "opinion",
-   "text": "Edward's Semenyo is out for eight weeks with a knee, and the sad part is that he scored 1 in the last gameweek, so what the league is losing is mostly the idea of a Semenyo. Edward will be along to call it a blow to the squad. It is a blow to a lot of confident messages in the group chat, and the squad barely noticed.",
-   "source": null
-  },
-  {
-   "id": "2026-10-20-big-ben-bruno",
-   "ts": "2026-10-20T22:55",
-   "kind": "opinion",
-   "text": "Bruno Fernandes played up front for United, got booked for his trouble and returned 1 point, and Big Ben's other fourteen did exactly what they always do when Bruno does not haul. That is a fifth-place team built on one man's good mood, and on Saturday the mood is a nominal centre-forward again.",
-   "source": null
-  },
-  {
-   "id": "2026-10-21-wirtz-no10",
-   "ts": "2026-10-21T07:42",
-   "kind": "news",
-   "text": "Florian Wirtz created nine chances in Liverpool's 2-1 comeback at Brentford, the Guardian reports, and on a night Brentford were down to ten men he finally looked like the No 10 Liverpool paid for. Both of his league assists this season have gone to Victor Munoz, and the one on Saturday was the pass that released Munoz for the equaliser. Big Ben has Wirtz; the Guardian's own line is that he has struggled with the job since joining, so Big Ben may be holding a player who is only now starting to arrive.",
-   "source": {
-    "title": "Premier League: 10 talking points from the weekend's action",
-    "url": "https://www.theguardian.com/football/2026/oct/19/premier-league-10-talking-points-from-the-weekends-action"
-   }
-  },
   {
    "id": "2026-10-21-city-regulator",
    "ts": "2026-10-21T07:42",
@@ -689,16 +658,49 @@
    "kind": "opinion",
    "text": "Gabriel gave Robert 17 of his 39 last week and Roefs added 9, so two players did two thirds of the work while the other nine shared 13 and a sincere effort at looking busy. It is the squad of a man whose whole strategy is to touch nothing and answer nobody, and like the hairline, the part that is left is doing everything it can.",
    "source": null
+  },
+  {
+   "id": "2026-10-30-chelsea-finishing",
+   "ts": "2026-10-30T07:42",
+   "kind": "news",
+   "text": "Opta's expected points model rates Chelsea the 12th-best side in the Premier League even though they sit fifth, the Guardian reports, because they have scored 6.7 goals more than their chances deserve. It names Pedro Neto, on three league goals and two short of his best for a season, and Morgan Rogers, still ahead of his expected goals but by 1.87 against 3.15 across all of last season, as the ones unlikely to keep it up. Neto is Justin's, Rogers is Big Ben's, and Joao Pedro, whom the piece also lines up, is Marcus's. Chelsea host Manchester United at 12.30pm on Saturday.",
+   "source": {
+    "title": "Chelsea's fine finishing has them flying high - but how long can it last?",
+    "url": "https://www.theguardian.com/football/2026/oct/29/chelseas-fine-finishing-has-them-flying-high-but-how-long-can-it-last"
+   }
+  },
+  {
+   "id": "2026-10-30-evanilson-run",
+   "ts": "2026-10-30T07:42",
+   "kind": "news",
+   "text": "Evanilson has four goals in five games for Bournemouth, his best run since joining, including the tight-angled finish that made it 3-0 at Old Trafford, the Guardian says, with Kroupi able to work the space his running creates. Evanilson is Marcus's and Kroupi Jr is Edward's, so the two of them will be watching the same partnership from opposite sides.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-30-jackson-garcia",
+   "ts": "2026-10-30T07:42",
+   "kind": "news",
+   "text": "Nicolas Jackson has four goals in five Premier League games since joining Villa, two of them against Manchester City last Saturday, while Fulham's 40m pound striker Gonzalo Garcia has gone seven games without scoring, the Guardian notes. Jackson is Edward's and Garcia is Big Ben's, and Unai Emery's knowledge of Jackson from their Villarreal days is the thing the piece credits for the difference.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-30-forest-bottom-three",
+   "ts": "2026-10-30T07:42",
+   "kind": "news",
+   "text": "Nottingham Forest are in the bottom three after a 1-1 draw at Ipswich, the Guardian reports, with Neco Williams scoring from Daniel Munoz's overlapping run while Morgan Gibbs-White, who started the season well for chances created, was crowded out by Ipswich's packed midfield. Williams and Gibbs-White are both Edward's, and the piece says better finishing is what Oliver Glasner's side need.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-08T07:50",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Rice's new Arsenal deal (BBC), then Arteta's contract and Rogers v Bournemouth. Search engine returned mostly fantasy sites so only BBC pieces read in full. Roast archive: 2 unused, both passed over - one is an insult at a slur level, the other aimed at race/politics; neither is fit to publish and it's a morning run anyway."
-  },
   {
    "ts": "2026-10-08T22:45",
    "news": 0,
@@ -1111,6 +1113,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening wrap on a non-matchday (GW9 yet to kick off, 0 of 10 started). No reported items: a single standard search for weekend team news returned only old-season pages and nothing from a permitted outlet, and this morning's run already carried four BBC items. Four roasts off final GW8 figures, none repeating last night's angles: Marcus's lowest eleven of the six with Kinsky scoring on the bench (used 2026-09-06-c592707d77 kneejerk line), Big Ben's Trafford on the bench and Bruno bail-out (2026-09-06-cdaf331443), Small Ben's 14 bench points set against the boxing-preparation submission (2026-09-12-211e2a0b5e; the Harvey Price likeness left out, since it compares him to a disabled man, which I judged to be the disability floor, flagging for Justin), Robert's Gabriel-dominated week and hairline (2026-09-12-7526d15fa8 / 2026-09-04-9b7835c402 flavour). Passed over: Ben D on Justin (apartheid line) - no football hook, Justin to say if he wants it run; Ben D on himself - self-target, not run; Marcus Jobacus/Spotlight and Edward's luck line - no hook tonight; Justin's pint line on Robert - no new hook. No flop lines today (no football)."
+  },
+  {
+   "ts": "2026-10-30T07:42",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Chelsea finishing (Guardian/Opta), then Evanilson, Jackson v Garcia, Forest from the Guardian weekend preview. Web search returned only stale or off-list results, so sourced from Guardian pages read directly. Opinion: none (morning). No roast suggestions used."
   }
  ]
 }
