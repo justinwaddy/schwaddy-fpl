@@ -1,29 +1,75 @@
 {
-  "gw": 9,
-  "waivers_close": "2026-10-30T11:00:00Z",
-  "ts": "2026-10-24T21:10 UTC",
-  "summary": "GW8 waivers have processed (Neto, Tzolakis and Boscagli are in), so these are for the GW9 window closing 30 October. Research added little to the model's board this week; the main overrule is caution on Ampadu for Neto. Justin is 2nd on points so claims fifth of six, ahead of Marcus only.",
+  "gw": 10,
+  "waivers_close": "2026-11-05T18:30:00Z",
+  "ts": "2026-10-30T21:20 UTC",
+  "summary": "These are for the GW10 window (closes 5 November); GW9 waivers have already processed. The only new research is the Guardian's GW9 predicted lineups, which put Gyokeres on Arsenal's bench, so Wissa for Gyokeres leads. Justin leads the league on points so claims sixth of six, last in the queue, and later claims are speculative.",
   "claims": [
     {
       "rank": 1,
+      "pos": "FWD",
+      "add": {
+        "name": "Wissa",
+        "code": "216646",
+        "club": "NEW"
+      },
+      "drop": {
+        "name": "Gyökeres",
+        "code": "224117",
+        "club": "ARS"
+      },
+      "why": "The Guardian's predicted lineups for Liverpool v Arsenal list Gyökeres among the substitutes, so he looks like a bench forward right now. Wissa has Newcastle's run of EVE, ful, ARS to come.",
+      "model": "Model next5 13.1 vs 4.9 (+8.2); I agree, and the lineup piece backs the model's low availability (0.32) for Gyökeres.",
+      "confidence": "high",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "pos": "MID",
+      "add": {
+        "name": "Cunha",
+        "code": "430871",
+        "club": "MUN"
+      },
+      "drop": {
+        "name": "Barcola",
+        "code": "482616",
+        "club": "LIV"
+      },
+      "why": "Barcola is only six games into his career with Liverpool so the model is unsure of him, and Liverpool's squad is deep and rotated heavily. Cunha is the model's best free midfielder; no permitted-outlet article this week speaks for or against his minutes, so this rests mainly on the numbers.",
+      "model": "Model next5 18.5 vs 10.2 (+8.3); I largely agree but with less conviction because Man United are in a poor run.",
+      "confidence": "medium",
+      "sources": []
+    },
+    {
+      "rank": 3,
       "pos": "DEF",
       "add": {
-        "name": "Van Hecke",
-        "code": "469142",
-        "club": "TOT"
+        "name": "Hill",
+        "code": "463981",
+        "club": "BOU"
       },
       "drop": {
         "name": "White",
         "code": "198869",
         "club": "ARS"
       },
-      "why": "Van Hecke is a regular in Spurs' back line while White is rotating with Timber at right-back, so the swap buys minutes certainty. No new permitted-outlet article this week; this rests on the model and the GW8 squad check.",
-      "model": "Model next5 18.3 vs 13.1 (+5.2); I agree.",
-      "confidence": "medium",
-      "sources": []
+      "why": "Hill is a Bournemouth defender who is not on the injured or substitutes list in the Guardian's lineups, with Bournemouth facing Leeds, Ipswich and Forest on his run. White is fit but the gap is modest, so treat this as a marginal upgrade.",
+      "model": "Model next5 17.7 vs 14.9 (+2.8); I agree but it is not urgent.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
     },
     {
-      "rank": 2,
+      "rank": 4,
       "pos": "MID",
       "add": {
         "name": "E.Le Fée",
@@ -31,81 +77,146 @@
         "club": "SUN"
       },
       "drop": {
-        "name": "Barcola",
-        "code": "482616",
-        "club": "LIV"
+        "name": "Neto",
+        "code": "247632",
+        "club": "CHE"
       },
-      "why": "Barcola is a rotation risk with Isak and Gakpo back in training, while Le Fee is a settled Sunderland creator. Sunderland's own site says Brobbey is ready for Leeds, so their attack stays intact.",
-      "model": "Model next5 18.1 vs 9.4 (+8.6); I agree, though Barcola's ceiling is higher than his number.",
-      "confidence": "medium",
-      "sources": [
-        {
-          "title": "Le Bris confirms Brobbey timeline",
-          "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
-        }
-      ]
-    },
-    {
-      "rank": 3,
-      "pos": "DEF",
-      "add": {
-        "name": "Mitchell",
-        "code": "244723",
-        "club": "CRY"
-      },
-      "drop": {
-        "name": "Gvardiol",
-        "code": "477424",
-        "club": "MCI"
-      },
-      "why": "Muharemovic has been picked up by another manager since the last run, so this slot moves to Mitchell on the model's numbers alone: no permitted-outlet article found either way. Gvardiol was benched in GW6 and GW7, which is why he is the drop.",
-      "model": "Model has Mitchell at next5 17.4 against Gvardiol 15.8; I agree on the numbers but have no news behind it.",
-      "confidence": "low",
-      "sources": []
-    },
-    {
-      "rank": 4,
-      "pos": "FWD",
-      "add": {
-        "name": "McBurnie",
-        "code": "169432",
-        "club": "HUL"
-      },
-      "drop": {
-        "name": "Brobbey",
-        "code": "441264",
-        "club": "SUN"
-      },
-      "why": "Brobbey is back from his hamstring but Sunderland say they will stay cautious, and he may start on the bench. McBurnie leads Hull's line. Only worth it if Brobbey is not ready on Sunday.",
-      "model": "Model next5 13.5 vs 11.2 (+2.3); I agree but treat it as a punt.",
+      "why": "Le Fée is a regular creator for Sunderland who the model rates well, while Neto is a probable starter for Chelsea in the same Guardian piece, so this is a small upgrade only and I would not use up a claim if a better one fails.",
+      "model": "Model next5 17.3 vs 15.1 (+2.2); I only partly agree, since Neto is expected to start.",
       "confidence": "low",
       "sources": [
         {
-          "title": "Le Bris confirms Brobbey timeline",
-          "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
     },
     {
       "rank": 5,
-      "pos": "MID",
+      "pos": "DEF",
       "add": {
-        "name": "Ampadu",
-        "code": "199598",
+        "name": "Justin",
+        "code": "220627",
         "club": "LEE"
       },
       "drop": {
-        "name": "Neto",
-        "code": "247632",
-        "club": "CHE"
+        "name": "Boscagli",
+        "code": "204120",
+        "club": "BHA"
       },
-      "why": "Speculative: Ampadu is a Leeds regular. Neto only just arrived and scored twice at Everton, so I would only run this one if I wanted to double up on Leeds. No fresh news behind it.",
-      "model": "Model next5 17.6 vs 14.9 (+2.7); I am less keen than the model because Neto is in form.",
+      "why": "A pure model punt: Leeds' Justin outscores Boscagli by one point over five games. Boscagli looks a probable starter at Man City, so there is no news reason to move; only use this if the earlier claims all succeed.",
+      "model": "Model next5 16.6 vs 15.6 (+1.0), below the model's own +2 threshold; I am not convinced.",
       "confidence": "low",
       "sources": []
     }
   ],
   "previous": [
+    {
+      "gw": 9,
+      "ts": "2026-10-24T21:10 UTC",
+      "claims": [
+        {
+          "rank": 1,
+          "pos": "DEF",
+          "add": {
+            "name": "Van Hecke",
+            "code": "469142",
+            "club": "TOT"
+          },
+          "drop": {
+            "name": "White",
+            "code": "198869",
+            "club": "ARS"
+          },
+          "why": "Van Hecke is a regular in Spurs' back line while White is rotating with Timber at right-back, so the swap buys minutes certainty. No new permitted-outlet article this week; this rests on the model and the GW8 squad check.",
+          "model": "Model next5 18.3 vs 13.1 (+5.2); I agree.",
+          "confidence": "medium",
+          "sources": []
+        },
+        {
+          "rank": 2,
+          "pos": "MID",
+          "add": {
+            "name": "E.Le Fée",
+            "code": "484420",
+            "club": "SUN"
+          },
+          "drop": {
+            "name": "Barcola",
+            "code": "482616",
+            "club": "LIV"
+          },
+          "why": "Barcola is a rotation risk with Isak and Gakpo back in training, while Le Fee is a settled Sunderland creator. Sunderland's own site says Brobbey is ready for Leeds, so their attack stays intact.",
+          "model": "Model next5 18.1 vs 9.4 (+8.6); I agree, though Barcola's ceiling is higher than his number.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Le Bris confirms Brobbey timeline",
+              "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "pos": "DEF",
+          "add": {
+            "name": "Mitchell",
+            "code": "244723",
+            "club": "CRY"
+          },
+          "drop": {
+            "name": "Gvardiol",
+            "code": "477424",
+            "club": "MCI"
+          },
+          "why": "Muharemovic has been picked up by another manager since the last run, so this slot moves to Mitchell on the model's numbers alone: no permitted-outlet article found either way. Gvardiol was benched in GW6 and GW7, which is why he is the drop.",
+          "model": "Model has Mitchell at next5 17.4 against Gvardiol 15.8; I agree on the numbers but have no news behind it.",
+          "confidence": "low",
+          "sources": []
+        },
+        {
+          "rank": 4,
+          "pos": "FWD",
+          "add": {
+            "name": "McBurnie",
+            "code": "169432",
+            "club": "HUL"
+          },
+          "drop": {
+            "name": "Brobbey",
+            "code": "441264",
+            "club": "SUN"
+          },
+          "why": "Brobbey is back from his hamstring but Sunderland say they will stay cautious, and he may start on the bench. McBurnie leads Hull's line. Only worth it if Brobbey is not ready on Sunday.",
+          "model": "Model next5 13.5 vs 11.2 (+2.3); I agree but treat it as a punt.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Le Bris confirms Brobbey timeline",
+              "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "pos": "MID",
+          "add": {
+            "name": "Ampadu",
+            "code": "199598",
+            "club": "LEE"
+          },
+          "drop": {
+            "name": "Neto",
+            "code": "247632",
+            "club": "CHE"
+          },
+          "why": "Speculative: Ampadu is a Leeds regular. Neto only just arrived and scored twice at Everton, so I would only run this one if I wanted to double up on Leeds. No fresh news behind it.",
+          "model": "Model next5 17.6 vs 14.9 (+2.7); I am less keen than the model because Neto is in form.",
+          "confidence": "low",
+          "sources": []
+        }
+      ]
+    },
     {
       "gw": 8,
       "ts": "2026-10-22T08:20 UTC",
@@ -751,80 +862,9 @@
           ]
         }
       ]
-    },
-    {
-      "gw": 3,
-      "ts": "2026-09-03T14:41 UTC",
-      "claims": [
-        {
-          "rank": 1,
-          "pos": "FWD",
-          "add": {
-            "name": "Igor Jesus",
-            "code": "482973",
-            "club": "NFO"
-          },
-          "drop": {
-            "name": "Woltemade",
-            "code": "470313",
-            "club": "NEW"
-          },
-          "why": "Woltemade left Newcastle for Juventus on a season-long loan on deadline day, so he plays in Serie A, not the Premier League, until at least next summer - a mandatory drop, not a judgement call. Igor Jesus is confirmed as Forest's starting striker in their predicted XI for Friday's game against Tottenham.",
-          "model": "Model: Igor Jesus next5 14.5 vs Woltemade 0.3, +14.2. Fully agree - the loan has pushed Woltemade's number to essentially zero, the clearest drop in the squad.",
-          "confidence": "high",
-          "sources": []
-        },
-        {
-          "rank": 2,
-          "pos": "MID",
-          "add": {
-            "name": "Rayan",
-            "code": "499604",
-            "club": "BOU"
-          },
-          "drop": {
-            "name": "Eze",
-            "code": "232413",
-            "club": "ARS"
-          },
-          "why": "Eze is still stuck behind Arsenal's front line under Arteta with no sign of a minutes trend pointing up. Rayan is confirmed in Bournemouth's predicted attacking three alongside Kluivert and Tavernier for the Newcastle game, and is being talked up as a breakout name this season.",
-          "model": "Model: Rayan next5 16.2 vs Eze 8.0, +8.2. Agree with the model - Eze's bench role explains the gap and there is no sign of it closing.",
-          "confidence": "high",
-          "sources": [
-            {
-              "title": "Could Bournemouth's Rayan become the Premier League's next Brazilian star?",
-              "url": "https://www.espn.com/soccer/story/_/id/47951333/bournemouth-rayan-brazil-premier-league-transfers-profile-tim-vickery"
-            }
-          ]
-        },
-        {
-          "rank": 3,
-          "pos": "MID",
-          "add": {
-            "name": "Groß",
-            "code": "60307",
-            "club": "BHA"
-          },
-          "drop": {
-            "name": "Garner",
-            "code": "232928",
-            "club": "EVE"
-          },
-          "why": "This is a hedge, not an urgent need. Garner's recovery from groin surgery is running ahead of schedule and he started for Everton in midweek against Preston, but Moyes still is not trusting him for a full 90 minutes. Gross is a fully fit, nailed-on Brighton starter with no fitness question at all. Only use this claim if you want the safer floor rather than Garner's upside.",
-          "model": "Model: Gross next5 16.0 vs Garner 10.1, +5.9. Partial overrule - the model cannot see Garner's accelerated recovery, so the real gap is probably smaller than 5.9, but Gross is nailed and Garner still is not.",
-          "confidence": "low",
-          "sources": []
-        }
-      ]
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-30T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: evening injury round-ups found nothing new at a permitted outlet."
-    },
     {
       "ts": "2026-10-01T08:10 UTC",
       "gw": 6,
@@ -1178,6 +1218,12 @@
       "gw": 9,
       "claims": 5,
       "note": "No change; no new dated permitted-source news, claims carried forward."
+    },
+    {
+      "ts": "2026-10-30T21:20 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "Retargeted to GW10 window after GW9 waivers processed; Wissa for Gyokeres promoted to first on Guardian lineup evidence."
     }
   ]
 }

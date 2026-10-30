@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-07-igor-jesus-was-a-sub-correction",
-      "ts": "2026-09-07T14:49 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Correction to Saturday's item: Sky's own team sheet for Forest v Spurs lists Igor Jesus among the substitutes and shows him coming on in the 59th minute, alongside Daniel Munoz - he was not left out of the squad, and Chris Wood came on separately at 74. The real change is that he has lost his starting place: he started GW1 and GW2 and Liam Delap led the line on Saturday. The model still rates him the best free-agent forward available at 11.8 over the next five.",
-      "url": "https://www.skysports.com/football/nottingham-forest-vs-tottenham-hotspur/teams/559473"
-    },
-    {
       "id": "2026-09-09-barcola-first-start-then-injured",
       "ts": "2026-09-09T21:09 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "mine",
       "text": "Schade (yours) looks set to reclaim a starting place at Hull this weekend: the Premier League's GW8 Scout says his shoulder injury limited him to a 45-minute substitute role against Liverpool, and that he should be ready to start. That supports the model's 1.00 availability for him, so no cover is needed unless Brentford's pre-match news says otherwise.",
       "url": "https://www.premierleague.com/en/news/4744220"
+    },
+    {
+      "id": "2026-10-30-guardian-predicted-subs",
+      "ts": "2026-10-30T21:20 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "The Guardian's predicted lineups list Gvardiol among Man City's substitutes against Brighton and Gyokeres among Arsenal's at Liverpool, with Saka and Saliba injured. Both Justin-owned players look like bench risks for GW9, which the model's availability (0.83 and 0.32) only half captures for Gvardiol.",
+      "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-09-30T21:10 UTC",
-      "published": 0,
-      "note": "Evening check inside the international break (GW6 waivers close 9 October). Searched Brobbey and the premierleague.com/Sky injury round-ups; only the already-known Havertz, Gakpo, Isak, Dorgu and Brobbey knocks surfaced, none new for Justin's squad. Nothing material; claims unchanged."
-    },
     {
       "ts": "2026-10-01T08:10 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-10-30T08:20 UTC",
       "published": 0,
       "note": "Morning check, waivers close 11:00 UTC. Searches returned only undated or stale permitted-source items and non-permitted outlets; nothing verifiable on his squad or claims. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-10-30T21:20 UTC",
+      "published": 1,
+      "note": "Evening check; Guardian predicted lineups (GW9) gave Gvardiol and Gyokeres as predicted substitutes. Deep starters run written."
     }
   ]
 }

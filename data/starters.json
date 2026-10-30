@@ -1,18 +1,83 @@
 {
-  "gw": 8,
-  "deadline": "2026-10-23T17:30:00Z",
-  "ts": "2026-10-22T18:45",
-  "summary": "No XI published yet and Friday's press conferences are still to come. Doubts: Schade (shoulder, bench-fit only last week), Brobbey (back from a hamstring, may start on the bench), Gvardiol (benched twice; O'Reilly's back injury may let him in) and Barcola (recovery plan, Isak and Gakpo back). Marmoush's calf looks like cramp.",
+  "gw": 9,
+  "deadline": "2026-10-31T11:00:00Z",
+  "ts": "2026-10-30T21:20 UTC",
+  "summary": "Based on one permitted outlet's predicted lineups (the Guardian), 13 of the 15 look likely to start and two look like bench risks: Gvardiol (City) and Gyokeres (Arsenal). No second permitted outlet had a published XI, so nothing is marked start.",
   "players": [
+    {
+      "name": "Tzolakis",
+      "code": "473284",
+      "club": "HUL",
+      "pos": "GKP",
+      "status": "likely",
+      "verdict": "Hull keeper expected, not among subs",
+      "note": "Guardian's Hull v Ipswich preview names Butland (arm, doubtful) among contenders only; Tzolakis is not on its injury or substitutes list. One permitted source, XI not confirmed.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
     {
       "name": "Raya",
       "code": "154561",
       "club": "ARS",
       "pos": "GKP",
       "status": "likely",
-      "verdict": "Undisputed No.1; started GW7 and at Bayern midweek",
-      "note": "Started the 1-0 win at Forest and the 2-2 at Bayern on Wednesday. No fitness concern reported. Arsenal host Everton.",
-      "sources": []
+      "verdict": "Not among Arsenal's listed subs at Liverpool",
+      "note": "Absent from Arsenal's injured and substitutes lists in the Guardian's Liverpool v Arsenal preview, so he is a probable starter; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "White",
+      "code": "198869",
+      "club": "ARS",
+      "pos": "DEF",
+      "status": "likely",
+      "verdict": "Not among Arsenal's listed subs at Liverpool",
+      "note": "Guardian lists Timber and Hincapie as Arsenal contenders but not White, and Saliba is injured (back), so White should start; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Gvardiol",
+      "code": "477424",
+      "club": "MCI",
+      "pos": "DEF",
+      "status": "bench",
+      "verdict": "Listed among City's subs v Brighton",
+      "note": "Guardian's Man City v Brighton preview lists him among the contenders rather than the probable XI, which contradicts the model's 0.83 availability. City also played Brighton in the Carabao Cup on Wednesday, so rotation is plausible.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Boscagli",
+      "code": "204120",
+      "club": "BHA",
+      "pos": "DEF",
+      "status": "likely",
+      "verdict": "Brighton defender, not among listed subs",
+      "note": "Not on the Guardian's Brighton injured or substitutes list for the trip to Man City, so a probable starter; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
     },
     {
       "name": "Bogle",
@@ -20,12 +85,12 @@
       "club": "LEE",
       "pos": "DEF",
       "status": "likely",
-      "verdict": "Regular in an unchanged Leeds XI; no midweek game",
-      "note": "Started the 1-1 with Man Utd in an unchanged eleven. No injury news. Leeds are away at Sunderland.",
+      "verdict": "Leeds defender, not among listed subs",
+      "note": "Not on the Guardian's injured or substitutes list for Bournemouth v Leeds, so a probable starter; single permitted source.",
       "sources": [
         {
-          "title": "Farke names his team to face Man Utd",
-          "url": "https://www.leedsunited.com/en/news/daniel-farke-names-his-team-to-face-rivals-manchester-united"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
     },
@@ -35,67 +100,27 @@
       "club": "BHA",
       "pos": "DEF",
       "status": "likely",
-      "verdict": "Rested in Thursday's Europa game; set to start at Anfield",
-      "note": "Started next to Dunk in the 5-0 win over Palace. He was on the bench at Jablonec on Thursday when Brighton made eight changes, so he should be fresh. No injury news.",
-      "sources": []
-    },
-    {
-      "name": "Gvardiol",
-      "code": "477424",
-      "club": "MCI",
-      "pos": "DEF",
-      "status": "doubt",
-      "verdict": "Benched in GW6 and GW7; O'Reilly back injury may reopen LB",
-      "note": "O'Reilly started at left-back at Liverpool and against Ipswich. Gvardiol then played about 72 minutes against AEK on Tuesday despite a minor back twinge. O'Reilly is now a major doubt, which is Gvardiol's route back in at Villa.",
-      "sources": []
-    },
-    {
-      "name": "White",
-      "code": "198869",
-      "club": "ARS",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "Started GW7, rotating with Timber at right-back",
-      "note": "Started at Forest and was replaced by Timber on 67'. Timber started at Bayern, so White is the fresher of the two for Saturday. No injury news, but Timber is a real rotation threat.",
-      "sources": []
-    },
-    {
-      "name": "Boscagli",
-      "code": "204120",
-      "club": "BHA",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "New in. Started GW7 and again in Europe on Thursday",
-      "note": "Started on the left of the back four against Palace. He was one of three kept from that eleven to start at Jablonec on Thursday, so tired legs are a small concern for Sunday. Struijk and Wieffer are still out, which keeps him in the side.",
-      "sources": []
-    },
-    {
-      "name": "Stach",
-      "code": "466525",
-      "club": "LEE",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Started GW7 at attacking midfield; no injury news",
-      "note": "Started behind Calvert-Lewin against Man Utd. Leeds have no midweek game, and the only XI talk is about Okafor, not Stach.",
+      "verdict": "Brighton defender, not among listed subs",
+      "note": "Not on the Guardian's Brighton injured or substitutes list for the trip to Man City, so a probable starter; single permitted source.",
       "sources": [
         {
-          "title": "Farke names his team to face Man Utd",
-          "url": "https://www.leedsunited.com/en/news/daniel-farke-names-his-team-to-face-rivals-manchester-united"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
     },
     {
-      "name": "Tavernier",
-      "code": "201658",
-      "club": "BOU",
+      "name": "Barcola",
+      "code": "482616",
+      "club": "LIV",
       "pos": "MID",
       "status": "likely",
-      "verdict": "Scored in GW7; started Thursday against Milan",
-      "note": "Scored in the 2-0 win over Sunderland, then started against AC Milan in the Europa League on Thursday night, 66 hours before Old Trafford. That is some rotation risk, but predicted XIs still have him.",
+      "verdict": "Liverpool winger, not among listed subs",
+      "note": "The Guardian's Liverpool v Arsenal preview lists Szoboszlai (hamstring) as doubtful and Ekitike, Frimpong, Bradley out, but not Barcola among subs; Liverpool also rotate often, so this is a risk.",
       "sources": [
         {
-          "title": "Bournemouth 2-0 Sunderland",
-          "url": "https://www.skysports.com/football/news/13598866/bournemouth-2-0-sunderland-marcus-tavernier-and-evanilson-score-either-side-of-kevin-dansos-red-card-as-cherries-pick-up-first-league-win-of-season"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
     },
@@ -105,22 +130,87 @@
       "club": "CHE",
       "pos": "MID",
       "status": "likely",
-      "verdict": "New in. Scored twice at Everton; set for right wing-back",
-      "note": "Scored both goals in the 2-0 win at Everton. With Reece James out for the season he is projected at right wing-back. Chelsea had no midweek game. Chelsea host Spurs.",
-      "sources": []
+      "verdict": "Chelsea midfielder, not among listed subs",
+      "note": "Not on the Guardian's Chelsea substitutes or injury list for Man United at home; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
     },
     {
       "name": "Schade",
       "code": "513418",
       "club": "BRE",
       "pos": "MID",
-      "status": "doubt",
-      "verdict": "Shoulder: only fit for the bench in GW7",
-      "note": "Hurt his shoulder against Villa. Against Liverpool he was only fit enough for the bench and came on at half-time. No update since, and Andrews' Hull press conference is still to come.",
+      "status": "likely",
+      "verdict": "Brentford forward line, not among listed subs",
+      "note": "Not on the Guardian's Brentford substitutes or injured lists for Forest at home; single permitted source.",
       "sources": [
         {
-          "title": "Brentford v Liverpool team news",
-          "url": "https://www.brentfordfc.com/en/news/first-team-news-brentford-v-liverpool-premier-league-kevin-schade-jannik-schuster"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Ødegaard",
+      "code": "184029",
+      "club": "ARS",
+      "pos": "MID",
+      "status": "likely",
+      "verdict": "Not among Arsenal's listed subs at Liverpool",
+      "note": "Absent from the Guardian's Arsenal injured and substitutes lists, so a probable starter; Saka (thigh) is out.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Tavernier",
+      "code": "201658",
+      "club": "BOU",
+      "pos": "MID",
+      "status": "likely",
+      "verdict": "Bournemouth midfielder, not among listed subs",
+      "note": "Not on the Guardian's Bournemouth substitutes or injury list for Leeds at home; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Gyökeres",
+      "code": "224117",
+      "club": "ARS",
+      "pos": "FWD",
+      "status": "bench",
+      "verdict": "Listed among Arsenal's subs at Liverpool",
+      "note": "Guardian's Liverpool v Arsenal preview lists him among the contenders, not the probable XI, which agrees with the model's low 0.32 availability.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+        }
+      ]
+    },
+    {
+      "name": "Marmoush",
+      "code": "438234",
+      "club": "TOT",
+      "pos": "FWD",
+      "status": "likely",
+      "verdict": "Spurs forward, not among listed subs",
+      "note": "The Guardian lists Marmoush among Spurs' scorers and not their subs or injured for Crystal Palace on Saturday; single permitted source.",
+      "sources": [
+        {
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
     },
@@ -130,138 +220,22 @@
       "club": "MCI",
       "pos": "FWD",
       "status": "likely",
-      "verdict": "Maresca: 'Haaland will be OK to start on Saturday'",
-      "note": "Scored twice against Ipswich, then limped off with a knock. He was an unused sub against AEK, so he is rested, and Maresca says he is OK to start at Villa.",
-      "sources": []
-    },
-    {
-      "name": "Tzolakis",
-      "code": "473284",
-      "club": "HUL",
-      "pos": "GKP",
-      "status": "likely",
-      "verdict": "New in. Hull's first choice; Butland is the back-up",
-      "note": "Jakirovic: 'He's our first choice.' He was in goal for the 1-0 defeat at Fulham. No injury news. Hull host Brentford.",
+      "verdict": "City striker, not among listed subs",
+      "note": "Not on the Guardian's Man City injured or substitutes list for Brighton; no permitted outlet has confirmed the XI yet.",
       "sources": [
         {
-          "title": "Fulham 1-0 Hull City",
-          "url": "https://www.skysports.com/football/news/13598860/fulham-1-0-hull-city-alvaro-arbeloa-earns-first-premier-league-win-as-cottagers-climb-out-of-relegation-zone"
+          "title": "Premier League team news: predicted lineups for the weekend action",
+          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
         }
       ]
-    },
-    {
-      "name": "Brobbey",
-      "code": "441264",
-      "club": "SUN",
-      "pos": "FWD",
-      "status": "doubt",
-      "verdict": "'Will be ready for Leeds' but may start on the bench",
-      "note": "Hamstring from international duty. He missed GW7 and was held out of the Europa game in Poznan. Le Bris: 'It is important not to rush... he will be ready for Leeds.' Tutierov has led the line meanwhile.",
-      "sources": [
-        {
-          "title": "Le Bris confirms Brobbey timeline",
-          "url": "https://www.safc.com/news/2026/october/21/le-bris-confirms-brobbey-timeline/"
-        }
-      ]
-    },
-    {
-      "name": "Barcola",
-      "code": "482616",
-      "club": "LIV",
-      "pos": "MID",
-      "status": "doubt",
-      "verdict": "Recovery plan Thursday; Isak and Gakpo back in training",
-      "note": "Started GW7 at Brentford and came on at 74' against Villarreal. He missed Thursday training on an individual recovery programme, with no injury reported, and is expected to play. Isak and Gakpo are back in full training, so his place is less safe.",
-      "sources": [
-        {
-          "title": "Liverpool 4-3 Villarreal",
-          "url": "https://www.skysports.com/football/news/13600900/liverpool-4-3-villarreal-rio-ngumoha-stars-and-florian-wirtz-scores-as-reds-come-from-two-down-to-win-in-europe"
-        }
-      ]
-    },
-    {
-      "name": "Marmoush",
-      "code": "438234",
-      "club": "TOT",
-      "pos": "FWD",
-      "status": "doubt",
-      "verdict": "Calf scare looks like cramp; De Zerbi: 'nothing important'",
-      "note": "Scored against Coventry on Monday, then held his calf after going off. De Zerbi: 'I think there are no injuries, nothing important.' FPL still shows 75%. Spurs had no midweek game.",
-      "sources": []
     }
   ],
   "runs": [
     {
-      "ts": "2026-09-18T08:10 UTC",
-      "gw": 5,
-      "kind": "light",
-      "note": "no change - morning sweep ahead of today's 17:30 UTC deadline reconfirmed every verdict (Pickford, Raya, Bogle, Vuskovic, Ajayi, Van Hecke, Gvardiol, Barcola, Lewis-Potter, Scott, Tavernier, Schade, Marmoush, Strand Larsen, Haaland); no permitted outlet has yet published a confirmed XI for any of tomorrow's fixtures"
-    },
-    {
-      "ts": "2026-09-17T21:09 UTC",
-      "gw": 5,
-      "kind": "light",
-      "note": "No change, ~1.5 hours after this morning's deep pass, with tomorrow's 17:30 UTC deadline now under a day away. Fresh club-by-club sweep (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace, Nottingham Forest) plus the Premier League's own injury tracker (updated today) found nothing to move any of the 15 verdicts: Arsenal's own site still has only Saliba out and no fresh word on Raya; Crystal Palace's own coverage reconfirms Mateta out until after the international break with Strand Larsen leading the line, Sarr and Nketiah also doubtful; Leeds have Gruev, Gudmundsson and Gnonto working back into training with nothing on Bogle; the league's own tracker lists Spurs' absentees as Kudus, Maddison, Kulusevski, Odobert and Solanke, with neither Marmoush nor Van Hecke among them. Gvardiol and Haaland's Carabao Cup rest (already reflected here) was reconfirmed as pure rotation ahead of Sunday's Sunderland game. This board stands as final for GW5 unless something changes before the deadline."
-    },
-    {
-      "ts": "2026-09-17T19:30 UTC",
-      "gw": 5,
+      "ts": "2026-10-30T21:20 UTC",
+      "gw": 9,
       "kind": "deep",
-      "note": "First deep pass for GW5, run the same day GW5 waivers processed and the squad became final (deadline tomorrow 17:30 UTC). Roughly 25 searches across every squad club (Everton, Arsenal, Leeds, Brighton, Hull, Tottenham, Man City, Liverpool, Brentford, Bournemouth, Crystal Palace) plus predicted-lineup and press-conference searches for all eight GW5 fixtures touching the squad. Six of fifteen (Bogle, Vuskovic, Gvardiol, Marmoush, Strand Larsen, Haaland) clear the bar for 'start' on permitted sources; the rest are 'likely' only because no permitted outlet has yet published this weekend's confirmed team news, not because of any real doubt - most searches surfaced only predicted-XI aggregators (Sports Mole, fotmob, RotoWire, Squawka, SI.com and similar), which are not permitted sources and were discarded even where they matched what a permitted source separately confirmed. Genuine finds: Gvardiol and Haaland were both left out entirely for tonight's Carabao Cup tie with Norwich, confirmed on mancity.com as pure rotation with both expected back Sunday against Sunderland - worth flagging since a blank cup appearance could otherwise misread as an injury; Bogle was voted Newcastle's own Hisense Player of the Match after Monday's goal; Vuskovic scored his first Brighton goal against Leeds; and Strand Larsen kept his place for tonight's Europa League opener with Mateta still out. Ajayi's hamstring situation could not be resolved either way on a permitted source - Sky Sports' own 22 August lineup has him starting and scoring, but nothing since has been published on a permitted outlet, so he sits at 'likely' rather than 'start' pending this weekend's actual team news."
-    },
-    {
-      "ts": "2026-10-09T21:30 UTC",
-      "gw": 6,
-      "kind": "deep",
-      "note": "First deep pass for GW6, written after waivers processed. Permitted-outlet coverage was thin: the Premier League's Matchweek 6 predicted line-ups plus Arsenal, Brentford, Brighton and Everton club previews. No XI is published yet, so nobody reaches start. Main finds: Van Hecke doubt (twins), Barcola possibly used up front, White available again."
-    },
-    {
-      "ts": "2026-10-10T08:15 UTC",
-      "gw": 6,
-      "kind": "light",
-      "note": "no change"
-    },
-    {
-      "ts": "2026-10-16T11:30 UTC",
-      "gw": 7,
-      "kind": "deep",
-      "note": "First deep pass for GW7, written after waivers processed at 10:00 UTC (in Stach, Bogle, Brobbey; out Le Fee, Ajayi, Strand Larsen). Sources: Leeds' Arsenal teamsheet, Brentford's Schade update, Sunderland's Torreense coverage, Sky on Liverpool's injuries, and Spurs' and Arsenal's team news. No XI is published for Saturday yet."
-    },
-    {
-      "ts": "2026-10-16T21:30 UTC",
-      "gw": 7,
-      "kind": "light",
-      "note": "Amended Schade (PL presser quote), Brobbey (ready, Isidor doubtful, now doubt), Gvardiol (rotation risk, now doubt), Lewis-Potter note; others unchanged."
-    },
-    {
-      "ts": "2026-10-17T08:10Z",
-      "gw": 7,
-      "kind": "light",
-      "note": "no change"
-    },
-    {
-      "ts": "2026-10-22T18:45Z",
-      "gw": 8,
-      "kind": "deep",
-      "note": "post-waiver squad (Neto, Tzolakis, Boscagli in); full sweep of all 15"
-    },
-    {
-      "ts": "2026-10-22T21:20Z",
-      "gw": 8,
-      "kind": "light",
-      "note": "no change; Hull v Brentford is now Sunday 2pm per Brentford site, Brobbey confirmed ready for Leeds by Sunderland site"
-    },
-    {
-      "ts": "2026-10-22T21:35Z",
-      "gw": 8,
-      "kind": "light",
-      "note": "removed off-list citations (fantasy/aggregator sites) left by the earlier deep run; affected players now uncited and none rated start"
-    },
-    {
-      "ts": "2026-10-23T08:10 UTC",
-      "gw": 8,
-      "kind": "light",
-      "note": "no change"
+      "note": "Only the Guardian's weekend predicted lineups and 10 things piece were readable; search returned stale or non-permitted pages. Inferred probable XI from its injured and substitutes lists."
     }
   ]
 }
