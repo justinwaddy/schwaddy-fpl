@@ -866,12 +866,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-01T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change; no new squad-relevant news found, claims carried forward."
-    },
-    {
       "ts": "2026-10-01T21:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -1224,6 +1218,12 @@
       "gw": 10,
       "claims": 5,
       "note": "Retargeted to GW10 window after GW9 waivers processed; Wissa for Gyokeres promoted to first on Guardian lineup evidence."
+    },
+    {
+      "ts": "2026-10-31T08:15 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No change since last run; searches found no new material on the claimed players."
     }
   ]
 }

@@ -236,6 +236,12 @@
       "gw": 9,
       "kind": "deep",
       "note": "Only the Guardian's weekend predicted lineups and 10 things piece were readable; search returned stale or non-permitted pages. Inferred probable XI from its injured and substitutes lists."
+    },
+    {
+      "ts": "2026-10-31T08:15 UTC",
+      "gw": 9,
+      "kind": "light",
+      "note": "no change; PL MW9 predicted XIs (30 Oct) consistent with existing verdicts"
     }
   ]
 }
