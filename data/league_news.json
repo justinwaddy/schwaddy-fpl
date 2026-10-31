@@ -1,46 +1,6 @@
 {
- "generated": "2026-10-31T07:41 UTC",
+ "generated": "2026-10-31T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-23-dowman-everton",
-   "ts": "2026-10-23T07:55",
-   "kind": "news",
-   "text": "With Bukayo Saka's suspected quad injury leaving Mikel Arteta short of attacking options, the Guardian expects 16-year-old Max Dowman to get his chance on the right at home to Everton on Saturday. He has played only nine Premier League minutes this season. Robert owns Saka, so the wait for a scan result now includes a teenager who is not on any of the six squads taking his shirt.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-23-ipswich-forest-friday",
-   "ts": "2026-10-23T07:55",
-   "kind": "news",
-   "text": "Ipswich host Nottingham Forest tonight at 8pm BST, and Forest, the league's lowest scorers with five goals in seven games, get Morgan Gibbs-White back after he missed the defeat by Arsenal. Edward owns him. Oliver Glasner called Liam Delap one of his best finishers and wants to get him into better positions, with 12 of Delap's 14 Premier League goals coming for Ipswich, per the Guardian.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-23-villa-city-saturday",
-   "ts": "2026-10-23T07:55",
-   "kind": "news",
-   "text": "Manchester City go to Aston Villa on Saturday at 12.30pm BST needing a win to become just the third side to take maximum points from their first eight Premier League games, according to the Guardian. Villa have recovered from a single point in their first four league games. Justin has Haaland and Gvardiol in the City camp and Edward has Manzambi at Villa, so somebody gets a bad lunchtime.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-23-united-bournemouth-sunday",
-   "ts": "2026-10-23T07:55",
-   "kind": "news",
-   "text": "The Guardian reckons Michael Carrick will surely follow if Manchester United lose to Bournemouth on Sunday, after Bruno Fernandes accused his manager of tactical failings following the 4-1 loss at Como. Big Ben owns Fernandes, Marcus has Mbeumo, and Justin has Tavernier and Marcus has Evanilson on the Bournemouth side of it.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
   {
    "id": "2026-10-23-ipswich-forest-draw",
    "ts": "2026-10-23T22:42",
@@ -701,16 +661,37 @@
     "title": "Confirmed line-ups: Spurs vs Crystal Palace",
     "url": "https://www.tottenhamhotspur.com/news/1182883/confirmed-line-ups-tottenham-hotspur-vs-crystal-palace-premier-league"
    }
+  },
+  {
+   "id": "2026-10-31-robert-mateta",
+   "ts": "2026-10-31T22:45",
+   "kind": "opinion",
+   "text": "Mateta finished the afternoon on minus two and in the dressing room early, banned until 2 December, which makes him the second thing about Robert this month to leave early with no plan to come back. The other is the hairline.",
+   "source": null
+  },
+  {
+   "id": "2026-10-31-bigben-ballknowledge",
+   "ts": "2026-10-31T22:45",
+   "kind": "opinion",
+   "text": "Big Ben's day was built by Van Hecke at Spurs and McBurnie at Hull, neither of them anything to do with Arsenal, the club he follows with such conviction, who play at Anfield tomorrow with Konsa in his eleven. Fifty-six already, and not a point of it from the club he claims to know.",
+   "source": null
+  },
+  {
+   "id": "2026-10-31-smallben-suzuki",
+   "ts": "2026-10-31T22:45",
+   "kind": "opinion",
+   "text": "Small Ben has a fight coming, and Suzuki, who he owns, spent Saturday putting one in his own net: that is the whole boxing plan, hitting yourself before the other man gets round to it. Thiago did bring him 9, which is the bit he will mention. The rest he will leave out.",
+   "source": null
+  },
+  {
+   "id": "2026-10-31-justin-arsenal",
+   "ts": "2026-10-31T22:45",
+   "kind": "opinion",
+   "text": "Justin spent Friday loading up on Arsenal and spent Saturday with none of them kicking a ball, while Haaland took 90 minutes against Brighton to return 2 points and left the nets exactly as he found them. Four of his eleven play at Anfield tomorrow, so the day is not over, which is the best thing anyone can say for it.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-10T16:03",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 UTC slot: MUN v TOT, both sheets found on tottenhamhotspur.com"
-  },
   {
    "ts": "2026-10-10T22:50",
    "news": 1,
@@ -1123,6 +1104,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "17:30 slot: Spurs and Palace confirmed sheets both found (club sites); none missing"
+  },
+  {
+   "ts": "2026-10-31T22:45",
+   "news": 0,
+   "opinion": 4,
+   "matchday": true,
+   "note": "Evening wrap. No reported items: searches returned nothing from permitted outlets for today's matches, so none published. Opinion: Robert (Mateta red card, hairline), Big Ben (Arsenal ball knowledge, Van Hecke/McBurnie), Small Ben (Suzuki own goal, boxing), Justin (Arsenal stack still to play). Passed over: Ben D on Justin nationality line (not writing it, Justin's call); Ben D on himself (self-slur, no joke to write); Edward on Marcus/Ben D/Robert-transfers, Marcus kneejerk, Marcus Jobacus, Ben C height, Rob pint - no fresh football hook tonight, will keep. Flop lines not rewritten: reflop run skipped this evening."
   }
  ]
 }
