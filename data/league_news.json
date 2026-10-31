@@ -1,43 +1,6 @@
 {
- "generated": "2026-10-30T22:45 UTC",
+ "generated": "2026-10-31T07:41 UTC",
  "items": [
-  {
-   "id": "2026-10-22-rice-bayern",
-   "ts": "2026-10-22T07:55",
-   "kind": "news",
-   "text": "Declan Rice scored Arsenal's late equaliser at Bayern Munich in a 2-2 draw that the BBC says Arsenal could have won, the one piece of good news for Small Ben out of a night that cost Robert his winger. Eze came on for Saka and scored the opener, and Noni Madueke moved over to the right and looked bright.",
-   "source": {
-    "title": "Saka injury 'does not look good' - how will Arsenal cope?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o"
-   }
-  },
-  {
-   "id": "2026-10-22-bruno-carrick",
-   "ts": "2026-10-22T07:55",
-   "kind": "news",
-   "text": "Bruno Fernandes, Big Ben's, told TNT Sports after Manchester United's 4-1 Champions League defeat at Como that the decision 'from the staff' not to press man to man left too much space behind, and that sometimes 'you have to be more brave'. Michael Carrick answered that if you do not run forward and back 'you aren't going to win'. Marcus has Mbeumo and Robert has Sesko and Yoro in the same dressing room.",
-   "source": {
-    "title": "Fernandes rounds on Carrick after Man Utd humiliation",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq74pjn80x4wo"
-   }
-  },
-  {
-   "id": "2026-10-22-chelsea-back-three",
-   "ts": "2026-10-22T07:55",
-   "kind": "news",
-   "text": "Chelsea have conceded one league goal since the international break after letting in a league-high 12 before it, and kept their first clean sheet of the season at Everton on Saturday, with Josh Acheampong a regular in Xabi Alonso's back three. For Robert, who owns Martinez, James and Estevao, and Marcus, who has Joao Pedro, that is the best Chelsea news of the autumn.",
-   "source": {
-    "title": "How England hopeful Acheampong is giving Chelsea a big decision to make",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ck4g10n56jzqo"
-   }
-  },
-  {
-   "id": "2026-10-22-justin-73",
-   "ts": "2026-10-22T22:50",
-   "kind": "opinion",
-   "text": "Justin posted the biggest week in the league, 73, with Haaland, Vuskovic and Tavernier all in double figures, and it earned him second place and a view of Marcus's back. It is the most productive way anybody has found of finishing exactly where they started. Next week he gets to do it again, this time with Pickford and Van Hecke gone and a new keeper nobody has heard of.",
-   "source": null
-  },
   {
    "id": "2026-10-22-big-ben-name",
    "ts": "2026-10-22T22:50",
@@ -134,7 +97,7 @@
    "id": "2026-10-24-chelsea-injuries",
    "ts": "2026-10-24T07:42",
    "kind": "news",
-   "text": "Chelsea host Tottenham at 5.30pm BST without Emiliano Martinez, who the Guardian lists with a jaw problem until 21 November, and Reece James is out with a knee until January. Mike Penders is expected in goal. Robert owns both of them, so his Chelsea corner starts the evening with a stand-in keeper and no right-back.",
+   "text": "Chelsea host Tottenham at 5.30pm BST without Emiliano Martinez, who the Guardian lists with a jaw problem until 21 November, and James is out with a knee until January. Mike Penders is expected in goal. Robert owns both of them, so his Chelsea corner starts the evening with a stand-in keeper and no right-back.",
    "source": {
     "title": "Premier League team news: predicted lineups for the weekend action",
     "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
@@ -692,23 +655,49 @@
    "kind": "opinion",
    "text": "The page logged thirteen waiver moves today and none of them were Marcus's, the same Marcus who sold a winger the day after two good games, and who is 8 behind with Tzolis at a 75 percent chance of playing. Either the kneejerk has been put to bed, or the luck has told him to sit tight, and for Marcus it has never been easy to tell which of the two is doing the talking.",
    "source": null
+  },
+  {
+   "id": "2026-10-31-chelsea-injuries",
+   "ts": "2026-10-31T07:41",
+   "kind": "news",
+   "text": "Chelsea go into the 12.30 against Manchester United without James (knee, out until January), Joao Pedro (thigh, no return date) and Lacroix (hamstring, no return date), and Martinez is out with a jaw injury until 8 November, the Guardian's predicted lineups report. That is Robert's James and Martinez gone from the same back line, Marcus's Joao Pedro on the sidelines, and Small Ben's Lacroix with them. Man Utd lose Sesko to a shin injury until January, which is one more name off Robert's list.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+   }
+  },
+  {
+   "id": "2026-10-31-arsenal-injuries-anfield",
+   "ts": "2026-10-31T07:41",
+   "kind": "news",
+   "text": "Arsenal travel to Anfield on Sunday with Tzolis out with a hamstring injury until 7 November, and Saka (thigh) and Saliba (back) both listed as injured with no return date, according to the Guardian's team news round-up. Tzolis is Marcus's, Saka is Robert's, and neither is likely to be there when Arsenal kick off.",
+   "source": {
+    "title": "Premier League team news: predicted lineups for the weekend action",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+   }
+  },
+  {
+   "id": "2026-10-31-fernandes-returns",
+   "ts": "2026-10-31T07:41",
+   "kind": "news",
+   "text": "Bruno Fernandes is expected back in Manchester United's starting lineup at Chelsea after he was an unused substitute in the 3-0 home defeat by Bournemouth, the Guardian reports. He and Michael Carrick held clear-the-air talks this week after he criticised the tactics in the Champions League defeat at Como. Big Ben owns him.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
+   }
+  },
+  {
+   "id": "2026-10-31-gonzalo-drought",
+   "ts": "2026-10-31T07:41",
+   "kind": "news",
+   "text": "Gonzalo Garcia has gone seven games without scoring for Fulham, and the Guardian calls his form concerning as Alvaro Arbeloa's side, who went six league games without a win to start his reign, travel to Aston Villa tonight. Big Ben has Gonzalo in his fifteen, and Villa's Nicolas Jackson, who has scored four in five, belongs to Edward.",
+   "source": {
+    "title": "Premier League: 10 things to look out for this weekend",
+    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-08T22:45",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, no fixtures today (GW6 not started); no football to report, so two opinion pieces off team names and Robert's position. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): both aimed at sexuality/race, out of bounds. No flops today."
-  },
-  {
-   "ts": "2026-10-09T07:55",
-   "news": 5,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Liverpool and Arsenal international-break injuries (Guardian), plus Scott, Sunderland and Konsa. Search tool could not reach BBC/Guardian directly so read articles by curl. Roast archive: both unused suggestions left alone (slur/sexuality and apartheid, outside what the banter rules allow); no opinion on morning runs anyway."
-  },
   {
    "ts": "2026-10-09T22:45",
    "news": 0,
@@ -847,7 +836,7 @@
    "news": 3,
    "opinion": 0,
    "matchday": true,
-   "note": "Morning. Led with Reece James's three-month injury (Robert's) off BBC Sport, then Emegha ruled out at Everton and Struijk's red overturned. Guardian and Sky were not usable for detail; WebSearch returned only off-list or stale results so BBC pages were read directly. Roast archive untouched (morning, no opinion)."
+   "note": "Morning. Led with James's three-month injury (Robert's) off BBC Sport, then Emegha ruled out at Everton and Struijk's red overturned. Guardian and Sky were not usable for detail; WebSearch returned only off-list or stale results so BBC pages were read directly. Roast archive untouched (morning, no opinion)."
   },
   {
    "ts": "2026-10-17T11:03",
@@ -1121,6 +1110,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, no fixtures today (GW9 starts tomorrow). Live feed totals reflect GW9 pre-kickoff and lag a week, so quoted only the 8-point lead from the settled GW8 table. Led with today's waiver moves: Edward binning three 8s, Big Ben's five claims, Justin loading Arsenal ahead of Liverpool v Arsenal, Marcus making no moves. No flops today. Roast archive: used the Marcus kneejerk and Big Ben ball-knowledge themes in the page's own voice. Passed over the Marcus priest/Jobacus suggestion (the Spotlight framing runs into the children line), the Ben D on Justin and Ben D on himself submissions (slur / politics, not tonight's football), and left the hairline, Small Ben boxing and Robert pint ones for a night with a hook (Robert made no move today, GW9 he owns both sides of Chelsea v Man Utd already ran). Reported items none: morning run already posted four."
+  },
+  {
+   "ts": "2026-10-31T07:41",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Chelsea and Arsenal injury lists from the Guardian predicted lineups; Fernandes recall and Gonzalo drought from the Guardian 10 things. Searches returned mostly stale results so I read Guardian pages directly. No opinion on a morning run; roast archive untouched."
   }
  ]
 }
