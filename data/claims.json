@@ -1,7 +1,7 @@
 {
   "gw": 10,
   "waivers_close": "2026-11-05T18:30:00Z",
-  "ts": "2026-10-30T21:20 UTC",
+  "ts": "2026-10-31T21:10 UTC",
   "summary": "These are for the GW10 window (closes 5 November); GW9 waivers have already processed. The only new research is the Guardian's GW9 predicted lineups, which put Gyokeres on Arsenal's bench, so Wissa for Gyokeres leads. Justin leads the league on points so claims sixth of six, last in the queue, and later claims are speculative.",
   "claims": [
     {
@@ -866,12 +866,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-01T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: international-break injury round-ups show nothing new for the squad or shortlist."
-    },
-    {
       "ts": "2026-10-02T08:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -1224,6 +1218,12 @@
       "gw": 10,
       "claims": 5,
       "note": "No change since last run; searches found no new material on the claimed players."
+    },
+    {
+      "ts": "2026-10-31T21:10 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No new verifiable research from permitted outlets; claims carried forward unchanged."
     }
   ]
 }

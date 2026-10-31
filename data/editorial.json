@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-01T21:10 UTC",
-      "published": 0,
-      "note": "Evening check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com injury round-ups again only show the known Havertz, Gakpo, Isak, Dorgu, Brobbey and Palmer knocks; nothing new for Justin's squad. Nothing material; claims unchanged."
-    },
-    {
       "ts": "2026-10-02T08:10 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com round-ups still show only the known Havertz, Gakpo, Isak, Dorgu and Brobbey knocks; nothing new for Justin's squad. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-10-31T08:15 UTC",
       "published": 0,
       "note": "Morning check before GW9 deadline (11:00 UTC). Premier League MW9 predicted XIs repeat what is already published (Gyokeres vs Havertz toss-up, Haaland expected to start); nothing new on Barcola, Wissa or Cunha. Nothing published."
+    },
+    {
+      "ts": "2026-10-31T21:10 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only stale (2025) or non-permitted items, nothing new verifiable from permitted outlets on his squad or claims. Not in starters window. Nothing published."
     }
   ]
 }
