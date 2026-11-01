@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-02T21:10 UTC",
-      "published": 0,
-      "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com injury round-ups only repeat the known Brobbey hamstring (return listed as 10 October, reported); a search hit on Gvardiol tibial fracture is old and contradicts the model's 0.95 availability, so discarded. Nothing material."
-    },
-    {
       "ts": "2026-10-03T08:15 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky/premierleague.com/club-site searches show only the known Havertz, Gakpo, Isak, Brobbey and Palmer knocks. A search summary said Van Hecke withdrew from the Netherlands squad with a foot injury, but I could not confirm it in the article text, so not published; the model already shows him 75%. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-01T08:10 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only stale (2020-2025/Jan 2026) or non-permitted items; nothing current and verifiable from a permitted outlet on his squad or claims. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-01T21:10 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only 2025 season or non-permitted items, nothing current from a permitted outlet. Not in starters window. Nothing published."
     }
   ]
 }

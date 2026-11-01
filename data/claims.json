@@ -866,12 +866,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-02T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: premierleague.com round-ups show nothing new; Brobbey return reported as 10 October, claim 3 stays low."
-    },
-    {
       "ts": "2026-10-03T08:15 UTC",
       "gw": 6,
       "claims": 5,
@@ -1224,6 +1218,12 @@
       "gw": 10,
       "claims": 5,
       "note": "No change; searches found nothing new from permitted outlets, claims carried forward."
+    },
+    {
+      "ts": "2026-11-01T21:10 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No change; no new verifiable research from permitted outlets, claims carried forward."
     }
   ]
 }
