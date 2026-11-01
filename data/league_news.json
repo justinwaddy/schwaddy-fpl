@@ -1,37 +1,6 @@
 {
- "generated": "2026-10-31T22:45 UTC",
+ "generated": "2026-11-01T07:50 UTC",
  "items": [
-  {
-   "id": "2026-10-23-ipswich-forest-draw",
-   "ts": "2026-10-23T22:42",
-   "kind": "news",
-   "text": "Ipswich 1-1 Nottingham Forest at Portman Road: Neco Williams put Forest in front after 13 minutes and Julio Enciso levelled four minutes before half-time. Williams is Edward's and Enciso is Small Ben's, so the weekend's only game so far split its points between those two, with nine fixtures and everybody else still to come.",
-   "source": {
-    "title": "Ipswich Town 1-1 Nottingham Forest - Team Stats",
-    "url": "https://www.espn.com/soccer/team-stats/_/gameId/401879253/league/eng.1"
-   }
-  },
-  {
-   "id": "2026-10-23-small-ben-friday",
-   "ts": "2026-10-23T22:42",
-   "kind": "opinion",
-   "text": "Small Ben is top of the weekend, which is the one table he gets to look down on, and it took Enciso poaching a goal at Portman Road to put him there. He still sits 49 behind Marcus overall, a gap he will study the way he studies everything else: from below.",
-   "source": null
-  },
-  {
-   "id": "2026-10-23-edward-peaked",
-   "ts": "2026-10-23T22:42",
-   "kind": "opinion",
-   "text": "Edward's Friday peaked in the thirteenth minute, when Neco Williams scored, and Return of the Djedi has been a sequel nobody asked for since. Gibbs-White spent the remaining 77 minutes of his 90 contributing very little, and Edward now waits for Saturday with nine players still to come, which is the threat and the warning in one.",
-   "source": null
-  },
-  {
-   "id": "2026-10-23-marcus-sofa",
-   "ts": "2026-10-23T22:42",
-   "kind": "opinion",
-   "text": "Marcus spent Friday night exactly where luck likes him: on the sofa, 19 clear of Justin, with all eleven of his players yet to touch a ball. Everyone else did the work and he leads the weekend's argument by not having started it.",
-   "source": null
-  },
   {
    "id": "2026-10-23-robert-leaving",
    "ts": "2026-10-23T22:42",
@@ -689,16 +658,49 @@
    "kind": "opinion",
    "text": "Justin spent Friday loading up on Arsenal and spent Saturday with none of them kicking a ball, while Haaland took 90 minutes against Brighton to return 2 points and left the nets exactly as he found them. Four of his eleven play at Anfield tomorrow, so the day is not over, which is the best thing anyone can say for it.",
    "source": null
+  },
+  {
+   "id": "2026-11-01-anfield-arsenal",
+   "ts": "2026-11-01T07:50",
+   "kind": "news",
+   "text": "Liverpool v Arsenal is the only fixture of the gameweek still to come, at Anfield at 16:30, and it is the one that decides how Sunday looks: Arsenal have not won there since 2012, and arrive four days after being knocked out of the Carabao Cup by League Two Fleetwood, while Liverpool have won five on the spin under Iraola. Arsenal's Raya, White, Odegaard and Gyokeres (Justin), Gabriel, Saka and Mosquera (Robert), Calafiori and Tzolis (Marcus), Timber (Edward) and Rice and Madueke (Small Ben) are all still waiting, as are Virgil, Gakpo and Isak (Small Ben), Barcola (Justin) and Wirtz and Jacquet (Big Ben) on the other side.",
+   "source": {
+    "title": "Anfield, intensity, rotation - how Iraola is improving Liverpool",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo"
+   }
+  },
+  {
+   "id": "2026-11-01-brighton-city",
+   "ts": "2026-11-01T07:50",
+   "kind": "news",
+   "text": "Brighton won 1-0 at the Etihad on Saturday, three days after losing to City on penalties in the Carabao Cup, and Bart Verbruggen made seven saves to give them a fifth clean sheet in six league games. That is Edward's goalkeeper, and Marcus (De Cuyper) and Justin (Vuskovic, Boscagli) took defensive returns off it too. City's owners had the opposite afternoon: Justin has Haaland and Gvardiol, Robert has Cherki, O'Reilly and Ndiaye, and Marcus, Small Ben, Edward and Big Ben each hold a City player of their own.",
+   "source": {
+    "title": "Verbruggen spreads belief as Brighton continue to impress",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6d7qwnz1jnjo"
+   }
+  },
+  {
+   "id": "2026-11-01-estevao-chelsea",
+   "ts": "2026-11-01T07:50",
+   "kind": "news",
+   "text": "Estevao had not started a Premier League game this season before Saturday, and against Manchester United he had six shots, created three chances and had two goals chalked off, one for a marginal offside, before leaving to a standing ovation after 86 minutes. Robert owns him and the page has him on 3 points, with no goal to show for it. Morgan Rogers (Big Ben) scored the one that mattered for Chelsea, in a 2-0 win.",
+   "source": {
+    "title": "Returning Estevao brings X-factor to strikerless Chelsea",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cwnv0p143qzyo"
+   }
+  },
+  {
+   "id": "2026-11-01-martinez-red",
+   "ts": "2026-11-01T07:50",
+   "kind": "news",
+   "text": "Lisandro Martinez was sent off at Stamford Bridge after two fouls in one minute and 23 seconds turned a decent Manchester United away performance into a 2-0 defeat, and BBC's United reporter says Carrick did not look at him as he walked off. United's owners in this league are Robert (Yoro, Sesko), Big Ben (Bruno Fernandes) and Marcus (Mbeumo), who all now have a manager under pressure to answer to.",
+   "source": {
+    "title": "Martinez's 'inexplicable' 83 seconds cost Man Utd and Carrick",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckvg64xp1e1eo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-10T22:50",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with Chelsea 5-1 Bournemouth (ESPN); no other match report found at a permitted outlet. Opinions: Marcus, Robert, Anfield-owns-the-league; rewrote today's flop lines. Both unused roast suggestions passed over: one is a sexuality slur, the other is aimed at race. Neither is usable, so they stay unused. Flop rewrite skipped: reflop.py found no flop events from today in data/news.json (they exist only in public.json), so the script refuses; template lines left as they were."
-  },
   {
    "ts": "2026-10-11T07:50",
    "news": 3,
@@ -1111,6 +1113,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening wrap. No reported items: searches returned nothing from permitted outlets for today's matches, so none published. Opinion: Robert (Mateta red card, hairline), Big Ben (Arsenal ball knowledge, Van Hecke/McBurnie), Small Ben (Suzuki own goal, boxing), Justin (Arsenal stack still to play). Passed over: Ben D on Justin nationality line (not writing it, Justin's call); Ben D on himself (self-slur, no joke to write); Edward on Marcus/Ben D/Robert-transfers, Marcus kneejerk, Marcus Jobacus, Ben C height, Rob pint - no fresh football hook tonight, will keep. Flop lines not rewritten: reflop run skipped this evening."
+  },
+  {
+   "ts": "2026-11-01T07:50",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Liverpool v Arsenal (the only fixture today), then Brighton's win at City, Estevao and Martinez's red at Chelsea, all BBC. No opinion on a morning run. Roast archive untouched; no suggestions passed over (none needed tonight)."
   }
  ]
 }
