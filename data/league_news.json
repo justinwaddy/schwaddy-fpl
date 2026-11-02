@@ -1,36 +1,6 @@
 {
- "generated": "2026-11-01T22:55 UTC",
+ "generated": "2026-11-02T07:55 UTC",
  "items": [
-  {
-   "id": "2026-10-24-xi-1130",
-   "ts": "2026-10-24T11:07",
-   "kind": "news",
-   "text": "Team news, Aston Villa v Man City (11:30 UTC): Edward has Manzambi, Jackson and Doku starting. Small Ben has Suzuki and Donnarumma starting but Rúben is out of the eleven. Marcus has Guéhi starting, Foden on the bench. Justin has Gvardiol and Haaland starting. Robert has Cherki and Ndiaye starting, O'Reilly not in the eleven. Big Ben has Matheus N. and Enzo both out of the eleven.",
-   "source": {
-    "title": "City make four changes for trip to Aston Villa",
-    "url": "https://www.mancity.com/news/mens/aston-villa-v-city-premier-league-team-news-63928427"
-   }
-  },
-  {
-   "id": "2026-10-24-xi-1400",
-   "ts": "2026-10-24T13:07",
-   "kind": "news",
-   "text": "Team news, 15:00 kick-offs: Everton's XI at Arsenal is confirmed. Starting: Tarkowski and Barry (Edward), Dewsbury-Hall (Marcus). Not in the matchday squad: Branthwaite (Big Ben). Arsenal's and Fulham's teamsheets were not available at a permitted source, so their players are not reported here.",
-   "source": {
-    "title": "Everton Starting XI Confirmed For Arsenal Clash",
-    "url": "https://www.evertonfc.com/news/2026/october/24/everton-starting-xi-confirmed-for-arsenal-clash/"
-   }
-  },
-  {
-   "id": "2026-10-24-xi-1630",
-   "ts": "2026-10-24T16:07",
-   "kind": "news",
-   "text": "Team news, Chelsea v Tottenham (16:30): Edward's Palmer starts. Marcus: Kinsky starts, Palestra on the bench, Joao Pedro not in the squad. Robert: Estevao and Solanke on the bench, Martinez and James not in the squad. Justin: Neto and Marmoush both start. Small Ben's Lacroix starts. Big Ben's Rogers starts.",
-   "source": {
-    "title": "Confirmed line-ups: Chelsea vs Spurs",
-    "url": "https://www.tottenhamhotspur.com/news/1180783/confirmed-line-ups-chelsea-vs-tottenham-hotspur-premier-league-october-2026"
-   }
-  },
   {
    "id": "2026-10-24-marcus-luck",
    "ts": "2026-10-24T22:45",
@@ -689,16 +659,39 @@
    "kind": "opinion",
    "text": "Small Ben has nobody left to play and sits 36 behind the leaders, with Isak, Virgil and Gakpo adding five points between them against the Arsenal he also owns half of. Three rivals still have players to come and he has a finished gameweek and a view of the top of the table from a long way below it, which for a man of his height is the usual angle.",
    "source": null
+  },
+  {
+   "id": "2026-11-02-havertz-anfield",
+   "ts": "2026-11-02T07:55",
+   "kind": "news",
+   "text": "Kai Havertz scored after 16 minutes at Anfield, his first goal in 10 appearances, and Arsenal won there for the first time since September 2012 with Liverpool finishing without a shot on target, the Guardian reports. Havertz is Big Ben's, as is Konsa behind him; Calafiori and Tzolis (Marcus), Raya and Odegaard (Justin), Gabriel (Robert) and Madueke and Rice (Small Ben) were all in the same win. Madueke was booked, and Virgil van Dijk was heard in the tunnel saying he should have had a second yellow.",
+   "source": {
+    "title": "Arsenal hold on for first league win at Liverpool since 2012 after Kai Havertz pounces early",
+    "url": "https://www.theguardian.com/football/2026/nov/01/liverpool-arsenal-premier-league-match-report"
+   }
+  },
+  {
+   "id": "2026-11-02-iraola-penalty",
+   "ts": "2026-11-02T07:55",
+   "kind": "news",
+   "text": "Andoni Iraola said Liverpool will tell their players to go down in the box in future after Isak was denied a penalty at Anfield. Isak stayed upright while Jurrien Timber held a handful of his shirt as Barcola's cross came in, and the VAR did not step in; a second claim, Tzolis holding Gakpo, was reviewed and rejected. \"We have to tell them to go down because they're not going to call it otherwise,\" Iraola said. Isak and Gakpo are Small Ben's, Barcola is Justin's, Tzolis is Marcus's, and Timber is Edward's.",
+   "source": {
+    "title": "'We have to tell them to go down': Iraola responds to Isak penalty denial for Liverpool",
+    "url": "https://www.theguardian.com/football/2026/nov/01/andoni-iraola-responds-liverpool-penalty-denial-arsenal-premier-league"
+   }
+  },
+  {
+   "id": "2026-11-02-everton-newcastle",
+   "ts": "2026-11-02T07:55",
+   "kind": "news",
+   "text": "Everton host Newcastle tonight at 20:00 UTC, five days after beating them in the Carabao Cup, a game Jack Grealish missed after Everton said he had breached club discipline, the Guardian reports. It is the last fixture of the gameweek, and it is still to come for Edward's Tarkowski, Barry and Pickford, Big Ben's Branthwaite, Marcus's Dewsbury-Hall and Small Ben's Osula, who scored at Selhurst Park on 25 October.",
+   "source": {
+    "title": "Grealish could have been Everton's poster boy of a new era. Now his career is in limbo",
+    "url": "https://www.theguardian.com/football/2026/oct/30/jack-grealish-dropped-disclipline-everton-newcastle-carabao-cup-david-moyes"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-11T15:03",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "15:30 UTC slot, LIV v MCI: Liverpool sheet found (liverpoolfc.com); City sheet not readable (mancity.com 403), left out"
-  },
   {
    "ts": "2026-10-11T22:45",
    "news": 0,
@@ -1111,6 +1104,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening. No reported items: could not find the LIV v ARS report at a permitted outlet and NEW v EVE is still to come. Led with Marcus and Edward level on 446. Used: Edward on Robert's hairline, Justin on Marcus (Jobacus/priest), Edward on Big Ben's ball knowledge and Bruno, Ben D on Ben C's height. Passed over: Ben D on Justin and Ben D on himself (not needed tonight, Justin to decide), Marcus kneejerk/Elanga (no hook), Ben C boxing (ran Saturday), Justin's pint line (no hook), Ben C bench 21 (no bench hook tonight). Rewrote today's 5 flops."
+  },
+  {
+   "ts": "2026-11-02T07:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Arsenal's win at Anfield (Havertz) and Iraola's penalty comments, then tonight's Newcastle v Everton as the only fixture left. Search turned up little off-list-free current material beyond the Guardian, so three items rather than six. No roast suggestions used (morning run, no opinion)."
   }
  ]
 }
