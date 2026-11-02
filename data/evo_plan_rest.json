@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T15:27",
+ "generated": "2026-11-02T08:37",
  "gw": 10,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 6.5,
-   "ep": 6.81,
+   "ep": 6.8,
    "votes": 5
   }
  ],
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.35,
-   "ep": 3.2,
+   "ep": 3.21,
    "votes": 0
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 67.62,
+   "gain": 68.95,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 35.24,
+   "gain": 36.81,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 76
+   "borda": 79
   },
   {
    "pos": "MID",
-   "gain": 38.78,
+   "gain": 38.82,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,22 +314,22 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 74
+   "borda": 76
   },
   {
    "pos": "MID",
-   "gain": 40.65,
+   "gain": 42.47,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
+    "id": 368,
+    "code": 424876,
+    "name": "Szoboszlai",
     "pos": "MID",
-    "team": "BOU",
+    "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.979,
+    "p_play": 0.706,
     "base": null,
     "ep": null
    },
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 48
+   "borda": 50
   },
   {
    "pos": "MID",
-   "gain": 18.86,
+   "gain": 20.13,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,7 +378,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 14
+   "borda": 15
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -444,7 +444,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.61,
-   "ep": 194.75
+   "ep": 194.86
   },
   {
    "id": 106,
@@ -492,7 +492,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.16,
-   "ep": 165.98
+   "ep": 165.93
   },
   {
    "id": 387,
@@ -516,7 +516,7 @@
    "news": "",
    "p_play": 0.42,
    "base": 176.94,
-   "ep": 165.92
+   "ep": 164.61
   },
   {
    "id": 40,
@@ -528,7 +528,7 @@
    "news": "",
    "p_play": 0.976,
    "base": 176.43,
-   "ep": 164.06
+   "ep": 163.73
   },
   {
    "id": 428,
@@ -540,7 +540,19 @@
    "news": "",
    "p_play": 0.797,
    "base": 155.78,
-   "ep": 158.4
+   "ep": 158.34
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.941,
+   "base": 168.26,
+   "ep": 161.49
   },
   {
    "id": 388,
@@ -553,18 +565,6 @@
    "p_play": 0.947,
    "base": 179.86,
    "ep": 173.08
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.706,
-   "base": 168.26,
-   "ep": 161.59
   },
   {
    "id": 12,
@@ -627,18 +627,6 @@
    "ep": 149.55
   },
   {
-   "id": 368,
-   "code": 424876,
-   "name": "Szoboszlai",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "d",
-   "news": "Hamstring injury - 50% chance of playing",
-   "p_play": 0.353,
-   "base": 150.44,
-   "ep": 143.8
-  },
-  {
    "id": 236,
    "code": 215413,
    "name": "Dewsbury-Hall",
@@ -648,7 +636,19 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.18,
-   "ep": 146.43
+   "ep": 146.87
+  },
+  {
+   "id": 368,
+   "code": 424876,
+   "name": "Szoboszlai",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.706,
+   "base": 150.44,
+   "ep": 143.8
   },
   {
    "id": 201,
@@ -696,7 +696,7 @@
    "news": "",
    "p_play": 0.666,
    "base": 148.39,
-   "ep": 145.49
+   "ep": 145.42
   },
   {
    "id": 8,
@@ -704,9 +704,9 @@
    "name": "Calafiori",
    "pos": "DEF",
    "team": "ARS",
-   "status": "d",
-   "news": "Hip injury - 75% chance of playing",
-   "p_play": 0.652,
+   "status": "a",
+   "news": "",
+   "p_play": 0.869,
    "base": 141.19,
    "ep": 140.12
   },
@@ -720,7 +720,7 @@
    "news": "",
    "p_play": 0.693,
    "base": 139.23,
-   "ep": 132.96
+   "ep": 132.92
   },
   {
    "id": 61,
@@ -756,7 +756,7 @@
    "news": "",
    "p_play": 0.883,
    "base": 136.83,
-   "ep": 132.0
+   "ep": 132.15
   },
   {
    "id": 398,
@@ -768,7 +768,7 @@
    "news": "",
    "p_play": 0.549,
    "base": 140.37,
-   "ep": 136.96
+   "ep": 136.66
   },
   {
    "id": 208,
@@ -780,7 +780,19 @@
    "news": "Groin injury - Expected back 8 Nov",
    "p_play": 0.0,
    "base": 140.17,
-   "ep": 127.85
+   "ep": 128.51
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.865,
+   "base": 135.99,
+   "ep": 133.98
   },
   {
    "id": 154,
@@ -807,18 +819,6 @@
    "ep": 129.5
   },
   {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.865,
-   "base": 135.99,
-   "ep": 133.04
-  },
-  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -843,18 +843,6 @@
    "ep": 142.63
   },
   {
-   "id": 95,
-   "code": 533463,
-   "name": "O.Dango",
-   "pos": "MID",
-   "team": "BRE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.533,
-   "base": 147.83,
-   "ep": 126.4
-  },
-  {
    "id": 371,
    "code": 441266,
    "name": "Gravenberch",
@@ -864,7 +852,19 @@
    "news": "",
    "p_play": 0.553,
    "base": 140.24,
-   "ep": 127.88
+   "ep": 128.19
+  },
+  {
+   "id": 95,
+   "code": 533463,
+   "name": "O.Dango",
+   "pos": "MID",
+   "team": "BRE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.533,
+   "base": 147.83,
+   "ep": 125.92
   }
  ]
 }

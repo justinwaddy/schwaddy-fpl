@@ -302,6 +302,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 204480,1789998835,1789995609,d,,75.0,Unspecified injury - 75% chance of playing
 204480,1791643316,1791643316,a,75.0,100.0,
 204480,1793176549,1793145608,d,100.0,75.0,Unspecified injury - 75% chance of playing
+204480,1793608568,1793608568,a,75.0,100.0,
 204561,1785832691,1785832691,a,,,
 204580,1785832691,1785832691,a,,,
 204580,1792312553,1792254609,s,,0.0,Suspended until 31 Oct
@@ -590,6 +591,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 248857,1785832691,1785832691,a,,,
 248857,1793176549,1793145608,d,,75.0,Ankle injury - 75% chance of playing
 248857,1793373505,1793373505,d,,50.0,Ankle injury - 50% chance of playing
+248857,1793608568,1793608568,a,50.0,100.0,
 248875,1785832691,1785832691,a,,,
 248875,1787270210,1787072408,d,,75.0,Calf injury - 75% chance of playing
 248875,1787910473,1787910473,i,0.0,0.0,Calf injury - Expected back 5 Sep
@@ -605,6 +607,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 424876,1792149312,1792149312,d,,25.0,Hamstring injury - 25% chance of playing
 424876,1792312553,1792249208,i,25.0,0.0,Hamstring injury - Unknown return date
 424876,1793373505,1793373505,d,0.0,50.0,Hamstring injury - 50% chance of playing
+424876,1793608568,1793608568,a,50.0,100.0,
 427623,1785832691,1785832691,a,,,
 427637,1785832691,1785832691,a,,,
 428580,1785832691,1785832691,a,,,
@@ -671,6 +674,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 439509,1791559985,1791559985,i,,0.0,Hamstring injury - Expected back 24 Oct
 439509,1791908648,1791908648,i,0.0,0.0,Hamstring injury - Expected back 1 Nov
 439509,1793373505,1793373505,d,0.0,75.0,Hamstring injury - 75% chance of playing
+439509,1793608568,1793608568,a,75.0,100.0,
 439668,1785832691,1785832691,a,,,
 439668,1789115764,1789065009,i,,0.0,Unspecified injury - Expected back 12 Oct
 439668,1791908648,1791908648,i,0.0,0.0,Unspecified injury - Unknown return date
@@ -849,6 +853,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 466052,1785832691,1785832691,a,,,
 466075,1785832691,1785832691,a,,,
 466075,1792917355,1792866609,d,,75.0,Hip injury - 75% chance of playing
+466075,1793608568,1793608568,a,75.0,100.0,
 466525,1785832691,1785832691,a,,,
 466525,1792763234,1792760409,d,,50.0,Foot injury - 50% chance of playing
 466525,1793003742,1793003742,a,50.0,100.0,
@@ -1239,6 +1244,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 551499,1792571741,1792521010,d,,75.0,Knee injury - 75% chance of playing
 551499,1792763234,1792763234,d,,25.0,Knee injury - 25% chance of playing
 551499,1793373505,1793373505,d,25.0,50.0,Knee injury - 50% chance of playing
+551499,1793608568,1793608568,a,50.0,100.0,
 552946,1787270210,1787270210,a,,,
 553746,1787910473,1787910473,a,,,
 553746,1789202150,1789137717,u,,0.0,has joined Arouca on loan for the rest of the seaon.
