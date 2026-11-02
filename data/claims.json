@@ -1,7 +1,7 @@
 {
   "gw": 10,
   "waivers_close": "2026-11-05T18:30:00Z",
-  "ts": "2026-11-02T08:20 UTC",
+  "ts": "2026-11-02T21:10 UTC",
   "summary": "Claims unchanged for the GW10 window (closes 5 November). Gyokeres was again among Arsenal's substitutes at Anfield per Sky Sports, and the Premier League's preview had Osula doubtful with an ankle injury, which helps Wissa's route at Newcastle, so Wissa for Gyokeres still leads. Justin leads on points among 6, so claims go in last.",
   "claims": [
     {
@@ -870,12 +870,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-03T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: premierleague.com internationals round-up shows nothing new for squad or shortlist; Van Hecke foot withdrawal still unconfirmed at a permitted outlet."
-    },
-    {
       "ts": "2026-10-04T08:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -1228,6 +1222,12 @@
       "gw": 10,
       "claims": 5,
       "note": "Carried forward; added Osula ankle and Gyokeres bench evidence to claim 1."
+    },
+    {
+      "ts": "2026-11-02T21:10 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No change: searches found nothing new from permitted outlets; claims carried forward."
     }
   ]
 }

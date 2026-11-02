@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-03T21:10 UTC",
-      "published": 0,
-      "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com internationals round-up shows Haaland scoreless but no injury, Marmoush scoring for Egypt, and only the known Brobbey/Isak/Gakpo doubts. A search summary again claims Van Hecke withdrew with a foot injury, but I could not confirm it in a permitted article, so not published. Nothing material."
-    },
-    {
       "ts": "2026-10-04T08:10 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). Searches of Sky/premierleague.com/club sites return only the known Brobbey hamstring, Isak, Haaland scoring for Norway and Barcola cramps; the Van Hecke foot-withdrawal claim is still only in a search summary, not confirmed in a permitted article, so not published. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-02T08:20 UTC",
       "published": 1,
       "note": "Arsenal 1-0 Liverpool clean sheet for Raya/White, Gyokeres on bench. Not in starters window."
+    },
+    {
+      "ts": "2026-11-02T21:10 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only stale items or non-permitted outlets, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
     }
   ]
 }
