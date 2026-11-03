@@ -710,6 +710,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441266,1785832691,1785832691,a,,,
 441266,1791794177,1791738009,s,,0.0,Suspended until 25 Oct
 441266,1792312553,1792312553,a,0.0,100.0,
+441266,1793739302,1793725210,d,100.0,75.0,Foot injury - 75% chance of playing
 441302,1785832691,1785832691,a,,,
 441302,1789288550,1789236009,d,,25.0,Ankle injury - 25% chance of playing
 441302,1789807008,1789807008,i,0.0,0.0,Ankle injury - Unknown return date
@@ -1027,6 +1028,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 493250,1788894459,1788894459,i,0.0,0.0,Unspecified injury - Unknown return date
 493250,1791707768,1791707768,a,0.0,100.0,
 493250,1793522189,1793467808,d,100.0,75.0,Calf injury - 75% chance of playing
+493250,1793739302,1793739302,a,100.0,100.0,
 493362,1785832691,1784808084,i,,0.0,Knee injury - Unknown return date
 494307,1785832691,1785832691,a,,,
 494307,1787270210,1787062316,u,,0.0,Has joined Burnley on loan for the rest of the season

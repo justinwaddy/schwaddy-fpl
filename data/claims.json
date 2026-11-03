@@ -1,30 +1,26 @@
 {
   "gw": 10,
   "waivers_close": "2026-11-05T18:30:00Z",
-  "ts": "2026-11-03T08:10 UTC",
-  "summary": "Claims unchanged for the GW10 window (closes 5 November). Gyokeres was again among Arsenal's substitutes at Anfield per Sky Sports, and the Premier League's preview had Osula doubtful with an ankle injury, which helps Wissa's route at Newcastle, so Wissa for Gyokeres still leads. Justin leads on points among 6, so claims go in last.",
+  "ts": "2026-11-03T21:15 UTC",
+  "summary": "Claims refreshed for the GW10 window (closes 5 November) after a re-run on the post-GW9 data. Gyökeres out is still the top move, but Fulham's Gonzalo now edges Wissa on both the model and the network vote, so he goes first and Wissa is the fallback. Saliba's return to Arsenal training, with Konsa possibly at right-back, puts more pressure on White's minutes, so Hill for White moves up to second. Cunha for Barcola is backed by all five networks, and the marginal Neto and Boscagli swaps are dropped for Le Fée for Schade. Justin leads on points among 6, so his claims go in last.",
   "claims": [
     {
       "rank": 1,
       "pos": "FWD",
       "add": {
-        "name": "Wissa",
-        "code": "216646",
-        "club": "NEW"
+        "name": "Gonzalo",
+        "code": "551466",
+        "club": "FUL"
       },
       "drop": {
         "name": "Gyökeres",
         "code": "224117",
         "club": "ARS"
       },
-      "why": "The Guardian's predicted lineups for Liverpool v Arsenal list Gyökeres among the substitutes, so he looks like a bench forward right now. Wissa has Newcastle's run of EVE, ful, ARS to come.",
-      "model": "Model next5 13.1 vs 4.9 (+8.2); I agree, and the lineup piece backs the model's low availability (0.32) for Gyökeres.",
-      "confidence": "high",
+      "why": "Gyökeres was on Arsenal's bench again at Anfield, and the model gives him only a third of a chance of playing. With GW9 done, the five-game window is now GW10-14, and Fulham's Gonzalo (NEW, mci, BOU, tot, eve) has moved just ahead of Wissa. Both the model and the network's five-seed vote now pick him. He has only nine career games, so his number is less certain than Wissa's. Claim 5 is the Wissa fallback.",
+      "model": "Model next5 12.4 vs 5.0 (+7.4); the network's vote has the same swap at 3/5, and network 1 alone has it too. I agree that Gyökeres should go. Gonzalo is only marginally ahead of Wissa.",
+      "confidence": "medium",
       "sources": [
-        {
-          "title": "Predicted line-ups for Premier League teams in Matchweek 9",
-          "url": "https://premierleague.com/en/news/4750527/predicted-line-ups-for-premier-league-teams-in-matchweek-9"
-        },
         {
           "title": "Liverpool 0-1 Arsenal: Kai Havertz seals Gunners' first victory at Anfield for 14 years",
           "url": "https://www.skysports.com/football/liverpool-vs-arsenal/8206828602449165232"
@@ -33,24 +29,6 @@
     },
     {
       "rank": 2,
-      "pos": "MID",
-      "add": {
-        "name": "Cunha",
-        "code": "430871",
-        "club": "MUN"
-      },
-      "drop": {
-        "name": "Barcola",
-        "code": "482616",
-        "club": "LIV"
-      },
-      "why": "Barcola is only six games into his career with Liverpool so the model is unsure of him, and Liverpool's squad is deep and rotated heavily. Cunha is the model's best free midfielder; no permitted-outlet article this week speaks for or against his minutes, so this rests mainly on the numbers.",
-      "model": "Model next5 18.5 vs 10.2 (+8.3); I largely agree but with less conviction because Man United are in a poor run.",
-      "confidence": "medium",
-      "sources": []
-    },
-    {
-      "rank": 3,
       "pos": "DEF",
       "add": {
         "name": "Hill",
@@ -62,15 +40,33 @@
         "code": "198869",
         "club": "ARS"
       },
-      "why": "Hill is a Bournemouth defender who is not on the injured or substitutes list in the Guardian's lineups, with Bournemouth facing Leeds, Ipswich and Forest on his run. White is fit but the gap is modest, so treat this as a marginal upgrade.",
-      "model": "Model next5 17.7 vs 14.9 (+2.8); I agree but it is not urgent.",
-      "confidence": "low",
+      "why": "Saliba is back in Arsenal training, and Arteta said Konsa could play right-back. That adds another rival for White's minutes, and the model already puts his availability at 0.67. Hill has no injury news, and Bournemouth's run (ips, NFO, ful, BHA, HUL) is kind.",
+      "model": "Model next5 18.3 vs 12.4 (+5.9), up from +2.8 this morning now the window has moved on. The network does not list this one. I agree.",
+      "confidence": "medium",
       "sources": [
         {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+          "title": "Saliba back in training: Latest FPL team news pre-Gameweek 10",
+          "url": "https://www.fantasyfootballscout.co.uk/2026/11/03/saliba-back-in-training-latest-fpl-team-news-pre-gameweek-10"
         }
       ]
+    },
+    {
+      "rank": 3,
+      "pos": "MID",
+      "add": {
+        "name": "Cunha",
+        "code": "430871",
+        "club": "MUN"
+      },
+      "drop": {
+        "name": "Barcola",
+        "code": "482616",
+        "club": "LIV"
+      },
+      "why": "All five networks drop Barcola for Cunha. Barcola is still a short-minutes winger at Liverpool, and the model has his availability at 0.76. Cunha has no injury listed in this week's Man United team news, though the model still discounts him (0.81 availability).",
+      "model": "Model next5 16.7 vs 11.2 (+5.5); network vote 5/5, gain 5.5. I agree.",
+      "confidence": "medium",
+      "sources": []
     },
     {
       "rank": 4,
@@ -81,36 +77,31 @@
         "club": "SUN"
       },
       "drop": {
-        "name": "Neto",
-        "code": "247632",
-        "club": "CHE"
+        "name": "Schade",
+        "code": "513418",
+        "club": "BRE"
       },
-      "why": "Le Fée is a regular creator for Sunderland who the model rates well, while Neto is a probable starter for Chelsea in the same Guardian piece, so this is a small upgrade only and I would not use up a claim if a better one fails.",
-      "model": "Model next5 17.3 vs 15.1 (+2.2); I only partly agree, since Neto is expected to start.",
+      "why": "Only 2 of the 5 networks would start Schade, and all three plans want him out. The networks prefer Iwobi as the replacement, but the model has Le Fée three points higher. He is a regular creator for Sunderland with no injury news.",
+      "model": "Model next5 18.0 vs 14.5 (+3.5); the network lists Iwobi or Ayari for Schade, and network 1 has Le Fée as a fallback. I partly agree. It is a modest upgrade.",
       "confidence": "low",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
+      "sources": []
     },
     {
       "rank": 5,
-      "pos": "DEF",
+      "pos": "FWD",
       "add": {
-        "name": "Justin",
-        "code": "220627",
-        "club": "LEE"
+        "name": "Wissa",
+        "code": "216646",
+        "club": "NEW"
       },
       "drop": {
-        "name": "Boscagli",
-        "code": "204120",
-        "club": "BHA"
+        "name": "Gyökeres",
+        "code": "224117",
+        "club": "ARS"
       },
-      "why": "A pure model punt: Leeds' Justin outscores Boscagli by one point over five games. Boscagli looks a probable starter at Man City, so there is no news reason to move; only use this if the earlier claims all succeed.",
-      "model": "Model next5 16.6 vs 15.6 (+1.0), below the model's own +2 threshold; I am not convinced.",
-      "confidence": "low",
+      "why": "Fallback for claim 1. If someone ahead of us takes Gonzalo, Wissa is still a clear upgrade on a benched Gyökeres. If claim 1 succeeds, this one simply fails because Gyökeres is already gone.",
+      "model": "Model next5 11.5 vs 5.0 (+6.5). I agree, as a fallback.",
+      "confidence": "medium",
       "sources": []
     }
   ],
@@ -1228,6 +1219,12 @@
       "gw": 10,
       "claims": 5,
       "note": "No change: searches found nothing current from permitted outlets; claims carried forward."
+    },
+    {
+      "ts": "2026-11-03T21:15 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "Manual refresh after re-running the NN plans on post-GW9 data: Gonzalo leads with Wissa as fallback, Hill for White up to 2, Le Fée for Schade replaces the Neto and Boscagli swaps."
     }
   ]
 }
