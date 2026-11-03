@@ -1,46 +1,6 @@
 {
- "generated": "2026-11-03T07:57 UTC",
+ "generated": "2026-11-03T22:46 UTC",
  "items": [
-  {
-   "id": "2026-10-25-hull-brentford",
-   "ts": "2026-10-25T07:50",
-   "kind": "news",
-   "text": "Brentford are short in midfield at Hull at 2pm: Janelt serves a one-match ban and Yarmoliuk begins a three-match one, with Dasilva and Milambo still injured, according to the Guardian's team-news guide. Schade, Justin's forward, is the club's joint-leading scorer on three. Hull have Cho and Gourna-Douath doubtful, and Tzolakis is Justin's keeper at the MKM.",
-   "source": {
-    "title": "Premier League team news: predicted lineups for the weekend action",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
-   }
-  },
-  {
-   "id": "2026-10-25-palace-newcastle-mateta",
-   "ts": "2026-10-25T07:50",
-   "kind": "news",
-   "text": "Crystal Palace's Pierre Sage has been warned after the defeat at Brighton that results must improve quickly, and the Guardian reports Sunday's visit of Newcastle is seen as crucial to his future. Mateta, Robert's forward, scored in midweek against Besiktas on his first start since the opening day, and Palace have not lost at home to Newcastle since November 2020. At the other end, Edward's Hornicek and Small Ben's Wissa are in a Newcastle side that has not kept a league clean sheet in 13 games.",
-   "source": {
-    "title": "Crystal Palace and Newcastle face off with both in search of season kickstart",
-    "url": "https://www.theguardian.com/football/2026/oct/23/crystal-palace-and-newcastle-face-off-with-both-in-search-of-season-kickstart"
-   }
-  },
-  {
-   "id": "2026-10-25-xi-1400",
-   "ts": "2026-10-25T13:08",
-   "kind": "news",
-   "text": "Confirmed XIs, 14:00 kick-offs. Starting: Robert (Mateta), Edward (Hornicek), Justin (Barcola), Big Ben (Wirtz), Small Ben (Virgil, Gakpo, Isak). Left out: Small Ben's Wissa (Newcastle bench), Marcus's A.Becker (not in Liverpool's matchday squad; Alisson starts). No confirmed sheet found for Hull, Brentford, Brighton, Man Utd or Bournemouth, so those players are not counted.",
-   "source": {
-    "title": "Team news: Confirmed Liverpool line-up v Brighton & Hove Albion",
-    "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-brighton-and-hove-albion"
-   }
-  },
-  {
-   "id": "2026-10-25-xi-1630",
-   "ts": "2026-10-25T16:07",
-   "kind": "news",
-   "text": "Team news, Sunderland v Leeds (16:30): Leeds' eleven is confirmed. Edward has Muharemovic and Calvert-Lewin starting; Justin has Bogle starting but Stach on the bench; Big Ben's Trafford starts; Robert's Wilson starts. Sunderland's eleven was not available, so Justin's Brobbey, Robert's Roefs and Marcus's Mukiele are not counted.",
-   "source": {
-    "title": "Daniel Farke makes three changes made for Sunderland clash",
-    "url": "https://www.leedsunited.com/en/news/daniel-farke-makes-three-changes-made-for-sunderland-clash"
-   }
-  },
   {
    "id": "2026-10-25-marcus-luck",
    "ts": "2026-10-25T22:43",
@@ -689,16 +649,37 @@
     "title": "Jeers again as home woes continue - Jaissle has big problems at Newcastle",
     "url": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo"
    }
+  },
+  {
+   "id": "2026-11-03-edward-two-clear",
+   "ts": "2026-11-03T22:46",
+   "kind": "opinion",
+   "text": "Edward went from 21 behind to two clear in a single gameweek, on the back of Verbruggen, Barry, Jackson and an Everton spine that keeps turning up, and managed it while leaving 18 on the bench. Return of the Djedi is a grand name for a man holding first place by a margin one Pickford howler could undo, and the Force has not yet been seen to help anybody with a two-point lead.",
+   "source": null
+  },
+  {
+   "id": "2026-11-03-justin-first-to-third",
+   "ts": "2026-11-03T22:46",
+   "kind": "opinion",
+   "text": "Justin started the gameweek in first and finished it twelve behind in third, on 31, with Haaland on 2 and Gyokeres on 1 up front. The two most famous strikers on the squad sheet gave him three points between them, which is roughly what a man gets for spending the week confident about his attack.",
+   "source": null
+  },
+  {
+   "id": "2026-11-03-robert-pint",
+   "ts": "2026-11-03T22:46",
+   "kind": "opinion",
+   "text": "Robert was given a full pint last week and left it. This week he was given eleven players and a whole Saturday and finished on 17, 165 behind the top, so the pattern is at least consistent: whatever is put in front of him, he declines to see it through.",
+   "source": null
+  },
+  {
+   "id": "2026-11-03-marcus-two-good-games",
+   "ts": "2026-11-03T22:46",
+   "kind": "opinion",
+   "text": "Marcus is two off the top and the squad shows exactly how: De Cuyper and Evanilson on 9 each, then Mbeumo and Foden on 1, with Guehi, Mukiele and Joao Pedro on nothing. Each of them presumably arrived after two good games somewhere, which is the Elanga method, and the method remains undefeated at finding the third game.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-12T22:45",
-   "news": 1,
-   "opinion": 3,
-   "matchday": true,
-   "note": "Evening wrap. Led with Coventry 4-1 Newcastle (ESPN/PA report); Marcus v Edward, Newcastle owners, Big Ben/Tzolis opinions. Left both unused roast suggestions: one is a homophobic slur and the other trades on apartheid/race, both outside the rules (and the first is Big Ben's own, aimed at himself). Reflopped all four of today's FLOP lines."
-  },
   {
    "ts": "2026-10-13T07:42",
    "news": 3,
@@ -1111,6 +1092,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. No fixtures today. Led with Barry's winner at Newcastle and Newcastle's home woes, both BBC Sport. Search returned mostly off-list or stale pages, so only two items; Guardian page unreadable. No roast suggestions used (morning)."
+  },
+  {
+   "ts": "2026-11-03T22:46",
+   "news": 0,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening wrap, no fixtures today, GW9 closed (Ben D 77). No reported items (nothing material; morning run covered Barry/Newcastle). Led with the table: Edward top by 2 from Justin first-to-third. Used Robert pint, Marcus kneejerk/Elanga. Passed over: apartheid line on Justin and Ben D self-roast (nothing in the football to hang them on tonight, no policy reason), Delap/Haramball banned. No flops today. Totals quoted are GW9-final public.json (matches game); live feed already on GW10 with stale priors."
   }
  ]
 }
