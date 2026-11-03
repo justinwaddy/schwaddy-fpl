@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-04T08:10 UTC",
-      "published": 0,
-      "note": "Morning check inside the international break (GW6 waivers close 9 October). Searches of Sky/premierleague.com/club sites return only the known Brobbey hamstring, Isak, Haaland scoring for Norway and Barcola cramps; the Van Hecke foot-withdrawal claim is still only in a search summary, not confirmed in a permitted article, so not published. Nothing material."
-    },
-    {
       "ts": "2026-10-04T21:10 UTC",
       "published": 0,
       "note": "Evening check inside the international break (GW6 waivers close 9 October). premierleague.com/Sky searches show only the known Brobbey hamstring and no new injury to a squad or shortlisted player; Van Hecke foot claim still unconfirmed in a permitted article. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-02T21:10 UTC",
       "published": 0,
       "note": "Evening check; searches returned only stale items or non-permitted outlets, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-03T08:10 UTC",
+      "published": 0,
+      "note": "Morning check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov). Nothing published."
     }
   ]
 }
