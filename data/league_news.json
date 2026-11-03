@@ -1,26 +1,6 @@
 {
- "generated": "2026-11-02T22:50 UTC",
+ "generated": "2026-11-03T07:57 UTC",
  "items": [
-  {
-   "id": "2026-10-25-kroupi-doubtful",
-   "ts": "2026-10-25T07:50",
-   "kind": "news",
-   "text": "Bournemouth go to Old Trafford at 2pm with Kroupi doubtful with a foot problem, according to the Guardian's team-news guide, which means Edward's Kroupi.Jr may not make the trip at all. Tavernier, Justin's full-back, is Bournemouth's joint-top scorer on four and is not listed with any problem. United's absentees are Rashford, Dorgu, Ugarte and Sesko, so Robert's striker is still out with the shin problem.",
-   "source": {
-    "title": "Premier League team news: predicted lineups for the weekend action",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
-   }
-  },
-  {
-   "id": "2026-10-25-liverpool-brighton",
-   "ts": "2026-10-25T07:50",
-   "kind": "news",
-   "text": "Liverpool host Brighton at 2pm without Szoboszlai, Frimpong, Bradley, Leoni and Ekitike, with Munoz doubtful with a muscle problem, the Guardian's guide says. Isak leads Liverpool's scorers on five, which is Small Ben's problem and opportunity at once, and Gakpo is listed among the possible substitutes rather than the probable starters. Brighton have Struijk, Minteh and Wieffer doubtful, which touches Big Ben's Gross and Marcus's De Cuyper and Kostoulas.",
-   "source": {
-    "title": "Premier League team news: predicted lineups for the weekend action",
-    "url": "https://www.theguardian.com/football/2026/oct/23/premier-league-team-news-predicted-lineups"
-   }
-  },
   {
    "id": "2026-10-25-hull-brentford",
    "ts": "2026-10-25T07:50",
@@ -689,16 +669,29 @@
    "kind": "opinion",
    "text": "Small Ben takes 40 from the gameweek, sits 51 off the top, and Thiago on 9 is the only man in his eleven who looks like he trained for it. The upcoming fight is going to be the same story: plenty of enthusiasm and no plan for the second round, and nobody in the room has ever called him big.",
    "source": null
+  },
+  {
+   "id": "2026-11-03-barry-everton",
+   "ts": "2026-11-03T07:55",
+   "kind": "news",
+   "text": "Thierno Barry tapped in the winner at St James' Park last night, his second goal against Newcastle in five days and his eighth of the season, which already matches his whole of last year. BBC Sport call him Everton's only recognised senior striker since Beto left for Fiorentina, so Edward owns the most indispensable man at his club. The goal began with a Branthwaite flick-on, so Big Ben had a hand in it from the back, and Jaissle says Barry fouled Schar in the build-up.",
+   "source": {
+    "title": "From nightmare debut season to Everton hero - Barry's revival",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqj346rvg3pzo"
+   }
+  },
+  {
+   "id": "2026-11-03-newcastle-jaissle",
+   "ts": "2026-11-03T07:56",
+   "kind": "news",
+   "text": "Newcastle were jeered off again after losing at home to Everton, and BBC Sport note nobody in the Premier League has lost more home games in 2026 (seven) and that they have gone 14 home league games without a clean sheet, a club record. Hornicek let a routine shot squirm under him for the winner. Small Ben's Osula plays for a side Jamie Carragher calls flat and boring at home.",
+   "source": {
+    "title": "Jeers again as home woes continue - Jaissle has big problems at Newcastle",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-12T18:04",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "19:00 UTC slot: Newcastle sheet found on newcastleunited.com; Coventry has no league-owned players"
-  },
   {
    "ts": "2026-10-12T22:45",
    "news": 1,
@@ -1111,6 +1104,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "Evening wrap. No permitted-outlet match report for Newcastle v Everton was findable, so no reported items and no scoreline quoted. Led with Edward's lead over Marcus and Ben D's 74. Used roast archive: Robert hairline, Edward on Ben D ball knowledge, Edward on Marcus luck, Edward on Ben C boxing. Passed over: Ben D's self-roast, the apartheid line (about Justin, left for Justin), Jobacus/catholic line (no football hook tonight), Bruno line (no Bruno data), Elanga line."
+  },
+  {
+   "ts": "2026-11-03T07:57",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. No fixtures today. Led with Barry's winner at Newcastle and Newcastle's home woes, both BBC Sport. Search returned mostly off-list or stale pages, so only two items; Guardian page unreadable. No roast suggestions used (morning)."
   }
  ]
 }
