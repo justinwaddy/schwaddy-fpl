@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T08:36",
+ "generated": "2026-11-03T16:30",
  "gw": 10,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -28,8 +28,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 6.12,
-   "ep": 5.97,
+   "base": 6.02,
+   "ep": 5.88,
    "votes": 5
   },
   {
@@ -40,22 +40,9 @@
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.831,
-   "base": 5.62,
-   "ep": 5.57,
-   "votes": 5
-  },
-  {
-   "id": 330,
-   "code": 226182,
-   "name": "Bogle",
-   "pos": "DEF",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.894,
-   "base": 4.65,
-   "ep": 4.5,
+   "p_play": 0.817,
+   "base": 5.37,
+   "ep": 5.36,
    "votes": 5
   },
   {
@@ -67,21 +54,21 @@
    "status": "a",
    "news": "",
    "p_play": 0.985,
-   "base": 4.53,
-   "ep": 4.44,
+   "base": 4.65,
+   "ep": 4.58,
    "votes": 5
   },
   {
-   "id": 10,
-   "code": 198869,
-   "name": "White",
+   "id": 330,
+   "code": 226182,
+   "name": "Bogle",
    "pos": "DEF",
-   "team": "ARS",
+   "team": "LEE",
    "status": "a",
    "news": "",
-   "p_play": 0.778,
-   "base": 4.55,
-   "ep": 4.41,
+   "p_play": 0.894,
+   "base": 4.48,
+   "ep": 4.42,
    "votes": 5
   },
   {
@@ -92,9 +79,22 @@
    "team": "BHA",
    "status": "a",
    "news": "",
-   "p_play": 0.893,
-   "base": 3.76,
-   "ep": 3.69,
+   "p_play": 0.861,
+   "base": 3.74,
+   "ep": 3.68,
+   "votes": 5
+  },
+  {
+   "id": 10,
+   "code": 198869,
+   "name": "White",
+   "pos": "DEF",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.672,
+   "base": 3.88,
+   "ep": 3.66,
    "votes": 5
   },
   {
@@ -106,21 +106,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.929,
-   "base": 4.97,
-   "ep": 4.93,
-   "votes": 5
-  },
-  {
-   "id": 15,
-   "code": 184029,
-   "name": "\u00d8degaard",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.913,
-   "base": 3.79,
-   "ep": 3.7,
+   "base": 4.85,
+   "ep": 4.8,
    "votes": 5
   },
   {
@@ -131,9 +118,22 @@
    "team": "CHE",
    "status": "a",
    "news": "",
-   "p_play": 0.848,
-   "base": 3.68,
-   "ep": 3.65,
+   "p_play": 0.933,
+   "base": 3.99,
+   "ep": 3.95,
+   "votes": 5
+  },
+  {
+   "id": 15,
+   "code": 184029,
+   "name": "\u00d8degaard",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.927,
+   "base": 3.81,
+   "ep": 3.75,
    "votes": 5
   },
   {
@@ -144,10 +144,10 @@
    "team": "BRE",
    "status": "a",
    "news": "",
-   "p_play": 0.863,
-   "base": 3.04,
-   "ep": 2.91,
-   "votes": 3
+   "p_play": 0.855,
+   "base": 2.97,
+   "ep": 2.83,
+   "votes": 2
   },
   {
    "id": 411,
@@ -158,8 +158,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.987,
-   "base": 6.5,
-   "ep": 6.79,
+   "base": 6.25,
+   "ep": 6.13,
    "votes": 5
   }
  ],
@@ -173,8 +173,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 3.35,
-   "ep": 3.21,
+   "base": 3.22,
+   "ep": 3.1,
    "votes": 0
   },
   {
@@ -185,10 +185,10 @@
    "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.647,
-   "base": 2.14,
-   "ep": 2.07,
-   "votes": 2
+   "p_play": 0.753,
+   "base": 2.4,
+   "ep": 2.38,
+   "votes": 3
   },
   {
    "id": 401,
@@ -198,9 +198,9 @@
    "team": "TOT",
    "status": "a",
    "news": "",
-   "p_play": 0.756,
-   "base": 1.8,
-   "ep": 1.82,
+   "p_play": 0.845,
+   "base": 1.98,
+   "ep": 1.97,
    "votes": 0
   },
   {
@@ -211,18 +211,18 @@
    "team": "ARS",
    "status": "a",
    "news": "",
-   "p_play": 0.324,
-   "base": 0.97,
+   "p_play": 0.331,
+   "base": 0.96,
    "ep": 0.86,
    "votes": 0
   }
  ],
- "xi_ep": 50.6,
- "changes": 2,
+ "xi_ep": 49.0,
+ "changes": 1,
  "claims": [
   {
    "pos": "MID",
-   "gain": 71.03,
+   "gain": 62.51,
    "change": 1,
    "fallback": false,
    "add": {
@@ -245,16 +245,16 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.647,
+    "p_play": 0.753,
     "base": null,
     "ep": null
    },
    "votes": 5,
-   "borda": 148
+   "borda": 127
   },
   {
    "pos": "MID",
-   "gain": 39.25,
+   "gain": 29.16,
    "change": 1,
    "fallback": true,
    "add": {
@@ -265,7 +265,7 @@
     "team": "MUN",
     "status": "a",
     "news": "",
-    "p_play": 0.797,
+    "p_play": 0.78,
     "base": null,
     "ep": null
    },
@@ -277,27 +277,27 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.647,
+    "p_play": 0.753,
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 75
+   "votes": 5,
+   "borda": 98
   },
   {
    "pos": "MID",
-   "gain": 34.1,
+   "gain": 27.81,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
     "pos": "MID",
-    "team": "BOU",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.979,
+    "p_play": 0.86,
     "base": null,
     "ep": null
    },
@@ -309,27 +309,27 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.647,
+    "p_play": 0.753,
     "base": null,
     "ep": null
    },
-   "votes": 3,
+   "votes": 4,
    "borda": 74
   },
   {
    "pos": "MID",
-   "gain": 38.41,
+   "gain": 35.75,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 127,
-    "code": 514254,
-    "name": "Gomez",
+    "id": 261,
+    "code": 153133,
+    "name": "Iwobi",
     "pos": "MID",
-    "team": "BHA",
+    "team": "FUL",
     "status": "a",
     "news": "",
-    "p_play": 0.976,
+    "p_play": 0.907,
     "base": null,
     "ep": null
    },
@@ -341,44 +341,12 @@
     "team": "LIV",
     "status": "a",
     "news": "",
-    "p_play": 0.647,
+    "p_play": 0.753,
     "base": null,
     "ep": null
    },
    "votes": 3,
-   "borda": 73
-  },
-  {
-   "pos": "MID",
-   "gain": 20.37,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 127,
-    "code": 514254,
-    "name": "Gomez",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.976,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 94,
-    "code": 513418,
-    "name": "Schade",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.863,
-    "base": null,
-    "ep": null
-   },
-   "votes": 2,
-   "borda": 14
+   "borda": 65
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -396,7 +364,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 249.25,
-   "ep": 281.55
+   "ep": 281.53
   },
   {
    "id": 426,
@@ -407,8 +375,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.894,
-   "base": 239.33,
-   "ep": 254.87
+   "base": 239.25,
+   "ep": 254.79
   },
   {
    "id": 4,
@@ -419,8 +387,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 215.76,
-   "ep": 216.97
+   "base": 215.8,
+   "ep": 217.01
   },
   {
    "id": 397,
@@ -431,8 +399,8 @@
    "status": "i",
    "news": "Knee injury - Unknown return date",
    "p_play": 0.0,
-   "base": 209.46,
-   "ep": 201.82
+   "base": 209.38,
+   "ep": 201.75
   },
   {
    "id": 480,
@@ -443,8 +411,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.894,
-   "base": 195.61,
-   "ep": 194.75
+   "base": 195.53,
+   "ep": 194.78
   },
   {
    "id": 106,
@@ -454,9 +422,9 @@
    "team": "BRE",
    "status": "a",
    "news": "",
-   "p_play": 0.991,
-   "base": 179.44,
-   "ep": 194.9
+   "p_play": 1.0,
+   "base": 179.43,
+   "ep": 194.89
   },
   {
    "id": 165,
@@ -467,8 +435,8 @@
    "status": "i",
    "news": "Thigh injury - Unknown return date",
    "p_play": 0.0,
-   "base": 182.73,
-   "ep": 185.07
+   "base": 182.72,
+   "ep": 185.06
   },
   {
    "id": 55,
@@ -479,8 +447,20 @@
    "status": "u",
    "news": "Has joined Al Hilal permanently",
    "p_play": 0.003,
-   "base": 169.02,
-   "ep": 173.94
+   "base": 169.01,
+   "ep": 173.93
+  },
+  {
+   "id": 387,
+   "code": 472769,
+   "name": "O'Reilly",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.447,
+   "base": 180.95,
+   "ep": 177.85
   },
   {
    "id": 427,
@@ -491,20 +471,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 163.16,
-   "ep": 165.98
-  },
-  {
-   "id": 387,
-   "code": 472769,
-   "name": "O'Reilly",
-   "pos": "DEF",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.49,
-   "base": 180.91,
-   "ep": 177.81
+   "base": 163.08,
+   "ep": 165.85
   },
   {
    "id": 260,
@@ -514,9 +482,9 @@
    "team": "LEE",
    "status": "a",
    "news": "",
-   "p_play": 0.42,
-   "base": 176.94,
-   "ep": 165.92
+   "p_play": 0.442,
+   "base": 176.87,
+   "ep": 164.53
   },
   {
    "id": 40,
@@ -526,9 +494,9 @@
    "team": "CHE",
    "status": "a",
    "news": "",
-   "p_play": 0.976,
-   "base": 176.43,
-   "ep": 164.06
+   "p_play": 0.987,
+   "base": 176.35,
+   "ep": 163.66
   },
   {
    "id": 428,
@@ -538,21 +506,9 @@
    "team": "MUN",
    "status": "a",
    "news": "",
-   "p_play": 0.797,
-   "base": 155.78,
-   "ep": 158.4
-  },
-  {
-   "id": 388,
-   "code": 209036,
-   "name": "Gu\u00e9hi",
-   "pos": "DEF",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.947,
-   "base": 179.86,
-   "ep": 173.08
+   "p_play": 0.78,
+   "base": 155.71,
+   "ep": 158.26
   },
   {
    "id": 13,
@@ -562,9 +518,21 @@
    "team": "ARS",
    "status": "a",
    "news": "",
-   "p_play": 0.941,
-   "base": 168.26,
-   "ep": 161.59
+   "p_play": 0.968,
+   "base": 168.18,
+   "ep": 161.42
+  },
+  {
+   "id": 388,
+   "code": 209036,
+   "name": "Gu\u00e9hi",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.841,
+   "base": 179.9,
+   "ep": 173.12
   },
   {
    "id": 12,
@@ -575,8 +543,8 @@
    "status": "i",
    "news": "Thigh injury - Unknown return date",
    "p_play": 0.0,
-   "base": 167.62,
-   "ep": 163.36
+   "base": 167.55,
+   "ep": 163.29
   },
   {
    "id": 155,
@@ -586,9 +554,9 @@
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.746,
-   "base": 165.17,
-   "ep": 158.62
+   "p_play": 0.762,
+   "base": 165.09,
+   "ep": 158.55
   },
   {
    "id": 533,
@@ -599,20 +567,8 @@
    "status": "d",
    "news": "Concussion - 75% chance of playing",
    "p_play": 0.636,
-   "base": 147.46,
-   "ep": 152.26
-  },
-  {
-   "id": 356,
-   "code": 97032,
-   "name": "Virgil",
-   "pos": "DEF",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 1.0,
-   "base": 158.89,
-   "ep": 150.14
+   "base": 147.5,
+   "ep": 152.29
   },
   {
    "id": 1,
@@ -627,16 +583,28 @@
    "ep": 149.55
   },
   {
-   "id": 368,
-   "code": 424876,
-   "name": "Szoboszlai",
-   "pos": "MID",
+   "id": 356,
+   "code": 97032,
+   "name": "Virgil",
+   "pos": "DEF",
    "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.706,
-   "base": 150.44,
-   "ep": 143.8
+   "p_play": 1.0,
+   "base": 158.93,
+   "ep": 150.18
+  },
+  {
+   "id": 201,
+   "code": 247348,
+   "name": "Mu\u00f1oz",
+   "pos": "DEF",
+   "team": "NFO",
+   "status": "a",
+   "news": "",
+   "p_play": 0.762,
+   "base": 150.46,
+   "ep": 146.35
   },
   {
    "id": 236,
@@ -647,20 +615,20 @@
    "status": "a",
    "news": "",
    "p_play": 0.994,
-   "base": 159.18,
-   "ep": 146.43
+   "base": 159.11,
+   "ep": 146.8
   },
   {
-   "id": 201,
-   "code": 247348,
-   "name": "Mu\u00f1oz",
-   "pos": "DEF",
-   "team": "NFO",
+   "id": 368,
+   "code": 424876,
+   "name": "Szoboszlai",
+   "pos": "MID",
+   "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.836,
-   "base": 150.42,
-   "ep": 146.54
+   "p_play": 0.638,
+   "base": 150.36,
+   "ep": 143.73
   },
   {
    "id": 229,
@@ -671,8 +639,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 142.81,
-   "ep": 143.52
+   "base": 142.85,
+   "ep": 143.57
   },
   {
    "id": 346,
@@ -683,8 +651,8 @@
    "status": "a",
    "news": "",
    "p_play": 0.956,
-   "base": 148.26,
-   "ep": 142.05
+   "base": 148.25,
+   "ep": 142.04
   },
   {
    "id": 399,
@@ -694,9 +662,9 @@
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.666,
-   "base": 148.39,
-   "ep": 145.49
+   "p_play": 0.675,
+   "base": 148.32,
+   "ep": 145.35
   },
   {
    "id": 8,
@@ -706,21 +674,9 @@
    "team": "ARS",
    "status": "a",
    "news": "",
-   "p_play": 0.869,
-   "base": 141.19,
-   "ep": 140.12
-  },
-  {
-   "id": 367,
-   "code": 243298,
-   "name": "Gakpo",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.693,
-   "base": 139.23,
-   "ep": 132.96
+   "p_play": 0.881,
+   "base": 141.23,
+   "ep": 140.15
   },
   {
    "id": 61,
@@ -731,8 +687,20 @@
    "status": "a",
    "news": "",
    "p_play": 0.992,
-   "base": 157.95,
-   "ep": 136.47
+   "base": 157.99,
+   "ep": 136.51
+  },
+  {
+   "id": 367,
+   "code": 243298,
+   "name": "Gakpo",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.665,
+   "base": 139.15,
+   "ep": 132.85
   },
   {
    "id": 200,
@@ -743,20 +711,8 @@
    "status": "i",
    "news": "Hamstring injury - Unknown return date",
    "p_play": 0.0,
-   "base": 133.5,
-   "ep": 131.31
-  },
-  {
-   "id": 366,
-   "code": 494595,
-   "name": "Wirtz",
-   "pos": "MID",
-   "team": "LIV",
-   "status": "a",
-   "news": "",
-   "p_play": 0.883,
-   "base": 136.83,
-   "ep": 132.0
+   "base": 133.54,
+   "ep": 131.35
   },
   {
    "id": 398,
@@ -766,9 +722,21 @@
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 0.549,
-   "base": 140.37,
-   "ep": 136.96
+   "p_play": 0.466,
+   "base": 140.3,
+   "ep": 136.59
+  },
+  {
+   "id": 366,
+   "code": 494595,
+   "name": "Wirtz",
+   "pos": "MID",
+   "team": "LIV",
+   "status": "a",
+   "news": "",
+   "p_play": 0.904,
+   "base": 136.76,
+   "ep": 132.08
   },
   {
    "id": 208,
@@ -779,8 +747,20 @@
    "status": "i",
    "news": "Groin injury - Expected back 8 Nov",
    "p_play": 0.0,
-   "base": 140.17,
-   "ep": 127.85
+   "base": 140.1,
+   "ep": 128.45
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.898,
+   "base": 135.91,
+   "ep": 133.91
   },
   {
    "id": 154,
@@ -790,9 +770,9 @@
    "team": "CHE",
    "status": "a",
    "news": "",
-   "p_play": 0.974,
-   "base": 134.12,
-   "ep": 133.68
+   "p_play": 0.983,
+   "base": 134.06,
+   "ep": 133.62
   },
   {
    "id": 390,
@@ -803,20 +783,8 @@
    "status": "a",
    "news": "",
    "p_play": 1.0,
-   "base": 132.27,
-   "ep": 129.5
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.865,
-   "base": 135.99,
-   "ep": 133.04
+   "base": 132.3,
+   "ep": 129.64
   },
   {
    "id": 142,
@@ -827,8 +795,8 @@
    "status": "i",
    "news": "Knee injury - Unknown return date",
    "p_play": 0.0,
-   "base": 136.5,
-   "ep": 127.53
+   "base": 136.54,
+   "ep": 128.65
   },
   {
    "id": 25,
@@ -838,9 +806,9 @@
    "team": "ARS",
    "status": "a",
    "news": "",
-   "p_play": 0.324,
-   "base": 132.26,
-   "ep": 142.63
+   "p_play": 0.331,
+   "base": 132.25,
+   "ep": 142.62
   },
   {
    "id": 95,
@@ -850,9 +818,9 @@
    "team": "BRE",
    "status": "a",
    "news": "",
-   "p_play": 0.533,
-   "base": 147.83,
-   "ep": 126.4
+   "p_play": 0.538,
+   "base": 147.76,
+   "ep": 125.85
   },
   {
    "id": 371,
@@ -862,9 +830,9 @@
    "team": "LIV",
    "status": "a",
    "news": "",
-   "p_play": 0.553,
-   "base": 140.24,
-   "ep": 127.88
+   "p_play": 0.462,
+   "base": 140.17,
+   "ep": 128.12
   }
  ]
 }
