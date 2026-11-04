@@ -1,20 +1,6 @@
 {
- "generated": "2026-11-03T22:46 UTC",
+ "generated": "2026-11-04T07:42 UTC",
  "items": [
-  {
-   "id": "2026-10-25-marcus-luck",
-   "ts": "2026-10-25T22:43",
-   "kind": "opinion",
-   "text": "Marcus went into the weekend in front and comes out of it 8 behind Justin, after Kostoulas and De Cuyper played the full 90 at Anfield for 3 points between them. A man who relies on luck every week was always going to get a bill, and it came in on a Sunday.",
-   "source": null
-  },
-  {
-   "id": "2026-10-25-robert-blanks",
-   "ts": "2026-10-25T22:43",
-   "kind": "opinion",
-   "text": "Six of Robert's eleven played and returned nothing, and the one who turned up, Gabriel, scored 17 and made the other ten look like a clerical error. He now sits 139 off the lead, a gap his hairline has been working on for years without getting there. At least the hairline has a plan.",
-   "source": null
-  },
   {
    "id": "2026-10-25-edward-one-point",
    "ts": "2026-10-25T22:43",
@@ -93,7 +79,7 @@
    "id": "2026-10-26-deeney-team-of-week",
    "ts": "2026-10-26T16:49",
    "kind": "news",
-   "text": "Troy Deeney's BBC team of the week has five of this league's players in it. Edward has two, Jackson up front after his pair against City and Truffert at left-back; Justin has Tavernier, forced in at number 10 after scoring in all three of Bournemouth's wins in eight days; Big Ben has Konsa. And in goal is Zion Suzuki, 'a big-game player who gets the job done', who spent the weekend on Small Ben's bench.",
+   "text": "Troy Deeney's BBC Sport team of the week has a heavy league flavour: Bart Verbruggen (Edward) for keeping Brighton in it at Manchester City, Ezri Konsa (Big Ben) for a beast of a display in Arsenal's 1-0 win at Anfield, and Rice (Small Ben), Van Hecke and McBurnie (both Big Ben) in the headline selection too.",
    "source": {
     "title": "Who has made Troy's Premier League team of the week?",
     "url": "https://www.bbc.co.uk/sport/football/articles/c804013klnn0o"
@@ -677,16 +663,29 @@
    "kind": "opinion",
    "text": "Marcus is two off the top and the squad shows exactly how: De Cuyper and Evanilson on 9 each, then Mbeumo and Foden on 1, with Guehi, Mukiele and Joao Pedro on nothing. Each of them presumably arrived after two good games somewhere, which is the Elanga method, and the method remains undefeated at finding the third game.",
    "source": null
+  },
+  {
+   "id": "2026-11-04-le-bris-sunderland",
+   "ts": "2026-11-04T07:42",
+   "kind": "news",
+   "text": "Sunderland are sticking with Regis le Bris, BBC Sport report, despite one win from nine and the bottom spot after Saturday's defeat at Coventry. Club sources believe he can turn it round, and Chelsea visit on Sunday. Robert's keeper Roefs and Marcus's Mukiele are the Sunderland men in the league, and Marcus, Edward and Big Ben all own Chelsea players on the other side of it.",
+   "source": {
+    "title": "Bottom club Sunderland to stick with manager Le Bris",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cj75pglrq794o"
+   }
+  },
+  {
+   "id": "2026-11-04-deeney-team-of-week",
+   "ts": "2026-11-04T07:42",
+   "kind": "news",
+   "text": "Troy Deeney's BBC Sport team of the week has a heavy league flavour: Bart Verbruggen (Edward) for keeping Brighton in it at Manchester City, Ezri Konsa (Big Ben) for a beast of a display in Arsenal's 1-0 win at Anfield, and Rice (Small Ben), Van Hecke and McBurnie (both Big Ben) in the headline selection too.",
+   "source": {
+    "title": "Who has made Troy's Premier League team of the week?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c8dx37n11kv2o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-13T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, no fixtures today. Led with Palace 3-1 Forest, Brighton at Sunderland and Palmer's groin admission, all read from Guardian pages by curl (search surfaced only aggregators). Skipped Utd v Spurs and Chelsea v Bournemouth results as already posted. No opinion on morning run; roast archive untouched (2 unused: both fail rule 4 - one is a slur-adjacent/apartheid line about a real political regime, one is a slur - left unused)."
-  },
   {
    "ts": "2026-10-13T22:45",
    "news": 0,
@@ -1099,6 +1098,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening wrap, no fixtures today, GW9 closed (Ben D 77). No reported items (nothing material; morning run covered Barry/Newcastle). Led with the table: Edward top by 2 from Justin first-to-third. Used Robert pint, Marcus kneejerk/Elanga. Passed over: apartheid line on Justin and Ben D self-roast (nothing in the football to hang them on tonight, no policy reason), Delap/Haramball banned. No flops today. Totals quoted are GW9-final public.json (matches game); live feed already on GW10 with stale priors."
+  },
+  {
+   "ts": "2026-11-04T07:42",
+   "news": 2,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Search tool returned mostly stale/off-list results, so read BBC Sport football pages directly; led with Le Bris/Sunderland and Deeney's team of the week. Only two permitted-source items found that were not already posted (Barry/Newcastle already covered). Roast archive untouched; no opinion on morning runs."
   }
  ]
 }
