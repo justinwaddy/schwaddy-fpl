@@ -1,20 +1,6 @@
 {
- "generated": "2026-11-04T07:42 UTC",
+ "generated": "2026-11-04T22:41 UTC",
  "items": [
-  {
-   "id": "2026-10-25-edward-one-point",
-   "ts": "2026-10-25T22:43",
-   "kind": "opinion",
-   "text": "Edward had the biggest gameweek in the league, 56 to Justin's 55, and gained exactly one point on the man he is chasing. Jackson on 13, Truffert on 10, and he still finishes the night third. All that work and the gap barely noticed.",
-   "source": null
-  },
-  {
-   "id": "2026-10-25-bigben-konsa",
-   "ts": "2026-10-25T22:43",
-   "kind": "opinion",
-   "text": "Konsa gave Big Ben 14 and Gross gave him an own goal, so the self-appointed Arsenal man gets to take the first as proof of his ball knowledge and will describe the second as a Brighton problem.",
-   "source": null
-  },
   {
    "id": "2026-10-26-isak-six",
    "ts": "2026-10-26T07:55",
@@ -683,16 +669,23 @@
     "title": "Who has made Troy's Premier League team of the week?",
     "url": "https://www.bbc.co.uk/sport/football/articles/c8dx37n11kv2o"
    }
+  },
+  {
+   "id": "2026-11-04-bruno-unemployed",
+   "ts": "2026-11-04T22:41",
+   "kind": "opinion",
+   "source": null,
+   "text": "Big Ben has spent two months leaning on Bruno Fernandes to haul him out of trouble, and in the gameweek where he outscored everybody, Bruno gave him 2. Nobody was rescued. A centre-back and a Hull striker did it, which tells you the whole reputation was built on a man who turns up to rescue the team and then watches somebody else do it."
+  },
+  {
+   "id": "2026-11-04-ben-c-bench",
+   "ts": "2026-11-04T22:41",
+   "kind": "opinion",
+   "source": null,
+   "text": "Small Ben left 12 points on his bench this week, which is a lot of dugout for a man who talks about his upcoming fight as if preparation were optional. Same instinct in both: pick the wrong eleven, trust the gloves, find out in the second round what the bench knew all along. At least Harvey Price could say he had a plan."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-13T22:45",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW7 not started; one search found nothing usable from permitted outlets, so no reported items. Led with the table after GW6. Passed on both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): they target sexuality/race, which are off limits. No flops today so reflop not run."
-  },
   {
    "ts": "2026-10-14T07:42",
    "news": 4,
@@ -1105,6 +1098,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Search tool returned mostly stale/off-list results, so read BBC Sport football pages directly; led with Le Bris/Sunderland and Deeney's team of the week. Only two permitted-source items found that were not already posted (Barry/Newcastle already covered). Roast archive untouched; no opinion on morning runs."
+  },
+  {
+   "ts": "2026-11-04T22:41",
+   "news": 0,
+   "opinion": 2,
+   "matchday": false,
+   "note": "Evening wrap, no fixtures today, GW10 not started, GW9 final. No reported items (morning run covered the day, nothing material since). Opinion: Big Ben/Bruno (archive 09-06, Bruno on 2 in his 77 week, Van Hecke/McBurnie/Konsa carried him); Small Ben bench of 12 + upcoming fight (archive 09-12 Edward on Ben C, Harvey Price). Passed over: Rob hairline lines and pint (already used this week), apartheid line on Justin and Ben D self-roast (nothing to hang them on), Marcus Jobacus/Catholic/Chloe (no hook tonight). No flops today. Totals from GW9-final public.json; live feed priors stale."
   }
  ]
 }
