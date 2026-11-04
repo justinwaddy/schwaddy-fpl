@@ -1170,6 +1170,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 535301,1789807008,1789807008,d,50.0,50.0,Ankle injury - 50% chance of playing
 535301,1789979793,1789979793,a,50.0,100.0,
 535301,1793781371,1793743208,d,100.0,75.0,Hamstring injury - 75% chance of playing
+535301,1793809951,1793809951,d,100.0,50.0,Hamstring injury - 50% chance of playing
 535818,1785832691,1785832691,a,,,
 535818,1787270210,1787234408,i,,0.0,Ankle injury - Unknown return date
 535818,1788894459,1788894459,u,0.0,0.0,Has joined Ajax on loan for the rest of the season
