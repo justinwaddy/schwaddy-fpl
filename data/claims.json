@@ -861,12 +861,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-06T08:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new fitness news on squad or shortlist since last run."
-    },
-    {
       "ts": "2026-10-06T21:10 UTC",
       "gw": 6,
       "claims": 5,
@@ -1219,6 +1213,12 @@
       "gw": 10,
       "claims": 5,
       "note": "No change: searches found nothing current from permitted outlets; claims carried forward."
+    },
+    {
+      "ts": "2026-11-04T21:15 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No change; research found nothing new from permitted outlets, claims carried forward."
     }
   ]
 }

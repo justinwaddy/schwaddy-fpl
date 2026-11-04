@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-05T21:15 UTC",
-      "published": 2,
-      "note": "Led with Scott tendon injury (several weeks) and Haaland early sub for Norway; no injury confirmed for Haaland."
-    },
-    {
       "ts": "2026-10-06T08:10 UTC",
       "published": 0,
       "note": "Morning check inside the international break (GW6 waivers close 9 October). premierleague.com and Sky searches repeat known items (Haaland early sub, Brobbey hamstring, Isak thigh); nothing new on Van Hecke or Marmoush. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-04T08:10 UTC",
       "published": 0,
       "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-04T21:15 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
     }
   ]
 }
