@@ -811,6 +811,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 462387,1785832691,1785832691,a,,,
 462387,1787910473,1787842450,u,,0.0,Has joined Sheffield Wednesday on loan for the rest of the season
 462424,1785832691,1784808083,i,,0.0,Back injury - Unknown return date
+462424,1793781371,1793781371,d,0.0,75.0,Back injury - 75% chance of playing
 462635,1785832691,1785832691,a,,,
 462635,1787270210,1787002208,i,,0.0,Ankle injury - Expected back 5 Sep
 462635,1788894459,1788894459,a,100.0,100.0,
@@ -1168,6 +1169,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 535301,1788894459,1788894459,i,0.0,0.0,Ankle injury - Expected back 19 Sep
 535301,1789807008,1789807008,d,50.0,50.0,Ankle injury - 50% chance of playing
 535301,1789979793,1789979793,a,50.0,100.0,
+535301,1793781371,1793743208,d,100.0,75.0,Hamstring injury - 75% chance of playing
 535818,1785832691,1785832691,a,,,
 535818,1787270210,1787234408,i,,0.0,Ankle injury - Unknown return date
 535818,1788894459,1788894459,u,0.0,0.0,Has joined Ajax on loan for the rest of the season
