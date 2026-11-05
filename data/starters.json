@@ -1,247 +1,253 @@
 {
-  "gw": 9,
-  "deadline": "2026-10-31T11:00:00Z",
-  "ts": "2026-10-30T21:20 UTC",
-  "summary": "Based on one permitted outlet's predicted lineups (the Guardian), 13 of the 15 look likely to start and two look like bench risks: Gvardiol (City) and Gyokeres (Arsenal). No second permitted outlet had a published XI, so nothing is marked start.",
-  "players": [
+ "gw": 10,
+ "deadline": "2026-11-06T18:30:00Z",
+ "ts": "2026-11-05T21:15 UTC",
+ "summary": "Search coverage was thin: no permitted outlet had published GW10 predicted XIs, so nobody is marked start. Worries are Gvardiol (City sub last time) and Barcola (role unconfirmed); Odegaard is expected back for Arsenal.",
+ "players": [
+  {
+   "name": "Tzolakis",
+   "code": "473284",
+   "club": "HUL",
+   "pos": "GKP",
+   "status": "likely",
+   "verdict": "First-choice keeper, Hull away at Arsenal",
+   "note": "No permitted outlet predicted XI found; he has kept the gloves in recent runs. Hull are at Arsenal, a tough fixture for clean sheets.",
+   "sources": [
     {
-      "name": "Tzolakis",
-      "code": "473284",
-      "club": "HUL",
-      "pos": "GKP",
-      "status": "likely",
-      "verdict": "Hull keeper expected, not among subs",
-      "note": "Guardian's Hull v Ipswich preview names Butland (arm, doubtful) among contenders only; Tzolakis is not on its injury or substitutes list. One permitted source, XI not confirmed.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Raya",
-      "code": "154561",
-      "club": "ARS",
-      "pos": "GKP",
-      "status": "likely",
-      "verdict": "Not among Arsenal's listed subs at Liverpool",
-      "note": "Absent from Arsenal's injured and substitutes lists in the Guardian's Liverpool v Arsenal preview, so he is a probable starter; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "White",
-      "code": "198869",
-      "club": "ARS",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "Not among Arsenal's listed subs at Liverpool",
-      "note": "Guardian lists Timber and Hincapie as Arsenal contenders but not White, and Saliba is injured (back), so White should start; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Gvardiol",
-      "code": "477424",
-      "club": "MCI",
-      "pos": "DEF",
-      "status": "bench",
-      "verdict": "Listed among City's subs v Brighton",
-      "note": "Guardian's Man City v Brighton preview lists him among the contenders rather than the probable XI, which contradicts the model's 0.83 availability. City also played Brighton in the Carabao Cup on Wednesday, so rotation is plausible.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Boscagli",
-      "code": "204120",
-      "club": "BHA",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "Brighton defender, not among listed subs",
-      "note": "Not on the Guardian's Brighton injured or substitutes list for the trip to Man City, so a probable starter; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Bogle",
-      "code": "226182",
-      "club": "LEE",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "Leeds defender, not among listed subs",
-      "note": "Not on the Guardian's injured or substitutes list for Bournemouth v Leeds, so a probable starter; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Vuskovic",
-      "code": "610799",
-      "club": "BHA",
-      "pos": "DEF",
-      "status": "likely",
-      "verdict": "Brighton defender, not among listed subs",
-      "note": "Not on the Guardian's Brighton injured or substitutes list for the trip to Man City, so a probable starter; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Barcola",
-      "code": "482616",
-      "club": "LIV",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Liverpool winger, not among listed subs",
-      "note": "The Guardian's Liverpool v Arsenal preview lists Szoboszlai (hamstring) as doubtful and Ekitike, Frimpong, Bradley out, but not Barcola among subs; Liverpool also rotate often, so this is a risk.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Neto",
-      "code": "247632",
-      "club": "CHE",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Chelsea midfielder, not among listed subs",
-      "note": "Not on the Guardian's Chelsea substitutes or injury list for Man United at home; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Schade",
-      "code": "513418",
-      "club": "BRE",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Brentford forward line, not among listed subs",
-      "note": "Not on the Guardian's Brentford substitutes or injured lists for Forest at home; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Ødegaard",
-      "code": "184029",
-      "club": "ARS",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Not among Arsenal's listed subs at Liverpool",
-      "note": "Absent from the Guardian's Arsenal injured and substitutes lists, so a probable starter; Saka (thigh) is out.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Tavernier",
-      "code": "201658",
-      "club": "BOU",
-      "pos": "MID",
-      "status": "likely",
-      "verdict": "Bournemouth midfielder, not among listed subs",
-      "note": "Not on the Guardian's Bournemouth substitutes or injury list for Leeds at home; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Gyökeres",
-      "code": "224117",
-      "club": "ARS",
-      "pos": "FWD",
-      "status": "bench",
-      "verdict": "Listed among Arsenal's subs at Liverpool",
-      "note": "Guardian's Liverpool v Arsenal preview lists him among the contenders, not the probable XI, which agrees with the model's low 0.32 availability.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Marmoush",
-      "code": "438234",
-      "club": "TOT",
-      "pos": "FWD",
-      "status": "likely",
-      "verdict": "Spurs forward, not among listed subs",
-      "note": "The Guardian lists Marmoush among Spurs' scorers and not their subs or injured for Crystal Palace on Saturday; single permitted source.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
-    },
-    {
-      "name": "Haaland",
-      "code": "223094",
-      "club": "MCI",
-      "pos": "FWD",
-      "status": "likely",
-      "verdict": "City striker, not among listed subs",
-      "note": "Not on the Guardian's Man City injured or substitutes list for Brighton; no permitted outlet has confirmed the XI yet.",
-      "sources": [
-        {
-          "title": "Premier League team news: predicted lineups for the weekend action",
-          "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-        }
-      ]
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
     }
-  ],
-  "runs": [
+   ]
+  },
+  {
+   "name": "Raya",
+   "code": "154561",
+   "club": "ARS",
+   "pos": "GKP",
+   "status": "likely",
+   "verdict": "Arsenal keeper at home to Hull",
+   "note": "Arsenal host promoted Hull and have won 18 of 19 against promoted sides per the Premier League preview. No XI published yet.",
+   "sources": [
     {
-      "ts": "2026-10-30T21:20 UTC",
-      "gw": 9,
-      "kind": "deep",
-      "note": "Only the Guardian's weekend predicted lineups and 10 things piece were readable; search returned stale or non-permitted pages. Inferred probable XI from its injured and substitutes lists."
-    },
-    {
-      "ts": "2026-10-31T08:15 UTC",
-      "gw": 9,
-      "kind": "light",
-      "note": "no change; PL MW9 predicted XIs (30 Oct) consistent with existing verdicts"
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
     }
-  ]
+   ]
+  },
+  {
+   "name": "White",
+   "code": "198869",
+   "club": "ARS",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Arsenal right-back, no XI published",
+   "note": "Arsenal have won seven straight home league games per the Premier League; no predicted XI found, so rotation risk (avail 0.67) is unresolved.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Gvardiol",
+   "code": "477424",
+   "club": "MCI",
+   "pos": "DEF",
+   "status": "doubt",
+   "verdict": "Was a City substitute last time; XI unclear",
+   "note": "Man City visit Forest; no permitted predicted XI found this run. Earlier Guardian XIs had him among the substitutes.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Bogle",
+   "code": "226182",
+   "club": "LEE",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Leeds defender at home to Spurs",
+   "note": "Leeds host Spurs per the Premier League preview; no predicted XI found, so likely on past starts only.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Boscagli",
+   "code": "204120",
+   "club": "BHA",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Brighton have a double up, home to Brentford",
+   "note": "Scout Selection says Brighton have a double-up in GW10 and host Brentford on Sunday. No XI found.",
+   "sources": [
+    {
+     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
+     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+    }
+   ]
+  },
+  {
+   "name": "Vuskovic",
+   "code": "610799",
+   "club": "BHA",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Brighton defender, double-up club",
+   "note": "Scout Selection says Brighton have a double-up in GW10 and host Brentford on Sunday. No XI found.",
+   "sources": [
+    {
+     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
+     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+    }
+   ]
+  },
+  {
+   "name": "Barcola",
+   "code": "482616",
+   "club": "LIV",
+   "pos": "MID",
+   "status": "doubt",
+   "verdict": "Role at Liverpool unconfirmed, at Palace",
+   "note": "Liverpool visit Crystal Palace per the Premier League preview. No permitted outlet confirmed his place; the model gives 0.76 availability.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Ødegaard",
+   "code": "184029",
+   "club": "ARS",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Expected back in Arsenal XI v Hull",
+   "note": "Premier League Scout says he was rested from European duties in midweek and looks set to return against Hull. One source so not start.",
+   "sources": [
+    {
+     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
+     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+    }
+   ]
+  },
+  {
+   "name": "Neto",
+   "code": "247632",
+   "club": "CHE",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Chelsea winger at Sunderland, no XI found",
+   "note": "Chelsea visit Sunderland whose physicality the Premier League flags as a problem. No predicted XI found from a permitted outlet.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Cunha",
+   "code": "430871",
+   "club": "MUN",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Man Utd forward v Villa after late winner",
+   "note": "Premier League preview says Cunha scored a dramatic late winner against Roma on Tuesday and United host Villa Sunday. No XI found.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Tavernier",
+   "code": "201658",
+   "club": "BOU",
+   "pos": "MID",
+   "status": "likely",
+   "verdict": "Bournemouth, double-up club at Ipswich",
+   "note": "Scout Selection backs Tavernier at Ipswich, who have no clean sheet this season, and notes Bournemouth have a double. No XI found.",
+   "sources": [
+    {
+     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
+     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+    }
+   ]
+  },
+  {
+   "name": "Marmoush",
+   "code": "438234",
+   "club": "TOT",
+   "pos": "FWD",
+   "status": "likely",
+   "verdict": "Spurs forward, away at Leeds",
+   "note": "Spurs are away at Leeds per the Premier League preview. He was reported starting in the recent win over Crystal Palace; no XI found for this one.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Gonzalo",
+   "code": "551466",
+   "club": "FUL",
+   "pos": "FWD",
+   "status": "likely",
+   "verdict": "Fulham striker v Newcastle, no XI found",
+   "note": "Fulham host Newcastle per the Premier League preview. No predicted XI found from a permitted outlet.",
+   "sources": [
+    {
+     "title": "Ten KEY questions for Matchweek 10's fixtures",
+     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+    }
+   ]
+  },
+  {
+   "name": "Haaland",
+   "code": "223094",
+   "club": "MCI",
+   "pos": "FWD",
+   "status": "likely",
+   "verdict": "City captain pick away at Forest",
+   "note": "Scout Selection names him captain pick after he scored in the Champions League win over Leipzig. No injury reported; no XI published, so the call rests on that and the earlier minor knock.",
+   "sources": [
+    {
+     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
+     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "ts": "2026-10-30T21:20 UTC",
+   "gw": 9,
+   "kind": "deep",
+   "note": "Only the Guardian's weekend predicted lineups and 10 things piece were readable; search returned stale or non-permitted pages. Inferred probable XI from its injured and substitutes lists."
+  },
+  {
+   "ts": "2026-10-31T08:15 UTC",
+   "gw": 9,
+   "kind": "light",
+   "note": "no change; PL MW9 predicted XIs (30 Oct) consistent with existing verdicts"
+  },
+  {
+   "ts": "2026-11-05T21:15 UTC",
+   "gw": 10,
+   "kind": "deep",
+   "note": "Only PL Scout/key-questions pieces available; no predicted XIs from permitted outlets. All verdicts likely/doubt."
+  }
+ ]
 }
