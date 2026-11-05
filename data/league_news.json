@@ -1,36 +1,6 @@
 {
- "generated": "2026-11-05T07:42 UTC",
+ "generated": "2026-11-05T22:45 UTC",
  "items": [
-  {
-   "id": "2026-10-26-city-back-line",
-   "ts": "2026-10-26T07:55",
-   "kind": "news",
-   "text": "Manchester City's perfect start ended at Villa Park and the BBC's verdict is that the back line is the problem: one clean sheet in their last six, and Donnarumma and Guehi have three errors leading to Premier League goals each since the start of last season. Small Ben has the keeper and Marcus has the centre-back.",
-   "source": {
-    "title": "Man City's leaky defence highlights Donnarumma & Guehi struggles",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6kg7z700k7jo"
-   }
-  },
-  {
-   "id": "2026-10-26-jackson-villa",
-   "ts": "2026-10-26T07:55",
-   "kind": "news",
-   "text": "Nicolas Jackson now has seven goals in his first 11 appearances for Villa, six of them in the last six, after both of his shots on target beat City on Saturday, the BBC notes. Edward has him, and the 13 he took from the weekend is what the numbers look like when the underlying ones are real: Jackson is outscoring his expected goals by exactly two.",
-   "source": {
-    "title": "From Chelsea reject to Watkins 'upgrade' - Jackson makes fast Villa start",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6p9gkdzzpnro"
-   }
-  },
-  {
-   "id": "2026-10-26-carrick-brink",
-   "ts": "2026-10-26T07:55",
-   "kind": "news",
-   "text": "Michael Carrick is on the brink at Manchester United after the 3-0 home defeat by Bournemouth, with senior figures in serious talks about his future, the BBC reports. He dropped his skipper Bruno Fernandes to the bench for it, after Fernandes questioned his tactics following the 4-1 loss at Como. Big Ben has Fernandes, Marcus has Mbeumo, Small Ben has Cunha, Robert has Sesko and Yoro.",
-   "source": {
-    "title": "Highlights: Pressure grows on Carrick as Man United lose at home to Bournemouth",
-    "url": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo"
-   }
-  },
   {
    "id": "2026-10-26-branthwaite-gossip",
    "ts": "2026-10-26T07:55",
@@ -683,6 +653,27 @@
     "title": "Palace lose appeal against Mateta red card",
     "url": "https://www.bbc.co.uk/sport/football/articles/cqp9gelp4em2o"
    }
+  },
+  {
+   "id": "2026-11-05-robert-mateta-recession",
+   "ts": "2026-11-05T22:45",
+   "kind": "opinion",
+   "text": "Mateta was sent off in the 13th minute, lost his appeal, and is banned for three Palace games, which makes him the fastest-receding thing in Robert's squad, a title that for once is not held by the hairline. The difference is that Mateta at least went through the motions of an appeal. Robert, who has not made a transfer in recent memory, will presumably leave him in the eleven to serve the ban with dignity.",
+   "source": null
+  },
+  {
+   "id": "2026-11-05-marcus-spotlight-confession",
+   "ts": "2026-11-05T22:45",
+   "kind": "opinion",
+   "text": "Marcus has Guehi, Mukiele and Joao Pedro all sitting on nothing from last gameweek and still ended it two points off the top, which is the kind of absolution usually only available from a man in a cassock who has been asked to look after the choirboys in the Spotlight sense. Three blanks forgiven before he has even said sorry. The Jobacus channel is presumably already filming the penance, outdoors.",
+   "source": null
+  },
+  {
+   "id": "2026-11-05-justin-gyokeres-sacked",
+   "ts": "2026-11-05T22:45",
+   "kind": "opinion",
+   "text": "Justin finished the gameweek twelve off the lead, and the first thing he did was sack Gyokeres, a striker who gave him 1 point, along with Schade, and bring in Cunha and Gonzalo. It is the move of a man who has looked at a league table and decided the problem is the people in it rather than the one picking them. Cunha's new club hosts Villa next, so the first review of the new regime is already booked.",
+   "source": null
   }
  ],
  "runs": [
@@ -1105,6 +1096,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning. Led with Mateta's lost red-card appeal (Robert, with Van de Ven of Small Ben as the victim). Only one item: web search returned mostly stale or off-list results; other BBC pieces found (Barry, Arsenal at Anfield) were already covered or old, and the JJ Gabriel story is a different player from Gabriel (ARS). No roast suggestions used (morning run); none passed over."
+  },
+  {
+   "ts": "2026-11-05T22:45",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening wrap, no fixtures today, GW9 final, GW10 not started (all 10 fixtures to come). No reported items beyond the morning Mateta appeal; no searches run. Opinion: Robert/Mateta ban + hairline (archive 09-04 Ben D, 09-12 Edward no-transfers); Marcus three blanks + Spotlight priest/Jobacus (archive 09-13; Jobacus/priest ran before, new hook is the three blanks); Justin sacking Gyokeres/Schade for Cunha/Gonzalo (waiver moves, no archive). Passed over: Ben D apartheid and self-roast lines (no hook), Ben C height/boxing and bench (ran last night), Edward Arsenal/ball-knowledge (ran 2 Nov), Marcus Elanga (ran 3 Nov). No flops today."
   }
  ]
 }
