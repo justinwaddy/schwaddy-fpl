@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T16:33",
+ "generated": "2026-11-05T08:37",
  "gw": 10,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.02,
-   "ep": 6.58
+   "ep": 6.54
   },
   {
    "id": 391,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.817,
    "base": 5.37,
-   "ep": 6.67
+   "ep": 6.66
   },
   {
    "id": 504,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 4.48,
-   "ep": 5.22
+   "ep": 5.16
   },
   {
    "id": 114,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 3.99
+   "ep": 3.98
   },
   {
    "id": 10,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.933,
    "base": 3.99,
-   "ep": 4.34
+   "ep": 4.33
   },
   {
    "id": 15,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.927,
    "base": 3.81,
-   "ep": 3.93
+   "ep": 3.87
   },
   {
    "id": 628,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.753,
    "base": 2.4,
-   "ep": 3.88
+   "ep": 3.86
   },
   {
    "id": 411,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.22,
-   "ep": 2.87
+   "ep": 2.85
   },
   {
    "id": 94,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.845,
    "base": 1.98,
-   "ep": 2.67
+   "ep": 2.68
   },
   {
    "id": 25,
@@ -198,12 +198,12 @@
    "ep": 0.41
   }
  ],
- "xi_ep": 56.5,
+ "xi_ep": 56.3,
  "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 8.12,
+   "gain": 8.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,37 +233,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.78,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.86,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.753,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.71,
+   "gain": 7.92,
    "change": 1,
    "fallback": true,
    "add": {
@@ -293,7 +263,37 @@
   },
   {
    "pos": "MID",
-   "gain": 6.33,
+   "gain": 7.87,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
+    "pos": "MID",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.86,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.753,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 6.65,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,40 +323,10 @@
   },
   {
    "pos": "MID",
-   "gain": 6.86,
+   "gain": 6.78,
    "change": 2,
    "fallback": false,
    "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.86,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 94,
-    "code": 513418,
-    "name": "Schade",
-    "pos": "MID",
-    "team": "BRE",
-    "status": "a",
-    "news": "",
-    "p_play": 0.855,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 6.79,
-   "change": 2,
-   "fallback": true,
-   "add": {
     "id": 67,
     "code": 499604,
     "name": "Rayan",
@@ -383,7 +353,37 @@
   },
   {
    "pos": "MID",
-   "gain": 5.41,
+   "gain": 6.73,
+   "change": 2,
+   "fallback": true,
+   "add": {
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
+    "pos": "MID",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.86,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 94,
+    "code": 513418,
+    "name": "Schade",
+    "pos": "MID",
+    "team": "BRE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.855,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 5.51,
    "change": 2,
    "fallback": true,
    "add": {
@@ -413,7 +413,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.35,
+   "gain": 5.23,
    "change": 2,
    "fallback": true,
    "add": {
@@ -443,7 +443,7 @@
   },
   {
    "pos": "FWD",
-   "gain": 4.99,
+   "gain": 5.09,
    "change": 3,
    "fallback": false,
    "add": {
@@ -533,7 +533,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.53,
-   "ep": 307.9
+   "ep": 307.55
   },
   {
    "id": 155,
@@ -557,7 +557,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.08,
-   "ep": 283.17
+   "ep": 283.34
   },
   {
    "id": 387,
@@ -584,18 +584,6 @@
    "ep": 278.34
   },
   {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.968,
-   "base": 168.18,
-   "ep": 276.95
-  },
-  {
    "id": 428,
    "code": 430871,
    "name": "Cunha",
@@ -605,6 +593,18 @@
    "news": "",
    "p_play": 0.78,
    "base": 155.71,
+   "ep": 276.92
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.968,
+   "base": 168.18,
    "ep": 276.75
   },
   {
@@ -641,7 +641,7 @@
    "news": "",
    "p_play": 0.675,
    "base": 148.32,
-   "ep": 274.03
+   "ep": 274.04
   },
   {
    "id": 398,
@@ -653,7 +653,7 @@
    "news": "",
    "p_play": 0.466,
    "base": 140.3,
-   "ep": 264.74
+   "ep": 264.77
   },
   {
    "id": 481,
@@ -665,7 +665,7 @@
    "news": "",
    "p_play": 0.898,
    "base": 135.91,
-   "ep": 259.07
+   "ep": 258.59
   },
   {
    "id": 8,
@@ -725,7 +725,7 @@
    "news": "",
    "p_play": 0.38,
    "base": 127.51,
-   "ep": 248.36
+   "ep": 248.55
   },
   {
    "id": 19,
@@ -737,7 +737,19 @@
    "news": "",
    "p_play": 0.241,
    "base": 127.9,
-   "ep": 245.33
+   "ep": 246.71
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.442,
+   "base": 176.87,
+   "ep": 243.39
   },
   {
    "id": 390,
@@ -762,18 +774,6 @@
    "p_play": 0.636,
    "base": 147.5,
    "ep": 240.48
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.442,
-   "base": 176.87,
-   "ep": 239.92
   },
   {
    "id": 384,
@@ -845,7 +845,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 176.35,
-   "ep": 229.91
+   "ep": 230.64
   },
   {
    "id": 236,
@@ -857,7 +857,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.11,
-   "ep": 228.3
+   "ep": 227.44
   },
   {
    "id": 31,

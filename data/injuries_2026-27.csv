@@ -812,6 +812,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 462387,1787910473,1787842450,u,,0.0,Has joined Sheffield Wednesday on loan for the rest of the season
 462424,1785832691,1784808083,i,,0.0,Back injury - Unknown return date
 462424,1793781371,1793781371,d,0.0,75.0,Back injury - 75% chance of playing
+462424,1793867801,1793867801,a,0.0,100.0,
 462635,1785832691,1785832691,a,,,
 462635,1787270210,1787002208,i,,0.0,Ankle injury - Expected back 5 Sep
 462635,1788894459,1788894459,a,100.0,100.0,

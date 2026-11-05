@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T16:33",
+ "generated": "2026-11-05T08:37",
  "gw": 10,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.672,
    "base": 3.88,
-   "ep": 3.64,
+   "ep": 3.63,
    "votes": 5
   },
   {
@@ -147,7 +147,7 @@
    "p_play": 0.855,
    "base": 2.97,
    "ep": 2.83,
-   "votes": 2
+   "votes": 3
   },
   {
    "id": 411,
@@ -188,7 +188,7 @@
    "p_play": 0.753,
    "base": 2.4,
    "ep": 2.39,
-   "votes": 3
+   "votes": 2
   },
   {
    "id": 401,
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 64.07,
+   "gain": 64.81,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 127
+   "borda": 117
   },
   {
    "pos": "MID",
-   "gain": 29.56,
+   "gain": 29.75,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,22 +282,22 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 98
+   "borda": 89
   },
   {
    "pos": "MID",
-   "gain": 35.84,
+   "gain": 27.41,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 261,
-    "code": 153133,
-    "name": "Iwobi",
+    "id": 129,
+    "code": 509416,
+    "name": "Ayari",
     "pos": "MID",
-    "team": "FUL",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.907,
+    "p_play": 0.86,
     "base": null,
     "ep": null
    },
@@ -313,23 +313,23 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 65
+   "votes": 4,
+   "borda": 63
   },
   {
    "pos": "MID",
-   "gain": 30.73,
+   "gain": 35.64,
    "change": 1,
    "fallback": true,
    "add": {
-    "id": 67,
-    "code": 499604,
-    "name": "Rayan",
+    "id": 261,
+    "code": 153133,
+    "name": "Iwobi",
     "pos": "MID",
-    "team": "BOU",
+    "team": "FUL",
     "status": "a",
     "news": "",
-    "p_play": 0.978,
+    "p_play": 0.907,
     "base": null,
     "ep": null
    },
@@ -412,7 +412,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.53,
-   "ep": 194.78
+   "ep": 194.66
   },
   {
    "id": 106,
@@ -472,7 +472,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.08,
-   "ep": 165.85
+   "ep": 165.91
   },
   {
    "id": 260,
@@ -484,7 +484,7 @@
    "news": "",
    "p_play": 0.442,
    "base": 176.87,
-   "ep": 164.53
+   "ep": 165.85
   },
   {
    "id": 40,
@@ -496,7 +496,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 176.35,
-   "ep": 163.66
+   "ep": 163.99
   },
   {
    "id": 428,
@@ -508,19 +508,7 @@
    "news": "",
    "p_play": 0.78,
    "base": 155.71,
-   "ep": 158.26
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.968,
-   "base": 168.18,
-   "ep": 161.42
+   "ep": 158.32
   },
   {
    "id": 388,
@@ -533,6 +521,18 @@
    "p_play": 0.841,
    "base": 179.9,
    "ep": 173.12
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.968,
+   "base": 168.18,
+   "ep": 161.52
   },
   {
    "id": 12,
@@ -607,18 +607,6 @@
    "ep": 146.35
   },
   {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.994,
-   "base": 159.11,
-   "ep": 146.8
-  },
-  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -629,6 +617,18 @@
    "p_play": 0.638,
    "base": 150.36,
    "ep": 143.73
+  },
+  {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.994,
+   "base": 159.11,
+   "ep": 146.36
   },
   {
    "id": 229,
@@ -664,7 +664,7 @@
    "news": "",
    "p_play": 0.675,
    "base": 148.32,
-   "ep": 145.35
+   "ep": 145.42
   },
   {
    "id": 8,
@@ -700,7 +700,7 @@
    "news": "",
    "p_play": 0.665,
    "base": 139.15,
-   "ep": 132.85
+   "ep": 132.89
   },
   {
    "id": 200,
@@ -724,7 +724,7 @@
    "news": "",
    "p_play": 0.466,
    "base": 140.3,
-   "ep": 136.59
+   "ep": 136.89
   },
   {
    "id": 366,
@@ -736,7 +736,7 @@
    "news": "",
    "p_play": 0.904,
    "base": 136.76,
-   "ep": 132.08
+   "ep": 131.93
   },
   {
    "id": 208,
@@ -748,31 +748,7 @@
    "news": "Groin injury - Expected back 8 Nov",
    "p_play": 0.0,
    "base": 140.1,
-   "ep": 128.45
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.898,
-   "base": 135.91,
-   "ep": 133.91
-  },
-  {
-   "id": 154,
-   "code": 244851,
-   "name": "Palmer",
-   "pos": "MID",
-   "team": "CHE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.983,
-   "base": 134.06,
-   "ep": 133.62
+   "ep": 127.79
   },
   {
    "id": 390,
@@ -787,6 +763,18 @@
    "ep": 129.64
   },
   {
+   "id": 154,
+   "code": 244851,
+   "name": "Palmer",
+   "pos": "MID",
+   "team": "CHE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.983,
+   "base": 134.06,
+   "ep": 133.62
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -797,6 +785,18 @@
    "p_play": 0.0,
    "base": 136.54,
    "ep": 128.65
+  },
+  {
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.898,
+   "base": 135.91,
+   "ep": 132.97
   },
   {
    "id": 25,
@@ -820,7 +820,7 @@
    "news": "",
    "p_play": 0.538,
    "base": 147.76,
-   "ep": 125.85
+   "ep": 126.34
   },
   {
    "id": 371,
@@ -832,7 +832,7 @@
    "news": "Foot injury - 75% chance of playing",
    "p_play": 0.346,
    "base": 140.17,
-   "ep": 128.12
+   "ep": 127.8
   }
  ]
 }
