@@ -1,7 +1,7 @@
 {
   "gw": 10,
   "waivers_close": "2026-11-05T18:30:00Z",
-  "ts": "2026-11-03T21:15 UTC",
+  "ts": "2026-11-05T08:15 UTC",
   "summary": "Claims refreshed for the GW10 window (closes 5 November) after a re-run on the post-GW9 data. Gyökeres out is still the top move, but Fulham's Gonzalo now edges Wissa on both the model and the network vote, so he goes first and Wissa is the fallback. Saliba's return to Arsenal training, with Konsa possibly at right-back, puts more pressure on White's minutes, so Hill for White moves up to second. Cunha for Barcola is backed by all five networks, and the marginal Neto and Boscagli swaps are dropped for Le Fée for Schade. Justin leads on points among 6, so his claims go in last.",
   "claims": [
     {
@@ -856,12 +856,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-06T21:10 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no new fitness news on squad or shortlist from permitted outlets."
-    },
-    {
       "ts": "2026-10-07T08:15 UTC",
       "gw": 6,
       "claims": 5,
@@ -1214,6 +1208,12 @@
       "gw": 10,
       "claims": 5,
       "note": "No change; research found nothing new from permitted outlets, claims carried forward."
+    },
+    {
+      "ts": "2026-11-05T08:15 UTC",
+      "gw": 10,
+      "claims": 5,
+      "note": "No change; research found nothing new from permitted outlets, claims carried forward ahead of the 18:30 UTC waiver close."
     }
   ]
 }

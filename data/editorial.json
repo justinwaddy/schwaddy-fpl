@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-06T08:10 UTC",
-      "published": 0,
-      "note": "Morning check inside the international break (GW6 waivers close 9 October). premierleague.com and Sky searches repeat known items (Haaland early sub, Brobbey hamstring, Isak thigh); nothing new on Van Hecke or Marmoush. Nothing material."
-    },
-    {
       "ts": "2026-10-06T21:10 UTC",
       "published": 0,
       "note": "Evening check in the international break. Searches returned known items (Havertz, Gakpo, Brobbey, Isak) and off-list sources only; nothing new on a squad or shortlisted player. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-04T21:15 UTC",
       "published": 0,
       "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-05T08:15 UTC",
+      "published": 0,
+      "note": "Morning check; searches returned only 2025/early-2026 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov 18:30 UTC). Nothing published."
     }
   ]
 }
