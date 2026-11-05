@@ -1,16 +1,6 @@
 {
- "generated": "2026-11-04T22:41 UTC",
+ "generated": "2026-11-05T07:42 UTC",
  "items": [
-  {
-   "id": "2026-10-26-isak-six",
-   "ts": "2026-10-26T07:55",
-   "kind": "news",
-   "text": "Isak scored the second at Anfield against Brighton, taking him to six Premier League goals this season, more than half of Liverpool's league total and behind only Haaland's nine, the BBC reports. Small Ben has him, and Liverpool host nobody easier next: it is Arsenal.",
-   "source": {
-    "title": "Isak finally living up to price tag as Liverpool patience rewarded",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmj47lq7e5e7o"
-   }
-  },
   {
    "id": "2026-10-26-city-back-line",
    "ts": "2026-10-26T07:55",
@@ -683,16 +673,19 @@
    "kind": "opinion",
    "source": null,
    "text": "Small Ben left 12 points on his bench this week, which is a lot of dugout for a man who talks about his upcoming fight as if preparation were optional. Same instinct in both: pick the wrong eleven, trust the gloves, find out in the second round what the bench knew all along. At least Harvey Price could say he had a plan."
+  },
+  {
+   "id": "2026-11-05-mateta-appeal",
+   "ts": "2026-11-05T07:42",
+   "kind": "news",
+   "text": "Crystal Palace have lost their appeal against Jean-Philippe Mateta's red card from the defeat by Tottenham, so Robert's striker, who left GW9 on minus 2 after being sent off in the 13th minute for a late challenge on Micky van de Ven (Small Ben's), now misses the Liverpool game, the trip to Coventry on 21 November and Hull at home on 29 November, BBC Sport report. He stays available for Palace's Europa League matches.",
+   "source": {
+    "title": "Palace lose appeal against Mateta red card",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqp9gelp4em2o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-14T07:42",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Sesko's fresh shin injury and Carrick on Fernandes (BBC), then Arsenal training injuries and Liverpool's Anfield form. No opinion on a morning run. Both unused roast suggestions (Ben D on himself; Ben D on Justin) left unused: one is a slur-adjacent self-insult and the other is aimed at a nationality/politics angle that is not a clean joke, so both stay passed over."
-  },
   {
    "ts": "2026-10-14T22:41",
    "news": 0,
@@ -1105,6 +1098,13 @@
    "opinion": 2,
    "matchday": false,
    "note": "Evening wrap, no fixtures today, GW10 not started, GW9 final. No reported items (morning run covered the day, nothing material since). Opinion: Big Ben/Bruno (archive 09-06, Bruno on 2 in his 77 week, Van Hecke/McBurnie/Konsa carried him); Small Ben bench of 12 + upcoming fight (archive 09-12 Edward on Ben C, Harvey Price). Passed over: Rob hairline lines and pint (already used this week), apartheid line on Justin and Ben D self-roast (nothing to hang them on), Marcus Jobacus/Catholic/Chloe (no hook tonight). No flops today. Totals from GW9-final public.json; live feed priors stale."
+  },
+  {
+   "ts": "2026-11-05T07:42",
+   "news": 1,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning. Led with Mateta's lost red-card appeal (Robert, with Van de Ven of Small Ben as the victim). Only one item: web search returned mostly stale or off-list results; other BBC pieces found (Barry, Arsenal at Anfield) were already covered or old, and the JJ Gabriel story is a different player from Gabriel (ARS). No roast suggestions used (morning run); none passed over."
   }
  ]
 }
