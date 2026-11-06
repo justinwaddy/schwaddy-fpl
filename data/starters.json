@@ -248,6 +248,12 @@
    "gw": 10,
    "kind": "deep",
    "note": "Only PL Scout/key-questions pieces available; no predicted XIs from permitted outlets. All verdicts likely/doubt."
+  },
+  {
+   "ts": "2026-11-06T08:10 UTC",
+   "gw": 10,
+   "kind": "light",
+   "note": "no change"
   }
  ]
 }

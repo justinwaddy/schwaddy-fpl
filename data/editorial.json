@@ -323,11 +323,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-10-07T08:15 UTC",
-   "published": 0,
-   "note": "Morning check inside the international break (GW6 waivers close 9 October). Sky Sports and premierleague.com round-ups repeat known items (Haaland assessed after early sub, Scott out, Isak/Gakpo/Jacquet); Marmoush scored twice for Egypt, no fitness news on Van Hecke. Nothing material."
-  },
-  {
    "ts": "2026-10-07T21:15 UTC",
    "published": 0,
    "note": "Evening check in the international break. Searches returned only known items (Gakpo, Isak, Havertz, Brobbey) via off-list outlets, and old-season pages for Haaland, Van Hecke and the shortlist; nothing citable and new. Nothing material."
@@ -621,6 +616,11 @@
    "ts": "2026-11-05T21:15 UTC",
    "published": 0,
    "note": "Evening check; only PL Scout/preview pieces for GW10 found, nothing new on his players beyond Odegaard expected back v Hull. Deep starters pass written, claims retargeted to GW11. Nothing published."
+  },
+  {
+   "ts": "2026-11-06T08:10 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. GW10 deadline 18:30 UTC today. Nothing published."
   }
  ]
 }

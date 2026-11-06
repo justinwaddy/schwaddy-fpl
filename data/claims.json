@@ -771,12 +771,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-10-07T21:15 UTC",
-   "gw": 6,
-   "claims": 5,
-   "note": "No change: evening searches found nothing new on squad or shortlisted players; GW6 claims carried forward."
-  },
-  {
    "ts": "2026-10-08T08:10 UTC",
    "gw": 6,
    "claims": 5,
@@ -1129,6 +1123,12 @@
    "gw": 11,
    "claims": 3,
    "note": "GW10 waivers processed; retargeted to GW11 window with the new squad. Three model-backed claims, no permitted-outlet news on free agents."
+  },
+  {
+   "ts": "2026-11-06T08:10 UTC",
+   "gw": 11,
+   "claims": 3,
+   "note": "No change; no permitted-outlet news found to move the GW11 claims."
   }
  ]
 }
