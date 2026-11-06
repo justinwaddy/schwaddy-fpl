@@ -115,6 +115,7 @@ margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite
 .fxchip{font:500 11px "IBM Plex Mono";background:var(--panel2);border-radius:4px;padding:2px 6px;
 color:var(--ink);border:1px solid transparent}
 .fxchip.mine{border-color:var(--blue)}
+.fxchip.bench{border-style:dashed;opacity:.7}
 .fxchip .who{color:var(--dim)}
 .provb{color:var(--amber);font:600 10px "IBM Plex Mono";white-space:nowrap}
 .stale{color:var(--amber);font-size:12px;padding:4px 2px}
@@ -1649,14 +1650,21 @@ function renderLive(){
     const chips=[];
     for(const m of ctx.mgrs)for(const p of m.counting)if(p.tid===f.h||p.tid===f.a)
       chips.push({p,who:m.name,mine:m.mine});
+    // your own bench too, dashed and after the starters: their points
+    // only count if a provisional sub brings them on
+    const me=ctx.mgrs.find(m=>m.mine);
+    const bench=me?me.squad.filter(p=>!me.counting.includes(p)&&(p.tid===f.h||p.tid===f.a))
+      .map(p=>({p,who:"bench",mine:true,bench:true})):[];
     chips.sort((a,b)=>b.p.pts-a.p.pts||a.p.name.localeCompare(b.p.name));
+    chips.push(...bench.sort((a,b)=>b.p.pts-a.p.pts));
     const sc=f.started?`${f.hs??0} - ${f.as??0}`:"v";
     h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.h]||f.h}</span> ${sc} <span class="tm">${S.teams[f.a]||f.a}</span></span>${fxState(f)}</div>
       ${oddsHTML(f.id,f.h,f.a,S.teams,f.started)}
-      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} ${
+      <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""} ${c.bench?"bench":""}">${nm(c.p,"")} ${
         f.started?c.p.pts:""}${c.p.pb?`<span class="provb">+${c.p.pb}</span>`:""} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league has a starter here</span>`}</div></div>`;
   }
+  if(ctx.mgrs.some(m=>m.mine))h+=`<div class="note" style="padding:4px 2px 0">Dashed chips are your bench: their points only count if a provisional sub brings them on.</div>`;
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
