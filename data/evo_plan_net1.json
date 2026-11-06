@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T08:37",
+ "generated": "2026-11-06T16:14",
  "gw": 10,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 6.02,
-   "ep": 6.42
+   "ep": 6.39
   },
   {
    "id": 391,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.817,
    "base": 5.37,
-   "ep": 6.47
+   "ep": 6.46
   },
   {
    "id": 504,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 4.48,
-   "ep": 5.01
+   "ep": 4.97
   },
   {
    "id": 114,
@@ -73,7 +73,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 3.94
+   "ep": 3.93
   },
   {
    "id": 68,
@@ -85,7 +85,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 4.85,
-   "ep": 6.01
+   "ep": 6.05
   },
   {
    "id": 156,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.933,
    "base": 3.99,
-   "ep": 4.27
+   "ep": 4.26
   },
   {
    "id": 428,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.78,
    "base": 3.66,
-   "ep": 4.14
+   "ep": 4.12
   },
   {
    "id": 15,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.927,
    "base": 3.81,
-   "ep": 3.81
+   "ep": 3.77
   },
   {
    "id": 628,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.753,
    "base": 2.4,
-   "ep": 3.63
+   "ep": 3.62
   },
   {
    "id": 411,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.22,
-   "ep": 2.89
+   "ep": 2.88
   },
   {
    "id": 10,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.672,
    "base": 3.88,
-   "ep": 3.57
+   "ep": 3.54
   },
   {
    "id": 569,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.934,
    "base": 2.57,
-   "ep": 3.07
+   "ep": 3.05
   },
   {
    "id": 401,
@@ -198,13 +198,43 @@
    "ep": 2.57
   }
  ],
- "xi_ep": 55.7,
- "changes": 2,
+ "xi_ep": 55.6,
+ "changes": 5,
  "claims": [
   {
-   "pos": "MID",
-   "gain": 8.05,
+   "pos": "DEF",
+   "gain": 9.25,
    "change": 1,
+   "fallback": false,
+   "add": {
+    "id": 31,
+    "code": 199798,
+    "name": "Konsa",
+    "pos": "DEF",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.907,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
+    "pos": "DEF",
+    "team": "BHA",
+    "status": "a",
+    "news": "",
+    "p_play": 0.861,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "MID",
+   "gain": 8.34,
+   "change": 2,
    "fallback": false,
    "add": {
     "id": 129,
@@ -233,8 +263,8 @@
   },
   {
    "pos": "MID",
-   "gain": 6.54,
-   "change": 1,
+   "gain": 6.87,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 542,
@@ -263,8 +293,8 @@
   },
   {
    "pos": "MID",
-   "gain": 6.45,
-   "change": 1,
+   "gain": 6.59,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 155,
@@ -293,8 +323,8 @@
   },
   {
    "pos": "MID",
-   "gain": 6.39,
-   "change": 1,
+   "gain": 6.43,
+   "change": 2,
    "fallback": true,
    "add": {
     "id": 261,
@@ -323,8 +353,8 @@
   },
   {
    "pos": "MID",
-   "gain": 6.78,
-   "change": 2,
+   "gain": 7.01,
+   "change": 3,
    "fallback": false,
    "add": {
     "id": 129,
@@ -353,8 +383,8 @@
   },
   {
    "pos": "MID",
-   "gain": 5.28,
-   "change": 2,
+   "gain": 5.54,
+   "change": 3,
    "fallback": true,
    "add": {
     "id": 542,
@@ -383,8 +413,8 @@
   },
   {
    "pos": "MID",
-   "gain": 5.18,
-   "change": 2,
+   "gain": 5.26,
+   "change": 3,
    "fallback": true,
    "add": {
     "id": 155,
@@ -413,8 +443,8 @@
   },
   {
    "pos": "MID",
-   "gain": 5.12,
-   "change": 2,
+   "gain": 5.11,
+   "change": 3,
    "fallback": true,
    "add": {
     "id": 261,
@@ -437,6 +467,66 @@
     "status": "a",
     "news": "",
     "p_play": 0.78,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 5.83,
+   "change": 4,
+   "fallback": false,
+   "add": {
+    "id": 31,
+    "code": 199798,
+    "name": "Konsa",
+    "pos": "DEF",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.907,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 10,
+    "code": 198869,
+    "name": "White",
+    "pos": "DEF",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.672,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
+   "pos": "DEF",
+   "gain": 5.04,
+   "change": 5,
+   "fallback": false,
+   "add": {
+    "id": 31,
+    "code": 199798,
+    "name": "Konsa",
+    "pos": "DEF",
+    "team": "ARS",
+    "status": "a",
+    "news": "",
+    "p_play": 0.907,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.894,
     "base": null,
     "ep": null
    }
@@ -835,8 +925,8 @@
    "name": "Konsa",
    "pos": "DEF",
    "team": "ARS",
-   "status": "d",
-   "news": "Knee injury - 75% chance of playing",
+   "status": "a",
+   "news": "",
    "p_play": 0.907,
    "base": 112.71,
    "ep": 223.84
