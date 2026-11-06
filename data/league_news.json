@@ -1,36 +1,6 @@
 {
- "generated": "2026-11-05T22:45 UTC",
+ "generated": "2026-11-06T07:42 UTC",
  "items": [
-  {
-   "id": "2026-10-26-branthwaite-gossip",
-   "ts": "2026-10-26T07:55",
-   "kind": "news",
-   "text": "Gossip, not confirmed: the BBC's Monday column carries a Football Insider claim that Manchester United are targeting Everton's Jarrad Branthwaite as they look to rebuild their defence. Big Ben owns him, and he returned nothing at Arsenal on Saturday.",
-   "source": {
-    "title": "Howe open to Man Utd talks - Monday's gossip",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cq1j3e889rg8o"
-   }
-  },
-  {
-   "id": "2026-10-26-palmer-ban-cup",
-   "ts": "2026-10-26T16:49",
-   "kind": "news",
-   "text": "Cole Palmer's sending off against Spurs, two second-half yellows on Saturday, will not cost him Chelsea v Manchester United this weekend, the BBC explains: a red-card ban runs across domestic competitions, so he serves it in Wednesday's League Cup tie at Anfield instead. Edward, who took -1 off him for the dismissal, keeps him for a fixture with Big Ben's Fernandes, Marcus's Mbeumo, Small Ben's Cunha and Robert's Sesko and Yoro on the other side.",
-   "source": {
-    "title": "Which game will Chelsea's Palmer miss after red card?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cm4g1q54pj20o"
-   }
-  },
-  {
-   "id": "2026-10-26-deeney-team-of-week",
-   "ts": "2026-10-26T16:49",
-   "kind": "news",
-   "text": "Troy Deeney's BBC Sport team of the week has a heavy league flavour: Bart Verbruggen (Edward) for keeping Brighton in it at Manchester City, Ezri Konsa (Big Ben) for a beast of a display in Arsenal's 1-0 win at Anfield, and Rice (Small Ben), Van Hecke and McBurnie (both Big Ben) in the headline selection too.",
-   "source": {
-    "title": "Who has made Troy's Premier League team of the week?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c804013klnn0o"
-   }
-  },
   {
    "id": "2026-10-26-justin-top-on-fullbacks",
    "ts": "2026-10-26T16:49",
@@ -674,23 +644,39 @@
    "kind": "opinion",
    "text": "Justin finished the gameweek twelve off the lead, and the first thing he did was sack Gyokeres, a striker who gave him 1 point, along with Schade, and bring in Cunha and Gonzalo. It is the move of a man who has looked at a league table and decided the problem is the people in it rather than the one picking them. Cunha's new club hosts Villa next, so the first review of the new regime is already booked.",
    "source": null
+  },
+  {
+   "id": "2026-11-06-van-dijk-set-pieces",
+   "ts": "2026-11-06T07:42",
+   "kind": "news",
+   "text": "Virgil van Dijk called Liverpool's defending \"not sustainable\" after they led 2-1 in Istanbul and lost 3-2 to Fenerbahce, all three goals coming from set-pieces. It is the first time Liverpool have conceded three or more in three major European games in a row, and they have lost their last two. Small Ben owns Van Dijk, Gakpo and Isak, Big Ben has Wirtz and Jacquet, Marcus has A.Becker and Justin has Barcola, so a leaky Liverpool is nearly everyone's problem.",
+   "source": {
+    "title": "Defensive problems not sustainable - Van Dijk",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6ev3wp1ddy4o"
+   }
+  },
+  {
+   "id": "2026-11-06-grealish-out-everton-coventry",
+   "ts": "2026-11-06T07:42",
+   "kind": "news",
+   "text": "Jack Grealish will not be available for Everton against Coventry tonight at 20:00 UTC, David Moyes confirmed on Thursday, with the on-loan City midfielder still sidelined after a breach of club discipline and last seen in the 17 October defeat by Chelsea. Moyes would not give a plan for his return. Edward (Tarkowski, Barry, Pickford), Big Ben (Branthwaite) and Marcus (Dewsbury-Hall) all have Everton players going out tonight.",
+   "source": {
+    "title": "Grealish unavailable again for Everton",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm79p020d9yvo"
+   }
+  },
+  {
+   "id": "2026-11-06-emery-villa-contract",
+   "ts": "2026-11-06T07:42",
+   "kind": "news",
+   "text": "Unai Emery is close to agreeing a new Aston Villa contract after talks with the club's hierarchy on Wednesday, with the length and finances still being settled. The extension would give him even more say over Villa's long-term development. Edward (Jackson, Manzambi), Small Ben (Suzuki) and Big Ben (Konsa) all hold Villa players, none of whom will mind the man picking the team staying put.",
+   "source": {
+    "title": "Emery close to agreeing new Aston Villa contract",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw99zde82nmno"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-14T22:41",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Evening. No fixtures today and GW7 not started, so no flops to rewrite; searches turned up nothing usable from permitted outlets, so no reported items. Opinion built on GW6 table/squad sheets and team names. Passed over both unused roast suggestions (2026-09-12-ca1422e269, 2026-09-12-d9048f2afb): one is a slur and the other is aimed at race/politics, neither goes on the page."
-  },
-  {
-   "ts": "2026-10-15T07:42",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Struijk's overturned red card (Brighton owners Marcus, Justin, Big Ben). Search tool returned stale results so sourced direct from BBC Sport pages. No evening-only material; roast archive not used on a morning run (all 13 untouched, none passed over for cause)."
-  },
   {
    "ts": "2026-10-15T22:50",
    "news": 0,
@@ -1103,6 +1089,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening wrap, no fixtures today, GW9 final, GW10 not started (all 10 fixtures to come). No reported items beyond the morning Mateta appeal; no searches run. Opinion: Robert/Mateta ban + hairline (archive 09-04 Ben D, 09-12 Edward no-transfers); Marcus three blanks + Spotlight priest/Jobacus (archive 09-13; Jobacus/priest ran before, new hook is the three blanks); Justin sacking Gyokeres/Schade for Cunha/Gonzalo (waiver moves, no archive). Passed over: Ben D apartheid and self-roast lines (no hook), Ben C height/boxing and bench (ran last night), Edward Arsenal/ball-knowledge (ran 2 Nov), Marcus Elanga (ran 3 Nov). No flops today."
+  },
+  {
+   "ts": "2026-11-06T07:42",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Van Dijk on Liverpool's set-piece defending, then Grealish still out for Everton v Coventry tonight, then Emery's Villa contract (all BBC Sport). No opinion on a morning run; roasts.json untouched. Search engine returned mostly stale/fantasy results, so items came from the BBC Premier League page."
   }
  ]
 }
