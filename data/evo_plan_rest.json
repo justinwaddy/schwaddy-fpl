@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T01:09",
+ "generated": "2026-11-06T02:14",
  "gw": 10,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 27.63,
+   "gain": 27.57,
    "change": 1,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 24.49,
+   "gain": 24.5,
    "change": 1,
    "fallback": true,
    "add": {
