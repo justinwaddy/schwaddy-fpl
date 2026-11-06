@@ -100,6 +100,16 @@ margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite
 .odds .ob i{display:block;height:100%}
 .odds .oh{background:var(--blue)}.odds .od{background:var(--line)}.odds .oa{background:var(--amber)}
 .odds b{color:var(--ink);font-weight:600}
+/* likeliest scorelines, and the full grid behind "all scores" */
+.scl{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:3px 2px 1px;font:500 11px "IBM Plex Mono";color:var(--dim)}
+.scl .sc{background:var(--panel2);border-radius:4px;padding:1px 6px;color:var(--ink)}
+.scl .sc i{font-style:normal;color:var(--dim)}
+.scl .scbtn{cursor:pointer;color:var(--blue);border-bottom:1px dotted var(--blue)}
+.scg{border-collapse:collapse;margin:4px 2px 2px;width:auto}
+.scg th,.scg td{border:1px solid var(--line);padding:3px 5px;text-align:center;font:500 11px "IBM Plex Mono";white-space:nowrap}
+.scg th{color:var(--dim);cursor:default}
+.scg td{position:relative}
+.scg td.top{outline:1px solid var(--amber);outline-offset:-1px}
 .fxplayers{display:flex;flex-wrap:wrap;gap:4px;padding:3px 2px 9px;border-bottom:1px solid var(--line)}
 .fxwrap>div:last-child .fxplayers{border-bottom:none}
 .fxchip{font:500 11px "IBM Plex Mono";background:var(--panel2);border-radius:4px;padding:2px 6px;
@@ -1517,8 +1527,37 @@ function oddsHTML(id,h,a,teams,started){
   const when=(o.pulled||"").slice(5,10).split("-").reverse().join("/");
   return `<div class="odds" title="Average of ${o.books} UK bookmakers, margin removed${when?`, pulled ${when}`:""}">${started?"pre-match ":""}${lab(hn,o.ph,o.oh)}
     <span class="ob"><i class="oh" style="width:${o.ph*100}%"></i><i class="od" style="width:${o.pd*100}%"></i><i class="oa" style="width:${o.pa*100}%"></i></span>
-    ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>`;
+    ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>${scoresHTML(id,o,hn,an)}`;
 }
+// Scorelines come from a goals model fitted to the 1X2 and over/under 2.5
+// lines (match_odds.py), shown as chance and fair decimal odds (1/p).
+let SCOREOPEN=new Set();
+function scoresHTML(id,o,hn,an){
+  if(!o.sc)return "";
+  const e=Object.entries(o.sc).sort((x,y)=>y[1]-x[1]);
+  const fair=p=>p>0?(1/p).toFixed(p>=.1?2:1):"–",pc=p=>(p*100).toFixed(p>=.1?0:1);
+  const open=SCOREOPEN.has(String(id));
+  let h=`<div class="scl">${e.slice(0,5).map(([k,p])=>`<span class="sc" title="fair odds ${fair(p)}">${hn} ${k} ${an} <i>${pc(p)}%</i></span>`).join("")}
+    <span class="scbtn" data-scores="${id}">${open?"hide ▾":"all scores ▸"}</span></div>`;
+  if(open){
+    const top=new Set(e.slice(0,3).map(x=>x[0])),mx=e[0][1];
+    h+=`<div style="overflow-x:auto"><table class="scg"><tr><th>${hn} ↓ ${an} →</th>${[0,1,2,3,4,5].map(j=>`<th>${j}</th>`).join("")}</tr>`;
+    for(let i=0;i<=5;i++){
+      h+=`<tr><th>${i}</th>`;
+      for(let j=0;j<=5;j++){
+        const p=o.sc[`${i}-${j}`]||0,c=i>j?"74,127,224":i<j?"232,161,60":"143,160,196";
+        h+=`<td class="${top.has(`${i}-${j}`)?"top":""}" style="background:rgba(${c},${(.08+.6*p/mx).toFixed(2)})" title="${hn} ${i}-${j} ${an}: ${pc(p)}%, fair odds ${fair(p)}">${p?pc(p)+"%":"<span class='tm'>&lt;.5</span>"}<br><span class="tm">${fair(p)}</span></td>`;
+      }
+      h+=`</tr>`;
+    }
+    h+=`</table></div><div class="note" style="padding:2px">Expected goals ${hn} ${o.xh} · ${an} ${o.xa}. Each cell: chance, then fair decimal odds. Fitted to the bookies' result and over/under 2.5 lines; a bookmaker's own correct-score prices carry a margin, so theirs will be shorter.</div>`;
+  }
+  return h;
+}
+document.addEventListener("click",ev=>{
+  const b=ev.target.closest&&ev.target.closest("[data-scores]");if(!b)return;
+  const k=b.dataset.scores;SCOREOPEN.has(k)?SCOREOPEN.delete(k):SCOREOPEN.add(k);renderLive();
+});
 function ensureFixtures(){
   if(FIXREQ)return;FIXREQ=true;
   fetch(FIX_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
