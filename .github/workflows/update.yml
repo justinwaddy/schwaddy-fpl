@@ -60,6 +60,20 @@ jobs:
         run: python -m schwaddy.refresh --league-id 9450
         working-directory: src
 
+      # bookmaker match-winner odds for the Live tab, once a day off the
+      # morning run (after the refresh above has rewritten the fixture
+      # list). Needs the ODDS_API_KEY secret; without it this does nothing.
+      # Guarded like the plans below: it must never cost the refresh.
+      - name: match odds
+        if: >-
+          github.event_name == 'push' ||
+          (github.event_name == 'schedule' && github.event.schedule == '35 8 * * *') ||
+          (github.event_name == 'workflow_dispatch' && !inputs.news_only)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m schwaddy.match_odds || echo "match odds skipped"
+        working-directory: src
+
       # the evolved policy's plan for the week, off the same morning pull.
       # Guarded: a failure here must never cost the refresh. The model
       # files are the five seeds the cluster trained on every season

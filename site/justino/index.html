@@ -94,6 +94,12 @@ margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite
 .fxscore .tm{font:600 17px "Barlow Condensed";letter-spacing:.04em}
 .fxmin{font:600 12px "IBM Plex Mono";color:var(--green);white-space:nowrap}
 .fxmin.ft{color:var(--dim)}.fxmin.ko{color:var(--amber)}
+/* match-winner odds under a fixture: a three-part bar, home / draw / away */
+.odds{display:flex;align-items:center;gap:8px;padding:2px 2px 1px;font:500 11px "IBM Plex Mono";color:var(--dim)}
+.odds .ob{flex:1;display:flex;height:6px;border-radius:3px;overflow:hidden;min-width:60px;max-width:220px}
+.odds .ob i{display:block;height:100%}
+.odds .oh{background:var(--blue)}.odds .od{background:var(--line)}.odds .oa{background:var(--amber)}
+.odds b{color:var(--ink);font-weight:600}
 .fxplayers{display:flex;flex-wrap:wrap;gap:4px;padding:3px 2px 9px;border-bottom:1px solid var(--line)}
 .fxwrap>div:last-child .fxplayers{border-bottom:none}
 .fxchip{font:500 11px "IBM Plex Mono";background:var(--panel2);border-radius:4px;padding:2px 6px;
@@ -1492,6 +1498,27 @@ function liveManagerHTML(m,ctx){
 // feed the moment the deadline passes and the worker rolls forward.
 const FIX_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/fixtures_2627.json";
 let FIXTURES=null,FIXREQ=false;
+// Bookmaker match-winner odds, pulled once a day by the morning refresh
+// (src/schwaddy/match_odds.py) and keyed by fixture id. Fetched once per
+// load; the page reloads itself when it comes back stale, which picks up
+// the next day's pull.
+const ODDS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/match_odds.json";
+let ODDS=null;
+fetch(ODDS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .then(j=>{ODDS=j;if(typeof renderLive==="function"&&document.getElementById("live"))renderLive();}).catch(()=>{});
+function oddsHTML(id,h,a,teams,started){
+  const all=ODDS&&ODDS.fixtures||{};
+  let o=all[String(id)];
+  if(!o||o.h!==h||o.a!==a)o=Object.values(all).find(x=>x.h===h&&x.a===a);   // ids differ between feeds: match on the pairing
+  if(!o)return "";
+  const pc=x=>Math.round(x*100),hn=teams[h]||h,an=teams[a]||a;
+  const best=Math.max(o.ph,o.pd,o.pa);
+  const lab=(t,p,dec)=>{const s=`${t} ${pc(p)}%`;return `<span title="${dec.toFixed(2)}">${p===best?`<b>${s}</b>`:s}</span>`;};
+  const when=(o.pulled||"").slice(5,10).split("-").reverse().join("/");
+  return `<div class="odds" title="Average of ${o.books} UK bookmakers, margin removed${when?`, pulled ${when}`:""}">${started?"pre-match ":""}${lab(hn,o.ph,o.oh)}
+    <span class="ob"><i class="oh" style="width:${o.ph*100}%"></i><i class="od" style="width:${o.pd*100}%"></i><i class="oa" style="width:${o.pa*100}%"></i></span>
+    ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>`;
+}
 function ensureFixtures(){
   if(FIXREQ)return;FIXREQ=true;
   fetch(FIX_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
@@ -1525,10 +1552,11 @@ function livePreviewHTML(g){
       .map(p=>({p,who:(MGRS[p.owner]||[])[1]||p.owner,mine:p.mine}))
       .sort((a,b)=>N5(b.p)-N5(a.p)||a.p.name.localeCompare(b.p.name));
     h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.team_h]||f.team_h}</span> v <span class="tm">${S.teams[f.team_a]||f.team_a}</span></span><span class="fxmin ko">${koText(f.kickoff_time)}</span></div>
+      ${oddsHTML(f.id,f.team_h,f.team_a,S.teams,false)}
       <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
   }
-  h+=`</div></div>`;
+  h+=`</div>${ODDS?`<div class="note">Win chances are UK bookmakers' match odds, averaged and with their margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
   return h;
 }
 function renderLive(){
@@ -1585,11 +1613,12 @@ function renderLive(){
     chips.sort((a,b)=>b.p.pts-a.p.pts||a.p.name.localeCompare(b.p.name));
     const sc=f.started?`${f.hs??0} - ${f.as??0}`:"v";
     h+=`<div><div class="fxrow"><span class="fxscore"><span class="tm">${S.teams[f.h]||f.h}</span> ${sc} <span class="tm">${S.teams[f.a]||f.a}</span></span>${fxState(f)}</div>
+      ${oddsHTML(f.id,f.h,f.a,S.teams,f.started)}
       <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} ${
         f.started?c.p.pts:""}${c.p.pb?`<span class="provb">+${c.p.pb}</span>`:""} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league has a starter here</span>`}</div></div>`;
   }
-  h+=`</div></div>`;
+  h+=`</div>${ODDS?`<div class="note">Win chances are UK bookmakers' match odds, averaged and with their margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
     const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
