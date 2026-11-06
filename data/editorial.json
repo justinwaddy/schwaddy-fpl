@@ -323,11 +323,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-10-07T21:15 UTC",
-   "published": 0,
-   "note": "Evening check in the international break. Searches returned only known items (Gakpo, Isak, Havertz, Brobbey) via off-list outlets, and old-season pages for Haaland, Van Hecke and the shortlist; nothing citable and new. Nothing material."
-  },
-  {
    "ts": "2026-10-08T08:10 UTC",
    "published": 1,
    "note": "Tavernier penalty-duty angle from premierleague.com Scout piece; Gross (claim 1 target) flagged there as a 35-year-old whose minutes Hurzeler may manage. Otherwise round-ups repeat known items."
@@ -621,6 +616,11 @@
    "ts": "2026-11-06T08:10 UTC",
    "published": 0,
    "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. GW10 deadline 18:30 UTC today. Nothing published."
+  },
+  {
+   "ts": "2026-11-06T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned inconsistently dated permitted-outlet items, nothing firm on his players or the free agents. GW10 deadline has passed; not in starters window. Nothing published."
   }
  ]
 }
