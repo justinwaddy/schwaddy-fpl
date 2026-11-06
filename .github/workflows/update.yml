@@ -62,7 +62,9 @@ jobs:
 
       # bookmaker match-winner odds for the Live tab, once a day off the
       # morning run (after the refresh above has rewritten the fixture
-      # list). Needs the ODDS_API_KEY secret; without it this does nothing.
+      # list). Free and keyless: DraftKings lines off ESPN's public feed.
+      # An ODDS_API_KEY secret, if ever added, switches to the-odds-api's
+      # average of UK bookmakers instead.
       # Guarded like the plans below: it must never cost the refresh.
       - name: match odds
         if: >-

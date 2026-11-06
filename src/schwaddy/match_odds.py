@@ -1,9 +1,14 @@
 """Match-winner odds for the Live tab.
 
 Once a day (the 09:35 UK morning refresh) this pulls the Premier League
-1X2 market from the-odds-api.com, averages every UK bookmaker's price,
-strips the margin out, and writes data/match_odds.json keyed by FPL
-fixture id:
+1X2 and over/under markets, strips the bookmaker's margin out, and writes
+data/match_odds.json keyed by FPL fixture id.
+
+Source: ESPN's public scoreboard feed, which carries DraftKings' current
+lines for every fixture and needs no key or account. If ODDS_API_KEY is
+set (the-odds-api.com, free tier) that is used instead, since it averages
+every UK bookmaker rather than one; ESPN is the fallback if it fails.
+
 
     {"generated": "...Z", "source": "the-odds-api.com",
      "fixtures": {"123": {"h": 1, "a": 6, "ko": "...Z",
@@ -13,12 +18,12 @@ fixture id:
 
 ph/pd/pa are the de-vigged chances of a home win, draw and away win;
 oh/od/oa the average decimal prices they came from. po is the chance of
-over 2.5 goals from the totals market, when the books post one.
+over `ln` goals (usually 2.5) from the totals market, when one is posted.
 
 Scorelines: the bookies' correct-score market is not in this feed, so
 the scores are derived. A Dixon-Coles model (Poisson goals for each side,
 with the usual correction for 0-0, 1-0, 0-1 and 1-1) is fitted to each
-match's three numbers - home win, draw, over 2.5 - which pins its three
+match's three numbers - home win, draw, over the line - which pins its three
 parameters: each side's expected goals and the low-score correction.
 "sc" then holds every scoreline up to 6-6 with at least a 0.5% chance,
 as {"h-a": p}; xh/xa are the fitted expected goals. These are fair
@@ -27,11 +32,8 @@ last line pulled before it kicked off: once it has started the bookies
 only post in-play prices, which are not what the tab is showing, so a
 started fixture is never overwritten.
 
-Needs ODDS_API_KEY in the environment (a GitHub Actions secret). Free
-tier is 500 requests a month; one pull of one market in one region costs
-one per market, and this asks for two (1X2 and totals), so a pull a
-day plus the odd code push is still well under it. With no
-key it says so and leaves the file alone.
+With ODDS_API_KEY: the free tier is 500 requests a month and a pull
+costs two (1X2 and totals), so a pull a day is well under it.
 
     python -m schwaddy.match_odds --data-dir ../data
 """
@@ -145,18 +147,18 @@ def _grid(lh, la, rho):
     return g / g.sum()
 
 
-def _summary(g):
+def _summary(g, line=2.5):
     n = np.arange(MAXG + 1)
     tot = n[:, None] + n[None, :]
-    return (np.tril(g, -1).sum(), np.trace(g), g[tot > 2.5].sum())
+    return (np.tril(g, -1).sum(), np.trace(g), g[tot > line].sum())
 
 
-def fit_scores(ph, pd, pa, po=None):
+def fit_scores(ph, pd, pa, po=None, line=2.5):
     """Dixon-Coles (lh, la, rho) matching home/draw/(over) - exact when the
     totals line is there, closest fit on the 1X2 alone otherwise."""
     def loss(x):
         lh, la, rho = np.exp(x[0]), np.exp(x[1]), x[2]
-        h, d, o = _summary(_grid(lh, la, rho))
+        h, d, o = _summary(_grid(lh, la, rho), line)
         e = (h - ph) ** 2 + (d - pd) ** 2 + (1 - h - d - pa) ** 2
         if po is not None:
             e += (o - po) ** 2
@@ -176,17 +178,99 @@ def fit_scores(ph, pd, pa, po=None):
 
 
 def over_under(ev):
-    """De-vigged chance of over 2.5 goals averaged across books, or None."""
-    ps = []
+    """(de-vigged chance of over the line, the line), averaged across books
+    on the 2.5 line when any book has it, else the commonest line posted;
+    (None, None) without a totals market."""
+    by = {}
     for bk in ev.get("bookmakers", []):
         for mk in bk.get("markets", []):
             if mk.get("key") != "totals":
                 continue
             o = {(x["name"], x.get("point")): x["price"] for x in mk.get("outcomes", [])}
-            ov, un = o.get(("Over", 2.5)), o.get(("Under", 2.5))
-            if ov and un:
-                ps.append((1 / ov) / (1 / ov + 1 / un))
-    return round(sum(ps) / len(ps), 3) if ps else None
+            for (nm, pt), ov in o.items():
+                un = o.get(("Under", pt))
+                if nm == "Over" and ov and un and pt is not None:
+                    by.setdefault(pt, []).append((1 / ov) / (1 / ov + 1 / un))
+    if not by:
+        return None, None
+    line = 2.5 if 2.5 in by else max(by, key=lambda k: len(by[k]))
+    return round(sum(by[line]) / len(by[line]), 3), line
+
+
+ESPN = "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard"
+
+
+def _american(s):
+    """'+250' / '-600' -> decimal odds; None if absent or 'EVEN'-less junk."""
+    if s in (None, "", "OFF"):
+        return None
+    s = str(s).strip().upper()
+    if s == "EVEN":
+        return 2.0
+    try:
+        v = float(s)
+    except ValueError:
+        return None
+    if v == 0:
+        return None
+    return 1 + (v / 100 if v > 0 else 100 / -v)
+
+
+def fetch_espn(days=14):
+    """ESPN's scoreboard for the next `days`, reshaped into the-odds-api's
+    event format so price() and over_under() read either. Uses the
+    'close' line, which is the current one until kick-off."""
+    import requests
+    from datetime import timedelta
+    d0 = datetime.now(timezone.utc)
+    evs, seen = [], set()
+    for k in range(days):                # the soccer feed takes one day at a time
+        r = requests.get(ESPN, params=dict(dates=f"{d0 + timedelta(days=k):%Y%m%d}"),
+                         timeout=30, headers={"User-Agent": "schwaddy-fpl"})
+        r.raise_for_status()
+        for e in r.json().get("events", []):
+            if e.get("id") not in seen:
+                seen.add(e.get("id")); evs.append(e)
+    out = []
+    for e in evs:
+        c = (e.get("competitions") or [{}])[0]
+        if (c.get("status", {}).get("type", {}).get("state")) != "pre":
+            continue
+        side = {t.get("homeAway"): t["team"]["displayName"]
+                for t in c.get("competitors", [])}
+        if "home" not in side or "away" not in side:
+            continue
+        bks = []
+        for od in c.get("odds") or []:
+            ml = od.get("moneyline") or {}
+            cur = lambda k: _american(((ml.get(k) or {}).get("close") or
+                                       (ml.get(k) or {}).get("open") or {}).get("odds"))
+            mk = []
+            h, d, a = cur("home"), cur("draw"), cur("away")
+            if h and d and a:
+                mk.append(dict(key="h2h", outcomes=[
+                    dict(name=side["home"], price=h), dict(name="Draw", price=d),
+                    dict(name=side["away"], price=a)]))
+            tot = od.get("total") or {}
+            def line(k):
+                x = (tot.get(k) or {})
+                x = x.get("close") or x.get("open") or {}
+                return x.get("line"), _american(x.get("odds"))
+            (lo, po), (lu, pu) = line("over"), line("under")
+            try:
+                pt = float(str(lo)[1:]) if lo else od.get("overUnder")
+            except ValueError:
+                pt = od.get("overUnder")
+            if po and pu and pt is not None and (not lu or float(str(lu)[1:]) == pt):
+                mk.append(dict(key="totals", outcomes=[
+                    dict(name="Over", point=float(pt), price=po),
+                    dict(name="Under", point=float(pt), price=pu)]))
+            if mk:
+                bks.append(dict(key=(od.get("provider") or {}).get("name", "espn"),
+                                markets=mk))
+        out.append(dict(home_team=side["home"], away_team=side["away"],
+                        commence_time=e["date"], bookmakers=bks))
+    return out
 
 
 def main():
@@ -194,9 +278,6 @@ def main():
     ap.add_argument("--data-dir", default="../data")
     args = ap.parse_args()
     key = os.environ.get("ODDS_API_KEY", "").strip()
-    if not key:
-        print("match odds: no ODDS_API_KEY set, leaving match_odds.json as it is")
-        return 0
     path = f"{args.data_dir}/match_odds.json"
     try:
         old = json.load(open(path, encoding="utf-8"))
@@ -205,7 +286,16 @@ def main():
     fixtures = json.load(open(f"{args.data_dir}/fixtures_2627.json",
                               encoding="utf-8"))
     started = {str(f["id"]) for f in fixtures if f.get("started")}
-    events = fetch_live(key, regions="uk", markets="h2h,totals")
+    events, source = None, None
+    if key:
+        try:
+            events = fetch_live(key, regions="uk", markets="h2h,totals")
+            source = "the-odds-api.com, UK bookmakers averaged"
+        except Exception as ex:                      # quota, outage: fall back
+            print(f"match odds: the-odds-api failed ({ex}), trying ESPN")
+    if events is None:
+        events = fetch_espn()
+        source = "DraftKings via ESPN"
     pairs, missed = match_events(events, fixtures, team_lookup(args.data_dir))
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     # keep everything already held; a started fixture keeps its last
@@ -219,12 +309,13 @@ def main():
         p = price(ev)
         if p is None:
             continue
-        po = over_under(ev)
+        po, ln = over_under(ev)
         keep[fid] = dict(h=f["team_h"], a=f["team_a"], ko=f["kickoff_time"],
-                         **p, po=po, **fit_scores(p["ph"], p["pd"], p["pa"], po),
-                         pulled=now)
+                         **p, po=po, ln=ln,
+                         **fit_scores(p["ph"], p["pd"], p["pa"], po, ln or 2.5),
+                         src=source, pulled=now)
         n += 1
-    out = dict(generated=now, source="the-odds-api.com, UK bookmakers averaged",
+    out = dict(generated=now, source=source,
                fixtures=dict(sorted(keep.items(), key=lambda kv: int(kv[0]))))
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=1)

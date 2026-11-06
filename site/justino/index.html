@@ -1525,7 +1525,7 @@ function oddsHTML(id,h,a,teams,started){
   const best=Math.max(o.ph,o.pd,o.pa);
   const lab=(t,p,dec)=>{const s=`${t} ${pc(p)}%`;return `<span title="${dec.toFixed(2)}">${p===best?`<b>${s}</b>`:s}</span>`;};
   const when=(o.pulled||"").slice(5,10).split("-").reverse().join("/");
-  return `<div class="odds" title="Average of ${o.books} UK bookmakers, margin removed${when?`, pulled ${when}`:""}">${started?"pre-match ":""}${lab(hn,o.ph,o.oh)}
+  return `<div class="odds" title="${o.src||"bookmaker odds"}, margin removed${when?`, pulled ${when}`:""}">${started?"pre-match ":""}${lab(hn,o.ph,o.oh)}
     <span class="ob"><i class="oh" style="width:${o.ph*100}%"></i><i class="od" style="width:${o.pd*100}%"></i><i class="oa" style="width:${o.pa*100}%"></i></span>
     ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>${scoresHTML(id,o,hn,an)}`;
 }
@@ -1550,7 +1550,7 @@ function scoresHTML(id,o,hn,an){
       }
       h+=`</tr>`;
     }
-    h+=`</table></div><div class="note" style="padding:2px">Expected goals ${hn} ${o.xh} · ${an} ${o.xa}. Each cell: chance, then fair decimal odds. Fitted to the bookies' result and over/under 2.5 lines; a bookmaker's own correct-score prices carry a margin, so theirs will be shorter.</div>`;
+    h+=`</table></div><div class="note" style="padding:2px">Expected goals ${hn} ${o.xh} · ${an} ${o.xa}. Each cell: chance, then fair decimal odds. Fitted to the bookies' result and over/under ${o.ln||2.5} lines; a bookmaker's own correct-score prices carry a margin, so theirs will be shorter.</div>`;
   }
   return h;
 }
@@ -1595,7 +1595,7 @@ function livePreviewHTML(g){
       <div class="fxplayers">${chips.length?chips.map(c=>`<span class="fxchip ${c.mine?"mine":""}">${nm(c.p,"")} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
   }
-  h+=`</div>${ODDS?`<div class="note">Win chances are UK bookmakers' match odds, averaged and with their margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
+  h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
   return h;
 }
 function renderLive(){
@@ -1657,7 +1657,7 @@ function renderLive(){
         f.started?c.p.pts:""}${c.p.pb?`<span class="provb">+${c.p.pb}</span>`:""} <span class="who">· ${c.who}</span></span>`).join(""):
         `<span class="tm" style="font-size:11px">no one in the league has a starter here</span>`}</div></div>`;
   }
-  h+=`</div>${ODDS?`<div class="note">Win chances are UK bookmakers' match odds, averaged and with their margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
+  h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
     const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
