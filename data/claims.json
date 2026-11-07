@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-05T21:15 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Searches returned no permitted-outlet news on the free agents, so the three claims lean on the model board (it finds only three same-position swaps worth more than a 2-point margin); Jacquet for White is the one I would make first.",
+  "ts": "2026-11-07T22:10 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Searches again found no permitted-outlet news on the free agents, so the three claims follow the model board, which finds only three same-position swaps above its 2-point margin; Jacquet for White first. Justin is third in the table, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -17,8 +17,8 @@
         "code": "198869",
         "club": "ARS"
       },
-      "why": "White's availability sits at 0.67 and Arsenal's defence has been rotating around returning players; Jacquet is a Liverpool defender the model has fully available. No permitted outlet article found this run, so this rests on the model's numbers.",
-      "model": "Model: Jacquet next5 17.8 vs White 12.4 (+5.4); I agree, with low evidence beyond the numbers.",
+      "why": "White's availability has slipped to 0.62 and Arsenal's defence has been rotating around returning players; Jacquet is a Liverpool defender the model has fully available. No permitted outlet article found this run, so this rests on the model's numbers.",
+      "model": "Model: Jacquet next5 17.7 vs White 11.5 (+6.2); I agree, with low evidence beyond the numbers.",
       "confidence": "medium",
       "sources": []
     },
@@ -35,8 +35,8 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "The model rates Barcola at 0.76 availability with only 7 career appearances, so his figure is thin; Le Fée is a proven Sunderland starter. I could not confirm Barcola's role from a permitted outlet, so treat as a punt on the model's gap.",
-      "model": "Model: Le Fée next5 18.0 vs Barcola 11.2 (+6.8); I agree cautiously since the model is weak on recent signings.",
+      "why": "The model rates Barcola at 0.85 availability with only 7 career appearances, so his figure is thin; Le Fee is a proven Sunderland starter. I could not confirm Barcola's role from a permitted outlet, so treat as a punt on the model's gap.",
+      "model": "Model: Le Fee next5 18.1 vs Barcola 12.4 (+5.7); I agree cautiously since the model is weak on recent signings.",
       "confidence": "low",
       "sources": []
     },
@@ -44,17 +44,17 @@
       "rank": 3,
       "pos": "DEF",
       "add": {
-        "name": "Mitchell",
-        "code": "244723",
-        "club": "CRY"
+        "name": "Konsa",
+        "code": "199798",
+        "club": "ARS"
       },
       "drop": {
         "name": "Gvardiol",
         "code": "477424",
         "club": "MCI"
       },
-      "why": "Gvardiol was listed among Man City's substitutes in recent predicted XIs per earlier runs, while Mitchell is a settled Crystal Palace starter. Marginal gain, model-only.",
-      "model": "Model: Mitchell next5 16.5 vs Gvardiol 14.7 (+1.8, under the model's own +2 threshold); I am overriding upward on the rotation concern.",
+      "why": "Konsa is a long-established Arsenal defender the model has at 0.99 availability against Gvardiol at 0.80. No permitted outlet article found this run, so this rests on the model's numbers; only worth it if claim 1 fails and you keep White.",
+      "model": "Model: Konsa next5 17.3 vs Gvardiol 14.8 (+2.4, just over its +2 threshold); I agree, low conviction.",
       "confidence": "low",
       "sources": []
     }
@@ -771,12 +771,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-09T08:15 UTC",
-      "gw": 6,
-      "claims": 5,
-      "note": "No change: no permitted-outlet news found overnight to alter the ranking before waivers close."
-    },
-    {
       "ts": "2026-10-09T21:30 UTC",
       "gw": 7,
       "claims": 5,
@@ -1129,6 +1123,12 @@
       "gw": 11,
       "claims": 3,
       "note": "No change; no permitted-outlet news found to move the GW11 claims."
+    },
+    {
+      "ts": "2026-11-07T22:10 UTC",
+      "gw": 11,
+      "claims": 3,
+      "note": "Refreshed to current model numbers; claim 3 switched from Mitchell/Gvardiol to Konsa/Gvardiol per model board. No permitted-outlet news found."
     }
   ]
 }

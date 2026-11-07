@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-08T21:10 UTC",
-      "published": 0,
-      "note": "Evening check before GW6 waivers close. Searches (premierleague.com, Sky Sports, Brentford site) repeat known items: Haaland sub for Norway, Scott tendon, Konsa knock; no press conferences yet. Nothing material."
-    },
-    {
       "ts": "2026-10-09T08:15 UTC",
       "published": 0,
       "note": "Morning check before GW6 waivers close at 10:00 UTC. Searches returned only off-list previews or old-season pages; Van Hecke foot doubt for Man Utd is already known and unconfirmed by a permitted outlet. Nothing material."
@@ -621,6 +616,11 @@
       "ts": "2026-11-07T09:15 UTC",
       "published": 0,
       "note": "Morning check; searches returned only fantasy/aggregator sites or older-season items, nothing verifiable from a permitted outlet. Nothing published."
+    },
+    {
+      "ts": "2026-11-07T22:10 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only older-season or non-permitted items, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
     }
   ]
 }
