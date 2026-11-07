@@ -1,46 +1,6 @@
 {
- "generated": "2026-11-06T23:50 UTC",
+ "generated": "2026-11-07T08:55 UTC",
  "items": [
-  {
-   "id": "2026-10-27-konsa-arsenal",
-   "ts": "2026-10-27T07:55",
-   "kind": "news",
-   "text": "Ezri Konsa has not just replaced the injured William Saliba at Arsenal, he has Arsenal conceding the fewest goals in the league, and the BBC's piece on him lands the day after he scored his first goal for the club against Everton. It is Big Ben's best outcome of the lot: Konsa was the 14 in his eleven last weekend, and the pair of him and Gabriel, who is Robert's, is now being talked about as the best partnership in the world.",
-   "source": {
-    "title": "BBC Sport: No Saliba, no problem - Konsa stepping up for Arsenal",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cw5ynr87jdr0o"
-   }
-  },
-  {
-   "id": "2026-10-27-carrick-successor",
-   "ts": "2026-10-27T07:55",
-   "kind": "news",
-   "text": "Michael Carrick left Manchester United's training ground at about 5pm on Monday after talks over his future, and BBC Sport says Eddie Howe and Julian Nagelsmann are the early names on the list if he is sacked, with Antonio Conte interested too. For this league it is a lot of cargo: Marcus has Mbeumo, Small Ben has Cunha, Big Ben has Fernandes and Robert has Yoro and Sesko.",
-   "source": {
-    "title": "BBC Sport: Howe and Nagelsmann high on Man Utd's list if Carrick sacked",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqdr8zv5dg42o"
-   }
-  },
-  {
-   "id": "2026-10-27-spurs-revival",
-   "ts": "2026-10-27T07:55",
-   "kind": "news",
-   "text": "Spurs beat Chelsea 2-0 on Saturday to go 12th, their highest league position since 2 January, and Roberto de Zerbi puts it down to a players-only meeting where they 'removed the masks'. James Maddison went off injured and is a question mark for the next few weeks. Spurs players on league rosters: Marmoush for Justin, Kinsky for Marcus, Solanke for Robert.",
-   "source": {
-    "title": "BBC Sport: The candid meeting that 'changed' Spurs - are they finally on way back?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqev38dz34vxo"
-   }
-  },
-  {
-   "id": "2026-10-27-vuskovic-gossip",
-   "ts": "2026-10-27T07:55",
-   "kind": "news",
-   "text": "Gossip, not confirmed: the BBC's Tuesday column says Brighton's 19-year-old centre-back Luka Vuskovic is drawing interest from Liverpool, Real Madrid and Barcelona, with the claim credited to Teamtalk. Vuskovic is Justin's, and nothing about a January move changes what he does for Brighton this month.",
-   "source": {
-    "title": "BBC Sport: Arsenal eye Monza striker Varela - Tuesday's gossip",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cj3vq7l22yk9o"
-   }
-  },
   {
    "id": "2026-10-27-justin-brighton-defence",
    "ts": "2026-10-27T22:50",
@@ -677,16 +637,49 @@
    "kind": "opinion",
    "text": "Robert has not had a single player kick a ball this gameweek, which for a man who barely touches his squad is the closest he gets to a clean sheet: nothing he picked has had the chance to let him down yet. All eleven go tomorrow, 186 off the lead, and the hairline and the league position can get back to receding in step.",
    "source": null
+  },
+  {
+   "id": "2026-11-07-everton-coventry",
+   "ts": "2026-11-07T08:55",
+   "kind": "news",
+   "text": "Thierno Barry scored twice as Everton came from behind to beat Coventry 3-1 on Friday night and move up to fifth, with Kiernan Dewsbury-Hall adding a thunderous strike hours after learning he had been left out of Thomas Tuchel's England squad. It is the night Edward's Barry banked his points and Marcus's Dewsbury-Hall banked his, and David Moyes now has two wins in a row to point at.",
+   "source": {
+    "title": "Barry scores twice as Everton fight back to beat Coventry",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm4g114p9e7go"
+   }
+  },
+  {
+   "id": "2026-11-07-trafford-horrendous",
+   "ts": "2026-11-07T08:55",
+   "kind": "news",
+   "text": "James Trafford says sitting on the fringes at Manchester City last season was \"horrendous\" and that he had to play regularly for his mental wellbeing, which is why he left for Leeds in the summer. Gianluigi Donnarumma, who arrived from Paris St-Germain less than six weeks after City brought Trafford back, is Small Ben's goalkeeper; Trafford is Big Ben's, and Leeds host Tottenham at 12:30 UTC today.",
+   "source": {
+    "title": "'I had to play regularly for my mental wellbeing' - Trafford",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckly00wq495zo"
+   }
+  },
+  {
+   "id": "2026-11-07-glasner-woodstock",
+   "ts": "2026-11-07T08:55",
+   "kind": "news",
+   "text": "Oliver Glasner says Nottingham Forest had \"too much Woodstock\" and need more military: trust and respect, in his words, are the two values he will not negotiate on. Forest are 19th, winless and goalless at home in the league, and host Manchester City at 17:30 UTC tonight, which is a fixture Edward's Gibbs-White, and everybody holding a City player, will be watching.",
+   "source": {
+    "title": "Forest need balance between Woodstock and military - Glasner",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cwg5jj6nvmnyo"
+   }
+  },
+  {
+   "id": "2026-11-07-jaissle-newcastle",
+   "ts": "2026-11-07T08:55",
+   "kind": "news",
+   "text": "Newcastle were booed off after losing 1-0 at home to Everton on Monday, a fourth defeat in six Premier League games, and Matthias Jaissle admitted he understood the reaction. They are at Fulham at 15:00 UTC today, so Small Ben's Osula goes into it with his side in poor form, while Marcus's King and Justin's Gonzalo are on the home side.",
+   "source": {
+    "title": "Jeers again as home woes continue - Jaissle has big problems at Newcastle",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-16T22:45",
-   "news": 0,
-   "opinion": 4,
-   "matchday": false,
-   "note": "Evening, no fixtures today and GW7 not kicked off, so no football to wrap. No reported items (morning run covered the news). Four opinion pieces from the latest waivers and GW6 figures (Small Ben, Justin, Big Ben bench, Marcus). Live feed totals were pre-GW6 settled so I quoted public.json GW6 figures only. Archive used: Ben C boxing line, Edward on Ben D Arsenal, Edward on Marcus luck. Passed over for now: hairline lines on Robert (no fresh Robert fact), the Ben D self-roast and the Justin nationality line (not fit to land), Jobacus/Catholic line on Marcus (nothing to hang it on tonight), Justin pint line on Robert (nothing true to hang it on). No flops to rewrite today."
-  },
   {
    "ts": "2026-10-17T07:50",
    "news": 3,
@@ -1099,6 +1092,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "evening wrap. No reported item: could not find a match report at a permitted outlet (search returned nothing usable, BBC/Guardian blocked for search). Led with Edward topping the table after Barry's 16. Used archive: Edward-less; Robert hairline/no-transfers (Edward on Robert 09-12), Ben C height (Ben D 09-04). Passed over: Bruno line (Fernandes looks to be on Ben D's bench, no hook), gay/apartheid/Catholic-Jobacus ones not suited tonight; Marcus Jobacus used last night."
+  },
+  {
+   "ts": "2026-11-07T08:55",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning. Led with Everton 3-1 Coventry (Barry brace, Dewsbury-Hall), then Trafford interview, Glasner at Forest ahead of City tonight, Jaissle/Newcastle at Fulham. Search tools were thin (only aggregators), so sourced straight from BBC Sport pages I read. No opinion on a morning run; no roast suggestions used or retired."
   }
  ]
 }
