@@ -2,13 +2,6 @@
   "generated": "2026-11-07T08:55 UTC",
   "items": [
     {
-      "id": "2026-10-27-robert-both-sides",
-      "ts": "2026-10-27T22:50",
-      "kind": "opinion",
-      "text": "Robert has Martinez, Estevao and James at Chelsea and Yoro and Sesko at Manchester United, so in GW9 he gets to watch his own team play itself and, going by form, find a way to lose both halves. He is 139 off the lead and has never finished anything he started, ask the pint.",
-      "source": null
-    },
-    {
       "id": "2026-10-27-bend-no-tzolis",
       "ts": "2026-10-27T22:50",
       "kind": "opinion",
@@ -680,16 +673,19 @@
         "title": "Confirmed line-ups: Leeds vs Spurs",
         "url": "https://www.tottenhamhotspur.com/news/1184526/confirmed-line-ups-leeds-united-vs-spurs-premier-league-november-2026"
       }
+    },
+    {
+      "id": "2026-11-07-xi-1500",
+      "ts": "2026-11-07T14:08",
+      "kind": "news",
+      "text": "Team news, 15:00 kick-offs: Newcastle's confirmed eleven is out and Small Ben's Osula starts at Fulham. The Arsenal, Hull and Fulham sheets were not available when this was written, so Edward, Marcus, Robert, Justin, Big Ben and Small Ben's other players at those clubs are not covered yet.",
+      "source": {
+        "title": "Confirmed line-up: Four changes at Fulham",
+        "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-four-changes-at-fulham"
+      }
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-17T11:03",
-      "news": 1,
-      "opinion": 0,
-      "matchday": true,
-      "note": "2026-10-17 11:30 slot: Chelsea sheet found (chelseafc.com); Everton sheet not found"
-    },
     {
       "ts": "2026-10-17T13:07",
       "news": 1,
@@ -1102,6 +1098,13 @@
       "opinion": 0,
       "matchday": true,
       "note": "12:30 slot: Leeds v Spurs; both confirmed sheets found (tottenhamhotspur.com, leedsunited.com); none missing"
+    },
+    {
+      "ts": "2026-11-07T14:08",
+      "news": 1,
+      "opinion": 0,
+      "matchday": true,
+      "note": "15:00 slot: found Newcastle sheet (newcastleunited.com); Arsenal, Hull, Fulham sheets not available"
     }
   ]
 }
