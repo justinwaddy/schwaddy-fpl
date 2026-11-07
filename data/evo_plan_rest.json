@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T08:36",
+ "generated": "2026-11-07T15:06",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 39.06,
+   "gain": 38.81,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 151
+   "borda": 150
   },
   {
    "pos": "MID",
-   "gain": 56.56,
+   "gain": 56.64,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 123
+   "borda": 122
   },
   {
    "pos": "MID",
-   "gain": 29.6,
+   "gain": 29.44,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 78
+   "borda": 77
   },
   {
    "pos": "MID",
-   "gain": 31.84,
+   "gain": 31.8,
    "change": 1,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 37.51,
+   "gain": 37.62,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 21.62,
+   "gain": 19.55,
    "change": 2,
    "fallback": true,
    "add": {
@@ -409,12 +409,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 2,
-   "borda": 25
+   "votes": 3,
+   "borda": 41
   },
   {
    "pos": "DEF",
-   "gain": 37.72,
+   "gain": 37.58,
    "change": 3,
    "fallback": false,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 46
+   "borda": 45
   },
   {
    "pos": "DEF",
-   "gain": 39.24,
+   "gain": 39.07,
    "change": 3,
    "fallback": true,
    "add": {
@@ -474,7 +474,7 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 29
+   "borda": 28
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -776,9 +776,9 @@
    "name": "Calvert-Lewin",
    "pos": "FWD",
    "team": "LEE",
-   "status": "d",
-   "news": "Foot injury - 75% chance of playing",
-   "p_play": 0.717,
+   "status": "a",
+   "news": "",
+   "p_play": 0.956,
    "base": 148.25,
    "ep": 142.04
   },
