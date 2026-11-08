@@ -1,30 +1,6 @@
 {
- "generated": "2026-11-07T23:55 UTC",
+ "generated": "2026-11-08T08:41 UTC",
  "items": [
-  {
-   "id": "2026-10-28-sage-palace",
-   "ts": "2026-10-28T07:55",
-   "kind": "news",
-   "text": "Gossip, not confirmed: the BBC's Wednesday gossip column carries a Guardian claim that Crystal Palace's Pierre Sage could be sacked if they lose to Tottenham on Saturday. Robert has Mateta, who scores for Palace when anybody does, and Justin has Marmoush on the Spurs side of it, so the manager's afternoon is also two of the six's afternoon.",
-   "source": {
-    "title": "BBC Sport: Wednesday's full gossip column",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ck7vpjqyd4pmo"
-   }
-  },
-  {
-   "id": "2026-10-28-edward-best-week",
-   "ts": "2026-10-28T22:45",
-   "kind": "opinion",
-   "text": "Edward had the best eleven of the six last week, one point clear of Justin's, with Jackson on 13, Truffert on 10 and Muharemovic on 9, and it moved him nowhere: third on Friday, third tonight, the same distance from the lead as a man gets from a bus he watched leave. The Return of the Djedi has so far been all return and no Jedi.",
-   "source": null
-  },
-  {
-   "id": "2026-10-28-smallben-seventy-five",
-   "ts": "2026-10-28T22:45",
-   "kind": "opinion",
-   "text": "Small Ben has Rice and Madueke both listed at a 75 percent chance of playing for Arsenal, which is the best odds anyone has offered him all season. The best score in his eleven last week came from an Ipswich player, he is 48 off the top, and his chance of winning the league is still the same size as the man himself, which on current form is a generous reading of the chance.",
-   "source": null
-  },
   {
    "id": "2026-10-28-robert-saka-treatment",
    "ts": "2026-10-28T22:45",
@@ -677,16 +653,39 @@
    "kind": "opinion",
    "text": "Robert has 21 from Saturday and Cherki's 9 and Gabriel's 8 are nearly all of it, while Saka and Mosquera played the same Arsenal match as Gabriel and returned nothing. A side with all the effort at the back and nothing at the front, which is also the hairline, and in both cases the manager has stopped doing anything about it.",
    "source": null
+  },
+  {
+   "id": "2026-11-08-bogle-escapes",
+   "ts": "2026-11-08T08:41",
+   "kind": "news",
+   "text": "Tottenham are set to complain to Pro Ref after Jayden Bogle escaped a red card for catching Mathys Tel on the back of the ankle with his studs in Leeds' win on Saturday. VAR reviewed it but referee John Brooks was never sent to the monitor, and former assistant referee Darren Cann called Bogle fortunate. Justin owns Bogle, so a belated retrospective punishment is the only way this costs him anything.",
+   "source": {
+    "title": "Tottenham set to complain to Pro Ref after Bogle escapes red card",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c39wz9llg255o"
+   }
+  },
+  {
+   "id": "2026-11-08-madueke-saka",
+   "ts": "2026-11-08T08:41",
+   "kind": "news",
+   "text": "Mikel Arteta says Noni Madueke has become a 'different' player, filling in on the right since Bukayo Saka's injury: 13 touches in the opposition box against Hull was the most by an Arsenal player in a Premier League game this season, and his shot led to the save from which Martin Odegaard scored. Small Ben owns Madueke, Justin has Odegaard, and Robert has Saka waiting to get back into the side.",
+   "source": {
+    "title": "Noni Madueke has become a 'different' player, says Mikel Arteta, as winger finds new level of creativity and efficiency",
+    "url": "https://www.skysports.com/football/news/13609559/noni-madueke-has-become-a-different-player-says-mikel-arteta-as-winger-finds-new-level-of-creativity-and-efficiency"
+   }
+  },
+  {
+   "id": "2026-11-08-estevao-minutes",
+   "ts": "2026-11-08T08:41",
+   "kind": "news",
+   "text": "Estevao had the most shots and touches in the opposition box in Chelsea's game with Manchester United, and Xabi Alonso said he 'has had the best response, to show he deserves more'. It remains to be seen whether he starts at Sunderland today (14:00 UTC), though his chemistry with Cole Palmer might tempt Alonso. Robert owns Estevao and Edward owns Palmer.",
+   "source": {
+    "title": "Estevao ready for more Chelsea minutes under Xabi Alonso after reminder of his threat against Man Utd - The Radar",
+    "url": "https://www.skysports.com/football/news/13608399/estevao-ready-for-move-chelsea-minutes-under-xabi-alonso-after-reminder-of-his-threat-against-man-utd-the-radar"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-17T16:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 UTC slot, NEW v AVL: found Newcastle confirmed XI (newcastleunited.com); Aston Villa sheet not found"
-  },
   {
    "ts": "2026-10-17T22:50",
    "news": 0,
@@ -1099,6 +1098,13 @@
    "opinion": 4,
    "matchday": true,
    "note": "evening wrap, run at 23:41. No reported items: searches for the Leeds-Spurs, Arsenal-Hull, Fulham-Newcastle and Forest-City reports returned only old fixtures, so nothing sourced. Led with Edward's lead going from 2 to 25, Big Ben's bench outscoring his eleven, Justin's Gyokeres swap and Robert's front line. Rewrote the 13 flop lines. Roast archive used: hairline (Robert), Bruno/Arsenal ball-knowledge (Ben D), luck (Edward), the Spotlight/Marcus and Small Ben boxing/height ones passed over only because Marcus and Small Ben were not roasted tonight (no hook the live numbers gave; they keep). Skipped Delap and Haramball as banned. Sunday fixtures still to come, so no blank-based jokes on unplayed players."
+  },
+  {
+   "ts": "2026-11-08T08:41",
+   "news": 3,
+   "opinion": 0,
+   "matchday": true,
+   "note": "morning; led with the Bogle red-card complaint. Search tool was poor, so sourced from BBC and Sky front pages. No roast suggestions used (morning run, no opinion)."
   }
  ]
 }
