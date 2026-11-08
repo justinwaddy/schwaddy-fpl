@@ -771,12 +771,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-09T21:30 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "Rewritten for the GW7 window after GW6 waivers processed; squad changed (Gross, Scott, Bogle gone). Barcola downgraded to a conditional punt on Liverpool's forward injuries."
-    },
-    {
       "ts": "2026-10-10T08:15 UTC",
       "gw": 7,
       "claims": 5,
@@ -1129,6 +1123,12 @@
       "gw": 11,
       "claims": 3,
       "note": "Refreshed to current model numbers; claim 3 switched from Mitchell/Gvardiol to Konsa/Gvardiol per model board. No permitted-outlet news found."
+    },
+    {
+      "ts": "2026-11-08T09:20 UTC",
+      "gw": 11,
+      "claims": 3,
+      "note": "No change; no new permitted-outlet news found to move the GW11 claims."
     }
   ]
 }
