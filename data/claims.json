@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-07T22:10 UTC",
+  "ts": "2026-11-08T22:10 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Searches again found no permitted-outlet news on the free agents, so the three claims follow the model board, which finds only three same-position swaps above its 2-point margin; Jacquet for White first. Justin is third in the table, so waiver priority is mid-queue.",
   "claims": [
     {
@@ -771,12 +771,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-10T08:15 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: no new permitted-source news since last run; GW7 claims carried forward."
-    },
-    {
       "ts": "2026-10-10T21:10 UTC",
       "gw": 7,
       "claims": 5,
@@ -1129,6 +1123,12 @@
       "gw": 11,
       "claims": 3,
       "note": "No change; no new permitted-outlet news found to move the GW11 claims."
+    },
+    {
+      "ts": "2026-11-08T22:10 UTC",
+      "gw": 11,
+      "claims": 3,
+      "note": "No change; searches on Gvardiol and Liverpool surfaced no permitted-outlet November news, so claims carried forward from the model board."
     }
   ]
 }

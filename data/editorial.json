@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-09T21:30 UTC",
-      "published": 2,
-      "note": "Barcola's route into Liverpool's XI with Isak, Gakpo and Ekitike out, and Van Hecke's fitness/twins call, both from the Premier League Matchweek 6 predicted line-ups. Deep GW6 starters pass written."
-    },
-    {
       "ts": "2026-10-10T08:15 UTC",
       "published": 0,
       "note": "Morning check ahead of GW6 deadline at 10:00 UTC. Searches returned only 2023 and 2025 pages or off-list fantasy sites; no new material from a permitted outlet. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-08T09:20 UTC",
       "published": 0,
       "note": "Morning check; permitted-outlet searches on Gvardiol and Barcola returned only older items (Barcola hat-trick vs LASK is dated 14 Oct). Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-08T22:10 UTC",
+      "published": 0,
+      "note": "Evening check; searches returned only older-season, non-permitted items or pieces that could not be dated to this week. Not in starters window. Nothing published."
     }
   ]
 }
