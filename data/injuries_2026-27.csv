@@ -74,6 +74,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 101282,1788894459,1788015609,d,75.0,75.0,Thigh injury - 75% chance of playing
 101282,1788963289,1788963289,a,75.0,100.0,
 101282,1793522189,1793469610,s,100.0,0.0,Suspended until 22 Nov
+101282,1794126960,1794126960,a,0.0,100.0,
 105666,1785832691,1785832691,a,,,
 105666,1787270210,1786215606,i,,0.0,Arm injury - Unknown return date
 105666,1793287846,1793287846,d,0.0,50.0,Arm injury - 50% chance of playing
@@ -342,6 +343,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 208706,1787270210,1787245209,d,,75.0,Thigh injury - 75% chance of playing
 208706,1788894459,1788894459,a,75.0,100.0,
 209036,1785832691,1785832691,a,,,
+209036,1794126960,1794087009,d,,75.0,Unspecified injury - 75% chance of playing
 209046,1785832691,1784808084,d,,75.0,Thigh injury - 75% chance of playing
 209046,1787270210,1787270210,a,,100.0,
 209244,1785832691,1785832691,a,,,
@@ -538,6 +540,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 232653,1789720597,1789720597,i,,0.0,Thigh injury - Unknown return date
 232653,1792934468,1792934468,a,0.0,100.0,
 232653,1793694969,1793656810,s,100.0,0.0,Suspended until 21 Nov
+232653,1794126960,1794126960,a,0.0,100.0,
 232787,1785832691,1785832691,a,,,
 232859,1785832691,1785832691,a,,,
 232859,1787270210,1787062388,u,,0.0,Has joined Internazionale permanently
@@ -902,6 +905,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 469266,1792157428,1792155608,i,,0.0,Calf injury - Expected back 25 Oct
 469266,1792591565,1792591565,d,0.0,50.0,Calf injury - 50% chance of playing
 469266,1792763234,1792763234,d,0.0,75.0,Calf injury - 75% chance of playing
+469266,1794126960,1794126960,a,75.0,100.0,
 469272,1785832691,1785832691,a,,,
 470294,1785832691,1785832691,a,,,
 470294,1787270210,1785868211,i,,0.0,Thigh injury - Unknown return date
@@ -939,6 +943,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 476887,1787910473,1787842383,u,,0.0,Has joined Lille on loan for the rest of the season
 477064,1785832691,1785832691,a,,,
 477424,1785832691,1785832691,a,,,
+477424,1794126960,1794087009,d,,75.0,Unspecified injury - 75% chance of playing
 477547,1785832691,1785832691,a,,,
 477547,1787270210,1786543683,u,,0.0,Has joined KV Mechelen on loan for the rest of the season
 477555,1785832691,1785832691,a,,,
@@ -970,6 +975,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 482973,1785832691,1785832691,a,,,
 482973,1791559985,1791556211,i,,0.0,Calf injury - Unknown return date
 482973,1793897177,1793897177,d,0.0,75.0,Calf injury - 75% chance of playing
+482973,1794126960,1794126960,a,75.0,100.0,
 483067,1785832691,1785832691,a,,,
 484389,1785832691,1785832691,a,,,
 484389,1788894459,1788363855,u,0.0,0.0,Has joined Leyton Orient on loan for the rest of the season
@@ -1144,6 +1150,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 510281,1793318200,1793318200,i,0.0,0.0,Muscular injury - Expected back 21 Nov
 510663,1785832691,1784808084,i,,0.0,Achilles injury - Unknown return date
 511499,1785832691,1785832691,a,,,
+511499,1794126960,1794076209,d,,75.0,Ankle injury - 75% chance of playing
 512123,1787910473,1787910473,a,,,
 512462,1785832691,1785832691,a,,,
 513086,1785832691,1785832691,a,,,
@@ -1211,6 +1218,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 535928,1785832691,1784808084,i,,0.0,Hamstring injury - Expected back 23 Aug
 535928,1787910473,1787910473,i,0.0,0.0,Hamstring injury - Unknown return date
 535928,1788894459,1788894459,u,0.0,0.0,Has joined Celta Vigo permanently
+536108,1794126960,1794126960,a,,,
 536661,1785832691,1785832691,a,,,
 536694,1785832691,1785832691,a,,,
 536694,1789202150,1789137739,u,,0.0,Has joined Alverca on loan for the rest of the season
@@ -1354,6 +1362,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 577411,1788894459,1787963760,u,0.0,0.0,Has joined Academico de Viseu on loan for the rest of the season
 577669,1785832691,1785832691,a,,,
 577725,1785832691,1785832691,a,,,
+577725,1794126960,1794081609,d,,75.0,Groin injury - 75% chance of playing
 577974,1785832691,1785832691,a,,,
 578153,1785832691,1785832691,a,,,
 578512,1789893388,1789893388,a,,,

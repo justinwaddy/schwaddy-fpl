@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T15:05",
+ "generated": "2026-11-08T08:36",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,20 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.83,
-   "ep": 4.67,
-   "votes": 5
-  },
-  {
-   "id": 391,
-   "code": 477424,
-   "name": "Gvardiol",
-   "pos": "DEF",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.817,
-   "base": 5.33,
-   "ep": 5.32,
+   "ep": 4.68,
    "votes": 5
   },
   {
@@ -56,6 +43,19 @@
    "p_play": 0.985,
    "base": 4.49,
    "ep": 4.44,
+   "votes": 5
+  },
+  {
+   "id": 391,
+   "code": 477424,
+   "name": "Gvardiol",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.613,
+   "base": 3.99,
+   "ep": 3.89,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 3.56,
-   "ep": 3.53,
+   "ep": 3.54,
    "votes": 5
   },
   {
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 5.02,
-   "ep": 4.95,
+   "ep": 4.96,
    "votes": 5
   },
   {
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.81,
-   "ep": 3.66,
+   "ep": 3.67,
    "votes": 0
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.934,
    "base": 2.06,
-   "ep": 1.88,
+   "ep": 1.89,
    "votes": 0
   }
  ],
- "xi_ep": 47.5,
+ "xi_ep": 46.1,
  "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 6.83,
+   "gain": 5.65,
    "change": 1,
    "fallback": false,
    "add": {
@@ -249,44 +249,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 72
+   "votes": 4,
+   "borda": 88
   },
   {
    "pos": "MID",
-   "gain": 4.61,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.904,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.753,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 64
-  },
-  {
-   "pos": "MID",
-   "gain": 5.03,
+   "gain": 4.96,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +282,43 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 63
+   "borda": 59
   },
   {
    "pos": "MID",
-   "gain": 3.83,
+   "gain": 4.58,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 45,
+    "code": 122806,
+    "name": "McGinn",
+    "pos": "MID",
+    "team": "AVL",
+    "status": "a",
+    "news": "",
+    "p_play": 0.904,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.753,
+    "base": null,
+    "ep": null
+   },
+   "votes": 3,
+   "borda": 58
+  },
+  {
+   "pos": "MID",
+   "gain": 3.88,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 45
+   "borda": 43
   },
   {
    "pos": "DEF",
-   "gain": 5.54,
+   "gain": 5.42,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 28
+   "borda": 27
   },
   {
    "pos": "DEF",
-   "gain": 5.08,
+   "gain": 5.03,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.72,
+   "gain": 5.74,
    "change": 3,
    "fallback": false,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.5,
+   "gain": 3.6,
    "change": 3,
    "fallback": true,
    "add": {
@@ -644,9 +644,9 @@
    "name": "Gu\u00e9hi",
    "pos": "DEF",
    "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.841,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.63,
    "base": 179.9,
    "ep": 173.12
   },

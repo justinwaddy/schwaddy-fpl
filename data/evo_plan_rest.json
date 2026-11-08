@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T15:06",
+ "generated": "2026-11-08T08:36",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -29,20 +29,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.83,
-   "ep": 4.67,
-   "votes": 5
-  },
-  {
-   "id": 391,
-   "code": 477424,
-   "name": "Gvardiol",
-   "pos": "DEF",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.817,
-   "base": 5.33,
-   "ep": 5.32,
+   "ep": 4.68,
    "votes": 5
   },
   {
@@ -56,6 +43,19 @@
    "p_play": 0.985,
    "base": 4.49,
    "ep": 4.44,
+   "votes": 5
+  },
+  {
+   "id": 391,
+   "code": 477424,
+   "name": "Gvardiol",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.613,
+   "base": 3.99,
+   "ep": 3.89,
    "votes": 5
   },
   {
@@ -81,7 +81,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 3.56,
-   "ep": 3.53,
+   "ep": 3.54,
    "votes": 5
   },
   {
@@ -107,7 +107,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 5.02,
-   "ep": 4.95,
+   "ep": 4.96,
    "votes": 5
   },
   {
@@ -174,7 +174,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.81,
-   "ep": 3.66,
+   "ep": 3.67,
    "votes": 0
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.934,
    "base": 2.06,
-   "ep": 1.88,
+   "ep": 1.89,
    "votes": 0
   }
  ],
- "xi_ep": 47.5,
+ "xi_ep": 46.1,
  "changes": 3,
  "claims": [
   {
    "pos": "MID",
-   "gain": 38.81,
+   "gain": 38.18,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "MID",
-   "gain": 56.64,
+   "gain": 56.93,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 122
+   "borda": 123
   },
   {
    "pos": "MID",
-   "gain": 29.44,
+   "gain": 29.0,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 77
+   "borda": 74
   },
   {
    "pos": "MID",
-   "gain": 31.8,
+   "gain": 31.69,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 56
+   "borda": 55
   },
   {
    "pos": "MID",
-   "gain": 37.62,
+   "gain": 37.99,
    "change": 2,
    "fallback": false,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 87
+   "borda": 83
   },
   {
    "pos": "MID",
-   "gain": 19.55,
+   "gain": 21.27,
    "change": 2,
    "fallback": true,
    "add": {
@@ -409,12 +409,12 @@
     "base": null,
     "ep": null
    },
-   "votes": 3,
-   "borda": 41
+   "votes": 2,
+   "borda": 23
   },
   {
    "pos": "DEF",
-   "gain": 37.58,
+   "gain": 37.24,
    "change": 3,
    "fallback": false,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 39.07,
+   "gain": 38.56,
    "change": 3,
    "fallback": true,
    "add": {
@@ -644,9 +644,9 @@
    "name": "Gu\u00e9hi",
    "pos": "DEF",
    "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.841,
+   "status": "d",
+   "news": "Unspecified injury - 75% chance of playing",
+   "p_play": 0.63,
    "base": 179.9,
    "ep": 173.12
   },
