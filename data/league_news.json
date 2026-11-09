@@ -1,27 +1,6 @@
 {
- "generated": "2026-11-08T23:45 UTC",
+ "generated": "2026-11-09T08:55 UTC",
  "items": [
-  {
-   "id": "2026-10-29-marcus-worst-eleven",
-   "ts": "2026-10-29T22:50",
-   "kind": "opinion",
-   "text": "Marcus put out the lowest-scoring eleven in the league last week, 28, and the best score he owned all week was Kinsky's 9, from the bench, while the keeper he actually started, Becker, got 6. A week ago he led. Tonight he is 8 back, and the man who sells a winger after two good games has just discovered what it feels like to hold the wrong one.",
-   "source": null
-  },
-  {
-   "id": "2026-10-29-bigben-trafford-bench",
-   "ts": "2026-10-29T22:50",
-   "kind": "opinion",
-   "text": "Big Ben started Kelleher, who returned 2, and left Trafford on the bench for 10, which is about what you would expect from a man with this much to say about ball knowledge. The Bruno bail-out never arrived either: Fernandes was left out by Manchester United and then found himself on Big Ben's bench, dropped by the club and by the fan. He is 89 off the lead and on Saturday he gets to be wrong about it live.",
-   "source": null
-  },
-  {
-   "id": "2026-10-29-smallben-silva-bench",
-   "ts": "2026-10-29T22:50",
-   "kind": "opinion",
-   "text": "Small Ben left 14 points on his bench last week, Silva's 8 among them, while Cunha started and returned 1. There is a fight coming, and this is the best evidence going of how he prepares for one: the right man was in the building all along, in a tracksuit, and never got the call. Foresight, as advertised.",
-   "source": null
-  },
   {
    "id": "2026-10-29-robert-gabriel-two-thirds",
    "ts": "2026-10-29T22:50",
@@ -674,16 +653,39 @@
    "kind": "opinion",
    "text": "Bruno hauled 10 for Big Ben today, from the bench, alongside Trafford's 10, so the man who needs Bruno to bail him out had him in the building and left him in the dugout. A bench with 24 on it and an eleven that needed it: classic Arsenal fan reading of a football match.",
    "source": null
+  },
+  {
+   "id": "2026-11-09-united-villa-carrick",
+   "ts": "2026-11-09T08:55",
+   "kind": "news",
+   "text": "Manchester United twice came from two goals down to draw 4-4 with Aston Villa, Patrick Dorgu levelling in the 96th minute, and still go into the international break 18th and without a league win since 30 August. Michael Carrick, asked about walking away, said \"That's not going to happen.\" Justin (Cunha), Marcus (Mbeumo), Big Ben (B.Fernandes) and Robert (Sesko and Yoro) all have United men to look at, and the next fixture is Anfield on 22 November.",
+   "source": {
+    "title": "Bizarre & thrilling theatre as Carrick in limbo with Man Utd in drop zone",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cked3qjw1q4xo"
+   }
+  },
+  {
+   "id": "2026-11-09-brighton-second",
+   "ts": "2026-11-09T08:55",
+   "kind": "news",
+   "text": "Brighton beat Brentford 2-0 on Sunday to go second, five points behind Arsenal, with six wins in seven, and Pascal Gross, who scored and created at least five chances, is the man the BBC credits for most of it. Big Ben owns Gross; Justin, Marcus and Edward all have a Brighton defender or keeper as well. Gross himself says they are not in a title race.",
+   "source": {
+    "title": "Are 'outstanding' Brighton now Arsenal's main title challengers?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cjx23rwxdn64o"
+   }
+  },
+  {
+   "id": "2026-11-09-sunderland-chelsea",
+   "ts": "2026-11-09T08:55",
+   "kind": "news",
+   "text": "Sunderland beat Chelsea 1-0 on Saturday through Enzo Le Fee's 36th-minute penalty, after Levi Colwill brought down Brian Brobbey, and the BBC had Robin Roefs rarely tested and Nordi Mukiele a huge presence at the back on his return. Robert (Roefs) and Marcus (Mukiele) both came out of it with 9, while the Chelsea players in the league, Palmer, Rogers, Neto and the rest, brought home next to nothing.",
+   "source": {
+    "title": "Failed to deal with Brobbey - player ratings for Sunderland v Chelsea",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c94g1n4pzev3o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-18T12:08",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "13:00 slot: found Crystal Palace sheet (cpfc.co.uk); could not find confirmed sheets for Bournemouth, Sunderland, Brighton, Leeds, Man Utd"
-  },
   {
    "ts": "2026-10-18T12:39",
    "news": 0,
@@ -1096,6 +1098,13 @@
    "opinion": 5,
    "matchday": true,
    "note": "Evening wrap. No reported items: web search returned nothing usable from permitted outlets for today's matches. Led with Edward's 17-point lead and Marcus's slide, then Robert, Small Ben, Big Ben's bench. Used archive: hairline (Robert), height (Small Ben), luck (Marcus), Bruno/ball knowledge (Big Ben). Passed over: Ben D self-roast, apartheid line, Jobacus/Catholic/Chloe line, boxing/Harvey Price line, pint line (no hook today). Rewrote all 9 GW10 flop lines; Neto's was matched against news.json text (yours), patched public.json by hand."
+  },
+  {
+   "ts": "2026-11-09T08:55",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no fixtures. Led with Man Utd 4-4 Villa, then Brighton, then Sunderland v Chelsea, all BBC. Search was mostly stale so researched from BBC football pages directly. No opinion on a morning run; roast archive untouched."
   }
  ]
 }
