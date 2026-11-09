@@ -1,33 +1,6 @@
 {
- "generated": "2026-11-09T08:55 UTC",
+ "generated": "2026-11-09T23:50 UTC",
  "items": [
-  {
-   "id": "2026-10-29-robert-gabriel-two-thirds",
-   "ts": "2026-10-29T22:50",
-   "kind": "opinion",
-   "text": "Gabriel gave Robert 17 of his 39 last week and Roefs added 9, so two players did two thirds of the work while the other nine shared 13 and a sincere effort at looking busy. It is the squad of a man whose whole strategy is to touch nothing and answer nobody, and like the hairline, the part that is left is doing everything it can.",
-   "source": null
-  },
-  {
-   "id": "2026-10-30-chelsea-finishing",
-   "ts": "2026-10-30T07:42",
-   "kind": "news",
-   "text": "Opta's expected points model rates Chelsea the 12th-best side in the Premier League even though they sit fifth, the Guardian reports, because they have scored 6.7 goals more than their chances deserve. It names Pedro Neto, on three league goals and two short of his best for a season, and Morgan Rogers, still ahead of his expected goals but by 1.87 against 3.15 across all of last season, as the ones unlikely to keep it up. Neto is Justin's, Rogers is Big Ben's, and Joao Pedro, whom the piece also lines up, is Marcus's. Chelsea host Manchester United at 12.30pm on Saturday.",
-   "source": {
-    "title": "Chelsea's fine finishing has them flying high - but how long can it last?",
-    "url": "https://www.theguardian.com/football/2026/oct/29/chelseas-fine-finishing-has-them-flying-high-but-how-long-can-it-last"
-   }
-  },
-  {
-   "id": "2026-10-30-evanilson-run",
-   "ts": "2026-10-30T07:42",
-   "kind": "news",
-   "text": "Evanilson has four goals in five games for Bournemouth, his best run since joining, including the tight-angled finish that made it 3-0 at Old Trafford, the Guardian says, with Kroupi able to work the space his running creates. Evanilson is Marcus's and Kroupi Jr is Edward's, so the two of them will be watching the same partnership from opposite sides.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
   {
    "id": "2026-10-30-jackson-garcia",
    "ts": "2026-10-30T07:42",
@@ -683,6 +656,27 @@
     "title": "Failed to deal with Brobbey - player ratings for Sunderland v Chelsea",
     "url": "https://www.bbc.co.uk/sport/football/articles/c94g1n4pzev3o"
    }
+  },
+  {
+   "id": "2026-11-09-robert-transfers",
+   "ts": "2026-11-09T23:50",
+   "kind": "opinion",
+   "text": "Robert is 192 off the lead with a front line of Mateta, Saka, Mosquera and James that all went the whole of GW10 without troubling a scorer. Saturday is the first chance to make a transfer since he last answered a message, and the smart money is on the hairline making its move first.",
+   "source": null
+  },
+  {
+   "id": "2026-11-09-justin-city",
+   "ts": "2026-11-09T23:50",
+   "kind": "opinion",
+   "text": "Justin finished second in GW10 and still found a way to feel hard done by: Gvardiol and White blanked, Haaland gave him 2, and Tzolakis and Bogle sat on the bench doing the work of men being paid to start. Running a squad this confidently and getting it this wrong takes real commitment.",
+   "source": null
+  },
+  {
+   "id": "2026-11-09-edward-bench",
+   "ts": "2026-11-09T23:50",
+   "kind": "opinion",
+   "text": "Edward won the gameweek, extended the lead to 17, and still left 14 on his bench, which means the man he spends every week explaining as luck has now got his reserves out-earning half the league's eleven. Marcus will have the international break to decide whether that is bad luck or just Edward being better at this.",
+   "source": null
   }
  ],
  "runs": [
@@ -1105,6 +1099,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no fixtures. Led with Man Utd 4-4 Villa, then Brighton, then Sunderland v Chelsea, all BBC. Search was mostly stale so researched from BBC football pages directly. No opinion on a morning run; roast archive untouched."
+  },
+  {
+   "ts": "2026-11-09T23:50",
+   "news": 0,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, no fixtures today (GW10 final, GW11 starts Saturday). No reported items: no new material since the morning run. Opinion on Robert (hairline, no transfers), Justin (blanks and bench), Edward (bench and lead). Used archive: hairline/no transfers (Robert). Passed over: pint, boxing, Jobacus, apartheid, self-roast lines (no hook / not run); Small Ben height and Big Ben Bruno ran last night. No flops today. Delap's GW10 auto haul left alone per rule 4. Totals quoted from public.json since GW10 is final; live-feed totals ignored as they predate GW10 settling."
   }
  ]
 }
