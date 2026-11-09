@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T15:33",
+ "generated": "2026-11-09T08:36",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.49,
-   "ep": 4.44,
+   "ep": 4.46,
    "votes": 5
   },
   {
@@ -55,7 +55,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.613,
    "base": 3.99,
-   "ep": 3.89,
+   "ep": 3.9,
    "votes": 5
   },
   {
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.672,
    "base": 3.11,
-   "ep": 3.03,
+   "ep": 3.04,
    "votes": 4
   },
   {
@@ -120,7 +120,7 @@
    "news": "",
    "p_play": 0.933,
    "base": 4.49,
-   "ep": 4.44,
+   "ep": 4.43,
    "votes": 5
   },
   {
@@ -200,7 +200,7 @@
    "news": "",
    "p_play": 0.753,
    "base": 2.28,
-   "ep": 2.21,
+   "ep": 2.22,
    "votes": 1
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "MID",
-   "gain": 5.61,
+   "gain": 5.52,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 92
+   "borda": 101
   },
   {
    "pos": "MID",
-   "gain": 4.92,
+   "gain": 4.79,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,43 +282,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 62
+   "borda": 66
   },
   {
    "pos": "MID",
-   "gain": 4.56,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.904,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.753,
-    "base": null,
-    "ep": null
-   },
-   "votes": 3,
-   "borda": 61
-  },
-  {
-   "pos": "MID",
-   "gain": 3.84,
+   "gain": 3.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -346,11 +314,43 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 45
+   "borda": 50
+  },
+  {
+   "pos": "MID",
+   "gain": 3.75,
+   "change": 1,
+   "fallback": true,
+   "add": {
+    "id": 453,
+    "code": 201666,
+    "name": "Barnes",
+    "pos": "MID",
+    "team": "NEW",
+    "status": "a",
+    "news": "",
+    "p_play": 0.983,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 628,
+    "code": 482616,
+    "name": "Barcola",
+    "pos": "MID",
+    "team": "LIV",
+    "status": "a",
+    "news": "",
+    "p_play": 0.753,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 47
   },
   {
    "pos": "DEF",
-   "gain": 5.41,
+   "gain": 5.34,
    "change": 2,
    "fallback": false,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.76,
+   "gain": 5.63,
    "change": 3,
    "fallback": false,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 23
+   "borda": 21
   },
   {
    "pos": "DEF",
-   "gain": 3.66,
+   "gain": 3.82,
    "change": 3,
    "fallback": true,
    "add": {
@@ -442,7 +442,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 19
+   "borda": 18
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
@@ -508,7 +508,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.53,
-   "ep": 194.66
+   "ep": 194.78
   },
   {
    "id": 106,
@@ -568,7 +568,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 163.08,
-   "ep": 165.91
+   "ep": 165.85
   },
   {
    "id": 260,
@@ -580,7 +580,7 @@
    "news": "",
    "p_play": 0.442,
    "base": 176.87,
-   "ep": 165.85
+   "ep": 164.53
   },
   {
    "id": 40,
@@ -592,7 +592,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 176.35,
-   "ep": 163.99
+   "ep": 163.66
   },
   {
    "id": 428,
@@ -604,7 +604,19 @@
    "news": "",
    "p_play": 0.78,
    "base": 155.71,
-   "ep": 158.32
+   "ep": 158.26
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.968,
+   "base": 168.18,
+   "ep": 161.42
   },
   {
    "id": 388,
@@ -617,18 +629,6 @@
    "p_play": 0.63,
    "base": 179.9,
    "ep": 173.12
-  },
-  {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.968,
-   "base": 168.18,
-   "ep": 161.52
   },
   {
    "id": 12,
@@ -703,6 +703,18 @@
    "ep": 146.35
   },
   {
+   "id": 236,
+   "code": 215413,
+   "name": "Dewsbury-Hall",
+   "pos": "MID",
+   "team": "EVE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.994,
+   "base": 159.11,
+   "ep": 146.8
+  },
+  {
    "id": 368,
    "code": 424876,
    "name": "Szoboszlai",
@@ -713,18 +725,6 @@
    "p_play": 0.638,
    "base": 150.36,
    "ep": 143.73
-  },
-  {
-   "id": 236,
-   "code": 215413,
-   "name": "Dewsbury-Hall",
-   "pos": "MID",
-   "team": "EVE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.994,
-   "base": 159.11,
-   "ep": 146.36
   },
   {
    "id": 229,
@@ -760,7 +760,7 @@
    "news": "",
    "p_play": 0.675,
    "base": 148.32,
-   "ep": 145.42
+   "ep": 145.35
   },
   {
    "id": 8,
@@ -796,7 +796,7 @@
    "news": "",
    "p_play": 0.665,
    "base": 139.15,
-   "ep": 132.89
+   "ep": 132.85
   },
   {
    "id": 200,
@@ -820,7 +820,7 @@
    "news": "",
    "p_play": 0.466,
    "base": 140.3,
-   "ep": 136.89
+   "ep": 136.59
   },
   {
    "id": 366,
@@ -832,7 +832,7 @@
    "news": "",
    "p_play": 0.904,
    "base": 136.76,
-   "ep": 131.93
+   "ep": 132.08
   },
   {
    "id": 208,
@@ -844,19 +844,19 @@
    "news": "Groin injury - Expected back 21 Nov",
    "p_play": 0.0,
    "base": 140.1,
-   "ep": 127.79
+   "ep": 128.45
   },
   {
-   "id": 390,
-   "code": 171314,
-   "name": "R\u00faben",
-   "pos": "DEF",
+   "id": 481,
+   "code": 215379,
+   "name": "Anderson",
+   "pos": "MID",
    "team": "MCI",
    "status": "a",
    "news": "",
-   "p_play": 1.0,
-   "base": 132.3,
-   "ep": 129.64
+   "p_play": 0.898,
+   "base": 135.91,
+   "ep": 133.91
   },
   {
    "id": 154,
@@ -871,6 +871,18 @@
    "ep": 133.62
   },
   {
+   "id": 390,
+   "code": 171314,
+   "name": "R\u00faben",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 132.3,
+   "ep": 129.64
+  },
+  {
    "id": 142,
    "code": 225796,
    "name": "James",
@@ -881,18 +893,6 @@
    "p_play": 0.0,
    "base": 136.54,
    "ep": 128.65
-  },
-  {
-   "id": 481,
-   "code": 215379,
-   "name": "Anderson",
-   "pos": "MID",
-   "team": "MCI",
-   "status": "a",
-   "news": "",
-   "p_play": 0.898,
-   "base": 135.91,
-   "ep": 132.97
   },
   {
    "id": 25,
@@ -916,7 +916,7 @@
    "news": "",
    "p_play": 0.538,
    "base": 147.76,
-   "ep": 126.34
+   "ep": 125.85
   },
   {
    "id": 371,
@@ -928,7 +928,7 @@
    "news": "Foot injury - 75% chance of playing",
    "p_play": 0.346,
    "base": 140.17,
-   "ep": 127.8
+   "ep": 128.12
   }
  ]
 }
