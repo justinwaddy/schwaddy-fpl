@@ -323,11 +323,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-10-10T21:10 UTC",
-   "published": 0,
-   "note": "Evening check. Searches returned only off-list pages (Sportsmole, SI, Express and Star) or stale 2026 pre-season items; nothing from a permitted outlet confirms new news. Nothing published."
-  },
-  {
    "ts": "2026-10-11T08:10 UTC",
    "published": 0,
    "note": "Morning check. Searches returned only old-season or off-list pages; nothing from a permitted outlet. Nothing published."
@@ -621,6 +616,11 @@
    "ts": "2026-11-09T09:10 UTC",
    "published": 0,
    "note": "Morning check; Gvardiol and general team-news searches returned only January 2026 or undated items, nothing current from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-09T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
   }
  ]
 }
