@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T08:38",
+ "generated": "2026-11-10T16:37",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.87,
-   "ep": 5.23
+   "ep": 5.22
   },
   {
    "id": 504,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 4.28
+   "ep": 4.27
   },
   {
    "id": 391,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.95,
    "base": 3.93,
-   "ep": 5.13
+   "ep": 5.12
   },
   {
    "id": 628,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 6.71,
-   "ep": 7.36
+   "ep": 7.35
   },
   {
    "id": 401,
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.9,
-   "ep": 4.93
+   "ep": 4.92
   },
   {
    "id": 428,
@@ -195,7 +195,7 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 2.61
+   "ep": 2.6
   }
  ],
  "xi_ep": 56.0,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.29,
+   "gain": 10.26,
    "change": 1,
    "fallback": false,
    "add": {
@@ -219,21 +219,21 @@
     "ep": null
    },
    "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
+    "id": 10,
+    "code": 198869,
+    "name": "White",
     "pos": "DEF",
-    "team": "BHA",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.861,
+    "p_play": 0.566,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "DEF",
-   "gain": 6.27,
+   "gain": 6.22,
    "change": 1,
    "fallback": true,
    "add": {
@@ -249,21 +249,21 @@
     "ep": null
    },
    "drop": {
-    "id": 114,
-    "code": 204120,
-    "name": "Boscagli",
+    "id": 10,
+    "code": 198869,
+    "name": "White",
     "pos": "DEF",
-    "team": "BHA",
+    "team": "ARS",
     "status": "a",
     "news": "",
-    "p_play": 0.861,
+    "p_play": 0.566,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 8.87,
+   "gain": 8.92,
    "change": 2,
    "fallback": false,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.28,
+   "gain": 7.39,
    "change": 2,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.62,
+   "gain": 4.64,
    "change": 2,
    "fallback": true,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.23,
+   "gain": 4.25,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.14,
+   "gain": 6.22,
    "change": 3,
    "fallback": false,
    "add": {
@@ -399,21 +399,21 @@
     "ep": null
    },
    "drop": {
-    "id": 10,
-    "code": 198869,
-    "name": "White",
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
     "pos": "DEF",
-    "team": "ARS",
+    "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.566,
+    "p_play": 0.861,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 3.91,
+   "gain": 3.88,
    "change": 4,
    "fallback": false,
    "add": {
@@ -503,7 +503,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.53,
-   "ep": 307.88
+   "ep": 307.52
   },
   {
    "id": 155,
@@ -527,7 +527,7 @@
    "news": "",
    "p_play": 0.991,
    "base": 163.08,
-   "ep": 283.15
+   "ep": 283.32
   },
   {
    "id": 387,
@@ -554,18 +554,6 @@
    "ep": 278.37
   },
   {
-   "id": 13,
-   "code": 204480,
-   "name": "Rice",
-   "pos": "MID",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.942,
-   "base": 168.18,
-   "ep": 276.93
-  },
-  {
    "id": 428,
    "code": 430871,
    "name": "Cunha",
@@ -575,6 +563,18 @@
    "news": "",
    "p_play": 0.793,
    "base": 155.7,
+   "ep": 276.9
+  },
+  {
+   "id": 13,
+   "code": 204480,
+   "name": "Rice",
+   "pos": "MID",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 0.942,
+   "base": 168.18,
    "ep": 276.73
   },
   {
@@ -611,7 +611,7 @@
    "news": "",
    "p_play": 0.686,
    "base": 148.31,
-   "ep": 274.01
+   "ep": 274.02
   },
   {
    "id": 398,
@@ -623,7 +623,7 @@
    "news": "",
    "p_play": 0.374,
    "base": 140.29,
-   "ep": 264.72
+   "ep": 264.74
   },
   {
    "id": 481,
@@ -635,7 +635,7 @@
    "news": "",
    "p_play": 0.909,
    "base": 135.9,
-   "ep": 259.05
+   "ep": 258.57
   },
   {
    "id": 201,
@@ -707,7 +707,7 @@
    "news": "",
    "p_play": 0.352,
    "base": 127.51,
-   "ep": 248.34
+   "ep": 248.53
   },
   {
    "id": 19,
@@ -719,7 +719,19 @@
    "news": "",
    "p_play": 0.236,
    "base": 127.89,
-   "ep": 245.31
+   "ep": 246.69
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.404,
+   "base": 176.86,
+   "ep": 243.37
   },
   {
    "id": 390,
@@ -744,18 +756,6 @@
    "p_play": 0.848,
    "base": 147.54,
    "ep": 240.52
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.404,
-   "base": 176.86,
-   "ep": 239.91
   },
   {
    "id": 384,
@@ -815,7 +815,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 176.35,
-   "ep": 229.9
+   "ep": 230.63
   },
   {
    "id": 236,
@@ -827,7 +827,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.1,
-   "ep": 228.28
+   "ep": 227.42
   },
   {
    "id": 31,
