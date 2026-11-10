@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-11T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only off-list pages (Sportsmole, Express and Star) or old-season fantasy sites; nothing from a permitted outlet. Nothing published."
-    },
-    {
       "ts": "2026-10-12T08:10 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only off-list pages (Sportsmole, Empire of the Kop, SI) or old-season trackers; nothing from a permitted outlet. Not in the starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-10T09:10 UTC",
       "published": 0,
       "note": "Morning check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing current and verifiable from a permitted outlet. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-10T22:10 UTC",
+      "published": 0,
+      "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Konsa, Le Fee and general injury news returned only older-season items or non-permitted outlets. Not in starters window. Nothing published."
     }
   ]
 }
