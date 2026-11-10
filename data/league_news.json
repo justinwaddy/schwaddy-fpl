@@ -1,33 +1,6 @@
 {
- "generated": "2026-11-09T23:50 UTC",
+ "generated": "2026-11-10T08:50 UTC",
  "items": [
-  {
-   "id": "2026-10-30-jackson-garcia",
-   "ts": "2026-10-30T07:42",
-   "kind": "news",
-   "text": "Nicolas Jackson has four goals in five Premier League games since joining Villa, two of them against Manchester City last Saturday, while Fulham's 40m pound striker Gonzalo Garcia has gone seven games without scoring, the Guardian notes. Jackson is Edward's and Garcia is Big Ben's, and Unai Emery's knowledge of Jackson from their Villarreal days is the thing the piece credits for the difference.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-30-forest-bottom-three",
-   "ts": "2026-10-30T07:42",
-   "kind": "news",
-   "text": "Nottingham Forest are in the bottom three after a 1-1 draw at Ipswich, the Guardian reports, with Neco Williams scoring from Daniel Munoz's overlapping run while Morgan Gibbs-White, who started the season well for chances created, was crowded out by Ipswich's packed midfield. Williams and Gibbs-White are both Edward's, and the piece says better finishing is what Oliver Glasner's side need.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-30-edward-waivers",
-   "ts": "2026-10-30T22:45",
-   "kind": "opinion",
-   "text": "Edward spent the day binning Leno, Williams and Horníček, who returned 8 apiece in the best eleven of the week, and took Pickford, Porro and Verbruggen on the strength of nothing anyone has seen yet. The Return of the Djedi has found a way to be kneejerk without any help from Marcus.",
-   "source": null
-  },
   {
    "id": "2026-10-30-bigben-five",
    "ts": "2026-10-30T22:45",
@@ -677,23 +650,39 @@
    "kind": "opinion",
    "text": "Edward won the gameweek, extended the lead to 17, and still left 14 on his bench, which means the man he spends every week explaining as luck has now got his reserves out-earning half the league's eleven. Marcus will have the international break to decide whether that is bad luck or just Edward being better at this.",
    "source": null
+  },
+  {
+   "id": "2026-11-10-guehi-hip",
+   "ts": "2026-11-10T08:50",
+   "kind": "news",
+   "text": "Marc Guehi has pulled out of the England squad for Thursday's Nations League game with Croatia and Saturday's with Spain, Dan Burn called up in his place. He came off at half-time of City's loss at Nottingham Forest on Saturday with a hip problem, asked to go off by his own account to Enzo Maresca, and BBC Sport has him down for a scan on the extent of it. He is Marcus's defender, so the next thing to watch is whether he is back for City after the break.",
+   "source": {
+    "title": "England: Dan Burn replaces injured Marc Guehi in squad for Nations League games",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmwyq8x6nx5lo"
+   }
+  },
+  {
+   "id": "2026-11-10-carrick-united",
+   "ts": "2026-11-10T08:50",
+   "kind": "news",
+   "text": "Manchester United are increasingly expected to sack Michael Carrick during the international break, with the board said to be committed to reviewing the situation and no final decision made, BBC Sport reports. United are 18th after the 4-4 draw with Aston Villa, their worst start to a league season in 40 years. It touches four of the six: Mbeumo is Marcus's, Cunha is Justin's, Bruno Fernandes is Big Ben's and Yoro is Robert's, so a new head coach lands on all of them at once.",
+   "source": {
+    "title": "Michael Carrick: Manchester United expected to sack head coach",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmy0r041ed0po"
+   }
+  },
+  {
+   "id": "2026-11-10-alisson-contract",
+   "ts": "2026-11-10T08:50",
+   "kind": "news",
+   "text": "Alisson wants to stay at Liverpool beyond the end of the season, when his contract runs out, saying his agent is talking to the club though he has not had conversations over a new deal himself. Andoni Iraola said last week he did not know whether it would be his last season there. Alisson is Marcus's goalkeeper, and he is 34.",
+   "source": {
+    "title": "Liverpool: Alisson Becker wants to sign new contract",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw62ypepq2m7o"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-18T12:39",
-   "news": 0,
-   "opinion": 2,
-   "matchday": true,
-   "note": "Evening wrap run by hand at 12:38 UTC, early, five of ten GW7 fixtures still to play (13:00 x3, 15:30, Mon TOT v COV). All finished fixtures had bonus_in true. Led with the Small Ben bench roast Justin asked for; his entry said 21 on the bench but the printout and live feed say 22 (Isak 9, Suzuki 8, Hall 4, Szoboszlai 1), so I wrote on 22 and the 'drawing names from a hat' line was reworked as a fresh angle (Delap Dance team name, Delap is Ben D's) because last night's boxing/bench piece already ran. Second piece: Marcus, bench 10 v eleven 9 (Foden 9), used Edward's 'relies on luck' entry. Passed over: Ben D hairline/height/Arsenal (Konsa, Havertz yet to play), Robert hairline/pint (already ran 17 Oct, Roefs yet to play), Jobacus/Chloe entry (no hook), Harvey Price likeness (left alone, no good fact), Elanga, Big Ben/Bruno, ID ca1422e269 and d9048f2afb (nothing today to hang them on). No reported items: nothing new since the 12:08 team news. No flops yet to rewrite."
-  },
-  {
-   "ts": "2026-10-18T22:43",
-   "news": 0,
-   "opinion": 4,
-   "matchday": true,
-   "note": "Evening wrap, 22:40 UTC, bonus settled after the 22:20 refresh; only TOT v COV (19:00) still to come. No reported items: search turned up no match reports for today's four fixtures from any permitted outlet, so nothing was cited. Led with the Justin 60 v Marcus 56 table piece, then Big Ben (Havertz and Delap in the one game, 4 pts off 155 minutes; used the Arsenal-fan/ball-knowledge entry), Robert (27 against 56, gap 121 to 150), Small Ben (three Man City players on 1 each v Haaland and Foden elsewhere). Rewrote all 7 of today's flop lines via reflop.py; the two Justin lines read '(yours)' in news.json and '(Justin's)' in public.json, so I matched on news.json and patched public.json by hand. Passed over: hairline and height lines (ran 17 Oct, nothing new to hang them on), Harvey Price likeness (a disability-adjacent comparison, left alone), Elanga, Jobacus/Chloe entry, pint, apartheid and sexuality entries (no hook tonight), 2026-10-18-bee1862693 (Small Ben bench already ran twice)."
-  },
   {
    "ts": "2026-10-19T07:55",
    "news": 4,
@@ -1106,6 +1095,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, no fixtures today (GW10 final, GW11 starts Saturday). No reported items: no new material since the morning run. Opinion on Robert (hairline, no transfers), Justin (blanks and bench), Edward (bench and lead). Used archive: hairline/no transfers (Robert). Passed over: pint, boxing, Jobacus, apartheid, self-roast lines (no hook / not run); Small Ben height and Big Ben Bruno ran last night. No flops today. Delap's GW10 auto haul left alone per rule 4. Totals quoted from public.json since GW10 is final; live-feed totals ignored as they predate GW10 settling."
+  },
+  {
+   "ts": "2026-11-10T08:50",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, no fixtures (international break). Led with Guehi's hip withdrawal from England, Carrick sack expectation at Man Utd, Alisson contract. All BBC. Szoboszlai knee test skipped, not in any squad. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
