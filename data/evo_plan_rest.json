@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T19:06",
+ "generated": "2026-11-10T08:37",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -81,7 +81,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.587,
    "base": 3.65,
-   "ep": 3.56,
+   "ep": 3.55,
    "votes": 5
   },
   {
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 4.82,
-   "ep": 4.77,
+   "ep": 4.78,
    "votes": 5
   },
   {
@@ -213,7 +213,7 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 1.84,
+   "ep": 1.83,
    "votes": 0
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 42.9,
+   "gain": 42.5,
    "change": 1,
    "fallback": false,
    "add": {
@@ -254,7 +254,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 29.65,
+   "gain": 29.17,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 44
+   "borda": 45
   },
   {
    "pos": "MID",
-   "gain": 41.17,
+   "gain": 40.97,
    "change": 2,
    "fallback": false,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 69
+   "borda": 66
   },
   {
    "pos": "MID",
-   "gain": 27.42,
+   "gain": 27.41,
    "change": 2,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 52
+   "borda": 49
   },
   {
    "pos": "MID",
-   "gain": 33.94,
+   "gain": 33.99,
    "change": 2,
    "fallback": true,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 44
+   "borda": 42
   },
   {
    "pos": "MID",
-   "gain": 26.4,
+   "gain": 26.38,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 41
+   "borda": 40
   },
   {
    "pos": "MID",
-   "gain": 20.19,
+   "gain": 20.27,
    "change": 3,
    "fallback": false,
    "add": {
@@ -446,7 +446,7 @@
   },
   {
    "pos": "MID",
-   "gain": 23.23,
+   "gain": 23.48,
    "change": 3,
    "fallback": true,
    "add": {

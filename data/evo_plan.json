@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T19:06",
+ "generated": "2026-11-10T08:37",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -81,7 +81,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.587,
    "base": 3.65,
-   "ep": 3.56,
+   "ep": 3.55,
    "votes": 5
   },
   {
@@ -94,7 +94,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 4.82,
-   "ep": 4.77,
+   "ep": 4.78,
    "votes": 5
   },
   {
@@ -213,7 +213,7 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 1.84,
+   "ep": 1.83,
    "votes": 0
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 5.42,
+   "gain": 5.33,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 45
+   "borda": 46
   },
   {
    "pos": "MID",
-   "gain": 6.13,
+   "gain": 6.14,
    "change": 2,
    "fallback": false,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 24
+   "borda": 22
   },
   {
    "pos": "MID",
-   "gain": 4.2,
+   "gain": 4.19,
    "change": 2,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 22
+   "borda": 20
   },
   {
    "pos": "MID",
-   "gain": 5.35,
+   "gain": 5.37,
    "change": 2,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 20
+   "borda": 17
   },
   {
    "pos": "DEF",
-   "gain": 4.11,
+   "gain": 3.96,
    "change": 3,
    "fallback": false,
    "add": {
@@ -379,6 +379,38 @@
    },
    "votes": 2,
    "borda": 13
+  },
+  {
+   "pos": "DEF",
+   "gain": 2.57,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 503,
+    "code": 491279,
+    "name": "Van de Ven",
+    "pos": "DEF",
+    "team": "TOT",
+    "status": "a",
+    "news": "",
+    "p_play": 0.913,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 330,
+    "code": 226182,
+    "name": "Bogle",
+    "pos": "DEF",
+    "team": "LEE",
+    "status": "a",
+    "news": "",
+    "p_play": 0.921,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 11
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",
