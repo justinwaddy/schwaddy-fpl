@@ -1,43 +1,6 @@
 {
- "generated": "2026-11-10T23:55 UTC",
+ "generated": "2026-11-11T08:50 UTC",
  "items": [
-  {
-   "id": "2026-10-31-gonzalo-drought",
-   "ts": "2026-10-31T07:41",
-   "kind": "news",
-   "text": "Gonzalo Garcia has gone seven games without scoring for Fulham, and the Guardian calls his form concerning as Alvaro Arbeloa's side, who went six league games without a win to start his reign, travel to Aston Villa tonight. Big Ben has Gonzalo in his fifteen, and Villa's Nicolas Jackson, who has scored four in five, belongs to Edward.",
-   "source": {
-    "title": "Premier League: 10 things to look out for this weekend",
-    "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend"
-   }
-  },
-  {
-   "id": "2026-10-31-xi-1500",
-   "ts": "2026-10-31T14:08",
-   "kind": "news",
-   "text": "Team news, 15:00 kick-offs: Leeds XI at Bournemouth is confirmed. Edward: Muharemovic and Calvert-Lewin start. Big Ben: Trafford starts. Justin: Bogle starts. Robert: Wilson starts. No confirmed sheet found yet for Bournemouth, Brentford, Forest, Hull, Ipswich, Man City, Brighton, Coventry or Sunderland, so those players are not counted.",
-   "source": {
-    "title": "Daniel Farke makes two changes for Bournemouth clash",
-    "url": "https://www.leedsunited.com/en/news/daniel-farke-makes-two-changes-for-bournemouth-clash"
-   }
-  },
-  {
-   "id": "2026-10-31-xi-1730",
-   "ts": "2026-10-31T17:07",
-   "kind": "news",
-   "text": "Team news, Spurs v Palace (17:30 kick-off): Marcus (Kinsky), Justin (Marmoush), Big Ben (Van Hecke, Kudus) and Robert (Solanke, Mateta) all start. Small Ben has Van de Ven starting but Maddison on the bench, and Edward's Pedro Porro is also on the bench.",
-   "source": {
-    "title": "Confirmed line-ups: Spurs vs Crystal Palace",
-    "url": "https://www.tottenhamhotspur.com/news/1182883/confirmed-line-ups-tottenham-hotspur-vs-crystal-palace-premier-league"
-   }
-  },
-  {
-   "id": "2026-10-31-robert-mateta",
-   "ts": "2026-10-31T22:45",
-   "kind": "opinion",
-   "text": "Mateta finished the afternoon on minus two and in the dressing room early, banned until 2 December, which makes him the second thing about Robert this month to leave early with no plan to come back. The other is the hairline.",
-   "source": null
-  },
   {
    "id": "2026-10-31-bigben-ballknowledge",
    "ts": "2026-10-31T22:45",
@@ -677,16 +640,49 @@
    "kind": "opinion",
    "text": "James Hill got an England call today and Big Ben will spend the whole break mentioning it, because it is the nearest his squad has come to the top of anything: he sits 66 behind Edward. Arsenal man, proud gay pussy bender, and with Havertz bringing home 2 in GW10 the only thing in that front line still going both ways is the manager.",
    "source": null
+  },
+  {
+   "id": "2026-11-11-pickford-trafford",
+   "ts": "2026-11-11T08:50",
+   "kind": "news",
+   "text": "Phil McNulty asks this morning whether Jordan Pickford finally has a rival for the England shirt, after Thomas Tuchel played James Trafford against Spain and the Czech Republic last time and has hinted he may rotate the pair again for Croatia at Wembley on Thursday and Spain in Madrid on Sunday. Paul Robinson tells BBC Sport Pickford is still the clear number one. It is a straight fight between two squads in this league: Pickford is Edward's keeper, Trafford is Big Ben's, and whichever of them plays gets the minutes the other one does not.",
+   "source": {
+    "title": "Does Pickford finally face serious competition for his England place?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/crvg9y27n45wo"
+   }
+  },
+  {
+   "id": "2026-11-11-van-dijk-withdraws",
+   "ts": "2026-11-11T08:50",
+   "kind": "news",
+   "text": "Virgil van Dijk has pulled out of the Netherlands squad for the games with Greece and Germany, the Dutch federation saying he did not return fit from Liverpool's win at Crystal Palace on Sunday, Liverpool confirmed. No detail on the problem beyond a fitness issue, and the next thing that matters is whether he is right for Liverpool's first game back. He is Small Ben's centre-half.",
+   "source": {
+    "title": "Virgil van Dijk withdraws from Netherlands squad",
+    "url": "https://www.liverpoolfc.com/news/virgil-van-dijk-withdraws-from-netherlands-squad"
+   }
+  },
+  {
+   "id": "2026-11-11-alisson-potm",
+   "ts": "2026-11-11T08:50",
+   "kind": "news",
+   "text": "Alisson has been named the Premier League's Player of the Matchweek for his saves in Liverpool's 3-1 win at Crystal Palace, and the shortlist he beat reads like this league's team sheets: Thierno Barry and Tarik Muharemovic, both Edward's, Pascal Gross, Big Ben's, and Nordi Mukiele, who is Marcus's. Alisson is Marcus's too, so the leader had two men up for it and the man 17 behind him won it with his keeper.",
+   "source": {
+    "title": "Alisson Becker wins Premier League Player of the Matchweek award",
+    "url": "https://www.liverpoolfc.com/news/alisson-becker-wins-premier-league-player-of-the-matchweek-award"
+   }
+  },
+  {
+   "id": "2026-11-11-chelsea-fpl-warning",
+   "ts": "2026-11-11T08:50",
+   "kind": "news",
+   "text": "Chelsea have emailed staff warning them not to give away team news through Fantasy Premier League, BBC Sport reports, after Joao Pedro's absence against Tottenham, since revealed as a quad injury, appeared to leak when content creators claimed Morgan Rogers and several staff had taken him out of their own teams before kick-off. Joao Pedro has not played since the win over Everton last month and is Marcus's forward; Rogers is Big Ben's, and apparently plays this game as well.",
+   "source": {
+    "title": "Chelsea staff warned over Fantasy Premier League use",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c98rzr51rlvpo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-19T18:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "19:00 UTC slot: Spurs v Coventry; Spurs sheet found on club site; Coventry not needed (no league players)"
-  },
   {
    "ts": "2026-10-19T22:50",
    "news": 0,
@@ -1099,6 +1095,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no fixtures, no flops. Reported: James Hill's first England call-up (Big Ben) and the Monaco meeting on Carrick (four squads with United players), both BBC. Opinion: Marcus (Catholic/Spotlight priest and Jobacus line, hook Guehi scan and 17 behind), Small Ben (boxing/Harvey Price line, hook a correct eleven still 73 behind), Justin (apartheid connoisseur line, hook White on the bench with nothing). Big Ben (his own self-roast, hook Hill's call-up, 66 behind, Havertz on 2). Passed over: Robert's pint and hairline (Robert ran last night and his GW10 bench was the same Saka/James/Mosquera angle), Edward's luck and kneejerk lines on Marcus (Marcus already has tonight's piece), Small Ben 21-on-bench line (his GW10 bench was 5, so used the reverse). Totals and gaps quoted from public.json, GW10 settled; live-feed totals predate GW10 and were ignored."
+  },
+  {
+   "ts": "2026-11-11T08:50",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no fixtures today. Reported: Pickford v Trafford for England (Edward and Big Ben, BBC), Van Dijk out of the Netherlands squad (Small Ben, liverpoolfc.com), Alisson Player of the Matchweek over a shortlist of Barry, Muharemovic, Gross and Mukiele (Marcus, Edward, Big Ben; liverpoolfc.com), Chelsea's FPL warning over the Joao Pedro leak (Marcus, Rogers is Big Ben's; BBC). Skipped: Carrick Monaco meeting (posted twice already, no outcome yet), Brobbey and Szoboszlai (not in any squad), Guehi scan (no permitted source with an update). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
