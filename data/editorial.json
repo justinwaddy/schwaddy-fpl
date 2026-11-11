@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-12T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Permitted-outlet searches only re-confirmed already-published Liverpool/Barcola and Bournemouth/Scott stories; nothing new. Not in the starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-13T08:10 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only old-season pages, off-list fantasy sites or wire reprints; nothing from a permitted outlet. Not in the starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-11T09:05 UTC",
       "published": 1,
       "note": "Led with Gvardiol's half-time knock at Forest (Sky Sports report), which earlier runs missed. Other searches (White, Konsa, Jacquet, Le Fee, Marmoush, Cunha, Haaland, Brighton) returned only older-season or non-permitted items. Not in starters window."
+    },
+    {
+      "ts": "2026-11-11T22:15 UTC",
+      "published": 0,
+      "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Barcola, Marmoush, Le Fee, Konsa and general injury news returned only older-season items or non-permitted outlets, and the premierleague.com injury page is still showing last season's list. Not in starters window. Nothing published."
     }
   ]
 }
