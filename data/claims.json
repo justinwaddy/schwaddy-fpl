@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-10T22:10 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. No permitted outlet has published current news on these players, so the claims follow the model board, which has reordered since last run: Konsa for White is now its biggest gain, ahead of Jacquet for Gvardiol. Justin is third in the table, so waiver priority is mid-queue.",
+  "ts": "2026-11-11T09:05 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The one new finding is Sky Sports confirming Gvardiol came off injured at Forest, which backs the Jacquet claim; two low-confidence punts (Delap on form, Justin on the model) fill ranks 4 and 5. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -17,8 +17,8 @@
         "code": "198869",
         "club": "ARS"
       },
-      "why": "Konsa is a fully available Arsenal defender; White's availability has slipped to 0.57 and he is the weakest defender in the squad. No permitted-outlet article found on either this run, so this rests on the model's numbers.",
-      "model": "Konsa next5 18.0 vs White 10.5, the board's largest gain at +7.5; I agree.",
+      "why": "Konsa is a fully available Arsenal defender; White's availability has slipped to 0.57 and he is the weakest defender in the squad. Searches turned up no permitted-outlet article on either this run, so this rests on the model's numbers.",
+      "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gain on the board; agreeing.",
       "confidence": "medium",
       "sources": []
     },
@@ -35,13 +35,13 @@
         "code": "477424",
         "club": "MCI"
       },
-      "why": "Jacquet is the centre-back Liverpool signed from Rennes as Van Dijk's long-term successor and the model has him fully available, while Gvardiol carries an unspecified injury flagged at 75%. Independent of claim 1, since the drops differ.",
-      "model": "Jacquet next5 17.7 vs Gvardiol 13.2, +4.5; I agree, and Gvardiol's injury flag adds to the case.",
+      "why": "Sky Sports reports Gvardiol was withdrawn at half-time of City's 3-1 loss at Forest on 7 November after asking to come off with a knock, with Maresca confirming it was not tactical; no update since. Jacquet has been Liverpool's regular centre-back this autumn and the model has him fully available.",
+      "model": "Model has Jacquet 17.7 next5 against Gvardiol 13.2; agreeing, and the Forest knock strengthens it.",
       "confidence": "medium",
       "sources": [
         {
-          "title": "What defender Jeremy Jacquet will bring to Liverpool",
-          "url": "https://global.espn.com/football/story/_/id/47805090/what-defender-jeremy-jacquet-bring-liverpool-summer"
+          "title": "N Forest 3-1 Man City - Match Report & Highlights",
+          "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
         }
       ]
     },
@@ -58,8 +58,49 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "Le Fee is an established Sunderland starter the model has fully available. But Barcola is a marquee Liverpool signing with only 8 career appearances in the data, exactly the case where the model underrates; I could not confirm his current role from a permitted outlet, so this is a low-confidence punt you may prefer to skip.",
-      "model": "Le Fee next5 19.3 vs Barcola 12.7, +6.6; I follow the number but doubt it, because Barcola's figure rests on a thin sample.",
+      "why": "Le Fee is an established Sunderland starter the model has fully available. But Barcola is a marquee Liverpool signing with only 8 career appearances in the data, exactly the case where the model underrates; no permitted outlet has said he is out of the XI, so this is a low-confidence swap.",
+      "model": "Model has Le Fee 19.3 next5 against Barcola 12.7; following it cautiously, since Barcola's number reflects a short record rather than any reported problem.",
+      "confidence": "low",
+      "sources": []
+    },
+    {
+      "rank": 4,
+      "pos": "FWD",
+      "add": {
+        "name": "Delap",
+        "code": "463034",
+        "club": "NFO"
+      },
+      "drop": {
+        "name": "Gonzalo",
+        "code": "551466",
+        "club": "FUL"
+      },
+      "why": "Delap scored twice and was player of the match in Forest's 3-1 win over Man City on 7 November, per Sky Sports, his first goals in a while for a side that had been goalless at home. Gonzalo is the weakest forward in the squad on the model's board.",
+      "model": "Model has Delap 12.2 next5 against Gonzalo 11.7, below its +2 margin; a small form-based overrule.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "N Forest 3-1 Man City - Match Report & Highlights",
+          "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "pos": "DEF",
+      "add": {
+        "name": "Justin",
+        "code": "220627",
+        "club": "LEE"
+      },
+      "drop": {
+        "name": "Boscagli",
+        "code": "204120",
+        "club": "BHA"
+      },
+      "why": "Only worth it if claims 1 and 2 have both gone through: Justin is fully available for Leeds while Boscagli sits at 0.89 availability and is now the weakest remaining defender. No permitted-outlet news on either; this rests purely on the model.",
+      "model": "Model has Justin 17.3 next5 against Boscagli 15.5, under its +2 margin; a marginal punt.",
       "confidence": "low",
       "sources": []
     }
@@ -776,12 +817,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-12T21:10 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: no new permitted-outlet news moved any claim; claims carried forward."
-    },
-    {
       "ts": "2026-10-13T08:10 UTC",
       "gw": 7,
       "claims": 5,
@@ -1134,6 +1169,12 @@
       "gw": 11,
       "claims": 3,
       "note": "Reordered to the current model board: Konsa for White now first, Jacquet moved to Gvardiol, Le Fee for Barcola last at low confidence. No new permitted-outlet news."
+    },
+    {
+      "ts": "2026-11-11T09:05 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Added Sky Sports source on Gvardiol's knock to claim 2; added two low-confidence punts (Delap for Gonzalo, Justin for Boscagli) to reach five."
     }
   ]
 }

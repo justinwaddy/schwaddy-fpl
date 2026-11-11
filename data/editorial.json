@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-07-chilwell-back-at-palace",
-      "ts": "2026-09-07T14:49 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Ben Chilwell has re-signed for Crystal Palace and scored the winner at Fulham with his first touch, having come on for Tyrick Mitchell on 73 minutes. Mitchell scored both of Palace's other goals and is the pick of the free-agent defenders this week, but Chilwell plays his position and is now in the building - one to watch rather than a reason to pass.",
-      "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-palace-fulham-september-2026/"
-    },
-    {
       "id": "2026-09-10-barcola-cramp-not-injury",
       "ts": "2026-09-10T08:35 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "mine",
       "text": "Arsenal won 1-0 at Anfield through a Kai Havertz goal, per Sky Sports; Raya and White (yours) kept a clean sheet, while Gyokeres (yours) was listed among the substitutes and Sky's report does not say he played. That fits the model's 0.35 availability for him and the case for moving him on.",
       "url": "https://www.skysports.com/football/liverpool-vs-arsenal/8206828602449165232"
+    },
+    {
+      "id": "2026-11-11-gvardiol-knock-forest",
+      "ts": "2026-11-11T09:05 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Gvardiol (yours) came off at half-time of Man City's 3-1 defeat at Nottingham Forest on 7 November and Maresca said he and Guehi asked to come off with knocks, not for tactical reasons, per Sky Sports. That is the source of the 75% flag on your dashboard; no permitted outlet has given an update since, so treat him as a doubt for GW11.",
+      "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-12T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only off-list pages (Sportsmole, Empire of the Kop, SI) or old-season trackers; nothing from a permitted outlet. Not in the starters window. Nothing published."
-    },
     {
       "ts": "2026-10-12T21:10 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-10T22:10 UTC",
       "published": 0,
       "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Konsa, Le Fee and general injury news returned only older-season items or non-permitted outlets. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-11T09:05 UTC",
+      "published": 1,
+      "note": "Led with Gvardiol's half-time knock at Forest (Sky Sports report), which earlier runs missed. Other searches (White, Konsa, Jacquet, Le Fee, Marmoush, Cunha, Haaland, Brighton) returned only older-season or non-permitted items. Not in starters window."
     }
   ]
 }
