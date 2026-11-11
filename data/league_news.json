@@ -1,57 +1,6 @@
 {
- "generated": "2026-11-11T08:50 UTC",
+ "generated": "2026-11-11T23:42 UTC",
  "items": [
-  {
-   "id": "2026-10-31-bigben-ballknowledge",
-   "ts": "2026-10-31T22:45",
-   "kind": "opinion",
-   "text": "Big Ben's day was built by Van Hecke at Spurs and McBurnie at Hull, neither of them anything to do with Arsenal, the club he follows with such conviction, who play at Anfield tomorrow with Konsa in his eleven. Fifty-six already, and not a point of it from the club he claims to know.",
-   "source": null
-  },
-  {
-   "id": "2026-10-31-smallben-suzuki",
-   "ts": "2026-10-31T22:45",
-   "kind": "opinion",
-   "text": "Small Ben has a fight coming, and Suzuki, who he owns, spent Saturday putting one in his own net: that is the whole boxing plan, hitting yourself before the other man gets round to it. Thiago did bring him 9, which is the bit he will mention. The rest he will leave out.",
-   "source": null
-  },
-  {
-   "id": "2026-10-31-justin-arsenal",
-   "ts": "2026-10-31T22:45",
-   "kind": "opinion",
-   "text": "Justin spent Friday loading up on Arsenal and spent Saturday with none of them kicking a ball, while Haaland took 90 minutes against Brighton to return 2 points and left the nets exactly as he found them. Four of his eleven play at Anfield tomorrow, so the day is not over, which is the best thing anyone can say for it.",
-   "source": null
-  },
-  {
-   "id": "2026-11-01-anfield-arsenal",
-   "ts": "2026-11-01T07:50",
-   "kind": "news",
-   "text": "Liverpool v Arsenal is the only fixture of the gameweek still to come, at Anfield at 16:30. Arsenal have not won there since 2012 and arrive four days after going out of the Carabao Cup to League Two Fleetwood, while Liverpool have won five on the spin under Iraola. Still waiting: Raya, White, Odegaard and Gyokeres (Justin), Gabriel, Saka and Mosquera (Robert), Calafiori (Marcus), Rice and Madueke (Small Ben), plus Virgil, Gakpo and Isak (Small Ben), Barcola (Justin) and Wirtz (Big Ben) on the Liverpool side.",
-   "source": {
-    "title": "Anfield, intensity, rotation - how Iraola is improving Liverpool",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo"
-   }
-  },
-  {
-   "id": "2026-11-01-brighton-city",
-   "ts": "2026-11-01T07:50",
-   "kind": "news",
-   "text": "Brighton won 1-0 at the Etihad on Saturday, three days after losing to City on penalties in the Carabao Cup, and Bart Verbruggen made seven saves to give them a fifth clean sheet in six league games. That is Edward's goalkeeper, and Marcus (De Cuyper) and Justin (Vuskovic, Boscagli) took defensive returns off it too. City's owners had the opposite afternoon: Justin has Haaland and Gvardiol, Robert has Cherki, O'Reilly and Ndiaye, and Marcus, Small Ben, Edward and Big Ben each hold a City player of their own.",
-   "source": {
-    "title": "Verbruggen spreads belief as Brighton continue to impress",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6d7qwnz1jnjo"
-   }
-  },
-  {
-   "id": "2026-11-01-estevao-chelsea",
-   "ts": "2026-11-01T07:50",
-   "kind": "news",
-   "text": "Estevao had not started a Premier League game this season before Saturday, and against Manchester United he had six shots, created three chances and had two goals chalked off, one for a marginal offside, before leaving to a standing ovation after 86 minutes. Robert owns him and the page has him on 3 points, with no goal to show for it. Morgan Rogers (Big Ben) scored the one that mattered for Chelsea, in a 2-0 win.",
-   "source": {
-    "title": "Returning Estevao brings X-factor to strikerless Chelsea",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cwnv0p143qzyo"
-   }
-  },
   {
    "id": "2026-11-01-martinez-red",
    "ts": "2026-11-01T07:50",
@@ -680,16 +629,57 @@
     "title": "Chelsea staff warned over Fantasy Premier League use",
     "url": "https://www.bbc.co.uk/sport/football/articles/c98rzr51rlvpo"
    }
+  },
+  {
+   "id": "2026-11-11-pochettino-man-utd",
+   "ts": "2026-11-11T23:42",
+   "kind": "news",
+   "text": "Mauricio Pochettino is ready to accept the Manchester United job, BBC Sport reports, with terms said to be more or less agreed and Michael Carrick expected to be relieved of his duties within 48 hours of the Monaco meeting. United would have to pay the USA $10m to release him, and he may be at Carrington before the trip to Anfield on 22 November. So the next man to pick Bruno Fernandes (Big Ben), Mbeumo (Marcus), Cunha (Justin) and Sesko and Yoro (Robert) is very probably the former Spurs and Chelsea boss.",
+   "source": {
+    "title": "Pochettino ready to accept Man Utd offer to replace Carrick",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqvg25pj36mvo"
+   }
+  },
+  {
+   "id": "2026-11-11-man-city-slump",
+   "ts": "2026-11-11T23:42",
+   "kind": "news",
+   "text": "Manchester City have lost three in a row, to Aston Villa, Brighton and Nottingham Forest, after a record seven straight wins under Enzo Maresca, and BBC Sport counts four individual errors leading to goals in those three games against none in the first seven. Their 13 conceded is the most at this stage since 2008-09. Every squad in this league has a City player, and the ones the defensive numbers land on are Small Ben's Donnarumma and Ruben, Marcus's Guehi, Justin's Gvardiol and Robert's O'Reilly.",
+   "source": {
+    "title": "Assessing the reasons for Man City's decline in form under Maresca",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw30e0yz0p04o"
+   }
+  },
+  {
+   "id": "2026-11-11-robert-monaco",
+   "ts": "2026-11-11T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Inside one international break Manchester United have held a summit in Monaco, lined up a sacking and agreed terms with a successor, which is more squad management than Robert has done all season with Sesko and Yoro sat in his squad watching it happen. He is 192 off the top, still has not answered the group chat, and the last thing anyone saw him fail to finish was a pint. Pochettino keeps a box of lemons in his office to soak up negative energy. Robert would need an orchard, and something for the hairline."
+  },
+  {
+   "id": "2026-11-11-small-ben-city",
+   "ts": "2026-11-11T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Small Ben's goal is guarded by Donnarumma with Ruben in front of him, and BBC Sport has now called in a sports psychologist to explain why that defence keeps gifting goals away. The diagnosis is reduced collective efficacy: a squad that has stopped believing it can do the job. Small Ben has been running on that since August, and nobody has ever offered him a psychologist, just a box to stand on so he can see the top of the table."
+  },
+  {
+   "id": "2026-11-11-marcus-kneejerk",
+   "ts": "2026-11-11T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "United first looked at Pochettino after a lunch in Mayfair in 2016 and are only now getting round to it, which is the slowest decision Marcus has ever had to watch. In his own squad, two good games buys a man a start and one bad one gets him binned, so Foden and Guehi, playing for a City side that has lost three straight, have the hip scan and the international break to enjoy before he panics. He sits 17 behind Edward on what he will tell you is bad luck, the same luck he was happy to call skill when it went his way."
+  },
+  {
+   "id": "2026-11-11-big-ben-bruno",
+   "ts": "2026-11-11T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Big Ben's whole season rests on Bruno Fernandes bailing him out, and Bruno is now waiting, like everybody else at Old Trafford, for somebody to come and bail out Bruno. The one comfort for an Arsenal man is that City have dropped behind Arsenal at the top, which he will read as proof that he understands football, from 66 points behind the leader of a league with six people in it."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-19T22:50",
-   "news": 0,
-   "opinion": 4,
-   "matchday": true,
-   "note": "evening: Spurs v Coventry report not found at a permitted outlet, so no reported items. Opinion: Justin 73 and the cut to Marcus's lead, Marcus's two 12s and luck (Edward's archive line), Robert's bench outscoring his forwards with the hairline, Big Ben passed by Small Ben (ball-knowledge/Arsenal line). Rewrote the Kinsky flop. Passed over: Ben D on Justin (apartheid line) and Ben D on himself (slur on his own sexuality, his own entry, left to Justin), Marcus Jobacus/priest line (nothing to hang it on tonight), Harvey Price/boxing line (no fact), Rob's pint (the engine's PINT item already ran it), Elanga/Bruno lines (no hook)."
-  },
   {
    "ts": "2026-10-20T07:55",
    "news": 3,
@@ -1102,6 +1092,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no fixtures today. Reported: Pickford v Trafford for England (Edward and Big Ben, BBC), Van Dijk out of the Netherlands squad (Small Ben, liverpoolfc.com), Alisson Player of the Matchweek over a shortlist of Barry, Muharemovic, Gross and Mukiele (Marcus, Edward, Big Ben; liverpoolfc.com), Chelsea's FPL warning over the Joao Pedro leak (Marcus, Rogers is Big Ben's; BBC). Skipped: Carrick Monaco meeting (posted twice already, no outcome yet), Brobbey and Szoboszlai (not in any squad), Guehi scan (no permitted source with an update). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-11T23:42",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no fixtures, no flops. Reported: Pochettino ready to take the United job with Carrick expected out within 48 hours (Big Ben, Marcus, Justin, Robert have United players; BBC), City's three straight defeats and defensive errors (every squad has a City player; BBC). Opinion: Robert (no squad management, pint, hairline; hook United doing more in a week than he has all season, 192 behind), Small Ben (height; hook BBC's psychologist on City's defence, Donnarumma and Ruben), Marcus (Edward's kneejerk and luck lines; hook Pochettino's ten-year courtship, City losing three, 17 behind), Big Ben (Bruno bail-out and Arsenal-fan ball-knowledge lines; hook Carrick exit, 66 behind). Passed over: Justin's apartheid line, Big Ben's self-roast, the boxing/Harvey Price line and the Jobacus/priest lines (all ran last night, no fresh hook); Small Ben's 21-on-the-bench line (no matchday). Edward and Justin no piece tonight: no new football hook. Gaps quoted from public.json as GW10 is final; live-feed totals predate GW10 settling and were ignored."
   }
  ]
 }
