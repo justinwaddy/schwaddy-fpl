@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T16:34",
+ "generated": "2026-11-12T08:36",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 5.95
+   "ep": 5.96
   },
   {
    "id": 330,
@@ -73,7 +73,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.587,
    "base": 3.65,
-   "ep": 4.15
+   "ep": 4.14
   },
   {
    "id": 68,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.566,
    "base": 2.62,
-   "ep": 2.64
+   "ep": 2.63
   },
   {
    "id": 569,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.31,
+   "gain": 10.33,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.01,
+   "gain": 6.03,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.86,
+   "gain": 8.93,
    "change": 2,
    "fallback": false,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.41,
+   "gain": 7.4,
    "change": 2,
    "fallback": true,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.25,
+   "gain": 4.24,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.87,
+   "gain": 5.88,
    "change": 3,
    "fallback": false,
    "add": {
