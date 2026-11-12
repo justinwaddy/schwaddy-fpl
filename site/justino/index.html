@@ -588,7 +588,7 @@ function claudeClaimsHTML(ps,plan){
 const STARTERS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/data/starters.json";
 let STARTERS=null;
 fetch(STARTERS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
-  .then(j=>{STARTERS=j;renderStarters();}).catch(()=>{renderStarters();});
+  .then(j=>{STARTERS=j;renderStarters();if(typeof LIVE!=="undefined"&&LIVE)renderLive();}).catch(()=>{renderStarters();});
 const ST_ORDER={start:0,likely:1,doubt:2,bench:3,out:4};
 function renderStarters(){
   const sec=document.getElementById("starters");if(!sec)return;
@@ -1545,10 +1545,29 @@ function csPair(o){
   if(ch==null&&o.sc){ch=0;ca=0;for(const[k,p]of Object.entries(o.sc)){const[i,j]=k.split("-").map(Number);if(j===0)ch+=p;if(i===0)ca+=p;}}
   return ch==null?null:[ch,ca];
 }
+// Chance a player starts gameweek G: the starters research's verdict when
+// it covers G (start 95%, likely 75%, doubt 50%, bench 15%, out 0), else
+// the model's own chance he plays (minutes share over recent games, cut
+// for injury flags and FPL's chance-of-playing). null with neither.
+function startProb(dp,G){
+  if(!dp)return null;
+  if(STARTERS&&STARTERS.gw===G&&Array.isArray(STARTERS.players)){
+    const x=STARTERS.players.find(y=>String(y.code)===String(dp.code));
+    if(x&&ST_P[x.status]!=null)return {p:ST_P[x.status],src:`research: ${x.status}${x.verdict?` (${x.verdict})`:""}`};
+  }
+  return dp.avail!=null?{p:dp.avail,src:"model: chance he plays, from recent minutes and injury news"}:null;
+}
+function startCell(r,G){
+  const s=startProb(r.dp,G);
+  if(!s)return `<td class="num">–</td>`;
+  const v=Math.round(s.p*100),c=v>=75?"var(--green)":v>=50?"var(--ink)":"var(--amber)";
+  return `<td class="num" title="${esc(s.src)}" style="color:${c}">${v}%${s.src.startsWith("research")?"":`<span class="tm">*</span>`}</td>`;
+}
+const START_NOTE=`Start: the starters research's verdict for this gameweek where it has one, otherwise (marked *) the model's chance he plays. Hover for the source.`;
 // My defenders, ranked by their club's pre-match clean-sheet chance.
 // rows: [{p, tid, fxs:[{id,h,a,started,fin,hs,as}], note}]; a double
 // gameweek lists each game, ranked on the better one.
-function myDefCSHTML(rows,teams){
+function myDefCSHTML(G,rows,teams){
   if(!rows.length)return "";
   const pc=x=>Math.round(x*100);
   const out=rows.map(r=>{
@@ -1561,18 +1580,18 @@ function myDefCSHTML(rows,teams){
     });
     return {r,games,best:Math.max(-1,...games.map(g=>g.cs??-1))};
   }).sort((a,b)=>b.best-a.best||a.r.p.name.localeCompare(b.r.p.name));
-  let h=`<div class="card"><b class="h">My defenders · clean sheet chance</b><table><tr><th>player</th><th>fixture</th><th class="num">clean sheet</th><th></th></tr>`;
+  let h=`<div class="card"><b class="h">My defenders · clean sheet chance</b><table><tr><th>player</th><th class="num">start</th><th>fixture</th><th class="num">clean sheet</th><th></th></tr>`;
   for(const {r,games}of out){
-    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td><td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
-    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td><td class="tm">${g.txt}</td>
+    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td>${startCell(r,G)}<td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
+    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td>${i?"<td></td>":startCell(r,G)}<td class="tm">${g.txt}</td>
       <td class="num">${g.cs==null?"–":`<b>${pc(g.cs)}%</b>`}</td><td>${g.st}</td></tr>`;});
   }
-  h+=`</table><div class="note">Pre-match chance the opponent scores none, from the bookies' lines (same model as the scorelines above). Once a game starts, the last column says whether the clean sheet is still on.</div></div>`;
+  h+=`</table><div class="note">Pre-match chance the opponent scores none, from the bookies' lines (same model as the scorelines above). Once a game starts, the last column says whether the clean sheet is still on. ${START_NOTE}</div></div>`;
   return h;
 }
 // My forwards, ranked by their club's expected goals in the game (the xh/xa
 // fitted to the bookies' lines). Same rows as myDefCSHTML.
-function myFwdXGHTML(rows,teams){
+function myFwdXGHTML(G,rows,teams){
   if(!rows.length)return "";
   const out=rows.map(r=>{
     const games=r.fxs.map(f=>{
@@ -1584,13 +1603,13 @@ function myFwdXGHTML(rows,teams){
     });
     return {r,games,best:Math.max(-1,...games.map(g=>g.xg??-1))};
   }).sort((a,b)=>b.best-a.best||a.r.p.name.localeCompare(b.r.p.name));
-  let h=`<div class="card"><b class="h">My forwards · team expected goals</b><table><tr><th>player</th><th>fixture</th><th class="num">team xG</th><th></th></tr>`;
+  let h=`<div class="card"><b class="h">My forwards · team expected goals</b><table><tr><th>player</th><th class="num">start</th><th>fixture</th><th class="num">team xG</th><th></th></tr>`;
   for(const {r,games}of out){
-    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td><td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
-    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td><td class="tm">${g.txt}</td>
+    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td>${startCell(r,G)}<td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
+    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td>${i?"<td></td>":startCell(r,G)}<td class="tm">${g.txt}</td>
       <td class="num">${g.xg==null?"–":`<b>${g.xg.toFixed(2)}</b>`}</td><td>${g.st}</td></tr>`;});
   }
-  h+=`</table><div class="note">Goals the forward's club is expected to score, pre-match, from the bookies' result and over/under lines (same model as the scorelines above).</div></div>`;
+  h+=`</table><div class="note">Goals the forward's club is expected to score, pre-match, from the bookies' result and over/under lines (same model as the scorelines above). ${START_NOTE}</div></div>`;
   return h;
 }
 // My midfielders: start or bench for gameweek G. The verdict is the same
@@ -1637,15 +1656,15 @@ function myMidHTML(G,squad,teams){
   }).sort((a,b)=>(b.r.epb-a.r.epb)||((b.xg??-1)-(a.xg??-1)));
   const col=v=>v.startsWith("start")?"var(--green)":"var(--amber)";
   let h=`<div class="card"><b class="h">My midfielders · start or bench? · GW${G}</b><table>
-    <tr><th>player</th><th>fixture</th><th class="num">team xG</th><th class="num">clean sheet</th><th class="num">E[pts]</th><th>call</th></tr>`;
+    <tr><th>player</th><th class="num">start</th><th>fixture</th><th class="num">team xG</th><th class="num">clean sheet</th><th class="num">E[pts]</th><th>call</th></tr>`;
   for(const x of rows){
-    h+=`<tr><td>${nm(x.r.p,"")} <span class="tm">${teams[x.r.tid]||""}</span>${x.r.note||""}</td><td class="tm">${x.txt}</td>
+    h+=`<tr><td>${nm(x.r.p,"")} <span class="tm">${teams[x.r.tid]||""}</span>${x.r.note||""}</td>${startCell(x.r,G)}<td class="tm">${x.txt}</td>
       <td class="num">${x.xg==null?"–":x.xg.toFixed(2)}</td><td class="num">${x.cs==null?"–":pc(x.cs)+"%"}</td>
       <td class="num">${have&&x.r.fxs.length?x.r.epb.toFixed(1):"–"}</td>
       <td>${x.v?`<b style="color:${col(x.v)}">${x.v}</b>`:""}${x.why.length?` <span class="tm">${x.why.join("; ")}</span>`:""}</td></tr>`;
   }
-  h+=`</table><div class="note">${have?`The call is the Suggested XI's: the model's expected points for GW${G} (E[pts]), adjusted by the starters research where it covers this week, then the best legal XI from your whole squad. "Close" means one swap would change it by under half a point.`:
-    `The model has no GW${G} projection to call it from, so only the odds are shown: the club's expected goals (a midfielder's goals and assists come from these) and its clean-sheet chance (worth a point to a midfielder).`}</div></div>`;
+  h+=`</table><div class="note">${have?`The call is the Suggested XI's: the model's expected points for GW${G} (E[pts]), adjusted by the starters research where it covers this week, then the best legal XI from your whole squad. "Close" means one swap would change it by under half a point. ${START_NOTE}`:
+    `The model has no GW${G} projection to call it from, so only the odds are shown: the club's expected goals (a midfielder's goals and assists come from these) and its clean-sheet chance (worth a point to a midfielder). ${START_NOTE}`}</div></div>`;
   return h;
 }
 function csHTML(o,hn,an){
@@ -1723,12 +1742,11 @@ function livePreviewHTML(g){
         `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
   }
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
-  if(FIXTURES)h+=myDefCSHTML(ps.filter(p=>p.mine&&p.pos==="DEF").map(p=>({p,tid:p.team,
-    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
-  if(FIXTURES)h+=myMidHTML(g,ps.filter(p=>p.mine).map(p=>({p,dp:p,pos:p.pos,tid:p.team,
-    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
-  if(FIXTURES)h+=myFwdXGHTML(ps.filter(p=>p.mine&&p.pos==="FWD").map(p=>({p,tid:p.team,
-    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
+  if(FIXTURES){
+    const rows=ps.filter(p=>p.mine).map(p=>({p,dp:p,pos:p.pos,tid:p.team,
+      fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))}));
+    h+=myDefCSHTML(g,rows.filter(r=>r.pos==="DEF"),S.teams)+myMidHTML(g,rows,S.teams)+myFwdXGHTML(g,rows.filter(r=>r.pos==="FWD"),S.teams);
+  }
   return h;
 }
 function renderLive(){
@@ -1799,14 +1817,15 @@ function renderLive(){
   if(ctx.mgrs.some(m=>m.mine))h+=`<div class="note" style="padding:4px 2px 0">Dashed chips are your bench: their points only count if a provisional sub brings them on.</div>`;
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
   {const me=ctx.mgrs.find(m=>m.mine);
-   if(me)h+=myDefCSHTML(me.squad.filter(p=>p.pos==="DEF").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
-     note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);
-   if(me&&DATA){const byName={};for(const d of DATA.players)byName[d.name+"|"+d.team]=d;
-     const byCode={};for(const d of DATA.players)byCode[String(d.code)]=d;
-     h+=myMidHTML(S.gw,me.squad.map(p=>({p,dp:byCode[ID2CODE[p.id]]||byName[p.name+"|"+p.tid]||null,pos:p.pos,tid:p.tid,
-       fxs:ctx.teamFx[p.tid]||[],note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
-   if(me)h+=myFwdXGHTML(me.squad.filter(p=>p.pos==="FWD").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
-     note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
+   if(me){
+     const byName={},byCode={};
+     for(const d of (DATA&&DATA.players)||[]){byName[d.name+"|"+d.team]=d;byCode[String(d.code)]=d;}
+     const rows=me.squad.map(p=>({p,dp:byCode[ID2CODE[p.id]]||byName[p.name+"|"+p.tid]||null,pos:p.pos,tid:p.tid,
+       fxs:ctx.teamFx[p.tid]||[],note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`}));
+     h+=myDefCSHTML(S.gw,rows.filter(r=>r.pos==="DEF"),S.teams);
+     if(DATA)h+=myMidHTML(S.gw,rows,S.teams);
+     h+=myFwdXGHTML(S.gw,rows.filter(r=>r.pos==="FWD"),S.teams);
+   }}
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
     const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
