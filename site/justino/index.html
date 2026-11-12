@@ -1520,10 +1520,14 @@ const ODDS_URL="https://raw.githubusercontent.com/justinwaddy/schwaddy-fpl/main/
 let ODDS=null;
 fetch(ODDS_URL,{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
   .then(j=>{ODDS=j;if(typeof renderLive==="function"&&document.getElementById("live"))renderLive();}).catch(()=>{});
-function oddsHTML(id,h,a,teams,started){
+function findOdds(id,h,a){
   const all=ODDS&&ODDS.fixtures||{};
   let o=all[String(id)];
   if(!o||o.h!==h||o.a!==a)o=Object.values(all).find(x=>x.h===h&&x.a===a);   // ids differ between feeds: match on the pairing
+  return o||null;
+}
+function oddsHTML(id,h,a,teams,started){
+  const o=findOdds(id,h,a);
   if(!o)return "";
   const pc=x=>Math.round(x*100),hn=teams[h]||h,an=teams[a]||a;
   const best=Math.max(o.ph,o.pd,o.pa);
@@ -1536,10 +1540,40 @@ function oddsHTML(id,h,a,teams,started){
 // Clean-sheet chance for each side: the other side scoring none, from the
 // same goals model as the scorelines. Older pulls lack csh/csa, so fall
 // back to summing the listed scorelines (misses only the <0.5% cells).
-function csHTML(o,hn,an){
+function csPair(o){
   let ch=o.csh,ca=o.csa;
   if(ch==null&&o.sc){ch=0;ca=0;for(const[k,p]of Object.entries(o.sc)){const[i,j]=k.split("-").map(Number);if(j===0)ch+=p;if(i===0)ca+=p;}}
-  if(ch==null)return "";
+  return ch==null?null:[ch,ca];
+}
+// My defenders, ranked by their club's pre-match clean-sheet chance.
+// rows: [{p, tid, fxs:[{id,h,a,started,fin,hs,as}], note}]; a double
+// gameweek lists each game, ranked on the better one.
+function myDefCSHTML(rows,teams){
+  if(!rows.length)return "";
+  const pc=x=>Math.round(x*100);
+  const out=rows.map(r=>{
+    const games=r.fxs.map(f=>{
+      const o=findOdds(f.id,f.h,f.a),cp=o&&csPair(o),home=r.tid===f.h;
+      const cs=cp?cp[home?0:1]:null,opp=teams[home?f.a:f.h]||(home?f.a:f.h);
+      const conc=home?(f.as??0):(f.hs??0);
+      const st=!f.started?"":conc>0?`<span class="stale">gone</span>`:f.fin?`<span style="color:var(--green)">kept</span>`:`<span style="color:var(--green)">holding</span>`;
+      return {cs,txt:`${home?"v":"@"} ${opp}`,st};
+    });
+    return {r,games,best:Math.max(-1,...games.map(g=>g.cs??-1))};
+  }).sort((a,b)=>b.best-a.best||a.r.p.name.localeCompare(b.r.p.name));
+  let h=`<div class="card"><b class="h">My defenders · clean sheet chance</b><table><tr><th>player</th><th>fixture</th><th class="num">clean sheet</th><th></th></tr>`;
+  for(const {r,games}of out){
+    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td><td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
+    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td><td class="tm">${g.txt}</td>
+      <td class="num">${g.cs==null?"–":`<b>${pc(g.cs)}%</b>`}</td><td>${g.st}</td></tr>`;});
+  }
+  h+=`</table><div class="note">Pre-match chance the opponent scores none, from the bookies' lines (same model as the scorelines above). Once a game starts, the last column says whether the clean sheet is still on.</div></div>`;
+  return h;
+}
+function csHTML(o,hn,an){
+  const cp=csPair(o);
+  if(!cp)return "";
+  const [ch,ca]=cp;
   const pc=x=>Math.round(x*100),fair=p=>p>0?(1/p).toFixed(2):"–";
   return `<div class="csl" title="Chance each side keeps a clean sheet (the other side scores none); fair odds on hover">clean sheet
     <span title="fair odds ${fair(ch)}">${hn} <b>${pc(ch)}%</b></span> · <span title="fair odds ${fair(ca)}">${an} <b>${pc(ca)}%</b></span></div>`;
@@ -1611,6 +1645,8 @@ function livePreviewHTML(g){
         `<span class="tm" style="font-size:11px">no one in the league owns a player here</span>`}</div></div>`;
   }
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
+  if(FIXTURES)h+=myDefCSHTML(ps.filter(p=>p.mine&&p.pos==="DEF").map(p=>({p,tid:p.team,
+    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
   return h;
 }
 function renderLive(){
@@ -1680,6 +1716,9 @@ function renderLive(){
   }
   if(ctx.mgrs.some(m=>m.mine))h+=`<div class="note" style="padding:4px 2px 0">Dashed chips are your bench: their points only count if a provisional sub brings them on.</div>`;
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
+  {const me=ctx.mgrs.find(m=>m.mine);
+   if(me)h+=myDefCSHTML(me.squad.filter(p=>p.pos==="DEF").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
+     note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
     const e=+r.dataset.lent;LIVEOPEN=(LIVEOPEN===e?null:e);renderLive();}));
