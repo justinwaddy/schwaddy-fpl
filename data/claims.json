@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-12T09:06 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Nothing new this run on Gvardiol, White or Barcola from a permitted outlet; the one new finding is BBC Sport listing Boscagli one booking from a ban, which firms up claim 5. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-12T22:15 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Still nothing from a permitted outlet on Gvardiol or White since the Forest game; the new item is Man Utd formally sacking Carrick, with Pochettino due for the Anfield game on 22 November, a mild selection question over Cunha but not one worth a claim. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -822,12 +822,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-14T08:10 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: searches found no permitted-outlet news altering the claims; carried forward."
-    },
-    {
       "ts": "2026-10-14T21:10 UTC",
       "gw": 7,
       "claims": 5,
@@ -1180,6 +1174,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Claims carried forward; added BBC Sport yellow-card source to claim 5 (Boscagli one booking from a ban)."
+    },
+    {
+      "ts": "2026-11-12T22:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Claims carried forward unchanged; no permitted-outlet news on any add or drop this run. Summary updated for the Man Utd manager change."
     }
   ]
 }
