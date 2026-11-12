@@ -1,33 +1,6 @@
 {
- "generated": "2026-11-11T23:42 UTC",
+ "generated": "2026-11-12T08:58 UTC",
  "items": [
-  {
-   "id": "2026-11-01-martinez-red",
-   "ts": "2026-11-01T07:50",
-   "kind": "news",
-   "text": "Lisandro Martinez was sent off at Stamford Bridge after two fouls in one minute and 23 seconds turned a decent Manchester United away performance into a 2-0 defeat, and BBC's United reporter says Carrick did not look at him as he walked off. United's owners in this league are Robert (Yoro, Sesko), Big Ben (Bruno Fernandes) and Marcus (Mbeumo), who all now have a manager under pressure to answer to.",
-   "source": {
-    "title": "Martinez's 'inexplicable' 83 seconds cost Man Utd and Carrick",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckvg64xp1e1eo"
-   }
-  },
-  {
-   "id": "2026-11-01-xi-1630",
-   "ts": "2026-11-01T16:09",
-   "kind": "news",
-   "text": "Team news, Liverpool v Arsenal (16:30). Big Ben: Jacquet, Wirtz, Konsa, Havertz all start. Small Ben: Virgil, Gakpo, Isak, Madueke, Rice all start. Edward: Timber starts. Marcus: Calafiori, Tzolis start; A.Becker not in the squad. Justin: Barcola, Raya, Odegaard start; White, Gyokeres on the bench. Robert: Gabriel starts; Mosquera on the bench, Saka not in the squad.",
-   "source": {
-    "title": "Team news: Confirmed Liverpool line-up v Arsenal",
-    "url": "https://www.liverpoolfc.com/news/team-news-confirmed-liverpool-line-up-v-arsenal"
-   }
-  },
-  {
-   "id": "2026-11-01-robert-hairline",
-   "ts": "2026-11-01T22:55",
-   "kind": "opinion",
-   "text": "Robert's gameweek is 13 points and four players who returned nothing, Saka and Mosquera among them, and he sits 154 off the top. The gap to first place is now receding faster than his hairline, which had a head start of several years and is still being overhauled.",
-   "source": null
-  },
   {
    "id": "2026-11-01-marcus-edward-level",
    "ts": "2026-11-01T22:55",
@@ -677,16 +650,39 @@
    "kind": "opinion",
    "source": null,
    "text": "Big Ben's whole season rests on Bruno Fernandes bailing him out, and Bruno is now waiting, like everybody else at Old Trafford, for somebody to come and bail out Bruno. The one comfort for an Arsenal man is that City have dropped behind Arsenal at the top, which he will read as proof that he understands football, from 66 points behind the leader of a league with six people in it."
+  },
+  {
+   "id": "2026-11-12-isak-penalty-panel",
+   "ts": "2026-11-12T08:58",
+   "kind": "news",
+   "text": "The Premier League's Key Match Incidents Panel has ruled, 4-1, that Liverpool should have had a penalty at Anfield on 1 November when Jurrien Timber pulled Alexander Isak's shirt as Bradley Barcola's cross came in, and voted 3-2 that the VAR should have sent Andy Madley to the monitor. Arsenal were 1-0 up through Kai Havertz and that was the final score. So the panel now agrees with Small Ben that Edward's Timber got away with one, in a game Big Ben's Havertz won and Justin's Barcola set up the chance that never was.",
+   "source": {
+    "title": "Shirt pull on Isak should have been penalty - panel",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6n8d8kl125vo"
+   }
+  },
+  {
+   "id": "2026-11-12-king-england",
+   "ts": "2026-11-12T08:58",
+   "kind": "news",
+   "text": "Josh King could make his England debut against Croatia at Wembley tonight or in Spain on Sunday, after Thomas Tuchel picked the 19-year-old ahead of Cole Palmer and Phil Foden, citing \"the attitude and the personality\". Sky Sports says King has more goal involvements than anyone else at Fulham this season and only Erling Haaland has had more touches in the opposition box. King is Marcus's, and so is Foden, which means the leader's own No 10 kept his other one out of the squad; Palmer, the third man left at home, is Edward's.",
+   "source": {
+    "title": "Josh King: The making of the rising star tipped to become one of world's best players after England call-up",
+    "url": "https://www.skysports.com/football/news/11095/13611079/josh-king-the-making-of-the-rising-star-tipped-to-become-one-of-worlds-best-players-after-england-call-up"
+   }
+  },
+  {
+   "id": "2026-11-12-pochettino-agreement",
+   "ts": "2026-11-12T08:58",
+   "kind": "news",
+   "text": "Manchester United have a verbal agreement in principle with Mauricio Pochettino, Sky Sports reports, but he is likely to stay in charge of the USA for their two games against Haiti this break, so the handover will be tight: Michael Carrick took training on Wednesday and is expected to be relieved before the end of the week, and most of United's players are back by next Thursday ahead of the trip to Anfield on Sunday 22 November. That is a new man meeting Big Ben's Bruno Fernandes, Marcus's Mbeumo, Justin's Cunha and Robert's Sesko and Yoro about three days before Liverpool.",
+   "source": {
+    "title": "Man Utd strike Pochettino agreement with Carrick set to depart",
+    "url": "https://www.skysports.com/football/news/11095/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-20T07:55",
-   "news": 3,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, no fixtures today. Led with Semenyo's eight-week knee injury (Edward) and Haaland's foot doubt for tonight's Champions League game (Justin), then Spurs 3-1 Coventry with Marmoush's first goal. BBC/Guardian read in full. Martinez jaw-break (BBC, 18 Oct) not reported: article could not be fetched and it is more than 24h old. Gibbs-White fine for running a red light left out as not bearing on points. No opinion on a morning run; roast archive not used."
-  },
   {
    "ts": "2026-10-20T22:55",
    "news": 0,
@@ -1099,6 +1095,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no fixtures, no flops. Reported: Pochettino ready to take the United job with Carrick expected out within 48 hours (Big Ben, Marcus, Justin, Robert have United players; BBC), City's three straight defeats and defensive errors (every squad has a City player; BBC). Opinion: Robert (no squad management, pint, hairline; hook United doing more in a week than he has all season, 192 behind), Small Ben (height; hook BBC's psychologist on City's defence, Donnarumma and Ruben), Marcus (Edward's kneejerk and luck lines; hook Pochettino's ten-year courtship, City losing three, 17 behind), Big Ben (Bruno bail-out and Arsenal-fan ball-knowledge lines; hook Carrick exit, 66 behind). Passed over: Justin's apartheid line, Big Ben's self-roast, the boxing/Harvey Price line and the Jobacus/priest lines (all ran last night, no fresh hook); Small Ben's 21-on-the-bench line (no matchday). Edward and Justin no piece tonight: no new football hook. Gaps quoted from public.json as GW10 is final; live-feed totals predate GW10 settling and were ignored."
+  },
+  {
+   "ts": "2026-11-12T08:58",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no fixtures today. Reported: KMI panel says Isak should have had a penalty for Timber's pull at Anfield (Small Ben, Edward, Big Ben's Havertz, Justin's Barcola; BBC), Josh King in line for an England debut, picked ahead of Palmer and Foden (Marcus owns King and Foden, Edward owns Palmer; Sky), United's verbal agreement with Pochettino, who likely stays with the USA for the Haiti games before Anfield on 22 November (Big Ben, Marcus, Justin, Robert; Sky). Skipped: Guehi withdrawal (posted 10 Nov), Van Dijk contract chatter, Alex Scott transfer gossip (papers only), Bruno captaincy snub (no permitted source found), Palmer suspension piece (October, stale). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
