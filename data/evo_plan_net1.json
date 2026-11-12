@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T08:36",
+ "generated": "2026-11-12T17:03",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.87,
-   "ep": 5.2
+   "ep": 5.19
   },
   {
    "id": 504,
@@ -37,7 +37,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 5.96
+   "ep": 5.94
   },
   {
    "id": 330,
@@ -49,7 +49,7 @@
    "news": "",
    "p_play": 0.921,
    "base": 3.78,
-   "ep": 4.71
+   "ep": 4.7
   },
   {
    "id": 114,
@@ -61,7 +61,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 4.24
+   "ep": 4.21
   },
   {
    "id": 391,
@@ -73,7 +73,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.587,
    "base": 3.65,
-   "ep": 4.14
+   "ep": 4.15
   },
   {
    "id": 68,
@@ -85,7 +85,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 4.82,
-   "ep": 5.99
+   "ep": 5.98
   },
   {
    "id": 156,
@@ -97,7 +97,7 @@
    "news": "",
    "p_play": 0.926,
    "base": 4.3,
-   "ep": 5.43
+   "ep": 5.42
   },
   {
    "id": 15,
@@ -109,7 +109,7 @@
    "news": "",
    "p_play": 0.95,
    "base": 3.93,
-   "ep": 5.07
+   "ep": 5.02
   },
   {
    "id": 628,
@@ -121,7 +121,7 @@
    "news": "",
    "p_play": 0.834,
    "base": 2.63,
-   "ep": 3.78
+   "ep": 3.75
   },
   {
    "id": 411,
@@ -133,7 +133,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 6.71,
-   "ep": 7.35
+   "ep": 7.34
   },
   {
    "id": 401,
@@ -145,7 +145,7 @@
    "news": "",
    "p_play": 0.815,
    "base": 2.82,
-   "ep": 3.94
+   "ep": 3.93
   }
  ],
  "bench": [
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.9,
-   "ep": 4.9
+   "ep": 4.87
   },
   {
    "id": 428,
@@ -171,7 +171,7 @@
    "news": "",
    "p_play": 0.793,
    "base": 3.36,
-   "ep": 3.75
+   "ep": 3.74
   },
   {
    "id": 10,
@@ -183,7 +183,7 @@
    "news": "",
    "p_play": 0.566,
    "base": 2.62,
-   "ep": 2.63
+   "ep": 2.62
   },
   {
    "id": 569,
@@ -195,15 +195,15 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 2.58
+   "ep": 2.56
   }
  ],
- "xi_ep": 55.8,
+ "xi_ep": 55.6,
  "changes": 3,
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.33,
+   "gain": 10.39,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 6.03,
+   "gain": 5.71,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.93,
+   "gain": 8.71,
    "change": 2,
    "fallback": false,
    "add": {
@@ -293,7 +293,7 @@
   },
   {
    "pos": "MID",
-   "gain": 7.4,
+   "gain": 7.43,
    "change": 2,
    "fallback": true,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.65,
+   "gain": 4.55,
    "change": 2,
    "fallback": true,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.24,
+   "gain": 4.5,
    "change": 2,
    "fallback": true,
    "add": {
@@ -383,7 +383,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.88,
+   "gain": 5.42,
    "change": 3,
    "fallback": false,
    "add": {
