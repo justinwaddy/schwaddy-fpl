@@ -104,6 +104,9 @@ margin-right:6px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite
 .scl{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:3px 2px 1px;font:500 11px "IBM Plex Mono";color:var(--dim)}
 .scl .sc{background:var(--panel2);border-radius:4px;padding:1px 6px;color:var(--ink)}
 .scl .sc i{font-style:normal;color:var(--dim)}
+/* clean-sheet chances, one per side */
+.csl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:2px 2px 1px;font:500 11px "IBM Plex Mono";color:var(--dim)}
+.csl b{color:var(--ink);font-weight:600}
 .scl .scbtn{cursor:pointer;color:var(--blue);border-bottom:1px dotted var(--blue)}
 .scg{border-collapse:collapse;margin:4px 2px 2px;width:auto}
 .scg th,.scg td{border:1px solid var(--line);padding:3px 5px;text-align:center;font:500 11px "IBM Plex Mono";white-space:nowrap}
@@ -1528,7 +1531,18 @@ function oddsHTML(id,h,a,teams,started){
   const when=(o.pulled||"").slice(5,10).split("-").reverse().join("/");
   return `<div class="odds" title="${o.src||"bookmaker odds"}, margin removed${when?`, pulled ${when}`:""}">${started?"pre-match ":""}${lab(hn,o.ph,o.oh)}
     <span class="ob"><i class="oh" style="width:${o.ph*100}%"></i><i class="od" style="width:${o.pd*100}%"></i><i class="oa" style="width:${o.pa*100}%"></i></span>
-    ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>${scoresHTML(id,o,hn,an)}`;
+    ${lab("draw",o.pd,o.od)} · ${lab(an,o.pa,o.oa)}</div>${csHTML(o,hn,an)}${scoresHTML(id,o,hn,an)}`;
+}
+// Clean-sheet chance for each side: the other side scoring none, from the
+// same goals model as the scorelines. Older pulls lack csh/csa, so fall
+// back to summing the listed scorelines (misses only the <0.5% cells).
+function csHTML(o,hn,an){
+  let ch=o.csh,ca=o.csa;
+  if(ch==null&&o.sc){ch=0;ca=0;for(const[k,p]of Object.entries(o.sc)){const[i,j]=k.split("-").map(Number);if(j===0)ch+=p;if(i===0)ca+=p;}}
+  if(ch==null)return "";
+  const pc=x=>Math.round(x*100),fair=p=>p>0?(1/p).toFixed(2):"–";
+  return `<div class="csl" title="Chance each side keeps a clean sheet (the other side scores none); fair odds on hover">clean sheet
+    <span title="fair odds ${fair(ch)}">${hn} <b>${pc(ch)}%</b></span> · <span title="fair odds ${fair(ca)}">${an} <b>${pc(ca)}%</b></span></div>`;
 }
 // Scorelines come from a goals model fitted to the 1X2 and over/under 2.5
 // lines (match_odds.py), shown as chance and fair decimal odds (1/p).

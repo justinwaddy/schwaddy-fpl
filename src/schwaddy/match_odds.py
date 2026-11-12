@@ -26,7 +26,8 @@ with the usual correction for 0-0, 1-0, 0-1 and 1-1) is fitted to each
 match's three numbers - home win, draw, over the line - which pins its three
 parameters: each side's expected goals and the low-score correction.
 "sc" then holds every scoreline up to 6-6 with at least a 0.5% chance,
-as {"h-a": p}; xh/xa are the fitted expected goals. These are fair
+as {"h-a": p}; xh/xa are the fitted expected goals and csh/csa each
+side's chance of a clean sheet (the other side scoring none). These are fair
 chances from the 1X2 and totals lines, not a bookmaker's quoted prices. A fixture keeps the
 last line pulled before it kicked off: once it has started the bookies
 only post in-play prices, which are not what the tab is showing, so a
@@ -174,7 +175,10 @@ def fit_scores(ph, pd, pa, po=None, line=2.5):
     g = _grid(lh, la, rho)
     sc = {f"{i}-{j}": round(float(g[i, j]), 4)
           for i in range(7) for j in range(7) if g[i, j] >= 0.005}
-    return dict(xh=round(float(lh), 2), xa=round(float(la), 2), sc=sc)
+    # clean sheets: home keeps one when the away side scores none, and back
+    return dict(xh=round(float(lh), 2), xa=round(float(la), 2),
+                csh=round(float(g[:, 0].sum()), 3),
+                csa=round(float(g[0, :].sum()), 3), sc=sc)
 
 
 def over_under(ev):
