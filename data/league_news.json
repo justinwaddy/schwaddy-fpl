@@ -1,57 +1,6 @@
 {
- "generated": "2026-11-12T08:58 UTC",
+ "generated": "2026-11-12T23:43 UTC",
  "items": [
-  {
-   "id": "2026-11-01-marcus-edward-level",
-   "ts": "2026-11-01T22:55",
-   "kind": "opinion",
-   "text": "Marcus and Edward end Sunday level on 446, three clear of Justin, with Marcus's Dewsbury-Hall and Edward's Tarkowski and Barry all waiting on the Everton game. De Cuyper and Evanilson carried Marcus; Guehi, Mukiele and Joao Pedro each turned up and delivered nothing, a body of work the Jobacus archive would recognise, except that this time nobody paid to watch the outdoor scenes. Somewhere a creepy priest in Spotlight is still taking notes.",
-   "source": null
-  },
-  {
-   "id": "2026-11-01-bigben-arsenal",
-   "ts": "2026-11-01T22:55",
-   "kind": "opinion",
-   "text": "Edward has called Big Ben a biased Arsenal fan with no ball knowledge, and then Konsa took 10 and Havertz 9 for him at Anfield while Bruno, his usual lifeline, gave 2. The bailout came from the club he supposedly knows nothing about, which is either ball knowledge or luck, and Big Ben's 68 is the biggest gameweek in the league either way. It still leaves him fifth, because he started the week a long way behind.",
-   "source": null
-  },
-  {
-   "id": "2026-11-01-smallben-nobody-left",
-   "ts": "2026-11-01T22:55",
-   "kind": "opinion",
-   "text": "Small Ben has nobody left to play and sits 36 behind the leaders, with Isak, Virgil and Gakpo adding five points between them against the Arsenal he also owns half of. Three rivals still have players to come and he has a finished gameweek and a view of the top of the table from a long way below it, which for a man of his height is the usual angle.",
-   "source": null
-  },
-  {
-   "id": "2026-11-02-havertz-anfield",
-   "ts": "2026-11-02T07:55",
-   "kind": "news",
-   "text": "Kai Havertz scored after 16 minutes at Anfield, his first goal in 10 appearances, and Arsenal won there for the first time since September 2012 with Liverpool finishing without a shot on target, the Guardian reports. Havertz is Big Ben's, as is Konsa behind him; Calafiori and Tzolis (Marcus), Raya and Odegaard (Justin), Gabriel (Robert) and Madueke and Rice (Small Ben) were all in the same win. Madueke was booked, and Virgil van Dijk was heard in the tunnel saying he should have had a second yellow.",
-   "source": {
-    "title": "Arsenal hold on for first league win at Liverpool since 2012 after Kai Havertz pounces early",
-    "url": "https://www.theguardian.com/football/2026/nov/01/liverpool-arsenal-premier-league-match-report"
-   }
-  },
-  {
-   "id": "2026-11-02-iraola-penalty",
-   "ts": "2026-11-02T07:55",
-   "kind": "news",
-   "text": "Andoni Iraola said Liverpool will tell their players to go down in the box in future after Isak was denied a penalty at Anfield. Isak stayed upright while Jurrien Timber held a handful of his shirt as Barcola's cross came in, and the VAR did not step in; a second claim, Tzolis holding Gakpo, was reviewed and rejected. \"We have to tell them to go down because they're not going to call it otherwise,\" Iraola said. Isak and Gakpo are Small Ben's, Barcola is Justin's, Tzolis is Marcus's, and Timber is Edward's.",
-   "source": {
-    "title": "'We have to tell them to go down': Iraola responds to Isak penalty denial for Liverpool",
-    "url": "https://www.theguardian.com/football/2026/nov/01/andoni-iraola-responds-liverpool-penalty-denial-arsenal-premier-league"
-   }
-  },
-  {
-   "id": "2026-11-02-everton-newcastle",
-   "ts": "2026-11-02T07:55",
-   "kind": "news",
-   "text": "Everton host Newcastle tonight at 20:00 UTC, five days after beating them in the Carabao Cup, a game Jack Grealish missed after Everton said he had breached club discipline, the Guardian reports. It is the last fixture of the gameweek, and it is still to come for Edward's Tarkowski, Barry and Pickford, Big Ben's Branthwaite, Marcus's Dewsbury-Hall and Small Ben's Osula, who scored at Selhurst Park on 25 October.",
-   "source": {
-    "title": "Grealish could have been Everton's poster boy of a new era. Now his career is in limbo",
-    "url": "https://www.theguardian.com/football/2026/oct/30/jack-grealish-dropped-disclipline-everton-newcastle-carabao-cup-david-moyes"
-   }
-  },
   {
    "id": "2026-11-02-xi-2000",
    "ts": "2026-11-02T19:08",
@@ -680,16 +629,57 @@
     "title": "Man Utd strike Pochettino agreement with Carrick set to depart",
     "url": "https://www.skysports.com/football/news/11095/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
    }
+  },
+  {
+   "id": "2026-11-12-england-croatia-benches",
+   "ts": "2026-11-12T23:43",
+   "kind": "news",
+   "text": "Morgan Rogers scored for England and Harry Kane won it from the spot against Croatia at Wembley tonight, on the night Kane became England's most capped man, BBC Sport reports. Rogers is Big Ben's, and so are three of the men who watched from the bench all night: Trafford, Branthwaite and James Hill. Edward's Pickford played and was left exposed by Jarell Quansah's mistake for the equaliser, while his Gibbs-White and Calvert-Lewin stayed seated. Small Ben's Declan Rice started on his return from injury, Justin's Ben White came on late, and Marcus's Josh King is still waiting for a debut.",
+   "source": {
+    "title": "England vs Croatia player ratings: Harry Kane scores winner as Lewis Hall impresses",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c64gnd7vd912o"
+   }
+  },
+  {
+   "id": "2026-11-12-palace-sack-sage",
+   "ts": "2026-11-12T23:43",
+   "kind": "news",
+   "text": "Crystal Palace have sacked Pierre Sage after five months and 16 games, with the club bottom of the league, and Thomas Frank is in advanced talks to replace him, BBC Sport reports. It is the second Premier League sacking of the season, on the same day Manchester United dismissed Michael Carrick. BBC Sport says Sage was hurt by the absence of Jean-Philippe Mateta, down to a mix of fitness and his wish to leave the club. Mateta is Robert's forward, and Palace's next league game is at Coventry on 21 November.",
+   "source": {
+    "title": "Crystal Palace sack boss Pierre Sage after 16 games",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cv5y18lkk87do"
+   }
+  },
+  {
+   "id": "2026-11-12-robert-mateta",
+   "ts": "2026-11-12T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Crystal Palace sacked their manager today, and when BBC Sport listed what had gone wrong for him, one item was Mateta's absence, put down to a mixture of fitness and wanting to leave. Robert picked him in his eleven anyway and got nothing back, which makes Mateta the only man in that squad who has actually tried to make a transfer happen. Robert has not replied to the group chat about it, or to anything else. The hairline, at least, is leaving on schedule."
+  },
+  {
+   "id": "2026-11-12-marcus-king",
+   "ts": "2026-11-12T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Tuchel picked Josh King for 'the attitude and the personality' and then left him on the bench for all of the win over Croatia, which is Marcus's transfer policy run backwards: Marcus would have had him on after two good warm-ups and given up on him by half-time. He is 17 behind Edward with a free fortnight to think about it, which is long enough to upload something to the YouTube channel and nowhere near long enough to explain it to the parish."
+  },
+  {
+   "id": "2026-11-12-bigben-wembley-bench",
+   "ts": "2026-11-12T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "England's opener came from Morgan Rogers, which Big Ben will mention, and the bench that watched it held Trafford, Branthwaite and James Hill, which he will not. It is the most Big Ben night Wembley could have put on: one of his doing it for somebody else while three more sit in tracksuits, a week after his own bench put up 24, the most in the league by a distance. From 66 behind, an Arsenal man will tell you that proves he knows how to pick footballers. It proves he knows how to pick substitutes."
+  },
+  {
+   "id": "2026-11-12-justin-white",
+   "ts": "2026-11-12T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Tuchel brought Ben White on for the closing stretch against Croatia, which is more trust than Justin has shown him: he sat last in Justin's squad last week and duly returned nothing from there. Justin is 21 behind Edward and keeps his defender permanently at the back of the bus, which, for a man the league regards as a connoisseur of apartheid, is at least a consistent seating policy."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-20T22:55",
-   "news": 0,
-   "opinion": 4,
-   "matchday": false,
-   "note": "evening, no fixtures today and GW8 not kicked off. No reported items: man City v AEK had no report found at a permitted outlet and the team-news search returned only stale pieces. Opinion: Small Ben's bench (Suzuki/Isak, height), Robert's six zeros and no transfers, Edward's Semenyo, Big Ben and Bruno (ball-knowledge line). No flops today so no reflop. Passed over: Ben D on Justin (apartheid line, nothing to hang it on and no sign Justin wants it run), Ben D on himself (his own entry, left to Justin), Marcus Jobacus/priest and Harvey Price lines (no hook; Price is a child), Elanga line (no hook), Rob's pint (engine ran it), hairline (ran last night)."
-  },
   {
    "ts": "2026-10-21T07:42",
    "news": 2,
@@ -1102,6 +1092,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no fixtures today. Reported: KMI panel says Isak should have had a penalty for Timber's pull at Anfield (Small Ben, Edward, Big Ben's Havertz, Justin's Barcola; BBC), Josh King in line for an England debut, picked ahead of Palmer and Foden (Marcus owns King and Foden, Edward owns Palmer; Sky), United's verbal agreement with Pochettino, who likely stays with the USA for the Haiti games before Anfield on 22 November (Big Ben, Marcus, Justin, Robert; Sky). Skipped: Guehi withdrawal (posted 10 Nov), Van Dijk contract chatter, Alex Scott transfer gossip (papers only), Bruno captaincy snub (no permitted source found), Palmer suspension piece (October, stale). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-12T23:43",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures, no flops. Reported: England 2-1 Croatia through the league's eyes (Rogers scored, Big Ben's Trafford, Branthwaite and Hill unused, Edward's Pickford exposed and Gibbs-White and Calvert-Lewin unused, Small Ben's Rice back, Justin's White on late, Marcus's King no debut; BBC ratings), Palace sack Sage with Mateta's absence cited (Robert; BBC). Opinion: Robert (no transfers, group chat, hairline; hook Mateta wanting out after scoring 0 in Robert's eleven), Marcus (kneejerk, Jobacus/priest; hook King unused, 17 behind), Big Ben (Arsenal-fan ball knowledge; hook three of his on England's bench, his 24-point bench, 66 behind), Justin (apartheid line; hook White off England's bench, 0 on Justin's). Passed over: Small Ben lines (height, boxing, 21-on-bench) - no fresh football hook beyond Rice's return; Edward's luck line on Marcus (Marcus piece uses kneejerk instead); Big Ben's self-roast and pint line (ran recently, no new hook); Edward no piece - leader with no archive material and no hook tonight. Gaps quoted from public.json as GW10 is final; live-feed totals predate GW10 settling and were ignored."
   }
  ]
 }
