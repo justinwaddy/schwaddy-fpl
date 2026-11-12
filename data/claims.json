@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-11T09:05 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The one new finding is Sky Sports confirming Gvardiol came off injured at Forest, which backs the Jacquet claim; two low-confidence punts (Delap on form, Justin on the model) fill ranks 4 and 5. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-12T09:06 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Nothing new this run on Gvardiol, White or Barcola from a permitted outlet; the one new finding is BBC Sport listing Boscagli one booking from a ban, which firms up claim 5. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -99,10 +99,15 @@
         "code": "204120",
         "club": "BHA"
       },
-      "why": "Only worth it if claims 1 and 2 have both gone through: Justin is fully available for Leeds while Boscagli sits at 0.89 availability and is now the weakest remaining defender. No permitted-outlet news on either; this rests purely on the model.",
+      "why": "Only worth it if claims 1 and 2 have both gone through. BBC Sport lists Boscagli on four yellow cards after 10 rounds, so one more booking before the halfway point costs a match; Justin is fully available for Leeds and Boscagli is the weakest remaining defender.",
       "model": "Model has Justin 17.3 next5 against Boscagli 15.5, under its +2 margin; a marginal punt.",
       "confidence": "low",
-      "sources": []
+      "sources": [
+        {
+          "title": "Which Premier League players are set for yellow card suspensions?",
+          "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+        }
+      ]
     }
   ],
   "previous": [
@@ -817,12 +822,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-13T21:10 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: research found nothing from a permitted outlet that moves the five GW7 claims; Schade shoulder is the only open fitness question and its severity is unreported."
-    },
-    {
       "ts": "2026-10-14T08:10 UTC",
       "gw": 7,
       "claims": 5,
@@ -1175,6 +1174,12 @@
       "gw": 11,
       "claims": 5,
       "note": "No change; research returned nothing new from permitted outlets, claims carried forward unchanged."
+    },
+    {
+      "ts": "2026-11-12T09:06 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Claims carried forward; added BBC Sport yellow-card source to claim 5 (Boscagli one booking from a ban)."
     }
   ]
 }

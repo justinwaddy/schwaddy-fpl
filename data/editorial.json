@@ -1,22 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-10-barcola-cramp-not-injury",
-      "ts": "2026-09-10T08:35 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Liverpool boss Andoni Iraola confirmed Barcola's exit at the hour mark against Atletico Madrid was cramp, not an injury, saying he is 'very happy' with the forward's first start and two clear second-half chances on goal. That corrects last night's 'doesn't look great' read, though it changes nothing about the underlying case: Barcola still has zero Premier League minutes started this season and faces Gakpo, Isak and Ngumoha for a place at Fulham on Saturday.",
-      "url": "https://www.liverpoolfc.com/news/bradley-barcola-cody-gakpo-and-milos-kerkez-fitness-update"
-    },
-    {
-      "id": "2026-09-11-barcola-available-fulham",
-      "ts": "2026-09-11T21:17 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Iraola told Friday's press conference that Barcola's cramp is not an injury and he 'should be available' for Saturday's Fulham game if training goes to plan - a likely second Liverpool start. The model still has him at just 0.16 availability and 2.4 next5, the same blind spot every marquee mid-season arrival runs into: it cannot see a player easing into a new team, only a name with no minutes.",
-      "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-iraola-provides-latest-gakpo-barcola-and-ekitike"
-    },
-    {
       "id": "2026-09-11-marmoush-tottenham-forward-competition",
       "ts": "2026-09-11T21:17 UTC",
       "mine": true,
@@ -319,14 +303,25 @@
       "scope": "mine",
       "text": "Gvardiol (yours) came off at half-time of Man City's 3-1 defeat at Nottingham Forest on 7 November and Maresca said he and Guehi asked to come off with knocks, not for tactical reasons, per Sky Sports. That is the source of the 75% flag on your dashboard; no permitted outlet has given an update since, so treat him as a doubt for GW11.",
       "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
+    },
+    {
+      "id": "2026-11-12-boscagli-tavernier-ban-risk",
+      "ts": "2026-11-12T09:06 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Boscagli and Tavernier (both yours) are each on four Premier League yellow cards after 10 rounds, per BBC Sport, so one more booking before the halfway point brings a one-match ban. The model's availability figures do not see that; Leeds' Ampadu, a free agent on the claims shortlist, is in the same position.",
+      "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+    },
+    {
+      "id": "2026-11-12-man-utd-pochettino",
+      "ts": "2026-11-12T09:06 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Man Utd have struck an agreement with Mauricio Pochettino to replace Michael Carrick, per Sky Sports, but he is likely to stay with the USA for their two games against Haiti during this break. Cunha (yours) could go to Anfield on 22 November under a manager who has barely had a training session with the squad.",
+      "url": "https://www.skysports.com/football/news/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-13T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old-season pages, off-list fantasy sites or wire reprints; nothing from a permitted outlet. Not in the starters window. Nothing published."
-    },
     {
       "ts": "2026-10-13T21:10 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-11T22:15 UTC",
       "published": 0,
       "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Barcola, Marmoush, Le Fee, Konsa and general injury news returned only older-season items or non-permitted outlets, and the premierleague.com injury page is still showing last season's list. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-12T09:06 UTC",
+      "published": 2,
+      "note": "Led with BBC Sport's yellow-card list (Boscagli and Tavernier one booking from a ban) and Sky Sports on Man Utd agreeing a deal with Pochettino (Cunha). Club searches on Gvardiol, White, Barcola, Haaland, Marmoush, Gonzalo, Neto, Bogle, Brighton and Le Fee returned only older items or non-permitted outlets. Not in starters window."
     }
   ]
 }
