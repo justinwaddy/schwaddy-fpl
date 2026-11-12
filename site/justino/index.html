@@ -1570,6 +1570,29 @@ function myDefCSHTML(rows,teams){
   h+=`</table><div class="note">Pre-match chance the opponent scores none, from the bookies' lines (same model as the scorelines above). Once a game starts, the last column says whether the clean sheet is still on.</div></div>`;
   return h;
 }
+// My forwards, ranked by their club's expected goals in the game (the xh/xa
+// fitted to the bookies' lines). Same rows as myDefCSHTML.
+function myFwdXGHTML(rows,teams){
+  if(!rows.length)return "";
+  const out=rows.map(r=>{
+    const games=r.fxs.map(f=>{
+      const o=findOdds(f.id,f.h,f.a),home=r.tid===f.h;
+      const xg=o&&o.xh!=null?(home?o.xh:o.xa):null,opp=teams[home?f.a:f.h]||(home?f.a:f.h);
+      const sc=home?(f.hs??0):(f.as??0);
+      const st=f.started?`<span class="tm">${sc} scored${f.fin?"":" so far"}</span>`:"";
+      return {xg,txt:`${home?"v":"@"} ${opp}`,st};
+    });
+    return {r,games,best:Math.max(-1,...games.map(g=>g.xg??-1))};
+  }).sort((a,b)=>b.best-a.best||a.r.p.name.localeCompare(b.r.p.name));
+  let h=`<div class="card"><b class="h">My forwards · team expected goals</b><table><tr><th>player</th><th>fixture</th><th class="num">team xG</th><th></th></tr>`;
+  for(const {r,games}of out){
+    if(!games.length){h+=`<tr><td>${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}</td><td class="tm">no game</td><td class="num">–</td><td></td></tr>`;continue;}
+    games.forEach((g,i)=>{h+=`<tr><td>${i?"":`${nm(r.p,"")} <span class="tm">${teams[r.tid]||""}</span>${r.note||""}`}</td><td class="tm">${g.txt}</td>
+      <td class="num">${g.xg==null?"–":`<b>${g.xg.toFixed(2)}</b>`}</td><td>${g.st}</td></tr>`;});
+  }
+  h+=`</table><div class="note">Goals the forward's club is expected to score, pre-match, from the bookies' result and over/under lines (same model as the scorelines above).</div></div>`;
+  return h;
+}
 function csHTML(o,hn,an){
   const cp=csPair(o);
   if(!cp)return "";
@@ -1647,6 +1670,8 @@ function livePreviewHTML(g){
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
   if(FIXTURES)h+=myDefCSHTML(ps.filter(p=>p.mine&&p.pos==="DEF").map(p=>({p,tid:p.team,
     fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
+  if(FIXTURES)h+=myFwdXGHTML(ps.filter(p=>p.mine&&p.pos==="FWD").map(p=>({p,tid:p.team,
+    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
   return h;
 }
 function renderLive(){
@@ -1718,6 +1743,8 @@ function renderLive(){
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning before kick-off.</div>`:""}</div>`;
   {const me=ctx.mgrs.find(m=>m.mine);
    if(me)h+=myDefCSHTML(me.squad.filter(p=>p.pos==="DEF").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
+     note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);
+   if(me)h+=myFwdXGHTML(me.squad.filter(p=>p.pos==="FWD").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
      note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
   sec.innerHTML=h;
   sec.querySelectorAll("[data-lent]").forEach(r=>r.addEventListener("click",()=>{
