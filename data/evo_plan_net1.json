@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T17:03",
+ "generated": "2026-11-12T23:03",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -73,7 +73,7 @@
    "news": "Unspecified injury - 75% chance of playing",
    "p_play": 0.587,
    "base": 3.65,
-   "ep": 4.15
+   "ep": 4.14
   },
   {
    "id": 68,
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 10.39,
+   "gain": 10.4,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 5.71,
+   "gain": 5.72,
    "change": 1,
    "fallback": true,
    "add": {
@@ -323,37 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.55,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 155,
-    "code": 448047,
-    "name": "Enzo",
-    "pos": "MID",
-    "team": "MCI",
-    "status": "a",
-    "news": "",
-    "p_play": 0.852,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 428,
-    "code": 430871,
-    "name": "Cunha",
-    "pos": "MID",
-    "team": "MUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.793,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 4.5,
+   "gain": 4.58,
    "change": 2,
    "fallback": true,
    "add": {
@@ -382,8 +352,38 @@
    }
   },
   {
+   "pos": "MID",
+   "gain": 4.56,
+   "change": 2,
+   "fallback": true,
+   "add": {
+    "id": 155,
+    "code": 448047,
+    "name": "Enzo",
+    "pos": "MID",
+    "team": "MCI",
+    "status": "a",
+    "news": "",
+    "p_play": 0.852,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 428,
+    "code": 430871,
+    "name": "Cunha",
+    "pos": "MID",
+    "team": "MUN",
+    "status": "a",
+    "news": "",
+    "p_play": 0.793,
+    "base": null,
+    "ep": null
+   }
+  },
+  {
    "pos": "DEF",
-   "gain": 5.42,
+   "gain": 5.43,
    "change": 3,
    "fallback": false,
    "add": {
@@ -473,7 +473,7 @@
    "news": "",
    "p_play": 0.894,
    "base": 195.53,
-   "ep": 307.52
+   "ep": 307.88
   },
   {
    "id": 155,
@@ -497,7 +497,7 @@
    "news": "",
    "p_play": 0.991,
    "base": 163.08,
-   "ep": 283.32
+   "ep": 283.15
   },
   {
    "id": 387,
@@ -524,18 +524,6 @@
    "ep": 278.37
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
-   "pos": "MID",
-   "team": "MUN",
-   "status": "a",
-   "news": "",
-   "p_play": 0.793,
-   "base": 155.7,
-   "ep": 276.9
-  },
-  {
    "id": 13,
    "code": 204480,
    "name": "Rice",
@@ -545,6 +533,18 @@
    "news": "",
    "p_play": 0.942,
    "base": 168.18,
+   "ep": 276.93
+  },
+  {
+   "id": 428,
+   "code": 430871,
+   "name": "Cunha",
+   "pos": "MID",
+   "team": "MUN",
+   "status": "a",
+   "news": "",
+   "p_play": 0.793,
+   "base": 155.7,
    "ep": 276.73
   },
   {
@@ -581,7 +581,7 @@
    "news": "",
    "p_play": 0.686,
    "base": 148.31,
-   "ep": 274.02
+   "ep": 274.01
   },
   {
    "id": 398,
@@ -593,7 +593,7 @@
    "news": "",
    "p_play": 0.374,
    "base": 140.29,
-   "ep": 264.74
+   "ep": 264.72
   },
   {
    "id": 481,
@@ -605,7 +605,7 @@
    "news": "",
    "p_play": 0.909,
    "base": 135.9,
-   "ep": 258.57
+   "ep": 259.05
   },
   {
    "id": 201,
@@ -677,7 +677,7 @@
    "news": "",
    "p_play": 0.352,
    "base": 127.51,
-   "ep": 248.53
+   "ep": 248.34
   },
   {
    "id": 19,
@@ -689,19 +689,7 @@
    "news": "",
    "p_play": 0.236,
    "base": 127.89,
-   "ep": 246.69
-  },
-  {
-   "id": 260,
-   "code": 153682,
-   "name": "Wilson",
-   "pos": "MID",
-   "team": "LEE",
-   "status": "a",
-   "news": "",
-   "p_play": 0.404,
-   "base": 176.86,
-   "ep": 243.37
+   "ep": 245.31
   },
   {
    "id": 390,
@@ -726,6 +714,18 @@
    "p_play": 0.848,
    "base": 147.54,
    "ep": 240.52
+  },
+  {
+   "id": 260,
+   "code": 153682,
+   "name": "Wilson",
+   "pos": "MID",
+   "team": "LEE",
+   "status": "a",
+   "news": "",
+   "p_play": 0.404,
+   "base": 176.86,
+   "ep": 239.91
   },
   {
    "id": 384,
@@ -785,7 +785,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 176.35,
-   "ep": 230.63
+   "ep": 229.9
   },
   {
    "id": 236,
@@ -797,7 +797,7 @@
    "news": "",
    "p_play": 0.994,
    "base": 159.1,
-   "ep": 227.42
+   "ep": 228.28
   },
   {
    "id": 31,
