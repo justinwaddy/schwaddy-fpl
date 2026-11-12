@@ -1593,6 +1593,61 @@ function myFwdXGHTML(rows,teams){
   h+=`</table><div class="note">Goals the forward's club is expected to score, pre-match, from the bookies' result and over/under lines (same model as the scorelines above).</div></div>`;
   return h;
 }
+// My midfielders: start or bench for gameweek G. The verdict is the same
+// call as the Suggested XI: the model's expected points for G, with its own
+// availability swapped for the starters research when that covers G, then
+// the best legal XI from the whole squad. A midfielder in that XI is a
+// start; out of it, a bench. "close" when one swap is worth under half a
+// point. Team xG and clean-sheet chance from the odds are shown alongside,
+// since a midfielder's points are mostly his side's goals.
+// squad: [{p, dp (predictions.json player or null), pos, tid, fxs, note}]
+function myMidHTML(G,squad,teams){
+  const mids=squad.filter(r=>r.pos==="MID");
+  if(!mids.length)return "";
+  const st={};if(STARTERS&&STARTERS.gw===G&&Array.isArray(STARTERS.players))STARTERS.players.forEach(x=>{st[String(x.code)]=x;});
+  for(const r of squad){
+    const d=r.dp,ep=d&&d.gw?d.gw[G-1]||0:0,av=d&&d.avail!=null?d.avail:1,x=d?st[String(d.code)]:null;
+    const pst=x&&ST_P[x.status]!=null?ST_P[x.status]:av;
+    r.epb=r.fxs.length?ep/Math.max(av,0.2)*pst:0;r.st=x?x.status:null;
+  }
+  const have=squad.some(r=>r.epb>0);
+  let inxi=new Set(),edge=0,worst=0;
+  if(have){
+    const R=pickXI(squad,"epb");inxi=new Set(R.xi);
+    const out=squad.filter(r=>r.pos!=="GKP");
+    worst=Math.min(...out.filter(r=>inxi.has(r)).map(r=>r.epb));
+    edge=Math.max(0,...out.filter(r=>!inxi.has(r)).map(r=>r.epb));
+  }
+  const pc=x=>Math.round(x*100);
+  const rows=mids.map(r=>{
+    let xg=null,cs=null,txt="no game";
+    const g=r.fxs.map(f=>{const o=findOdds(f.id,f.h,f.a),home=r.tid===f.h,cp=o&&csPair(o);
+      return {xg:o&&o.xh!=null?(home?o.xh:o.xa):null,cs:cp?cp[home?0:1]:null,txt:`${home?"v":"@"} ${teams[home?f.a:f.h]||(home?f.a:f.h)}`};});
+    if(g.length){txt=g.map(x=>x.txt).join(", ");
+      if(g.every(x=>x.xg!=null))xg=g.reduce((a,x)=>a+x.xg,0);
+      if(g.every(x=>x.cs!=null))cs=g.reduce((a,x)=>a+x.cs,0);}   // a double: summed, as the points are
+    let v="",why=[];
+    if(!r.fxs.length)v="bench",why.push("no game");
+    else if(have){const s=inxi.has(r);
+      v=s?(r.epb-edge<0.5?"start · close":"start"):(worst-r.epb<0.5?"bench · close":"bench");}
+    if(r.st&&r.st!=="start")why.push(r.st==="out"?"ruled out":r.st==="bench"?"expected on the bench":r.st==="doubt"?"doubt to start":"likely, not certain, to start");
+    if(xg!=null&&xg>=1.8)why.push("team expected to score plenty");
+    if(xg!=null&&xg<1)why.push("team unlikely to score much");
+    return {r,xg,cs,txt,v,why};
+  }).sort((a,b)=>(b.r.epb-a.r.epb)||((b.xg??-1)-(a.xg??-1)));
+  const col=v=>v.startsWith("start")?"var(--green)":"var(--amber)";
+  let h=`<div class="card"><b class="h">My midfielders · start or bench? · GW${G}</b><table>
+    <tr><th>player</th><th>fixture</th><th class="num">team xG</th><th class="num">clean sheet</th><th class="num">E[pts]</th><th>call</th></tr>`;
+  for(const x of rows){
+    h+=`<tr><td>${nm(x.r.p,"")} <span class="tm">${teams[x.r.tid]||""}</span>${x.r.note||""}</td><td class="tm">${x.txt}</td>
+      <td class="num">${x.xg==null?"–":x.xg.toFixed(2)}</td><td class="num">${x.cs==null?"–":pc(x.cs)+"%"}</td>
+      <td class="num">${have&&x.r.fxs.length?x.r.epb.toFixed(1):"–"}</td>
+      <td>${x.v?`<b style="color:${col(x.v)}">${x.v}</b>`:""}${x.why.length?` <span class="tm">${x.why.join("; ")}</span>`:""}</td></tr>`;
+  }
+  h+=`</table><div class="note">${have?`The call is the Suggested XI's: the model's expected points for GW${G} (E[pts]), adjusted by the starters research where it covers this week, then the best legal XI from your whole squad. "Close" means one swap would change it by under half a point.`:
+    `The model has no GW${G} projection to call it from, so only the odds are shown: the club's expected goals (a midfielder's goals and assists come from these) and its clean-sheet chance (worth a point to a midfielder).`}</div></div>`;
+  return h;
+}
 function csHTML(o,hn,an){
   const cp=csPair(o);
   if(!cp)return "";
@@ -1670,6 +1725,8 @@ function livePreviewHTML(g){
   h+=`</div>${ODDS?`<div class="note">Win chances are bookmaker match odds (${ODDS.source||"DraftKings via ESPN"}) with the margin taken out, updated each morning. Hover a number for the decimal price.</div>`:""}</div>`;
   if(FIXTURES)h+=myDefCSHTML(ps.filter(p=>p.mine&&p.pos==="DEF").map(p=>({p,tid:p.team,
     fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
+  if(FIXTURES)h+=myMidHTML(g,ps.filter(p=>p.mine).map(p=>({p,dp:p,pos:p.pos,tid:p.team,
+    fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
   if(FIXTURES)h+=myFwdXGHTML(ps.filter(p=>p.mine&&p.pos==="FWD").map(p=>({p,tid:p.team,
     fxs:fx.filter(f=>f.team_h===p.team||f.team_a===p.team).map(f=>({id:f.id,h:f.team_h,a:f.team_a}))})),S.teams);
   return h;
@@ -1744,6 +1801,10 @@ function renderLive(){
   {const me=ctx.mgrs.find(m=>m.mine);
    if(me)h+=myDefCSHTML(me.squad.filter(p=>p.pos==="DEF").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
      note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);
+   if(me&&DATA){const byName={};for(const d of DATA.players)byName[d.name+"|"+d.team]=d;
+     const byCode={};for(const d of DATA.players)byCode[String(d.code)]=d;
+     h+=myMidHTML(S.gw,me.squad.map(p=>({p,dp:byCode[ID2CODE[p.id]]||byName[p.name+"|"+p.tid]||null,pos:p.pos,tid:p.tid,
+       fxs:ctx.teamFx[p.tid]||[],note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
    if(me)h+=myFwdXGHTML(me.squad.filter(p=>p.pos==="FWD").map(p=>({p,tid:p.tid,fxs:ctx.teamFx[p.tid]||[],
      note:me.counting.includes(p)?"":` <span class="tm">(bench)</span>`})),S.teams);}
   sec.innerHTML=h;
