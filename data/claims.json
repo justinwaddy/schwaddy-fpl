@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-12T22:15 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Still nothing from a permitted outlet on Gvardiol or White since the Forest game; the new item is Man Utd formally sacking Carrick, with Pochettino due for the Anfield game on 22 November, a mild selection question over Cunha but not one worth a claim. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-13T09:20 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The change this run is Gvardiol playing for Croatia at Wembley on Thursday, which takes the injury case out of the Jacquet swap, so it drops to last; Konsa for White now leads. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -17,27 +17,27 @@
         "code": "198869",
         "club": "ARS"
       },
-      "why": "Konsa is a fully available Arsenal defender; White's availability has slipped to 0.57 and he is the weakest defender in the squad. Searches turned up no permitted-outlet article on either this run, so this rests on the model's numbers.",
+      "why": "Konsa joined Arsenal from Aston Villa in August and is fully available on the model's board; White's availability has slipped to 0.57 and he is the weakest defender in the squad. No permitted outlet has written about either this week, so this rests on the model's numbers.",
       "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gain on the board; agreeing.",
       "confidence": "medium",
       "sources": []
     },
     {
       "rank": 2,
-      "pos": "DEF",
+      "pos": "FWD",
       "add": {
-        "name": "Jacquet",
-        "code": "606702",
-        "club": "LIV"
+        "name": "Delap",
+        "code": "463034",
+        "club": "NFO"
       },
       "drop": {
-        "name": "Gvardiol",
-        "code": "477424",
-        "club": "MCI"
+        "name": "Gonzalo",
+        "code": "551466",
+        "club": "FUL"
       },
-      "why": "Sky Sports reports Gvardiol was withdrawn at half-time of City's 3-1 loss at Forest on 7 November after asking to come off with a knock, with Maresca confirming it was not tactical; no update since. Jacquet has been Liverpool's regular centre-back this autumn and the model has him fully available.",
-      "model": "Model has Jacquet 17.7 next5 against Gvardiol 13.2; agreeing, and the Forest knock strengthens it.",
-      "confidence": "medium",
+      "why": "Delap scored twice and was player of the match in Forest's 3-1 win over Man City on 7 November, per Sky Sports, his first goals in a while for a side that had been goalless at home. Gonzalo is the weakest forward in the squad on the model's board.",
+      "model": "Model has Delap 12.2 next5 against Gonzalo 11.7, below its +2 margin; a small form-based overrule.",
+      "confidence": "low",
       "sources": [
         {
           "title": "N Forest 3-1 Man City - Match Report & Highlights",
@@ -65,29 +65,6 @@
     },
     {
       "rank": 4,
-      "pos": "FWD",
-      "add": {
-        "name": "Delap",
-        "code": "463034",
-        "club": "NFO"
-      },
-      "drop": {
-        "name": "Gonzalo",
-        "code": "551466",
-        "club": "FUL"
-      },
-      "why": "Delap scored twice and was player of the match in Forest's 3-1 win over Man City on 7 November, per Sky Sports, his first goals in a while for a side that had been goalless at home. Gonzalo is the weakest forward in the squad on the model's board.",
-      "model": "Model has Delap 12.2 next5 against Gonzalo 11.7, below its +2 margin; a small form-based overrule.",
-      "confidence": "low",
-      "sources": [
-        {
-          "title": "N Forest 3-1 Man City - Match Report & Highlights",
-          "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
-        }
-      ]
-    },
-    {
-      "rank": 5,
       "pos": "DEF",
       "add": {
         "name": "Justin",
@@ -99,13 +76,36 @@
         "code": "204120",
         "club": "BHA"
       },
-      "why": "Only worth it if claims 1 and 2 have both gone through. BBC Sport lists Boscagli on four yellow cards after 10 rounds, so one more booking before the halfway point costs a match; Justin is fully available for Leeds and Boscagli is the weakest remaining defender.",
+      "why": "BBC Sport lists Boscagli on four yellow cards after 10 rounds, so one more booking before the halfway point costs him a match; Justin is fully available for Leeds. With Gvardiol now keeping his place (see claim 5), Boscagli is the defender to move after White.",
       "model": "Model has Justin 17.3 next5 against Boscagli 15.5, under its +2 margin; a marginal punt.",
       "confidence": "low",
       "sources": [
         {
           "title": "Which Premier League players are set for yellow card suspensions?",
           "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "pos": "DEF",
+      "add": {
+        "name": "Jacquet",
+        "code": "606702",
+        "club": "LIV"
+      },
+      "drop": {
+        "name": "Gvardiol",
+        "code": "477424",
+        "club": "MCI"
+      },
+      "why": "Lowest priority now: Gvardiol played for Croatia at Wembley on Thursday, per Sky Sports, so the half-time knock at Forest that drove this claim looks cleared. Only worth it if you think City's rotation keeps him out of the XI; Jacquet has been fully available for Liverpool.",
+      "model": "Model has Jacquet 17.7 next5 against Gvardiol 13.2, but that 13.2 still carries the 75% injury flag, which the Croatia appearance undercuts; I am overruling the model down to a low-confidence punt.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "England 2-1 Croatia: Harry Kane scores winner as he becomes Three Lions record appearance maker",
+          "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
         }
       ]
     }
@@ -822,12 +822,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-14T21:10 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: no permitted-outlet news altered any claim."
-    },
-    {
       "ts": "2026-10-15T08:10 UTC",
       "gw": 7,
       "claims": 5,
@@ -1180,6 +1174,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Claims carried forward unchanged; no permitted-outlet news on any add or drop this run. Summary updated for the Man Utd manager change."
+    },
+    {
+      "ts": "2026-11-13T09:20 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Reordered: Gvardiol played for Croatia on 12 Nov (Sky Sports), so Jacquet-for-Gvardiol drops from 2 to 5 at low confidence; Delap, Le Fee and Justin move up one."
     }
   ]
 }

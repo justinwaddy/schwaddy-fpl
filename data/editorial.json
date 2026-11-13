@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-11-schuster-brentford-debut",
-      "ts": "2026-09-11T21:17 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Free agent Jannik Schuster made his Premier League debut replacing the injured Nathan Collins on Saturday, and Brentford's own site quotes Keith Andrews saying part of the decision to let Ethan Pinnock leave was confidence in Schuster's ability - he 'was thrown into it today and he produced.' The model has him at just 0.31 availability off a single appearance, the same blind spot that undersells every new arrival.",
-      "url": "https://www.brentfordfc.com/en/news/article/first-team-nathan-collins-injury-update-brentford-v-sunderland-premier-league"
-    },
-    {
       "id": "2026-09-12-strand-larsen-carabao-cup-brace",
       "ts": "2026-09-12T08:20 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "mine",
       "text": "Man Utd told Michael Carrick on Thursday morning he had been sacked, with the club 18th after one league win, and ESPN's sources expect Mauricio Pochettino at Carrington by 18 November for his first game at Anfield on 22 November. That fixture is Cunha (yours) against Barcola (yours): a new manager's first XI is a selection risk for Cunha the model cannot price.",
       "url": "https://www.espn.com/soccer/story/_/id/50461316/man-united-mauricio-pochettino-michael-carrick-manager"
+    },
+    {
+      "id": "2026-11-13-gvardiol-plays-for-croatia",
+      "ts": "2026-11-13T09:20 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Gvardiol (yours) played for Croatia in their 2-1 Nations League defeat at Wembley on Thursday, per Sky Sports' report, five days after coming off at half-time at Forest with a knock. The model still reads him at 0.59 availability with a 75% flag; the fitness worry looks over, though whether Maresca starts him is a separate question.",
+      "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-14T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old-season, off-list or fantasy pages; no new Schade update beyond Brentford's earlier shoulder report. Not in the starters window. Nothing published."
-    },
     {
       "ts": "2026-10-14T21:10 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-12T22:15 UTC",
       "published": 1,
       "note": "Led with ESPN on Carrick's sacking being made formal on Thursday and Pochettino's expected first game at Anfield on 22 Nov (Cunha v Barcola, both his). Searches on Gvardiol, White, Barcola, Marmoush, Brighton, Le Fee and general international-break injuries returned only older items; Guehi's England withdrawal (Sky/ESPN, 9 Nov) is not his player. Not in starters window."
+    },
+    {
+      "ts": "2026-11-13T09:20 UTC",
+      "published": 1,
+      "note": "Led with Gvardiol playing for Croatia at Wembley (Sky Sports match report), which answers the Forest knock. Searches on White, Konsa, Barcola, Marmoush, Brighton, Le Fee and Haaland returned only older items or non-permitted outlets; Pochettino's two-and-a-half-year deal (Sky) is a follow-up to items already published. Not in starters window."
     }
   ]
 }
