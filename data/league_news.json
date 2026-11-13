@@ -1,16 +1,6 @@
 {
- "generated": "2026-11-13T08:42 UTC",
+ "generated": "2026-11-13T23:42 UTC",
  "items": [
-  {
-   "id": "2026-11-03-barry-everton",
-   "ts": "2026-11-03T07:55",
-   "kind": "news",
-   "text": "Thierno Barry tapped in the winner at St James' Park last night, his second goal against Newcastle in five days and his eighth of the season, which already matches his whole of last year. BBC Sport call him Everton's only recognised senior striker since Beto left for Fiorentina, so Edward owns the most indispensable man at his club. The goal began with a Branthwaite flick-on, so Big Ben had a hand in it from the back, and Jaissle says Barry fouled Schar in the build-up.",
-   "source": {
-    "title": "From nightmare debut season to Everton hero - Barry's revival",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqj346rvg3pzo"
-   }
-  },
   {
    "id": "2026-11-03-newcastle-jaissle",
    "ts": "2026-11-03T07:56",
@@ -661,16 +651,50 @@
     "title": "'A lie' & 'nonsense' - Palmer committed to England, says Rogers",
     "url": "https://www.bbc.co.uk/sport/football/articles/c6e9kjne5y8vo"
    }
+  },
+  {
+   "id": "2026-11-13-netherlands-greece-seven",
+   "ts": "2026-11-13T23:42",
+   "kind": "news",
+   "text": "The Netherlands beat Greece 7-0 in Amsterdam tonight, BBC Sport reports, with Tijjani Reijnders scoring a first-half hat-trick and Jurrien Timber, Edward's, getting his first two international goals. Edward's Bart Verbruggen kept the clean sheet, and the man in the other goal picking all seven out was Konstantinos Tzolakis, Justin's second keeper. Big Ben's Jan Paul van Hecke started at centre-half, Small Ben's Cody Gakpo was taken off on 62 minutes without scoring, and Robert's Robin Roefs watched from the bench.",
+   "source": {
+    "title": "Reijnders scores hat-trick in Dutch rout",
+    "url": "https://www.bbc.co.uk/sport/football/live/cmqjn559ld2jt"
+   }
+  },
+  {
+   "id": "2026-11-13-pochettino-confirmed",
+   "ts": "2026-11-13T23:42",
+   "kind": "news",
+   "text": "Manchester United have confirmed Mauricio Pochettino as head coach on a contract to June 2029, BBC Sport reports. He takes over on 18 November after the USA's games with Haiti, Liverpool away on 22 November is his first match, and United are 18th, a point off the bottom. Toby Alderweireld, four years under him at Spurs, warns: 'If you don't follow his plan, you go on the side and you're not coming back any more.' That is now the deal for Big Ben's Bruno Fernandes, Marcus's Mbeumo, Justin's Cunha and Robert's Sesko and Yoro.",
+   "source": {
+    "title": "Fitness obsessed & 'control freak' - what can Man Utd expect from Pochettino?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c85y13pv69xwo"
+   }
+  },
+  {
+   "id": "2026-11-13-justin-tzolakis",
+   "ts": "2026-11-13T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Two goalkeepers from this league were in Amsterdam tonight. Edward's spare, Verbruggen, had a quiet evening and a clean sheet; Justin's spare, Tzolakis, went in goal for Greece and picked the ball out of his net seven times. For a man the rest of the league has long had down as a connoisseur of apartheid, Justin has been remarkably bad at finding a keeper who can keep anybody out. He sits 21 behind Edward, and tonight even their reserves showed why."
+  },
+  {
+   "id": "2026-11-13-small-ben-gakpo",
+   "ts": "2026-11-13T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Seven goals in Amsterdam, and the Dutch front three were Summerville, Malen and Gakpo. Two of them scored. Small Ben owns the third, who was hooked on 62 minutes with the Netherlands already seven up, presumably because nobody on the bench could find him behind the Greek defence either. It is the first forward line Small Ben has watched get taken apart all season that was not his own. He is 73 behind Edward with a fight coming, and if he prepares for it the way he picks attackers, he will be the one leaving early."
+  },
+  {
+   "id": "2026-11-13-edward-timber",
+   "ts": "2026-11-13T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "A panel ruled this week that Jurrien Timber should have given away a penalty for pulling Isak's shirt at Anfield. He got away with it, and tonight he scored his first two goals for his country, in a Nations League rout worth nothing whatsoever to Edward. That is the leader's season in miniature: the breaks land when they count, the goals land when they do not, and he is still 17 clear. And somehow it is Marcus the league calls lucky."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-21T22:45",
-   "news": 0,
-   "opinion": 2,
-   "matchday": false,
-   "note": "evening, non-matchday, GW8 yet to kick off. Searches returned only stale or off-list results so no reported items. Led with Marcus's lead halving 36 to 19 and Robert's table position/hairline (archive 2026-09-04-9b7835c402, 2026-09-12-7526d15fa8). Reflop skipped: no FLOP lines today. Passed over: Ben D self-roast (slur-adjacent, own submission about himself, not football-hung), apartheid line (no football hook), Jobacus (no hook), Harvey Price (no hook), others waiting on a fact."
-  },
   {
    "ts": "2026-10-22T07:55",
    "news": 4,
@@ -1083,6 +1107,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no fixtures today. Reported: Bruno rejects a second United contract offer and once nearly joined Pochettino, expected to be announced today (Big Ben; Sky), Mateta's red-card ban for the Coventry trip plus four of the league's players one yellow from a ban - McBurnie and Gross (Big Ben), Boscagli and Tavernier (Justin) (Robert, Big Ben, Justin; BBC), Van Dijk's contract and the niggle that kept him out of the Dutch squad (Small Ben; BBC), Wales' plan for stopping Haaland before Norway v Wales on Saturday (Justin; BBC), Rogers defends Palmer's England commitment (Big Ben, Edward; BBC). Skipped: Pochettino 2.5-year deal as its own item (agreement already posted 12 Nov; folded into the Bruno item), Thiago's ban (posted 8 Nov), Silva of Bournemouth on the yellow-card list as 'Antonio Silve' - could not confirm it is Small Ben's Silva, so left out, Gusto gossip (papers only), Grealish apology (not in any squad). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-13T23:42",
+   "news": 2,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Netherlands 7-0 Greece through the league's eyes (Timber two goals and Verbruggen clean sheet for Edward, Justin's Tzolakis conceded seven for Greece, Big Ben's van Hecke started, Small Ben's Gakpo off at 62 without scoring, Robert's Roefs unused; BBC), Pochettino confirmed by United to June 2029 with Alderweireld's 'follow his plan' warning (Big Ben, Marcus, Justin, Robert; BBC). Opinion: Justin (apartheid line; hook his reserve keeper conceding seven while Edward's kept a clean sheet, 21 behind), Small Ben (height and the upcoming fight; hook Gakpo the only Dutch front three not to score, 73 behind), Edward (luck line on Marcus turned on the leader; hook Timber's KMI-panel let-off and two goals that count for nothing, 17 clear). Passed over: Robert's hairline/pint/no-transfers lines (Roefs unused on the Dutch bench was too thin a hook after three straight nights), Big Ben's Bruno and ball-knowledge lines (Pochettino covered as news; ran 11 and 12 Nov), Marcus's kneejerk and Jobacus/priest lines (no fresh football hook tonight), Small Ben's 21-on-the-bench line (no matchday), Big Ben's self-roast (no new hook). Not used: Wirtz's goal for Germany and Marmoush's for Egypt - no permitted report read on Wirtz, Marmoush left out for space. Gaps quoted from step 1's public.json table as GW10 is final."
   }
  ]
 }
