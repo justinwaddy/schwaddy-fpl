@@ -1,44 +1,6 @@
 {
- "generated": "2026-11-12T23:43 UTC",
+ "generated": "2026-11-13T08:42 UTC",
  "items": [
-  {
-   "id": "2026-11-02-xi-2000",
-   "ts": "2026-11-02T19:08",
-   "kind": "news",
-   "text": "Team news, 20:00 kick-off, Newcastle v Everton: Newcastle's confirmed XI is out and Osula (Small Ben) starts. Everton's teamsheet was not available at a permitted source yet, so Branthwaite (Big Ben), Pickford, Tarkowski and Barry (Edward) and Dewsbury-Hall (Marcus) are left out of the counts.",
-   "source": {
-    "title": "Confirmed line-up: Elanga in for Everton",
-    "url": "https://www.newcastleunited.com/en/news/everton-h-team-news-26-27"
-   }
-  },
-  {
-   "id": "2026-11-02-robert-mateta",
-   "ts": "2026-11-02T22:50",
-   "kind": "opinion",
-   "text": "Robert's Monday gets a minus sign, courtesy of Mateta on -2, and four more of his eleven (Saka, Mosquera, Martinez and Sesko) played and gave him nothing. Thirteen points off a whole gameweek is the sort of return a man gets for not touching his team since the summer, and the hairline is going in the same direction at the same speed.",
-   "source": null
-  },
-  {
-   "id": "2026-11-02-edward-bigben",
-   "ts": "2026-11-02T22:50",
-   "kind": "opinion",
-   "text": "Edward spent September telling anyone who would listen that Big Ben has no ball knowledge, and Big Ben has answered with 74, the biggest score of the gameweek, with Van Hecke on 15 and McBurnie on 12. Edward still leads the league, which is the only reason the biased Arsenal fan has not yet had to stand in front of the room and explain himself.",
-   "source": null
-  },
-  {
-   "id": "2026-11-02-marcus-luck",
-   "ts": "2026-11-02T22:50",
-   "kind": "opinion",
-   "text": "Marcus began the gameweek 2 behind Edward and ends it 17 behind, which is what happens to a man who runs on luck every week the day the luck takes a Sunday off. Dewsbury-Hall and Evanilson got him nine apiece and it still was not enough to make anybody ask where Edward's cushion came from.",
-   "source": null
-  },
-  {
-   "id": "2026-11-02-smallben-boxing",
-   "ts": "2026-11-02T22:50",
-   "kind": "opinion",
-   "text": "Small Ben takes 40 from the gameweek, sits 51 off the top, and Thiago on 9 is the only man in his eleven who looks like he trained for it. The upcoming fight is going to be the same story: plenty of enthusiasm and no plan for the second round, and nobody in the room has ever called him big.",
-   "source": null
-  },
   {
    "id": "2026-11-03-barry-everton",
    "ts": "2026-11-03T07:55",
@@ -677,16 +639,59 @@
    "kind": "opinion",
    "source": null,
    "text": "Tuchel brought Ben White on for the closing stretch against Croatia, which is more trust than Justin has shown him: he sat last in Justin's squad last week and duly returned nothing from there. Justin is 21 behind Edward and keeps his defender permanently at the back of the bus, which, for a man the league regards as a connoisseur of apartheid, is at least a consistent seating policy."
+  },
+  {
+   "id": "2026-11-13-bruno-second-offer",
+   "ts": "2026-11-13T08:42",
+   "kind": "news",
+   "text": "Bruno Fernandes has turned down a second contract offer from Manchester United, Sky Sports reports, with his deal up at the end of the season; United hold an option to extend it by a year, which would also stop him talking to foreign clubs in January. He has four goals this season, three of them in the hat-trick against Ipswich that is still United's only league win. In 2019 he nearly joined Mauricio Pochettino at Tottenham, and Pochettino is expected to be announced as United's head coach today. Bruno is Big Ben's, and so, it turns out, is the new man's old transfer target.",
+   "source": {
+    "title": "Bruno Fernandes transfer news: Manchester United captain rejects second contract offer",
+    "url": "https://www.skysports.com/football/news/12040/13611749/bruno-fernandes-rejects-second-manchester-united-contract-offer"
+   }
+  },
+  {
+   "id": "2026-11-13-mateta-ban-yellow-brink",
+   "ts": "2026-11-13T08:42",
+   "kind": "news",
+   "text": "Jean-Philippe Mateta is suspended for Crystal Palace's next league game after his red card, BBC Sport's list of Premier League bans shows, so Robert's forward misses the trip to Coventry on 21 November, Palace's first since Pierre Sage was sacked. The same list has four of this league's players one yellow card from a one-match ban before the halfway point of the season: Big Ben's Oli McBurnie and Pascal Gross, and Justin's Oliver Boscagli and Marcus Tavernier.",
+   "source": {
+    "title": "Which Premier League players are set for yellow card suspensions?",
+    "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+   }
+  },
+  {
+   "id": "2026-11-13-van-dijk-contract",
+   "ts": "2026-11-13T08:42",
+   "kind": "news",
+   "text": "Virgil van Dijk's Liverpool contract runs out next summer and the 35-year-old says he is in no panic: \"If that will be extended, that's the case. If not, then I will go somewhere else.\" BBC Sport's Liverpool reporter says the 'little niggle' that kept him out of this Netherlands window, the first he has missed since Euro 2020, is not a major cause for concern, and points out he has played every Premier League minute since the start of last season. Van Dijk is Small Ben's, and the niggle line is the one he will read twice.",
+   "source": {
+    "title": "Liverpool and Van Dijk have a decision to make",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ck4gnd2pgd06o"
+   }
+  },
+  {
+   "id": "2026-11-13-haaland-wales-blueprint",
+   "ts": "2026-11-13T08:42",
+   "kind": "news",
+   "text": "Norway host Wales in Oslo on Saturday at 17:00 GMT, and BBC Sport has gone back over how Wales kept Erling Haaland quiet in their 2-1 win in Cardiff a month ago: a high line and constant pressure on the ball, leaving him 24 touches, two shots and one on target, a header straight at Danny Ward. \"Drive up and don't let him dictate,\" says Craig Bellamy. Haaland is Justin's, and the rest of the league will be watching to see whether Wales have written them a blueprint.",
+   "source": {
+    "title": "How do you stop Haaland? Wales show how it's done",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c3y0e0z0r8kzo"
+   }
+  },
+  {
+   "id": "2026-11-13-rogers-defends-palmer",
+   "ts": "2026-11-13T08:42",
+   "kind": "news",
+   "text": "Morgan Rogers says any suggestion Cole Palmer is not committed to England is \"a lie\" and \"nonsense\", after Thomas Tuchel left his Chelsea team-mate and childhood friend out of the squad, saying he \"misses too many chances to impress\". Rogers says Palmer has had to manage his body after a low spell with injuries last year. Palmer has played in three of Tuchel's 27 games. Rogers, who scored England's opener against Croatia, is Big Ben's; Palmer is Edward's, and is spending the break out of the England camp entirely.",
+   "source": {
+    "title": "'A lie' & 'nonsense' - Palmer committed to England, says Rogers",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6e9kjne5y8vo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-21T07:42",
-   "news": 2,
-   "opinion": 0,
-   "matchday": false,
-   "note": "morning, no fixtures today. Led with Wirtz creating nine chances v Brentford (Big Ben) and the IFR 'absolute power' comment on Man City (touches all six squads). Calvert-Lewin and Manzambi stories already posted so skipped; Lisandro Martinez thigh has no owner here. Web search tool returned only stale/fantasy pages so sources came from the Guardian directly. No opinion on morning runs; no roast suggestions used or passed over."
-  },
   {
    "ts": "2026-10-21T22:45",
    "news": 0,
@@ -1099,6 +1104,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures, no flops. Reported: England 2-1 Croatia through the league's eyes (Rogers scored, Big Ben's Trafford, Branthwaite and Hill unused, Edward's Pickford exposed and Gibbs-White and Calvert-Lewin unused, Small Ben's Rice back, Justin's White on late, Marcus's King no debut; BBC ratings), Palace sack Sage with Mateta's absence cited (Robert; BBC). Opinion: Robert (no transfers, group chat, hairline; hook Mateta wanting out after scoring 0 in Robert's eleven), Marcus (kneejerk, Jobacus/priest; hook King unused, 17 behind), Big Ben (Arsenal-fan ball knowledge; hook three of his on England's bench, his 24-point bench, 66 behind), Justin (apartheid line; hook White off England's bench, 0 on Justin's). Passed over: Small Ben lines (height, boxing, 21-on-bench) - no fresh football hook beyond Rice's return; Edward's luck line on Marcus (Marcus piece uses kneejerk instead); Big Ben's self-roast and pint line (ran recently, no new hook); Edward no piece - leader with no archive material and no hook tonight. Gaps quoted from public.json as GW10 is final; live-feed totals predate GW10 settling and were ignored."
+  },
+  {
+   "ts": "2026-11-13T08:42",
+   "news": 5,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no fixtures today. Reported: Bruno rejects a second United contract offer and once nearly joined Pochettino, expected to be announced today (Big Ben; Sky), Mateta's red-card ban for the Coventry trip plus four of the league's players one yellow from a ban - McBurnie and Gross (Big Ben), Boscagli and Tavernier (Justin) (Robert, Big Ben, Justin; BBC), Van Dijk's contract and the niggle that kept him out of the Dutch squad (Small Ben; BBC), Wales' plan for stopping Haaland before Norway v Wales on Saturday (Justin; BBC), Rogers defends Palmer's England commitment (Big Ben, Edward; BBC). Skipped: Pochettino 2.5-year deal as its own item (agreement already posted 12 Nov; folded into the Bruno item), Thiago's ban (posted 8 Nov), Silva of Bournemouth on the yellow-card list as 'Antonio Silve' - could not confirm it is Small Ben's Silva, so left out, Gusto gossip (papers only), Grealish apology (not in any squad). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
