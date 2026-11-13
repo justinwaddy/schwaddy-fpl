@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-14T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned off-list pages or old-season items; Schade shoulder (Brentford club site, Villa 2-2) has no diagnosis yet and is already covered. Not in the starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-15T08:10 UTC",
       "published": 0,
       "note": "Morning check. Permitted-outlet searches returned only items already covered (Schade shoulder with no follow-up diagnosis, Haaland fit per City, Liverpool forward injuries). Not in the starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-13T09:20 UTC",
       "published": 1,
       "note": "Led with Gvardiol playing for Croatia at Wembley (Sky Sports match report), which answers the Forest knock. Searches on White, Konsa, Barcola, Marmoush, Brighton, Le Fee and Haaland returned only older items or non-permitted outlets; Pochettino's two-and-a-half-year deal (Sky) is a follow-up to items already published. Not in starters window."
+    },
+    {
+      "ts": "2026-11-13T22:20 UTC",
+      "published": 0,
+      "note": "Evening check, international break. Searches on White, Konsa, Haaland, Gvardiol, Barcola, Marmoush, Le Fee, Delap, Brighton/Hull, Arsenal injuries and Man Utd/Pochettino returned only older items or non-permitted outlets (Konsa's reported knock on England duty is only on sportsmole/fantasy sites). Not in starters window. Nothing published."
     }
   ]
 }

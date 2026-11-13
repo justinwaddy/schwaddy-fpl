@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-13T09:20 UTC",
+  "ts": "2026-11-13T22:20 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The change this run is Gvardiol playing for Croatia at Wembley on Thursday, which takes the injury case out of the Jacquet swap, so it drops to last; Konsa for White now leads. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
@@ -17,10 +17,15 @@
         "code": "198869",
         "club": "ARS"
       },
-      "why": "Konsa joined Arsenal from Aston Villa in August and is fully available on the model's board; White's availability has slipped to 0.57 and he is the weakest defender in the squad. No permitted outlet has written about either this week, so this rests on the model's numbers.",
+      "why": "Sky Sports' piece on his August move says Konsa went straight into the Arsenal team, partly because Ben White has a questionable fitness record; White's availability has slipped to 0.57 and he is the weakest defender in the squad. Konsa was reported carrying a knock on England duty this week, but no permitted outlet has said it threatens the Newcastle game.",
       "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gain on the board; agreeing.",
       "confidence": "medium",
-      "sources": []
+      "sources": [
+        {
+          "title": "Ezri Konsa: Why Arsenal signed Aston Villa's top defender for GBP55m despite having so many defenders",
+          "url": "https://www.skysports.com/football/news/13578303/ezri-konsa-why-arsenal-signed-aston-villas-top-defender-for-lb55m-despite-having-so-many-defenders"
+        }
+      ]
     },
     {
       "rank": 2,
@@ -822,12 +827,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-15T08:10 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: no new permitted-outlet news altered any claim; carried forward."
-    },
-    {
       "ts": "2026-10-15T21:05 UTC",
       "gw": 7,
       "claims": 5,
@@ -1180,6 +1179,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Reordered: Gvardiol played for Croatia on 12 Nov (Sky Sports), so Jacquet-for-Gvardiol drops from 2 to 5 at low confidence; Delap, Le Fee and Justin move up one."
+    },
+    {
+      "ts": "2026-11-13T22:20 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. Added a Sky Sports source to Konsa-for-White and noted the reported England knock; no permitted-outlet news on any other add or drop."
     }
   ]
 }
