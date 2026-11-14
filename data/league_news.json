@@ -1,57 +1,6 @@
 {
- "generated": "2026-11-14T08:43 UTC",
+ "generated": "2026-11-14T23:55 UTC",
  "items": [
-  {
-   "id": "2026-11-03-marcus-two-good-games",
-   "ts": "2026-11-03T22:46",
-   "kind": "opinion",
-   "text": "Marcus is two off the top and the squad shows exactly how: De Cuyper and Evanilson on 9 each, then Mbeumo and Foden on 1, with Guehi, Mukiele and Joao Pedro on nothing. Each of them presumably arrived after two good games somewhere, which is the Elanga method, and the method remains undefeated at finding the third game.",
-   "source": null
-  },
-  {
-   "id": "2026-11-04-le-bris-sunderland",
-   "ts": "2026-11-04T07:42",
-   "kind": "news",
-   "text": "Sunderland are sticking with Regis le Bris, BBC Sport report, despite one win from nine and the bottom spot after Saturday's defeat at Coventry. Club sources believe he can turn it round, and Chelsea visit on Sunday. Robert's keeper Roefs and Marcus's Mukiele are the Sunderland men in the league, and Marcus, Edward and Big Ben all own Chelsea players on the other side of it.",
-   "source": {
-    "title": "Bottom club Sunderland to stick with manager Le Bris",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cj75pglrq794o"
-   }
-  },
-  {
-   "id": "2026-11-04-deeney-team-of-week",
-   "ts": "2026-11-04T07:42",
-   "kind": "news",
-   "text": "Troy Deeney's BBC Sport team of the week has a heavy league flavour: Bart Verbruggen (Edward) for keeping Brighton in it at Manchester City, Ezri Konsa (Big Ben) for a beast of a display in Arsenal's 1-0 win at Anfield, and Rice (Small Ben), Van Hecke and McBurnie (both Big Ben) in the headline selection too.",
-   "source": {
-    "title": "Who has made Troy's Premier League team of the week?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c8dx37n11kv2o"
-   }
-  },
-  {
-   "id": "2026-11-04-bruno-unemployed",
-   "ts": "2026-11-04T22:41",
-   "kind": "opinion",
-   "source": null,
-   "text": "Big Ben has spent two months leaning on Bruno Fernandes to haul him out of trouble, and in the gameweek where he outscored everybody, Bruno gave him 2. Nobody was rescued. A centre-back and a Hull striker did it, which tells you the whole reputation was built on a man who turns up to rescue the team and then watches somebody else do it."
-  },
-  {
-   "id": "2026-11-04-ben-c-bench",
-   "ts": "2026-11-04T22:41",
-   "kind": "opinion",
-   "source": null,
-   "text": "Small Ben left 12 points on his bench this week, which is a lot of dugout for a man who talks about his upcoming fight as if preparation were optional. Same instinct in both: pick the wrong eleven, trust the gloves, find out in the second round what the bench knew all along. At least Harvey Price could say he had a plan."
-  },
-  {
-   "id": "2026-11-05-mateta-appeal",
-   "ts": "2026-11-05T07:42",
-   "kind": "news",
-   "text": "Crystal Palace have lost their appeal against Jean-Philippe Mateta's red card from the defeat by Tottenham, so Robert's striker, who left GW9 on minus 2 after being sent off in the 13th minute for a late challenge on Micky van de Ven (Small Ben's), now misses the Liverpool game, the trip to Coventry on 21 November and Hull at home on 29 November, BBC Sport report. He stays available for Palace's Europa League matches.",
-   "source": {
-    "title": "Palace lose appeal against Mateta red card",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqp9gelp4em2o"
-   }
-  },
   {
    "id": "2026-11-05-robert-mateta-recession",
    "ts": "2026-11-05T22:45",
@@ -701,16 +650,57 @@
     "title": "Mauricio Pochettino to Man Utd: What does a Pochettino team look like and how will he set up struggling Red Devils?",
     "url": "https://www.skysports.com/football/news/13611443/mauricio-pochettino-to-man-utd-what-does-a-pochettino-team-look-like-and-how-will-he-set-up-struggling-red-devils"
    }
+  },
+  {
+   "id": "2026-11-14-norway-wales-haaland",
+   "ts": "2026-11-14T23:55",
+   "kind": "news",
+   "text": "A month after Wales kept him to one shot on target in Cardiff, Erling Haaland set up Andreas Schjelderup for Norway's second in Oslo tonight and then sealed a 3-1 win from the penalty spot, his 66th international goal in 60 caps, BBC Sport reports. Martin Odegaard topped BBC Sport's player rater for the hosts. Both are Justin's, so the Wales blueprint lasted exactly one fixture. Wales are now bottom of Group A4 and almost certain to face a relegation play-off in March.",
+   "source": {
+    "title": "Norway 3-1 Wales: Erling Haaland on target in Nations League win",
+    "url": "https://www.bbc.co.uk/sport/football/live/crz6568xvv8vt"
+   }
+  },
+  {
+   "id": "2026-11-14-portugal-denmark",
+   "ts": "2026-11-14T23:55",
+   "kind": "news",
+   "text": "Portugal lost 4-1 at home to Denmark in Braga tonight, their first game since Cristiano Ronaldo retired, BBC Sport reports, and the penalty that started it came from a handball by Small Ben's Ruben Dias just before half-time. Rasmus Hojlund then scored twice. Big Ben's Bruno Fernandes was taken off on 79 minutes for Bernardo Silva, who scored Portugal's stoppage-time consolation, Justin's Pedro Neto went off on 64, and Small Ben's William Osula came on for Denmark with the game already won.",
+   "source": {
+    "title": "Portugal 1-4 Denmark: Portugal humbled in first game since Cristiano Ronaldo retirement",
+    "url": "https://www.bbc.co.uk/sport/football/live/cmgj9jnvxx2qt"
+   }
+  },
+  {
+   "id": "2026-11-14-robert-ancelotti-bench",
+   "ts": "2026-11-14T23:55",
+   "kind": "opinion",
+   "source": null,
+   "text": "Carlo Ancelotti was sent off in Singapore tonight because, as he tells it, the referee said he could not control his bench. That is one charge nobody will ever bring against Robert, whose bench would need somebody to look at it first. Gabriel and Estêvão both started for Brazil and both lost to a stoppage-time winner from Japan, Estêvão hooked before the hour, which is the most decisive thing anyone has done with a Robert player since August. He is 192 off the top, and the hairline is the only part of him still making forward runs."
+  },
+  {
+   "id": "2026-11-14-small-ben-dias-isak",
+   "ts": "2026-11-14T23:55",
+   "kind": "opinion",
+   "source": null,
+   "text": "Ruben Dias handled in Braga to give Denmark the penalty that started the rout, and in Stockholm Isak stood next to Gyokeres while he scored two penalties and was then taken off without one of his own. From where Small Ben watches football, at roughly bar-stool height, that will have looked like a share in both goals. Osula, his too, came on for Denmark once the fight had already been won, which is also the only way Small Ben is going to be standing at the end of his."
+  },
+  {
+   "id": "2026-11-14-justin-haaland-oslo",
+   "ts": "2026-11-14T23:55",
+   "kind": "opinion",
+   "source": null,
+   "text": "Haaland made one and scored one in Oslo tonight, and a former Wales striker on the BBC called his international record computer game stuff. In Justin's eleven it has been more of a loading screen: two points in GW10, the same man, against a defence that did not have Craig Bellamy's notes. Odegaard was the pick of the Norwegians too. Justin owns Norway's two stars and is still 21 behind Edward, which takes a level of management Norway would want to study."
+  },
+  {
+   "id": "2026-11-14-marcus-elanga-waiver",
+   "ts": "2026-11-14T23:55",
+   "kind": "opinion",
+   "source": null,
+   "text": "Anthony Elanga set up Sweden's opener inside five minutes in Stockholm tonight. Under the Marcus system that is half of the two good games it takes to get yourself signed, so the waiver claim is presumably already written for Friday morning, somewhere between this week's upload to the channel and Sunday's confession, which on current form will run long. He is 17 behind Edward with a week to sleep on it, and Marcus has never once slept on anything."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-22T22:50",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "evening, non-matchday, GW8 yet to kick off. Searches returned no usable permitted-outlet articles (BBC/Guardian blocked from search, Sky results were schedule pages) so no reported items. Pieces: Justin's 73 vs second place, Big Ben's team name vs Tzolis being Marcus's (archive 2026-09-04-1594fc4a80 ball knowledge), Edward's Semenyo-for-Doku waiver. No FLOP lines today, reflop skipped. Passed over: Ben D self-roast and apartheid line (no football hook), Jobacus, Harvey Price, pint, Bruno (covered Tuesday), height (waiting on a Ben C hook). Note: live feed totals lag public.json settled by a gameweek; I quoted none."
-  },
   {
    "ts": "2026-10-23T07:55",
    "news": 4,
@@ -1123,6 +1113,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no Premier League fixtures today (GW11 starts 21 Nov). Reported: Wirtz scores in Germany's 3-1 win in Serbia, Havertz started and blanked, Germany v Netherlands Monday (Big Ben, Edward; BBC), Marmoush scores in Egypt 5-0 Malawi (Justin; BBC), Barcola started in France's 3-1 defeat by Italy (Justin; liverpoolfc.com), Sky's Pochettino tactics piece on Yoro's high line and whether Bruno has the legs (Robert, Big Ben; Sky). Skipped: Pochettino's tearful USA farewell (fourth Pochettino item in three days, folded into nothing), Kudus's corner for Ghana's opener (12 Nov, minor), Scotland 2-1 North Macedonia and England U21s (no league players involved), Guardian unreadable from here. Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-14T23:55",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Norway 3-1 Wales with Haaland's assist and penalty and Odegaard top of BBC's player rater, a callback to the Wales blueprint item of 13 Nov (Justin; BBC), Portugal 1-4 Denmark with Ruben Dias conceding the handball penalty, Bruno off on 79 for the consolation scorer, Neto off on 64, Osula on for Denmark (Small Ben, Big Ben, Justin; BBC). Opinion: Robert (lack of managing his team, hairline; hook Ancelotti sent off for not controlling his bench, Gabriel and Estevao in Brazil's defeat by Japan, 192 behind), Small Ben (height and the fight; hook Dias handball, Isak blank while Gyokeres scored two pens, Osula cameo), Justin (hook Haaland's goal and assist v his 2 in GW10, Odegaard, 21 behind; apartheid line not used, ran 13 Nov and no fresh angle), Marcus (kneejerk/Elanga and Jobacus/Catholic; hook Elanga's assist for Sweden, 17 behind). Passed over: Edward's luck line on Marcus (Marcus piece used kneejerk), Big Ben's Bruno and ball-knowledge lines (Bruno in the news item, ran recently), Big Ben's self-roast (no hook), Robert pint line (no hook), Small Ben 21-on-bench (no matchday). Edward and Big Ben no piece. Not used: Rice defending White over Wembley boos (BBC) - space; Robert's Wilson possibly in Wales side but could not confirm it is the same Wilson. Gaps quoted from step 1's public.json table as GW10 is final."
   }
  ]
 }
