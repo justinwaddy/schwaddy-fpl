@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-12-strand-larsen-carabao-cup-brace",
-      "ts": "2026-09-12T08:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Strand Larsen scored twice in Tuesday's Carabao Cup win over Middlesbrough, per Crystal Palace's own match report, strengthening his case to lead the line at home to Ipswich today with Mateta still out - a firmer position than last week's bench role behind Nketiah, though no permitted outlet has published today's confirmed XI yet.",
-      "url": "https://www.cpfc.co.uk/news/match-reports/match-report-highlights-crystal-palace-middlesbrough-september-2026/"
-    },
-    {
       "id": "2026-09-12-strand-larsen-confirmed-nketiah-fails-test",
       "ts": "2026-09-12T21:20 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "mine",
       "text": "Gvardiol (yours) played for Croatia in their 2-1 Nations League defeat at Wembley on Thursday, per Sky Sports' report, five days after coming off at half-time at Forest with a knock. The model still reads him at 0.59 availability with a 75% flag; the fitness worry looks over, though whether Maresca starts him is a separate question.",
       "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
+    },
+    {
+      "id": "2026-11-14-konsa-out-white-england",
+      "ts": "2026-11-14T09:30 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Ezri Konsa, the free agent the model ranks first among defenders, is out of both England Nations League games: ESPN says he missed Croatia and is listed unavailable for Spain on Sunday, with the FA saying he is on his own programme. ESPN's predicted England XI for Spain has Ben White (yours) at right-back, so the injury case behind swapping White for Konsa is now the other way round.",
+      "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-15T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Permitted-outlet searches returned only items already covered (Schade shoulder with no follow-up diagnosis, Haaland fit per City, Liverpool forward injuries). Not in the starters window. Nothing published."
-    },
     {
       "ts": "2026-10-15T21:05 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-13T22:20 UTC",
       "published": 0,
       "note": "Evening check, international break. Searches on White, Konsa, Haaland, Gvardiol, Barcola, Marmoush, Le Fee, Delap, Brighton/Hull, Arsenal injuries and Man Utd/Pochettino returned only older items or non-permitted outlets (Konsa's reported knock on England duty is only on sportsmole/fantasy sites). Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-14T09:30 UTC",
+      "published": 1,
+      "note": "Led with ESPN on Konsa missing both England games (Croatia, Spain) while its predicted England XI has White at right-back; claim 1 (Konsa for White) dropped to rank 3, low. Club searches on Haaland, Gvardiol, Barcola, Marmoush, Brighton/Hull/Leeds, Neto, Tavernier, Cunha, Le Fee and Delap returned only older items. Not in starters window."
     }
   ]
 }

@@ -1,34 +1,11 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-13T22:20 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The change this run is Gvardiol playing for Croatia at Wembley on Thursday, which takes the injury case out of the Jacquet swap, so it drops to last; Konsa for White now leads. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-14T09:30 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The change this run is Konsa: ESPN has him out of both England games while White is in its predicted England XI, so the model's top swap drops to third and Delap for Gonzalo leads. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
-      "pos": "DEF",
-      "add": {
-        "name": "Konsa",
-        "code": "199798",
-        "club": "ARS"
-      },
-      "drop": {
-        "name": "White",
-        "code": "198869",
-        "club": "ARS"
-      },
-      "why": "Sky Sports' piece on his August move says Konsa went straight into the Arsenal team, partly because Ben White has a questionable fitness record; White's availability has slipped to 0.57 and he is the weakest defender in the squad. Konsa was reported carrying a knock on England duty this week, but no permitted outlet has said it threatens the Newcastle game.",
-      "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gain on the board; agreeing.",
-      "confidence": "medium",
-      "sources": [
-        {
-          "title": "Ezri Konsa: Why Arsenal signed Aston Villa's top defender for GBP55m despite having so many defenders",
-          "url": "https://www.skysports.com/football/news/13578303/ezri-konsa-why-arsenal-signed-aston-villas-top-defender-for-lb55m-despite-having-so-many-defenders"
-        }
-      ]
-    },
-    {
-      "rank": 2,
       "pos": "FWD",
       "add": {
         "name": "Delap",
@@ -51,7 +28,7 @@
       ]
     },
     {
-      "rank": 3,
+      "rank": 2,
       "pos": "MID",
       "add": {
         "name": "E.Le Fée",
@@ -67,6 +44,33 @@
       "model": "Model has Le Fee 19.3 next5 against Barcola 12.7; following it cautiously, since Barcola's number reflects a short record rather than any reported problem.",
       "confidence": "low",
       "sources": []
+    },
+    {
+      "rank": 3,
+      "pos": "DEF",
+      "add": {
+        "name": "Konsa",
+        "code": "199798",
+        "club": "ARS"
+      },
+      "drop": {
+        "name": "White",
+        "code": "198869",
+        "club": "ARS"
+      },
+      "why": "ESPN reports Konsa was ruled out of England's win over Croatia and is still listed unavailable for Spain on Sunday, after a quad problem that also pulled him out of the October camp; the FA says he is on his own programme. White, by contrast, is in ESPN's predicted England XI at right-back, so his 0.57 availability looks stale. Claim only if Konsa is back in Arsenal training next week.",
+      "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gap on the board, but it cannot see Konsa's international-break injury or White's place in England's predicted XI, so I am overruling the ranking and moving it down.",
+      "confidence": "low",
+      "sources": [
+        {
+          "title": "Spain vs. England: TV channel, kick-off time, team news, predicted line-ups",
+          "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+        },
+        {
+          "title": "Ezri Konsa ruled out of England's clash with Croatia",
+          "url": "https://www.espn.com/soccer/story/_/id/50441308/ezri-konsa-england-squad-marc-guehi-james-hill-tuchel"
+        }
+      ]
     },
     {
       "rank": 4,
@@ -827,12 +831,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-15T21:05 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "No change: no new permitted-outlet news altered any claim; carried forward."
-    },
-    {
       "ts": "2026-10-16T08:15 UTC",
       "gw": 7,
       "claims": 5,
@@ -1185,6 +1183,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. Added a Sky Sports source to Konsa-for-White and noted the reported England knock; no permitted-outlet news on any other add or drop."
+    },
+    {
+      "ts": "2026-11-14T09:30 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Reordered: Konsa ruled out of England v Croatia and unavailable v Spain (ESPN), White in ESPN's predicted England XI, so Konsa-for-White drops from 1 to 3 at low; Delap and Le Fee move up."
     }
   ]
 }
