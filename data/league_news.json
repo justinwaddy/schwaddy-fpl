@@ -1,37 +1,6 @@
 {
- "generated": "2026-11-13T23:42 UTC",
+ "generated": "2026-11-14T08:43 UTC",
  "items": [
-  {
-   "id": "2026-11-03-newcastle-jaissle",
-   "ts": "2026-11-03T07:56",
-   "kind": "news",
-   "text": "Newcastle were jeered off again after losing at home to Everton, and BBC Sport note nobody in the Premier League has lost more home games in 2026 (seven) and that they have gone 14 home league games without a clean sheet, a club record. Hornicek let a routine shot squirm under him for the winner. Small Ben's Osula plays for a side Jamie Carragher calls flat and boring at home.",
-   "source": {
-    "title": "Jeers again as home woes continue - Jaissle has big problems at Newcastle",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo"
-   }
-  },
-  {
-   "id": "2026-11-03-edward-two-clear",
-   "ts": "2026-11-03T22:46",
-   "kind": "opinion",
-   "text": "Edward went from 21 behind to two clear in a single gameweek, on the back of Verbruggen, Barry, Jackson and an Everton spine that keeps turning up, and managed it while leaving 18 on the bench. Return of the Djedi is a grand name for a man holding first place by a margin one Pickford howler could undo, and the Force has not yet been seen to help anybody with a two-point lead.",
-   "source": null
-  },
-  {
-   "id": "2026-11-03-justin-first-to-third",
-   "ts": "2026-11-03T22:46",
-   "kind": "opinion",
-   "text": "Justin started the gameweek in first and finished it twelve behind in third, on 31, with Haaland on 2 and Gyokeres on 1 up front. The two most famous strikers on the squad sheet gave him three points between them, which is roughly what a man gets for spending the week confident about his attack.",
-   "source": null
-  },
-  {
-   "id": "2026-11-03-robert-pint",
-   "ts": "2026-11-03T22:46",
-   "kind": "opinion",
-   "text": "Robert was given a full pint last week and left it. This week he was given eleven players and a whole Saturday and finished on 17, 165 behind the top, so the pattern is at least consistent: whatever is put in front of him, he declines to see it through.",
-   "source": null
-  },
   {
    "id": "2026-11-03-marcus-two-good-games",
    "ts": "2026-11-03T22:46",
@@ -692,16 +661,49 @@
    "kind": "opinion",
    "source": null,
    "text": "A panel ruled this week that Jurrien Timber should have given away a penalty for pulling Isak's shirt at Anfield. He got away with it, and tonight he scored his first two goals for his country, in a Nations League rout worth nothing whatsoever to Edward. That is the leader's season in miniature: the breaks land when they count, the goals land when they do not, and he is still 17 clear. And somehow it is Marcus the league calls lucky."
+  },
+  {
+   "id": "2026-11-14-wirtz-germany",
+   "ts": "2026-11-14T08:43",
+   "kind": "news",
+   "text": "Florian Wirtz scored as Germany won 3-1 in Serbia in the Nations League last night, BBC Sport reports, clipping the ball over Vanja Milinkovic-Savic in the 14th minute and bundling it in as it came back off him. Serbia finished with nine men, and it is only Jurgen Klopp's second win in five games as Germany manager. Wirtz is Big Ben's, and so is Kai Havertz, who led the line until he made way for Niclas Füllkrug on 74 minutes without scoring. Germany host the Netherlands on Monday, a squad with Edward's Timber and Verbruggen and Big Ben's own Van Hecke in it.",
+   "source": {
+    "title": "Wirtz scores as Germany beat nine-man Serbia",
+    "url": "https://www.bbc.co.uk/sport/football/live/cq62ypp785rmt"
+   }
+  },
+  {
+   "id": "2026-11-14-marmoush-egypt",
+   "ts": "2026-11-14T08:43",
+   "kind": "news",
+   "text": "Omar Marmoush scored as Egypt beat Malawi 5-0 in their Afcon 2027 qualifier last night, BBC Sport reports, one of three first-half goals in Ali Maher's first game in charge before Mohamed Salah added two late on. Marmoush is Justin's, and it is the kind of evening Justin gets nothing for: the next one that counts is Tottenham's home game with Ipswich on 21 November.",
+   "source": {
+    "title": "Salah scores twice as Egypt and Nigeria win Afcon 2027 qualifiers",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cw1md9jx2r3po"
+   }
+  },
+  {
+   "id": "2026-11-14-barcola-france",
+   "ts": "2026-11-14T08:43",
+   "kind": "news",
+   "text": "Bradley Barcola started for France on Thursday night as they were beaten 3-1 by Italy in Milan in the Nations League, according to Liverpool's own round-up of their players on international duty. Barcola is Justin's, which makes two bad nights in a row for him this break: the following evening the Netherlands put seven past his reserve keeper, Tzolakis.",
+   "source": {
+    "title": "Internationals round-up: Florian Wirtz scores, Gakpo meets Tsimikas and more",
+    "url": "https://www.liverpoolfc.com/news/internationals-round-up-florian-wirtz-scores-gakpo-meets-tsimikas-and-more"
+   }
+  },
+  {
+   "id": "2026-11-14-pochettino-shape",
+   "ts": "2026-11-14T08:43",
+   "kind": "news",
+   "text": "Sky Sports has gone back through every Mauricio Pochettino side from Southampton to the USA to work out what Manchester United will look like, and expects a 4-2-3-1 much like Michael Carrick's, with a high line that could lean on Leny Yoro's recovery speed at centre-back. The harder question it asks is whether Bruno Fernandes, at 32, still has the legs to run beyond a striker the way Dele Alli did for Harry Kane, in a team that ranks 19th in the league for distance covered. Yoro is Robert's. Bruno is Big Ben's, and so, in effect, is the question.",
+   "source": {
+    "title": "Mauricio Pochettino to Man Utd: What does a Pochettino team look like and how will he set up struggling Red Devils?",
+    "url": "https://www.skysports.com/football/news/13611443/mauricio-pochettino-to-man-utd-what-does-a-pochettino-team-look-like-and-how-will-he-set-up-struggling-red-devils"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-22T07:55",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, no fixtures. Led with Saka's quad injury at Bayern (BBC), then Rice's equaliser, Fernandes v Carrick after Como, Chelsea's back three. No roast suggestions used (morning run, no opinion)."
-  },
   {
    "ts": "2026-10-22T22:50",
    "news": 0,
@@ -1114,6 +1116,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Netherlands 7-0 Greece through the league's eyes (Timber two goals and Verbruggen clean sheet for Edward, Justin's Tzolakis conceded seven for Greece, Big Ben's van Hecke started, Small Ben's Gakpo off at 62 without scoring, Robert's Roefs unused; BBC), Pochettino confirmed by United to June 2029 with Alderweireld's 'follow his plan' warning (Big Ben, Marcus, Justin, Robert; BBC). Opinion: Justin (apartheid line; hook his reserve keeper conceding seven while Edward's kept a clean sheet, 21 behind), Small Ben (height and the upcoming fight; hook Gakpo the only Dutch front three not to score, 73 behind), Edward (luck line on Marcus turned on the leader; hook Timber's KMI-panel let-off and two goals that count for nothing, 17 clear). Passed over: Robert's hairline/pint/no-transfers lines (Roefs unused on the Dutch bench was too thin a hook after three straight nights), Big Ben's Bruno and ball-knowledge lines (Pochettino covered as news; ran 11 and 12 Nov), Marcus's kneejerk and Jobacus/priest lines (no fresh football hook tonight), Small Ben's 21-on-the-bench line (no matchday), Big Ben's self-roast (no new hook). Not used: Wirtz's goal for Germany and Marmoush's for Egypt - no permitted report read on Wirtz, Marmoush left out for space. Gaps quoted from step 1's public.json table as GW10 is final."
+  },
+  {
+   "ts": "2026-11-14T08:43",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no Premier League fixtures today (GW11 starts 21 Nov). Reported: Wirtz scores in Germany's 3-1 win in Serbia, Havertz started and blanked, Germany v Netherlands Monday (Big Ben, Edward; BBC), Marmoush scores in Egypt 5-0 Malawi (Justin; BBC), Barcola started in France's 3-1 defeat by Italy (Justin; liverpoolfc.com), Sky's Pochettino tactics piece on Yoro's high line and whether Bruno has the legs (Robert, Big Ben; Sky). Skipped: Pochettino's tearful USA farewell (fourth Pochettino item in three days, folded into nothing), Kudus's corner for Ghana's opener (12 Nov, minor), Scotland 2-1 North Macedonia and England U21s (no league players involved), Guardian unreadable from here. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
