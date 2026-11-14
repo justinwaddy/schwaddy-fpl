@@ -1,22 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-12-strand-larsen-confirmed-nketiah-fails-test",
-      "ts": "2026-09-12T21:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Confirmed: Strand Larsen leads the line again for Palace against Ipswich this afternoon, with Tyrick Mitchell at wing-back - Crystal Palace's own team news has Nketiah failing his pre-match fitness test after 'we knew he was a doubt', resolving this morning's open question in Strand Larsen's favour.",
-      "url": "https://www.cpfc.co.uk/news/first-team/team-news-palace-three-changes-ipswich/"
-    },
-    {
-      "id": "2026-09-12-barcola-back-to-back-starts",
-      "ts": "2026-09-12T21:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Barcola starts for Liverpool against Fulham this afternoon, his second start in four days after Tuesday's Champions League appearance against Atletico - Liverpool's own site confirms it, with Iraola turning to him again on the left. The model still has him buried at avail 0.26 and next5 3.5 off zero career games in its sample, well behind what two straight starts for a fit forward should be worth.",
-      "url": "https://www.liverpoolfc.com/news/confirmed-liverpool-line-v-fulham-9"
-    },
-    {
       "id": "2026-09-13-fernandez-pardo-close-to-start",
       "ts": "2026-09-13T09:15 UTC",
       "mine": false,
@@ -319,14 +303,25 @@
       "scope": "free",
       "text": "Ezri Konsa, the free agent the model ranks first among defenders, is out of both England Nations League games: ESPN says he missed Croatia and is listed unavailable for Spain on Sunday, with the FA saying he is on his own programme. ESPN's predicted England XI for Spain has Ben White (yours) at right-back, so the injury case behind swapping White for Konsa is now the other way round.",
       "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+    },
+    {
+      "id": "2026-11-14-konsa-fit-sky",
+      "ts": "2026-11-14T22:15 UTC",
+      "mine": false,
+      "scope": "free",
+      "text": "Sky Sports' Spain v England preview says free agent Ezri Konsa was rested against Croatia, seems fully fit and will almost certainly be recalled in Madrid on Sunday, which contradicts the knee-injury reports this morning's headline relied on. White (yours) is in a straight fight with Djed Spence for right-back and came off the bench against Croatia. Sunday's teamsheet settles it; Konsa-for-White goes back to the top of the claims.",
+      "url": "https://www.skysports.com/football/news/13612238/spain-vs-england-james-trafford-set-to-replace-jordan-pickford-as-goalkeeper-and-how-does-thomas-tuchel-stop-lamine-yamal"
+    },
+    {
+      "id": "2026-11-14-barcola-starts-france",
+      "ts": "2026-11-14T22:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Barcola (yours) started for France in their 3-1 defeat in Italy, alongside Liverpool team-mate Jeremy Jacquet, per the Premier League's internationals round-up. He is fit going into Pochettino's first Man Utd game at Anfield on 22 November, which the model's 12.7 next5 for him does not reflect.",
+      "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-15T21:05 UTC",
-      "published": 0,
-      "note": "Evening check. Permitted-outlet searches returned only items already covered (Schade shoulder with no diagnosis from Brentford/Premier League, Haaland fit and scored at Liverpool per Man City). Not in the starters window. Nothing published."
-    },
     {
       "ts": "2026-10-16T08:15 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-14T09:30 UTC",
       "published": 1,
       "note": "Led with ESPN on Konsa missing both England games (Croatia, Spain) while its predicted England XI has White at right-back; claim 1 (Konsa for White) dropped to rank 3, low. Club searches on Haaland, Gvardiol, Barcola, Marmoush, Brighton/Hull/Leeds, Neto, Tavernier, Cunha, Le Fee and Delap returned only older items. Not in starters window."
+    },
+    {
+      "ts": "2026-11-14T22:15 UTC",
+      "published": 2,
+      "note": "Led with Sky Sports' Spain v England preview saying Konsa was rested and looks fully fit (contradicting the ESPN/PL knee reports), plus the PL internationals round-up showing Barcola started for France. Searches on Haaland, Odegaard/White, Delap and Sunderland/Le Fee found nothing new at permitted outlets beyond Xhaka's calf (not his player). Not in starters window."
     }
   ]
 }

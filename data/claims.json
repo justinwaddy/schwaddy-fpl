@@ -1,11 +1,42 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-14T09:30 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. The change this run is Konsa: ESPN has him out of both England games while White is in its predicted England XI, so the model's top swap drops to third and Delap for Gonzalo leads. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-14T22:15 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Sky Sports now says Konsa is fit and likely to start for England on Sunday, so the model's top swap (Konsa for White) is back at first; Sunday's teamsheet will confirm or undo that. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
+      "pos": "DEF",
+      "add": {
+        "name": "Konsa",
+        "code": "199798",
+        "club": "ARS"
+      },
+      "drop": {
+        "name": "White",
+        "code": "198869",
+        "club": "ARS"
+      },
+      "why": "Sky Sports' Saturday preview of Spain v England says Konsa was rested against Croatia, seems fully fit and will almost certainly be recalled, contradicting ESPN and the Premier League, which reported a knee injury. White came off the bench against Croatia and Sky calls right-back a straight shoot-out with Djed Spence. Back to first on the model's largest gain; if Konsa misses Sunday, demote it.",
+      "model": "Model has Konsa 18.0 next5 at full availability against White's 10.5 at 0.57, a +7.5 gain and its top swap; agreeing again now Sky says Konsa is fit.",
+      "confidence": "medium",
+      "sources": [
+        {
+          "title": "Spain vs England: James Trafford set to replace Jordan Pickford as goalkeeper - but how does Thomas Tuchel stop Lamine Yamal?",
+          "url": "https://www.skysports.com/football/news/13612238/spain-vs-england-james-trafford-set-to-replace-jordan-pickford-as-goalkeeper-and-how-does-thomas-tuchel-stop-lamine-yamal"
+        },
+        {
+          "title": "Internationals: How EVERY Premier League club's stars are performing",
+          "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
+        },
+        {
+          "title": "Spain vs. England: TV channel, kick-off time, team news, predicted line-ups",
+          "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+        }
+      ]
+    },
+    {
+      "rank": 2,
       "pos": "FWD",
       "add": {
         "name": "Delap",
@@ -28,7 +59,7 @@
       ]
     },
     {
-      "rank": 2,
+      "rank": 3,
       "pos": "MID",
       "add": {
         "name": "E.Le Fée",
@@ -40,35 +71,13 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "Le Fee is an established Sunderland starter the model has fully available. But Barcola is a marquee Liverpool signing with only 8 career appearances in the data, exactly the case where the model underrates; no permitted outlet has said he is out of the XI, so this is a low-confidence swap.",
+      "why": "Le Fee is an established Sunderland starter the model has fully available, and scored the winner against Chelsea. But Barcola is a marquee Liverpool signing who started for France this week, per the Premier League, so he is fit; the model underrates him on only 8 career appearances. Low confidence.",
       "model": "Model has Le Fee 19.3 next5 against Barcola 12.7; following it cautiously, since Barcola's number reflects a short record rather than any reported problem.",
-      "confidence": "low",
-      "sources": []
-    },
-    {
-      "rank": 3,
-      "pos": "DEF",
-      "add": {
-        "name": "Konsa",
-        "code": "199798",
-        "club": "ARS"
-      },
-      "drop": {
-        "name": "White",
-        "code": "198869",
-        "club": "ARS"
-      },
-      "why": "ESPN reports Konsa was ruled out of England's win over Croatia and is still listed unavailable for Spain on Sunday, after a quad problem that also pulled him out of the October camp; the FA says he is on his own programme. White, by contrast, is in ESPN's predicted England XI at right-back, so his 0.57 availability looks stale. Claim only if Konsa is back in Arsenal training next week.",
-      "model": "Model has Konsa 18.0 next5 against White 10.5, the biggest gap on the board, but it cannot see Konsa's international-break injury or White's place in England's predicted XI, so I am overruling the ranking and moving it down.",
       "confidence": "low",
       "sources": [
         {
-          "title": "Spain vs. England: TV channel, kick-off time, team news, predicted line-ups",
-          "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
-        },
-        {
-          "title": "Ezri Konsa ruled out of England's clash with Croatia",
-          "url": "https://www.espn.com/soccer/story/_/id/50441308/ezri-konsa-england-squad-marc-guehi-james-hill-tuchel"
+          "title": "Internationals: How EVERY Premier League club's stars are performing",
+          "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
         }
       ]
     },
@@ -831,12 +840,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-16T08:15 UTC",
-      "gw": 7,
-      "claims": 5,
-      "note": "Rank 5 reworded: Barcola started and played 88 minutes v City, so the conditional trigger did not fire; Isak/Gakpo/Szoboszlai still doubts for Brentford. Other claims unchanged."
-    },
-    {
       "ts": "2026-10-16T21:30 UTC",
       "gw": 8,
       "claims": 5,
@@ -1189,6 +1192,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Reordered: Konsa ruled out of England v Croatia and unavailable v Spain (ESPN), White in ESPN's predicted England XI, so Konsa-for-White drops from 1 to 3 at low; Delap and Le Fee move up."
+    },
+    {
+      "ts": "2026-11-14T22:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Reordered: Sky Sports says Konsa rested not injured and likely recalled v Spain, so Konsa-for-White returns from 3 to 1 at medium; Delap and Le Fee drop one. Barcola started for France (PL), cited on claim 3."
     }
   ]
 }
