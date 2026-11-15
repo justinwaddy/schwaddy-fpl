@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-14T22:15 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Sky Sports now says Konsa is fit and likely to start for England on Sunday, so the model's top swap (Konsa for White) is back at first; Sunday's teamsheet will confirm or undo that. Justin is third of six, so waiver priority is mid-queue.",
+  "ts": "2026-11-15T09:15 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November, after the international break. Sky Sports says Konsa is fit and likely to start for England in Spain tonight, so the model's top swap (Konsa for White) stays first; tonight's teamsheet will confirm or undo that. Justin is third of six, so waiver priority is mid-queue.",
   "claims": [
     {
       "rank": 1,
@@ -840,12 +840,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-16T21:30 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "Rolled to GW8 window. Leeds continuity from PL MW7 predicted line-ups moves Muharemovic to rank 1; Stach, Truffert, Anderson claims dropped as GW7 processed."
-    },
-    {
       "ts": "2026-10-17T08:10Z",
       "gw": 8,
       "claims": 5,
@@ -1198,6 +1192,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Reordered: Sky Sports says Konsa rested not injured and likely recalled v Spain, so Konsa-for-White returns from 3 to 1 at medium; Delap and Le Fee drop one. Barcola started for France (PL), cited on claim 3."
+    },
+    {
+      "ts": "2026-11-15T09:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. No new permitted-outlet news on any add or drop; Spain v England tonight is the next data point for Konsa v White."
     }
   ]
 }

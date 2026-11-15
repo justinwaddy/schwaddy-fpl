@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-16T08:15 UTC",
-      "published": 0,
-      "note": "Morning check before GW7 waivers close (10:00 UTC). Only fresh items: Barcola started and played 88 minutes at Anfield (Liverpool FC) and Schade shoulder still undiagnosed (Brentford FC, 10 Oct); both already covered or older than 24h. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-16T21:30 UTC",
       "published": 2,
       "note": "Schade/Schuster Friday presser and Brobbey ready with Isidor doubtful; both from the Premier League Matchweek 7 predicted line-ups. Light starters update."
@@ -621,6 +616,11 @@
       "ts": "2026-11-14T22:15 UTC",
       "published": 2,
       "note": "Led with Sky Sports' Spain v England preview saying Konsa was rested and looks fully fit (contradicting the ESPN/PL knee reports), plus the PL internationals round-up showing Barcola started for France. Searches on Haaland, Odegaard/White, Delap and Sunderland/Le Fee found nothing new at permitted outlets beyond Xhaka's calf (not his player). Not in starters window."
+    },
+    {
+      "ts": "2026-11-15T09:15 UTC",
+      "published": 0,
+      "note": "International break, Sunday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya), Brighton/Hull, Spurs/Fulham, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Chelsea/Bournemouth/Leeds, Forest/Sunderland and general PL injury news found nothing new at permitted outlets beyond items already published; Spain v England (Konsa/White) is tonight. Not in starters window. Nothing published."
     }
   ]
 }
