@@ -1,14 +1,6 @@
 {
   "items": [
     {
-      "id": "2026-09-13-fernandez-pardo-close-to-start",
-      "ts": "2026-09-13T09:15 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Newcastle's deadline-day arrival Matias Fernandez-Pardo, a reported 51m signing from Lille, is \"getting closer to starting\" according to boss Matthias Jaissle ahead of the Leeds trip, having so far only appeared from the bench against Bournemouth. The model still rates him bottom of the free-agent forward board at 0.19 availability and a 2.7-point next5 off zero Premier League games - the same blind spot that undersold Barcola for weeks.",
-      "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-fernandez-pardo-and-hall-latest-ahead-of-leeds-trip"
-    },
-    {
       "id": "2026-09-13-milenkovic-cunha-started-villa-win",
       "ts": "2026-09-13T21:10 UTC",
       "mine": true,
@@ -319,14 +311,17 @@
       "scope": "mine",
       "text": "Barcola (yours) started for France in their 3-1 defeat in Italy, alongside Liverpool team-mate Jeremy Jacquet, per the Premier League's internationals round-up. He is fit going into Pochettino's first Man Utd game at Anfield on 22 November, which the model's 12.7 next5 for him does not reflect.",
       "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
+    },
+    {
+      "id": "2026-11-15-konsa-white-score-madrid",
+      "ts": "2026-11-15T22:15 UTC",
+      "mine": true,
+      "scope": "mine",
+      "text": "Ezri Konsa (free agent) and Ben White (yours) both scored in England's 3-2 win in Spain on Sunday, per ESPN, which settles the Konsa fitness question. The catch for both is William Saliba: ESPN says he is on course to return for Arsenal at Newcastle, and the Premier League's Scout says that puts Konsa's centre-back place in doubt, with right-back - White's position - his other option.",
+      "url": "https://www.espn.com/soccer/story/_/id/50493712/england-spain-43-game-unbeaten-run"
     }
   ],
   "runs": [
-    {
-      "ts": "2026-10-16T21:30 UTC",
-      "published": 2,
-      "note": "Schade/Schuster Friday presser and Brobbey ready with Isidor doubtful; both from the Premier League Matchweek 7 predicted line-ups. Light starters update."
-    },
     {
       "ts": "2026-10-17T08:10 UTC",
       "published": 0,
@@ -621,6 +616,11 @@
       "ts": "2026-11-15T09:15 UTC",
       "published": 0,
       "note": "International break, Sunday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya), Brighton/Hull, Spurs/Fulham, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Chelsea/Bournemouth/Leeds, Forest/Sunderland and general PL injury news found nothing new at permitted outlets beyond items already published; Spain v England (Konsa/White) is tonight. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-15T22:15 UTC",
+      "published": 1,
+      "note": "Led with Konsa and White both scoring in Spain 2-3 England (ESPN), tied to Saliba's expected return at Newcastle (ESPN, PL Scout) squeezing Arsenal's back line. Searches on Haaland (scored v Wales, fit), Man Utd/Pochettino, Liverpool, Brighton/Hull/Leeds, Forest/Delap, Sunderland/Le Fee and general injury news found nothing new at permitted outlets. Not in starters window."
     }
   ]
 }
