@@ -1,30 +1,6 @@
 {
- "generated": "2026-11-14T23:55 UTC",
+ "generated": "2026-11-15T08:43 UTC",
  "items": [
-  {
-   "id": "2026-11-05-robert-mateta-recession",
-   "ts": "2026-11-05T22:45",
-   "kind": "opinion",
-   "text": "Mateta was sent off in the 13th minute, lost his appeal, and is banned for three Palace games, which makes him the fastest-receding thing in Robert's squad, a title that for once is not held by the hairline. The difference is that Mateta at least went through the motions of an appeal. Robert, who has not made a transfer in recent memory, will presumably leave him in the eleven to serve the ban with dignity.",
-   "source": null
-  },
-  {
-   "id": "2026-11-05-justin-gyokeres-sacked",
-   "ts": "2026-11-05T22:45",
-   "kind": "opinion",
-   "text": "Justin finished the gameweek twelve off the lead, and the first thing he did was sack Gyokeres, a striker who gave him 1 point, along with Schade, and bring in Cunha and Gonzalo. It is the move of a man who has looked at a league table and decided the problem is the people in it rather than the one picking them. Cunha's new club hosts Villa next, so the first review of the new regime is already booked.",
-   "source": null
-  },
-  {
-   "id": "2026-11-06-van-dijk-set-pieces",
-   "ts": "2026-11-06T07:42",
-   "kind": "news",
-   "text": "Virgil van Dijk called Liverpool's defending \"not sustainable\" after they led 2-1 in Istanbul and lost 3-2 to Fenerbahce, all three goals coming from set-pieces. It is the first time Liverpool have conceded three or more in three major European games in a row, and they have lost their last two. Small Ben owns Van Dijk, Gakpo and Isak, Big Ben has Wirtz and Jacquet, Marcus has A.Becker and Justin has Barcola, so a leaky Liverpool is nearly everyone's problem.",
-   "source": {
-    "title": "Defensive problems not sustainable - Van Dijk",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6ev3wp1ddy4o"
-   }
-  },
   {
    "id": "2026-11-06-grealish-out-everton-coventry",
    "ts": "2026-11-06T07:42",
@@ -698,16 +674,39 @@
    "kind": "opinion",
    "source": null,
    "text": "Anthony Elanga set up Sweden's opener inside five minutes in Stockholm tonight. Under the Marcus system that is half of the two good games it takes to get yourself signed, so the waiver claim is presumably already written for Friday morning, somewhere between this week's upload to the channel and Sunday's confession, which on current form will run long. He is 17 behind Edward with a week to sleep on it, and Marcus has never once slept on anything."
+  },
+  {
+   "id": "2026-11-15-trafford-madrid",
+   "ts": "2026-11-15T08:43",
+   "kind": "news",
+   "text": "Thomas Tuchel has confirmed James Trafford will start in goal against Spain in Madrid tonight, BBC Sport reports, as he keeps alternating his keepers, so Big Ben's man gets the world champions and Edward's Jordan Pickford gets the bench. Spain are unbeaten in 43 and have not lost at home since 2022; England have won four straight since losing to them at Wembley in September. Declan Rice, Small Ben's, called it the sort of game that brings out the best in them.",
+   "source": {
+    "title": "Spain test will reveal if Tuchel and England have learned World Cup lessons",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq2d9l3e313zo"
+   }
+  },
+  {
+   "id": "2026-11-15-rice-white-contract",
+   "ts": "2026-11-15T08:43",
+   "kind": "news",
+   "text": "Declan Rice has defended Ben White after the Arsenal defender was booed coming off the bench at Wembley in Thursday's win over Croatia, telling BBC Radio 5 Live the Qatar episode was over five years ago and White has an exciting future with England. Rice also says a new Arsenal contract is hopefully on the horizon soon, which would put him alongside Bukayo Saka as the club's top earner. Rice is Small Ben's; White, who took 0 in GW10, is Justin's.",
+   "source": {
+    "title": "White has 'exciting future' despite boos - Rice",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cq0mdzrjn0j2o"
+   }
+  },
+  {
+   "id": "2026-11-15-calvert-lewin-abroad",
+   "ts": "2026-11-15T08:43",
+   "kind": "news",
+   "text": "Seven of England's initial 25 now play abroad, BBC Sport counts this morning, with Kane at Bayern, Bellingham at Real Madrid and Anthony Gordon at Barcelona, where he has three goals and five assists in 15 games. The man in the squad sticking up for the exodus is Edward's Dominic Calvert-Lewin, of Leeds, who says having English players at top European clubs is only good for English football.",
+   "source": {
+    "title": "Respect? Exposure? Why England's star names are going abroad",
+    "url": "https://www.bbc.co.uk/sport/football/articles/ckdd17mq2pvmo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-23T07:55",
-   "news": 4,
-   "opinion": 0,
-   "matchday": true,
-   "note": "morning; led with Dowman/Saka at Arsenal v Everton, Ipswich v Forest tonight, Villa v City, Man Utd v Bournemouth, all from the Guardian weekend preview which I read in full. Web search returned mostly stale or off-list results so I stuck to one well-read source. No roast suggestions used (morning)."
-  },
   {
    "ts": "2026-10-23T22:42",
    "news": 1,
@@ -1120,6 +1119,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Norway 3-1 Wales with Haaland's assist and penalty and Odegaard top of BBC's player rater, a callback to the Wales blueprint item of 13 Nov (Justin; BBC), Portugal 1-4 Denmark with Ruben Dias conceding the handball penalty, Bruno off on 79 for the consolation scorer, Neto off on 64, Osula on for Denmark (Small Ben, Big Ben, Justin; BBC). Opinion: Robert (lack of managing his team, hairline; hook Ancelotti sent off for not controlling his bench, Gabriel and Estevao in Brazil's defeat by Japan, 192 behind), Small Ben (height and the fight; hook Dias handball, Isak blank while Gyokeres scored two pens, Osula cameo), Justin (hook Haaland's goal and assist v his 2 in GW10, Odegaard, 21 behind; apartheid line not used, ran 13 Nov and no fresh angle), Marcus (kneejerk/Elanga and Jobacus/Catholic; hook Elanga's assist for Sweden, 17 behind). Passed over: Edward's luck line on Marcus (Marcus piece used kneejerk), Big Ben's Bruno and ball-knowledge lines (Bruno in the news item, ran recently), Big Ben's self-roast (no hook), Robert pint line (no hook), Small Ben 21-on-bench (no matchday). Edward and Big Ben no piece. Not used: Rice defending White over Wembley boos (BBC) - space; Robert's Wilson possibly in Wales side but could not confirm it is the same Wilson. Gaps quoted from step 1's public.json table as GW10 is final."
+  },
+  {
+   "ts": "2026-11-15T08:43",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no Premier League fixtures today (GW11 still to come, live feed all zeros). Reported: Trafford confirmed to start for England in Madrid tonight over Pickford, England top the group only with a win (Big Ben, Edward, Small Ben's Rice; BBC), Rice defends White over the Wembley boos and says a new Arsenal deal is close (Small Ben, Justin; BBC - held over from last night's run), BBC on England's players abroad with Calvert-Lewin backing it (Edward; BBC). Skipped: Saturday's Nations League results already covered last night (Norway-Wales, Portugal-Denmark, Sweden-Bosnia, Japan-Brazil), NI 1-0 Ukraine and Austria 1-0 Ireland (no league players found), Pochettino background pieces (enough Pochettino this week). Searches returned mainly aggregators and old seasons; sourced from BBC pages read directly. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
