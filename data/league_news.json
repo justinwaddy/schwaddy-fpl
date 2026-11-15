@@ -1,57 +1,6 @@
 {
- "generated": "2026-11-15T08:43 UTC",
+ "generated": "2026-11-15T23:42 UTC",
  "items": [
-  {
-   "id": "2026-11-06-grealish-out-everton-coventry",
-   "ts": "2026-11-06T07:42",
-   "kind": "news",
-   "text": "Jack Grealish will not be available for Everton against Coventry tonight at 20:00 UTC, David Moyes confirmed on Thursday, with the on-loan City midfielder still sidelined after a breach of club discipline and last seen in the 17 October defeat by Chelsea. Moyes would not give a plan for his return. Edward (Tarkowski, Barry, Pickford), Big Ben (Branthwaite) and Marcus (Dewsbury-Hall) all have Everton players going out tonight.",
-   "source": {
-    "title": "Grealish unavailable again for Everton",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cm79p020d9yvo"
-   }
-  },
-  {
-   "id": "2026-11-06-emery-villa-contract",
-   "ts": "2026-11-06T07:42",
-   "kind": "news",
-   "text": "Unai Emery is close to agreeing a new Aston Villa contract after talks with the club's hierarchy on Wednesday, with the length and finances still being settled. The extension would give him even more say over Villa's long-term development. Edward (Jackson, Manzambi), Small Ben (Suzuki) and Big Ben (Konsa) all hold Villa players, none of whom will mind the man picking the team staying put.",
-   "source": {
-    "title": "Emery close to agreeing new Aston Villa contract",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cw99zde82nmno"
-   }
-  },
-  {
-   "id": "2026-11-06-xi-2000",
-   "ts": "2026-11-06T19:07",
-   "kind": "news",
-   "text": "Team news, Everton v Coventry (20:00): Edward has Pickford, Tarkowski and Barry all starting. Marcus has Dewsbury-Hall starting. Small Ben has Mykolenko starting. Big Ben has Branthwaite starting; Coventry's sheet was not available, so Awoniyi is unconfirmed.",
-   "source": {
-    "title": "Everton Team Revealed To Take On Coventry",
-    "url": "https://www.evertonfc.com/news/2026/november/06/everton-team-revealed-to-take-on-coventry/"
-   }
-  },
-  {
-   "id": "2026-11-06-edward-leads",
-   "ts": "2026-11-06T23:50",
-   "kind": "opinion",
-   "text": "Return of the Djedi led by 2 this morning and leads by 14 tonight, and Edward is already carrying himself like the council has asked him to take a seat. Barry did the work, Tarkowski turned up for it, and the man who picked them has eight more to come tomorrow and the posture of someone who has never had to defend a lead before.",
-   "source": null
-  },
-  {
-   "id": "2026-11-06-bigben-friday",
-   "ts": "2026-11-06T23:50",
-   "kind": "opinion",
-   "text": "Big Ben's Friday was Branthwaite's 3 points and a Coventry striker who spent 86 minutes offside for 2 more, which makes the best news of his night a defender being cleared to play. Ten of his eleven kick off tomorrow, so he gets to be a different man, which is the hope he has had every Friday since September.",
-   "source": null
-  },
-  {
-   "id": "2026-11-06-smallben-rayan",
-   "ts": "2026-11-06T23:50",
-   "kind": "opinion",
-   "text": "Small Ben took 8 from Mykolenko, signed Rayan off the free agents the same day, and presumably felt the 62-point gap to the top shrink by a waiver claim's worth. It is a lot of ambition from a man whose title chances are measured in the same unit as his height.",
-   "source": null
-  },
   {
    "id": "2026-11-06-robert-clean-sheet",
    "ts": "2026-11-06T23:50",
@@ -704,16 +653,57 @@
     "title": "Respect? Exposure? Why England's star names are going abroad",
     "url": "https://www.bbc.co.uk/sport/football/articles/ckdd17mq2pvmo"
    }
+  },
+  {
+   "id": "2026-11-15-spain-england-white-trafford",
+   "ts": "2026-11-15T23:42",
+   "kind": "news",
+   "text": "England beat Spain 3-2 in Madrid tonight to end their 43-game unbeaten run and top the Nations League group, BBC Sport reports, and Justin's Ben White, booed at Wembley on Thursday, scored the third on his first England start since 2022. Big Ben's James Trafford then saved it with a late double save after Elliot Anderson's red card. Small Ben's Declan Rice took the corner Konsa headed in. Edward's Pedro Porro came on for Spain after 20 minutes, while his Pickford and Gibbs-White sat on England's bench, and Justin's David Raya was an unused Spain sub.",
+   "source": {
+    "title": "England cling on to stun world champions Spain in thriller",
+    "url": "https://www.bbc.co.uk/sport/football/live/c65y1lrepr5zt"
+   }
+  },
+  {
+   "id": "2026-11-15-belgium-italy-doku",
+   "ts": "2026-11-15T23:42",
+   "kind": "news",
+   "text": "Jeremy Doku beat several defenders and slotted past his Manchester City team-mate Gianluigi Donnarumma as Belgium came from behind to beat Italy 4-1 tonight and take the Nations League quarter-final place, BBC Sport reports. Doku is Edward's and Donnarumma is Small Ben's. Marcus had a defender on each side, Maxim De Cuyper starting for Belgium and Riccardo Calafiori for Italy.",
+   "source": {
+    "title": "Belgium come back to beat Italy to quarters spot",
+    "url": "https://www.bbc.co.uk/sport/football/live/cmx27n430548t"
+   }
+  },
+  {
+   "id": "2026-11-15-op-justin-white",
+   "ts": "2026-11-15T23:42",
+   "kind": "opinion",
+   "text": "Ben White was booed coming on at Wembley on Thursday and scored against the world champions on Sunday, which is more than he managed for Justin in GW10, when he returned 0. David Raya, also Justin's, watched him do it from Spain's bench. So Justin now has players scoring against each other in matches that count for nothing, and remains 21 behind Edward in the one that does, which is at least a consistent philosophy.",
+   "source": null
+  },
+  {
+   "id": "2026-11-15-op-bigben-trafford",
+   "ts": "2026-11-15T23:42",
+   "kind": "opinion",
+   "text": "For once the man who bailed Big Ben out was not Bruno. James Trafford made two saves in about two seconds as Spain threw everything at England late on, and Edward's Pickford watched the lot from the bench, the one corner of the leader's life that has gone wrong this month. None of it scores, of course. Big Ben is still 66 off the top, an Arsenal fan who has gone the whole break being rescued by a keeper from Leeds, and he will not see the irony, because seeing things is not really his department.",
+   "source": null
+  },
+  {
+   "id": "2026-11-15-op-smallben-donnarumma",
+   "ts": "2026-11-15T23:42",
+   "kind": "opinion",
+   "text": "Gianluigi Donnarumma was beaten tonight by his own club team-mate, Doku running through half of Italy and slotting it past him like it was training. Last night Ruben Dias handballed Denmark a penalty. Small Ben's players are now losing fights to people on their own side, which is not ideal preparation for a man with a real one coming up and, on the evidence of his squad, a corner team that will be throwing the towel in from somewhere around knee height. Rice took a decent corner in Madrid. Someone should tell Small Ben; he will not have seen it over the crowd.",
+   "source": null
+  },
+  {
+   "id": "2026-11-15-op-marcus-belgium",
+   "ts": "2026-11-15T23:42",
+   "kind": "opinion",
+   "text": "Marcus had De Cuyper starting for Belgium and Calafiori starting for Italy, in the same match, so whoever won he was always going to be on the winning side, and the league still pretends this is skill. Belgium won 4-1; one half of the bet came in and the other conceded four. A Catholic who hedges a Nations League group decider will have lit a candle for each of them before kick-off and will be back in the confessional by Wednesday, explaining to the priest why he only feels guilty about one.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-23T22:42",
-   "news": 1,
-   "opinion": 4,
-   "matchday": true,
-   "note": "Evening wrap, thin night: only Ipswich v Forest played (1-1), so the wrap leans on the table with nine fixtures still to come. Led with the ESPN report. Used archive: Ben D on Ben C's height (Small Ben), Edward on Marcus relying on luck, Ben D/Edward on Robert's hairline. Passed over: Ben D's two submissions about himself and Justin and the Justin/Marcus one and Justin/Robert pint line - nothing in tonight's football to hang them on (or they sit outside what I would write unprompted); Ben D bias line waits for Arsenal's game. Delap and Haramball avoided. Flops rewritten via reflop.py. Note: ESPN page header and shot map disagreed on scorers; used the header, which matches the live feed (Williams 8, Enciso 10)."
-  },
   {
    "ts": "2026-10-24T07:42",
    "news": 4,
@@ -1126,6 +1116,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no Premier League fixtures today (GW11 still to come, live feed all zeros). Reported: Trafford confirmed to start for England in Madrid tonight over Pickford, England top the group only with a win (Big Ben, Edward, Small Ben's Rice; BBC), Rice defends White over the Wembley boos and says a new Arsenal deal is close (Small Ben, Justin; BBC - held over from last night's run), BBC on England's players abroad with Calvert-Lewin backing it (Edward; BBC). Skipped: Saturday's Nations League results already covered last night (Norway-Wales, Portugal-Denmark, Sweden-Bosnia, Japan-Brazil), NI 1-0 Ukraine and Austria 1-0 Ireland (no league players found), Pochettino background pieces (enough Pochettino this week). Searches returned mainly aggregators and old seasons; sourced from BBC pages read directly. Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-15T23:42",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Spain 2-3 England with White's goal, Trafford's late double save, Rice's corner for Konsa, Porro on for Spain, Pickford/Gibbs-White unused, Raya unused for Spain (Justin, Big Ben, Small Ben, Edward; BBC), Belgium 4-1 Italy with Doku scoring past Donnarumma and De Cuyper v Calafiori (Edward, Small Ben, Marcus; BBC). Opinion: Justin (White booed then scores, 0 in GW10, Raya on Spain bench, 21 behind; apartheid line not used, no fresh angle), Big Ben (Bruno-bails-him-out and ball-knowledge lines turned on Trafford, 66 behind), Small Ben (boxing fight and height; hook Donnarumma beaten by club team-mate, Dias handball), Marcus (luck line and Catholic angle; hook a defender on each side of Belgium v Italy). Passed over: Marcus Spotlight/creepy-priest framing (Spotlight is about child abuse - children are out under rule 4; the Catholic angle was used instead), Jobacus (no hook tonight), Robert's lines (ran last night, no Robert player involved tonight), Big Ben self-roast (no hook), Small Ben 21-on-bench (no matchday), Edward no piece (Doku covered as news). Not used: BBC Palmer red-card explainer (dates in it did not match the fixture list, could not place it). Gaps quoted from step 1's public.json table as GW10 is final."
   }
  ]
 }
