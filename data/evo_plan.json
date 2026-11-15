@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T08:36",
+ "generated": "2026-11-15T15:52",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 4.91,
+   "ep": 4.9,
    "votes": 5
   },
   {
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.921,
    "base": 3.78,
-   "ep": 3.75,
+   "ep": 3.74,
    "votes": 5
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 3.68,
+   "ep": 3.69,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.815,
    "base": 2.82,
-   "ep": 2.77,
+   "ep": 2.76,
    "votes": 4
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 6.01,
+   "gain": 5.89,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 40
+   "borda": 43
   },
   {
    "pos": "DEF",
-   "gain": 3.23,
+   "gain": 3.21,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 22
+   "borda": 23
   },
   {
    "pos": "MID",
-   "gain": 5.18,
+   "gain": 5.38,
    "change": 2,
    "fallback": false,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 35
+   "borda": 36
   },
   {
    "pos": "MID",
-   "gain": 6.35,
+   "gain": 6.4,
    "change": 2,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.2,
+   "gain": 4.26,
    "change": 2,
    "fallback": true,
    "add": {
@@ -378,7 +378,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 17
+   "borda": 16
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

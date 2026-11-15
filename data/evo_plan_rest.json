@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T08:36",
+ "generated": "2026-11-15T15:52",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 4.91,
+   "ep": 4.9,
    "votes": 5
   },
   {
@@ -55,7 +55,7 @@
    "news": "",
    "p_play": 0.921,
    "base": 3.78,
-   "ep": 3.75,
+   "ep": 3.74,
    "votes": 5
   },
   {
@@ -68,7 +68,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 3.68,
+   "ep": 3.69,
    "votes": 4
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.815,
    "base": 2.82,
-   "ep": 2.77,
+   "ep": 2.76,
    "votes": 4
   }
  ],
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 42.03,
+   "gain": 42.01,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 116
+   "borda": 108
   },
   {
    "pos": "DEF",
-   "gain": 24.78,
+   "gain": 23.56,
    "change": 1,
    "fallback": true,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 41
+   "borda": 34
   },
   {
    "pos": "MID",
-   "gain": 36.05,
+   "gain": 36.93,
    "change": 2,
    "fallback": false,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 79
+   "borda": 81
   },
   {
    "pos": "MID",
-   "gain": 27.57,
+   "gain": 28.65,
    "change": 2,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 78
+   "borda": 79
   },
   {
    "pos": "MID",
-   "gain": 34.12,
+   "gain": 34.11,
    "change": 2,
    "fallback": true,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 26.77,
+   "gain": 27.12,
    "change": 2,
    "fallback": true,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 19.61,
+   "gain": 20.09,
    "change": 3,
    "fallback": false,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 19
+   "borda": 20
   },
   {
    "pos": "MID",
-   "gain": 28.16,
+   "gain": 28.72,
    "change": 3,
    "fallback": true,
    "add": {
@@ -478,7 +478,39 @@
   },
   {
    "pos": "MID",
-   "gain": 27.16,
+   "gain": 33.01,
+   "change": 3,
+   "fallback": true,
+   "add": {
+    "id": 155,
+    "code": 448047,
+    "name": "Enzo",
+    "pos": "MID",
+    "team": "MCI",
+    "status": "a",
+    "news": "",
+    "p_play": 0.852,
+    "base": null,
+    "ep": null
+   },
+   "drop": {
+    "id": 428,
+    "code": 430871,
+    "name": "Cunha",
+    "pos": "MID",
+    "team": "MUN",
+    "status": "a",
+    "news": "",
+    "p_play": 0.793,
+    "base": null,
+    "ep": null
+   },
+   "votes": 2,
+   "borda": 15
+  },
+  {
+   "pos": "MID",
+   "gain": 28.36,
    "change": 3,
    "fallback": true,
    "add": {
