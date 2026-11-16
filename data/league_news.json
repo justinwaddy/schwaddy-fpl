@@ -1,33 +1,6 @@
 {
- "generated": "2026-11-15T23:42 UTC",
+ "generated": "2026-11-16T08:42 UTC",
  "items": [
-  {
-   "id": "2026-11-06-robert-clean-sheet",
-   "ts": "2026-11-06T23:50",
-   "kind": "opinion",
-   "text": "Robert has not had a single player kick a ball this gameweek, which for a man who barely touches his squad is the closest he gets to a clean sheet: nothing he picked has had the chance to let him down yet. All eleven go tomorrow, 186 off the lead, and the hairline and the league position can get back to receding in step.",
-   "source": null
-  },
-  {
-   "id": "2026-11-07-everton-coventry",
-   "ts": "2026-11-07T08:55",
-   "kind": "news",
-   "text": "Thierno Barry scored twice as Everton came from behind to beat Coventry 3-1 on Friday night and move up to fifth, with Kiernan Dewsbury-Hall adding a thunderous strike hours after learning he had been left out of Thomas Tuchel's England squad. It is the night Edward's Barry banked his points and Marcus's Dewsbury-Hall banked his, and David Moyes now has two wins in a row to point at.",
-   "source": {
-    "title": "Barry scores twice as Everton fight back to beat Coventry",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cm4g114p9e7go"
-   }
-  },
-  {
-   "id": "2026-11-07-trafford-horrendous",
-   "ts": "2026-11-07T08:55",
-   "kind": "news",
-   "text": "James Trafford says sitting on the fringes at Manchester City last season was \"horrendous\" and that he had to play regularly for his mental wellbeing, which is why he left for Leeds in the summer. Gianluigi Donnarumma, who arrived from Paris St-Germain less than six weeks after City brought Trafford back, is Small Ben's goalkeeper; Trafford is Big Ben's, and Leeds host Tottenham at 12:30 UTC today.",
-   "source": {
-    "title": "'I had to play regularly for my mental wellbeing' - Trafford",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckly00wq495zo"
-   }
-  },
   {
    "id": "2026-11-07-glasner-woodstock",
    "ts": "2026-11-07T08:55",
@@ -701,16 +674,39 @@
    "kind": "opinion",
    "text": "Marcus had De Cuyper starting for Belgium and Calafiori starting for Italy, in the same match, so whoever won he was always going to be on the winning side, and the league still pretends this is skill. Belgium won 4-1; one half of the bet came in and the other conceded four. A Catholic who hedges a Nations League group decider will have lit a candle for each of them before kick-off and will be back in the confessional by Wednesday, explaining to the priest why he only feels guilty about one.",
    "source": null
+  },
+  {
+   "id": "2026-11-16-kroupi-france",
+   "ts": "2026-11-16T08:42",
+   "kind": "news",
+   "text": "Eli Junior Kroupi came off the bench for his second France cap and scored his first goal, slotting in from Rayan Cherki's through ball to make it 2-0 as France beat Turkey in Bordeaux to top their Nations League group, BBC Sport reports. Kroupi is Edward's and Cherki is Robert's, so the cleanest bit of combination play of the break ran between the league's leader and the man 192 points behind him. Edward's Adrien Truffert and Robert's Leny Yoro both sat on the French bench unused.",
+   "source": {
+    "title": "Kroupi scores as France beat Turkey to take top spot",
+    "url": "https://www.bbc.co.uk/sport/football/live/cw30g3p6vd15t"
+   }
+  },
+  {
+   "id": "2026-11-16-trafford-saves-rogers",
+   "ts": "2026-11-16T08:42",
+   "kind": "news",
+   "text": "Big Ben's James Trafford made six saves in Madrid, BBC Sport counts, four of them in the last 12 minutes with England hanging on at 3-2, and its ratings gave him an 8, the same mark as Big Ben's Morgan Rogers, who was kept fairly quiet by Cucurella but still caused Spain problems. When Tuchel went for fresh legs he sent on Edward's Dominic Calvert-Lewin, a striker, on 84 minutes, and Justin's Ben White, the scorer of the winner, made way for Dan Burn on 89.",
+   "source": {
+    "title": "How did England cling on against Spain and what did Tuchel do differently?",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6742l4z91lwo"
+   }
+  },
+  {
+   "id": "2026-11-16-pochettino-anfield",
+   "ts": "2026-11-16T08:42",
+   "kind": "news",
+   "text": "Mauricio Pochettino's USA beat Haiti 6-0 in Miami in his penultimate game in charge, BBC Sport reports, and after Tuesday's second leg he returns to the Premier League with his first Manchester United match away at Liverpool on 22 November. That puts a brand-new manager's first team sheet in front of Marcus's Mbeumo, Justin's Cunha, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko, at Anfield, against a Liverpool side carrying Small Ben's Van Dijk, Gakpo and Isak and Big Ben's Wirtz.",
+   "source": {
+    "title": "United States thrash Haiti in Pochettino's penultimate match",
+    "url": "https://www.bbc.co.uk/sport/football/live/ckm2320nd5j8t"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-24T07:42",
-   "news": 4,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with Saturday injury/team news from the Guardian's predicted lineups (Chelsea, Arsenal, Villa v City, Sesko). Search tool mostly returned stale pieces and bbc/guardian were blocked for it, so read the Guardian pages directly via curl; only that outlet was usable. No roast suggestions used (morning, no opinion)."
-  },
   {
    "ts": "2026-10-24T11:07",
    "news": 1,
@@ -1123,6 +1119,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Spain 2-3 England with White's goal, Trafford's late double save, Rice's corner for Konsa, Porro on for Spain, Pickford/Gibbs-White unused, Raya unused for Spain (Justin, Big Ben, Small Ben, Edward; BBC), Belgium 4-1 Italy with Doku scoring past Donnarumma and De Cuyper v Calafiori (Edward, Small Ben, Marcus; BBC). Opinion: Justin (White booed then scores, 0 in GW10, Raya on Spain bench, 21 behind; apartheid line not used, no fresh angle), Big Ben (Bruno-bails-him-out and ball-knowledge lines turned on Trafford, 66 behind), Small Ben (boxing fight and height; hook Donnarumma beaten by club team-mate, Dias handball), Marcus (luck line and Catholic angle; hook a defender on each side of Belgium v Italy). Passed over: Marcus Spotlight/creepy-priest framing (Spotlight is about child abuse - children are out under rule 4; the Catholic angle was used instead), Jobacus (no hook tonight), Robert's lines (ran last night, no Robert player involved tonight), Big Ben self-roast (no hook), Small Ben 21-on-bench (no matchday), Edward no piece (Doku covered as news). Not used: BBC Palmer red-card explainer (dates in it did not match the fixture list, could not place it). Gaps quoted from step 1's public.json table as GW10 is final."
+  },
+  {
+   "ts": "2026-11-16T08:42",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Kroupi's first France goal off Cherki's pass v Turkey, Truffert and Yoro unused (Edward, Robert; BBC), BBC's Spain-England analysis and ratings - Trafford's six saves, Rogers rated 8, Calvert-Lewin on as a striker, Burn for White (Big Ben, Edward, Justin; BBC), Pochettino's USA beat Haiti 6-0 and his first Man Utd match is at Liverpool on 22 Nov (Marcus, Justin, Big Ben, Robert, Small Ben; BBC). Skipped: Barcola started for France but could not confirm the LIV Barcola is the same player; BBC Palmer red-card explainer (fixtures in it still do not match our list); Monday gossip (Bassey/Collins to United - sourced to off-list outlets); Arsenal summer shortlist piece (old window); Germany v Netherlands and Switzerland v Scotland are tonight. Guardian front page blocked by a JS challenge; used its RSS for headlines, nothing league-relevant beyond what BBC carried. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
