@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-17T08:10 UTC",
-      "published": 0,
-      "note": "Morning check on GW7 deadline day. Searches returned only prior-season pages and no permitted-outlet news newer than what is already published. Nothing published."
-    },
-    {
       "ts": "2026-10-17T21:10 UTC",
       "published": 0,
       "note": "Evening check after GW7 deadline. Searches returned only prior-season pages and no permitted-outlet news newer than already published. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-15T22:15 UTC",
       "published": 1,
       "note": "Led with Konsa and White both scoring in Spain 2-3 England (ESPN), tied to Saliba's expected return at Newcastle (ESPN, PL Scout) squeezing Arsenal's back line. Searches on Haaland (scored v Wales, fit), Man Utd/Pochettino, Liverpool, Brighton/Hull/Leeds, Forest/Delap, Sunderland/Le Fee and general injury news found nothing new at permitted outlets. Not in starters window."
+    },
+    {
+      "ts": "2026-11-16T09:15 UTC",
+      "published": 0,
+      "note": "International break, Monday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya, Saliba/Konsa), Brighton/Hull, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Forest/Sunderland (Delap, Le Fee), Spurs/Fulham/Chelsea/Bournemouth, Leeds and general PL injury news found nothing new at permitted outlets beyond items already published; Zubimendi's Spain knock (not his player) and an ESPN rumour of Liverpool interest in Vuskovic were judged not material. Not in starters window. Nothing published."
     }
   ]
 }

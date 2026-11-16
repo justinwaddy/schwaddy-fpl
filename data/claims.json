@@ -1,8 +1,8 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-15T22:15 UTC",
-  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain tonight, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
+  "ts": "2026-11-16T09:15 UTC",
+  "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain on Sunday, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
   "claims": [
     {
       "rank": 1,
@@ -840,12 +840,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-17T21:10 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "no change; evening searches found no new permitted-outlet news, claims carried forward"
-    },
-    {
       "ts": "2026-10-18T08:20 UTC",
       "gw": 8,
       "claims": 5,
@@ -1198,6 +1192,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. Konsa started and scored v Spain (ESPN), so claim 1 is re-sourced to the result plus Saliba's expected return (ESPN, PL Scout) as the remaining risk; no new permitted-outlet news on other adds or drops."
+    },
+    {
+      "ts": "2026-11-16T09:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. No new permitted-outlet news on any add or drop overnight; Saliba's expected return at Newcastle remains the main risk to claim 1."
     }
   ]
 }
