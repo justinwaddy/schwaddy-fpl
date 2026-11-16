@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-17T21:10 UTC",
-      "published": 0,
-      "note": "Evening check after GW7 deadline. Searches returned only prior-season pages and no permitted-outlet news newer than already published. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-18T08:20 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only the 11 Oct ESPN roundup and already-covered Schade shoulder items; no fresh permitted-outlet news. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-16T09:15 UTC",
       "published": 0,
       "note": "International break, Monday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya, Saliba/Konsa), Brighton/Hull, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Forest/Sunderland (Delap, Le Fee), Spurs/Fulham/Chelsea/Bournemouth, Leeds and general PL injury news found nothing new at permitted outlets beyond items already published; Zubimendi's Spain knock (not his player) and an ESPN rumour of Liverpool interest in Vuskovic were judged not material. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-16T22:15 UTC",
+      "published": 0,
+      "note": "International break, Monday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba), Man Utd/Pochettino/Cunha, Brighton (Vuskovic, Boscagli), Liverpool (Barcola, Jacquet), Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee), Hull/Chelsea/Bournemouth/Leeds and general PL injury news found nothing new at permitted outlets beyond items already published (Barcola and Jacquet featured again for France v Turkiye, per liverpoolfc.com). bbc.co.uk and theguardian.com blocked in search this run. Not in starters window. Nothing published."
     }
   ]
 }

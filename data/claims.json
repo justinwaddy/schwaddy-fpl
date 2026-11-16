@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-16T09:15 UTC",
+  "ts": "2026-11-16T22:15 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain on Sunday, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
   "claims": [
     {
@@ -840,12 +840,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-18T08:20 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "no change; no new permitted-outlet news, claims carried forward"
-    },
-    {
       "ts": "2026-10-18T21:10 UTC",
       "gw": 8,
       "claims": 5,
@@ -1198,6 +1192,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. No new permitted-outlet news on any add or drop overnight; Saliba's expected return at Newcastle remains the main risk to claim 1."
+    },
+    {
+      "ts": "2026-11-16T22:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. No new permitted-outlet news on any add or drop; Pochettino's first game is at Liverpool on 22 November (Sky Sports), no impact on the claims."
     }
   ]
 }
