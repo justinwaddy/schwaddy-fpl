@@ -1,60 +1,6 @@
 {
- "generated": "2026-11-16T08:42 UTC",
+ "generated": "2026-11-16T23:42 UTC",
  "items": [
-  {
-   "id": "2026-11-07-glasner-woodstock",
-   "ts": "2026-11-07T08:55",
-   "kind": "news",
-   "text": "Oliver Glasner says Nottingham Forest had \"too much Woodstock\" and need more military: trust and respect, in his words, are the two values he will not negotiate on. Forest are 19th, winless and goalless at home in the league, and host Manchester City at 17:30 UTC tonight, which is a fixture Edward's Gibbs-White, and everybody holding a City player, will be watching.",
-   "source": {
-    "title": "Forest need balance between Woodstock and military - Glasner",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cwg5jj6nvmnyo"
-   }
-  },
-  {
-   "id": "2026-11-07-jaissle-newcastle",
-   "ts": "2026-11-07T08:55",
-   "kind": "news",
-   "text": "Newcastle were booed off after losing 1-0 at home to Everton on Monday, a fourth defeat in six Premier League games, and Matthias Jaissle admitted he understood the reaction. They are at Fulham at 15:00 UTC today, so Small Ben's Osula goes into it with his side in poor form, while Marcus's King and Justin's Gonzalo are on the home side.",
-   "source": {
-    "title": "Jeers again as home woes continue - Jaissle has big problems at Newcastle",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo"
-   }
-  },
-  {
-   "id": "2026-11-07-xi-1230",
-   "ts": "2026-11-07T12:07",
-   "kind": "news",
-   "text": "Team news, Leeds v Spurs (12:30): Edward has Muharemović, Calvert-Lewin and Pedro Porro all starting. Big Ben has Trafford, Van Hecke and Kudus starting. Justin has Bogle and Marmoush starting. Marcus has Kinsky starting. Robert is hit: Wilson and Solanke are both on the bench.",
-   "source": {
-    "title": "Confirmed line-ups: Leeds vs Spurs",
-    "url": "https://www.tottenhamhotspur.com/news/1184526/confirmed-line-ups-leeds-united-vs-spurs-premier-league-november-2026"
-   }
-  },
-  {
-   "id": "2026-11-07-xi-1500",
-   "ts": "2026-11-07T14:08",
-   "kind": "news",
-   "text": "Team news, 15:00 kick-offs: Newcastle's confirmed eleven is out and Small Ben's Osula starts at Fulham. The Arsenal, Hull and Fulham sheets were not available when this was written, so Edward, Marcus, Robert, Justin, Big Ben and Small Ben's other players at those clubs are not covered yet.",
-   "source": {
-    "title": "Confirmed line-up: Four changes at Fulham",
-    "url": "https://www.newcastleunited.com/en/news/confirmed-line-up-four-changes-at-fulham"
-   }
-  },
-  {
-   "id": "2026-11-07-big-ben-bench",
-   "ts": "2026-11-07T23:55",
-   "kind": "opinion",
-   "text": "Big Ben's eleven has 12 between them tonight while his bench has more, and the loudest of it is Trafford's 10 for Leeds, so the best goalkeeping in the league this gameweek was done by a man watching from the dugout. Havertz gave him 2 and the Arsenal ball knowledge the league keeps saying he lacks, and Petrovic does not kick off until Sunday to find out what he missed.",
-   "source": null
-  },
-  {
-   "id": "2026-11-07-edward-lead",
-   "ts": "2026-11-07T23:55",
-   "kind": "opinion",
-   "text": "Edward began the gameweek 2 clear and is 25 clear tonight with four of his eleven still to play, 16 of it Barry, and the man who explains every other manager's week as luck will have the winter to explain Barry as a long-term conviction. Somebody should ask him in March which of the two it was.",
-   "source": null
-  },
   {
    "id": "2026-11-07-justin-bench",
    "ts": "2026-11-07T23:55",
@@ -704,16 +650,57 @@
     "title": "United States thrash Haiti in Pochettino's penultimate match",
     "url": "https://www.bbc.co.uk/sport/football/live/ckm2320nd5j8t"
    }
+  },
+  {
+   "id": "2026-11-16-germany-five-netherlands",
+   "ts": "2026-11-16T23:42",
+   "kind": "news",
+   "text": "Germany thrashed the Netherlands 5-0 in Berlin tonight, BBC Sport reports, and Big Ben's Florian Wirtz scored two of them, the first after winning the ball himself and firing in from outside the box, the second off a Brajan Gruda cutback. Big Ben's Kai Havertz started up front and went off on 65. The Dutch had Edward's Bart Verbruggen in goal with Edward's Jurrien Timber and Big Ben's own Jan Paul van Hecke in front of him; Small Ben's Cody Gakpo started, and Robert's Robin Roefs was an unused sub. Both sides go through to the quarter-finals.",
+   "source": {
+    "title": "Germany 5-0 Netherlands: Florian Wirtz scores twice in Nations League",
+    "url": "https://www.bbc.co.uk/sport/football/live/cmly7wxld228t"
+   }
+  },
+  {
+   "id": "2026-11-16-greece-serbia",
+   "ts": "2026-11-16T23:42",
+   "kind": "news",
+   "text": "Greece beat Serbia 1-0 to finish third in Germany's group, BBC Sport reports, the goal coming from substitute Giorgos Masouras off a pass from Vangelis Pavlidis. Marcus had Christos Tzolis starting until the 88th minute and Charalampos Kostoulas sent on for Pavlidis after 73, while Justin's Konstantinos Tzolakis sat on the Greek bench. At the other end Big Ben's Djordje Petrovic kept goal for Serbia, who finish the group without a point.",
+   "source": {
+    "title": "Greece 1-0 Serbia - UEFA Nations League",
+    "url": "https://www.bbc.co.uk/sport/football/live/cwdd17q8y4lgt"
+   }
+  },
+  {
+   "id": "2026-11-16-bigben-both-ends",
+   "ts": "2026-11-16T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Big Ben had Wirtz scoring twice for Germany and van Hecke in the Dutch back four he was scoring past, so the 5-0 in Berlin was on his squad sheet at both ends, which he will be describing by Wednesday as a hedge. In St Gallen his McBurnie was booked and hooked before the hour of a 4-0 defeat. And his team is named after Tzolis, who started for Greece tonight and belongs, in this league, to Marcus. Naming your side after another man's player is the purest bit of ball knowledge the league has produced, and he did it on purpose."
+  },
+  {
+   "id": "2026-11-16-edward-dutch-defence",
+   "ts": "2026-11-16T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Bart Verbruggen picked the ball out of his net five times in Berlin tonight, with Jurrien Timber in front of him until Xavi took him off after 72 minutes, which is the first time all season anybody has had the nerve to substitute Edward's defence. Neither of them loses Edward a point, of course, because the international break does not count and he is the one man here who never has to find that out the hard way. He is 17 clear, and the only time his luck runs out is when it does not matter."
+  },
+  {
+   "id": "2026-11-16-smallben-gakpo",
+   "ts": "2026-11-16T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Cody Gakpo was Small Ben's only man on the pitch in Berlin and played 78 minutes of a 5-0 defeat, which from where Small Ben stands is a fair rehearsal for the fight: get in there, take five, and hope somebody in the corner has the sense to stop it. The training camp, on the evidence of the squad, has been the same as the team selection, which is to say none. He is 73 off the top, which on that evidence is roughly where he will finish the fight too: miles behind, and still not tall enough to see the lead."
+  },
+  {
+   "id": "2026-11-16-marcus-greece",
+   "ts": "2026-11-16T23:42",
+   "kind": "opinion",
+   "source": null,
+   "text": "Greece beat Serbia with a goal from a substitute set up by the man Kostoulas was sent on to replace, so the two Marcus players in the stadium were the only two people with nothing to do with it. Tzolis ran about for 88 minutes and is now a man with a Big Ben team named after him and a Marcus contract, which is the most anybody has wanted something Marcus owns. He will spend the week painting Tzolis for Chloe, and it will be the first Marcus decision anybody has ever framed."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-24T11:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "2026-10-24T11:30 slot: Villa and City confirmed XIs found (mancity.com via search; page itself blocked to direct fetch)"
-  },
   {
    "ts": "2026-10-24T13:07",
    "news": 1,
@@ -1126,6 +1113,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Kroupi's first France goal off Cherki's pass v Turkey, Truffert and Yoro unused (Edward, Robert; BBC), BBC's Spain-England analysis and ratings - Trafford's six saves, Rogers rated 8, Calvert-Lewin on as a striker, Burn for White (Big Ben, Edward, Justin; BBC), Pochettino's USA beat Haiti 6-0 and his first Man Utd match is at Liverpool on 22 Nov (Marcus, Justin, Big Ben, Robert, Small Ben; BBC). Skipped: Barcola started for France but could not confirm the LIV Barcola is the same player; BBC Palmer red-card explainer (fixtures in it still do not match our list); Monday gossip (Bassey/Collins to United - sourced to off-list outlets); Arsenal summer shortlist piece (old window); Germany v Netherlands and Switzerland v Scotland are tonight. Guardian front page blocked by a JS challenge; used its RSS for headlines, nothing league-relevant beyond what BBC carried. Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-16T23:42",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Germany 5-0 Netherlands with Wirtz's two goals, Havertz starting, Verbruggen/Timber/van Hecke in the Dutch defence, Gakpo starting, Roefs unused (Big Ben, Edward, Small Ben, Robert; BBC), Greece 1-0 Serbia with Tzolis starting, Kostoulas on, Tzolakis unused, Petrovic in Serbia's goal (Marcus, Justin, Big Ben; BBC). Opinion: Big Ben (ball-knowledge line; hook Wirtz scoring past his own van Hecke, McBurnie booked and off before the hour in Switzerland 4-0 Scotland from BBC, team named after Marcus's Tzolis), Edward (no archive entry on him; hook his Verbruggen and Timber conceding five, 17 clear, luck framing), Small Ben (boxing fight and preparation, height; hook Gakpo in the 5-0, 73 behind), Marcus (Chloe artwork line; hook Greece's winner coming from players other than his two). Passed over: Robert's hairline/pint/management lines and Justin's apartheid line (both ran 14-15 Nov, only unused-sub hooks tonight - Roefs, Tzolakis), Marcus luck/kneejerk/Jobacus/Spotlight (luck ran last night; Spotlight stays out - children), Big Ben self-roast (no hook), Small Ben 21-on-bench and Harvey Price lines (no matchday hook, saved for GW11), Bruno line (ran last night). Gaps quoted from step 1's public.json table as GW10 is final; GW11 starts Sat 21 Nov."
   }
  ]
 }
