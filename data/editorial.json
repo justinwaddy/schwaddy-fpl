@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-18T08:20 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only the 11 Oct ESPN roundup and already-covered Schade shoulder items; no fresh permitted-outlet news. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-18T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches returned only old fantasy-site pages and prior-season items; no fresh permitted-outlet news. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-16T22:15 UTC",
       "published": 0,
       "note": "International break, Monday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba), Man Utd/Pochettino/Cunha, Brighton (Vuskovic, Boscagli), Liverpool (Barcola, Jacquet), Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee), Hull/Chelsea/Bournemouth/Leeds and general PL injury news found nothing new at permitted outlets beyond items already published (Barcola and Jacquet featured again for France v Turkiye, per liverpoolfc.com). bbc.co.uk and theguardian.com blocked in search this run. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-17T09:15 UTC",
+      "published": 0,
+      "note": "International break, Tuesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba/Konsa, Zubimendi), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee, Brobbey), Leeds/Chelsea/Bournemouth and general PL injury news found nothing new at permitted outlets beyond items already published; Rice's reported new Arsenal contract (Sky) is not material to his squad. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }
