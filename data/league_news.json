@@ -1,50 +1,6 @@
 {
- "generated": "2026-11-17T08:44 UTC",
+ "generated": "2026-11-17T23:42 UTC",
  "items": [
-  {
-   "id": "2026-11-08-madueke-saka",
-   "ts": "2026-11-08T08:41",
-   "kind": "news",
-   "text": "Mikel Arteta says Noni Madueke has become a 'different' player, filling in on the right since Bukayo Saka's injury: 13 touches in the opposition box against Hull was the most by an Arsenal player in a Premier League game this season, and his shot led to the save from which Martin Odegaard scored. Small Ben owns Madueke, Justin has Odegaard, and Robert has Saka waiting to get back into the side.",
-   "source": {
-    "title": "Noni Madueke has become a 'different' player, says Mikel Arteta, as winger finds new level of creativity and efficiency",
-    "url": "https://www.skysports.com/football/news/13609559/noni-madueke-has-become-a-different-player-says-mikel-arteta-as-winger-finds-new-level-of-creativity-and-efficiency"
-   }
-  },
-  {
-   "id": "2026-11-08-estevao-minutes",
-   "ts": "2026-11-08T08:41",
-   "kind": "news",
-   "text": "Estevao had the most shots and touches in the opposition box in Chelsea's game with Manchester United, and Xabi Alonso said he 'has had the best response, to show he deserves more'. It remains to be seen whether he starts at Sunderland today (14:00 UTC), though his chemistry with Cole Palmer might tempt Alonso. Robert owns Estevao and Edward owns Palmer.",
-   "source": {
-    "title": "Estevao ready for more Chelsea minutes under Xabi Alonso after reminder of his threat against Man Utd - The Radar",
-    "url": "https://www.skysports.com/football/news/13608399/estevao-ready-for-move-chelsea-minutes-under-xabi-alonso-after-reminder-of-his-threat-against-man-utd-the-radar"
-   }
-  },
-  {
-   "id": "2026-11-08-xi-1630",
-   "ts": "2026-11-08T16:07",
-   "kind": "news",
-   "text": "Team news, Man Utd v Aston Villa (16:30): Marcus (Mbeumo), Justin (Cunha), Big Ben (B.Fernandes) and Robert (Yoro) all start for United. Robert's Sesko is not in the United squad named (not in the XI or on the bench). Villa's full eleven was not available at a permitted source, so Edward (Manzambi, N.Jackson) and Small Ben (Suzuki) are left out of the counts.",
-   "source": {
-    "title": "Harwood-Bellis starts against United",
-    "url": "https://www.avfc.co.uk/news/2026/november/08/prematch-manchester-united-v-aston-villa-team-news/"
-   }
-  },
-  {
-   "id": "2026-11-08-edward-gap",
-   "ts": "2026-11-08T23:45",
-   "kind": "opinion",
-   "text": "Edward began the gameweek 2 clear and ends it 17 clear, and 16 of that was Barry in an Everton shirt doing the lot on his own. The Return of the Djedi has been rebuilt as a one-man tribute act, and Marcus has just spent a Sunday finding out which of the two of them is the opening act.",
-   "source": null
-  },
-  {
-   "id": "2026-11-08-robert-front-line",
-   "ts": "2026-11-08T23:45",
-   "kind": "opinion",
-   "text": "Mateta and Šeško both played today and brought home nothing between them, 5 of Robert's eleven in all, which makes his front line the only thing about him receding faster than the hairline. It is a rare gift to be last, quiet about it, and still be leaving by the front.",
-   "source": null
-  },
   {
    "id": "2026-11-08-small-ben-thiago",
    "ts": "2026-11-08T23:45",
@@ -704,16 +660,50 @@
     "title": "Masked Emi Martinez to return for Argentina after jaw surgery",
     "url": "https://www.espn.com/soccer/story/_/id/50505748/martinez-return-argentina-gruesome-jaw-injury"
    }
+  },
+  {
+   "id": "2026-11-17-haaland-odegaard-parken",
+   "ts": "2026-11-17T23:42",
+   "kind": "news",
+   "text": "Norway came from two down to win 3-2 in Copenhagen and take Denmark's Nations League quarter-final place, BBC Sport reports, and both of Justin's Norwegians had a hand in all of it. Martin Odegaard pounced on a goalkeeping mistake to set up Erling Haaland's first, then fired in the equaliser off the post with seven minutes left, and Haaland won it from the spot in the sixth minute of stoppage time after Joachim Andersen handled. BBC Sport has Haaland on 20 goals in 20 games for club and country this season.",
+   "source": {
+    "title": "Denmark 2-3 Norway: Erling Haaland scores dramatic late winner to earn Nations League quarter-final spot",
+    "url": "https://www.bbc.co.uk/sport/football/live/cq1k974v3m9dt"
+   }
+  },
+  {
+   "id": "2026-11-17-wales-portugal-bruno-neto",
+   "ts": "2026-11-17T23:42",
+   "kind": "news",
+   "text": "Big Ben's Bruno Fernandes put Portugal ahead in Cardiff with what BBC Sport calls a stunning strike after 11 minutes, and Portugal went on to win 3-2 and top the group. Justin's Pedro Neto had the most eventful night of anyone in the league: his volley made it 2-2 just before half-time, then he was sent off for two yellows on 74 minutes, by which point substitute Carlos Forbs had already scored the winner. Wales finish bottom and face a relegation play-off in March.",
+   "source": {
+    "title": "Wales 2-3 Portugal: Bold hosts edged out in five-goal thriller",
+    "url": "https://www.bbc.co.uk/sport/football/live/crvg2d87xe38t"
+   }
+  },
+  {
+   "id": "2026-11-17-justin-norway-omens",
+   "ts": "2026-11-17T23:42",
+   "kind": "opinion",
+   "text": "Haaland scored a penalty in the 96th minute in Copenhagen tonight and Odegaard scored one and made the other, which is the best night Justin's two Norwegians have had together all autumn, and they chose the one fixture of the month that counts for nothing. Haaland brought him 2 in GW10. Justin will be up at dawn reading this as an omen, a South African taking his title signals from Scandinavian penalty boxes, and he will still be 21 behind Edward when the omen wears off on Saturday. Neto, meanwhile, scored and then got himself sent off, which is at least on brand.",
+   "source": null
+  },
+  {
+   "id": "2026-11-17-bigben-bruno-cardiff",
+   "ts": "2026-11-17T23:42",
+   "kind": "opinion",
+   "text": "Bruno Fernandes struck Portugal ahead in Cardiff after 11 minutes, so the man who has been bailing out Big Ben all season finally delivered a rescue to a game with no points in it. That is the problem with relying on one Manchester United midfielder to cover for a squad built by an Arsenal fan with no ball knowledge: when Bruno does it on a Tuesday in November in a Nations League group, nobody back home gets anything, and Big Ben is still 66 off the top. Saturday is Anfield, a new manager, and the dread that he has used this week's one already.",
+   "source": null
+  },
+  {
+   "id": "2026-11-17-robert-mateta-break",
+   "ts": "2026-11-17T23:42",
+   "kind": "opinion",
+   "text": "Thomas Frank's first Palace team sheet on Saturday will not have Mateta on it, because he is suspended. Robert's squad will, because changing that would mean Robert opening the app, and the international break has been two full weeks of nobody hearing from him. Six of his fifteen finished GW10 on zero and he has met that the way he met the pint: by leaving it where it was. His hairline is the only part of the operation that has made a move all month, and it is going backwards faster than the team.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-24T16:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 slot CHE v TOT; both sheets confirmed via tottenhamhotspur.com page (full XIs and subs for both clubs)"
-  },
   {
    "ts": "2026-10-24T22:45",
    "news": 0,
@@ -1126,6 +1116,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Thomas Frank confirmed as Palace manager, first game at Coventry, Mateta suspended for it (Robert, Big Ben's Awoniyi; BBC), Rice verbally agrees new Arsenal deal level with Saka, tops PL assists, Odegaard talks not started (Small Ben, Robert, Justin; Sky), Emi Martinez returns in a mask for Argentina v Costa Rica tonight after the jaw surgery that followed his collision with Branthwaite (Robert, Big Ben; ESPN). Skipped: Tuesday gossip (Gvardiol/Vuskovic links sourced to AS and Teamtalk, off-list), Manzambi's Swiss withdrawal (only off-list sources, and 12 Nov), Zubimendi hamstring (not owned, unconfirmed), Rogers on Palmer (Sky, 13 Nov, too old), Saka Socrates award (October), Scotland post-mortems (no league player beyond McBurnie, already covered). Guardian articles blocked by a JS challenge, so the Frank to-do list piece was not used. Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-17T23:42",
+   "news": 2,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros), no flops to rewrite. Reported: Denmark 2-3 Norway with Haaland's two (the second a 90+6 penalty) and Odegaard's assist and equaliser (Justin; BBC), Wales 2-3 Portugal with Bruno's opener and Neto's goal then red card (Big Ben, Justin; BBC). Opinion: Justin (Ben D's South African line as a nationality gag; hook Haaland and Odegaard scoring in a game worth nothing, Haaland's 2 in GW10, 21 behind), Big Ben (Bruno-bails-him-out and ball-knowledge lines; hook Bruno scoring in Cardiff, 66 behind), Robert (no-transfers, pint and hairline lines; hook Mateta suspended for Frank's first game, six of his fifteen on zero in GW10). Passed over: Edward and Marcus (nobody of theirs in tonight's BBC reports; Marcus luck/kneejerk/Jobacus/Chloe lines ran recently and need a GW11 hook), Small Ben Harvey Price/boxing, height and 21-on-bench lines (no hook tonight, saved for GW11), Ben D self-roast (no hook), Ben C on Robert (folded into the Robert piece). Argentina v Costa Rica (Emi Martinez's return in a mask) not yet reported by a permitted outlet at run time; Arsenal Double winner Peter Storey's death not used (bereavement, not a league story)."
   }
  ]
 }
