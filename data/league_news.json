@@ -1,30 +1,6 @@
 {
- "generated": "2026-11-16T23:42 UTC",
+ "generated": "2026-11-17T08:44 UTC",
  "items": [
-  {
-   "id": "2026-11-07-justin-bench",
-   "ts": "2026-11-07T23:55",
-   "kind": "opinion",
-   "text": "Justin sacked Gyokeres for Gonzalo and Cunha, Gonzalo has returned 2, and Cunha does not kick off until Sunday, so the review of the new regime is still waiting for the evidence to arrive. Bogle gave him 7 and Tzolakis 6 from the bench while Haaland, in the eleven, brought back 2, which is a squad being run with great confidence by the man at the wrong end of it.",
-   "source": null
-  },
-  {
-   "id": "2026-11-07-robert-front-line",
-   "ts": "2026-11-07T23:55",
-   "kind": "opinion",
-   "text": "Robert has 21 from Saturday and Cherki's 9 and Gabriel's 8 are nearly all of it, while Saka and Mosquera played the same Arsenal match as Gabriel and returned nothing. A side with all the effort at the back and nothing at the front, which is also the hairline, and in both cases the manager has stopped doing anything about it.",
-   "source": null
-  },
-  {
-   "id": "2026-11-08-bogle-escapes",
-   "ts": "2026-11-08T08:41",
-   "kind": "news",
-   "text": "Tottenham are set to complain to Pro Ref after Jayden Bogle escaped a red card for catching Mathys Tel on the back of the ankle with his studs in Leeds' win on Saturday. VAR reviewed it but referee John Brooks was never sent to the monitor, and former assistant referee Darren Cann called Bogle fortunate. Justin owns Bogle, so a belated retrospective punishment is the only way this costs him anything.",
-   "source": {
-    "title": "Tottenham set to complain to Pro Ref after Bogle escapes red card",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c39wz9llg255o"
-   }
-  },
   {
    "id": "2026-11-08-madueke-saka",
    "ts": "2026-11-08T08:41",
@@ -698,16 +674,39 @@
    "kind": "opinion",
    "source": null,
    "text": "Greece beat Serbia with a goal from a substitute set up by the man Kostoulas was sent on to replace, so the two Marcus players in the stadium were the only two people with nothing to do with it. Tzolis ran about for 88 minutes and is now a man with a Big Ben team named after him and a Marcus contract, which is the most anybody has wanted something Marcus owns. He will spend the week painting Tzolis for Chloe, and it will be the first Marcus decision anybody has ever framed."
+  },
+  {
+   "id": "2026-11-17-frank-palace",
+   "ts": "2026-11-17T08:44",
+   "kind": "news",
+   "text": "Thomas Frank is confirmed as Crystal Palace manager on a deal to June 2029, BBC Sport reports, taking over a side that are bottom, have lost their last four league games and have conceded 24, the most in the division. His first match is at Coventry on Saturday, which puts Big Ben's Taiwo Awoniyi up against him, while Robert's Jean-Philippe Mateta, Palace's only player in this league, sits it out through suspension and gets a new manager to impress from the following week.",
+   "source": {
+    "title": "How Frank can restore reputation and save Crystal Palace",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmge3y2qjlyro"
+   }
+  },
+  {
+   "id": "2026-11-17-rice-contract",
+   "ts": "2026-11-17T08:44",
+   "kind": "news",
+   "text": "Declan Rice has verbally agreed a new Arsenal contract that Sky Sports News is told will bring him level with Bukayo Saka as the club's best paid, with Sky noting he tops the Premier League assist chart on five, all from open play. So Small Ben's midfielder is about to be paid the same as Robert's winger, which is the closest those two squads will come this season. Justin's Martin Odegaard, whose deal runs out at the same time as Rice's, said on Norway duty that talks on his have not started yet and that he is not stressed about it.",
+   "source": {
+    "title": "Declan Rice contract: Arsenal midfielder verbally agrees new deal with the Premier League champions",
+    "url": "https://www.skysports.com/football/news/12040/13612986/declan-rice-contract-arsenal-midfielder-verbally-agrees-new-320000-a-week-deal-with-the-premier-league-champions"
+   }
+  },
+  {
+   "id": "2026-11-17-martinez-argentina",
+   "ts": "2026-11-17T08:44",
+   "kind": "news",
+   "text": "Emiliano Martinez will play in a protective mask for Argentina against Costa Rica tonight, Lionel Scaloni has confirmed, ESPN reports, his first game since jaw surgery after a collision with Jarrad Branthwaite in Chelsea's win over Everton on 16 October. Xabi Alonso had kept him out of the loss to Sunderland as too risky. Martinez is Robert's keeper, and the defender who put him out of action is Big Ben's, so tonight in Cordoba is the first sign of whether Robert gets his number one back for GW11.",
+   "source": {
+    "title": "Masked Emi Martinez to return for Argentina after jaw surgery",
+    "url": "https://www.espn.com/soccer/story/_/id/50505748/martinez-return-argentina-gruesome-jaw-injury"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-24T13:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "14:00 UTC slot (ARS v EVE, COV v FUL): Everton sheet found (evertonfc.com); Arsenal and Fulham sheets not found at a permitted readable source; Coventry unowned."
-  },
   {
    "ts": "2026-10-24T16:07",
    "news": 1,
@@ -1120,6 +1119,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures, no flops. Reported: Germany 5-0 Netherlands with Wirtz's two goals, Havertz starting, Verbruggen/Timber/van Hecke in the Dutch defence, Gakpo starting, Roefs unused (Big Ben, Edward, Small Ben, Robert; BBC), Greece 1-0 Serbia with Tzolis starting, Kostoulas on, Tzolakis unused, Petrovic in Serbia's goal (Marcus, Justin, Big Ben; BBC). Opinion: Big Ben (ball-knowledge line; hook Wirtz scoring past his own van Hecke, McBurnie booked and off before the hour in Switzerland 4-0 Scotland from BBC, team named after Marcus's Tzolis), Edward (no archive entry on him; hook his Verbruggen and Timber conceding five, 17 clear, luck framing), Small Ben (boxing fight and preparation, height; hook Gakpo in the 5-0, 73 behind), Marcus (Chloe artwork line; hook Greece's winner coming from players other than his two). Passed over: Robert's hairline/pint/management lines and Justin's apartheid line (both ran 14-15 Nov, only unused-sub hooks tonight - Roefs, Tzolakis), Marcus luck/kneejerk/Jobacus/Spotlight (luck ran last night; Spotlight stays out - children), Big Ben self-roast (no hook), Small Ben 21-on-bench and Harvey Price lines (no matchday hook, saved for GW11), Bruno line (ran last night). Gaps quoted from step 1's public.json table as GW10 is final; GW11 starts Sat 21 Nov."
+  },
+  {
+   "ts": "2026-11-17T08:44",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Thomas Frank confirmed as Palace manager, first game at Coventry, Mateta suspended for it (Robert, Big Ben's Awoniyi; BBC), Rice verbally agrees new Arsenal deal level with Saka, tops PL assists, Odegaard talks not started (Small Ben, Robert, Justin; Sky), Emi Martinez returns in a mask for Argentina v Costa Rica tonight after the jaw surgery that followed his collision with Branthwaite (Robert, Big Ben; ESPN). Skipped: Tuesday gossip (Gvardiol/Vuskovic links sourced to AS and Teamtalk, off-list), Manzambi's Swiss withdrawal (only off-list sources, and 12 Nov), Zubimendi hamstring (not owned, unconfirmed), Rogers on Palmer (Sky, 13 Nov, too old), Saka Socrates award (October), Scotland post-mortems (no league player beyond McBurnie, already covered). Guardian articles blocked by a JS challenge, so the Frank to-do list piece was not used. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
