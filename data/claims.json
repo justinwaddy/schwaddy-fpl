@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-17T09:15 UTC",
+  "ts": "2026-11-17T22:15 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain on Sunday, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
   "claims": [
     {
@@ -117,13 +117,21 @@
         "code": "477424",
         "club": "MCI"
       },
-      "why": "Lowest priority now: Gvardiol played for Croatia at Wembley on Thursday, per Sky Sports, so the half-time knock at Forest that drove this claim looks cleared. Only worth it if you think City's rotation keeps him out of the XI; Jacquet has been fully available for Liverpool.",
+      "why": "Lowest priority: Gvardiol played for Croatia at Wembley, per Sky Sports, so his Forest knock looks cleared. The case for Jacquet has grown, though: Liverpool say van Dijk withdrew from the Netherlands squad on 9 November with a fitness issue, while Jacquet played the full game for France against Turkiye. Only worth it if you expect City to rotate Gvardiol out.",
       "model": "Model has Jacquet 17.7 next5 against Gvardiol 13.2, but that 13.2 still carries the 75% injury flag, which the Croatia appearance undercuts; I am overruling the model down to a low-confidence punt.",
       "confidence": "low",
       "sources": [
         {
           "title": "England 2-1 Croatia: Harry Kane scores winner as he becomes Three Lions record appearance maker",
           "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
+        },
+        {
+          "title": "Virgil van Dijk withdraws from Netherlands squad",
+          "url": "https://www.liverpoolfc.com/news/virgil-van-dijk-withdraws-from-netherlands-squad"
+        },
+        {
+          "title": "Internationals: Barcola and Jacquet help France to Nations League win over Turkiye",
+          "url": "https://www.liverpoolfc.com/news/internationals-barcola-jacquet-france-nations-league-win-turkiye"
         }
       ]
     }
@@ -840,12 +848,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-19T08:15 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "No fresh permitted-outlet news found; claims carried forward unchanged."
-    },
-    {
       "ts": "2026-10-19T21:10 UTC",
       "gw": 8,
       "claims": 5,
@@ -1198,6 +1200,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. No new permitted-outlet news on any add or drop overnight; Saliba's expected return at Newcastle on 21 November remains the main risk to claim 1."
+    },
+    {
+      "ts": "2026-11-17T22:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. Claim 5 now cites van Dijk's 9 Nov Netherlands withdrawal (fitness issue, liverpoolfc.com) and Jacquet's full 90 for France, which strengthens Jacquet's case. No new permitted-outlet news on any other add or drop."
     }
   ]
 }

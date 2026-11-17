@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-18T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only old fantasy-site pages and prior-season items; no fresh permitted-outlet news. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-19T08:15 UTC",
       "published": 0,
       "note": "Morning check. Searches returned only prior-season pages and fantasy sites; no fresh permitted-outlet news on Haaland, Barcola or GW8 injuries. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-17T09:15 UTC",
       "published": 0,
       "note": "International break, Tuesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba/Konsa, Zubimendi), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee, Brobbey), Leeds/Chelsea/Bournemouth and general PL injury news found nothing new at permitted outlets beyond items already published; Rice's reported new Arsenal contract (Sky) is not material to his squad. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-17T22:15 UTC",
+      "published": 0,
+      "note": "International break, Tuesday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull/Bournemouth, Spurs/Fulham/Chelsea/Leeds, Forest/Sunderland (Delap, Le Fee, Xhaka) and general PL injury news found nothing new in the last 24h at permitted outlets. Van Dijk's 9 Nov Netherlands withdrawal (liverpoolfc.com) is older, so it went into claim 5 rather than a headline. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }
