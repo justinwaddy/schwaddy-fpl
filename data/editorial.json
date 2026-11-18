@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-19T08:15 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only prior-season pages and fantasy sites; no fresh permitted-outlet news on Haaland, Barcola or GW8 injuries. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-19T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches returned only prior-season pages, fantasy sites and unverified aggregators; no fresh permitted-outlet news. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-17T22:15 UTC",
       "published": 0,
       "note": "International break, Tuesday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull/Bournemouth, Spurs/Fulham/Chelsea/Leeds, Forest/Sunderland (Delap, Le Fee, Xhaka) and general PL injury news found nothing new in the last 24h at permitted outlets. Van Dijk's 9 Nov Netherlands withdrawal (liverpoolfc.com) is older, so it went into claim 5 rather than a headline. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-18T09:15 UTC",
+      "published": 0,
+      "note": "International break, Wednesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White/Odegaard), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Chelsea/Bournemouth/Leeds, Forest/Sunderland (Delap, Le Fee) and general PL injury news. premierleague.com's 17 Nov internationals round-up has every one of his players fit and playing (Gvardiol started both Croatia games, Tzolakis in goal for Greece's 7-0 loss in the Netherlands); no club news in the last 24h at permitted outlets beyond items already published. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }
