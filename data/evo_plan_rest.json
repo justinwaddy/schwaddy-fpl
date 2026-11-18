@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T08:37",
+ "generated": "2026-11-18T17:30",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -42,7 +42,7 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 4.9,
+   "ep": 4.91,
    "votes": 5
   },
   {
@@ -222,7 +222,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 41.99,
+   "gain": 42.03,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 111
+   "borda": 110
   },
   {
    "pos": "DEF",
-   "gain": 21.25,
+   "gain": 21.29,
    "change": 1,
    "fallback": true,
    "add": {
@@ -314,11 +314,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 82
+   "borda": 81
   },
   {
    "pos": "MID",
-   "gain": 30.88,
+   "gain": 30.86,
    "change": 2,
    "fallback": true,
    "add": {
@@ -350,7 +350,7 @@
   },
   {
    "pos": "MID",
-   "gain": 26.99,
+   "gain": 26.89,
    "change": 2,
    "fallback": true,
    "add": {
@@ -378,11 +378,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 49
+   "borda": 47
   },
   {
    "pos": "MID",
-   "gain": 30.31,
+   "gain": 30.42,
    "change": 2,
    "fallback": true,
    "add": {
@@ -410,11 +410,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 47
+   "borda": 46
   },
   {
    "pos": "MID",
-   "gain": 21.23,
+   "gain": 21.32,
    "change": 3,
    "fallback": false,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 18
+   "borda": 21
   },
   {
    "pos": "MID",
-   "gain": 25.02,
+   "gain": 24.99,
    "change": 3,
    "fallback": true,
    "add": {
@@ -474,11 +474,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 16
+   "borda": 19
   },
   {
    "pos": "MID",
-   "gain": 29.32,
+   "gain": 29.2,
    "change": 3,
    "fallback": true,
    "add": {
@@ -506,7 +506,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 12
+   "borda": 14
   },
   {
    "pos": "MID",
@@ -538,7 +538,7 @@
     "ep": null
    },
    "votes": 2,
-   "borda": 10
+   "borda": 12
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the rest of the season, the injury return date included; voted across 5 models by Borda count at every step of the list, a change needing 3 models agreeing on the man dropped and a listed pair 2, at most 3 fallbacks kept per change, and gain is the mean over the models that list it",

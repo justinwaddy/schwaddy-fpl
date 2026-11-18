@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T08:37",
+ "generated": "2026-11-18T17:31",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -203,7 +203,7 @@
  "claims": [
   {
    "pos": "DEF",
-   "gain": 12.7,
+   "gain": 12.72,
    "change": 1,
    "fallback": false,
    "add": {
@@ -233,7 +233,7 @@
   },
   {
    "pos": "DEF",
-   "gain": 3.98,
+   "gain": 3.99,
    "change": 1,
    "fallback": true,
    "add": {
@@ -263,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 8.13,
+   "gain": 8.33,
    "change": 2,
    "fallback": false,
    "add": {
@@ -323,7 +323,7 @@
   },
   {
    "pos": "MID",
-   "gain": 5.65,
+   "gain": 5.64,
    "change": 2,
    "fallback": true,
    "add": {
@@ -353,7 +353,7 @@
   },
   {
    "pos": "MID",
-   "gain": 3.82,
+   "gain": 3.79,
    "change": 2,
    "fallback": true,
    "add": {
