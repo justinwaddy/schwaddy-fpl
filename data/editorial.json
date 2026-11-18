@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-19T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only prior-season pages, fantasy sites and unverified aggregators; no fresh permitted-outlet news. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-20T08:20 UTC",
       "published": 1,
       "note": "Led with Haaland limping off after Ipswich win, Maresca says nothing serious. Other searches returned nothing fresh from permitted outlets. Not in starters window."
@@ -621,6 +616,11 @@
       "ts": "2026-11-18T09:15 UTC",
       "published": 0,
       "note": "International break, Wednesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White/Odegaard), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Chelsea/Bournemouth/Leeds, Forest/Sunderland (Delap, Le Fee) and general PL injury news. premierleague.com's 17 Nov internationals round-up has every one of his players fit and playing (Gvardiol started both Croatia games, Tzolakis in goal for Greece's 7-0 loss in the Netherlands); no club news in the last 24h at permitted outlets beyond items already published. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-18T22:15 UTC",
+      "published": 0,
+      "note": "International break, Wednesday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs (Marmoush)/Fulham, Forest/Bournemouth (Delap, Tavernier), Chelsea/Leeds, Sunderland (Le Fee) and general PL injury news. Only new item: Pochettino arrived at Carrington on Wednesday and takes first training Thursday before Anfield on Sunday (ESPN, manutd.com), which the earlier Carrick/Pochettino items already anticipated; no Cunha news. Nothing else new at permitted outlets in the last 24h. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }
