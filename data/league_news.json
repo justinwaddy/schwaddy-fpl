@@ -1,27 +1,6 @@
 {
- "generated": "2026-11-17T23:42 UTC",
+ "generated": "2026-11-18T08:43 UTC",
  "items": [
-  {
-   "id": "2026-11-08-small-ben-thiago",
-   "ts": "2026-11-08T23:45",
-   "kind": "opinion",
-   "text": "Thiago got himself sent off for minus two and is banned until 5 December, and Small Ben still has to look up 73 points to find the leader. At that height it is a lot of looking, and the one man in the squad who has been told to sit down is the only one with a plan.",
-   "source": null
-  },
-  {
-   "id": "2026-11-08-marcus-luck",
-   "ts": "2026-11-08T23:45",
-   "kind": "opinion",
-   "text": "Marcus began the gameweek 2 behind Edward and ends it 17 behind, which is what happens to a man who runs on luck every week the day the luck takes a Sunday off. Dewsbury-Hall and Evanilson got him nine apiece and it still was not enough to make anybody ask where Edward's cushion came from.",
-   "source": null
-  },
-  {
-   "id": "2026-11-08-big-ben-bruno",
-   "ts": "2026-11-08T23:45",
-   "kind": "opinion",
-   "text": "Bruno hauled 10 for Big Ben today, from the bench, alongside Trafford's 10, so the man who needs Bruno to bail him out had him in the building and left him in the dugout. A bench with 24 on it and an eleven that needed it: classic Arsenal fan reading of a football match.",
-   "source": null
-  },
   {
    "id": "2026-11-09-united-villa-carrick",
    "ts": "2026-11-09T08:55",
@@ -701,16 +680,39 @@
    "kind": "opinion",
    "text": "Thomas Frank's first Palace team sheet on Saturday will not have Mateta on it, because he is suspended. Robert's squad will, because changing that would mean Robert opening the app, and the international break has been two full weeks of nobody hearing from him. Six of his fifteen finished GW10 on zero and he has met that the way he met the pint: by leaving it where it was. His hairline is the only part of the operation that has made a move all month, and it is going backwards faster than the team.",
    "source": null
+  },
+  {
+   "id": "2026-11-18-martinez-clean-sheet-return",
+   "ts": "2026-11-18T08:43",
+   "kind": "news",
+   "text": "Emiliano Martinez came through his first game since jaw surgery in a protective mask as Argentina beat Costa Rica 7-0 in Cordoba last night, ESPN reports, wearing the armband in Cristian Romero's absence and keeping the clean sheet that draws him level with Sergio Romero's national record of 47. Nico Paz, Julian Alvarez and Franco Mastantuono scored two each. Martinez is Robert's keeper, and the 90 minutes is the clearest sign yet that he has his number one back for Chelsea's home game with Leeds on Saturday.",
+   "source": {
+    "title": "Argentina set tone for post-Messi era with 7-0 Costa Rica rout",
+    "url": "https://www.espn.com/soccer/story/_/id/50516991/argentina-set-tone-post-messi-era-costa-rica-rout"
+   }
+  },
+  {
+   "id": "2026-11-18-brazil-singapore-estevao-rayan",
+   "ts": "2026-11-18T08:43",
+   "kind": "news",
+   "text": "Brazil beat Singapore 7-0 in their last game of the year, ESPN reports, and two of the scorers belong to this league. Robert's Estevao laid on Vinicius Junior's third for his hat-trick inside 21 minutes and then made it 5-0 himself six minutes after the restart, and Small Ben's Rayan added the sixth on 65 minutes. Carlo Ancelotti watched from the stands, serving a touchline ban after his red card in Saturday's 3-2 defeat by Japan.",
+   "source": {
+    "title": "Vinicius Junior hits hat trick as Brazil beat Singapore 7-0",
+    "url": "https://www.espn.com/soccer/report/_/gameId/401916335"
+   }
+  },
+  {
+   "id": "2026-11-18-arsenal-contract-drive",
+   "ts": "2026-11-18T08:43",
+   "kind": "news",
+   "text": "Arsenal are in advanced talks over a new contract for Piero Hincapie and intend to open talks with Marcus's Riccardo Calafiori, whose deal runs to 2029, BBC Sport reports, as part of a renewal drive in which the club is also set to confirm new deals for Edward's Jurrien Timber, Small Ben's Declan Rice and Justin's David Raya. None of it changes a team sheet this weekend, but four of the six managers here have an Arsenal player whose future is about to be tied down.",
+   "source": {
+    "title": "Hincapie in advanced talks over new Arsenal deal",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c6ge39lgyzzzo"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-24T22:45",
-   "news": 0,
-   "opinion": 4,
-   "matchday": true,
-   "note": "Evening wrap. No reported items: the searches returned only older seasons' reports and nothing from a permitted outlet I could read for today's matches, so I published none rather than assert unread detail. Led with Marcus losing the lead (Justin top by 8 on the live feed). Used archive lines on Marcus luck, Ben C height, Robert hairline. Passed over: Ben D on Justin (apartheid line) and the Ben D self-roast - no hook worth the risk tonight, left for Justin to rule; Ben D Arsenal/ball-knowledge held back, Konsa's 15 is a good hook for tomorrow; Harvey Price/boxing line needs a fact not yet there; Marcus Jobacus/Catholic line no hook. Rewrote all 12 of today's flop lines via reflop.py."
-  },
   {
    "ts": "2026-10-25T07:50",
    "news": 5,
@@ -1123,6 +1125,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros), no flops to rewrite. Reported: Denmark 2-3 Norway with Haaland's two (the second a 90+6 penalty) and Odegaard's assist and equaliser (Justin; BBC), Wales 2-3 Portugal with Bruno's opener and Neto's goal then red card (Big Ben, Justin; BBC). Opinion: Justin (Ben D's South African line as a nationality gag; hook Haaland and Odegaard scoring in a game worth nothing, Haaland's 2 in GW10, 21 behind), Big Ben (Bruno-bails-him-out and ball-knowledge lines; hook Bruno scoring in Cardiff, 66 behind), Robert (no-transfers, pint and hairline lines; hook Mateta suspended for Frank's first game, six of his fifteen on zero in GW10). Passed over: Edward and Marcus (nobody of theirs in tonight's BBC reports; Marcus luck/kneejerk/Jobacus/Chloe lines ran recently and need a GW11 hook), Small Ben Harvey Price/boxing, height and 21-on-bench lines (no hook tonight, saved for GW11), Ben D self-roast (no hook), Ben C on Robert (folded into the Robert piece). Argentina v Costa Rica (Emi Martinez's return in a mask) not yet reported by a permitted outlet at run time; Arsenal Double winner Peter Storey's death not used (bereavement, not a league story)."
+  },
+  {
+   "ts": "2026-11-18T08:43",
+   "news": 3,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Emi Martinez's masked return and record-equalling clean sheet in Argentina 7-0 Costa Rica (Robert; ESPN), Brazil 7-0 Singapore with Estevao's goal and assist and Rayan's goal (Robert, Small Ben; ESPN/AP report), Arsenal renewal drive - Hincapie talks, Calafiori talks to open, Timber, Rice and Raya deals to be confirmed (Marcus, Edward, Small Ben, Justin; BBC). Skipped: USA 2-0 Haiti in Pochettino's farewell (no league player; his Man Utd start already covered 13 Nov), JJ Gabriel's Man Utd farewell (academy, not in any squad), Tzolis fitness (only Sports Mole, off-list; latest arsenal.com news predates the break), Alisson/Liverpool fitness (no current permitted report), England v Spain and Rice/White pieces (15-16 Nov, already covered), Palmer red card explainer (26 Oct). Guardian and Sky index pages not readable by curl. Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
