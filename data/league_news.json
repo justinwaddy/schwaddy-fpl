@@ -1,57 +1,6 @@
 {
- "generated": "2026-11-18T08:43 UTC",
+ "generated": "2026-11-18T23:43 UTC",
  "items": [
-  {
-   "id": "2026-11-09-united-villa-carrick",
-   "ts": "2026-11-09T08:55",
-   "kind": "news",
-   "text": "Manchester United twice came from two goals down to draw 4-4 with Aston Villa, Patrick Dorgu levelling in the 96th minute, and still go into the international break 18th and without a league win since 30 August. Michael Carrick, asked about walking away, said \"That's not going to happen.\" Justin (Cunha), Marcus (Mbeumo), Big Ben (B.Fernandes) and Robert (Sesko and Yoro) all have United men to look at, and the next fixture is Anfield on 22 November.",
-   "source": {
-    "title": "Bizarre & thrilling theatre as Carrick in limbo with Man Utd in drop zone",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cked3qjw1q4xo"
-   }
-  },
-  {
-   "id": "2026-11-09-brighton-second",
-   "ts": "2026-11-09T08:55",
-   "kind": "news",
-   "text": "Brighton beat Brentford 2-0 on Sunday to go second, five points behind Arsenal, with six wins in seven, and Pascal Gross, who scored and created at least five chances, is the man the BBC credits for most of it. Big Ben owns Gross; Justin, Marcus and Edward all have a Brighton defender or keeper as well. Gross himself says they are not in a title race.",
-   "source": {
-    "title": "Are 'outstanding' Brighton now Arsenal's main title challengers?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cjx23rwxdn64o"
-   }
-  },
-  {
-   "id": "2026-11-09-sunderland-chelsea",
-   "ts": "2026-11-09T08:55",
-   "kind": "news",
-   "text": "Sunderland beat Chelsea 1-0 on Saturday through Enzo Le Fee's 36th-minute penalty, after Levi Colwill brought down Brian Brobbey, and the BBC had Robin Roefs rarely tested and Nordi Mukiele a huge presence at the back on his return. Robert (Roefs) and Marcus (Mukiele) both came out of it with 9, while the Chelsea players in the league, Palmer, Rogers, Neto and the rest, brought home next to nothing.",
-   "source": {
-    "title": "Failed to deal with Brobbey - player ratings for Sunderland v Chelsea",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c94g1n4pzev3o"
-   }
-  },
-  {
-   "id": "2026-11-09-robert-transfers",
-   "ts": "2026-11-09T23:50",
-   "kind": "opinion",
-   "text": "Robert is 192 off the lead with a front line of Mateta, Saka, Mosquera and James that all went the whole of GW10 without troubling a scorer. Saturday is the first chance to make a transfer since he last answered a message, and the smart money is on the hairline making its move first.",
-   "source": null
-  },
-  {
-   "id": "2026-11-09-justin-city",
-   "ts": "2026-11-09T23:50",
-   "kind": "opinion",
-   "text": "Justin finished second in GW10 and still found a way to feel hard done by: Gvardiol and White blanked, Haaland gave him 2, and Tzolakis and Bogle sat on the bench doing the work of men being paid to start. Running a squad this confidently and getting it this wrong takes real commitment.",
-   "source": null
-  },
-  {
-   "id": "2026-11-09-edward-bench",
-   "ts": "2026-11-09T23:50",
-   "kind": "opinion",
-   "text": "Edward won the gameweek, extended the lead to 17, and still left 14 on his bench, which means the man he spends every week explaining as luck has now got his reserves out-earning half the league's eleven. Marcus will have the international break to decide whether that is bad luck or just Edward being better at this.",
-   "source": null
-  },
   {
    "id": "2026-11-10-guehi-hip",
    "ts": "2026-11-10T08:50",
@@ -710,16 +659,57 @@
     "title": "Hincapie in advanced talks over new Arsenal deal",
     "url": "https://www.bbc.co.uk/sport/football/articles/c6ge39lgyzzzo"
    }
+  },
+  {
+   "id": "2026-11-18-kmi-six-errors",
+   "ts": "2026-11-18T23:43",
+   "kind": "news",
+   "text": "The Premier League's Key Match Incidents Panel logged six refereeing errors in the last round of games, the joint-most in one weekend, BBC Sport reports, and Edward's Everton supplied two. James Tarkowski should have conceded a penalty for holding Caleb Yirenkyi's hair, and the panel thinks Thierno Barry's opener against Coventry probably came off his hand. Big Ben's Kai Havertz should have had a penalty against Hull despite being offside, Justin's Marcus Tavernier escaped a second yellow on a split vote, and Justin's Jayden Bogle stayed on after catching Mathys Tel by a 3-2 vote.",
+   "source": {
+    "title": "Joint-record six referee errors in last Premier League weekend",
+    "url": "https://www.bbc.co.uk/sport/football/articles/c69q8jy924y4o"
+   }
+  },
+  {
+   "id": "2026-11-18-pochettino-arrives",
+   "ts": "2026-11-18T23:43",
+   "kind": "news",
+   "text": "Mauricio Pochettino flew to Manchester on a private jet straight after the USA's 2-0 win over Haiti, landed on Wednesday morning and went to Carrington to start preparing for Sunday at Anfield, BBC Sport reports, having already told a former City player on air that Manchester will not always be blue. United are 18th with one league win. Every one of the six managers here owns a City player, so consider that a warning; four of them also own a United one, Robert with two, Yoro and Sesko, in the same squad as three from City.",
+   "source": {
+    "title": "Manchester won't always be blue - Pochettino",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm782wnwzvq3o"
+   }
+  },
+  {
+   "id": "2026-11-18-edward-handball-hairpull",
+   "ts": "2026-11-18T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "The Premier League's own panel now says Thierno Barry's opener against Coventry more likely than not came off his hand, and that James Tarkowski had a hold of a man's hair in his own box without anybody giving a penalty. Both of them are Edward's. Barry took 16 off that weekend and Edward sits 17 clear, so the league leader's cushion is, by official ruling, made partly of a handball and a hair pull. He will tell you these things even themselves out over a season. They have not yet evened out for anybody else."
+  },
+  {
+   "id": "2026-11-18-robert-bottom-three",
+   "ts": "2026-11-18T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Robert is the only manager in this league with a player at every club in the Premier League's bottom three: Roefs in goal at Sunderland, Mateta at Palace, Yoro and Sesko at United. Palace and United have both changed manager this month, Sunderland are holding their nerve, and Robert, 192 off the top, has done what he does with everything, including his pint, which is leave it exactly where it was. Meanwhile Tarkowski is in trouble for pulling a man's hair, the one foul nobody in football will ever manage to commit against Robert."
+  },
+  {
+   "id": "2026-11-18-smallben-thiago-red",
+   "ts": "2026-11-18T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Of everything the panel went back over from the last round, Igor Thiago's red card is filed under the decisions VAR got right, so Small Ben's striker is the only player in this league to finish the weekend on -2 with the full approval of the officials. A man went to the monitor, looked properly, and still could not find a reason to let him stay on, which is more scrutiny than Small Ben has ever given his own team sheet. He has a fight coming up. If the referee waves it off early, he can take comfort that the review will find it was the right call."
+  },
+  {
+   "id": "2026-11-18-justin-split-votes",
+   "ts": "2026-11-18T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Two of Justin's men got through the last round of games on a show of hands. The panel decided on a split vote that Marcus Tavernier should have had a second yellow for messing about over a restart, and Jayden Bogle's tackle on Mathys Tel was ruled not a red by 3-2, two of the five thinking it was. Justin will call that squad depth. It is a title challenge, 21 behind, held together by the referees' tolerance, and nobody in South Africa ever had to explain to him what it is like to win a vote you were not supposed to."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-25T07:50",
-   "news": 5,
-   "opinion": 0,
-   "matchday": true,
-   "note": "Morning. Led with Sunday's five fixtures from the Guardian's Friday team-news guide (Brobbey doubtful, Kroupi doubtful, Liverpool/Brighton and Brentford absentees) plus the Palace v Newcastle preview. No opinion on a morning run; no roast archive suggestions used or passed over. Sources limited to Guardian: BBC/Sky not fetchable from this environment; the guide is dated 23 October so late changes are not captured."
-  },
   {
    "ts": "2026-10-25T13:08",
    "news": 1,
@@ -1132,6 +1122,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Emi Martinez's masked return and record-equalling clean sheet in Argentina 7-0 Costa Rica (Robert; ESPN), Brazil 7-0 Singapore with Estevao's goal and assist and Rayan's goal (Robert, Small Ben; ESPN/AP report), Arsenal renewal drive - Hincapie talks, Calafiori talks to open, Timber, Rice and Raya deals to be confirmed (Marcus, Edward, Small Ben, Justin; BBC). Skipped: USA 2-0 Haiti in Pochettino's farewell (no league player; his Man Utd start already covered 13 Nov), JJ Gabriel's Man Utd farewell (academy, not in any squad), Tzolis fitness (only Sports Mole, off-list; latest arsenal.com news predates the break), Alisson/Liverpool fitness (no current permitted report), England v Spain and Rice/White pieces (15-16 Nov, already covered), Palmer red card explainer (26 Oct). Guardian and Sky index pages not readable by curl. Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-18T23:43",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros; its totals omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table, which matches the game's standings for the closed GW10). No flops to rewrite. Reported: KMI panel's six refereeing errors - Tarkowski hair hold, Barry handball, Havertz penalty, Tavernier second yellow, Bogle on Tel (Edward, Big Ben, Justin; BBC), Pochettino arrives at Carrington for Anfield, 'Manchester won't always be blue', every manager owns a City player (all six; BBC). Opinion: Edward (no archive entry on him; hook his Barry handball goal and Tarkowski hair pull, 16 and 17 clear), Robert (pint, hairline and lack-of-management lines; hook owning players at all three bottom-three clubs from BBC's survival piece, 192 behind), Small Ben (boxing fight and team-selection lines; hook Thiago's correct VAR red, -2), Justin (Ben D's South African line as a nationality gag; hook Tavernier and Bogle split votes, 21 behind). Passed over: Marcus luck/kneejerk/Jobacus/Chloe/Catholic lines (none of his players in tonight's stories; Spotlight angle stays out - children), Big Ben ball-knowledge and Bruno lines (ran 16-17 Nov; Havertz offside hook went in the news item instead), Ben D self-roast (no hook), Small Ben height and 21-on-bench lines (saved for GW11), Harvey Price likeness (no fresh hook). Skipped: Chelsea v PSG and City in Sweden (women's Champions League), Man Utd/Paz gossip (gossip column), Mata retirement (not in any squad)."
   }
  ]
 }
