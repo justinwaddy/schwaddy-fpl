@@ -51,6 +51,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 84450,1785832691,1785832691,a,,,
 84450,1794152022,1794148210,d,,75.0,Unspecified injury - 75% chance of playing
 84450,1794213352,1794213352,d,,75.0,Calf injury - 75% chance of playing
+84450,1795109827,1795109827,i,,0.0,Calf injury - Unknown return date
 85633,1785832691,1785832691,a,,,
 86873,1785832691,1785832691,a,,,
 88894,1785832691,1785832691,a,,,
@@ -231,6 +232,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 176297,1793981613,1793981613,i,75.0,0.0,Hip injury - Unknown return date
 176412,1785832691,1785832691,a,,,
 176412,1787270210,1786744807,i,,0.0,Thigh injury - Unknown return date
+176412,1795109827,1795109827,i,0.0,0.0,Lack of match fitness - Unknown return date
 176420,1785832691,1785832691,a,,,
 177815,1785832691,1785832691,a,,,
 177815,1792763234,1792760409,d,,50.0,Foot injury - 50% chance of playing
@@ -356,6 +358,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 209036,1794126960,1794087009,d,,75.0,Unspecified injury - 75% chance of playing
 209046,1785832691,1784808084,d,,75.0,Thigh injury - 75% chance of playing
 209046,1787270210,1787270210,a,,100.0,
+209046,1795109827,1795102206,i,100.0,0.0,Unspecified injury - Unknown return date
 209244,1785832691,1785832691,a,,,
 209244,1789346400,1789318809,s,,0.0,Suspended until 17 Oct
 209244,1791794177,1791794177,a,0.0,100.0,
@@ -592,6 +595,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 243526,1787270210,1786219208,i,,0.0,Hamstring injury - Unknown return date
 243526,1788894459,1788894459,a,100.0,100.0,
 243526,1794152022,1794141010,d,100.0,75.0,Hamstring injury - 75% chance of playing
+243526,1795109827,1795109827,a,100.0,100.0,
 243571,1785832691,1785832691,a,,,
 243571,1788894459,1788365123,u,0.0,0.0,Has joined Torino permanently
 243951,1788894459,1788894459,a,,,
@@ -651,6 +655,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 428580,1789472824,1789462808,d,,50.0,Hand injury - 50% chance of playing
 428580,1789634190,1789634190,a,,100.0,
 428580,1793897177,1793869209,d,100.0,50.0,Groin injury - 50% chance of playing
+428580,1795109827,1795109827,d,50.0,75.0,Groin injury - 75% chance of playing
 428971,1787270210,1787270210,a,,,
 430871,1785832691,1785832691,a,,,
 431639,1788894459,1788894459,a,,,
@@ -749,6 +754,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 441264,1792425094,1792407610,d,100.0,75.0,Hamstring injury - 75% chance of playing
 441264,1793003742,1793003742,a,75.0,100.0,
 441264,1794328558,1794310211,d,100.0,75.0,Muscular injury - 75% chance of playing
+441264,1795109827,1795109827,i,100.0,0.0,Muscular injury - Unknown return date
 441266,1785832691,1785832691,a,,,
 441266,1791794177,1791738009,s,,0.0,Suspended until 25 Oct
 441266,1792312553,1792312553,a,0.0,100.0,
@@ -849,6 +855,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 461102,1785832691,1785832691,a,,,
 461102,1792917355,1792861209,d,,75.0,Unspecified injury - 75% chance of playing
 461102,1793318200,1793318200,d,,50.0,Calf injury - 50% chance of playing
+461102,1795109827,1795109827,d,50.0,75.0,Calf injury - 75% chance of playing
 461199,1785832691,1785832691,a,,,
 461199,1788963289,1788962408,i,,0.0,Knee injury - Unknown return date
 461587,1785832691,1785832691,a,,,
@@ -908,6 +915,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 466525,1793287846,1793284208,d,50.0,50.0,Foot injury - 50% chance of playing
 466525,1793457783,1793457783,a,50.0,100.0,
 466525,1793927319,1793903408,d,50.0,50.0,Foot injury - 50% chance of playing
+466525,1795109827,1795109827,a,50.0,100.0,
 467779,1785832691,1785832691,a,,,
 467779,1788894459,1788514209,i,0.0,0.0,Knee injury - Unknown return date
 467779,1792763234,1792763234,d,0.0,25.0,Knee injury - 25% chance of playing
