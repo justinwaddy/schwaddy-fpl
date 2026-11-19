@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-20T21:20 UTC",
-      "published": 1,
-      "note": "Led with Brobbey missing Bournemouth, training and hopeful of return. Nothing else fresh from permitted outlets. Not in starters window."
-    },
-    {
       "ts": "2026-10-21T08:25 UTC",
       "published": 0,
       "note": "Morning check. Permitted-outlet searches returned nothing newer than the Haaland and Brobbey items already published. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-19T09:15 UTC",
       "published": 0,
       "note": "International break ends, Thursday morning. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham/Bournemouth/Chelsea, Sunderland/Forest (Le Fee, Delap) and general PL injury news. Nothing new in the last 24h at permitted outlets: the Saliba pieces (arsenal.com 3 Nov, ESPN 10 Nov) are older and already reflected in claim 1, and Pochettino's first training today was already covered. Club press conferences start Thursday/Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-19T22:15 UTC",
+      "published": 0,
+      "note": "International break over, Thursday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham, Forest/Chelsea/Bournemouth (Delap, Neto, Tavernier), Sunderland (Le Fee) and general PL team news, plus Sky Sports' news pages read directly. Only Sky's weekend talking points and an 18 Nov Arsenal blog item on the Konsa/Saliba selection dilemma, neither with new fitness facts; Arteta and Maresca press conferences are due Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }

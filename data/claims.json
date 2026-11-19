@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-19T09:15 UTC",
+  "ts": "2026-11-19T22:15 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain on Sunday, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
   "claims": [
     {
@@ -848,12 +848,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-21T08:25 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "Claims carried forward unchanged; no fresh permitted-outlet news."
-    },
-    {
       "ts": "2026-10-21T21:10 UTC",
       "gw": 8,
       "claims": 5,
@@ -1206,6 +1200,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. No new permitted-outlet news on any add or drop since last night's run; Saliba remains expected back in contention at Newcastle (ESPN), so claim 1 stays medium confidence. Pre-match press conferences Thursday/Friday are the next chance to change it, though waivers close Friday 11:00 UTC."
+    },
+    {
+      "ts": "2026-11-19T22:15 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged. No new permitted-outlet news on any add or drop since the morning run; Sky Sports flags the Konsa/Saliba selection question at Newcastle but no fitness update, so claim 1 stays medium. Arteta and Maresca press conferences fall Friday, around the 11:00 UTC waiver close."
     }
   ]
 }
