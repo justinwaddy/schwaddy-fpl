@@ -1,46 +1,6 @@
 {
- "generated": "2026-11-18T23:43 UTC",
+ "generated": "2026-11-19T08:44 UTC",
  "items": [
-  {
-   "id": "2026-11-10-guehi-hip",
-   "ts": "2026-11-10T08:50",
-   "kind": "news",
-   "text": "Marc Guehi has pulled out of the England squad for Thursday's Nations League game with Croatia and Saturday's with Spain, Dan Burn called up in his place. He came off at half-time of City's loss at Nottingham Forest on Saturday with a hip problem, asked to go off by his own account to Enzo Maresca, and BBC Sport has him down for a scan on the extent of it. He is Marcus's defender, so the next thing to watch is whether he is back for City after the break.",
-   "source": {
-    "title": "England: Dan Burn replaces injured Marc Guehi in squad for Nations League games",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmwyq8x6nx5lo"
-   }
-  },
-  {
-   "id": "2026-11-10-carrick-united",
-   "ts": "2026-11-10T08:50",
-   "kind": "news",
-   "text": "Manchester United are increasingly expected to sack Michael Carrick during the international break, with the board said to be committed to reviewing the situation and no final decision made, BBC Sport reports. United are 18th after the 4-4 draw with Aston Villa, their worst start to a league season in 40 years. It touches four of the six: Mbeumo is Marcus's, Cunha is Justin's, Bruno Fernandes is Big Ben's and Yoro is Robert's, so a new head coach lands on all of them at once.",
-   "source": {
-    "title": "Michael Carrick: Manchester United expected to sack head coach",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cmy0r041ed0po"
-   }
-  },
-  {
-   "id": "2026-11-10-alisson-contract",
-   "ts": "2026-11-10T08:50",
-   "kind": "news",
-   "text": "Alisson wants to stay at Liverpool beyond the end of the season, when his contract runs out, saying his agent is talking to the club though he has not had conversations over a new deal himself. Andoni Iraola said last week he did not know whether it would be his last season there. Alisson is Marcus's goalkeeper, and he is 34.",
-   "source": {
-    "title": "Liverpool: Alisson Becker wants to sign new contract",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cw62ypepq2m7o"
-   }
-  },
-  {
-   "id": "2026-11-10-hill-england",
-   "ts": "2026-11-10T23:55",
-   "kind": "news",
-   "text": "James Hill has his first England call-up, added to Thomas Tuchel's squad for Thursday's Nations League game with Croatia after Ezri Konsa picked up a knee injury. BBC Sport says Hill has played every minute of Bournemouth's Premier League season, and Bournemouth go into the break seventh on an eight-match winning run in all competitions. Hill is Big Ben's, so the only thing to watch now is whether he comes back from Wembley in one piece.",
-   "source": {
-    "title": "England: James Hill called up as cover for Ezri Konsa for Croatia Nations League game",
-    "url": "https://www.bbc.co.uk/sport/football/articles/ckjrwrggjlryo"
-   }
-  },
   {
    "id": "2026-11-10-carrick-monaco",
    "ts": "2026-11-10T23:55",
@@ -707,16 +667,49 @@
    "kind": "opinion",
    "source": null,
    "text": "Two of Justin's men got through the last round of games on a show of hands. The panel decided on a split vote that Marcus Tavernier should have had a second yellow for messing about over a restart, and Jayden Bogle's tackle on Mathys Tel was ruled not a red by 3-2, two of the five thinking it was. Justin will call that squad depth. It is a title challenge, 21 behind, held together by the referees' tolerance, and nobody in South Africa ever had to explain to him what it is like to win a vote you were not supposed to."
+  },
+  {
+   "id": "2026-11-19-sky-top-25",
+   "ts": "2026-11-19T08:44",
+   "kind": "news",
+   "text": "Erling Haaland has taken Bruno Fernandes's place at the top of Sky Sports' ranking of the Premier League's 25 best players, voted on by its reporters, so the swap at the summit runs straight from Big Ben to Justin: Haaland climbs from fourth to first, and Bruno falls ten places to 11th. Justin's Martin Odegaard comes back in at 10th, Small Ben's Declan Rice is second for the second vote running, and Robert's Rayan Cherki goes straight in at seventh. Small Ben's Gianluigi Donnarumma and Igor Thiago and Edward's Jurrien Timber are among the 11 who drop out.",
+   "source": {
+    "title": "Bruno Fernandes tumbles as new No 1 is crowned: Sky Sports ranks the Premier League's top 25 players right now",
+    "url": "https://www.skysports.com/football/news/13613154/bruno-fernandes-tumbles-as-new-no-1-is-crowned-sky-sports-ranks-the-premier-leagues-top-25-players-right-now"
+   }
+  },
+  {
+   "id": "2026-11-19-man-utd-branthwaite",
+   "ts": "2026-11-19T08:44",
+   "kind": "news",
+   "text": "Manchester United are monitoring Big Ben's Jarrad Branthwaite as a left-footed centre-back for January, Sky Sports News reports, with Mauricio Pochettino now expected to have his say on targets. United had two bids for him turned down in 2024, and Everton hold the stronger hand with his contract running to 2030. The same report notes that Big Ben's other United interest, Bruno Fernandes, is into the last six months of his deal, although the club holds a 12-month option on it.",
+   "source": {
+    "title": "Man Utd transfer news: Calvin Bassey and Jarrad Branthwaite among targets with Mauricio Pochettino set to be backed in January",
+    "url": "https://www.skysports.com/football/news/13613260/man-utd-transfer-news-calvin-bassey-and-jarrad-branthwaite-among-targets-with-mauricio-pochettino-set-to-be-backed-in-january"
+   }
+  },
+  {
+   "id": "2026-11-19-sky-talking-points",
+   "ts": "2026-11-19T08:44",
+   "kind": "news",
+   "text": "Sky Sports' look ahead to the weekend says nobody in the Premier League has created more chances than Big Ben's Pascal Gross, with 29, or more big chances, with 8, as Brighton head to Hull on 22 points from ten games. It is less kind to Justin's Pedro Neto, whose start as a false nine at Sunderland before the break did not produce a single touch in their box before he was taken off just after the hour. And it names Small Ben's Julio Enciso as the one creative outlet Ipswich lean on, which Bournemouth shut down before the break and Spurs will try to on Saturday.",
+   "source": {
+    "title": "Premier League Talking Points: Trial by Anfield as Poch begins Man Utd tenure",
+    "url": "https://www.skysports.com/football/news/13613208/mauricio-pochettino-begins-man-utd-tenure-with-testing-trip-to-liverpool-premier-league-talking-points"
+   }
+  },
+  {
+   "id": "2026-11-19-muharemovic-bosnia",
+   "ts": "2026-11-19T08:44",
+   "kind": "news",
+   "text": "Edward's Tarik Muharemovic wore the armband for Bosnia and Herzegovina in Zenica on Tuesday night and played the full 90 as they came from a goal down to beat Romania 2-1, Leeds United report, finishing second in their Nations League group and taking a place in the promotion play-offs. He is back at Leeds for Saturday's trip to Stamford Bridge, where the Chelsea side carries players from four of the other five squads in this league.",
+   "source": {
+    "title": "Muharemovic captains Bosnia and Herzegovina to comeback victory over Romania",
+    "url": "https://www.leedsunited.com/en/news/muharemovic-captains-bosnia-and-herzegovina-to-comeback-victory-over-romania"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-25T13:08",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "14:00 slot; sheets found (club sites): Crystal Palace, Newcastle, Liverpool; not found: Hull, Brentford, Brighton, Man Utd, Bournemouth"
-  },
   {
    "ts": "2026-10-25T16:07",
    "news": 1,
@@ -1129,6 +1122,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros; its totals omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table, which matches the game's standings for the closed GW10). No flops to rewrite. Reported: KMI panel's six refereeing errors - Tarkowski hair hold, Barry handball, Havertz penalty, Tavernier second yellow, Bogle on Tel (Edward, Big Ben, Justin; BBC), Pochettino arrives at Carrington for Anfield, 'Manchester won't always be blue', every manager owns a City player (all six; BBC). Opinion: Edward (no archive entry on him; hook his Barry handball goal and Tarkowski hair pull, 16 and 17 clear), Robert (pint, hairline and lack-of-management lines; hook owning players at all three bottom-three clubs from BBC's survival piece, 192 behind), Small Ben (boxing fight and team-selection lines; hook Thiago's correct VAR red, -2), Justin (Ben D's South African line as a nationality gag; hook Tavernier and Bogle split votes, 21 behind). Passed over: Marcus luck/kneejerk/Jobacus/Chloe/Catholic lines (none of his players in tonight's stories; Spotlight angle stays out - children), Big Ben ball-knowledge and Bruno lines (ran 16-17 Nov; Havertz offside hook went in the news item instead), Ben D self-roast (no hook), Small Ben height and 21-on-bench lines (saved for GW11), Harvey Price likeness (no fresh hook). Skipped: Chelsea v PSG and City in Sweden (women's Champions League), Man Utd/Paz gossip (gossip column), Mata retirement (not in any squad)."
+  },
+  {
+   "ts": "2026-11-19T08:44",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, last day of the international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Sky Sports' top 25 - Haaland first, Bruno down ten to 11th, Odegaard 10th, Rice 2nd, Cherki 7th, Donnarumma, Thiago and Timber out (Justin, Big Ben, Small Ben, Robert, Edward; Sky), Man Utd monitoring Branthwaite for January and Bruno into the last six months of his deal (Big Ben; Sky), Sky talking points on Gross's chance creation, Neto's touchless false-nine start and Ipswich's reliance on Enciso (Big Ben, Justin, Small Ben; Sky), Muharemovic captains Bosnia to a 2-1 comeback over Romania (Edward; leedsunited.com). Skipped: Van Dijk, Guehi, Gvardiol, Saka and Saliba fitness (only off-list or stale reports; Arteta's presser is Friday), Matheus Nunes contract talks (ESPN, 17 Nov, not advanced), BBC big-six finances (no league angle). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
