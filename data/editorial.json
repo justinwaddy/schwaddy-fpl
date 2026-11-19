@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-20T08:20 UTC",
-      "published": 1,
-      "note": "Led with Haaland limping off after Ipswich win, Maresca says nothing serious. Other searches returned nothing fresh from permitted outlets. Not in starters window."
-    },
-    {
       "ts": "2026-10-20T21:20 UTC",
       "published": 1,
       "note": "Led with Brobbey missing Bournemouth, training and hopeful of return. Nothing else fresh from permitted outlets. Not in starters window."
@@ -621,6 +616,11 @@
       "ts": "2026-11-18T22:15 UTC",
       "published": 0,
       "note": "International break, Wednesday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs (Marmoush)/Fulham, Forest/Bournemouth (Delap, Tavernier), Chelsea/Leeds, Sunderland (Le Fee) and general PL injury news. Only new item: Pochettino arrived at Carrington on Wednesday and takes first training Thursday before Anfield on Sunday (ESPN, manutd.com), which the earlier Carrick/Pochettino items already anticipated; no Cunha news. Nothing else new at permitted outlets in the last 24h. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-19T09:15 UTC",
+      "published": 0,
+      "note": "International break ends, Thursday morning. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham/Bournemouth/Chelsea, Sunderland/Forest (Le Fee, Delap) and general PL injury news. Nothing new in the last 24h at permitted outlets: the Saliba pieces (arsenal.com 3 Nov, ESPN 10 Nov) are older and already reflected in claim 1, and Pochettino's first training today was already covered. Club press conferences start Thursday/Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }
