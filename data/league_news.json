@@ -1,40 +1,6 @@
 {
- "generated": "2026-11-19T08:44 UTC",
+ "generated": "2026-11-19T23:55 UTC",
  "items": [
-  {
-   "id": "2026-11-10-carrick-monaco",
-   "ts": "2026-11-10T23:55",
-   "kind": "news",
-   "text": "Michael Carrick's future at Manchester United is to be settled in Monaco on Wednesday, where Omar Berrada and Jason Wilcox meet Sir Jim Ratcliffe, and BBC Sport expects their recommendation to be that the head coach goes. That would put a new man in charge of Marcus's Mbeumo, Justin's Cunha, Big Ben's Bruno Fernandes and Robert's Yoro and Sesko before United go to Anfield after the break.",
-   "source": {
-    "title": "Manchester United: Michael Carrick future to be discussed at Monaco meeting",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c8wy9yzyzxnko"
-   }
-  },
-  {
-   "id": "2026-11-10-smallben-fight",
-   "ts": "2026-11-10T23:55",
-   "kind": "opinion",
-   "text": "Small Ben finally picked the right eleven in GW10, left a bench worth 5, and the reward for getting it right was 37 points and the same view of Edward from 73 behind. He now has a fortnight off before Saturday and a fight coming up, and on the form of his team sheet he will train for neither, walk out looking enough like Harvey Price that half the hall cheers, and be on the canvas before he has worked out which corner is his.",
-   "source": null
-  },
-  {
-   "id": "2026-11-10-bigben-hill",
-   "ts": "2026-11-10T23:55",
-   "kind": "opinion",
-   "text": "James Hill got an England call today and Big Ben will spend the whole break mentioning it, because it is the nearest his squad has come to the top of anything: he sits 66 behind Edward. Arsenal man, proud gay pussy bender, and with Havertz bringing home 2 in GW10 the only thing in that front line still going both ways is the manager.",
-   "source": null
-  },
-  {
-   "id": "2026-11-11-pickford-trafford",
-   "ts": "2026-11-11T08:50",
-   "kind": "news",
-   "text": "Phil McNulty asks this morning whether Jordan Pickford finally has a rival for the England shirt, after Thomas Tuchel played James Trafford against Spain and the Czech Republic last time and has hinted he may rotate the pair again for Croatia at Wembley on Thursday and Spain in Madrid on Sunday. Paul Robinson tells BBC Sport Pickford is still the clear number one. It is a straight fight between two squads in this league: Pickford is Edward's keeper, Trafford is Big Ben's, and whichever of them plays gets the minutes the other one does not.",
-   "source": {
-    "title": "Does Pickford finally face serious competition for his England place?",
-    "url": "https://www.bbc.co.uk/sport/football/articles/crvg9y27n45wo"
-   }
-  },
   {
    "id": "2026-11-11-van-dijk-withdraws",
    "ts": "2026-11-11T08:50",
@@ -707,16 +673,40 @@
     "title": "Muharemovic captains Bosnia and Herzegovina to comeback victory over Romania",
     "url": "https://www.leedsunited.com/en/news/muharemovic-captains-bosnia-and-herzegovina-to-comeback-victory-over-romania"
    }
+  },
+  {
+   "id": "2026-11-19-pochettino-drone-footage",
+   "ts": "2026-11-19T23:55",
+   "kind": "news",
+   "text": "A 12-minute drone video of Mauricio Pochettino's first Manchester United training session went up on YouTube on Thursday, Sky Sports reports, zoomed in close enough to make out faces as he called 11 players into a huddle, and Sky's Rob Dorsett calls it a significant tactical advantage to Andoni Iraola's Liverpool for Sunday. Every manager here bar Edward has a stake at Anfield: Marcus's Mbeumo, Justin's Cunha, Big Ben's Bruno Fernandes and Robert's Yoro on one side, Liverpool players from Marcus's, Justin's, Big Ben's and Small Ben's squads on the other.",
+   "source": {
+    "title": "Manchester United: Drone footage of Mauricio Pochettino's first training session leaked online",
+    "url": "https://www.skysports.com/football/news/13614159/manchester-united-drone-footage-of-mauricio-pochettinos-first-training-session-leaked-online"
+   }
+  },
+  {
+   "id": "2026-11-19-marcus-drone",
+   "ts": "2026-11-19T23:55",
+   "kind": "opinion",
+   "text": "A drone spent twelve minutes over a field in Carrington filming men who had no idea they were being watched, and for once it was not a Jobacus Movies production. Marcus has been doing outdoor work with a long lens for years and Sky Sports News has never once called it a significant tactical advantage. He has Mbeumo on one side on Sunday and Alisson on the other, so whatever Liverpool learn from the footage, Marcus loses something, and he will spend the afternoon 17 behind Edward, crouched in a hedge, getting none of it on camera.",
+   "source": null
+  },
+  {
+   "id": "2026-11-19-robert-love",
+   "ts": "2026-11-19T23:55",
+   "kind": "opinion",
+   "text": "Pochettino's first interview at United says the job now is to love the players you have. Robert got there in August and has loved his so faithfully that he has not let a single one go, not even the six who gave him nothing in GW10, Saka and Sesko among them. It is the purest relationship in the league, 192 points behind Edward and completely unbothered, and the only thing in it that has ever been allowed to leave is the hairline.",
+   "source": null
+  },
+  {
+   "id": "2026-11-19-small-ben-drone",
+   "ts": "2026-11-19T23:55",
+   "kind": "opinion",
+   "text": "Liverpool have been handed a leaked look at Pochettino's first session, which makes Small Ben, with Van Dijk, Gakpo and Isak, the first man in this league to get a tactical advantage he did not have to think of himself. It is also the only time this season anybody has looked down on something from a greater height than the rest of the league looks down on Small Ben. He should put the same drone over his fight camp. It would film a man picking his punches the way he picks his eleven, eyes shut and out of a hat, from 73 off the top.",
+   "source": null
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-25T16:07",
-   "news": 1,
-   "opinion": 0,
-   "matchday": true,
-   "note": "16:30 slot SUN v LEE: Leeds sheet found (leedsunited.com); Sunderland sheet not found"
-  },
   {
    "ts": "2026-10-25T22:43",
    "news": 0,
@@ -1129,6 +1119,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, last day of the international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros). Reported: Sky Sports' top 25 - Haaland first, Bruno down ten to 11th, Odegaard 10th, Rice 2nd, Cherki 7th, Donnarumma, Thiago and Timber out (Justin, Big Ben, Small Ben, Robert, Edward; Sky), Man Utd monitoring Branthwaite for January and Bruno into the last six months of his deal (Big Ben; Sky), Sky talking points on Gross's chance creation, Neto's touchless false-nine start and Ipswich's reliance on Enciso (Big Ben, Justin, Small Ben; Sky), Muharemovic captains Bosnia to a 2-1 comeback over Romania (Edward; leedsunited.com). Skipped: Van Dijk, Guehi, Gvardiol, Saka and Saliba fitness (only off-list or stale reports; Arteta's presser is Friday), Matheus Nunes contract talks (ESPN, 17 Nov, not advanced), BBC big-six finances (no league angle). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-19T23:55",
+   "news": 1,
+   "opinion": 3,
+   "matchday": false,
+   "note": "Evening, last night of the international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros; its totals still omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table, which matches the game's standings for the closed GW10). No flops to rewrite. Reported: leaked drone footage of Pochettino's first Man Utd session, Sky's Dorsett calling it an advantage to Liverpool for Sunday (Marcus, Justin, Big Ben, Robert, Small Ben; Sky). Opinion: Marcus (Jobacus Movies line; hook the drone footage, Mbeumo and Alisson on both sides at Anfield, 17 behind), Robert (lack-of-management, no-transfers and hairline lines; hook Pochettino's 'love the players we have', six zeros in GW10, 192 behind), Small Ben (height and boxing-prep lines; hook his Liverpool trio benefiting from the footage, 37 in GW10, 73 off the top). Passed over: Edward (no archive entry on him, no fresh hook today), Justin (South African line ran 18 Nov and 17 Nov; no new hook), Big Ben ball-knowledge/Bruno lines (no fresh football; Bruno's Anfield trip keeps for Sunday's wrap), Marcus luck/kneejerk/Catholic/Chloe lines (Jobacus used instead; one piece per manager), Ben D self-roast (no hook), Harvey Price likeness (no fresh hook), Small Ben 21-on-bench line (saved for a GW11 bench), Rob's pint (ran 17 and 18 Nov). Skipped: Sesko out until January (only off-list sources), Guehi/Gvardiol fitness (no permitted report; Maresca presser is Friday), Saka/Saliba (Arteta presser is Friday, only X posts and fan sites), Caicedo (no current permitted report), Pochettino's first interview (used as opinion hook rather than a separate item)."
   }
  ]
 }
