@@ -1,54 +1,6 @@
 {
- "generated": "2026-11-20T08:44 UTC",
+ "generated": "2026-11-20T23:43 UTC",
  "items": [
-  {
-   "id": "2026-11-11-man-city-slump",
-   "ts": "2026-11-11T23:42",
-   "kind": "news",
-   "text": "Manchester City have lost three in a row, to Aston Villa, Brighton and Nottingham Forest, after a record seven straight wins under Enzo Maresca, and BBC Sport counts four individual errors leading to goals in those three games against none in the first seven. Their 13 conceded is the most at this stage since 2008-09. Every squad in this league has a City player, and the ones the defensive numbers land on are Small Ben's Donnarumma and Ruben, Marcus's Guehi, Justin's Gvardiol and Robert's O'Reilly.",
-   "source": {
-    "title": "Assessing the reasons for Man City's decline in form under Maresca",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cw30e0yz0p04o"
-   }
-  },
-  {
-   "id": "2026-11-11-robert-monaco",
-   "ts": "2026-11-11T23:42",
-   "kind": "opinion",
-   "source": null,
-   "text": "Inside one international break Manchester United have held a summit in Monaco, lined up a sacking and agreed terms with a successor, which is more squad management than Robert has done all season with Sesko and Yoro sat in his squad watching it happen. He is 192 off the top, still has not answered the group chat, and the last thing anyone saw him fail to finish was a pint. Pochettino keeps a box of lemons in his office to soak up negative energy. Robert would need an orchard, and something for the hairline."
-  },
-  {
-   "id": "2026-11-11-small-ben-city",
-   "ts": "2026-11-11T23:42",
-   "kind": "opinion",
-   "source": null,
-   "text": "Small Ben's goal is guarded by Donnarumma with Ruben in front of him, and BBC Sport has now called in a sports psychologist to explain why that defence keeps gifting goals away. The diagnosis is reduced collective efficacy: a squad that has stopped believing it can do the job. Small Ben has been running on that since August, and nobody has ever offered him a psychologist, just a box to stand on so he can see the top of the table."
-  },
-  {
-   "id": "2026-11-11-marcus-kneejerk",
-   "ts": "2026-11-11T23:42",
-   "kind": "opinion",
-   "source": null,
-   "text": "United first looked at Pochettino after a lunch in Mayfair in 2016 and are only now getting round to it, which is the slowest decision Marcus has ever had to watch. In his own squad, two good games buys a man a start and one bad one gets him binned, so Foden and Guehi, playing for a City side that has lost three straight, have the hip scan and the international break to enjoy before he panics. He sits 17 behind Edward on what he will tell you is bad luck, the same luck he was happy to call skill when it went his way."
-  },
-  {
-   "id": "2026-11-11-big-ben-bruno",
-   "ts": "2026-11-11T23:42",
-   "kind": "opinion",
-   "source": null,
-   "text": "Big Ben's whole season rests on Bruno Fernandes bailing him out, and Bruno is now waiting, like everybody else at Old Trafford, for somebody to come and bail out Bruno. The one comfort for an Arsenal man is that City have dropped behind Arsenal at the top, which he will read as proof that he understands football, from 66 points behind the leader of a league with six people in it."
-  },
-  {
-   "id": "2026-11-12-isak-penalty-panel",
-   "ts": "2026-11-12T08:58",
-   "kind": "news",
-   "text": "The Premier League's Key Match Incidents Panel has ruled, 4-1, that Liverpool should have had a penalty at Anfield on 1 November when Jurrien Timber pulled Alexander Isak's shirt as Bradley Barcola's cross came in, and voted 3-2 that the VAR should have sent Andy Madley to the monitor. Arsenal were 1-0 up through Kai Havertz and that was the final score. So the panel now agrees with Small Ben that Edward's Timber got away with one, in a game Big Ben's Havertz won and Justin's Barcola set up the chance that never was.",
-   "source": {
-    "title": "Shirt pull on Isak should have been penalty - panel",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c6n8d8kl125vo"
-   }
-  },
   {
    "id": "2026-11-12-king-england",
    "ts": "2026-11-12T08:58",
@@ -704,16 +656,57 @@
     "title": "Matthias Jaissle's team news update: Joelinton and Livramento latest ahead of Arsenal visit",
     "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-joelinton-and-livramento-latest-ahead-of-arsenal-visit"
    }
+  },
+  {
+   "id": "2026-11-20-saka-saliba-arteta",
+   "ts": "2026-11-20T23:43",
+   "kind": "news",
+   "text": "Mikel Arteta said on Friday that Robert's Bukayo Saka is about halfway through what looks like an eight-week thigh injury, picked up against Bayern Munich on 21 October, so there is roughly another month to go, ESPN reports. Small Ben gets the better half of the update: William Saliba has come through two practice matches and is in good condition to play at Newcastle on Saturday after the back injury that has kept him out since the World Cup. Martin Zubimendi, a free agent here, faces a few weeks out with a hamstring he picked up with Spain.",
+   "source": {
+    "title": "Arsenal's Bukayo Saka out for a month, William Saliba available - Mikel Arteta",
+    "url": "https://global.espn.com/football/story/_/id/50540215/arsenal-saka-saliba-arteta-injury"
+   }
+  },
+  {
+   "id": "2026-11-20-joao-pedro-leeds",
+   "ts": "2026-11-20T23:43",
+   "kind": "news",
+   "text": "Marcus's Joao Pedro will miss Chelsea's home game with Leeds on Saturday with a thigh injury, BBC Sport reports, and its numbers explain why that matters beyond Marcus: since the start of last season Chelsea have averaged 1.8 goals a game with him and 0.6 without, and they have scored in every league game he has played this season. Justin's Pedro Neto has twice been used through the middle in his absence and Big Ben's Morgan Rogers once. Leeds bring Edward's Muharemovic and Calvert-Lewin, Justin's Bogle, Big Ben's Trafford and Robert's Wilson to Stamford Bridge.",
+   "source": {
+    "title": "Why injured Joao Pedro may be Chelsea's most important player",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cr62p7x23vg3o"
+   }
+  },
+  {
+   "id": "2026-11-20-marcus-tzolis-inside-info",
+   "ts": "2026-11-20T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Arteta has had to order his squad to stop picking themselves in fantasy football, because Christos Tzolis put Christos Tzolis in his own team before Anfield after a month out injured, on information nobody else had. Marcus owns Tzolis and could have had the same tip by asking. Instead he spent the week doing what he does without one, waiving in John McGinn on a hunch and dropping King to make room, and he goes into Saturday 17 behind Edward on a method that has never been an edge, only luck that has not run out yet."
+  },
+  {
+   "id": "2026-11-20-robert-saka-pint",
+   "ts": "2026-11-20T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Arteta says Saka's thigh is an eight-week job and they are four weeks in, so Robert's best winger should be back at roughly the time Robert replies to last week's group chat. Four managers in this league went to the waiver wire this week. Robert stayed exactly where he was, 192 off the top, holding on to an injured man the way he held on to that pint: picked up with real intent, put down halfway, never finished."
+  },
+  {
+   "id": "2026-11-20-justin-cunha-released",
+   "ts": "2026-11-20T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Pochettino's first message at United was to love the players you have. Justin read it and released Matheus Cunha two days before Cunha shares the No 9 job at Anfield in Pochettino's first game, bringing in Ayari from Brighton instead. He is 21 behind Edward and has just handed the rest of the league a Brazilian forward with a new manager to impress, which is either a masterstroke or the kind of thing a man does when he has never once in his life had to wait to see how a vote went."
+  },
+  {
+   "id": "2026-11-20-smallben-waiver-rebuild",
+   "ts": "2026-11-20T23:43",
+   "kind": "opinion",
+   "source": null,
+   "text": "Small Ben tore up half his team on Friday night, Szoboszlai and Maatsen in, Enciso and Mykolenko out, the evening before Enciso's Ipswich go to Spurs. On the same day Arteta confirmed Saliba is fit again, so for the first time in weeks Small Ben has every Arsenal defender he owns available and no excuse left. He is 73 off the top and preparing for a fight in exactly the same way: change everything the night before, then look up at the man opposite and hope he has not seen the footage."
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-26T07:55",
-   "news": 5,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning, Monday after GW8, no fixtures today. Led with Isak (BBC), the Man City back line, Jackson at Villa, Carrick on the brink, Branthwaite gossip. Opinion is evening only; no roast suggestions used or passed over."
-  },
   {
    "ts": "2026-10-26T16:49",
    "news": 2,
@@ -1126,6 +1119,13 @@
    "opinion": 0,
    "matchday": false,
    "note": "Morning, Friday before GW11 (no fixtures today; GW11 starts Sat 21 Nov, live feed all zeros). Pre-match press conferences (Iraola 13:30, Arteta, Guardiola, Pochettino) are later today, so team news from them is for the evening run. Reported: BBC on Pochettino's Man Utd priorities - Bruno dropped after criticising Carrick, Sesko out, Cunha and Mbeumo sharing the No 9 role (Big Ben, Robert, Justin, Marcus; BBC), PL clubs vote to cover directors' legal costs if City's sponsors sue, City and Forest against (all six own a City player; BBC), Branthwaite on his recurring hamstring, German specialist and advice from Calvert-Lewin (Big Ben, Edward; evertonfc.com), Jaissle rules Joelinton out of Newcastle v Arsenal, Livramento back (all six own Arsenal players, Small Ben's Osula; newcastleunited.com). Skipped: Saka, Saliba, Gvardiol, Guehi, Van Dijk fitness (only fantasy sites and trackers so far), Palmer suspension explainer (undated, refers to an older fixture), Nyoni and McAtee features (no squad player at the centre), City guilty-verdict scenarios piece (September). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-20T23:43",
+   "news": 2,
+   "opinion": 4,
+   "matchday": false,
+   "note": "Evening, Friday before GW11 (no fixtures today; GW11 starts Sat 21 Nov, live feed all zeros and its totals still omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table: Marcus 17, Justin 21, Small Ben 73, Robert 192 behind Edward). No flops to rewrite. Reported: Arteta on Saka's eight-week thigh injury (about four to go) and Saliba fit after two practice matches, Zubimendi a few weeks (Robert, Small Ben; ESPN), Joao Pedro out v Leeds, Chelsea's goals with and without him, Neto and Rogers used centrally, Leeds' owned players (Marcus, Justin, Big Ben, Edward, Robert; BBC). Opinion: Marcus (relies-on-luck and kneejerk lines; hook BBC's report that Tzolis picked himself in FPL before Anfield and Arteta's ban, plus his McGinn-for-King waiver, 17 behind), Robert (pint and lack-of-management/no-transfers lines; hook Saka's injury timeline and four managers using waivers while he did not, 192 behind), Justin (Ben D's South African line, oblique, via the vote angle; hook releasing Cunha before Anfield for Ayari, 21 behind), Small Ben (boxing-prep line; hook his Friday waiver rebuild and Saliba's return, 73 behind; his third waiver signing deliberately not mentioned under the Delap ban). Passed over: Edward (no archive entry on him, no fresh hook; leading and idle), Big Ben ball-knowledge and Bruno lines (no new football - Bruno at Anfield keeps for Sunday's wrap; his Tzolis team name left alone, Tzolis went to Marcus's piece), Ben D self-roast (no hook), Marcus Jobacus/Catholic/Chloe lines (ran last night; one piece per manager; Spotlight angle stays out - children), Small Ben height, Harvey Price likeness and 21-on-bench lines (saved for a GW11 bench), Robert hairline (ran last two nights; left out to avoid repeating). Skipped: Iraola on drones (drone story reported last night), Frank's first Palace presser (19 Nov, nothing on Mateta), Kane ankle (not in the league), Guardiola/Gvardiol/Guehi fitness (no permitted report found)."
   }
  ]
 }
