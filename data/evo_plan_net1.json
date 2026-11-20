@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T08:37",
+ "generated": "2026-11-20T17:14",
  "gw": 11,
  "horizon": "next5",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -10,10 +10,10 @@
  "vote": null,
  "league": 9450,
  "offline": false,
- "window": "waiver",
+ "window": "free_agency",
  "waivers_time": "2026-11-20T11:00:00Z",
  "deadline": "2026-11-21T11:00:00Z",
- "formation": "4-4-2",
+ "formation": "5-4-1",
  "xi": [
   {
    "id": 1,
@@ -25,7 +25,7 @@
    "news": "",
    "p_play": 1.0,
    "base": 4.87,
-   "ep": 5.13
+   "ep": 5.12
   },
   {
    "id": 504,
@@ -37,7 +37,31 @@
    "news": "",
    "p_play": 0.985,
    "base": 4.97,
-   "ep": 5.78
+   "ep": 5.74
+  },
+  {
+   "id": 391,
+   "code": 477424,
+   "name": "Gvardiol",
+   "pos": "DEF",
+   "team": "MCI",
+   "status": "a",
+   "news": "",
+   "p_play": 0.587,
+   "base": 4.87,
+   "ep": 5.64
+  },
+  {
+   "id": 31,
+   "code": 199798,
+   "name": "Konsa",
+   "pos": "DEF",
+   "team": "ARS",
+   "status": "a",
+   "news": "",
+   "p_play": 1.0,
+   "base": 4.13,
+   "ep": 4.68
   },
   {
    "id": 330,
@@ -49,19 +73,7 @@
    "news": "",
    "p_play": 0.921,
    "base": 3.78,
-   "ep": 4.67
-  },
-  {
-   "id": 391,
-   "code": 477424,
-   "name": "Gvardiol",
-   "pos": "DEF",
-   "team": "MCI",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
-   "p_play": 0.587,
-   "base": 3.65,
-   "ep": 4.09
+   "ep": 4.63
   },
   {
    "id": 114,
@@ -73,7 +85,7 @@
    "news": "",
    "p_play": 0.861,
    "base": 3.74,
-   "ep": 3.93
+   "ep": 3.91
   },
   {
    "id": 68,
@@ -85,7 +97,7 @@
    "news": "",
    "p_play": 0.929,
    "base": 4.82,
-   "ep": 5.91
+   "ep": 5.87
   },
   {
    "id": 156,
@@ -97,7 +109,7 @@
    "news": "",
    "p_play": 0.926,
    "base": 4.3,
-   "ep": 5.32
+   "ep": 5.27
   },
   {
    "id": 15,
@@ -109,19 +121,19 @@
    "news": "",
    "p_play": 0.95,
    "base": 3.93,
-   "ep": 4.68
+   "ep": 4.63
   },
   {
-   "id": 428,
-   "code": 430871,
-   "name": "Cunha",
+   "id": 129,
+   "code": 509416,
+   "name": "Ayari",
    "pos": "MID",
-   "team": "MUN",
+   "team": "BHA",
    "status": "a",
    "news": "",
-   "p_play": 0.793,
-   "base": 3.36,
-   "ep": 3.65
+   "p_play": 0.95,
+   "base": 3.88,
+   "ep": 4.54
   },
   {
    "id": 411,
@@ -133,19 +145,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 6.71,
-   "ep": 7.22
-  },
-  {
-   "id": 401,
-   "code": 438234,
-   "name": "Marmoush",
-   "pos": "FWD",
-   "team": "TOT",
-   "status": "a",
-   "news": "",
-   "p_play": 0.815,
-   "base": 2.82,
-   "ep": 3.92
+   "ep": 7.19
   }
  ],
  "bench": [
@@ -159,7 +159,19 @@
    "news": "",
    "p_play": 1.0,
    "base": 3.9,
-   "ep": 4.38
+   "ep": 4.33
+  },
+  {
+   "id": 401,
+   "code": 438234,
+   "name": "Marmoush",
+   "pos": "FWD",
+   "team": "TOT",
+   "status": "a",
+   "news": "",
+   "p_play": 0.815,
+   "base": 2.82,
+   "ep": 3.88
   },
   {
    "id": 628,
@@ -171,19 +183,7 @@
    "news": "",
    "p_play": 0.834,
    "base": 2.63,
-   "ep": 3.52
-  },
-  {
-   "id": 10,
-   "code": 198869,
-   "name": "White",
-   "pos": "DEF",
-   "team": "ARS",
-   "status": "a",
-   "news": "",
-   "p_play": 0.566,
-   "base": 2.62,
-   "ep": 2.49
+   "ep": 3.48
   },
   {
    "id": 569,
@@ -195,137 +195,47 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 2.28
+   "ep": 2.18
   }
  ],
- "xi_ep": 54.3,
- "changes": 3,
+ "xi_ep": 57.2,
+ "changes": 2,
  "claims": [
   {
    "pos": "DEF",
-   "gain": 12.88,
+   "gain": 5.33,
    "change": 1,
    "fallback": false,
    "add": {
-    "id": 31,
-    "code": 199798,
-    "name": "Konsa",
+    "id": 389,
+    "code": 465351,
+    "name": "Matheus N.",
     "pos": "DEF",
-    "team": "ARS",
-    "status": "a",
-    "news": "",
-    "p_play": 1.0,
+    "team": "MCI",
+    "status": "d",
+    "news": "Unspecified injury - 50% chance of playing",
+    "p_play": 0.717,
     "base": null,
     "ep": null
    },
    "drop": {
-    "id": 10,
-    "code": 198869,
-    "name": "White",
+    "id": 114,
+    "code": 204120,
+    "name": "Boscagli",
     "pos": "DEF",
-    "team": "ARS",
-    "status": "a",
-    "news": "",
-    "p_play": 0.566,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "DEF",
-   "gain": 3.84,
-   "change": 1,
-   "fallback": true,
-   "add": {
-    "id": 503,
-    "code": 491279,
-    "name": "Van de Ven",
-    "pos": "DEF",
-    "team": "TOT",
-    "status": "a",
-    "news": "",
-    "p_play": 0.913,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 10,
-    "code": 198869,
-    "name": "White",
-    "pos": "DEF",
-    "team": "ARS",
-    "status": "a",
-    "news": "",
-    "p_play": 0.566,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 10.06,
-   "change": 2,
-   "fallback": false,
-   "add": {
-    "id": 45,
-    "code": 122806,
-    "name": "McGinn",
-    "pos": "MID",
-    "team": "AVL",
-    "status": "a",
-    "news": "",
-    "p_play": 0.881,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.834,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 8.51,
-   "change": 2,
-   "fallback": true,
-   "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
-    "pos": "MID",
     "team": "BHA",
     "status": "a",
     "news": "",
-    "p_play": 0.95,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 628,
-    "code": 482616,
-    "name": "Barcola",
-    "pos": "MID",
-    "team": "LIV",
-    "status": "a",
-    "news": "",
-    "p_play": 0.834,
+    "p_play": 0.861,
     "base": null,
     "ep": null
    }
   },
   {
    "pos": "MID",
-   "gain": 6.8,
+   "gain": 5.06,
    "change": 2,
-   "fallback": true,
+   "fallback": false,
    "add": {
     "id": 127,
     "code": 514254,
@@ -353,7 +263,7 @@
   },
   {
    "pos": "MID",
-   "gain": 4.06,
+   "gain": 3.73,
    "change": 2,
    "fallback": true,
    "add": {
@@ -380,70 +290,10 @@
     "base": null,
     "ep": null
    }
-  },
-  {
-   "pos": "MID",
-   "gain": 7.11,
-   "change": 3,
-   "fallback": false,
-   "add": {
-    "id": 129,
-    "code": 509416,
-    "name": "Ayari",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.95,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 428,
-    "code": 430871,
-    "name": "Cunha",
-    "pos": "MID",
-    "team": "MUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.793,
-    "base": null,
-    "ep": null
-   }
-  },
-  {
-   "pos": "MID",
-   "gain": 5.4,
-   "change": 3,
-   "fallback": true,
-   "add": {
-    "id": 127,
-    "code": 514254,
-    "name": "Gomez",
-    "pos": "MID",
-    "team": "BHA",
-    "status": "a",
-    "news": "",
-    "p_play": 0.974,
-    "base": null,
-    "ep": null
-   },
-   "drop": {
-    "id": 428,
-    "code": 430871,
-    "name": "Cunha",
-    "pos": "MID",
-    "team": "MUN",
-    "status": "a",
-    "news": "",
-    "p_play": 0.793,
-    "base": null,
-    "ep": null
-   }
   }
  ],
  "claims_note": "waivers are unlimited; these are the ranked claims above the margin, and the game processes them in this order; gains are expected points over the next five gameweeks",
- "claims_are": "waiver claims, in submission order",
+ "claims_are": "free agents, first come first served",
  "board": [
   {
    "id": 411,
@@ -548,7 +398,7 @@
    "pos": "DEF",
    "team": "MCI",
    "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
+   "news": "Hip injury - 75% chance of playing",
    "p_play": 0.591,
    "base": 179.94,
    "ep": 278.37
@@ -596,7 +446,7 @@
    "pos": "MID",
    "team": "ARS",
    "status": "i",
-   "news": "Thigh injury - Unknown return date",
+   "news": "Thigh injury - Expected back 20 Dec",
    "p_play": 0.0,
    "base": 167.54,
    "ep": 274.82
@@ -715,8 +565,8 @@
    "name": "Zubimendi",
    "pos": "MID",
    "team": "ARS",
-   "status": "d",
-   "news": "Hamstring injury - 75% chance of playing",
+   "status": "i",
+   "news": "Hamstring injury - Unknown return date",
    "p_play": 0.177,
    "base": 127.89,
    "ep": 246.69
@@ -847,8 +697,8 @@
    "name": "Gvardiol",
    "pos": "DEF",
    "team": "MCI",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
+   "status": "a",
+   "news": "",
    "p_play": 0.587,
    "base": 111.9,
    "ep": 223.0
@@ -871,8 +721,8 @@
    "name": "Virgil",
    "pos": "DEF",
    "team": "LIV",
-   "status": "d",
-   "news": "Unspecified injury - 75% chance of playing",
+   "status": "a",
+   "news": "",
    "p_play": 0.75,
    "base": 158.98,
    "ep": 217.42
