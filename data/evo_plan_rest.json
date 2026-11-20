@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T17:37",
+ "generated": "2026-11-20T08:37",
  "gw": 11,
  "horizon": "rest",
  "model": "/home/runner/work/schwaddy-fpl/schwaddy-fpl/data/evo_models/seed1.npz",
@@ -146,7 +146,7 @@
    "news": "",
    "p_play": 0.987,
    "base": 6.71,
-   "ep": 6.68,
+   "ep": 6.67,
    "votes": 5
   },
   {
@@ -159,7 +159,7 @@
    "news": "",
    "p_play": 0.815,
    "base": 2.82,
-   "ep": 2.75,
+   "ep": 2.74,
    "votes": 5
   }
  ],
@@ -200,7 +200,7 @@
    "news": "",
    "p_play": 0.566,
    "base": 2.62,
-   "ep": 2.5,
+   "ep": 2.49,
    "votes": 1
   },
   {
@@ -213,16 +213,16 @@
    "news": "",
    "p_play": 0.904,
    "base": 1.97,
-   "ep": 1.88,
+   "ep": 1.89,
    "votes": 0
   }
  ],
- "xi_ep": 46.2,
+ "xi_ep": 46.1,
  "changes": 3,
  "claims": [
   {
    "pos": "DEF",
-   "gain": 41.83,
+   "gain": 41.77,
    "change": 1,
    "fallback": false,
    "add": {
@@ -250,11 +250,11 @@
     "ep": null
    },
    "votes": 5,
-   "borda": 106
+   "borda": 103
   },
   {
    "pos": "MID",
-   "gain": 41.35,
+   "gain": 42.13,
    "change": 2,
    "fallback": false,
    "add": {
@@ -282,11 +282,11 @@
     "ep": null
    },
    "votes": 4,
-   "borda": 76
+   "borda": 77
   },
   {
    "pos": "MID",
-   "gain": 33.43,
+   "gain": 34.26,
    "change": 2,
    "fallback": true,
    "add": {
@@ -318,7 +318,7 @@
   },
   {
    "pos": "MID",
-   "gain": 32.94,
+   "gain": 33.93,
    "change": 2,
    "fallback": true,
    "add": {
@@ -346,11 +346,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 49
+   "borda": 51
   },
   {
    "pos": "MID",
-   "gain": 29.95,
+   "gain": 30.27,
    "change": 2,
    "fallback": true,
    "add": {
@@ -382,7 +382,7 @@
   },
   {
    "pos": "MID",
-   "gain": 22.3,
+   "gain": 22.74,
    "change": 3,
    "fallback": false,
    "add": {
@@ -414,7 +414,7 @@
   },
   {
    "pos": "MID",
-   "gain": 26.38,
+   "gain": 26.68,
    "change": 3,
    "fallback": true,
    "add": {
@@ -442,11 +442,11 @@
     "ep": null
    },
    "votes": 3,
-   "borda": 20
+   "borda": 19
   },
   {
    "pos": "MID",
-   "gain": 32.24,
+   "gain": 32.11,
    "change": 3,
    "fallback": true,
    "add": {
@@ -478,7 +478,7 @@
   },
   {
    "pos": "MID",
-   "gain": 33.9,
+   "gain": 34.23,
    "change": 3,
    "fallback": true,
    "add": {
@@ -905,7 +905,7 @@
    "pos": "MID",
    "team": "CRY",
    "status": "i",
-   "news": "Groin injury - Expected back 21 Nov",
+   "news": "Groin injury - Expected back 29 Nov",
    "p_play": 0.0,
    "base": 140.1,
    "ep": 127.79
