@@ -323,11 +323,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-21T08:25 UTC",
-      "published": 0,
-      "note": "Morning check. Permitted-outlet searches returned nothing newer than the Haaland and Brobbey items already published. Not in starters window. Nothing published."
-    },
-    {
       "ts": "2026-10-21T21:10 UTC",
       "published": 0,
       "note": "Evening check. Searches for Marmoush, GW8 team news and Leeds returned only old seasons or non-permitted outlets. Not in starters window. Nothing published."
@@ -621,6 +616,11 @@
       "ts": "2026-11-19T22:15 UTC",
       "published": 0,
       "note": "International break over, Thursday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham, Forest/Chelsea/Bournemouth (Delap, Neto, Tavernier), Sunderland (Le Fee) and general PL team news, plus Sky Sports' news pages read directly. Only Sky's weekend talking points and an 18 Nov Arsenal blog item on the Konsa/Saliba selection dilemma, neither with new fitness facts; Arteta and Maresca press conferences are due Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+    },
+    {
+      "ts": "2026-11-20T09:25 UTC",
+      "published": 0,
+      "note": "Friday morning, waivers close 11:00 UTC. Searches on Arsenal (Saliba/Konsa/White/Odegaard at Newcastle), Man City (Haaland, Gvardiol v Fulham; Maresca presser 10:30 UK, not yet reported), Liverpool v Man Utd (Barcola, Jacquet, van Dijk, Cunha), Brighton/Hull, Leeds/Chelsea, Spurs/Fulham/Bournemouth, Forest (Delap), Sunderland (Le Fee) and general PL team news. New: Sky's Liverpool v Man Utd preview (Frimpong back training, Maguire back issue) and Le Bris saying Xhaka and Brobbey miss Villa (safc.com) - none touch his squad and the model already has those players injured. No Arteta presser yet. bbc.co.uk, theguardian.com and theathletic.com blocked in search. Not in starters window. Nothing published."
     }
   ]
 }

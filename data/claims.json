@@ -1,7 +1,7 @@
 {
   "gw": 11,
   "waivers_close": "2026-11-20T11:00:00Z",
-  "ts": "2026-11-19T22:15 UTC",
+  "ts": "2026-11-20T09:25 UTC",
   "summary": "GW10 waivers have processed, so these are for the GW11 window closing 20 November. Konsa scored for England in Spain on Sunday, so he is fit and the model's top swap (Konsa for White) stays first, though Saliba's expected return at Newcastle makes every Arsenal defender a rotation risk. Justin is third of six, so waiver priority is mid-queue; any of these can also be picked up first-come before the GW11 deadline once waivers clear.",
   "claims": [
     {
@@ -71,13 +71,17 @@
         "code": "482616",
         "club": "LIV"
       },
-      "why": "Le Fee is an established Sunderland starter the model has fully available, and scored the winner against Chelsea. But Barcola is a marquee Liverpool signing who started for France this week, per the Premier League, so he is fit; the model underrates him on only 8 career appearances. Low confidence.",
+      "why": "Le Fee is an established Sunderland starter the model has fully available, and scored the winner against Chelsea. But Barcola is a marquee Liverpool signing who started for France this week, per the Premier League, so he is fit; the model underrates him on only 8 career appearances. Low confidence. Sunderland are without Xhaka and Brobbey at Villa, per the club.",
       "model": "Model has Le Fee 19.3 next5 against Barcola 12.7; following it cautiously, since Barcola's number reflects a short record rather than any reported problem.",
       "confidence": "low",
       "sources": [
         {
           "title": "Internationals: How EVERY Premier League club's stars are performing",
           "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
+        },
+        {
+          "title": "Every Word Le Bris Said on Brobbey, Ahoka and Aston Villa",
+          "url": "https://www.safc.com/news/2026/november/19/every-word-le-bris-said-on-brobbey--ahoka-and-villa"
         }
       ]
     },
@@ -848,12 +852,6 @@
   ],
   "runs": [
     {
-      "ts": "2026-10-21T21:10 UTC",
-      "gw": 8,
-      "claims": 5,
-      "note": "No new permitted-source news; claims carried forward unchanged."
-    },
-    {
       "ts": "2026-10-22T08:20 UTC",
       "gw": 8,
       "claims": 5,
@@ -1206,6 +1204,12 @@
       "gw": 11,
       "claims": 5,
       "note": "Order unchanged. No new permitted-outlet news on any add or drop since the morning run; Sky Sports flags the Konsa/Saliba selection question at Newcastle but no fitness update, so claim 1 stays medium. Arteta and Maresca press conferences fall Friday, around the 11:00 UTC waiver close."
+    },
+    {
+      "ts": "2026-11-20T09:25 UTC",
+      "gw": 11,
+      "claims": 5,
+      "note": "Order unchanged, final run before the 11:00 UTC close. No Arteta or Maresca press-conference news yet, so claim 1 stays medium; claim 3 now notes Sunderland are without Xhaka and Brobbey at Villa (safc.com), which leaves Le Fee more of the midfield load."
     }
   ]
 }
