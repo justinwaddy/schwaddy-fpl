@@ -1,46 +1,6 @@
 {
- "generated": "2026-11-19T23:55 UTC",
+ "generated": "2026-11-20T08:44 UTC",
  "items": [
-  {
-   "id": "2026-11-11-van-dijk-withdraws",
-   "ts": "2026-11-11T08:50",
-   "kind": "news",
-   "text": "Virgil van Dijk has pulled out of the Netherlands squad for the games with Greece and Germany, the Dutch federation saying he did not return fit from Liverpool's win at Crystal Palace on Sunday, Liverpool confirmed. No detail on the problem beyond a fitness issue, and the next thing that matters is whether he is right for Liverpool's first game back. He is Small Ben's centre-half.",
-   "source": {
-    "title": "Virgil van Dijk withdraws from Netherlands squad",
-    "url": "https://www.liverpoolfc.com/news/virgil-van-dijk-withdraws-from-netherlands-squad"
-   }
-  },
-  {
-   "id": "2026-11-11-alisson-potm",
-   "ts": "2026-11-11T08:50",
-   "kind": "news",
-   "text": "Alisson has been named the Premier League's Player of the Matchweek for his saves in Liverpool's 3-1 win at Crystal Palace, and the shortlist he beat reads like this league's team sheets: Thierno Barry and Tarik Muharemovic, both Edward's, Pascal Gross, Big Ben's, and Nordi Mukiele, who is Marcus's. Alisson is Marcus's too, so the leader had two men up for it and the man 17 behind him won it with his keeper.",
-   "source": {
-    "title": "Alisson Becker wins Premier League Player of the Matchweek award",
-    "url": "https://www.liverpoolfc.com/news/alisson-becker-wins-premier-league-player-of-the-matchweek-award"
-   }
-  },
-  {
-   "id": "2026-11-11-chelsea-fpl-warning",
-   "ts": "2026-11-11T08:50",
-   "kind": "news",
-   "text": "Chelsea have emailed staff warning them not to give away team news through Fantasy Premier League, BBC Sport reports, after Joao Pedro's absence against Tottenham, since revealed as a quad injury, appeared to leak when content creators claimed Morgan Rogers and several staff had taken him out of their own teams before kick-off. Joao Pedro has not played since the win over Everton last month and is Marcus's forward; Rogers is Big Ben's, and apparently plays this game as well.",
-   "source": {
-    "title": "Chelsea staff warned over Fantasy Premier League use",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c98rzr51rlvpo"
-   }
-  },
-  {
-   "id": "2026-11-11-pochettino-man-utd",
-   "ts": "2026-11-11T23:42",
-   "kind": "news",
-   "text": "Mauricio Pochettino is ready to accept the Manchester United job, BBC Sport reports, with terms said to be more or less agreed and Michael Carrick expected to be relieved of his duties within 48 hours of the Monaco meeting. United would have to pay the USA $10m to release him, and he may be at Carrington before the trip to Anfield on 22 November. So the next man to pick Bruno Fernandes (Big Ben), Mbeumo (Marcus), Cunha (Justin) and Sesko and Yoro (Robert) is very probably the former Spurs and Chelsea boss.",
-   "source": {
-    "title": "Pochettino ready to accept Man Utd offer to replace Carrick",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cqvg25pj36mvo"
-   }
-  },
   {
    "id": "2026-11-11-man-city-slump",
    "ts": "2026-11-11T23:42",
@@ -704,16 +664,49 @@
    "kind": "opinion",
    "text": "Liverpool have been handed a leaked look at Pochettino's first session, which makes Small Ben, with Van Dijk, Gakpo and Isak, the first man in this league to get a tactical advantage he did not have to think of himself. It is also the only time this season anybody has looked down on something from a greater height than the rest of the league looks down on Small Ben. He should put the same drone over his fight camp. It would film a man picking his punches the way he picks his eleven, eyes shut and out of a hat, from 73 off the top.",
    "source": null
+  },
+  {
+   "id": "2026-11-20-pochettino-bruno-in-tray",
+   "ts": "2026-11-20T08:44",
+   "kind": "news",
+   "text": "BBC Sport's look at Mauricio Pochettino's in-tray at Manchester United puts Big Ben's Bruno Fernandes near the top of it: a shadow of last season's player of the year, dropped for the 3-0 home defeat by Bournemouth after criticising Michael Carrick's tactics in the 4-1 Champions League loss to Como, and now waiting to learn whether he plays at 10, deeper or wide. With Robert's Benjamin Sesko out, Justin's Matheus Cunha and Marcus's Bryan Mbeumo have been sharing the No 9 job, and Mbeumo has two goals in his last 12 appearances.",
+   "source": {
+    "title": "Culture, defence, Fernandes - Pochettino's priorities at Man Utd",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cxlylzyg38l8o"
+   }
+  },
+  {
+   "id": "2026-11-20-city-sponsors-legal-costs",
+   "ts": "2026-11-20T08:44",
+   "kind": "news",
+   "text": "Premier League clubs voted on Thursday to cover the legal costs of the league's five board directors if Manchester City's sponsors Etihad and Etisalat sue them, BBC Sport reports, with City and Nottingham Forest the only two clubs against. It was the clubs' first meeting since City were found guilty in September; City have appealed and no sanction has been decided. Any points deduction would come off City's table rather than this one, which is just as well, because all six managers here own at least one City player and Robert owns three.",
+   "source": {
+    "title": "Premier League clubs to cover legal costs if Man City sponsors sue",
+    "url": "https://www.bbc.co.uk/sport/football/articles/cqy4jvdw7jdlo"
+   }
+  },
+  {
+   "id": "2026-11-20-branthwaite-hamstring-specialist",
+   "ts": "2026-11-20T08:44",
+   "kind": "news",
+   "text": "Big Ben's Jarrad Branthwaite has told Everton's website that his hamstring went for the fourth time in the same place last season before he spent four weeks with a specialist in Germany whose approach looked at how the whole body moves, not just the hamstring, and that after a carefully managed pre-season he now feels good. The man he mainly turned to for advice was Dominic Calvert-Lewin, who had the same trouble at Everton and now plays for Leeds in Edward's squad.",
+   "source": {
+    "title": "Branthwaite's Everton Squad Claim & 'Holistic' Fitness Approach",
+    "url": "https://www.evertonfc.com/news/2026/november/18/branthwaite-s-everton-squad-claim----holistic--injury-approach/"
+   }
+  },
+  {
+   "id": "2026-11-20-newcastle-arsenal-joelinton",
+   "ts": "2026-11-20T08:44",
+   "kind": "news",
+   "text": "Joelinton will miss Newcastle's home game with Arsenal on Saturday evening, Matthias Jaissle said on Thursday, with the club waiting on a specialist before putting a timescale on it, but most of the nine players Newcastle had injured are now back and Tino Livramento is available again. Every manager in this league has at least one Arsenal player, and Small Ben has a foot in both camps: Rice, Madueke and Saliba on one side, Newcastle's William Osula on the other.",
+   "source": {
+    "title": "Matthias Jaissle's team news update: Joelinton and Livramento latest ahead of Arsenal visit",
+    "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-joelinton-and-livramento-latest-ahead-of-arsenal-visit"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-25T22:43",
-   "news": 0,
-   "opinion": 4,
-   "matchday": true,
-   "note": "Evening wrap, GW8 done. Led with Marcus losing the lead to Justin, then Robert's six blanks, Edward's best-in-league 56, Ben D's Konsa/Gross. No reported items: only search hit was last season's Sunderland v Leeds report, nothing usable. Rewrote all 7 flop lines (Brobbey's public.json copy still says Justin's vs news.json 'yours', so left for next refresh). Archive used: Edward on Marcus (luck), Ben D/Edward on Robert (hairline), Edward on Ben D (Arsenal ball knowledge). Passed over: Ben C height, Harvey Price, Marcus Jobacus/catholic, Justin on Rob's pint, Ben C bench (Oct 18), South Africa/self-sexuality entries - no fresh hook or not needed tonight, and I did not use the Ben D self-submission."
-  },
   {
    "ts": "2026-10-26T07:55",
    "news": 5,
@@ -1126,6 +1119,13 @@
    "opinion": 3,
    "matchday": false,
    "note": "Evening, last night of the international break, no Premier League fixtures today (GW11 starts Sat 21 Nov, live feed all zeros; its totals still omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table, which matches the game's standings for the closed GW10). No flops to rewrite. Reported: leaked drone footage of Pochettino's first Man Utd session, Sky's Dorsett calling it an advantage to Liverpool for Sunday (Marcus, Justin, Big Ben, Robert, Small Ben; Sky). Opinion: Marcus (Jobacus Movies line; hook the drone footage, Mbeumo and Alisson on both sides at Anfield, 17 behind), Robert (lack-of-management, no-transfers and hairline lines; hook Pochettino's 'love the players we have', six zeros in GW10, 192 behind), Small Ben (height and boxing-prep lines; hook his Liverpool trio benefiting from the footage, 37 in GW10, 73 off the top). Passed over: Edward (no archive entry on him, no fresh hook today), Justin (South African line ran 18 Nov and 17 Nov; no new hook), Big Ben ball-knowledge/Bruno lines (no fresh football; Bruno's Anfield trip keeps for Sunday's wrap), Marcus luck/kneejerk/Catholic/Chloe lines (Jobacus used instead; one piece per manager), Ben D self-roast (no hook), Harvey Price likeness (no fresh hook), Small Ben 21-on-bench line (saved for a GW11 bench), Rob's pint (ran 17 and 18 Nov). Skipped: Sesko out until January (only off-list sources), Guehi/Gvardiol fitness (no permitted report; Maresca presser is Friday), Saka/Saliba (Arteta presser is Friday, only X posts and fan sites), Caicedo (no current permitted report), Pochettino's first interview (used as opinion hook rather than a separate item)."
+  },
+  {
+   "ts": "2026-11-20T08:44",
+   "news": 4,
+   "opinion": 0,
+   "matchday": false,
+   "note": "Morning, Friday before GW11 (no fixtures today; GW11 starts Sat 21 Nov, live feed all zeros). Pre-match press conferences (Iraola 13:30, Arteta, Guardiola, Pochettino) are later today, so team news from them is for the evening run. Reported: BBC on Pochettino's Man Utd priorities - Bruno dropped after criticising Carrick, Sesko out, Cunha and Mbeumo sharing the No 9 role (Big Ben, Robert, Justin, Marcus; BBC), PL clubs vote to cover directors' legal costs if City's sponsors sue, City and Forest against (all six own a City player; BBC), Branthwaite on his recurring hamstring, German specialist and advice from Calvert-Lewin (Big Ben, Edward; evertonfc.com), Jaissle rules Joelinton out of Newcastle v Arsenal, Livramento back (all six own Arsenal players, Small Ben's Osula; newcastleunited.com). Skipped: Saka, Saliba, Gvardiol, Guehi, Van Dijk fitness (only fantasy sites and trackers so far), Palmer suspension explainer (undated, refers to an older fixture), Nyoni and McAtee features (no squad player at the centre), City guilty-verdict scenarios piece (September). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
