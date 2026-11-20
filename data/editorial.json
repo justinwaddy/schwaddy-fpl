@@ -1,626 +1,626 @@
 {
-  "items": [
-    {
-      "id": "2026-09-13-milenkovic-cunha-started-villa-win",
-      "ts": "2026-09-13T21:10 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Milenkovic and Cunha both started Forest's full 90 minutes in Saturday's 2-1 win at Aston Villa, Igor Jesus scoring an 88th-minute winner - this week's recurring hamstring doubt did not materialize. The model's 0.60 availability for Milenkovic looks conservative; the Hill-for-Milenkovic waiver claim now rests on fixture value alone, not fitness.",
-      "url": "https://www.espn.com/soccer/report/_/gameId/401879284"
-    },
-    {
-      "id": "2026-09-14-milenkovic-cunha-correction",
-      "ts": "2026-09-14T08:11 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Correction to last night's report: ESPN's own live commentary shows Milenkovic and Cunha did not play Saturday's 2-1 win at Villa Park - both dropped out with hamstring tightness found in Friday's training, Diomande and Munoz starting in their place. Glasner expects Milenkovic to also miss the Coventry game, with a return targeted for the fixture after.",
-      "url": "https://www.espn.com/soccer/match/_/gameId/401879284/nottingham-forest-aston-villa"
-    },
-    {
-      "id": "2026-09-14-bogle-goal-newcastle",
-      "ts": "2026-09-14T21:45 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Bogle scored in Leeds' 4-1 demolition of Newcastle on Monday night, netting in the 34th minute as part of a 3-0 half-time lead, per Newcastle's own match centre. The model's next5 figure for him (12.6) is built on fixtures and form, not tonight's goal, so treat this as a point in his favour that the board hasn't priced in yet.",
-      "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-    },
-    {
-      "id": "2026-09-14-fernandez-pardo-full-debut",
-      "ts": "2026-09-14T21:45 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Newcastle's 51m deadline-day signing Matias Fernandez-Pardo got his full first-team debut in that same Leeds game, but Jaissle hooked him at the 57th minute with the score already 3-0, per the club's own match centre. The model still rates him bottom of the forward pool off essentially no minutes (avail 0.19, next5 2.7) - a real data point at last, though one bad afternoon does not settle whether he starts again against Bournemouth.",
-      "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-    },
-    {
-      "id": "2026-09-17-kudus-first-start-marmoush-holds-place",
-      "ts": "2026-09-17T08:12 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Mohammed Kudus made his first Tottenham start since January in Wednesday's Carabao Cup exit at Liverpool, but Marmoush also started and played the full 90 in a heavily rotated XI - the pecking order for Justin's forward has not shifted yet, though Kudus's return is a fresh name to watch.",
-      "url": "https://www.tottenhamhotspur.com/news/1090166/confirmed-line-ups-liverpool-vs-spurs-carabao-cup"
-    },
-    {
-      "id": "2026-09-17-city-rest-haaland-gvardiol-cup",
-      "ts": "2026-09-17T19:30 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Maresca left Haaland and Gvardiol out of Manchester City's squad entirely for tonight's Carabao Cup tie with Norwich - Man City's own site frames it as workload rotation after Sunday's derby, not injury, with both expected back for Sunday's league game at home to Sunderland. Worth knowing before a blank appearance tonight reads as a fitness concern on the board.",
-      "url": "https://www.mancity.com/news/mens/city-v-norwich-enzo-maresca-provides-injury-update-and-team-news-63925149"
-    },
-    {
-      "id": "2026-09-18-truffert-france-recall",
-      "ts": "2026-09-18T21:11 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Adrien Truffert, this week's top waiver target for Justin's defence, has earned his first call-up to the senior France squad, per Bournemouth's own site - recognition for a player who started all 38 league games last season and is in career-best form now. It doesn't change the case for claiming him, just reinforces it.",
-      "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall"
-    },
-    {
-      "id": "2026-09-19-stach-germany-callup",
-      "ts": "2026-09-19T08:09 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Anton Stach, Justin's rank-3 GW6 waiver target, has been named in Jurgen Klopp's first Germany squad on the back of an eye-catching debut season at Leeds - a form signal for a player already on the claims board as the upgrade on Lewis-Potter, not a change to his role at the club.",
-      "url": "https://www.leedsunited.com/en/news/anton-stach-named-in-jurgen-klopps-first-germany-squad"
-    },
-    {
-      "id": "2026-09-19-raya-starts-brighton-defeat",
-      "ts": "2026-09-19T21:11 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Raya started as normal in goal for Arsenal's 3-0 defeat at Brighton today (Gross, Kostoulas, Chema Andres) - the loss is on the defense in front of him, not a fitness issue, and a clean team sheet finally retires the recurring 'knee bandaged' Raya injury story that has resurfaced and been discarded on four separate runs since 5 September.",
-      "url": "https://africa.espn.com/football/match/_/gameId/401879274"
-    },
-    {
-      "id": "2026-09-19-gross-scores-arsenal-upset",
-      "ts": "2026-09-19T21:11 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Free agent Pascal Gross scored the opener in Brighton's 3-0 win over Arsenal today, with Kostoulas adding a second before half-time - live evidence for the model's own suggested Gross-for-Barcola swap (+15.1 next5), which this week's claims board again declined given Barcola's own two straight Liverpool starts.",
-      "url": "https://africa.espn.com/football/match/_/gameId/401879274"
-    },
-    {
-      "id": "2026-09-19-mateta-henderson-return-after-break",
-      "ts": "2026-09-19T21:11 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Crystal Palace boss Pierre Sage said this week he hopes Mateta and Dean Henderson will return only 'after the international break,' pushing his striker's timeline further out than earlier estimates and cementing Strand Larsen as Palace's clear starting forward through the whole GW6 waiver window.",
-      "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-hints-at-possible-sarr-nketiah-returns/"
-    },
-    {
-      "id": "2026-09-20-bogle-benched-leeds-palace",
-      "ts": "2026-09-20T08:12 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Leeds' own team news for today's home game against Crystal Palace has Bogle among the substitutes, the first time all season a permitted source has actually left him out of the XI - James Justin comes in at right wing-back, with Joe Rodon and Jaka Bijol both restored to the back three. The model's 0.89 availability figure has not caught up with it yet.",
-      "url": "https://www.leedsunited.com/en/news/team-news-daniel-farke-names-xi-to-face-crystal-palace-away"
-    },
-    {
-      "id": "2026-09-20-fofana-sunderland-blind-spot",
-      "ts": "2026-09-20T08:12 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Sunderland's deadline-day signing of Malick Fofana from Lyon, a deal worth up to GBP30m that owner Kyril Louis-Dreyfus personally flew to Lyon to close after Crystal Palace tried to hijack it, is the same blind spot that hit Barcola and Munoz: the model has him at just 0.15 availability and a 2.1 next5, near the bottom of the free-agent midfield pool. He has only started for Sunderland in the Carabao Cup so far and has yet to nail down a Premier League place.",
-      "url": "https://www.skysports.com/transfer/news/12691/13579894/malick-fofana-transfer-news-lyon-winger-at-centre-of-premier-league-tug-of-war-as-crystal-palace-and-sunderland-agree-deals"
-    },
-    {
-      "id": "2026-09-20-bogle-started-not-benched",
-      "ts": "2026-09-20T21:12 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Leeds' own match report confirms Jayden Bogle started and was booked in today's 0-0 draw with Crystal Palace, contradicting this morning's substitutes report - he was not benched after all, undercutting part of this week's Truffert-for-Bogle case.",
-      "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
-    },
-    {
-      "id": "2026-09-20-van-hecke-spurs-relegation-zone",
-      "ts": "2026-09-20T21:12 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Jan Paul Van Hecke's stoppage-time header was Tottenham's only bright spot in Sunday's 2-3 home defeat to Aston Villa, which leaves Spurs winless with two points from five games, in the relegation zone, and reportedly piling pressure on manager Roberto De Zerbi.",
-      "url": "https://www.skysports.com/football/news/11095/13586058/tottenham-2-3-aston-villa-roberto-de-zerbi-under-pressure-as-winless-spurs-drop-into-relegation-zone"
-    },
-    {
-      "id": "2026-09-20-truffert-bournemouth-liverpool",
-      "ts": "2026-09-20T21:12 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Adrien Truffert, this week's claim-2 waiver target, started again for Bournemouth and picked out Evanilson's early flick that Alisson somehow kept out, in today's 0-1 home defeat to Liverpool in which Alexander Isak scored the winner on his return to Vitality Stadium.",
-      "url": "https://www.afcb.co.uk/news/2026/september/20/afc-bournemouth-liverpool-premier-league-match-report-september-2026"
-    },
-    {
-      "id": "2026-09-24-brobbey-injured-netherlands",
-      "ts": "2026-09-24T21:08 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Brian Brobbey, this week's rank-3 waiver target, was taken off after just 35 minutes of Netherlands' 1-1 draw with Germany tonight, pulling up and pointing to his right leg four days after his Man City hat-trick - no diagnosis yet, but it puts real doubt on that claim before the 9 October waiver close.",
-      "url": "https://www.skysports.com/football/live-blog/13375102/sunderland-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts"
-    },
-    {
-      "id": "2026-09-27-bogle-player-of-month-nomination",
-      "ts": "2026-09-27T08:35 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Jayden Bogle has been named among the Premier League's eight nominees for September's Player of the Month award, the League's own nominee page crediting his goal in the 1-1 draw at Brighton and a starring role in the 4-1 demolition of Newcastle, with Leeds boasting the joint-tightest defence in the league alongside Everton. It is the strongest evidence yet against dropping him for Truffert, a swap this board has considered and set aside three weeks running.",
-      "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
-    },
-    {
-      "id": "2026-09-27-schade-player-of-month-nomination",
-      "ts": "2026-09-27T21:11 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Kevin Schade has joined Bogle and Gross as a nominee for the Premier League's September Player of the Month award, Brentford's own site confirming two goals in three unbeaten league games (Sunderland, Bournemouth, Chelsea); voting closes Monday. A third of Justin's or his waiver targets' players is now up for the award this month, and none of the three has a fitness question against him.",
-      "url": "https://www.brentfordfc.com/en/news/first-team-kevin-schade-premier-league-player-of-the-month-september-2026"
-    },
-    {
-      "id": "2026-10-05-scott-tendon",
-      "ts": "2026-10-05T21:15 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Bournemouth's Alex Scott (yours) withdrew from England duty with a tendon injury picked up against Croatia and could miss 'several weeks' per Sky Sports; scans planned. The model still has him at 50% availability and 15.4 next5, which is far too kind - a replacement claim is now live (Anderson is the model's pick).",
-      "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
-    },
-    {
-      "id": "2026-10-05-haaland-subbed",
-      "ts": "2026-10-05T21:15 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Haaland (yours) asked to be taken off after 67 minutes of Norway's 2-1 loss to Portugal, a week before Man City host Liverpool; his coach said the plan was to play him until he could no longer contribute. No injury has been reported, but watch City's pre-match news.",
-      "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
-    },
-    {
-      "id": "2026-10-08-tavernier-pens",
-      "ts": "2026-10-08T08:10 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Tavernier (yours) may inherit Bournemouth penalty duty: the Premier League's Scout notes regular takers Kluivert and Kroupi are both injured, and Tavernier leads midfielders with three open-play goals. Chelsea away in GW6 is the test; the model has him at 18.5 next5, the second-best in your midfield.",
-      "url": "https://premierleague.com/en/news/4730017/the-scouts-fpl-gameweek-6-transfer-radar"
-    },
-    {
-      "id": "2026-10-09-barcola-forwards-out",
-      "ts": "2026-10-09T21:30 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Barcola (yours) has a clearer route into Liverpool's XI for Sunday's game with Man City: the Premier League's Matchweek 6 preview has Isak and Gakpo confirmed out and Ekitike still sidelined, with Lewis Koumas or Barcola himself as the option up front. The model's 0.36 availability for him reads as a squad-fringe player and does not see Liverpool's forward injuries.",
-      "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
-    },
-    {
-      "id": "2026-10-09-van-hecke-twins",
-      "ts": "2026-10-09T21:30 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Van Hecke (yours) is fit for Spurs at Old Trafford despite a knock with the Netherlands, De Zerbi confirmed, but his wife gave birth to twins on Thursday and the manager says he has to consider the 'emotional aspect'. Treat his start as a genuine call rather than the model's 1.00 certainty.",
-      "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
-    },
-    {
-      "id": "2026-10-16-schade-schuster-presser",
-      "ts": "2026-10-16T21:30 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Schade (yours) is back on the grass but not cleared: Keith Andrews said \"we'll have to see how much\" he and Jannik Schuster can play against Liverpool after their injuries at Villa. Treat the model's 0.69 availability as the ceiling, and keep a bench cover in mind for tomorrow's 3pm kick-off.",
-      "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
-    },
-    {
-      "id": "2026-10-16-brobbey-ready-isidor-doubt",
-      "ts": "2026-10-16T21:30 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Brobbey (yours) is 'ready' per Regis Le Bris, and with Wilson Isidor being assessed day by day for a minor injury, the Premier League says it is unclear who leads Sunderland's line at Bournemouth. That is a better path to a start than the model's 0.90 availability suggests, though he has not started since the Netherlands hamstring problem.",
-      "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
-    },
-    {
-      "id": "2026-10-20-haaland-limp-ipswich",
-      "ts": "2026-10-20T08:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Haaland (yours) limped down the tunnel after full time in City's 3-2 win over Ipswich on Saturday, per Sky Sports; Enzo Maresca said \"nothing serious\" but added \"we will see\", and listed Kovacic and Nico O'Reilly among others with knocks. The model has him at 0.73 availability and the top next5 on your squad, so watch City's pre-match news before the GW8 deadline.",
-      "url": "https://www.skysports.com/football/news/13598864/man-city-3-2-ipswich-erling-haalands-incredible-scoring-run-continues-as-enzo-marescas-side-continue-to-weather-storm"
-    },
-    {
-      "id": "2026-10-20-brobbey-bournemouth-miss",
-      "ts": "2026-10-20T21:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Brian Brobbey (Justin) missed Sunderland's 2-0 defeat at Bournemouth with his hamstring problem, though he has trained with the squad this week and Le Bris is reported hopeful of a return next week. That is consistent with the 75% flag and the model's 0.52 availability, but with Sunderland also in Europa League action Thursday, a start before the GW8 deadline is far from certain.",
-      "url": "https://www.safc.com/news/2026/october/19/le-bris-provides-brian-brobbey-update/"
-    },
-    {
-      "id": "2026-10-22-schade-radar",
-      "ts": "2026-10-22T08:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Schade (yours) looks set to reclaim a starting place at Hull this weekend: the Premier League's GW8 Scout says his shoulder injury limited him to a 45-minute substitute role against Liverpool, and that he should be ready to start. That supports the model's 1.00 availability for him, so no cover is needed unless Brentford's pre-match news says otherwise.",
-      "url": "https://www.premierleague.com/en/news/4744220"
-    },
-    {
-      "id": "2026-10-30-guardian-predicted-subs",
-      "ts": "2026-10-30T21:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "The Guardian's predicted lineups list Gvardiol among Man City's substitutes against Brighton and Gyokeres among Arsenal's at Liverpool, with Saka and Saliba injured. Both Justin-owned players look like bench risks for GW9, which the model's availability (0.83 and 0.32) only half captures for Gvardiol.",
-      "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
-    },
-    {
-      "id": "2026-11-02-arsenal-liverpool",
-      "ts": "2026-11-02T08:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Arsenal won 1-0 at Anfield through a Kai Havertz goal, per Sky Sports; Raya and White (yours) kept a clean sheet, while Gyokeres (yours) was listed among the substitutes and Sky's report does not say he played. That fits the model's 0.35 availability for him and the case for moving him on.",
-      "url": "https://www.skysports.com/football/liverpool-vs-arsenal/8206828602449165232"
-    },
-    {
-      "id": "2026-11-11-gvardiol-knock-forest",
-      "ts": "2026-11-11T09:05 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Gvardiol (yours) came off at half-time of Man City's 3-1 defeat at Nottingham Forest on 7 November and Maresca said he and Guehi asked to come off with knocks, not for tactical reasons, per Sky Sports. That is the source of the 75% flag on your dashboard; no permitted outlet has given an update since, so treat him as a doubt for GW11.",
-      "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
-    },
-    {
-      "id": "2026-11-12-boscagli-tavernier-ban-risk",
-      "ts": "2026-11-12T09:06 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Boscagli and Tavernier (both yours) are each on four Premier League yellow cards after 10 rounds, per BBC Sport, so one more booking before the halfway point brings a one-match ban. The model's availability figures do not see that; Leeds' Ampadu, a free agent on the claims shortlist, is in the same position.",
-      "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
-    },
-    {
-      "id": "2026-11-12-man-utd-pochettino",
-      "ts": "2026-11-12T09:06 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Man Utd have struck an agreement with Mauricio Pochettino to replace Michael Carrick, per Sky Sports, but he is likely to stay with the USA for their two games against Haiti during this break. Cunha (yours) could go to Anfield on 22 November under a manager who has barely had a training session with the squad.",
-      "url": "https://www.skysports.com/football/news/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
-    },
-    {
-      "id": "2026-11-12-carrick-sacked-pochettino-anfield",
-      "ts": "2026-11-12T22:15 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Man Utd told Michael Carrick on Thursday morning he had been sacked, with the club 18th after one league win, and ESPN's sources expect Mauricio Pochettino at Carrington by 18 November for his first game at Anfield on 22 November. That fixture is Cunha (yours) against Barcola (yours): a new manager's first XI is a selection risk for Cunha the model cannot price.",
-      "url": "https://www.espn.com/soccer/story/_/id/50461316/man-united-mauricio-pochettino-michael-carrick-manager"
-    },
-    {
-      "id": "2026-11-13-gvardiol-plays-for-croatia",
-      "ts": "2026-11-13T09:20 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Gvardiol (yours) played for Croatia in their 2-1 Nations League defeat at Wembley on Thursday, per Sky Sports' report, five days after coming off at half-time at Forest with a knock. The model still reads him at 0.59 availability with a 75% flag; the fitness worry looks over, though whether Maresca starts him is a separate question.",
-      "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
-    },
-    {
-      "id": "2026-11-14-konsa-out-white-england",
-      "ts": "2026-11-14T09:30 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Ezri Konsa, the free agent the model ranks first among defenders, is out of both England Nations League games: ESPN says he missed Croatia and is listed unavailable for Spain on Sunday, with the FA saying he is on his own programme. ESPN's predicted England XI for Spain has Ben White (yours) at right-back, so the injury case behind swapping White for Konsa is now the other way round.",
-      "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
-    },
-    {
-      "id": "2026-11-14-konsa-fit-sky",
-      "ts": "2026-11-14T22:15 UTC",
-      "mine": false,
-      "scope": "free",
-      "text": "Sky Sports' Spain v England preview says free agent Ezri Konsa was rested against Croatia, seems fully fit and will almost certainly be recalled in Madrid on Sunday, which contradicts the knee-injury reports this morning's headline relied on. White (yours) is in a straight fight with Djed Spence for right-back and came off the bench against Croatia. Sunday's teamsheet settles it; Konsa-for-White goes back to the top of the claims.",
-      "url": "https://www.skysports.com/football/news/13612238/spain-vs-england-james-trafford-set-to-replace-jordan-pickford-as-goalkeeper-and-how-does-thomas-tuchel-stop-lamine-yamal"
-    },
-    {
-      "id": "2026-11-14-barcola-starts-france",
-      "ts": "2026-11-14T22:15 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Barcola (yours) started for France in their 3-1 defeat in Italy, alongside Liverpool team-mate Jeremy Jacquet, per the Premier League's internationals round-up. He is fit going into Pochettino's first Man Utd game at Anfield on 22 November, which the model's 12.7 next5 for him does not reflect.",
-      "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
-    },
-    {
-      "id": "2026-11-15-konsa-white-score-madrid",
-      "ts": "2026-11-15T22:15 UTC",
-      "mine": true,
-      "scope": "mine",
-      "text": "Ezri Konsa (free agent) and Ben White (yours) both scored in England's 3-2 win in Spain on Sunday, per ESPN, which settles the Konsa fitness question. The catch for both is William Saliba: ESPN says he is on course to return for Arsenal at Newcastle, and the Premier League's Scout says that puts Konsa's centre-back place in doubt, with right-back - White's position - his other option.",
-      "url": "https://www.espn.com/soccer/story/_/id/50493712/england-spain-43-game-unbeaten-run"
-    }
-  ],
-  "runs": [
-    {
-      "ts": "2026-10-21T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches for Marmoush, GW8 team news and Leeds returned only old seasons or non-permitted outlets. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-22T08:20 UTC",
-      "published": 1,
-      "note": "Led with Schade expected back in the XI per Premier League GW8 Scout. No fresh Haaland, Marmoush or Brobbey update from permitted outlets. Not in starters window."
-    },
-    {
-      "ts": "2026-10-22T21:20 UTC",
-      "published": 0,
-      "note": "Evening check. Permitted-outlet searches found only Sunderland's own Brobbey note (ready for Leeds, already covered) and Brentford's site showing Hull v Brentford moved to Sunday 2pm. Nothing new on Schade, Barcola or Marmoush. Nothing published."
-    },
-    {
-      "ts": "2026-10-23T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned no permitted-outlet news beyond what is already published; Spurs' own team-news page for Chelsea was a shell with no text. Nothing published."
-    },
-    {
-      "ts": "2026-10-23T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Permitted-outlet searches returned nothing new on Stach, Haaland, Marmoush or Barcola. Not in starters window (GW8 deadline passed). Nothing published."
-    },
-    {
-      "ts": "2026-10-24T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on Stach, Brobbey, Haaland, Marmoush or Barcola. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-24T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Only news found: Sunderland's club site and Sky say Brobbey is back in training and Stach remains a Leeds doubt; both already covered in claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-25T08:20 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on Stach, Brobbey, Haaland, Barcola or Neto. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-25T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only non-permitted outlets or undated items; nothing new on Stach, Brobbey, Haaland, Marmoush or Barcola. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-26T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Only new permitted-source items were Chelsea 0-2 Spurs (Palmer sent off, Joao Pedro out) and Maddison/Wirtz knocks, none touching claims or his squad verdicts; nothing new on Stach, Brobbey, Haaland or Barcola. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-26T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only undated or pre-GW8 items from permitted outlets; nothing new on his squad. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-27T08:15 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-27T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned only undated or older permitted-source items (Matchweek 8 previews, Carabao Cup notes); nothing new on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-28T08:15 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-28T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches returned mixed-date Sky/PL items (Saka, Joao Pedro, Maddison) none touching his squad or claims; nothing published."
-    },
-    {
-      "ts": "2026-10-29T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Permitted-source searches returned only undated or older items (Haaland rest was the Carabao Cup, Jacquet hamstring undated); nothing new on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-29T21:10 UTC",
-      "published": 0,
-      "note": "Evening check. Searches on Leeds/Stach, Sunderland and GW9 injuries returned only fantasy/aggregator/regional pages or last season's items; nothing from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-30T08:20 UTC",
-      "published": 0,
-      "note": "Morning check, waivers close 11:00 UTC. Searches returned only undated or stale permitted-source items and non-permitted outlets; nothing verifiable on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-10-30T21:20 UTC",
-      "published": 1,
-      "note": "Evening check; Guardian predicted lineups (GW9) gave Gvardiol and Gyokeres as predicted substitutes. Deep starters run written."
-    },
-    {
-      "ts": "2026-10-31T08:15 UTC",
-      "published": 0,
-      "note": "Morning check before GW9 deadline (11:00 UTC). Premier League MW9 predicted XIs repeat what is already published (Gyokeres vs Havertz toss-up, Haaland expected to start); nothing new on Barcola, Wissa or Cunha. Nothing published."
-    },
-    {
-      "ts": "2026-10-31T21:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only stale (2025) or non-permitted items, nothing new verifiable from permitted outlets on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-01T08:10 UTC",
-      "published": 0,
-      "note": "Morning check. Searches returned only stale (2020-2025/Jan 2026) or non-permitted items; nothing current and verifiable from a permitted outlet on his squad or claims. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-01T21:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only 2025 season or non-permitted items, nothing current from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-02T08:20 UTC",
-      "published": 1,
-      "note": "Arsenal 1-0 Liverpool clean sheet for Raya/White, Gyokeres on bench. Not in starters window."
-    },
-    {
-      "ts": "2026-11-02T21:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only stale items or non-permitted outlets, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-03T08:10 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov). Nothing published."
-    },
-    {
-      "ts": "2026-11-03T21:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-04T08:10 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-04T21:15 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-05T08:15 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only 2025/early-2026 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov 18:30 UTC). Nothing published."
-    },
-    {
-      "ts": "2026-11-05T21:15 UTC",
-      "published": 0,
-      "note": "Evening check; only PL Scout/preview pieces for GW10 found, nothing new on his players beyond Odegaard expected back v Hull. Deep starters pass written, claims retargeted to GW11. Nothing published."
-    },
-    {
-      "ts": "2026-11-06T08:10 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. GW10 deadline 18:30 UTC today. Nothing published."
-    },
-    {
-      "ts": "2026-11-06T22:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned inconsistently dated permitted-outlet items, nothing firm on his players or the free agents. GW10 deadline has passed; not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-07T09:15 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only fantasy/aggregator sites or older-season items, nothing verifiable from a permitted outlet. Nothing published."
-    },
-    {
-      "ts": "2026-11-07T22:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only older-season or non-permitted items, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-08T09:20 UTC",
-      "published": 0,
-      "note": "Morning check; permitted-outlet searches on Gvardiol and Barcola returned only older items (Barcola hat-trick vs LASK is dated 14 Oct). Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-08T22:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only older-season, non-permitted items or pieces that could not be dated to this week. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-09T09:10 UTC",
-      "published": 0,
-      "note": "Morning check; Gvardiol and general team-news searches returned only January 2026 or undated items, nothing current from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-09T22:10 UTC",
-      "published": 0,
-      "note": "Evening check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-10T09:10 UTC",
-      "published": 0,
-      "note": "Morning check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing current and verifiable from a permitted outlet. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-10T22:10 UTC",
-      "published": 0,
-      "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Konsa, Le Fee and general injury news returned only older-season items or non-permitted outlets. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-11T09:05 UTC",
-      "published": 1,
-      "note": "Led with Gvardiol's half-time knock at Forest (Sky Sports report), which earlier runs missed. Other searches (White, Konsa, Jacquet, Le Fee, Marmoush, Cunha, Haaland, Brighton) returned only older-season or non-permitted items. Not in starters window."
-    },
-    {
-      "ts": "2026-11-11T22:15 UTC",
-      "published": 0,
-      "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Barcola, Marmoush, Le Fee, Konsa and general injury news returned only older-season items or non-permitted outlets, and the premierleague.com injury page is still showing last season's list. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-12T09:06 UTC",
-      "published": 2,
-      "note": "Led with BBC Sport's yellow-card list (Boscagli and Tavernier one booking from a ban) and Sky Sports on Man Utd agreeing a deal with Pochettino (Cunha). Club searches on Gvardiol, White, Barcola, Haaland, Marmoush, Gonzalo, Neto, Bogle, Brighton and Le Fee returned only older items or non-permitted outlets. Not in starters window."
-    },
-    {
-      "ts": "2026-11-12T22:15 UTC",
-      "published": 1,
-      "note": "Led with ESPN on Carrick's sacking being made formal on Thursday and Pochettino's expected first game at Anfield on 22 Nov (Cunha v Barcola, both his). Searches on Gvardiol, White, Barcola, Marmoush, Brighton, Le Fee and general international-break injuries returned only older items; Guehi's England withdrawal (Sky/ESPN, 9 Nov) is not his player. Not in starters window."
-    },
-    {
-      "ts": "2026-11-13T09:20 UTC",
-      "published": 1,
-      "note": "Led with Gvardiol playing for Croatia at Wembley (Sky Sports match report), which answers the Forest knock. Searches on White, Konsa, Barcola, Marmoush, Brighton, Le Fee and Haaland returned only older items or non-permitted outlets; Pochettino's two-and-a-half-year deal (Sky) is a follow-up to items already published. Not in starters window."
-    },
-    {
-      "ts": "2026-11-13T22:20 UTC",
-      "published": 0,
-      "note": "Evening check, international break. Searches on White, Konsa, Haaland, Gvardiol, Barcola, Marmoush, Le Fee, Delap, Brighton/Hull, Arsenal injuries and Man Utd/Pochettino returned only older items or non-permitted outlets (Konsa's reported knock on England duty is only on sportsmole/fantasy sites). Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-14T09:30 UTC",
-      "published": 1,
-      "note": "Led with ESPN on Konsa missing both England games (Croatia, Spain) while its predicted England XI has White at right-back; claim 1 (Konsa for White) dropped to rank 3, low. Club searches on Haaland, Gvardiol, Barcola, Marmoush, Brighton/Hull/Leeds, Neto, Tavernier, Cunha, Le Fee and Delap returned only older items. Not in starters window."
-    },
-    {
-      "ts": "2026-11-14T22:15 UTC",
-      "published": 2,
-      "note": "Led with Sky Sports' Spain v England preview saying Konsa was rested and looks fully fit (contradicting the ESPN/PL knee reports), plus the PL internationals round-up showing Barcola started for France. Searches on Haaland, Odegaard/White, Delap and Sunderland/Le Fee found nothing new at permitted outlets beyond Xhaka's calf (not his player). Not in starters window."
-    },
-    {
-      "ts": "2026-11-15T09:15 UTC",
-      "published": 0,
-      "note": "International break, Sunday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya), Brighton/Hull, Spurs/Fulham, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Chelsea/Bournemouth/Leeds, Forest/Sunderland and general PL injury news found nothing new at permitted outlets beyond items already published; Spain v England (Konsa/White) is tonight. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-15T22:15 UTC",
-      "published": 1,
-      "note": "Led with Konsa and White both scoring in Spain 2-3 England (ESPN), tied to Saliba's expected return at Newcastle (ESPN, PL Scout) squeezing Arsenal's back line. Searches on Haaland (scored v Wales, fit), Man Utd/Pochettino, Liverpool, Brighton/Hull/Leeds, Forest/Delap, Sunderland/Le Fee and general injury news found nothing new at permitted outlets. Not in starters window."
-    },
-    {
-      "ts": "2026-11-16T09:15 UTC",
-      "published": 0,
-      "note": "International break, Monday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya, Saliba/Konsa), Brighton/Hull, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Forest/Sunderland (Delap, Le Fee), Spurs/Fulham/Chelsea/Bournemouth, Leeds and general PL injury news found nothing new at permitted outlets beyond items already published; Zubimendi's Spain knock (not his player) and an ESPN rumour of Liverpool interest in Vuskovic were judged not material. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-16T22:15 UTC",
-      "published": 0,
-      "note": "International break, Monday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba), Man Utd/Pochettino/Cunha, Brighton (Vuskovic, Boscagli), Liverpool (Barcola, Jacquet), Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee), Hull/Chelsea/Bournemouth/Leeds and general PL injury news found nothing new at permitted outlets beyond items already published (Barcola and Jacquet featured again for France v Turkiye, per liverpoolfc.com). bbc.co.uk and theguardian.com blocked in search this run. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-17T09:15 UTC",
-      "published": 0,
-      "note": "International break, Tuesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba/Konsa, Zubimendi), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee, Brobbey), Leeds/Chelsea/Bournemouth and general PL injury news found nothing new at permitted outlets beyond items already published; Rice's reported new Arsenal contract (Sky) is not material to his squad. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-17T22:15 UTC",
-      "published": 0,
-      "note": "International break, Tuesday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull/Bournemouth, Spurs/Fulham/Chelsea/Leeds, Forest/Sunderland (Delap, Le Fee, Xhaka) and general PL injury news found nothing new in the last 24h at permitted outlets. Van Dijk's 9 Nov Netherlands withdrawal (liverpoolfc.com) is older, so it went into claim 5 rather than a headline. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-18T09:15 UTC",
-      "published": 0,
-      "note": "International break, Wednesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White/Odegaard), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Chelsea/Bournemouth/Leeds, Forest/Sunderland (Delap, Le Fee) and general PL injury news. premierleague.com's 17 Nov internationals round-up has every one of his players fit and playing (Gvardiol started both Croatia games, Tzolakis in goal for Greece's 7-0 loss in the Netherlands); no club news in the last 24h at permitted outlets beyond items already published. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-18T22:15 UTC",
-      "published": 0,
-      "note": "International break, Wednesday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs (Marmoush)/Fulham, Forest/Bournemouth (Delap, Tavernier), Chelsea/Leeds, Sunderland (Le Fee) and general PL injury news. Only new item: Pochettino arrived at Carrington on Wednesday and takes first training Thursday before Anfield on Sunday (ESPN, manutd.com), which the earlier Carrick/Pochettino items already anticipated; no Cunha news. Nothing else new at permitted outlets in the last 24h. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-19T09:15 UTC",
-      "published": 0,
-      "note": "International break ends, Thursday morning. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham/Bournemouth/Chelsea, Sunderland/Forest (Le Fee, Delap) and general PL injury news. Nothing new in the last 24h at permitted outlets: the Saliba pieces (arsenal.com 3 Nov, ESPN 10 Nov) are older and already reflected in claim 1, and Pochettino's first training today was already covered. Club press conferences start Thursday/Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-19T22:15 UTC",
-      "published": 0,
-      "note": "International break over, Thursday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham, Forest/Chelsea/Bournemouth (Delap, Neto, Tavernier), Sunderland (Le Fee) and general PL team news, plus Sky Sports' news pages read directly. Only Sky's weekend talking points and an 18 Nov Arsenal blog item on the Konsa/Saliba selection dilemma, neither with new fitness facts; Arteta and Maresca press conferences are due Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
-    },
-    {
-      "ts": "2026-11-20T09:25 UTC",
-      "published": 0,
-      "note": "Friday morning, waivers close 11:00 UTC. Searches on Arsenal (Saliba/Konsa/White/Odegaard at Newcastle), Man City (Haaland, Gvardiol v Fulham; Maresca presser 10:30 UK, not yet reported), Liverpool v Man Utd (Barcola, Jacquet, van Dijk, Cunha), Brighton/Hull, Leeds/Chelsea, Spurs/Fulham/Bournemouth, Forest (Delap), Sunderland (Le Fee) and general PL team news. New: Sky's Liverpool v Man Utd preview (Frimpong back training, Maguire back issue) and Le Bris saying Xhaka and Brobbey miss Villa (safc.com) - none touch his squad and the model already has those players injured. No Arteta presser yet. bbc.co.uk, theguardian.com and theathletic.com blocked in search. Not in starters window. Nothing published."
-    }
-  ]
+ "items": [
+  {
+   "id": "2026-09-14-fernandez-pardo-full-debut",
+   "ts": "2026-09-14T21:45 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Newcastle's 51m deadline-day signing Matias Fernandez-Pardo got his full first-team debut in that same Leeds game, but Jaissle hooked him at the 57th minute with the score already 3-0, per the club's own match centre. The model still rates him bottom of the forward pool off essentially no minutes (avail 0.19, next5 2.7) - a real data point at last, though one bad afternoon does not settle whether he starts again against Bournemouth.",
+   "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
+  },
+  {
+   "id": "2026-09-17-kudus-first-start-marmoush-holds-place",
+   "ts": "2026-09-17T08:12 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Mohammed Kudus made his first Tottenham start since January in Wednesday's Carabao Cup exit at Liverpool, but Marmoush also started and played the full 90 in a heavily rotated XI - the pecking order for Justin's forward has not shifted yet, though Kudus's return is a fresh name to watch.",
+   "url": "https://www.tottenhamhotspur.com/news/1090166/confirmed-line-ups-liverpool-vs-spurs-carabao-cup"
+  },
+  {
+   "id": "2026-09-17-city-rest-haaland-gvardiol-cup",
+   "ts": "2026-09-17T19:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Maresca left Haaland and Gvardiol out of Manchester City's squad entirely for tonight's Carabao Cup tie with Norwich - Man City's own site frames it as workload rotation after Sunday's derby, not injury, with both expected back for Sunday's league game at home to Sunderland. Worth knowing before a blank appearance tonight reads as a fitness concern on the board.",
+   "url": "https://www.mancity.com/news/mens/city-v-norwich-enzo-maresca-provides-injury-update-and-team-news-63925149"
+  },
+  {
+   "id": "2026-09-18-truffert-france-recall",
+   "ts": "2026-09-18T21:11 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Adrien Truffert, this week's top waiver target for Justin's defence, has earned his first call-up to the senior France squad, per Bournemouth's own site - recognition for a player who started all 38 league games last season and is in career-best form now. It doesn't change the case for claiming him, just reinforces it.",
+   "url": "https://www.afcb.co.uk/news/2026/september/18/truffert-earns-france-recall"
+  },
+  {
+   "id": "2026-09-19-stach-germany-callup",
+   "ts": "2026-09-19T08:09 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Anton Stach, Justin's rank-3 GW6 waiver target, has been named in Jurgen Klopp's first Germany squad on the back of an eye-catching debut season at Leeds - a form signal for a player already on the claims board as the upgrade on Lewis-Potter, not a change to his role at the club.",
+   "url": "https://www.leedsunited.com/en/news/anton-stach-named-in-jurgen-klopps-first-germany-squad"
+  },
+  {
+   "id": "2026-09-19-raya-starts-brighton-defeat",
+   "ts": "2026-09-19T21:11 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Raya started as normal in goal for Arsenal's 3-0 defeat at Brighton today (Gross, Kostoulas, Chema Andres) - the loss is on the defense in front of him, not a fitness issue, and a clean team sheet finally retires the recurring 'knee bandaged' Raya injury story that has resurfaced and been discarded on four separate runs since 5 September.",
+   "url": "https://africa.espn.com/football/match/_/gameId/401879274"
+  },
+  {
+   "id": "2026-09-19-gross-scores-arsenal-upset",
+   "ts": "2026-09-19T21:11 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Free agent Pascal Gross scored the opener in Brighton's 3-0 win over Arsenal today, with Kostoulas adding a second before half-time - live evidence for the model's own suggested Gross-for-Barcola swap (+15.1 next5), which this week's claims board again declined given Barcola's own two straight Liverpool starts.",
+   "url": "https://africa.espn.com/football/match/_/gameId/401879274"
+  },
+  {
+   "id": "2026-09-19-mateta-henderson-return-after-break",
+   "ts": "2026-09-19T21:11 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Crystal Palace boss Pierre Sage said this week he hopes Mateta and Dean Henderson will return only 'after the international break,' pushing his striker's timeline further out than earlier estimates and cementing Strand Larsen as Palace's clear starting forward through the whole GW6 waiver window.",
+   "url": "https://www.cpfc.co.uk/news/first-team/team-news-sage-hints-at-possible-sarr-nketiah-returns/"
+  },
+  {
+   "id": "2026-09-20-bogle-benched-leeds-palace",
+   "ts": "2026-09-20T08:12 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Leeds' own team news for today's home game against Crystal Palace has Bogle among the substitutes, the first time all season a permitted source has actually left him out of the XI - James Justin comes in at right wing-back, with Joe Rodon and Jaka Bijol both restored to the back three. The model's 0.89 availability figure has not caught up with it yet.",
+   "url": "https://www.leedsunited.com/en/news/team-news-daniel-farke-names-xi-to-face-crystal-palace-away"
+  },
+  {
+   "id": "2026-09-20-fofana-sunderland-blind-spot",
+   "ts": "2026-09-20T08:12 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Sunderland's deadline-day signing of Malick Fofana from Lyon, a deal worth up to GBP30m that owner Kyril Louis-Dreyfus personally flew to Lyon to close after Crystal Palace tried to hijack it, is the same blind spot that hit Barcola and Munoz: the model has him at just 0.15 availability and a 2.1 next5, near the bottom of the free-agent midfield pool. He has only started for Sunderland in the Carabao Cup so far and has yet to nail down a Premier League place.",
+   "url": "https://www.skysports.com/transfer/news/12691/13579894/malick-fofana-transfer-news-lyon-winger-at-centre-of-premier-league-tug-of-war-as-crystal-palace-and-sunderland-agree-deals"
+  },
+  {
+   "id": "2026-09-20-bogle-started-not-benched",
+   "ts": "2026-09-20T21:12 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Leeds' own match report confirms Jayden Bogle started and was booked in today's 0-0 draw with Crystal Palace, contradicting this morning's substitutes report - he was not benched after all, undercutting part of this week's Truffert-for-Bogle case.",
+   "url": "https://www.leedsunited.com/en/news/leeds-united-and-crystal-palace-clash-ends-in-stalemate"
+  },
+  {
+   "id": "2026-09-20-van-hecke-spurs-relegation-zone",
+   "ts": "2026-09-20T21:12 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Jan Paul Van Hecke's stoppage-time header was Tottenham's only bright spot in Sunday's 2-3 home defeat to Aston Villa, which leaves Spurs winless with two points from five games, in the relegation zone, and reportedly piling pressure on manager Roberto De Zerbi.",
+   "url": "https://www.skysports.com/football/news/11095/13586058/tottenham-2-3-aston-villa-roberto-de-zerbi-under-pressure-as-winless-spurs-drop-into-relegation-zone"
+  },
+  {
+   "id": "2026-09-20-truffert-bournemouth-liverpool",
+   "ts": "2026-09-20T21:12 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Adrien Truffert, this week's claim-2 waiver target, started again for Bournemouth and picked out Evanilson's early flick that Alisson somehow kept out, in today's 0-1 home defeat to Liverpool in which Alexander Isak scored the winner on his return to Vitality Stadium.",
+   "url": "https://www.afcb.co.uk/news/2026/september/20/afc-bournemouth-liverpool-premier-league-match-report-september-2026"
+  },
+  {
+   "id": "2026-09-24-brobbey-injured-netherlands",
+   "ts": "2026-09-24T21:08 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Brian Brobbey, this week's rank-3 waiver target, was taken off after just 35 minutes of Netherlands' 1-1 draw with Germany tonight, pulling up and pointing to his right leg four days after his Man City hat-trick - no diagnosis yet, but it puts real doubt on that claim before the 9 October waiver close.",
+   "url": "https://www.skysports.com/football/live-blog/13375102/sunderland-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts"
+  },
+  {
+   "id": "2026-09-27-bogle-player-of-month-nomination",
+   "ts": "2026-09-27T08:35 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Jayden Bogle has been named among the Premier League's eight nominees for September's Player of the Month award, the League's own nominee page crediting his goal in the 1-1 draw at Brighton and a starring role in the 4-1 demolition of Newcastle, with Leeds boasting the joint-tightest defence in the league alongside Everton. It is the strongest evidence yet against dropping him for Truffert, a swap this board has considered and set aside three weeks running.",
+   "url": "https://www.premierleague.com/en/news/4725624/pick-your-ea-sports-player-of-the-month"
+  },
+  {
+   "id": "2026-09-27-schade-player-of-month-nomination",
+   "ts": "2026-09-27T21:11 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Kevin Schade has joined Bogle and Gross as a nominee for the Premier League's September Player of the Month award, Brentford's own site confirming two goals in three unbeaten league games (Sunderland, Bournemouth, Chelsea); voting closes Monday. A third of Justin's or his waiver targets' players is now up for the award this month, and none of the three has a fitness question against him.",
+   "url": "https://www.brentfordfc.com/en/news/first-team-kevin-schade-premier-league-player-of-the-month-september-2026"
+  },
+  {
+   "id": "2026-10-05-scott-tendon",
+   "ts": "2026-10-05T21:15 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Bournemouth's Alex Scott (yours) withdrew from England duty with a tendon injury picked up against Croatia and could miss 'several weeks' per Sky Sports; scans planned. The model still has him at 50% availability and 15.4 next5, which is far too kind - a replacement claim is now live (Anderson is the model's pick).",
+   "url": "https://www.skysports.com/football/news/13595264/alex-scott-bournemouth-midfielder-withdraws-from-england-duty-and-could-miss-several-weeks-with-tendon-injury"
+  },
+  {
+   "id": "2026-10-05-haaland-subbed",
+   "ts": "2026-10-05T21:15 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Haaland (yours) asked to be taken off after 67 minutes of Norway's 2-1 loss to Portugal, a week before Man City host Liverpool; his coach said the plan was to play him until he could no longer contribute. No injury has been reported, but watch City's pre-match news.",
+   "url": "https://www.premierleague.com/en/news/4727187/internationals-which-premier-league-stars-are-shining-and-whos-got-injured"
+  },
+  {
+   "id": "2026-10-08-tavernier-pens",
+   "ts": "2026-10-08T08:10 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Tavernier (yours) may inherit Bournemouth penalty duty: the Premier League's Scout notes regular takers Kluivert and Kroupi are both injured, and Tavernier leads midfielders with three open-play goals. Chelsea away in GW6 is the test; the model has him at 18.5 next5, the second-best in your midfield.",
+   "url": "https://premierleague.com/en/news/4730017/the-scouts-fpl-gameweek-6-transfer-radar"
+  },
+  {
+   "id": "2026-10-09-barcola-forwards-out",
+   "ts": "2026-10-09T21:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Barcola (yours) has a clearer route into Liverpool's XI for Sunday's game with Man City: the Premier League's Matchweek 6 preview has Isak and Gakpo confirmed out and Ekitike still sidelined, with Lewis Koumas or Barcola himself as the option up front. The model's 0.36 availability for him reads as a squad-fringe player and does not see Liverpool's forward injuries.",
+   "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+  },
+  {
+   "id": "2026-10-09-van-hecke-twins",
+   "ts": "2026-10-09T21:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Van Hecke (yours) is fit for Spurs at Old Trafford despite a knock with the Netherlands, De Zerbi confirmed, but his wife gave birth to twins on Thursday and the manager says he has to consider the 'emotional aspect'. Treat his start as a genuine call rather than the model's 1.00 certainty.",
+   "url": "https://www.premierleague.com/en/news/4730320/predicted-line-ups-for-premier-league-teams-in-matchweek-6"
+  },
+  {
+   "id": "2026-10-16-schade-schuster-presser",
+   "ts": "2026-10-16T21:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Schade (yours) is back on the grass but not cleared: Keith Andrews said \"we'll have to see how much\" he and Jannik Schuster can play against Liverpool after their injuries at Villa. Treat the model's 0.69 availability as the ceiling, and keep a bench cover in mind for tomorrow's 3pm kick-off.",
+   "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+  },
+  {
+   "id": "2026-10-16-brobbey-ready-isidor-doubt",
+   "ts": "2026-10-16T21:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Brobbey (yours) is 'ready' per Regis Le Bris, and with Wilson Isidor being assessed day by day for a minor injury, the Premier League says it is unclear who leads Sunderland's line at Bournemouth. That is a better path to a start than the model's 0.90 availability suggests, though he has not started since the Netherlands hamstring problem.",
+   "url": "https://www.premierleague.com/en/news/4737644/predicted-line-ups-for-matchweek-7"
+  },
+  {
+   "id": "2026-10-20-haaland-limp-ipswich",
+   "ts": "2026-10-20T08:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Haaland (yours) limped down the tunnel after full time in City's 3-2 win over Ipswich on Saturday, per Sky Sports; Enzo Maresca said \"nothing serious\" but added \"we will see\", and listed Kovacic and Nico O'Reilly among others with knocks. The model has him at 0.73 availability and the top next5 on your squad, so watch City's pre-match news before the GW8 deadline.",
+   "url": "https://www.skysports.com/football/news/13598864/man-city-3-2-ipswich-erling-haalands-incredible-scoring-run-continues-as-enzo-marescas-side-continue-to-weather-storm"
+  },
+  {
+   "id": "2026-10-20-brobbey-bournemouth-miss",
+   "ts": "2026-10-20T21:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Brian Brobbey (Justin) missed Sunderland's 2-0 defeat at Bournemouth with his hamstring problem, though he has trained with the squad this week and Le Bris is reported hopeful of a return next week. That is consistent with the 75% flag and the model's 0.52 availability, but with Sunderland also in Europa League action Thursday, a start before the GW8 deadline is far from certain.",
+   "url": "https://www.safc.com/news/2026/october/19/le-bris-provides-brian-brobbey-update/"
+  },
+  {
+   "id": "2026-10-22-schade-radar",
+   "ts": "2026-10-22T08:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Schade (yours) looks set to reclaim a starting place at Hull this weekend: the Premier League's GW8 Scout says his shoulder injury limited him to a 45-minute substitute role against Liverpool, and that he should be ready to start. That supports the model's 1.00 availability for him, so no cover is needed unless Brentford's pre-match news says otherwise.",
+   "url": "https://www.premierleague.com/en/news/4744220"
+  },
+  {
+   "id": "2026-10-30-guardian-predicted-subs",
+   "ts": "2026-10-30T21:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "The Guardian's predicted lineups list Gvardiol among Man City's substitutes against Brighton and Gyokeres among Arsenal's at Liverpool, with Saka and Saliba injured. Both Justin-owned players look like bench risks for GW9, which the model's availability (0.83 and 0.32) only half captures for Gvardiol.",
+   "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-team-news-predicted-lineups-for-the-weekend-action"
+  },
+  {
+   "id": "2026-11-02-arsenal-liverpool",
+   "ts": "2026-11-02T08:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Arsenal won 1-0 at Anfield through a Kai Havertz goal, per Sky Sports; Raya and White (yours) kept a clean sheet, while Gyokeres (yours) was listed among the substitutes and Sky's report does not say he played. That fits the model's 0.35 availability for him and the case for moving him on.",
+   "url": "https://www.skysports.com/football/liverpool-vs-arsenal/8206828602449165232"
+  },
+  {
+   "id": "2026-11-11-gvardiol-knock-forest",
+   "ts": "2026-11-11T09:05 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Gvardiol (yours) came off at half-time of Man City's 3-1 defeat at Nottingham Forest on 7 November and Maresca said he and Guehi asked to come off with knocks, not for tactical reasons, per Sky Sports. That is the source of the 75% flag on your dashboard; no permitted outlet has given an update since, so treat him as a doubt for GW11.",
+   "url": "https://www.skysports.com/football/n-forest-vs-man-city/report/559542"
+  },
+  {
+   "id": "2026-11-12-boscagli-tavernier-ban-risk",
+   "ts": "2026-11-12T09:06 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Boscagli and Tavernier (both yours) are each on four Premier League yellow cards after 10 rounds, per BBC Sport, so one more booking before the halfway point brings a one-match ban. The model's availability figures do not see that; Leeds' Ampadu, a free agent on the claims shortlist, is in the same position.",
+   "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+  },
+  {
+   "id": "2026-11-12-man-utd-pochettino",
+   "ts": "2026-11-12T09:06 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Man Utd have struck an agreement with Mauricio Pochettino to replace Michael Carrick, per Sky Sports, but he is likely to stay with the USA for their two games against Haiti during this break. Cunha (yours) could go to Anfield on 22 November under a manager who has barely had a training session with the squad.",
+   "url": "https://www.skysports.com/football/news/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
+  },
+  {
+   "id": "2026-11-12-carrick-sacked-pochettino-anfield",
+   "ts": "2026-11-12T22:15 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Man Utd told Michael Carrick on Thursday morning he had been sacked, with the club 18th after one league win, and ESPN's sources expect Mauricio Pochettino at Carrington by 18 November for his first game at Anfield on 22 November. That fixture is Cunha (yours) against Barcola (yours): a new manager's first XI is a selection risk for Cunha the model cannot price.",
+   "url": "https://www.espn.com/soccer/story/_/id/50461316/man-united-mauricio-pochettino-michael-carrick-manager"
+  },
+  {
+   "id": "2026-11-13-gvardiol-plays-for-croatia",
+   "ts": "2026-11-13T09:20 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Gvardiol (yours) played for Croatia in their 2-1 Nations League defeat at Wembley on Thursday, per Sky Sports' report, five days after coming off at half-time at Forest with a knock. The model still reads him at 0.59 availability with a 75% flag; the fitness worry looks over, though whether Maresca starts him is a separate question.",
+   "url": "https://www.skysports.com/football/news/13611570/england-2-1-croatia-harry-kane-scores-winner-as-he-become-three-lions-record-appearance-maker-to-book-nations-league-quarter-final"
+  },
+  {
+   "id": "2026-11-14-konsa-out-white-england",
+   "ts": "2026-11-14T09:30 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Ezri Konsa, the free agent the model ranks first among defenders, is out of both England Nations League games: ESPN says he missed Croatia and is listed unavailable for Spain on Sunday, with the FA saying he is on his own programme. ESPN's predicted England XI for Spain has Ben White (yours) at right-back, so the injury case behind swapping White for Konsa is now the other way round.",
+   "url": "https://www.espn.com/soccer/story/_/id/50470233/spain-vs-england-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+  },
+  {
+   "id": "2026-11-14-konsa-fit-sky",
+   "ts": "2026-11-14T22:15 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Sky Sports' Spain v England preview says free agent Ezri Konsa was rested against Croatia, seems fully fit and will almost certainly be recalled in Madrid on Sunday, which contradicts the knee-injury reports this morning's headline relied on. White (yours) is in a straight fight with Djed Spence for right-back and came off the bench against Croatia. Sunday's teamsheet settles it; Konsa-for-White goes back to the top of the claims.",
+   "url": "https://www.skysports.com/football/news/13612238/spain-vs-england-james-trafford-set-to-replace-jordan-pickford-as-goalkeeper-and-how-does-thomas-tuchel-stop-lamine-yamal"
+  },
+  {
+   "id": "2026-11-14-barcola-starts-france",
+   "ts": "2026-11-14T22:15 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Barcola (yours) started for France in their 3-1 defeat in Italy, alongside Liverpool team-mate Jeremy Jacquet, per the Premier League's internationals round-up. He is fit going into Pochettino's first Man Utd game at Anfield on 22 November, which the model's 12.7 next5 for him does not reflect.",
+   "url": "https://www.premierleague.com/en/news/4763580/internationals-how-every-premier-league-clubs-stars-are-performing"
+  },
+  {
+   "id": "2026-11-15-konsa-white-score-madrid",
+   "ts": "2026-11-15T22:15 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Ezri Konsa (free agent) and Ben White (yours) both scored in England's 3-2 win in Spain on Sunday, per ESPN, which settles the Konsa fitness question. The catch for both is William Saliba: ESPN says he is on course to return for Arsenal at Newcastle, and the Premier League's Scout says that puts Konsa's centre-back place in doubt, with right-back - White's position - his other option.",
+   "url": "https://www.espn.com/soccer/story/_/id/50493712/england-spain-43-game-unbeaten-run"
+  },
+  {
+   "id": "2026-11-20-neto-leads-line-joao-pedro-out",
+   "ts": "2026-11-20T22:10 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Xabi Alonso has ruled Joao Pedro out of Saturday's game with Leeds, saying he is not yet fit to train (chelseafc.com), and the Premier League's predicted line-ups have Neto (yours) leading Chelsea's line again ahead of Welbeck. That is a striker role for a player the model scores as a winger, for as long as Joao Pedro is out.",
+   "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-leeds"
+  },
+  {
+   "id": "2026-11-20-saliba-ready-konsa-risk",
+   "ts": "2026-11-20T22:10 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "Arteta said on Friday that Saliba is 'ready' to start and Arsenal want to ramp up his minutes, while Zubimendi is out for a few weeks with a hamstring injury (arsenal.com). The Premier League still predicts Konsa (yours) alongside Gabriel at Newcastle, but calls it a big decision, so Konsa's place is at real risk this week or next.",
+   "url": "https://www.arsenal.com/news/every-word-from-mikel-artetas-pre-newcastle-presser-amNf96d48YCF"
+  },
+  {
+   "id": "2026-11-20-ahoka-predicted-start-sunderland",
+   "ts": "2026-11-20T22:10 UTC",
+   "mine": false,
+   "scope": "free",
+   "text": "Free agent Jules Ahoka is in the Premier League's predicted Sunderland XI at Villa, filling in for the injured Granit Xhaka. The model rates him 3.2 over five games on two career appearances, which reflects missing data rather than his role; it is a short-term opening while Xhaka is out.",
+   "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+  }
+ ],
+ "runs": [
+  {
+   "ts": "2026-10-22T08:20 UTC",
+   "published": 1,
+   "note": "Led with Schade expected back in the XI per Premier League GW8 Scout. No fresh Haaland, Marmoush or Brobbey update from permitted outlets. Not in starters window."
+  },
+  {
+   "ts": "2026-10-22T21:20 UTC",
+   "published": 0,
+   "note": "Evening check. Permitted-outlet searches found only Sunderland's own Brobbey note (ready for Leeds, already covered) and Brentford's site showing Hull v Brentford moved to Sunday 2pm. Nothing new on Schade, Barcola or Marmoush. Nothing published."
+  },
+  {
+   "ts": "2026-10-23T08:10 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned no permitted-outlet news beyond what is already published; Spurs' own team-news page for Chelsea was a shell with no text. Nothing published."
+  },
+  {
+   "ts": "2026-10-23T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Permitted-outlet searches returned nothing new on Stach, Haaland, Marmoush or Barcola. Not in starters window (GW8 deadline passed). Nothing published."
+  },
+  {
+   "ts": "2026-10-24T08:10 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on Stach, Brobbey, Haaland, Marmoush or Barcola. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-24T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Only news found: Sunderland's club site and Sky say Brobbey is back in training and Stach remains a Leeds doubt; both already covered in claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-25T08:20 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on Stach, Brobbey, Haaland, Barcola or Neto. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-25T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Searches returned only non-permitted outlets or undated items; nothing new on Stach, Brobbey, Haaland, Marmoush or Barcola. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-26T08:10 UTC",
+   "published": 0,
+   "note": "Morning check. Only new permitted-source items were Chelsea 0-2 Spurs (Palmer sent off, Joao Pedro out) and Maddison/Wirtz knocks, none touching claims or his squad verdicts; nothing new on Stach, Brobbey, Haaland or Barcola. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-26T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Searches returned only undated or pre-GW8 items from permitted outlets; nothing new on his squad. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-27T08:15 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-27T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Searches returned only undated or older permitted-source items (Matchweek 8 previews, Carabao Cup notes); nothing new on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-28T08:15 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned only old seasons or non-permitted outlets; nothing new on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-28T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Searches returned mixed-date Sky/PL items (Saka, Joao Pedro, Maddison) none touching his squad or claims; nothing published."
+  },
+  {
+   "ts": "2026-10-29T08:10 UTC",
+   "published": 0,
+   "note": "Morning check. Permitted-source searches returned only undated or older items (Haaland rest was the Carabao Cup, Jacquet hamstring undated); nothing new on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-29T21:10 UTC",
+   "published": 0,
+   "note": "Evening check. Searches on Leeds/Stach, Sunderland and GW9 injuries returned only fantasy/aggregator/regional pages or last season's items; nothing from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-30T08:20 UTC",
+   "published": 0,
+   "note": "Morning check, waivers close 11:00 UTC. Searches returned only undated or stale permitted-source items and non-permitted outlets; nothing verifiable on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-10-30T21:20 UTC",
+   "published": 1,
+   "note": "Evening check; Guardian predicted lineups (GW9) gave Gvardiol and Gyokeres as predicted substitutes. Deep starters run written."
+  },
+  {
+   "ts": "2026-10-31T08:15 UTC",
+   "published": 0,
+   "note": "Morning check before GW9 deadline (11:00 UTC). Premier League MW9 predicted XIs repeat what is already published (Gyokeres vs Havertz toss-up, Haaland expected to start); nothing new on Barcola, Wissa or Cunha. Nothing published."
+  },
+  {
+   "ts": "2026-10-31T21:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only stale (2025) or non-permitted items, nothing new verifiable from permitted outlets on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-01T08:10 UTC",
+   "published": 0,
+   "note": "Morning check. Searches returned only stale (2020-2025/Jan 2026) or non-permitted items; nothing current and verifiable from a permitted outlet on his squad or claims. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-01T21:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only 2025 season or non-permitted items, nothing current from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-02T08:20 UTC",
+   "published": 1,
+   "note": "Arsenal 1-0 Liverpool clean sheet for Raya/White, Gyokeres on bench. Not in starters window."
+  },
+  {
+   "ts": "2026-11-02T21:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only stale items or non-permitted outlets, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-03T08:10 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov). Nothing published."
+  },
+  {
+   "ts": "2026-11-03T21:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-04T08:10 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-04T21:15 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only 2025 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-05T08:15 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only 2025/early-2026 or non-permitted items, nothing new verifiable from a permitted outlet. Not in starters window (GW10 waivers close 5 Nov 18:30 UTC). Nothing published."
+  },
+  {
+   "ts": "2026-11-05T21:15 UTC",
+   "published": 0,
+   "note": "Evening check; only PL Scout/preview pieces for GW10 found, nothing new on his players beyond Odegaard expected back v Hull. Deep starters pass written, claims retargeted to GW11. Nothing published."
+  },
+  {
+   "ts": "2026-11-06T08:10 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only older-season or non-permitted items, nothing new verifiable from a permitted outlet. GW10 deadline 18:30 UTC today. Nothing published."
+  },
+  {
+   "ts": "2026-11-06T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned inconsistently dated permitted-outlet items, nothing firm on his players or the free agents. GW10 deadline has passed; not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-07T09:15 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only fantasy/aggregator sites or older-season items, nothing verifiable from a permitted outlet. Nothing published."
+  },
+  {
+   "ts": "2026-11-07T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only older-season or non-permitted items, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-08T09:20 UTC",
+   "published": 0,
+   "note": "Morning check; permitted-outlet searches on Gvardiol and Barcola returned only older items (Barcola hat-trick vs LASK is dated 14 Oct). Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-08T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only older-season, non-permitted items or pieces that could not be dated to this week. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-09T09:10 UTC",
+   "published": 0,
+   "note": "Morning check; Gvardiol and general team-news searches returned only January 2026 or undated items, nothing current from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-09T22:10 UTC",
+   "published": 0,
+   "note": "Evening check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-10T09:10 UTC",
+   "published": 0,
+   "note": "Morning check; searches returned only older-season items, fantasy sites or non-permitted outlets, nothing current and verifiable from a permitted outlet. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-10T22:10 UTC",
+   "published": 0,
+   "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Konsa, Le Fee and general injury news returned only older-season items or non-permitted outlets. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-11T09:05 UTC",
+   "published": 1,
+   "note": "Led with Gvardiol's half-time knock at Forest (Sky Sports report), which earlier runs missed. Other searches (White, Konsa, Jacquet, Le Fee, Marmoush, Cunha, Haaland, Brighton) returned only older-season or non-permitted items. Not in starters window."
+  },
+  {
+   "ts": "2026-11-11T22:15 UTC",
+   "published": 0,
+   "note": "Evening check during the international break; searches on Gvardiol, White, Haaland, Barcola, Marmoush, Le Fee, Konsa and general injury news returned only older-season items or non-permitted outlets, and the premierleague.com injury page is still showing last season's list. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-12T09:06 UTC",
+   "published": 2,
+   "note": "Led with BBC Sport's yellow-card list (Boscagli and Tavernier one booking from a ban) and Sky Sports on Man Utd agreeing a deal with Pochettino (Cunha). Club searches on Gvardiol, White, Barcola, Haaland, Marmoush, Gonzalo, Neto, Bogle, Brighton and Le Fee returned only older items or non-permitted outlets. Not in starters window."
+  },
+  {
+   "ts": "2026-11-12T22:15 UTC",
+   "published": 1,
+   "note": "Led with ESPN on Carrick's sacking being made formal on Thursday and Pochettino's expected first game at Anfield on 22 Nov (Cunha v Barcola, both his). Searches on Gvardiol, White, Barcola, Marmoush, Brighton, Le Fee and general international-break injuries returned only older items; Guehi's England withdrawal (Sky/ESPN, 9 Nov) is not his player. Not in starters window."
+  },
+  {
+   "ts": "2026-11-13T09:20 UTC",
+   "published": 1,
+   "note": "Led with Gvardiol playing for Croatia at Wembley (Sky Sports match report), which answers the Forest knock. Searches on White, Konsa, Barcola, Marmoush, Brighton, Le Fee and Haaland returned only older items or non-permitted outlets; Pochettino's two-and-a-half-year deal (Sky) is a follow-up to items already published. Not in starters window."
+  },
+  {
+   "ts": "2026-11-13T22:20 UTC",
+   "published": 0,
+   "note": "Evening check, international break. Searches on White, Konsa, Haaland, Gvardiol, Barcola, Marmoush, Le Fee, Delap, Brighton/Hull, Arsenal injuries and Man Utd/Pochettino returned only older items or non-permitted outlets (Konsa's reported knock on England duty is only on sportsmole/fantasy sites). Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-14T09:30 UTC",
+   "published": 1,
+   "note": "Led with ESPN on Konsa missing both England games (Croatia, Spain) while its predicted England XI has White at right-back; claim 1 (Konsa for White) dropped to rank 3, low. Club searches on Haaland, Gvardiol, Barcola, Marmoush, Brighton/Hull/Leeds, Neto, Tavernier, Cunha, Le Fee and Delap returned only older items. Not in starters window."
+  },
+  {
+   "ts": "2026-11-14T22:15 UTC",
+   "published": 2,
+   "note": "Led with Sky Sports' Spain v England preview saying Konsa was rested and looks fully fit (contradicting the ESPN/PL knee reports), plus the PL internationals round-up showing Barcola started for France. Searches on Haaland, Odegaard/White, Delap and Sunderland/Le Fee found nothing new at permitted outlets beyond Xhaka's calf (not his player). Not in starters window."
+  },
+  {
+   "ts": "2026-11-15T09:15 UTC",
+   "published": 0,
+   "note": "International break, Sunday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya), Brighton/Hull, Spurs/Fulham, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Chelsea/Bournemouth/Leeds, Forest/Sunderland and general PL injury news found nothing new at permitted outlets beyond items already published; Spain v England (Konsa/White) is tonight. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-15T22:15 UTC",
+   "published": 1,
+   "note": "Led with Konsa and White both scoring in Spain 2-3 England (ESPN), tied to Saliba's expected return at Newcastle (ESPN, PL Scout) squeezing Arsenal's back line. Searches on Haaland (scored v Wales, fit), Man Utd/Pochettino, Liverpool, Brighton/Hull/Leeds, Forest/Delap, Sunderland/Le Fee and general injury news found nothing new at permitted outlets. Not in starters window."
+  },
+  {
+   "ts": "2026-11-16T09:15 UTC",
+   "published": 0,
+   "note": "International break, Monday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Raya, Saliba/Konsa), Brighton/Hull, Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Forest/Sunderland (Delap, Le Fee), Spurs/Fulham/Chelsea/Bournemouth, Leeds and general PL injury news found nothing new at permitted outlets beyond items already published; Zubimendi's Spain knock (not his player) and an ESPN rumour of Liverpool interest in Vuskovic were judged not material. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-16T22:15 UTC",
+   "published": 0,
+   "note": "International break, Monday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba), Man Utd/Pochettino/Cunha, Brighton (Vuskovic, Boscagli), Liverpool (Barcola, Jacquet), Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee), Hull/Chelsea/Bournemouth/Leeds and general PL injury news found nothing new at permitted outlets beyond items already published (Barcola and Jacquet featured again for France v Turkiye, per liverpoolfc.com). bbc.co.uk and theguardian.com blocked in search this run. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-17T09:15 UTC",
+   "published": 0,
+   "note": "International break, Tuesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (White, Odegaard, Saliba/Konsa, Zubimendi), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Forest/Sunderland (Delap, Le Fee, Brobbey), Leeds/Chelsea/Bournemouth and general PL injury news found nothing new at permitted outlets beyond items already published; Rice's reported new Arsenal contract (Sky) is not material to his squad. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-17T22:15 UTC",
+   "published": 0,
+   "note": "International break, Tuesday evening. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull/Bournemouth, Spurs/Fulham/Chelsea/Leeds, Forest/Sunderland (Delap, Le Fee, Xhaka) and general PL injury news found nothing new in the last 24h at permitted outlets. Van Dijk's 9 Nov Netherlands withdrawal (liverpoolfc.com) is older, so it went into claim 5 rather than a headline. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-18T09:15 UTC",
+   "published": 0,
+   "note": "International break, Wednesday morning. Searches on Man City (Haaland, Gvardiol), Arsenal (Saliba/Konsa/White/Odegaard), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham (Marmoush, Gonzalo), Chelsea/Bournemouth/Leeds, Forest/Sunderland (Delap, Le Fee) and general PL injury news. premierleague.com's 17 Nov internationals round-up has every one of his players fit and playing (Gvardiol started both Croatia games, Tzolakis in goal for Greece's 7-0 loss in the Netherlands); no club news in the last 24h at permitted outlets beyond items already published. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-18T22:15 UTC",
+   "published": 0,
+   "note": "International break, Wednesday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs (Marmoush)/Fulham, Forest/Bournemouth (Delap, Tavernier), Chelsea/Leeds, Sunderland (Le Fee) and general PL injury news. Only new item: Pochettino arrived at Carrington on Wednesday and takes first training Thursday before Anfield on Sunday (ESPN, manutd.com), which the earlier Carrick/Pochettino items already anticipated; no Cunha news. Nothing else new at permitted outlets in the last 24h. bbc.co.uk, theguardian.com, reuters.com and apnews.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-19T09:15 UTC",
+   "published": 0,
+   "note": "International break ends, Thursday morning. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham/Bournemouth/Chelsea, Sunderland/Forest (Le Fee, Delap) and general PL injury news. Nothing new in the last 24h at permitted outlets: the Saliba pieces (arsenal.com 3 Nov, ESPN 10 Nov) are older and already reflected in claim 1, and Pochettino's first training today was already covered. Club press conferences start Thursday/Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-19T22:15 UTC",
+   "published": 0,
+   "note": "International break over, Thursday evening. Searches on Arsenal (Saliba/Konsa/White/Odegaard), Man City (Haaland, Gvardiol), Man Utd/Pochettino/Cunha, Liverpool (Barcola, Jacquet, van Dijk), Brighton/Hull, Spurs/Fulham, Forest/Chelsea/Bournemouth (Delap, Neto, Tavernier), Sunderland (Le Fee) and general PL team news, plus Sky Sports' news pages read directly. Only Sky's weekend talking points and an 18 Nov Arsenal blog item on the Konsa/Saliba selection dilemma, neither with new fitness facts; Arteta and Maresca press conferences are due Friday. bbc.co.uk and theguardian.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-20T09:25 UTC",
+   "published": 0,
+   "note": "Friday morning, waivers close 11:00 UTC. Searches on Arsenal (Saliba/Konsa/White/Odegaard at Newcastle), Man City (Haaland, Gvardiol v Fulham; Maresca presser 10:30 UK, not yet reported), Liverpool v Man Utd (Barcola, Jacquet, van Dijk, Cunha), Brighton/Hull, Leeds/Chelsea, Spurs/Fulham/Bournemouth, Forest (Delap), Sunderland (Le Fee) and general PL team news. New: Sky's Liverpool v Man Utd preview (Frimpong back training, Maguire back issue) and Le Bris saying Xhaka and Brobbey miss Villa (safc.com) - none touch his squad and the model already has those players injured. No Arteta presser yet. bbc.co.uk, theguardian.com and theathletic.com blocked in search. Not in starters window. Nothing published."
+  },
+  {
+   "ts": "2026-11-20T22:10 UTC",
+   "published": 3,
+   "note": "Friday night, GW11 deep starters run. Read the Premier League's MW11 predicted line-ups (all 15 of his players named in their clubs' predicted XIs) and Friday pressers at arsenal.com, chelseafc.com, liverpoolfc.com, brightonandhovealbion.com and tottenhamhotspur.com. Led with Joao Pedro out and Neto predicted as Chelsea's striker, Saliba 'ready' (Konsa risk) and new-to-pool Ahoka predicted to start for Sunderland. Guardian, Man City and Man Utd sites blocked by bot challenges; no BBC/Sky team-news pieces yet."
+  }
+ ]
 }

@@ -1,8 +1,8 @@
 {
- "gw": 10,
- "deadline": "2026-11-06T18:30:00Z",
- "ts": "2026-11-05T21:15 UTC",
- "summary": "Search coverage was thin: no permitted outlet had published GW10 predicted XIs, so nobody is marked start. Worries are Gvardiol (City sub last time) and Barcola (role unconfirmed); Odegaard is expected back for Arsenal.",
+ "gw": 11,
+ "deadline": "2026-11-21T11:00:00Z",
+ "ts": "2026-11-20T22:10 UTC",
+ "summary": "All 15 are in their clubs' predicted XIs in the Premier League's MW11 line-ups, but no second permitted outlet has published XIs yet, so every verdict is likely. Worries: Konsa (Saliba is ready to start), and Boscagli and Tavernier are one booking from a ban; Neto is predicted as Chelsea's striker with Joao Pedro out.",
  "players": [
   {
    "name": "Tzolakis",
@@ -10,12 +10,12 @@
    "club": "HUL",
    "pos": "GKP",
    "status": "likely",
-   "verdict": "First-choice keeper, Hull away at Arsenal",
-   "note": "No permitted outlet predicted XI found; he has kept the gloves in recent runs. Hull are at Arsenal, a tough fixture for clean sheets.",
+   "verdict": "In Premier League's predicted Hull XI v Brighton",
+   "note": "The Premier League's MW11 predicted line-ups have Tzolakis in goal for Hull at home to Brighton. No second permitted outlet has published a Hull XI yet.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
     }
    ]
   },
@@ -25,57 +25,16 @@
    "club": "ARS",
    "pos": "GKP",
    "status": "likely",
-   "verdict": "Arsenal keeper at home to Hull",
-   "note": "Arsenal host promoted Hull and have won 18 of 19 against promoted sides per the Premier League preview. No XI published yet.",
+   "verdict": "Arsenal No 1, predicted to start at Newcastle",
+   "note": "Named in goal in the Premier League's predicted Arsenal XI at Newcastle. Arteta's Friday presser raised no issue with him; no second XI published yet.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
-    }
-   ]
-  },
-  {
-   "name": "White",
-   "code": "198869",
-   "club": "ARS",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Arsenal right-back, no XI published",
-   "note": "Arsenal have won seven straight home league games per the Premier League; no predicted XI found, so rotation risk (avail 0.67) is unresolved.",
-   "sources": [
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
-    }
-   ]
-  },
-  {
-   "name": "Gvardiol",
-   "code": "477424",
-   "club": "MCI",
-   "pos": "DEF",
-   "status": "doubt",
-   "verdict": "Was a City substitute last time; XI unclear",
-   "note": "Man City visit Forest; no permitted predicted XI found this run. Earlier Guardian XIs had him among the substitutes.",
-   "sources": [
-    {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
-    }
-   ]
-  },
-  {
-   "name": "Bogle",
-   "code": "226182",
-   "club": "LEE",
-   "pos": "DEF",
-   "status": "likely",
-   "verdict": "Leeds defender at home to Spurs",
-   "note": "Leeds host Spurs per the Premier League preview; no predicted XI found, so likely on past starts only.",
-   "sources": [
-    {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Every word from Mikel Arteta's pre-Newcastle presser",
+     "url": "https://www.arsenal.com/news/every-word-from-mikel-artetas-pre-newcastle-presser-amNf96d48YCF"
     }
    ]
   },
@@ -85,12 +44,69 @@
    "club": "BHA",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Brighton have a double up, home to Brentford",
-   "note": "Scout Selection says Brighton have a double-up in GW10 and host Brentford on Sunday. No XI found.",
+   "verdict": "Predicted in Brighton's back four; one booking from ban",
+   "note": "The Premier League's predicted Brighton XI has Boscagli in the back four at Hull. Brighton's own team news lists no problem for him. He is on four yellow cards (BBC Sport), so a booking costs him a match.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
-     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Hull City team news: Chema, Minteh, Kadioglu and Azeez in contention",
+     "url": "https://www.brightonandhovealbion.com/media-article/hull-city-team-news-chema-minteh-kadioglu-and-azzez-in-contention"
+    },
+    {
+     "title": "BBC Sport: Premier League yellow cards and suspensions",
+     "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
+    }
+   ]
+  },
+  {
+   "name": "Bogle",
+   "code": "226182",
+   "club": "LEE",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Predicted at wing-back at Chelsea",
+   "note": "The Premier League predicts Bogle at wing-back in Leeds' 3-4-2-1 at Stamford Bridge; Farke reported no injuries. No second XI published yet.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    }
+   ]
+  },
+  {
+   "name": "Gvardiol",
+   "code": "477424",
+   "club": "MCI",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Predicted in City's back four v Fulham",
+   "note": "The Premier League's predicted City XI has Gvardiol in the back four; its notes flag Khusanov and Nunes as doubts but not him, which suggests the Forest knock has cleared. He was a City substitute two games ago, so some rotation risk remains.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    }
+   ]
+  },
+  {
+   "name": "Konsa",
+   "code": "199798",
+   "club": "ARS",
+   "pos": "DEF",
+   "status": "likely",
+   "verdict": "Predicted to start, but Saliba is back",
+   "note": "The Premier League predicts Konsa alongside Gabriel at Newcastle but calls Saliba or Konsa a big decision. Arteta said Saliba is 'ready' to start and they want to ramp up his minutes, so this is a genuine rotation risk.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Every word from Mikel Arteta's pre-Newcastle presser",
+     "url": "https://www.arsenal.com/news/every-word-from-mikel-artetas-pre-newcastle-presser-amNf96d48YCF"
     }
    ]
   },
@@ -100,12 +116,16 @@
    "club": "BHA",
    "pos": "DEF",
    "status": "likely",
-   "verdict": "Brighton defender, double-up club",
-   "note": "Scout Selection says Brighton have a double-up in GW10 and host Brentford on Sunday. No XI found.",
+   "verdict": "Predicted at centre-back at Hull",
+   "note": "Named at centre-back with Dunk in the Premier League's predicted Brighton XI at Hull. Brighton's Friday team news raised no issue with him; no second XI published yet.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
-     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Hull City team news: Chema, Minteh, Kadioglu and Azeez in contention",
+     "url": "https://www.brightonandhovealbion.com/media-article/hull-city-team-news-chema-minteh-kadioglu-and-azzez-in-contention"
     }
    ]
   },
@@ -114,28 +134,17 @@
    "code": "482616",
    "club": "LIV",
    "pos": "MID",
-   "status": "doubt",
-   "verdict": "Role at Liverpool unconfirmed, at Palace",
-   "note": "Liverpool visit Crystal Palace per the Premier League preview. No permitted outlet confirmed his place; the model gives 0.76 availability.",
-   "sources": [
-    {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
-    }
-   ]
-  },
-  {
-   "name": "Ødegaard",
-   "code": "184029",
-   "club": "ARS",
-   "pos": "MID",
    "status": "likely",
-   "verdict": "Expected back in Arsenal XI v Hull",
-   "note": "Premier League Scout says he was rested from European duties in midweek and looks set to return against Hull. One source so not start.",
+   "verdict": "Predicted in Liverpool's front four v Man Utd",
+   "note": "The Premier League's predicted Liverpool XI has Barcola in the front four with Gakpo, Wirtz and Isak. Iraola's fitness update covered van Dijk, Frimpong and Gravenberch, not him. The model's 0.84 availability undersells a marquee signing who is now in predicted XIs.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
-     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "LFC fitness update: Frimpong, Gravenberch, Szoboszlai, Van Dijk and more",
+     "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-frimpong-gravenberch-szoboszlai-van-dijk-and-more"
     }
    ]
   },
@@ -145,27 +154,35 @@
    "club": "CHE",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Chelsea winger at Sunderland, no XI found",
-   "note": "Chelsea visit Sunderland whose physicality the Premier League flags as a problem. No predicted XI found from a permitted outlet.",
+   "verdict": "Predicted to lead the line, Joao Pedro out",
+   "note": "Alonso ruled Joao Pedro out for Leeds (chelseafc.com), and the Premier League says Neto is fancied to lead the line over Welbeck again, as its predicted XI shows. No second XI published yet.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Xabi Alonso confirms Chelsea team news for Leeds",
+     "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-leeds"
     }
    ]
   },
   {
-   "name": "Cunha",
-   "code": "430871",
-   "club": "MUN",
+   "name": "Ayari",
+   "code": "509416",
+   "club": "BHA",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Man Utd forward v Villa after late winner",
-   "note": "Premier League preview says Cunha scored a dramatic late winner against Roma on Tuesday and United host Villa Sunday. No XI found.",
+   "verdict": "Predicted as Brighton No 10 at Hull",
+   "note": "The Premier League's predicted Brighton XI has Ayari in the No 10 role behind Kostoulas. Brighton's Friday team news raised no issue with him.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Hull City team news: Chema, Minteh, Kadioglu and Azeez in contention",
+     "url": "https://www.brightonandhovealbion.com/media-article/hull-city-team-news-chema-minteh-kadioglu-and-azzez-in-contention"
     }
    ]
   },
@@ -175,27 +192,35 @@
    "club": "BOU",
    "pos": "MID",
    "status": "likely",
-   "verdict": "Bournemouth, double-up club at Ipswich",
-   "note": "Scout Selection backs Tavernier at Ipswich, who have no clean sheet this season, and notes Bournemouth have a double. No XI found.",
+   "verdict": "Predicted to start v Forest; one booking from ban",
+   "note": "The Premier League predicts Tavernier in the attacking three with Kroupi in the No 10 role for Marco Rose's side against Forest. He is on four yellow cards (BBC Sport), so a booking means a ban.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
-     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "BBC Sport: Premier League yellow cards and suspensions",
+     "url": "https://www.bbc.co.uk/sport/articles/cr3wj7wg35pxo"
     }
    ]
   },
   {
-   "name": "Marmoush",
-   "code": "438234",
-   "club": "TOT",
-   "pos": "FWD",
+   "name": "Ødegaard",
+   "code": "184029",
+   "club": "ARS",
+   "pos": "MID",
    "status": "likely",
-   "verdict": "Spurs forward, away at Leeds",
-   "note": "Spurs are away at Leeds per the Premier League preview. He was reported starting in the recent win over Crystal Palace; no XI found for this one.",
+   "verdict": "Predicted as Arsenal No 10 at Newcastle",
+   "note": "Named in the Premier League's predicted Arsenal XI behind Havertz. Arteta's presser ruled out Zubimendi and Saka but raised nothing on Odegaard.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Every word from Mikel Arteta's pre-Newcastle presser",
+     "url": "https://www.arsenal.com/news/every-word-from-mikel-artetas-pre-newcastle-presser-amNf96d48YCF"
     }
    ]
   },
@@ -205,12 +230,31 @@
    "club": "FUL",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "Fulham striker v Newcastle, no XI found",
-   "note": "Fulham host Newcastle per the Premier League preview. No predicted XI found from a permitted outlet.",
+   "verdict": "Arbeloa keeps faith; predicted at Man City",
+   "note": "The Premier League says Arbeloa has kept faith with Gonzalo Garcia this season despite Muniz scoring off the bench, and it struggles to see any change to Fulham's XI. No second XI published yet.",
    "sources": [
     {
-     "title": "Ten KEY questions for Matchweek 10's fixtures",
-     "url": "https://www.premierleague.com/en/news/4756471/ten-key-questions-for-matchweek-10-fixtures-in-premier-league-2026-27-season-including-man-utd-v-aston-villa"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    }
+   ]
+  },
+  {
+   "name": "Marmoush",
+   "code": "438234",
+   "club": "TOT",
+   "pos": "FWD",
+   "status": "likely",
+   "verdict": "Predicted in Spurs' front four v Ipswich",
+   "note": "The Premier League's predicted Spurs XI has Marmoush in the attacking three behind Solanke. Spurs' team news rules out Tel and Tosin and does not mention Marmoush.",
+   "sources": [
+    {
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Team news | Bergvall, Savio, Udogie available, Tel and Tosin out of Ipswich clash",
+     "url": "https://www.tottenhamhotspur.com/news/1234486/team-news-bergvall-savio-udogie-available-tel-and-tosin-out-of-ipswich-clash"
     }
    ]
   },
@@ -220,12 +264,12 @@
    "club": "MCI",
    "pos": "FWD",
    "status": "likely",
-   "verdict": "City captain pick away at Forest",
-   "note": "Scout Selection names him captain pick after he scored in the Champions League win over Leipzig. No injury reported; no XI published, so the call rests on that and the earlier minor knock.",
+   "verdict": "Predicted to lead City's line v Fulham",
+   "note": "Haaland leads the line in the Premier League's predicted City XI; its notes raise no fitness concern. No second permitted XI found yet, so likely rather than start.",
    "sources": [
     {
-     "title": "Scout Selection: Best Fantasy team for Gameweek 10",
-     "url": "https://www.premierleague.com/en/news/4756626/scout-selection-best-fantasy-team-for-gameweek-10"
+     "title": "Predicted line-ups for Premier League teams in Matchweek 11",
+     "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
     }
    ]
   }
@@ -254,6 +298,12 @@
    "gw": 10,
    "kind": "light",
    "note": "no change"
+  },
+  {
+   "ts": "2026-11-20T22:10 UTC",
+   "gw": 11,
+   "kind": "deep",
+   "note": "Read the Premier League's MW11 predicted line-up graphics for all seven fixtures and Friday pressers at arsenal.com, chelseafc.com, liverpoolfc.com, brightonandhovealbion.com and tottenhamhotspur.com. All 15 predicted to start; only one outlet's XIs, so all likely. Guardian, mancity.com and manutd.com blocked; no BBC/Sky XIs yet."
   }
  ]
 }
