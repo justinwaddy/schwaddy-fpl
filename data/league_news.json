@@ -2,13 +2,6 @@
  "generated": "2026-11-21T08:43 UTC",
  "items": [
   {
-   "id": "2026-11-12-robert-mateta",
-   "ts": "2026-11-12T23:43",
-   "kind": "opinion",
-   "source": null,
-   "text": "Crystal Palace sacked their manager today, and when BBC Sport listed what had gone wrong for him, one item was Mateta's absence, put down to a mixture of fitness and wanting to leave. Robert picked him in his eleven anyway and got nothing back, which makes Mateta the only man in that squad who has actually tried to make a transfer happen. Robert has not replied to the group chat about it, or to anything else. The hairline, at least, is leaving on schedule."
-  },
-  {
    "id": "2026-11-12-marcus-king",
    "ts": "2026-11-12T23:43",
    "kind": "opinion",
@@ -704,16 +697,19 @@
     "title": "Moyes Reveals Everton Team News For Brentford",
     "url": "https://www.evertonfc.com/news/2026/november/20/moyes-reveals-everton-team-news-for-brentford/"
    }
+  },
+  {
+   "id": "2026-11-21-xi-1230",
+   "ts": "2026-11-21T12:07",
+   "kind": "news",
+   "text": "Team news, Man City v Fulham, 12:30: Edward - Doku starts. Justin - Haaland starts; Gvardiol and Gonzalo are on the bench. Marcus - Guéhi and Foden start. Small Ben - Donnarumma and Rúben Dias start. Robert - O'Reilly and Ndiaye start, Cherki is on the bench. Big Ben has nobody in this one.",
+   "source": {
+    "title": "O'Reilly, Bouaddi, Foden start as City make three changes",
+    "url": "https://www.mancity.com/news/mens/man-city-v-fulham-team-news-and-tactics-premier-league-21-november-63930856"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-26T22:50",
-   "news": 0,
-   "opinion": 3,
-   "matchday": false,
-   "note": "Evening, Monday after GW8, no fixtures today, GW9 not started (live feed all zeros, so nothing depends on today's points; quoted settled GW8 figures). No new reported items: WebSearch refused bbc/guardian domains and two news rounds already ran today. Opinion: Marcus (28, Kinsky on bench, luck line + kneejerk submission), Big Ben (Bruno on bench alongside Carrick's decision, Trafford 10 on bench; archive Bruno line), Robert (empty bench, no-transfers/hairline submissions). No FLOP lines today, so no reflop. Passed over: Ben D on Justin (apartheid), no football hook; Ben C Harvey Price/boxing, boxing fact unverified; Marcus Jobacus/catholic/gifting, no hook tonight; Ben D self-submission; Justin pint line, no verifiable hook."
-  },
   {
    "ts": "2026-10-27T07:55",
    "news": 4,
@@ -1126,6 +1122,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "Morning, Saturday GW11 opener (7 fixtures today from 12:30; live feed all zeros). Squads checked against the live feed picks, which carry Friday's waivers (Szoboszlai/Maatsen to Small Ben, McGinn to Marcus, Konsa/Ayari to Justin, Lindelof to Big Ben) that public.json does not yet show. Reported: Iraola's fitness update - Van Dijk, Gravenberch, Frimpong available, Szoboszlai fine, Bradley/Leoni not yet (Small Ben, Big Ben, Marcus, Justin; liverpoolfc.com), Alonso's Leeds team news - Martinez selectable, James some weeks, Caicedo starts, Joao Pedro/Lacroix/Hato out (Robert, Marcus; chelseafc.com), De Zerbi's Ipswich team news - Bergvall, Maddison, Savio, Udogie back, Tel 2-3 weeks (five squads; tottenhamhotspur.com), Thiago's three-match ban starting Monday and Moyes's fully fit Everton (Small Ben, Edward, Big Ben, Marcus; evertonfc.com). Skipped: Maresca's City presser on Guehi/Gvardiol/Nunes/Khusanov (mancity.com blocked to fetch, only fantasy sites and Sports Mole otherwise), Pochettino's first presser and Bruno captaincy (manutd.com blocked, only off-list outlets), Arteta on Gabriel and internationals (Saka/Saliba reported last night), Newcastle-Arsenal previews (fan and aggregator sites). Opinion is evening only; no archive suggestions used or passed over."
+  },
+  {
+   "ts": "2026-11-21T12:07",
+   "news": 1,
+   "opinion": 0,
+   "matchday": true,
+   "note": "12:30 slot MCI v FUL: both confirmed XIs and benches found on mancity.com teamsheet"
   }
  ]
 }
