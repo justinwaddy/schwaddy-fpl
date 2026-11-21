@@ -1,13 +1,6 @@
 {
- "generated": "2026-11-21T08:43 UTC",
+ "generated": "2026-11-21T14:08 UTC",
  "items": [
-  {
-   "id": "2026-11-12-marcus-king",
-   "ts": "2026-11-12T23:43",
-   "kind": "opinion",
-   "source": null,
-   "text": "Tuchel picked Josh King for 'the attitude and the personality' and then left him on the bench for all of the win over Croatia, which is Marcus's transfer policy run backwards: Marcus would have had him on after two good warm-ups and given up on him by half-time. He is 17 behind Edward with a free fortnight to think about it, which is long enough to upload something to the YouTube channel and nowhere near long enough to explain it to the parish."
-  },
   {
    "id": "2026-11-12-bigben-wembley-bench",
    "ts": "2026-11-12T23:43",
@@ -707,16 +700,19 @@
     "title": "O'Reilly, Bouaddi, Foden start as City make three changes",
     "url": "https://www.mancity.com/news/mens/man-city-v-fulham-team-news-and-tactics-premier-league-21-november-63930856"
    }
+  },
+  {
+   "id": "2026-11-21-xi-1500",
+   "ts": "2026-11-21T14:08",
+   "kind": "news",
+   "text": "Team news, 15:00 kick-offs: Edward has Manzambi, N.Jackson and Pedro Porro starting; Small Ben has Suzuki and Maatsen starting; Marcus has Kinsky starting and McGinn on the bench; Robert has Solanke starting and Mateta not in the squad (suspended). Justin has Marmoush on the bench; Big Ben has Van Hecke and Kudus starting and Lindelöf not in the squad. Sheets for Sunderland, Bournemouth, Forest, Chelsea, Leeds and Coventry were not available, so players there are not covered.",
+   "source": {
+    "title": "Two changes for Sunderland test",
+    "url": "https://www.avfc.co.uk/news/2026/november/21/news-sunderland-team-news"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-27T07:55",
-   "news": 4,
-   "opinion": 0,
-   "matchday": false,
-   "note": "Morning. Led with Konsa at Arsenal (Big Ben), then the Carrick succession shortlist, the Spurs revival and a flagged Vuskovic rumour. No opinion on a morning run. Roast archive untouched; nothing passed over, nothing used."
-  },
   {
    "ts": "2026-10-27T22:50",
    "news": 0,
@@ -1129,6 +1125,13 @@
    "opinion": 0,
    "matchday": true,
    "note": "12:30 slot MCI v FUL: both confirmed XIs and benches found on mancity.com teamsheet"
+  },
+  {
+   "ts": "2026-11-21T14:08",
+   "news": 1,
+   "opinion": 0,
+   "matchday": true,
+   "note": "15:00 slot. Found: Aston Villa (avfc.co.uk), Spurs (tottenhamhotspur.com Confirmed line-ups: Spurs vs Ipswich Town), Crystal Palace (cpfc.co.uk Team news: Frank names first XI as Palace Manager). Not available at a readable permitted source: Sunderland, Bournemouth, Nottingham Forest, Chelsea, Leeds, Coventry (Sky live blogs unavailable)."
   }
  ]
 }
