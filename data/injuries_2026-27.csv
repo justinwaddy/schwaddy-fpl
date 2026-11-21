@@ -1487,6 +1487,7 @@ code,observed_at,start_at,status,chance_this,chance_next,news
 606745,1785832691,1785832691,a,,,
 606745,1792571741,1792526410,d,,75.0,Illness - 75% chance of playing
 606745,1792830948,1792830948,a,100.0,100.0,
+606745,1795250175,1795195806,d,100.0,75.0,Unspecified injury - 75% chance of playing
 606798,1785832691,1785832691,a,,,
 606798,1792591565,1792589089,u,,0.0,Has joined Getafe on loan for the rest of the season
 606921,1785832691,1785832691,a,,,
