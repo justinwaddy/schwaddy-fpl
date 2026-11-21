@@ -1,46 +1,6 @@
 {
- "generated": "2026-11-20T23:43 UTC",
+ "generated": "2026-11-21T08:43 UTC",
  "items": [
-  {
-   "id": "2026-11-12-king-england",
-   "ts": "2026-11-12T08:58",
-   "kind": "news",
-   "text": "Josh King could make his England debut against Croatia at Wembley tonight or in Spain on Sunday, after Thomas Tuchel picked the 19-year-old ahead of Cole Palmer and Phil Foden, citing \"the attitude and the personality\". Sky Sports says King has more goal involvements than anyone else at Fulham this season and only Erling Haaland has had more touches in the opposition box. King is Marcus's, and so is Foden, which means the leader's own No 10 kept his other one out of the squad; Palmer, the third man left at home, is Edward's.",
-   "source": {
-    "title": "Josh King: The making of the rising star tipped to become one of world's best players after England call-up",
-    "url": "https://www.skysports.com/football/news/11095/13611079/josh-king-the-making-of-the-rising-star-tipped-to-become-one-of-worlds-best-players-after-england-call-up"
-   }
-  },
-  {
-   "id": "2026-11-12-pochettino-agreement",
-   "ts": "2026-11-12T08:58",
-   "kind": "news",
-   "text": "Manchester United have a verbal agreement in principle with Mauricio Pochettino, Sky Sports reports, but he is likely to stay in charge of the USA for their two games against Haiti this break, so the handover will be tight: Michael Carrick took training on Wednesday and is expected to be relieved before the end of the week, and most of United's players are back by next Thursday ahead of the trip to Anfield on Sunday 22 November. That is a new man meeting Big Ben's Bruno Fernandes, Marcus's Mbeumo, Justin's Cunha and Robert's Sesko and Yoro about three days before Liverpool.",
-   "source": {
-    "title": "Man Utd strike Pochettino agreement with Carrick set to depart",
-    "url": "https://www.skysports.com/football/news/11095/13610949/mauricio-pochettino-man-utd-strike-agreement-with-michael-carricks-potential-successor"
-   }
-  },
-  {
-   "id": "2026-11-12-england-croatia-benches",
-   "ts": "2026-11-12T23:43",
-   "kind": "news",
-   "text": "Morgan Rogers scored for England and Harry Kane won it from the spot against Croatia at Wembley tonight, on the night Kane became England's most capped man, BBC Sport reports. Rogers is Big Ben's, and so are three of the men who watched from the bench all night: Trafford, Branthwaite and James Hill. Edward's Pickford played and was left exposed by Jarell Quansah's mistake for the equaliser, while his Gibbs-White and Calvert-Lewin stayed seated. Small Ben's Declan Rice started on his return from injury, Justin's Ben White came on late, and Marcus's Josh King is still waiting for a debut.",
-   "source": {
-    "title": "England vs Croatia player ratings: Harry Kane scores winner as Lewis Hall impresses",
-    "url": "https://www.bbc.co.uk/sport/football/articles/c64gnd7vd912o"
-   }
-  },
-  {
-   "id": "2026-11-12-palace-sack-sage",
-   "ts": "2026-11-12T23:43",
-   "kind": "news",
-   "text": "Crystal Palace have sacked Pierre Sage after five months and 16 games, with the club bottom of the league, and Thomas Frank is in advanced talks to replace him, BBC Sport reports. It is the second Premier League sacking of the season, on the same day Manchester United dismissed Michael Carrick. BBC Sport says Sage was hurt by the absence of Jean-Philippe Mateta, down to a mix of fitness and his wish to leave the club. Mateta is Robert's forward, and Palace's next league game is at Coventry on 21 November.",
-   "source": {
-    "title": "Crystal Palace sack boss Pierre Sage after 16 games",
-    "url": "https://www.bbc.co.uk/sport/football/articles/cv5y18lkk87do"
-   }
-  },
   {
    "id": "2026-11-12-robert-mateta",
    "ts": "2026-11-12T23:43",
@@ -704,16 +664,49 @@
    "kind": "opinion",
    "source": null,
    "text": "Small Ben tore up half his team on Friday night, Szoboszlai and Maatsen in, Enciso and Mykolenko out, the evening before Enciso's Ipswich go to Spurs. On the same day Arteta confirmed Saliba is fit again, so for the first time in weeks Small Ben has every Arsenal defender he owns available and no excuse left. He is 73 off the top and preparing for a fight in exactly the same way: change everything the night before, then look up at the man opposite and hope he has not seen the footage."
+  },
+  {
+   "id": "2026-11-21-van-dijk-szoboszlai-fit",
+   "ts": "2026-11-21T08:43",
+   "kind": "news",
+   "text": "Virgil van Dijk, who withdrew from the Netherlands squad during the break, should be available for Liverpool's home game with Manchester United on Sunday, Andoni Iraola said on Friday, and so should Ryan Gravenberch and Jeremie Frimpong. Small Ben gets most of the good news: he owns Van Dijk, and the Dominik Szoboszlai he picked up on Friday night has trained normally, was not strapped and is 'fine', in Iraola's words. Conor Bradley and Giovanni Leoni are back with the group but not ready. Big Ben's Wirtz and Araujo, Marcus's Alisson and Justin's Barcola are on the same side.",
+   "source": {
+    "title": "LFC fitness update: Frimpong, Gravenberch, Szoboszlai, Van Dijk and more",
+    "url": "https://www.liverpoolfc.com/news/lfc-fitness-update-frimpong-gravenberch-szoboszlai-van-dijk-and-more"
+   }
+  },
+  {
+   "id": "2026-11-21-martinez-selectable-leeds",
+   "ts": "2026-11-21T08:43",
+   "kind": "news",
+   "text": "Robert's Emiliano Martinez is in the Chelsea squad and selectable for Leeds this afternoon, Xabi Alonso said on Friday: Sunderland a fortnight ago was probably a risk, the plan was one game for Argentina over the break, and it went well. It is the first time since his jaw surgery that Robert has had the option. His Reece James is 'getting there' but still needs some weeks. Moises Caicedo is ready to start, while Marcus's Joao Pedro, Maxence Lacroix and Jorrel Hato all miss out.",
+   "source": {
+    "title": "Xabi Alonso confirms Chelsea team news for Leeds",
+    "url": "https://www.chelseafc.com/en/news/article/xabi-alonso-confirms-chelsea-team-news-for-leeds"
+   }
+  },
+  {
+   "id": "2026-11-21-spurs-bergvall-maddison-back",
+   "ts": "2026-11-21T08:43",
+   "kind": "news",
+   "text": "Roberto De Zerbi has Lucas Bergvall, James Maddison and Savio back for Tottenham's home game with Ipswich at 3pm, with Destiny Udogie available too, but Mathys Tel will be out another two or three weeks with the ankle he hurt at Elland Road and Tosin Adarabioyo is being held back. Five of the six squads have someone in that Spurs side: Robert's Solanke, Justin's Marmoush, Big Ben's Kudus and Van Hecke, Edward's Porro and Marcus's Kinsky. Small Ben, the exception, let his Ipswich man Julio Enciso go on Friday night.",
+   "source": {
+    "title": "Team news | Bergvall, Savio, Udogie available, Tel and Tosin out of Ipswich clash",
+    "url": "https://tottenhamhotspur.com/news/1234486/team-news-bergvall-savio-udogie-available-tel-and-tosin-out-of-ipswich-clash"
+   }
+  },
+  {
+   "id": "2026-11-21-thiago-ban-everton-fit",
+   "ts": "2026-11-21T08:43",
+   "kind": "news",
+   "text": "Small Ben's Igor Thiago serves the first game of a three-match suspension for his red card at Brighton when Brentford host Everton on Monday night, with veteran Callum Wilson in line to lead the attack instead, and Everton arrive with nobody back from international duty with a problem, David Moyes said on Friday. That suits Edward, who has Pickford, Tarkowski and Barry, as well as Big Ben's Branthwaite and Marcus's Dewsbury-Hall, whose form Moyes says has made his midfield easy to pick.",
+   "source": {
+    "title": "Moyes Reveals Everton Team News For Brentford",
+    "url": "https://www.evertonfc.com/news/2026/november/20/moyes-reveals-everton-team-news-for-brentford/"
+   }
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-26T16:49",
-   "news": 2,
-   "opinion": 2,
-   "matchday": false,
-   "note": "Evening, Monday after GW8 (run by hand, no fixtures today, GW9 not started). Week wrap: led with Justin top by 8 after starting GW8 19 behind, then Small Ben's 14-point bench with Suzuki in the BBC team of the week. Reported: Palmer's red served in the League Cup not v Man Utd (BBC); Deeney team of the week (BBC). Corrected two figures in last night's pieces against settled totals: Marcus is 8 behind Justin (was written as 14), Robert is 139 off the lead (was 150). Archive used: Ben D on Ben C (height). Passed over: Ben D on Justin (apartheid) - no football hook tonight; Ben C Harvey Price/boxing - the boxing fact is unverified and the likeness leans on a disabled man; Marcus Jobacus/catholic, Rob pint/transfers, Ben D self-submission - their men were roasted last night, one piece per manager. Also reworded this morning's Carrick item ('captain' -> 'skipper') so the step 6 format check passes. Updated the Small Ben piece after Justin confirmed the fight is real: Edward's boxing line now used (Harvey Price likeness still not used)."
-  },
   {
    "ts": "2026-10-26T22:50",
    "news": 0,
@@ -1126,6 +1119,13 @@
    "opinion": 4,
    "matchday": false,
    "note": "Evening, Friday before GW11 (no fixtures today; GW11 starts Sat 21 Nov, live feed all zeros and its totals still omit GW10 because public.json's settled figure has not rolled, so gaps were quoted from step 1's public.json table: Marcus 17, Justin 21, Small Ben 73, Robert 192 behind Edward). No flops to rewrite. Reported: Arteta on Saka's eight-week thigh injury (about four to go) and Saliba fit after two practice matches, Zubimendi a few weeks (Robert, Small Ben; ESPN), Joao Pedro out v Leeds, Chelsea's goals with and without him, Neto and Rogers used centrally, Leeds' owned players (Marcus, Justin, Big Ben, Edward, Robert; BBC). Opinion: Marcus (relies-on-luck and kneejerk lines; hook BBC's report that Tzolis picked himself in FPL before Anfield and Arteta's ban, plus his McGinn-for-King waiver, 17 behind), Robert (pint and lack-of-management/no-transfers lines; hook Saka's injury timeline and four managers using waivers while he did not, 192 behind), Justin (Ben D's South African line, oblique, via the vote angle; hook releasing Cunha before Anfield for Ayari, 21 behind), Small Ben (boxing-prep line; hook his Friday waiver rebuild and Saliba's return, 73 behind; his third waiver signing deliberately not mentioned under the Delap ban). Passed over: Edward (no archive entry on him, no fresh hook; leading and idle), Big Ben ball-knowledge and Bruno lines (no new football - Bruno at Anfield keeps for Sunday's wrap; his Tzolis team name left alone, Tzolis went to Marcus's piece), Ben D self-roast (no hook), Marcus Jobacus/Catholic/Chloe lines (ran last night; one piece per manager; Spotlight angle stays out - children), Small Ben height, Harvey Price likeness and 21-on-bench lines (saved for a GW11 bench), Robert hairline (ran last two nights; left out to avoid repeating). Skipped: Iraola on drones (drone story reported last night), Frank's first Palace presser (19 Nov, nothing on Mateta), Kane ankle (not in the league), Guardiola/Gvardiol/Guehi fitness (no permitted report found)."
+  },
+  {
+   "ts": "2026-11-21T08:43",
+   "news": 4,
+   "opinion": 0,
+   "matchday": true,
+   "note": "Morning, Saturday GW11 opener (7 fixtures today from 12:30; live feed all zeros). Squads checked against the live feed picks, which carry Friday's waivers (Szoboszlai/Maatsen to Small Ben, McGinn to Marcus, Konsa/Ayari to Justin, Lindelof to Big Ben) that public.json does not yet show. Reported: Iraola's fitness update - Van Dijk, Gravenberch, Frimpong available, Szoboszlai fine, Bradley/Leoni not yet (Small Ben, Big Ben, Marcus, Justin; liverpoolfc.com), Alonso's Leeds team news - Martinez selectable, James some weeks, Caicedo starts, Joao Pedro/Lacroix/Hato out (Robert, Marcus; chelseafc.com), De Zerbi's Ipswich team news - Bergvall, Maddison, Savio, Udogie back, Tel 2-3 weeks (five squads; tottenhamhotspur.com), Thiago's three-match ban starting Monday and Moyes's fully fit Everton (Small Ben, Edward, Big Ben, Marcus; evertonfc.com). Skipped: Maresca's City presser on Guehi/Gvardiol/Nunes/Khusanov (mancity.com blocked to fetch, only fantasy sites and Sports Mole otherwise), Pochettino's first presser and Bruno captaincy (manutd.com blocked, only off-list outlets), Arteta on Gabriel and internationals (Saka/Saliba reported last night), Newcastle-Arsenal previews (fan and aggregator sites). Opinion is evening only; no archive suggestions used or passed over."
   }
  ]
 }
