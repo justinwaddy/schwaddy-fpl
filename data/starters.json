@@ -1,8 +1,8 @@
 {
  "gw": 11,
  "deadline": "2026-11-21T11:00:00Z",
- "ts": "2026-11-20T22:10 UTC",
- "summary": "All 15 are in their clubs' predicted XIs in the Premier League's MW11 line-ups, but no second permitted outlet has published XIs yet, so every verdict is likely. Worries: Konsa (Saliba is ready to start), and Boscagli and Tavernier are one booking from a ban; Neto is predicted as Chelsea's striker with Joao Pedro out.",
+ "ts": "2026-11-21T09:30 UTC",
+ "summary": "All 15 are in their clubs' predicted XIs in the Premier League's MW11 line-ups; ESPN also predicts Gvardiol, Haaland and Gonzalo to start for City v Fulham, so those three are now start and the rest stay likely. Worries: Konsa (Saliba is ready to start), and Boscagli and Tavernier are one booking from a ban; Neto is predicted as Chelsea's striker with Joao Pedro out.",
  "players": [
   {
    "name": "Tzolakis",
@@ -81,13 +81,21 @@
    "code": "477424",
    "club": "MCI",
    "pos": "DEF",
-   "status": "likely",
-   "verdict": "Predicted in City's back four v Fulham",
-   "note": "The Premier League's predicted City XI has Gvardiol in the back four; its notes flag Khusanov and Nunes as doubts but not him, which suggests the Forest knock has cleared. He was a City substitute two games ago, so some rotation risk remains.",
+   "status": "start",
+   "verdict": "Predicted XI by PL and ESPN; City defensive doubts elsewhere",
+   "note": "Named in City's back four in both the Premier League's and ESPN's predicted XIs for Fulham. Maresca says Khusanov and Nunes are doubts and ESPN lists Guehi as a doubt, so his Forest knock is not keeping him out.",
    "sources": [
+    {
+     "title": "Manchester City vs Fulham: TV channel, how to watch in UK, kickoff time, live stream, team news, referee, predicted lineups",
+     "url": "https://www.espn.com/soccer/story/_/id/50530118/manchester-city-vs-fulham-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+    },
     {
      "title": "Predicted line-ups for Premier League teams in Matchweek 11",
      "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Maresca gives fitness update on Nunes and Khusanov for Fulham",
+     "url": "https://www.mancity.com/news/mens/enzo-maresca-21-november-fulham-press-conference-63930777"
     }
    ]
   },
@@ -229,13 +237,21 @@
    "code": "551466",
    "club": "FUL",
    "pos": "FWD",
-   "status": "likely",
-   "verdict": "Arbeloa keeps faith; predicted at Man City",
-   "note": "The Premier League says Arbeloa has kept faith with Gonzalo Garcia this season despite Muniz scoring off the bench, and it struggles to see any change to Fulham's XI. No second XI published yet.",
+   "status": "start",
+   "verdict": "Predicted to start at City by PL and ESPN",
+   "note": "Both the Premier League and ESPN have Gonzalo Garcia leading Fulham's line at the Etihad; Arbeloa has kept faith with him, and Fulham's absentees (Lecomte, Smith Rowe) do not affect him.",
    "sources": [
+    {
+     "title": "Manchester City vs Fulham: TV channel, how to watch in UK, kickoff time, live stream, team news, referee, predicted lineups",
+     "url": "https://www.espn.com/soccer/story/_/id/50530118/manchester-city-vs-fulham-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+    },
     {
      "title": "Predicted line-ups for Premier League teams in Matchweek 11",
      "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+    },
+    {
+     "title": "Team news: Lecomte out for the season",
+     "url": "https://www.fulhamfc.com/news/2026/november/20/team-news-lecomte-out-for-the-season"
     }
    ]
   },
@@ -263,10 +279,14 @@
    "code": "223094",
    "club": "MCI",
    "pos": "FWD",
-   "status": "likely",
-   "verdict": "Predicted to lead City's line v Fulham",
-   "note": "Haaland leads the line in the Premier League's predicted City XI; its notes raise no fitness concern. No second permitted XI found yet, so likely rather than start.",
+   "status": "start",
+   "verdict": "Predicted to lead the line by PL and ESPN",
+   "note": "Both the Premier League and ESPN predict him to start up front against Fulham; ESPN notes one league goal in City's last three games but no fitness issue.",
    "sources": [
+    {
+     "title": "Manchester City vs Fulham: TV channel, how to watch in UK, kickoff time, live stream, team news, referee, predicted lineups",
+     "url": "https://www.espn.com/soccer/story/_/id/50530118/manchester-city-vs-fulham-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
+    },
     {
      "title": "Predicted line-ups for Premier League teams in Matchweek 11",
      "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
@@ -304,6 +324,12 @@
    "gw": 11,
    "kind": "deep",
    "note": "Read the Premier League's MW11 predicted line-up graphics for all seven fixtures and Friday pressers at arsenal.com, chelseafc.com, liverpoolfc.com, brightonandhovealbion.com and tottenhamhotspur.com. All 15 predicted to start; only one outlet's XIs, so all likely. Guardian, mancity.com and manutd.com blocked; no BBC/Sky XIs yet."
+  },
+  {
+   "ts": "2026-11-21T09:30 UTC",
+   "gw": 11,
+   "kind": "light",
+   "note": "Gvardiol, Haaland and Gonzalo likely -> start on ESPN's City v Fulham predicted XIs (second outlet after PL). No other verdicts changed."
   }
  ]
 }

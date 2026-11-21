@@ -1,14 +1,6 @@
 {
  "items": [
   {
-   "id": "2026-09-14-fernandez-pardo-full-debut",
-   "ts": "2026-09-14T21:45 UTC",
-   "mine": false,
-   "scope": "free",
-   "text": "Newcastle's 51m deadline-day signing Matias Fernandez-Pardo got his full first-team debut in that same Leeds game, but Jaissle hooked him at the 57th minute with the score already 3-0, per the club's own match centre. The model still rates him bottom of the forward pool off essentially no minutes (avail 0.19, next5 2.7) - a real data point at last, though one bad afternoon does not settle whether he starts again against Bournemouth.",
-   "url": "https://www.newcastleunited.com/en/matches/mens-team/leeds-united-v-newcastle-united-english-premier-league-20260914"
-  },
-  {
    "id": "2026-09-17-kudus-first-start-marmoush-holds-place",
    "ts": "2026-09-17T08:12 UTC",
    "mine": true,
@@ -319,14 +311,17 @@
    "scope": "free",
    "text": "Free agent Jules Ahoka is in the Premier League's predicted Sunderland XI at Villa, filling in for the injured Granit Xhaka. The model rates him 3.2 over five games on two career appearances, which reflects missing data rather than his role; it is a short-term opening while Xhaka is out.",
    "url": "https://www.premierleague.com/en/news/4764715/predicted-line-ups-for-premier-league-teams-in-matchweek-11"
+  },
+  {
+   "id": "2026-11-21-city-fulham-espn-xi",
+   "ts": "2026-11-21T09:30 UTC",
+   "mine": true,
+   "scope": "mine",
+   "text": "ESPN's predicted XIs for Man City v Fulham (12:30 UK today) have Gvardiol in City's back four, Haaland up front and Gonzalo leading Fulham's line, all three yours, matching the Premier League's predictions. Maresca says Khusanov and Nunes are doubts and ESPN lists Guehi as a doubt, so Gvardiol's place looks safe after his Forest knock.",
+   "url": "https://www.espn.com/soccer/story/_/id/50530118/manchester-city-vs-fulham-tv-channel-how-watch-uk-kickoff-live-stream-team-news-referee-predicted-lineups"
   }
  ],
  "runs": [
-  {
-   "ts": "2026-10-22T08:20 UTC",
-   "published": 1,
-   "note": "Led with Schade expected back in the XI per Premier League GW8 Scout. No fresh Haaland, Marmoush or Brobbey update from permitted outlets. Not in starters window."
-  },
   {
    "ts": "2026-10-22T21:20 UTC",
    "published": 0,
@@ -621,6 +616,11 @@
    "ts": "2026-11-20T22:10 UTC",
    "published": 3,
    "note": "Friday night, GW11 deep starters run. Read the Premier League's MW11 predicted line-ups (all 15 of his players named in their clubs' predicted XIs) and Friday pressers at arsenal.com, chelseafc.com, liverpoolfc.com, brightonandhovealbion.com and tottenhamhotspur.com. Led with Joao Pedro out and Neto predicted as Chelsea's striker, Saliba 'ready' (Konsa risk) and new-to-pool Ahoka predicted to start for Sunderland. Guardian, Man City and Man Utd sites blocked by bot challenges; no BBC/Sky team-news pieces yet."
+  },
+  {
+   "ts": "2026-11-21T09:30 UTC",
+   "published": 1,
+   "note": "Saturday morning, GW11 deadline 11:00 UTC. Searches on Man City/Fulham (Maresca and Arbeloa pressers), Arsenal at Newcastle (Saliba/Konsa), Chelsea/Leeds, Hull/Brighton, Bournemouth/Forest, Spurs/Ipswich, Liverpool/Man Utd and general PL team news. Led with ESPN's City v Fulham predicted XIs, a second outlet for Gvardiol, Haaland and Gonzalo. No new predicted XIs found for his other fixtures; bbc.co.uk, theguardian.com and theathletic.com blocked in search."
   }
  ]
 }

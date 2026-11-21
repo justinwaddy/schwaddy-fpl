@@ -1,7 +1,7 @@
 {
  "gw": 12,
  "waivers_close": "2026-11-26T18:30:00Z",
- "ts": "2026-11-20T22:10 UTC",
+ "ts": "2026-11-21T09:30 UTC",
  "summary": "The model's top swap is Le Fee for Barcola, but the Premier League's predicted line-ups put Barcola in Liverpool's XI for Man Utd, so I am overruling it and dropping Neto instead; Jacquet for Boscagli is the claim I most want. Every drop below is in his club's predicted XI this weekend, which is why there are four claims, not five. Justin sits third of six, so mid-queue; any of these free agents can also be picked up first-come before the GW11 deadline (11:00 UTC Saturday).",
  "claims": [
   {
@@ -841,12 +841,6 @@
  ],
  "runs": [
   {
-   "ts": "2026-10-22T21:20 UTC",
-   "gw": 9,
-   "claims": 5,
-   "note": "Rolled to the GW9 window; carried the model's five with updated reasoning, dropped the old Pickford and Lewis-Potter ideas"
-  },
-  {
    "ts": "2026-10-23T08:10 UTC",
    "gw": 9,
    "claims": 5,
@@ -1199,6 +1193,12 @@
    "gw": 12,
    "claims": 4,
    "note": "New window (GW12). Konsa arrived from last week's claims. Overruled the model's top swap (Barcola) because he is in Liverpool's predicted XI; led with Jacquet for Boscagli, then Le Fee for Neto. Four claims because every remaining drop is predicted to start."
+  },
+  {
+   "ts": "2026-11-21T09:30 UTC",
+   "gw": 12,
+   "claims": 4,
+   "note": "Order unchanged. No new permitted-outlet news on any add or drop overnight; GW11 results this weekend (Konsa v Saliba at Newcastle, Neto as Chelsea's striker) are the next chance to change it before the 26 Nov close."
   }
  ]
 }
